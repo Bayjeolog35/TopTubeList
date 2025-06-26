@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top YouTube Videos</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google AdSense Auto Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXX"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- ✅ Header -->
+<header>
+  <div class="container header-flex">
+    <img src="TopTubeListLogo.png" class="logo" alt="TopTubeList Logo" />
+    <h1>Most Viewed YouTube Videos</h1>
+    <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
+  </div>
+</header>
+
+
+  <!-- ✅ Video List -->
+  <main>
+    <div id="videoList"></div>
+    <button id="loadMoreBtn">Load More</button>
+  </main>
+
+  <!-- ✅ About Us -->
+  <section class="about-section">
+    <button id="aboutToggle">About Us</button>
+    <div id="aboutContent">
+      <p>
+        <p>
+  <strong>Who are we?</strong><br>
+  We’re a data-driven team on a mission to track and showcase the <strong>most viewed YouTube videos</strong> around the world — updated every 4 to 6 hours.
+  Whether MrBeast has dropped another crazy challenge, BLACKPINK released a new MV, or T-Series hit another billion, we’re already listing it.
+</p>
+
+<p>
+  <strong>What’s our goal?</strong><br>
+  To provide real-time, reliable, and refreshingly simple access to YouTube’s trending landscape. Currently, we’re global — but our dream is to go local.
+  Imagine being able to filter videos by country and ask, <em>“What was the most viewed video in the U.S. in the last 24 hours?”</em> Yeah, we want that too.
+</p>
+
+<p>
+  We’re not begging for funds, but let’s just say... <strong>support helps</strong>. The more we grow, the faster we’ll deliver features like country-based filters,
+  historical trend tracking, and more.
+</p>
+
+<p>
+  Until then, enjoy the latest from <strong>Taylor Swift, PewDiePie, Bad Bunny, Alan Walker, Zach King, KSI, Selena Gomez</strong>, and many more — served fresh, with stats.
+</p>
+
+<p><strong>TopTubeList – Trending? Tracked.</strong></p>
+
+      </p>
+    </div>
+  </section>
+
+  <button id="scrollTopBtn">Home</button>
+
+
+ <!-- ✅ Footer + Contact -->
+<footer>
+  <div class="contact-section">
+    <button id="contactToggle">Contact Us</button>
+    <div id="contactContent" style="display: none;">
+      <form action="mailto:info@toptubelist.com" method="post" enctype="text/plain" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+  <p>&copy; 2025 TopTubeList.com</p>
+</footer>
+
+
+  <!-- ✅ JS -->
+  <script>
+    let allVideos = [];
+    let displayCount = 10;
+
+    function renderVideos() {
+      const container = document.getElementById("videoList");
+      container.innerHTML = "";
+
+      allVideos.slice(0, displayCount).forEach(video => {
+        const card = document.createElement("div");
+        card.className = "video-card";
+        card.innerHTML = `
+          <img src="${video.thumbnail}" alt="${video.title}" />
+          <div class="video-info">
+            <h2>${video.title}</h2>
+            <p><strong>Views:</strong> ${video.views_str}</p>
+            <a href="${video.url}" target="_blank">Watch on YouTube</a>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      const loadMoreBtn = document.getElementById("loadMoreBtn");
+      loadMoreBtn.style.display = (displayCount >= allVideos.length) ? "none" : "block";
+    }
+
+    fetch("videos.json")
+      .then(response => response.json())
+      .then(videos => {
+        allVideos = videos;
+        renderVideos();
+      });
+
+    document.getElementById("scrollTopBtn").addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+
+    document.getElementById("loadMoreBtn").addEventListener("click", () => {
+      displayCount += 10;
+      renderVideos();
+    });
+
+      document.getElementById("aboutToggle").addEventListener("click", () => {
+    const content = document.getElementById("aboutContent");
+    content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+  });
+
+    document.getElementById("contactToggle").addEventListener("click", () => {
+  const content = document.getElementById("contactContent");
+  content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+});
+
+    document.getElementById("darkModeToggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
+  </script>
+</body>
+</html>
