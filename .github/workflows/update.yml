@@ -24,7 +24,7 @@ jobs:
 
     - name: update.py dosyasını çalıştır
       run: |
-        python update.py
+        python fetch_top_youtube.py
 
     - name: Değişiklikleri commit et ve pushla
       run: |
