@@ -22,14 +22,14 @@ jobs:
       run: |
         pip install -r requirements.txt || true
 
-    - name: update.py dosyasını çalıştır
+    - name: fetch_top_youtube.py dosyasını çalıştır
       run: |
         python fetch_top_youtube.py
 
-    - name: Değişiklikleri commit et ve pushla
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add videos.json
-        git commit -m "🔄 Otomatik güncelleme (her 3 saatte bir)" || echo "No changes"
-        git push
+  - name: Değişiklikleri commit et ve pushla
+  run: |
+    git config user.name "github-actions[bot]"
+    git config user.email "github-actions[bot]@users.noreply.github.com"
+    git add .
+    git commit -m "🔄 Otomatik güncelleme (her 3 saatte bir)" || echo "No changes to commit"
+    git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/Bayjeolog35/TopTubeList.git
