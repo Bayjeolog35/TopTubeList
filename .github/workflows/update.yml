@@ -2,7 +2,7 @@ name: Update videos.json every 3 hours
 
 on:
   schedule:
-    - cron: '0 */3 * * *'  # Her 3 saatte bir çalışır
+    - cron: '0 */3 * * *'  # Her 3 saatte bir
   workflow_dispatch:
 
 jobs:
