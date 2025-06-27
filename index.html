@@ -153,48 +153,46 @@
   document.body.classList.toggle("dark-mode");
 });
 
-    const form = document.querySelector('form');
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
+     document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    const statusDiv = document.getElementById("formStatus");
 
-    const formData = new FormData(form);
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    try {
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      const formData = new FormData(form);
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString()
-      });
-
-      if (response.ok) {
-        // Animasyonlu bildirim göster
-        const msgBox = document.createElement('div');
-        msgBox.textContent = 'Mesajınız başarıyla gönderildi!';
-        msgBox.style.cssText = `
-          position: fixed; bottom: 20px; right: 20px;
-          background: #4CAF50; color: white; padding: 10px 20px;
-          border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-          animation: fadeOut 4s forwards;
-        `;
-        document.body.appendChild(msgBox);
-
-        // Formu temizle
-        form.reset();
-
-        // 4 saniye sonra bildirimi kaldır
-        setTimeout(() => msgBox.remove(), 4000);
-      }
-    } catch (err) {
-      alert('Bir hata oluştu. Lütfen tekrar deneyin.');
-    }
+      })
+        .then(() => {
+          form.reset();
+          statusDiv.style.display = "block";
+          statusDiv.innerText = "✅ Mesajınız başarıyla gönderildi!";
+          statusDiv.style.cssText = `
+            position: fixed; bottom: 20px; right: 20px;
+            background: #28a745; color: white; padding: 12px 24px;
+            border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            font-family: sans-serif;
+            z-index: 9999;
+            animation: fadeOut 5s forwards;
+          `;
+          setTimeout(() => statusDiv.remove(), 5000);
+        })
+        .catch(() => {
+          alert("❌ Mesaj gönderilemedi. Lütfen tekrar deneyin.");
+        });
+    });
   });
 </script>
 
 <style>
 @keyframes fadeOut {
-  0%   { opacity: 1; }
-  90%  { opacity: 1; }
-  100% { opacity: 0; transform: translateY(20px); }
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(10px); }
 }
 </style>
 
