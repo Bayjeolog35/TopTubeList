@@ -15,7 +15,9 @@
 <!-- ✅ Header -->
 <header>
   <div class="container header-flex">
-    <img src="TopTubeListLogo.png" class="logo" alt="TopTubeList Logo" />
+    <a href="#" id="logoLink">
+      <img src="TopTubeListLogo.png" class="logo" alt="TopTubeList Logo" />
+    </a>
     <h1>Most Viewed YouTube Videos</h1>
     <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
   </div>
@@ -104,6 +106,11 @@
     function renderVideos() {
       const container = document.getElementById("videoList");
       container.innerHTML = "";
+
+      document.getElementById("logoLink").addEventListener("click", function (e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
       allVideos.slice(0, displayCount).forEach(video => {
         const card = document.createElement("div");
