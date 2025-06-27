@@ -180,6 +180,14 @@ footer {
   margin-top: 60px;
 }
 
+<style>
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(10px); }
+}
+</style>
+
 .hidden {
   display: none !important;
 }
