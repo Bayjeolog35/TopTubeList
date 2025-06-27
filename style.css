@@ -205,35 +205,37 @@ footer {
 #contactForm {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  max-width: 480px;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 #contactForm input,
 #contactForm textarea {
   width: 100%;
-  padding: 12px;
+  max-width: 400px;
+  padding: 10px;
   font-size: 1rem;
-  border-radius: 6px;
   border: 1px solid #ccc;
-  box-sizing: border-box;
+  border-radius: 6px;
 }
 
-#contactForm button[type="submit"] {
+#contactForm button {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 1rem;
   background-color: #065fd4;
   color: white;
   border: none;
-  padding: 12px;
-  font-size: 1rem;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
 }
 
-#contactForm button[type="submit"]:hover {
+#contactForm button:hover {
   background-color: #004ab3;
 }
+
 
 body.dark-mode #contactForm input,
 body.dark-mode #contactForm textarea {
