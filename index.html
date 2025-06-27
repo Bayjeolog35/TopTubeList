@@ -70,7 +70,7 @@
   <div class="contact-section">
     <button id="contactToggle">Contact Us</button>
     <div id="contactContent" style="display: none;">
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <!-- Netlify form tanımı -->
         <input type="hidden" name="form-name" value="contact" />
 
@@ -80,14 +80,11 @@
         </p>
 
         <!-- Form alanları -->
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-
-        <!-- Submit -->
-        <button type="submit">Send Message</button>
-      </form>
-
+        <input type="text" name="name" required />
+  <input type="email" name="email" required />
+  <textarea name="message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
       <!-- Gönderim sonrası animasyonlu bildirim -->
       <div id="formStatus" style="display: none;"></div>
     </div>
