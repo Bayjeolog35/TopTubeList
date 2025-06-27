@@ -180,6 +180,11 @@ footer {
   margin-top: 60px;
 }
 
+.hidden {
+  display: none;
+}
+
+
 /* Contact Us bölümü */
 .contact-section {
   max-width: 600px;
