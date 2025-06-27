@@ -192,6 +192,61 @@ footer {
   display: none !important;
 }
 
+/* Contact Content alanı düzgün hizalama */
+#contactContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* Form içeriği düzgün görünsün */
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 480px;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#contactForm button[type="submit"] {
+  background-color: #065fd4;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#contactForm button[type="submit"]:hover {
+  background-color: #004ab3;
+}
+
+body.dark-mode #contactForm input,
+body.dark-mode #contactForm textarea {
+  background-color: #2a2a2a;
+  border: 1px solid #555;
+  color: #eee;
+}
+
+body.dark-mode #contactForm input::placeholder,
+body.dark-mode #contactForm textarea::placeholder {
+  color: #aaa;
+}
+
 
 /* Contact Us bölümü */
 .contact-section {
