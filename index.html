@@ -12,15 +12,24 @@
 </head>
 <body>
 
-<!-- ✅ Header -->
 <header>
   <div class="container header-flex">
     <a href="#" id="logoLink">
       <img src="TopTubeListLogo.png" class="logo" alt="TopTubeList Logo" />
     </a>
-    <h1>Most Viewed YouTube Videos</h1>
+    <h1>Top YouTube Videos Worldwide</h1>
     <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
   </div>
+
+  <!-- ✅ Menü ayrı satırda ama header içinde -->
+  <nav id="continentNav">
+    <a href="asia.html">Asia</a>
+    <a href="europe.html">Europe</a>
+    <a href="africa.html">Africa</a>
+    <a href="north_america.html">North America</a>
+    <a href="south_america.html">South America</a>
+    <a href="oceania.html">Oceania</a>
+  </nav>
 </header>
 
 
@@ -61,8 +70,6 @@
       </p>
     </div>
   </section>
-
-  <button id="scrollTopBtn">Home</button>
 
 
  <!-- ✅ Footer + Contact -->
@@ -150,11 +157,7 @@
         renderVideos();
       });
 
-    // Butonlar
-    document.getElementById("scrollTopBtn").addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
+   
     document.getElementById("loadMoreBtn").addEventListener("click", () => {
       displayCount += 10;
       renderVideos();
@@ -170,9 +173,18 @@
       content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
     });
 
-    document.getElementById("darkModeToggle").addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-    });
+    // Dark mode toggle + localStorage kaydı
+const darkModeBtn = document.getElementById("darkModeToggle");
+darkModeBtn.addEventListener("click", () => {
+  const isDark = document.body.classList.toggle("dark-mode");
+  localStorage.setItem("darkMode", isDark);
+});
+
+// Sayfa açıldığında dark mode'u uygula
+if (localStorage.getItem("darkMode") === "true") {
+  document.body.classList.add("dark-mode");
+}
+
 
     // Contact form (Netlify + animasyonlu bildirim)
     const form = document.getElementById("contactForm");

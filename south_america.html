@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top YouTube Videos in South America</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="container header-flex">
+    <a href="index.html" id="logoLink">
+      <img src="TopTubeListLogo.png" class="logo" alt="TopTubeList Logo" />
+    </a>
+    <h1>Most Viewed in South America</h1>
+    <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
+  </div>
+<nav id="continentNav">
+  <a href="asia.html">Asia</a>
+  <a href="europe.html">Europe</a>
+  <a href="africa.html">Africa</a>
+  <a href="north_america.html">North America</a>
+  <a href="south_america.html">South America</a>
+  <a href="oceania.html">Oceania</a>
+</nav>
+
+</header>
+
+<main>
+  <div id="videoList"></div>
+  <button id="loadMoreBtn">Load More</button>
+</main>
+
+<button id="scrollTopBtn">Home</button>
+<footer id="siteFooter">
+  <p>&copy; 2025 TopTubeList.com · All rights reserved.</p>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Dark mode'u uygulama
+    const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+    document.body.classList.toggle('dark-mode', darkModeEnabled);
+
+    // Video verilerini işleme
+    let allVideos = [];
+    let displayCount = 10;
+
+    function renderVideos() {
+      const container = document.getElementById("videoList");
+      container.innerHTML = "";
+
+      allVideos.slice(0, displayCount).forEach(video => {
+        const card = document.createElement("div");
+        card.className = "video-card";
+        card.innerHTML = `
+          <img src="${video.thumbnail}" alt="${video.title}" />
+          <div class="video-info">
+            <h2>${video.title}</h2>
+            <p><strong>Views:</strong> ${video.views_str}</p>
+            <a href="${video.url}" target="_blank">Watch on YouTube</a>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      document.getElementById("loadMoreBtn").style.display = (displayCount >= allVideos.length) ? "none" : "block";
+    }
+
+    fetch("videos_africa.json")
+      .then(res => res.json())
+      .then(videos => {
+        allVideos = videos;
+        renderVideos();
+      });
+
+    document.getElementById("loadMoreBtn").addEventListener("click", () => {
+      displayCount += 10;
+      renderVideos();
+    });
+
+    document.getElementById("scrollTopBtn").addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    document.getElementById("darkModeToggle").addEventListener("click", () => {
+      const isDark = document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', isDark);
+    });
+  });
+</script>
+
+</body>
+</html>

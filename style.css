@@ -49,6 +49,32 @@ body.dark-mode .logo {
   }
 }
 
+/*kıta isimleri */
+
+#continentNav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #0f0f0f;
+  padding: 4px 10px 6px 10px;
+  flex-wrap: wrap;
+  margin-top: -6px; /* Eskiden -10px idi */
+}
+
+#continentNav a {
+  color: #ffffffcc;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 3px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#continentNav a:hover {
+  background-color: #065fd4;
+  color: #fff;
+}
 
 /* Video listesi */
 #videoList {
@@ -461,3 +487,22 @@ body.dark-mode .about-section strong {
   color: #fff;
 }
 
+#siteFooter {
+  background-color: #0f0f0f;
+  color: #ffffffb3;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px 10px;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+}
+
+#siteFooter a {
+  color: #88c0ff;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+#siteFooter a:hover {
+  text-decoration: underline;
+}
