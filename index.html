@@ -153,6 +153,51 @@
   document.body.classList.toggle("dark-mode");
 });
 
+    const form = document.querySelector('form');
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      });
+
+      if (response.ok) {
+        // Animasyonlu bildirim göster
+        const msgBox = document.createElement('div');
+        msgBox.textContent = 'Mesajınız başarıyla gönderildi!';
+        msgBox.style.cssText = `
+          position: fixed; bottom: 20px; right: 20px;
+          background: #4CAF50; color: white; padding: 10px 20px;
+          border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+          animation: fadeOut 4s forwards;
+        `;
+        document.body.appendChild(msgBox);
+
+        // Formu temizle
+        form.reset();
+
+        // 4 saniye sonra bildirimi kaldır
+        setTimeout(() => msgBox.remove(), 4000);
+      }
+    } catch (err) {
+      alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+    }
+  });
+</script>
+
+<style>
+@keyframes fadeOut {
+  0%   { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+</style>
+
   </script>
 </body>
 </html>
