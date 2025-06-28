@@ -34,9 +34,9 @@ body.dark-mode .logo {
 /* ✅ Mobil cihazlarda daha iyi hizalama için */
 @media (max-width: 600px) {
   .header-flex {
-    justify-content: space-between;
-    padding: 0 16px;
-  }
+  display: block;
+  text-align: center;
+}
 
   .logo {
     height: 60px;
