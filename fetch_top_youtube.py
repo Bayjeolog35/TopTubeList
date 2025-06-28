@@ -80,3 +80,22 @@ if response.status_code == 200:
 
 else:
     print("❌ API error:", response.status_code)
+
+# HTML dosyasına structured data göm
+structured_data_script = ""
+with open("structured_data.json", "r", encoding="utf-8") as f:
+    structured_data_script = f'<script type="application/ld+json">\n{f.read()}\n</script>'
+
+# index.html dosyasını oku ve comment tagini bulup inline data ekle
+with open("index.html", "r", encoding="utf-8") as f:
+    html_content = f.read()
+
+# <!-- STRUCTURED_DATA_HERE --> etiketiyle değiştir
+html_content = html_content.replace("<!-- STRUCTURED_DATA_HERE -->", structured_data_script)
+
+# index.html dosyasını güncelle
+with open("index.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print("✅ Structured data HTML'e gömüldü.")
+
