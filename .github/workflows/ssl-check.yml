@@ -2,29 +2,31 @@ name: SSL Kontrolü ve Günlük Rapor
 
 on:
   schedule:
-    - cron: "0 6 * * *"  # Her gün sabah 09:00 Türkiye saati (06:00 UTC)
-  workflow_dispatch:  # Manuel çalıştırma da mümkün
+    - cron: '0 */3 * * *'  # Her 3 saatte bir çalışır (UTC)
+  workflow_dispatch:       # Manuel çalıştırmaya da izin verir
 
 jobs:
-  ssl-check:
+  check-ssl:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Reponun çekilmesi
-        uses: actions/checkout@v4
+      - name: Kodu indir
+        uses: actions/checkout@v3
 
       - name: Python kurulumu
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: SSL kontrolünü çalıştır
+      - name: Gerekli kütüphaneleri yükle
+        run: pip install -r requirements.txt
+
+      - name: SSL kontrolü ve rapor yazımı
         run: python ssl_check.py
 
-      - name: Değişiklikleri commit et
+      - name: Değişiklikleri commitle ve pushla
         run: |
-          git config user.name "github-actions"
+          git config user.name "actions-user"
           git config user.email "actions@github.com"
           git add reports/ssl_output.txt
-          git commit -m "🔐 SSL kontrol raporu güncellendi"
+          git commit -m "SSL kontrol raporu güncellendi"
           git push
