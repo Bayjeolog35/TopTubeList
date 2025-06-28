@@ -25,7 +25,10 @@ header {
   width: auto;
   margin-right: 50px; /* bu daha doğru çünkü boşluk logodan sonra gelsin */
 }
-
+#logoLink img {
+  height: 48px; /* Daha sabit görünüm için */
+  width: auto;
+}
 
 /* Karanlık mod için logo daha net */
 body.dark-mode .logo {
