@@ -31,6 +31,18 @@ def fetch_videos(region_code):
         print(f"❌ API error for {region_code}: {response.status_code}")
         return []
 
+def generate_video_object(video):
+    return {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": video["title"],
+        "thumbnailUrl": video["thumbnail"],
+        "uploadDate": "2025-06-28",
+        "description": video["title"],
+        "contentUrl": video["url"],
+        "embedUrl": video["url"].replace("watch?v=", "embed/")
+    }
+
 for continent, countries in continent_countries.items():
     all_videos = {}
     print(f"🌍 Processing {continent.upper()}...")
@@ -57,8 +69,18 @@ for continent, countries in continent_countries.items():
                     "url": f"https://www.youtube.com/watch?v={video_id}",
                     "thumbnail": item["snippet"]["thumbnails"]["medium"]["url"]
                 }
-        sleep(1)  # API kotasını yormamak için
+        sleep(1)
+
     sorted_videos = sorted(all_videos.values(), key=lambda x: x["views"], reverse=True)
+    top_50 = sorted_videos[:50]
+
+    # 🌍 1. videos_{continent}.json
     with open(f"videos_{continent}.json", "w", encoding="utf-8") as f:
-        json.dump(sorted_videos[:50], f, ensure_ascii=False, indent=2)
-    print(f"✅ Saved: videos_{continent}.json")
+        json.dump(top_50, f, ensure_ascii=False, indent=2)
+
+    # 🌍 2. structured_data_{continent}.json
+    structured_data = [generate_video_object(v) for v in top_50]
+    with open(f"structured_data_{continent}.json", "w", encoding="utf-8") as f:
+        json.dump(structured_data, f, ensure_ascii=False, indent=2)
+
+    print(f"✅ Saved: videos_{continent}.json & structured_data_{continent}.json")
