@@ -37,22 +37,23 @@ body.dark-mode .logo {
 
 /* ✅ Mobil cihazlarda daha iyi hizalama için */
 @media (max-width: 600px) {
-  .header-flex {
-    justify-content: space-between;
-    padding: 0 16px;
-  }
+ .header-flex {
+  display: flex;
+  align-items: center;         /* Dikey ortalama */
+  justify-content: flex-start; /* Sol hizalı */
+  gap: 20px;                   /* Logo ile başlık arası boşluk */
+  padding: 20px 0;             /* Üst-alt boşluk */
+}
 
   .logo {
     height: 60px;
   }
 
   .header-flex h1 {
-     display: flex;
-  align-items: center; /* Dikey ortalama */
-  gap: 16px; /* Logo ve başlık arası boşluk */
-  padding-top: 12px; /* Yukarıdan biraz nefes aldırır */
-  padding-bottom: 8px;
-}
+.header-flex h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }
 
 /*kıta isimleri */
