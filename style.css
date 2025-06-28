@@ -44,9 +44,12 @@ body.dark-mode .logo {
   }
 
   .header-flex h1 {
-    font-size: 1.2rem;
-    text-align: center;
-  }
+     display: flex;
+  align-items: center; /* Dikey ortalama */
+  gap: 16px; /* Logo ve başlık arası boşluk */
+  padding-top: 12px; /* Yukarıdan biraz nefes aldırır */
+  padding-bottom: 8px;
+}
 }
 
 /*kıta isimleri */
