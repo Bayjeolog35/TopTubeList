@@ -84,3 +84,34 @@ for continent, countries in continent_countries.items():
         json.dump(structured_data, f, ensure_ascii=False, indent=2)
 
     print(f"✅ Saved: videos_{continent}.json & structured_data_{continent}.json")
+
+import os
+
+for continent in continent_countries:
+    # JSON structured data dosyasını oku
+    try:
+        with open(f"structured_data_{continent}.json", "r", encoding="utf-8") as json_file:
+            json_ld = json_file.read()
+    except FileNotFoundError:
+        print(f"❌ structured_data_{continent}.json bulunamadı.")
+        continue
+
+    html_file = f"{continent}.html"
+    if not os.path.exists(html_file):
+        print(f"❌ {html_file} dosyası bulunamadı.")
+        continue
+
+    with open(html_file, "r", encoding="utf-8") as f:
+        html_content = f.read()
+
+    if "<!-- STRUCTURED_DATA_HERE -->" in html_content:
+        new_html = html_content.replace(
+            "<!-- STRUCTURED_DATA_HERE -->",
+            f'<script type="application/ld+json">\n{json_ld}\n</script>'
+        )
+        with open(html_file, "w", encoding="utf-8") as f:
+            f.write(new_html)
+        print(f"✅ Structured data eklendi: {html_file}")
+    else:
+        print(f"⚠️ Etiket bulunamadı: {html_file}")
+
