@@ -1,0 +1,21 @@
+name: SSL Health Check
+
+on:
+  schedule:
+    - cron: '0 */3 * * *' # Her 3 saatte bir çalışır (UTC)
+  workflow_dispatch:       # Manuel çalıştırma seçeneği
+
+jobs:
+  run-ssl-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repo'yu klonla
+        uses: actions/checkout@v3
+
+      - name: Python kur
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: SSL Kontrol Scriptini çalıştır
+        run: python ssl_check.py
