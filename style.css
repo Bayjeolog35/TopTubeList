@@ -26,6 +26,7 @@ header {
   margin-right: 50px; /* bu daha doğru çünkü boşluk logodan sonra gelsin */
 }
 
+
 /* Karanlık mod için logo daha net */
 body.dark-mode .logo {
   filter: drop-shadow(0 0 1px #000);
@@ -34,16 +35,15 @@ body.dark-mode .logo {
 /* ✅ Mobil cihazlarda daha iyi hizalama için */
 @media (max-width: 600px) {
   .header-flex {
-  display: block;
-  text-align: center;
-}
+    justify-content: space-between;
+    padding: 0 16px;
+  }
 
   .logo {
     height: 60px;
   }
 
   .header-flex h1 {
-.header-flex h1 {
     font-size: 1.2rem;
     text-align: center;
   }
@@ -74,13 +74,6 @@ body.dark-mode .logo {
 #continentNav a:hover {
   background-color: #065fd4;
   color: #fff;
-}
-
-#continentNav a.active {
-  background-color: #0d6efd;
-  color: white !important;
-  padding: 6px 12px;
-  border-radius: 6px;
 }
 
 /* Video listesi */
