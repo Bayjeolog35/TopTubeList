@@ -3,7 +3,7 @@ name: Update continent JSONs every 3 hours
 on:
   schedule:
     - cron: '0 */3 * * *'  # Her 3 saatte bir çalıştırır
-  workflow_dispatch:        # Elle tetikleme seçeneği
+  workflow_dispatch:
 
 jobs:
   update-continent-jsons:
@@ -26,14 +26,20 @@ jobs:
         run: |
           python continent_top_youtube.py
 
-      - name: Uzak repo ile rebase yap
+      - name: Git ayarları
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main
 
-      - name: Değişiklikleri commit et ve pushla
+      - name: Dosyaları commit et (önce)
         run: |
           git add .
-          git commit -m "🌍 Kıtasal JSON güncellemesi (otomatik)" || echo "No changes to commit"
+          git commit -m "🌍 Otomatik commit (ön rebase)" || echo "No changes to commit"
+
+      - name: Rebase ile güncel uzak repo'yu çek
+        run: |
+          git pull --rebase origin main || echo "⚠️ Rebase sırasında çakışma olmadıysa devam"
+
+      - name: Değişiklikleri pushla
+        run: |
           git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
