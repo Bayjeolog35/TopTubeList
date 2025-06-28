@@ -1,4 +1,4 @@
-name: Update videos.json every 3 hours
+name: Update videos and structured data every 3 hours
 
 on:
   schedule:
@@ -26,10 +26,14 @@ jobs:
         run: |
           python fetch_top_youtube.py
 
+      - name: structured_data_generator.py dosyasını çalıştır
+        run: |
+          python structured_data_generator.py
+
       - name: Değişiklikleri commit et ve pushla
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "🔄 Otomatik güncelleme (her 3 saatte bir)" || echo "No changes to commit"
+          git commit -m "🔄 Otomatik update: videos.json ve structured_data.json" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/Bayjeolog35/TopTubeList.git
