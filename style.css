@@ -25,11 +25,7 @@ header {
   width: auto;
   margin-right: 50px; /* bu daha doğru çünkü boşluk logodan sonra gelsin */
 }
-#logoLink img {
-  height: 48px;                /* Sabit yükseklik */
-  width: auto;
-  margin-bottom: 4px;          /* Hafif dengeleme */
-}
+
 /* Karanlık mod için logo daha net */
 body.dark-mode .logo {
   filter: drop-shadow(0 0 1px #000);
@@ -37,13 +33,10 @@ body.dark-mode .logo {
 
 /* ✅ Mobil cihazlarda daha iyi hizalama için */
 @media (max-width: 600px) {
- .header-flex {
-  display: flex;
-  align-items: center;         /* Dikey ortalama */
-  justify-content: flex-start; /* Sol hizalı */
-  gap: 20px;                   /* Logo ile başlık arası boşluk */
-  padding: 20px 0;             /* Üst-alt boşluk */
-}
+  .header-flex {
+    justify-content: space-between;
+    padding: 0 16px;
+  }
 
   .logo {
     height: 60px;
