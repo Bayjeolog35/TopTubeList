@@ -1,6 +1,7 @@
 import json
 import requests
 from time import sleep
+import os
 
 API_KEY = "AIzaSyDeEp8zM0PaRG26QlWmACmIkMZVJFu-QW8"
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
@@ -44,73 +45,55 @@ def generate_video_object(video):
     }
 
 for continent, countries in continent_countries.items():
-    all_videos = {}
+    all_videos = []
+
     print(f"🌍 Processing {continent.upper()}...")
     for country in countries:
         print(f"  📥 Fetching from {country}...")
         videos = fetch_videos(country)
         for item in videos:
-            video_id = item["id"]
-            if video_id not in all_videos:
-                try:
-                    views = int(item["statistics"]["viewCount"])
-                except:
-                    views = 0
-                if views >= 1_000_000_000:
-                    views_str = f"{views/1_000_000_000:.2f}B"
-                elif views >= 1_000_000:
-                    views_str = f"{views/1_000_000:.2f}M"
-                else:
-                    views_str = str(views)
-                all_videos[video_id] = {
+            try:
+                views = int(item["statistics"]["viewCount"])
+                video = {
                     "title": item["snippet"]["title"],
                     "views": views,
-                    "views_str": views_str,
-                    "url": f"https://www.youtube.com/watch?v={video_id}",
+                    "views_str": f"{views / 1_000_000:.2f}M" if views >= 1_000_000 else str(views),
+                    "url": f"https://www.youtube.com/watch?v={item['id']}",
                     "thumbnail": item["snippet"]["thumbnails"]["medium"]["url"]
                 }
+                all_videos.append(video)
+            except KeyError:
+                continue
         sleep(1)
 
-    sorted_videos = sorted(all_videos.values(), key=lambda x: x["views"], reverse=True)
-    top_50 = sorted_videos[:50]
+    # Aynı video URL'si varsa sadece en yüksek izlenmeye sahip olan kalsın
+    unique_videos = {}
+    for video in all_videos:
+        if video["url"] not in unique_videos or video["views"] > unique_videos[video["url"]]["views"]:
+            unique_videos[video["url"]] = video
 
-    # 🌍 1. videos_{continent}.json
+    top_50 = sorted(unique_videos.values(), key=lambda x: x["views"], reverse=True)[:50]
+
     with open(f"videos_{continent}.json", "w", encoding="utf-8") as f:
         json.dump(top_50, f, ensure_ascii=False, indent=2)
 
-    # 🌍 2. structured_data_{continent}.json
     structured_data = [generate_video_object(v) for v in top_50]
     with open(f"structured_data_{continent}.json", "w", encoding="utf-8") as f:
         json.dump(structured_data, f, ensure_ascii=False, indent=2)
 
     print(f"✅ Saved: videos_{continent}.json & structured_data_{continent}.json")
 
-import os
-
-for continent in continent_countries:
-    # JSON structured data dosyasını oku
-    try:
-        with open(f"structured_data_{continent}.json", "r", encoding="utf-8") as json_file:
-            json_ld = json_file.read()
-    except FileNotFoundError:
-        print(f"❌ structured_data_{continent}.json bulunamadı.")
-        continue
-
+    # HTML structured data gömme
     html_file = f"{continent}.html"
-    if not os.path.exists(html_file):
-        print(f"❌ {html_file} dosyası bulunamadı.")
-        continue
-
-    with open(html_file, "r", encoding="utf-8") as f:
-        html_content = f.read()
-
-    if "<!-- STRUCTURED_DATA_HERE -->" in html_content:
-        new_html = html_content.replace(
+    if os.path.exists(html_file):
+        with open(html_file, "r", encoding="utf-8") as f:
+            html_content = f.read()
+        html_content = html_content.replace(
             "<!-- STRUCTURED_DATA_HERE -->",
-            f'<script type="application/ld+json">\n{json_ld}\n</script>'
+            f'<script type="application/ld+json">\n{json.dumps(structured_data, indent=2)}\n</script>'
         )
         with open(html_file, "w", encoding="utf-8") as f:
-            f.write(new_html)
+            f.write(html_content)
         print(f"✅ Structured data eklendi: {html_file}")
     else:
-        print(f"⚠️ Etiket bulunamadı: {html_file}")
+        print(f"❌ {html_file} bulunamadı.")
