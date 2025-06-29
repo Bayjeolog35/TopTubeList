@@ -16,7 +16,7 @@ params = {
     "key": API_KEY
 }
 
-response = requests.get(API_URL, params=params)
+response = requests.get(API_URL, params=params, verify=False)
 
 if response.status_code == 200:
     data = response.json()
