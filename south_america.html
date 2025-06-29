@@ -586,7 +586,7 @@
       document.getElementById("loadMoreBtn").style.display = (displayCount >= allVideos.length) ? "none" : "block";
     }
 
-    fetch("videos_africa.json")
+    fetch("videos_south_america.json")
       .then(res => res.json())
       .then(videos => {
         allVideos = videos;
