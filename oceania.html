@@ -584,7 +584,7 @@
       document.getElementById("loadMoreBtn").style.display = (displayCount >= allVideos.length) ? "none" : "block";
     }
 
-    fetch("videos_ocenia.json")
+    fetch("videos_oceania.json")
       .then(res => res.json())
       .then(videos => {
         allVideos = videos;
