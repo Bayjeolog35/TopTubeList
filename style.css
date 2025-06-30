@@ -158,74 +158,51 @@ body.dark-mode .logo {
   background-color: #004ab3;
 }
 
-/* About Us Bölümü */
+/* About Us */
 .about-section {
-    /* Eski kuralları kaldır veya değiştir: */
-    /* max-width: 960px; */ /* Sağ sidebar içindeyken buna gerek yok */
-    /* margin: 40px auto 0; */ /* Sağ sidebar içindeyken buna gerek yok */
-
-    /* Yeni kurallar (eğer .right-sidebar içinde değilse bile çalışır, ama daha çok esnekliğe odaklanır) */
-    padding: 15px; /* İç boşluk */
-    background-color: white; /* Arka plan rengi */
-    border-radius: 8px; /* Yuvarlak kenarlar */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Hafif gölge */
-    text-align: center; /* İçindeki metni ve butonu ortala */
-    width: 100%; /* İçinde bulunduğu kapsayıcıya göre tam genişlik */
-    box-sizing: border-box; /* Padding ve border'ı genişliğe dahil et */
+  max-width: 960px;
+  margin: 40px auto 0;
+  padding: 0 16px;
+  text-align: center;
 }
 
 .about-section strong {
-    color: #111; /* Açık mod */
+  color: #111;
 }
 
 #aboutToggle {
-    background-color: #0d6efd; /* Buton rengini görselle uyumlu hale getirdim */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-    width: 100%; /* Sütun içinde tam genişlikte buton */
-    box-sizing: border-box; /* Padding'i genişliğe dahil et */
-    display: block; /* Butonu blok öğesi yap */
+  background-color: #065fd4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 #aboutToggle:hover {
-    background-color: #0a58ca; /* Hover rengini görselle uyumlu hale getirdim */
+  background-color: #004ab3;
 }
 
 #aboutContent {
-    margin-top: 15px; /* Buton ile içerik arasında boşluk */
-    font-size: 0.95rem; /* Metin boyutunu biraz küçülttüm */
-    color: #444; /* Açık modda biraz daha yumuşak renk */
-    line-height: 1.6; /* Satır aralığı */
-    text-align: left; /* Metni sola hizala (buton ortalı kalsın) */
-    /* max-width: 720px; */ /* Sağ sidebar içinde buna gerek yok */
-    /* margin-left: auto; margin-right: auto; */ /* Sağ sidebar içinde buna gerek yok */
-    display: none;
-}
-
-body.dark-mode .about-section {
-    background-color: #282828; /* Karanlık mod arka planı */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Karanlık mod gölge */
-}
-
-body.dark-mode .about-section strong {
-    color: #fff;
-}
-
-body.dark-mode #aboutToggle {
-    background-color: #1a73e8; /* Karanlık mod buton rengi */
-}
-
-body.dark-mode #aboutToggle:hover {
-    background-color: #155cb7; /* Karanlık mod buton hover rengi */
+  margin-top: 20px;
+  font-size: 1.05rem;
+  color: #222; /* Light mode için okunabilir koyu renk */
+  line-height: 1.8;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
 }
 
 body.dark-mode #aboutContent {
-    color: #e0e0e0; /* Karanlık mod metin rengi */
+  color: #e0e0e0;
 }
+
+body.dark-mode .about-section strong {
+  color: #fff;
+}
+
 
 /* Footer */
 footer {
@@ -253,6 +230,7 @@ footer {
 .footer-btn:hover {
   background-color: #0a58ca;
 }
+
 
 <style>
 @keyframes fadeOut {
