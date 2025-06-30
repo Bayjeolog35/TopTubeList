@@ -2,6 +2,7 @@ import json
 import requests
 from time import sleep
 import os
+import re
 from datetime import datetime
 
 API_KEY = os.getenv("YOUTUBE_API_KEY")
@@ -69,7 +70,7 @@ for continent, countries in continent_countries.items():
                 continue
         sleep(1)
 
-    # Aynı URL'den sadece yüksek izlenmeye sahip olan kalsın
+    # En iyi videoları ayıkla (unique URL'lere göre en çok izlenen)
     unique_videos = {}
     for video in all_videos:
         if video["url"] not in unique_videos or video["views"] > unique_videos[video["url"]]["views"]:
@@ -77,6 +78,7 @@ for continent, countries in continent_countries.items():
 
     top_50 = sorted(unique_videos.values(), key=lambda x: x["views"], reverse=True)[:50]
 
+    # JSON çıktılarını yaz
     with open(f"videos_{continent}.json", "w", encoding="utf-8") as f:
         json.dump(top_50, f, ensure_ascii=False, indent=2)
 
@@ -85,8 +87,8 @@ for continent, countries in continent_countries.items():
         json.dump(structured_data, f, ensure_ascii=False, indent=2)
 
     print(f"✅ Saved: videos_{continent}.json & structured_data_{continent}.json")
-    
-    # 🔄 HTML güncelleme
+
+    # HTML güncelleme işlemleri
     html_file = f"{continent}.html"
     if os.path.exists(html_file):
         with open(html_file, "r", encoding="utf-8") as f:
@@ -99,17 +101,34 @@ for continent, countries in continent_countries.items():
         )
 
         # 2️⃣ İlk video için gizli iframe oluştur
-first_video = top_50[0]
-iframe_code = f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{first_video["videoId"]}" title="{first_video["title"]}" frameborder="0" allowfullscreen style="display:none;"></iframe>'
+        first_video = top_50[0]
+        iframe_code = f'''
+<iframe 
+  width="560" 
+  height="315" 
+  src="https://www.youtube.com/embed/{first_video["videoId"]}" 
+  title="{first_video["title"]}" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen 
+  style="position:absolute; width:1px; height:1px; left:-9999px;">
+</iframe>
+'''
 
-# Önce eski (varsa) iframe'i temizle
-import re
-html_content = re.sub(
-    r'<iframe[^>]*style="display:none;"[^>]*></iframe>', 
-    '', 
-    html_content
-)
+        # Eski iframe'i (varsa) temizle
+        html_content = re.sub(
+            r'<iframe[^>]*style="[^"]*left:-9999px;[^"]*"[^>]*></iframe>',
+            '',
+            html_content,
+            flags=re.DOTALL
+        )
 
-# Ardından sadece bir iframe ekle
-html_content = html_content.replace("<!-- VIDEO_EMBEDS -->", iframe_code)
+        # Yeni iframe'i placeholder yerine koy
+        html_content = html_content.replace("<!-- VIDEO_EMBEDS -->", iframe_code)
 
+        with open(html_file, "w", encoding="utf-8") as f:
+            f.write(html_content)
+
+        print(f"✅ {continent}.html içine iframe ve structured data eklendi.")
+    else:
+        print(f"⚠️ HTML file {html_file} not found.")
