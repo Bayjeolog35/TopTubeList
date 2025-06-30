@@ -581,10 +581,13 @@ body.dark-mode .alphabet-sidebar {
 
 /* Sağdaki ülke listesi (ana içerik) */
 .country-list-wrapper {
-    margin-left: 50px; /* sidebar kadar boşluk bırak */
-    padding: 20px;
-    width: calc(100% - 50px); /* kalan genişliği alır */
+    margin-left: 50px; /* sidebar genişliği kadar boşluk */
+    padding-top: 98px; /* header yüksekliği kadar yukarıdan boşluk */
+    padding-right: 20px;
+    padding-left: 20px;
+    width: calc(100% - 50px); /* sidebar kadar çıkarılmış genişlik */
 }
+
 /* Karanlık mod */
 body.dark-mode .country-list-wrapper {
     background-color: #0f0f0f;
