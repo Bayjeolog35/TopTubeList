@@ -520,6 +520,7 @@ body.dark-mode .about-section strong {
     display: flex;
     height: 100vh; /* Tüm ekran yüksekliği */
     overflow: hidden; /* Ana gövdede scroll engelle */
+     background-color: transparent;
 }
 
 .alphabet-sidebar {
