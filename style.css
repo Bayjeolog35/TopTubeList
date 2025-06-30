@@ -515,128 +515,78 @@ body.dark-mode .about-section strong {
 }
 
 /*alfabetik bar*/
-
-/* Container: Alfabetik bar ve ülke listesi yan yana dursun */
-.country-section-container {
-    display: flex;
-    flex-direction: row;
-    height: calc(100vh - 98px); /* Header yüksekliği kadar offset */
+/* Konteyner: sidebar + ülke listesi yan yana */
+.page-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  height: calc(100vh - 98px); /* Header yüksekliği dışında kalan alan */
 }
 
 /* Alfabetik Kenar Çubuğu */
 .alphabet-sidebar {
-    width: 60px; /* Harfler için sabit genişlik */
-    padding: 10px 0;
-    background-color: #0f0f0f; /* Siyah arkaplan */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Hafif gölge */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: sticky; /* Sabit kalmasını sağlar */
-    /* Header (14px*2 padding + 60px logo) + continentNav (4px+6px padding) = 28+60+10 = 98px */
-    top: 98px; /* Header ve continentNav yüksekliğinden sonra başlar */
-    height: calc(100vh - 98px); /* Görüntü alanı yüksekliğine uyum sağlar */
-    overflow-y: auto; /* Gerekirse kaydırma çubuğu */
-    border-right: 1px solid #333; /* Sağ tarafa ince bir çizgi */
-}
-
-/* Karanlık modda alfabetik barın rengi */
-body.dark-mode .alphabet-sidebar {
-    background-color: #0f0f0f;
-    border-right-color: #333;
+  width: 60px;
+  padding: 10px 0;
+  background-color: #0f0f0f;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 98px;
+  height: calc(100vh - 98px);
+  overflow-y: auto;
+  border-right: 1px solid #333;
 }
 
 .alphabet-sidebar a {
-    text-decoration: none;
-    color: #aaa;
-    padding: 5px 0;
-    font-size: 0.9em; /* Metin boyutu küçültüldü */
-    font-weight: bold;
-    width: 100%;
-    text-align: center;
-    transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+  color: #aaa;
+  padding: 5px 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .alphabet-sidebar a:hover,
 .alphabet-sidebar a.active {
-    background-color: #333;
-    color: #fff;
+  background-color: #333;
+  color: #fff;
 }
 
-/* Ülke Listesi Alanı */
+/* Ülke Listesi Wrapper */
 .country-list-wrapper {
-    flex: 1; /* Kalan alanı kapla */
-    padding: 10px 0px; /* Görseldeki gibi sağdan ve soldan boşluk yok, sadece üst/alt */
-    overflow-y: auto; /* Kaydırma çubuğu */
-    background-color: #0f0f0f; /* Arkaplan siyah */
-    color: #fff; /* Metin rengi beyaz */
-    height: calc(100vh - 98px); /* Alfabetik menü ile aynı yüksekliği kaplasın */
+  flex: 1;
+  padding: 10px 20px;
+  overflow-y: auto;
+  background-color: #0f0f0f;
+  color: #fff;
+  height: calc(100vh - 98px);
 }
 
-/* Karanlık modda ülke listesi wrapper rengi */
-body.dark-mode .country-list-wrapper {
-    background-color: #0f0f0f;
-    color: #e0e0e0;
-}
-
+/* Ülke butonları kutu gibi grid yapıda */
 .country-list {
-    display: flex;
-    flex-direction: column; /* Butonları alt alta diz */
-    gap: 0; /* Butonlar arası boşluk sıfırlandı */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
 }
 
 .country-list button {
-    background-color: #0f0f0f; /* Buton arkaplanı siyah */
-    border: none; /* Kenarlık yok */
-    border-bottom: 1px solid #333; /* Her buton arasına ince çizgi */
-    padding: 10px 20px; /* Buton içeriği için sol ve sağdan boşluk */
-    font-size: 1.1em;
-    cursor: pointer;
-    color: #fff; /* Metin rengi beyaz */
-    text-align: left;
-    width: 100%; /* Tam genişliği kapla */
-    box-sizing: border-box; /* Padding ve border genişliğe dahil */
-    transition: background-color 0.2s, color 0.2s;
-}
-
-.country-list button:first-child {
-    border-top: 1px solid #333; /* İlk butonun üstüne çizgi */
-}
-
-/* Karanlık modda ülke listesi butonları */
-body.dark-mode .country-list button {
-    background-color: #0f0f0f;
-    border-bottom-color: #333;
-    color: #e0e0e0;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  transition: background-color 0.2s;
+  border-radius: 6px;
 }
 
 .country-list button:hover {
-    background-color: #1a1a1a; /* Hafif koyulaşma */
-    color: #fff;
-}
-
-/* YENİ EKLENECEK / GÜNCELLENECEK KISIMLAR SONU */
-
-/* Scrollbar styling (optional, for aesthetics) */
-.alphabet-sidebar::-webkit-scrollbar,
-.country-list-wrapper::-webkit-scrollbar {
-    width: 8px;
-}
-
-.alphabet-sidebar::-webkit-scrollbar-track,
-.country-list-wrapper::-webkit-scrollbar-track {
-    background: #222; /* Koyu scrollbar track */
-}
-
-.alphabet-sidebar::-webkit-scrollbar-thumb,
-.country-list-wrapper::-webkit-scrollbar-thumb {
-    background: #555; /* Koyu scrollbar thumb */
-    border-radius: 4px;
-}
-
-.alphabet-sidebar::-webkit-scrollbar-thumb:hover,
-.country-list-wrapper::-webkit-scrollbar-thumb:hover {
-    background: #777;
+  background-color: #333;
 }
 
 /*alfabetik bar son*/
