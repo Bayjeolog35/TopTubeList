@@ -160,8 +160,8 @@ body.dark-mode .logo {
 
 /* About Us */
 .about-section {
-  max-width: 960px;
-  margin: 40px auto 0;
+  max-width: 960px; /* Bu kural, .about-section'ın yatayda ortalanması için uygunken, sağ sidebar'da olunca sorun yaratır. */
+  margin: 40px auto 0; /* Bu kural da yatayda ortalama için, sağ sidebar'da sorun yaratır. */
   padding: 0 16px;
   text-align: center;
 }
@@ -189,9 +189,9 @@ body.dark-mode .logo {
   font-size: 1.05rem;
   color: #222; /* Light mode için okunabilir koyu renk */
   line-height: 1.8;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 720px; /* Bu kural da sorun yaratır, sağ sidebar'ın genişliğiyle uyumsuz. */
+  margin-left: auto; /* Bu kural da ortalama için */
+  margin-right: auto; /* Bu kural da ortalama için */
   display: none;
 }
 
