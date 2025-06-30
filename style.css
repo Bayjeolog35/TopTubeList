@@ -11,6 +11,9 @@ body {
   display: none !important;
 }
 
+.country-panel {
+  display: none !important;
+}
 
 /* === Header === */
 header {
