@@ -4,10 +4,11 @@ from time import sleep
 import os
 from datetime import datetime 
 
-API_KEY = "AIzaSyDeEp8zM0PaRG26QlWmACmIkMZVJFu-QW8"
+API_KEY = os.getenv("YOUTUBE_API_KEY")
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
 PART = "snippet,statistics"
 MAX_RESULTS = 50
+
 
 continent_countries = {
     "asia": ["IN", "JP", "KR", "ID", "PH"],
