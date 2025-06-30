@@ -828,14 +828,23 @@
   </div>
 </section>
 
-</div> </div> <footer id="siteFooter">
-        <div class="footer-links">
-            <a href="#" class="footer-btn">Privacy Policy</a>
-            <a href="#" class="footer-btn">Terms of Service</a>
-            <a href="#contactSection" class="footer-btn">Contact Us</a>
-        </div>
-        <p>&copy; 2025 TopTubeList.com</p>
-    </footer>
+<footer>
+  <div class="contact-section">
+    <button id="contactToggle">Contact Us</button>
+    <div id="contactContent" style="display: none;">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
+        <p><label>Your Name<br /><input type="text" name="name" required /></label></p>
+        <p><label>Your Email<br /><input type="email" name="email" required /></label></p>
+        <p><label>Your Message<br /><textarea name="message" rows="5" required></textarea></label></p>
+        <p><button type="submit">Send Message</button></p>
+      </form>
+      <div id="formStatus" style="display: none;"></div>
+    </div>
+  </div>
+  <p>&copy; 2025 TopTubeList.com</p>
+</footer>
   
 <script>
   document.addEventListener("DOMContentLoaded", function () {
