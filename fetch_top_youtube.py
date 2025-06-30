@@ -107,6 +107,4 @@ if "<!-- VIDEO_EMBEDS -->" in html_content:
 else:
     print("⚠️ index.html içinde <!-- VIDEO_EMBEDS --> etiketi bulunamadı.")
 
-
-else:
     print("❌ API Hatası:", response.status_code)
