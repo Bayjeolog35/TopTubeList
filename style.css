@@ -1,23 +1,23 @@
 /* Genel gövde ve sayfa ayarları */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
-  color: #0f0f0f;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #0f0f0f;
 }
 
 /* HEADER */
 header {
-  background-color: #0f0f0f;
-  color: white;
-  padding: 14px 0;
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: bold;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    background-color: #0f0f0f;
+    color: white;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
@@ -27,535 +27,93 @@ header {
 }
 
 #continentNav a.active {
-  background-color: #0d6efd;
-  color: white !important;
-  padding: 6px 12px;
-  border-radius: 6px;
+    background-color: #0d6efd;
+    color: white !important;
+    padding: 6px 12px;
+    border-radius: 6px;
 }
-
 
 /* Karanlık mod için logo daha net */
 body.dark-mode .logo {
-  filter: drop-shadow(0 0 1px #000);
+    filter: drop-shadow(0 0 1px #000);
 }
 
 /* ✅ Mobil cihazlarda daha iyi hizalama için */
 @media (max-width: 600px) {
-  .header-flex {
-    justify-content: space-between;
-    padding: 0 16px;
-  }
+    .header-flex {
+        justify-content: space-between;
+        padding: 0 16px;
+    }
 
-  .logo {
-    height: 60px;
-  }
+    .logo {
+        height: 60px;
+    }
 
-  .header-flex h1 {
-    font-size: 1.2rem;
-    text-align: center;
-  }
+    .header-flex h1 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
 }
 
-/*kıta isimleri */
-
+/* kıta isimleri */
 #continentNav {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  background-color: #0f0f0f;
-  padding: 4px 10px 6px 10px;
-  flex-wrap: wrap;
-  margin-top: -6px; /* Eskiden -10px idi */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #0f0f0f;
+    padding: 4px 10px 6px 10px;
+    flex-wrap: wrap;
+    margin-top: -6px; /* Eskiden -10px idi */
 }
 
 #continentNav a {
-  color: #ffffffcc;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  padding: 6px 10px;
-  border-radius: 3px;
-  transition: background-color 0.2s, color 0.2s;
+    color: #ffffffcc;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 3px;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 #continentNav a:hover {
-  background-color: #065fd4;
-  color: #fff;
+    background-color: #065fd4;
+    color: #fff;
 }
 
-/* Video listesi */
-#videoList {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 960px;
-  margin: 30px auto;
-  padding: 0 16px;
-}
-
-/* Video kartı */
-.video-card {
-  display: flex;
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease;
-}
-
-.video-card:hover {
-  transform: scale(1.01);
-}
-
-.video-card img {
-  width: 180px;
-  height: 100%;
-  object-fit: cover;
-}
-
-.video-info {
-  padding: 12px 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.video-info h2 {
-  font-size: 1rem;
-  margin: 0 0 8px;
-  color: #030303;
-}
-
-.video-info p {
-  font-size: 0.9rem;
-  margin: 0 0 8px;
-  color: #606060;
-}
-
-.video-info a {
-  color: #065fd4;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.video-info a:hover {
-  text-decoration: underline;
-}
-
-#loadMoreBtn {
-  display: block;
-  margin: 30px auto;
-  padding: 10px 20px;
-  background-color: #065fd4;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-#loadMoreBtn:hover {
-  background-color: #004ab3;
-}
-
-/* About Us */
-.about-section {
-  max-width: 960px;
-  margin: 40px auto 0;
-  padding: 0 16px;
-  text-align: center;
-}
-
-.about-section strong {
-  color: #111;
-}
-
-#aboutToggle {
-  background-color: #065fd4;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-#aboutToggle:hover {
-  background-color: #004ab3;
-}
-
-#aboutContent {
-  margin-top: 20px;
-  font-size: 1.05rem;
-  color: #222; /* Light mode için okunabilir koyu renk */
-  line-height: 1.8;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-  display: none;
-}
-
-body.dark-mode #aboutContent {
-  color: #e0e0e0;
-}
-
-body.dark-mode .about-section strong {
-  color: #fff;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #000;
-  color: #ccc;
-  font-size: 0.9rem;
-}
-
-.footer-links {
-  margin-bottom: 10px;
-}
-
-.footer-btn {
-  background-color: #0d6efd;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 5px;
-  text-decoration: none;
-  margin: 0 6px;
-  display: inline-block;
-}
-
-.footer-btn:hover {
-  background-color: #0a58ca;
-}
-
-<style>
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { opacity: 0; transform: translateY(10px); }
-}
-</style>
-
-.hidden {
-  display: none !important;
-}
-
-/* Contact Content alanı düzgün hizalama */
-#contactContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  margin-top: 20px;
-}
-
-/* Form içeriği düzgün görünsün */
-#contactForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-#contactForm input,
-#contactForm textarea {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-#contactForm button {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  font-size: 1rem;
-  background-color: #065fd4;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-#contactForm button:hover {
-  background-color: #004ab3;
-}
-
-
-body.dark-mode #contactForm input,
-body.dark-mode #contactForm textarea {
-  background-color: #2a2a2a;
-  border: 1px solid #555;
-  color: #eee;
-}
-
-body.dark-mode #contactForm input::placeholder,
-body.dark-mode #contactForm textarea::placeholder {
-  color: #aaa;
-}
-
-
-/* Contact Us bölümü */
-.contact-section {
-  max-width: 600px;
-  margin: 30px auto 10px;
-  text-align: center;
-}
-
-#contactToggle {
-  background-color: #065fd4;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#contactToggle:hover {
-  background-color: #004ab3;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.contact-form button {
-  padding: 10px;
-  background-color: #065fd4;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #004ab3;
-}
-
-/* Footer links (isteğe bağlı) */
-footer a {
-  color: #065fd4;
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .video-card {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .video-card img {
-    width: 100%;
-    height: auto;
-  }
-
-  .video-info {
-    padding: 12px;
-    text-align: center;
-  }
-}
-#scrollTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #065fd4;
-  color: white;
-  border: none;
-  padding: 12px 18px;
-  border-radius: 50px;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  transition: background-color 0.3s;
-}
-
-#scrollTopBtn:hover {
-  background-color: #004ab3;
-}
-
-/* Karanlık mod butonu */
-
-header .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-#darkModeToggle {
-  position: absolute;
-  right: 200px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 6px 10px;
-  font-size: 1.1rem;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#darkModeToggle:hover {
-  background-color: #555;
-}
-
-
-#darkModeToggle {
-  margin-left: 20px;
-  padding: 8px 12px;
-  font-size: 1rem;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-#darkModeToggle:hover {
-  background-color: #555;
-}
-
-/* Karanlık mod stilleri */
-body.dark-mode {
-  background-color: #181818;
-  color: #e0e0e0;
-}
-
-body.dark-mode .video-card {
-  background-color: #2a2a2a;
-  color: #e0e0e0;
-  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08); /* Hafif sınır */
-}
-
-body.dark-mode .video-info h2 {
-  color: #ffffff;
-  font-weight: bold;
-}
-
-body.dark-mode .video-info p {
-  color: #cccccc;
-}
-
-body.dark-mode .video-info {
-  background-color: rgba(255, 255, 255, 0.02); /* Yazı arkasına çok hafif zemin */
-  border-radius: 6px;
-  padding: 10px 14px;
-}
-
-@media (max-width: 768px) {
-  #darkModeToggle {
-    display: none;
-  }
-}
-
-body.dark-mode footer {
-  background-color: #1e1e1e;
-  color: #ccc;
-}
-
-body.dark-mode .contact-form input,
-body.dark-mode .contact-form textarea {
-  background-color: #2a2a2a;
-  color: #eee;
-  border: 1px solid #444;
-}
-
-body.dark-mode .contact-form input::placeholder,
-body.dark-mode .contact-form textarea::placeholder {
-  color: #888;
-}
-
-body.dark-mode .contact-form button {
-  background-color: #1976d2;
-}
-
-body.dark-mode .contact-form button:hover {
-  background-color: #1565c0;
-}
-
-body.dark-mode #aboutContent {
-  color: #e0e0e0;
-}
-
-body.dark-mode .about-section strong {
-  color: #fff;
-}
-
-#siteFooter {
-  background-color: #0f0f0f;
-  color: #ffffffb3;
-  text-align: center;
-  font-size: 14px;
-  padding: 20px 10px;
-  margin-top: 40px;
-  border-top: 1px solid #333;
-}
-
-#siteFooter a {
-  color: #88c0ff;
-  text-decoration: none;
-  margin: 0 8px;
-}
-
-#siteFooter a:hover {
-  text-decoration: underline;
-}
-
-/*alfabetik bar*/
-/* Alphabet Sidebar Container */
+/* Ana Düzenleyici - main-wrapper'ı kullanacağız */
 .main-wrapper {
-    display: flex;
-    width: fit-content;
-    height: fit-content;
-    background-color: transparent;
+    display: flex; /* İçindeki elemanları yan yana dizer */
+    width: 100%; /* Sayfanın tamamını kapla */
+    max-width: 1366px; /* Görseldeki gibi bir maksimum genişlik belirle */
+    margin: 0 auto; /* Sayfanın ortasına hizala */
+    background-color: transparent; /* Arka plan rengini şeffaf tut */
+    padding: 0; /* İç boşluğu sıfırla, iç elemanlar kendi boşluklarını ayarlar */
+    align-items: flex-start; /* Elemanları en üste hizala */
+    min-height: calc(100vh - 120px); /* Header ve footer dışındaki alanı kapla (yaklaşık değerler) */
+    box-sizing: border-box; /* Padding ve border genişliği etkilemesin */
 }
 
-
+/* Alfabetik Sidebar ve Ülke Listesi */
 .alphabet-sidebar {
     width: 40px; /* Sabit */
-    padding-top: 10px; /* Header ile boşluk */
+    padding-top: 10px;
     background-color: #2a2a2a;
     border-right: 1px solid #444;
-    overflow-y: hidden; /* Scroll engelle */
+    overflow-y: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start; /* Harfleri üstte tut */
+    justify-content: start;
+    position: sticky; /* Sabit kalmasını sağla */
+    top: 0; /* Header'ın altına hizala */
+    height: 100vh; /* Tam ekran yüksekliği almasını sağla */
+    box-sizing: border-box;
 }
 
 .alphabet-sidebar a.alphabet-letter {
-    font-size: 0.80rem;     /* Küçük puntolu harf */
-    padding: 6px 0;         /* Daha az iç boşluk */
+    font-size: 0.80rem;
+    padding: 6px 0;
     width: 100%;
     text-align: center;
     text-decoration: none;
@@ -572,22 +130,23 @@ body.dark-mode .about-section strong {
 
 .country-list-wrapper {
     flex-grow: 0;
-    width: fit-content; /* sadece içerik kadar genişlik */
-    max-width: 220px; /* yaklaşık 12 harflik alan (12 * ~18px = 216px) */
-    overflow-y: auto;
-    height: 100vh;
+    width: 220px; /* Görseldeki gibi daha sabit bir genişlik */
+    overflow-y: auto; /* İçerik taşarsa scroll çıkar */
+    height: 100vh; /* Tam ekran yüksekliği almasını sağla */
     background-color: #0f0f0f;
     box-sizing: border-box;
     padding: 10px;
     border-left: 1px solid #222;
+    position: sticky; /* Sabit kalmasını sağla */
+    top: 0; /* Header'ın altına hizala */
 }
 
 /* Ülke isim butonları */
 .country-list-wrapper button {
-    white-space: nowrap;         /* Satır kaydırmayı engelle */
-    overflow: hidden;            /* Taşan kısmı gizle */
-    text-overflow: ellipsis;     /* Taşan yere “…” koy */
-    width: 100%;                 /* Container kadar */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
     padding: 10px 12px;
     background-color: #1e1e1e;
     border: 1px solid #333;
@@ -603,8 +162,464 @@ body.dark-mode .about-section strong {
     border-color: #555;
 }
 
+/* Ana İçerik Alanı - Yeni bir div'e ihtiyacımız var */
+.main-content-area {
+    flex-grow: 1; /* Kalan tüm boşluğu doldur */
+    display: flex;
+    flex-direction: column; /* İçindeki öğeleri dikeyde sırala */
+    align-items: center; /* İçindeki öğeleri yatayda ortala */
+    padding: 0 16px; /* Yanlarda biraz boşluk bırak */
+    box-sizing: border-box;
+}
 
-/* Karanlık mod */
+/* Video listesi */
+#videoList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 960px; /* Videoların maksimum genişliği */
+    width: 100%; /* Kendi içinde tam genişlik */
+    margin-top: 30px; /* Üstten boşluk */
+    margin-bottom: 30px; /* Alttan boşluk */
+    padding: 0; /* İç padding'i kaldır, main-content-area'da yönetilecek */
+}
+
+/* Video kartı */
+.video-card {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.video-card:hover {
+    transform: scale(1.01);
+}
+
+.video-card img {
+    width: 180px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-info {
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.video-info h2 {
+    font-size: 1rem;
+    margin: 0 0 8px;
+    color: #030303;
+}
+
+.video-info p {
+    font-size: 0.9rem;
+    margin: 0 0 8px;
+    color: #606060;
+}
+
+.video-info a {
+    color: #065fd4;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.video-info a:hover {
+    text-decoration: underline;
+}
+
+#loadMoreBtn {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #065fd4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#loadMoreBtn:hover {
+    background-color: #004ab3;
+}
+
+/* About Us */
+.about-section {
+    max-width: 960px; /* Hakkımızda bölümünün maksimum genişliği */
+    width: 100%; /* Kendi içinde tam genişlik */
+    margin-top: 40px; /* Üstten boşluk */
+    padding: 0 16px; /* İç padding'i koru */
+    text-align: center;
+}
+
+.about-section strong {
+    color: #111;
+}
+
+#aboutToggle {
+    background-color: #065fd4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#aboutToggle:hover {
+    background-color: #004ab3;
+}
+
+#aboutContent {
+    margin-top: 20px;
+    font-size: 1.05rem;
+    color: #222; /* Light mode için okunabilir koyu renk */
+    line-height: 1.8;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+body.dark-mode #aboutContent {
+    color: #e0e0e0;
+}
+
+body.dark-mode .about-section strong {
+    color: #fff;
+}
+
+/* Contact Content alanı düzgün hizalama */
+#contactContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+/* Form içeriği düzgün görünsün */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#contactForm button {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #065fd4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background-color: #004ab3;
+}
+
+body.dark-mode #contactForm input,
+body.dark-mode #contactForm textarea {
+    background-color: #2a2a2a;
+    border: 1px solid #555;
+    color: #eee;
+}
+
+body.dark-mode #contactForm input::placeholder,
+body.dark-mode #contactForm textarea::placeholder {
+    color: #aaa;
+}
+
+/* Contact Us bölümü */
+.contact-section {
+    max-width: 960px; /* İletişim bölümünün maksimum genişliği */
+    width: 100%; /* Kendi içinde tam genişlik */
+    margin-top: 30px; /* Üstten boşluk */
+    margin-bottom: 30px; /* Alttan boşluk */
+    padding: 0 16px; /* İç padding'i koru */
+    text-align: center;
+}
+
+#contactToggle {
+    background-color: #065fd4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contactToggle:hover {
+    background-color: #004ab3;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #065fd4;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #004ab3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-btn {
+    background-color: #0d6efd;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 6px;
+    display: inline-block;
+}
+
+.footer-btn:hover {
+    background-color: #0a58ca;
+}
+
+/* Footer links (isteğe bağlı) */
+footer a {
+    color: #065fd4;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-wrapper {
+        flex-direction: column; /* Küçük ekranlarda elemanları alt alta sırala */
+        align-items: center; /* Ortala */
+    }
+
+    .alphabet-sidebar,
+    .country-list-wrapper {
+        position: relative; /* Sabitliği kaldır */
+        height: auto; /* Yüksekliği içeriğine göre ayarla */
+        width: 100%; /* Tam genişliği kapla */
+        border-right: none; /* Kenar çizgilerini kaldır */
+        border-bottom: 1px solid #444; /* Alt çizgi ekle */
+        padding-top: 0;
+        margin-top: 10px; /* Header ile boşluk */
+    }
+
+    .country-list-wrapper {
+        border-left: none; /* Sol çizgiyi kaldır */
+    }
+
+    .main-content-area {
+        margin-left: 0; /* Sol boşluğu kaldır */
+        padding: 0 10px; /* Yan boşlukları ayarla */
+    }
+
+    #darkModeToggle {
+        display: none; /* Mobil cihazlarda gizle */
+    }
+
+    .video-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-info {
+        padding: 12px;
+        text-align: center;
+    }
+}
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #065fd4;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: background-color 0.3s;
+}
+
+#scrollTopBtn:hover {
+    background-color: #004ab3;
+}
+
+/* Karanlık mod butonu */
+header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#darkModeToggle {
+    position: absolute;
+    right: 20px; /* Sağ üst köşeye yakın bir yere çek */
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px 10px;
+    font-size: 1.1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    background-color: #555;
+}
+
+/* Karanlık mod stilleri */
+body.dark-mode {
+    background-color: #181818;
+    color: #e0e0e0;
+}
+
+body.dark-mode .video-card {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Hafif sınır */
+}
+
+body.dark-mode .video-info h2 {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+body.dark-mode .video-info p {
+    color: #cccccc;
+}
+
+body.dark-mode .video-info {
+    background-color: rgba(255, 255, 255, 0.02); /* Yazı arkasına çok hafif zemin */
+    border-radius: 6px;
+    padding: 10px 14px;
+}
+
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #ccc;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    background-color: #2a2a2a;
+    color: #eee;
+    border: 1px solid #444;
+}
+
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder {
+    color: #888;
+}
+
+body.dark-mode .contact-form button {
+    background-color: #1976d2;
+}
+
+body.dark-mode .contact-form button:hover {
+    background-color: #1565c0;
+}
+
+body.dark-mode #aboutContent {
+    color: #e0e0e0;
+}
+
+body.dark-mode .about-section strong {
+    color: #fff;
+}
+
+#siteFooter {
+    background-color: #0f0f0f;
+    color: #ffffffb3;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px 10px;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+}
+
+#siteFooter a {
+    color: #88c0ff;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+#siteFooter a:hover {
+    text-decoration: underline;
+}
+
+/* Karanlık mod alfabetik bar */
 body.dark-mode .alphabet-sidebar {
     background-color: #2a2a2a;
     border-right: 1px solid #444;
@@ -636,4 +651,13 @@ body.dark-mode .country-list-wrapper button:hover {
     border-color: #555;
 }
 
-/*alfabetik bar son*/
+/* Diğer mevcut stiller */
+.hidden {
+    display: none !important;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(10px); }
+}
