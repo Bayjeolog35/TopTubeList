@@ -684,3 +684,59 @@ body.dark-mode .country-list-wrapper button:hover {
 }
 
 /*alfabetik bar son*/
+
+
+/*footer*/
+
+footer {
+  background-color: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 40px 15px;
+}
+
+/* İçerikleri ortala */
+.contact-section {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Ortala sadece butonu */
+.contact-section button {
+  display: block;
+  margin: 0 auto 20px auto;
+  background-color: #0d6efd;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#contactContent form {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+#contactContent input,
+#contactContent textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+body.dark-mode #contactContent form {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+
+body.dark-mode #contactContent input,
+body.dark-mode #contactContent textarea {
+  background-color: #2a2a2a;
+  border: 1px solid #555;
+  color: #eee;
+}
