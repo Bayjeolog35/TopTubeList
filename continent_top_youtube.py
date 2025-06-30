@@ -86,28 +86,21 @@ for continent, countries in continent_countries.items():
 
     print(f"✅ Saved: videos_{continent}.json & structured_data_{continent}.json")
 
-    # HTML gömme
-    html_file = f"{continent}.html"
-    if os.path.exists(html_file):
-        with open(html_file, "r", encoding="utf-8") as f:
-            html_content = f.read()
+   # ➕ İlk video için yalnızca gizli iframe oluştur
+first_item = data["items"][0]
+first_video_id = first_item["id"]
+first_title = first_item["snippet"]["title"]
+iframe_code = f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{first_video_id}" title="{first_title}" frameborder="0" allowfullscreen style="display:none;"></iframe>'
 
-        # Structured Data
-        html_content = html_content.replace(
-            "<!-- STRUCTURED_DATA_HERE -->",
-            f'<script type="application/ld+json">\n{json.dumps(structured_data, indent=2)}\n</script>'
-        )
+# HTML'de <!-- VIDEO_EMBEDS --> etiketiyle değiştir
+if "<!-- VIDEO_EMBEDS -->" in html_content:
+    html_content = html_content.replace("<!-- VIDEO_EMBEDS -->", iframe_code)
 
-        # Video Embeds
-        embed_html = ""
-        for video in top_50:
-            embed_html += f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{video["videoId"]}" title="{video["title"]}" frameborder="0" allowfullscreen></iframe>\n\n'
+    with open(HTML_FILE, "w", encoding="utf-8") as f:
+        f.write(html_content)
 
-        html_content = html_content.replace("<!-- VIDEO_EMBEDS -->", embed_html)
+    print("✅ index.html içine gizli iframe eklendi.")
+else:
+    print("⚠️ index.html içinde <!-- VIDEO_EMBEDS --> etiketi bulunamadı.")
 
-        with open(html_file, "w", encoding="utf-8") as f:
-            f.write(html_content)
-
-        print(f"✅ HTML güncellendi: {html_file}")
-    else:
         print(f"❌ {html_file} bulunamadı.")
