@@ -69,22 +69,31 @@ if response.status_code == 200:
 
     print("✅ videos.json ve structured_data.json güncellendi.")
 
-    # index.html'i oku
-    with open(HTML_FILE, "r", encoding="utf-8") as f:
-        html_content = f.read()
+       # ✅ Yeni iframe'i oluştur
+    first_item = data["items"][0]
+    first_video_id = first_item["id"]
+    first_title = first_item["snippet"]["title"]
+    iframe_code = f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{first_video_id}" title="{first_title}" frameborder="0" allowfullscreen style="display:none;"></iframe>'
 
-    # eski script ve iframe'leri temizle (<!-- STRUCTURED_DATA_HERE --> ve <!-- VIDEO_EMBEDS --> aralarına yeniden yazılacak)
-    html_content = html_content.replace(
-        "<!-- STRUCTURED_DATA_HERE -->", "<!-- STRUCTURED_DATA_HERE -->")
-    html_content = html_content.replace(
-        "<!-- VIDEO_EMBEDS -->", "<!-- VIDEO_EMBEDS -->")
-
-    # ➕ structured data ekle
+    # 🔄 Structured data yerleştir
     structured_script = f'<script type="application/ld+json">\n{json.dumps(structured_items, ensure_ascii=False, indent=2)}\n</script>'
-    html_content = html_content.replace("<!-- STRUCTURED_DATA_HERE -->", structured_script)
+    html_content = re.sub(
+        r'<!-- STRUCTURED_DATA_HERE -->.*?<!-- STRUCTURED_DATA_END -->',
+        f'<!-- STRUCTURED_DATA_HERE -->\n{structured_script}\n<!-- STRUCTURED_DATA_END -->',
+        html_content,
+        flags=re.DOTALL
+    )
 
-   html_content = re.sub(
-    r'<!-- VIDEO_EMBEDS -->.*?<!-- VIDEO_EMBEDS_END -->',
-    f'<!-- VIDEO_EMBEDS -->\n{iframe_code}\n<!-- VIDEO_EMBEDS_END -->',
-    html_content,
-    flags=re.DOTALL
+    # 🔄 Sadece tek iframe yerleştir
+    html_content = re.sub(
+        r'<!-- VIDEO_EMBEDS -->.*?<!-- VIDEO_EMBEDS_END -->',
+        f'<!-- VIDEO_EMBEDS -->\n{iframe_code}\n<!-- VIDEO_EMBEDS_END -->',
+        html_content,
+        flags=re.DOTALL
+    )
+
+    # ✍️ Güncellenmiş index.html dosyasını yaz
+    with open(HTML_FILE, "w", encoding="utf-8") as f:
+        f.write(html_content)
+
+    print("✅ index.html içine structured data ve iframe güncellendi.")
