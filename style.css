@@ -205,12 +205,11 @@ body.dark-mode .about-section strong {
 
 /* Footer */
 footer {
-  background-color: #f9f9f9;
-  padding: 40px 20px 20px;
   text-align: center;
-  color: #333;
-  margin-top: 40px;
-  border-top: 1px solid #ddd;
+  padding: 20px;
+  background-color: #000;
+  color: #ccc;
+  font-size: 0.9rem;
 }
 
 .footer-links {
@@ -245,26 +244,31 @@ footer {
 
 /* Contact Content alanı düzgün hizalama */
 #contactContent {
-  margin-top: 20px;
-  display: none;
-  text-align: left;
-}
-
-#contactContent form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
+  margin-top: 20px;
 }
 
-#contactContent input,
-#contactContent textarea {
+/* Form içeriği düzgün görünsün */
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#contactForm input,
+#contactForm textarea {
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
+}
 
 #contactForm button {
   width: 100%;
@@ -297,20 +301,20 @@ body.dark-mode #contactForm textarea::placeholder {
 
 
 /* Contact Us bölümü */
-contact-section {
-  margin: 0 auto;
+.contact-section {
   max-width: 600px;
+  margin: 30px auto 10px;
+  text-align: center;
 }
 
 #contactToggle {
   background-color: #065fd4;
   color: white;
-  padding: 10px 20px;
   border: none;
-  border-radius: 6px;
+  padding: 10px 20px;
   font-size: 1rem;
+  border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px;
 }
 
 #contactToggle:hover {
@@ -347,41 +351,7 @@ contact-section {
 .contact-form button:hover {
   background-color: #004ab3;
 }
-#contactContent button[type="submit"] {
-  background-color: #065fd4;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
 
-#contactContent button[type="submit"]:hover {
-  background-color: #004ab3;
-}
-
-  body.dark-mode #contactToggle,
-body.dark-mode #contactContent button[type="submit"] {
-  background-color: #1976d2;
-}
-
-body.dark-mode #contactToggle:hover,
-body.dark-mode #contactContent button[type="submit"]:hover {
-  background-color: #1565c0;
-}
-
-body.dark-mode #contactContent input,
-body.dark-mode #contactContent textarea {
-  background-color: #2a2a2a;
-  color: #eee;
-  border: 1px solid #444;
-  footer p {
-  margin-top: 30px;
-  font-size: 0.9rem;
-  color: #666;
-}
-  
 /* Footer links (isteğe bağlı) */
 footer a {
   color: #065fd4;
