@@ -1,199 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top YouTube Videos in the Worldwide - Updated Every 3 Hours | TopTubeList</title>
+    <meta name="description" content="Explore the most popular YouTube videos watched worldwide. Updated every 3 hours! Stay on top of trending global content.">
+    <meta name="keywords" content="trending YouTube videos, popular videos worldwide, YouTube top videos, viral content, trending now">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toptubelist.com/" />
+    <link rel="preload" as="image" href="/images/your_hero_image.webp">
+    <link rel="stylesheet" href="style.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103" crossorigin="anonymous"></script>
 
-  <title>Top YouTube Videos in the Worldwide - Updated Every 3 Hours | TopTubeList</title>
-  <meta name="description" content="Explore the most popular YouTube videos watched worldwide. Updated every 3 hours! Stay on top of trending global content.">
-  <meta name="keywords" content="trending YouTube videos, popular videos worldwide, YouTube top videos, viral content, trending now">
-  <meta name="robots" content="index, follow">
-
-  <link rel="canonical" href="https://toptubelist.com/" />
-  <link rel="preload" as="image" href="/images/your_hero_image.webp">
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Google AdSense Auto Ads -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103"
-    crossorigin="anonymous"></script>
-
-<!-- STRUCTURED_DATA_HERE -->
-<!-- STRUCTURED_DATA_END -->
+    <!-- STRUCTURED_DATA_HERE -->
 </head>
-
 <body>
-
 <header>
-  <div class="container header-flex">
-    <a href="#" id="logoLink">
-      <img src="TopTubeListLogo.webp" alt="TopTubeList Logo" width="100" height="auto" loading="lazy" decoding="async">
-    </a>
-    <h1>Top YouTube Videos Worldwide</h1>
-    <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
-  </div>
-
-  <nav id="continentNav">
-    <a href="index.html" class="active">Worldwide</a>
-    <a href="asia.html">Asia</a>
-    <a href="europe.html">Europe</a>
-    <a href="africa.html">Africa</a>
-    <a href="north_america.html">North America</a>
-    <a href="south_america.html">South America</a>
-    <a href="oceania.html">Oceania</a>
-  </nav>
+    <div class="container header-flex">
+        <a href="#" id="logoLink">
+            <img src="TopTubeListLogo.webp" alt="TopTubeList Logo" width="100" height="auto" loading="lazy" decoding="async">
+        </a>
+        <h1>Top YouTube Videos Worldwide</h1>
+        <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
+    </div>
+    <nav id="continentNav">
+        <a href="index.html" class="active">Worldwide</a>
+        <a href="asia.html">Asia</a>
+        <a href="europe.html">Europe</a>
+        <a href="africa.html">Africa</a>
+        <a href="north_america.html">North America</a>
+        <a href="south_america.html">South America</a>
+        <a href="oceania.html">Oceania</a>
+    </nav>
 </header>
 
 <main>
-  <div id="videoList"></div>
-  <button id="loadMoreBtn">Load More</button>
+    <div id="videoList"></div>
+    <button id="loadMoreBtn">Load More</button>
 </main>
 
 <section class="about-section">
-  <button id="aboutToggle">About Us</button>
-  <div id="aboutContent">
-    <p><strong>Who are we?</strong><br>
-    We’re a data-driven team on a mission to track and showcase the <strong>most viewed YouTube videos</strong> around the world — updated every 4 to 6 hours.
-    Whether MrBeast has dropped another crazy challenge, BLACKPINK released a new MV, or T-Series hit another billion, we’re already listing it.</p>
-
-    <p><strong>What’s our goal?</strong><br>
-    To provide real-time, reliable, and refreshingly simple access to YouTube’s trending landscape. Currently, we’re global — but our dream is to go local.
-    Imagine being able to filter videos by country and ask, <em>“What was the most viewed video in the U.S. in the last 24 hours?”</em> Yeah, we want that too.</p>
-
-    <p>We’re not begging for funds, but let’s just say... <strong>support helps</strong>. The more we grow, the faster we’ll deliver features like country-based filters,
-    historical trend tracking, and more.</p>
-
-    <p>Until then, enjoy the latest from <strong>Taylor Swift, PewDiePie, Bad Bunny, Alan Walker, Zach King, KSI, Selena Gomez</strong>, and many more — served fresh, with stats.</p>
-
-    <p><strong>TopTubeList – Trending? Tracked.</strong></p>
-  </div>
+    <button id="aboutToggle">About Us</button>
+    <div id="aboutContent">
+        <p><strong>Who are we?</strong><br>
+        We’re a data-driven team on a mission to track and showcase the <strong>most viewed YouTube videos</strong> around the world — updated every 4 to 6 hours.</p>
+        <p><strong>What’s our goal?</strong><br>
+        To provide real-time, reliable, and refreshingly simple access to YouTube’s trending landscape.</p>
+        <p><strong>TopTubeList – Trending? Tracked.</strong></p>
+    </div>
 </section>
 
 <!-- VIDEO_EMBEDS -->
 <!-- VIDEO_EMBEDS_END -->
 
 <footer>
-  <div class="contact-section">
-    <button id="contactToggle">Contact Us</button>
-    <div id="contactContent" style="display: none;">
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact" />
-        <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
-        <p><label>Your Name<br /><input type="text" name="name" required /></label></p>
-        <p><label>Your Email<br /><input type="email" name="email" required /></label></p>
-        <p><label>Your Message<br /><textarea name="message" rows="5" required></textarea></label></p>
-        <p><button type="submit">Send Message</button></p>
-      </form>
-      <div id="formStatus" style="display: none;"></div>
+    <div class="contact-section">
+        <button id="contactToggle">Contact Us</button>
+        <div id="contactContent" style="display: none;">
+            <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact" />
+                <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
+                <p><label>Your Name<br /><input type="text" name="name" required /></label></p>
+                <p><label>Your Email<br /><input type="email" name="email" required /></label></p>
+                <p><label>Your Message<br /><textarea name="message" rows="5" required></textarea></label></p>
+                <p><button type="submit">Send Message</button></p>
+            </form>
+            <div id="formStatus" style="display: none;"></div>
+        </div>
     </div>
-  </div>
-  <p>&copy; 2025 TopTubeList.com</p>
+    <p>© 2025 TopTubeList.com</p>
 </footer>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let allVideos = [];
-    let displayCount = 10;
-
-    function renderVideos() {
-      const container = document.getElementById("videoList");
-      container.innerHTML = "";
-
-      document.getElementById("logoLink").addEventListener("click", function (e) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-
-      allVideos.slice(0, displayCount).forEach(video => {
-        const card = document.createElement("div");
-        card.className = "video-card";
-        card.innerHTML = `
-          <img src="${video.thumbnail}" alt="${video.title}" />
-          <div class="video-info">
-            <h2>${video.title}</h2>
-            <p><strong>Views:</strong> ${video.views_str}</p>
-            <a href="${video.url}" target="_blank">Watch on YouTube</a>
-          </div>
-        `;
-        container.appendChild(card);
-      });
-
-      document.getElementById("loadMoreBtn").style.display =
-        (displayCount >= allVideos.length) ? "none" : "block";
-    }
-
-    fetch("videos.json")
-      .then(response => response.json())
-      .then(videos => {
-        allVideos = videos;
-        renderVideos();
-      });
-
-    document.getElementById("loadMoreBtn").addEventListener("click", () => {
-      displayCount += 10;
-      renderVideos();
-    });
-
-    document.getElementById("aboutToggle").addEventListener("click", () => {
-      const content = document.getElementById("aboutContent");
-      content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
-    });
-
-    document.getElementById("contactToggle").addEventListener("click", () => {
-      const content = document.getElementById("contactContent");
-      content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
-    });
-
-    const darkModeBtn = document.getElementById("darkModeToggle");
-    darkModeBtn.addEventListener("click", () => {
-      const isDark = document.body.classList.toggle("dark-mode");
-      localStorage.setItem("darkMode", isDark);
-    });
-
-    if (localStorage.getItem("darkMode") === "true") {
-      document.body.classList.add("dark-mode");
-    }
-
-    const form = document.getElementById("contactForm");
-    const statusDiv = document.getElementById("formStatus");
-
-    if (form) {
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        const formData = new FormData(form);
-
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString()
-        })
-          .then(() => {
-            form.reset();
-            statusDiv.innerText = "✅ ✅ Message sent successfully!";
-            statusDiv.style.display = "block";
-            statusDiv.style.cssText = `
-              position: fixed; bottom: 20px; right: 20px;
-              background: #28a745; color: white; padding: 12px 24px;
-              border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-              font-family: sans-serif; z-index: 9999;
-              animation: fadeOut 5s forwards;
-            `;
-            setTimeout(() => statusDiv.remove(), 5000);
-          })
-          .catch(() => {
-            alert("❌ Mesaj gönderilemedi. Lütfen tekrar deneyin.");
-          });
-      });
-    }
-  });
+// ... JS Kodlarınız (video yükleme, karanlık mod, about/contact toggle vs.)
 </script>
-
-<style>
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { opacity: 0; transform: translateY(10px); }
-}
-</style>
-
 </body>
 </html>
