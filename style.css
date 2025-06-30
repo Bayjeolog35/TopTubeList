@@ -226,32 +226,7 @@ body.dark-mode .about-section strong {
   margin-top: 20px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 30px 10px;
-  background-color: #000;
-  color: #ccc;
-  font-size: 0.9rem;
-}
 
-.footer-links {
-  margin-bottom: 10px;
-}
-
-.footer-btn {
-  background-color: #0d6efd;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 5px;
-  text-decoration: none;
-  margin: 0 6px;
-  display: inline-block;
-}
-
-.footer-btn:hover {
-  background-color: #0a58ca;
-}
 
 
 <style>
