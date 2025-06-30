@@ -9,6 +9,7 @@ API_URL = "https://www.googleapis.com/youtube/v3/videos"
 OUTPUT_FILE = "videos.json"
 STRUCTURED_DATA_FILE = "structured_data.json"
 HTML_FILE = "index.html"
+IFRAME_PLACEHOLDER = "<!-- IFRAME_VIDEO_HERE -->"
 
 params = {
     "part": "snippet,statistics",
@@ -89,6 +90,30 @@ if response.status_code == 200:
         f.write(html_content)
 
     print("✅ index.html içine structured data gömüldü.")
+
+# ✅ En çok izlenen video için iframe oluştur
+top_video = videos[0]
+video_id = top_video["url"].split("v=")[-1]
+iframe_html = f'''
+<iframe 
+  width="560" 
+  height="315" 
+  src="https://www.youtube.com/embed/{video_id}" 
+  title="{top_video['title']}" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen>
+</iframe>
+'''
+
+# index.html'e iframe gömme
+html_content = html_content.replace(IFRAME_PLACEHOLDER, iframe_html)
+
+with open(HTML_FILE, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print("✅ index.html içine iframe eklendi.")
+
 
 else:
     print("❌ API Hatası:", response.status_code)
