@@ -93,4 +93,3 @@ if response.status_code == 200:
 else:
     print("❌ API Hatası:", response.status_code)
 
-buna göre yazalım. güncel hali bu
