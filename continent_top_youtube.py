@@ -85,20 +85,27 @@ for continent, countries in continent_countries.items():
         json.dump(structured_data, f, ensure_ascii=False, indent=2)
 
     print(f"✅ Saved: videos_{continent}.json & structured_data_{continent}.json")
+    
+    # 🔄 HTML güncelleme
+    html_file = f"{continent}.html"
+    if os.path.exists(html_file):
+        with open(html_file, "r", encoding="utf-8") as f:
+            html_content = f.read()
 
-# ➕ İlk video için yalnızca gizli iframe oluştur
-first_item = data["items"][0]
-first_video_id = first_item["id"]
-first_title = first_item["snippet"]["title"]
-iframe_code = f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{first_video_id}" title="{first_title}" frameborder="0" allowfullscreen style="display:none;"></iframe>'
+        # 1️⃣ Structured Data yerleştir
+        html_content = html_content.replace(
+            "<!-- STRUCTURED_DATA_HERE -->",
+            f'<script type="application/ld+json">\n{json.dumps(structured_data, indent=2)}\n</script>'
+        )
 
-# HTML'de <!-- VIDEO_EMBEDS --> etiketiyle değiştir
-if "<!-- VIDEO_EMBEDS -->" in html_content:
-    html_content = html_content.replace("<!-- VIDEO_EMBEDS -->", iframe_code)
+        # 2️⃣ İlk video için gizli iframe oluştur
+        first_video = top_50[0]
+        iframe_code = f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{first_video["videoId"]}" title="{first_video["title"]}" frameborder="0" allowfullscreen style="display:none;"></iframe>'
+        html_content = html_content.replace("<!-- VIDEO_EMBEDS -->", iframe_code)
 
-    with open(HTML_FILE, "w", encoding="utf-8") as f:
-        f.write(html_content)
+        with open(html_file, "w", encoding="utf-8") as f:
+            f.write(html_content)
 
-    print("✅ index.html içine gizli iframe eklendi.")
-else:
-    print("⚠️ index.html içinde <!-- VIDEO_EMBEDS --> etiketi bulunamadı.")
+        print(f"✅ {html_file} içine structured data ve gizli iframe eklendi.")
+    else:
+        print(f"❌ {html_file} bulunamadı.")
