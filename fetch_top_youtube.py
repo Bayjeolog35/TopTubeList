@@ -102,7 +102,8 @@ iframe_html = f'''
   title="{top_video['title']}" 
   frameborder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowfullscreen>
+  allowfullscreen 
+  style="position:absolute; width:1px; height:1px; left:-9999px;">
 </iframe>
 '''
 
