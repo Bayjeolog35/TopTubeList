@@ -1,11 +1,8 @@
-
 import requests
 import json
 import os
-import re
 from datetime import datetime
 
-# 🔐 API key artık gizli bir çevre değişkeninden alınacak
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
 OUTPUT_FILE = "videos.json"
@@ -42,18 +39,15 @@ if response.status_code == 200:
         video_url = f"https://www.youtube.com/watch?v={item['id']}"
         thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
 
-        # -- videos.json için --
-        video = {
+        videos.append({
             "title": item["snippet"]["title"],
             "views": views_int,
             "views_str": views_str,
             "url": video_url,
             "thumbnail": thumbnail
-        }
-        videos.append(video)
+        })
 
-        # -- structured_data.json için --
-        structured = {
+        structured_items.append({
             "@context": "https://schema.org",
             "@type": "VideoObject",
             "name": item["snippet"]["title"],
@@ -62,13 +56,10 @@ if response.status_code == 200:
             "uploadDate": item["snippet"].get("publishedAt", datetime.utcnow().isoformat() + "Z"),
             "contentUrl": video_url,
             "embedUrl": f"https://www.youtube.com/embed/{item['id']}"
-        }
-        structured_items.append(structured)
+        })
 
-    # Sıralama
     videos = sorted(videos, key=lambda x: x["views"], reverse=True)
 
-    # JSON çıktıları
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(videos, f, ensure_ascii=False, indent=2)
 
@@ -77,36 +68,31 @@ if response.status_code == 200:
 
     print("✅ videos.json ve structured_data.json güncellendi.")
 
-    # HTML'e gömme
-    with open(STRUCTURED_DATA_FILE, "r", encoding="utf-8") as f:
-        structured_json = f.read()
-    structured_script = f'<script type="application/ld+json">\n{structured_json}\n</script>'
-
+    # index.html'i oku
     with open(HTML_FILE, "r", encoding="utf-8") as f:
         html_content = f.read()
 
-    # Önce eski iframe varsa temizle
-    html_content = re.sub(r'<iframe[^>]*src="https://www.youtube.com/embed/[^"]*"[^>]*></iframe>', '', html_content, flags=re.DOTALL)
+    # eski script ve iframe'leri temizle (<!-- STRUCTURED_DATA_HERE --> ve <!-- VIDEO_EMBEDS --> aralarına yeniden yazılacak)
+    html_content = html_content.replace(
+        "<!-- STRUCTURED_DATA_HERE -->", "<!-- STRUCTURED_DATA_HERE -->")
+    html_content = html_content.replace(
+        "<!-- VIDEO_EMBEDS -->", "<!-- VIDEO_EMBEDS -->")
 
-    # Structured data ekle
+    # ➕ structured data ekle
+    structured_script = f'<script type="application/ld+json">\n{json.dumps(structured_items, ensure_ascii=False, indent=2)}\n</script>'
     html_content = html_content.replace("<!-- STRUCTURED_DATA_HERE -->", structured_script)
 
-    # ➕ İlk video için yalnızca gizli iframe oluştur
+    # ➕ sadece 1 iframe ekle
     first_item = data["items"][0]
     first_video_id = first_item["id"]
     first_title = first_item["snippet"]["title"]
     iframe_code = f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{first_video_id}" title="{first_title}" frameborder="0" allowfullscreen style="display:none;"></iframe>'
+    html_content = html_content.replace("<!-- VIDEO_EMBEDS -->", iframe_code)
 
-    # VIDEO_EMBEDS alanını iframe ile değiştir
-    if "<!-- VIDEO_EMBEDS -->" in html_content:
-        html_content = html_content.replace("<!-- VIDEO_EMBEDS -->", iframe_code)
-        print("✅ index.html içine gizli iframe eklendi.")
-    else:
-        print("⚠️ index.html içinde <!-- VIDEO_EMBEDS --> etiketi bulunamadı.")
-
+    # html'i kaydet
     with open(HTML_FILE, "w", encoding="utf-8") as f:
         f.write(html_content)
 
-    print("✅ index.html güncellendi.")
+    print("✅ index.html içine structured data ve 1 iframe başarıyla eklendi.")
 else:
-    print("❌ API'den veri alınamadı:", response.status_code)
+    print(f"❌ API hatası: {response.status_code}")
