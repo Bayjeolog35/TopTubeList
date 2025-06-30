@@ -527,18 +527,18 @@ body.dark-mode .about-section strong {
 /* Sol alfabeyi sabitle */
 .alphabet-sidebar {
     position: fixed;
-    top: 98px;
+    top: 98px; /* header yüksekliğin kadar */
     left: 0;
-    width: 50px; /* Daha dar */
-    height: calc(100vh - 98px);
-    background-color: #1a1a1a; /* Daha yumuşak koyu arka plan */
+    width: 50px;
+    height: calc(100vh - 98px); /* ekranın kalan yüksekliği */
+    background-color: #1a1a1a;
     border-right: 1px solid #333;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: auto;
+    justify-content: space-evenly; /* harfler arası eşit boşluk */
     z-index: 10;
-    font-size: 0.75em; /* Yazı boyutu küçüldü */
+    font-size: 0.75em;
 }
 
 /* Karanlık mod */
@@ -551,15 +551,15 @@ body.dark-mode .alphabet-sidebar {
 .alphabet-sidebar a {
     text-decoration: none;
     color: #ccc;
-    padding: 6px 0;
     font-weight: bold;
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid #333; /* Her harf arası çizgi */
+    padding: 6px 0;
+    border-bottom: 1px solid #333;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hover ve aktif durum */
+/* Hover ve aktif */
 .alphabet-sidebar a:hover,
 .alphabet-sidebar a.active {
     background-color: #333;
@@ -623,5 +623,4 @@ body.dark-mode .country-list-wrapper {
     background-color: #1a1a1a;
     color: #fff;
 }
-
 /*alfabetik bar son*/
