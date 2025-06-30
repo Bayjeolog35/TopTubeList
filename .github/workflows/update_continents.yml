@@ -1,13 +1,9 @@
-name: Update continent JSONs every 3 hours
-
-on:
-  schedule:
-    - cron: '0 */3 * * *'  # Her 3 saatte bir çalıştırır
-  workflow_dispatch:
-
 jobs:
   update-continent-jsons:
     runs-on: ubuntu-latest
+
+    env:
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
 
     steps:
       - name: Repo'yu klonla
