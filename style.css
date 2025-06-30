@@ -351,16 +351,6 @@ body.dark-mode #contactForm textarea::placeholder {
   background-color: #004ab3;
 }
 
-/* Footer links (isteğe bağlı) */
-footer a {
-  color: #065fd4;
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -477,10 +467,6 @@ body.dark-mode .video-info {
   }
 }
 
-body.dark-mode footer {
-  background-color: #1e1e1e;
-  color: #ccc;
-}
 
 body.dark-mode .contact-form input,
 body.dark-mode .contact-form textarea {
@@ -510,74 +496,6 @@ body.dark-mode .about-section strong {
   color: #fff;
 }
 
-/* Footer */
-#siteFooter {
-    background-color: #0f0f0f; /* Koyu arka plan */
-    color: #ffffffb3; /* Açık renk metin */
-    text-align: center;
-    font-size: 14px;
-    padding: 30px 10px; /* Üstten ve alttan daha fazla boşluk */
-    margin-top: 50px; /* Üstteki içerikle daha fazla boşluk */
-    border-top: 1px solid #333; /* Üst kenarlık */
-    display: flex; /* Flexbox kullan */
-    flex-direction: column; /* İçeriği dikey sırala */
-    align-items: center; /* Yatayda ortala */
-    justify-content: center; /* Dikeyde ortala (eğer yüksekliği yeterliyse) */
-}
-
-#siteFooter .footer-links {
-    margin-bottom: 15px; /* Linkler ile telif hakkı arasında boşluk */
-    display: flex; /* Linkleri yan yana diz */
-    gap: 12px; /* Linkler arasında boşluk */
-    flex-wrap: wrap; /* Küçük ekranlarda alta geçmelerini sağla */
-    justify-content: center; /* Linkleri ortala */
-}
-
-#siteFooter a.footer-btn {
-    background-color: #0d6efd; /* Buton arka planı */
-    color: white; /* Buton metin rengi */
-    padding: 8px 15px; /* Buton içi boşluk */
-    border-radius: 5px; /* Yuvarlak kenarlar */
-    text-decoration: none;
-    transition: background-color 0.2s ease; /* Hover efekti yumuşak olsun */
-    font-size: 0.9rem; /* Buton font boyutu */
-}
-
-#siteFooter a.footer-btn:hover {
-    background-color: #0a58ca; /* Hover arka planı */
-}
-
-#siteFooter p {
-    margin: 0; /* Paragrafın varsayılan margin'ini kaldır */
-    padding-top: 10px; /* Telif hakkı metni için üst boşluk */
-    font-size: 0.85rem; /* Telif hakkı metni boyutu */
-    color: #999; /* Biraz daha soluk renk */
-}
-
-/* Karanlık mod için footer stilleri */
-body.dark-mode #siteFooter {
-    background-color: #1e1e1e; /* Koyu modda daha koyu arka plan */
-    border-top-color: #444; /* Koyu modda kenarlık */
-    color: #bbbbbb; /* Koyu modda metin rengi */
-}
-
-body.dark-mode #siteFooter a.footer-btn {
-    background-color: #1a73e8; /* Koyu modda buton rengi */
-}
-
-body.dark-mode #siteFooter a.footer-btn:hover {
-    background-color: #155cb7; /* Koyu modda buton hover */
-}
-
-body.dark-mode #siteFooter p {
-    color: #888; /* Koyu modda telif hakkı metni rengi */
-}
-
-/* Eski footer kurallarınızı kaldırabilirsiniz: */
-/* footer { ... } */
-/* .footer-links { ... } */
-/* .footer-btn { ... } */
-/* footer a { ... } */
 /*alfabetik bar*/
 /* Alphabet Sidebar Container */
 .main-wrapper {
