@@ -535,8 +535,8 @@ body.dark-mode .about-section strong {
 }
 
 .alphabet-sidebar a.alphabet-letter {
-    font-size: 0.75rem;     /* Küçük puntolu harf */
-    padding: 4px 0;         /* Daha az iç boşluk */
+    font-size: 0.80rem;     /* Küçük puntolu harf */
+    padding: 6px 0;         /* Daha az iç boşluk */
     width: 100%;
     text-align: center;
     text-decoration: none;
