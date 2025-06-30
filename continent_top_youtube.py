@@ -38,7 +38,7 @@ def generate_video_object(video):
         "@type": "VideoObject",
         "name": video["title"],
         "thumbnailUrl": video["thumbnail"],
-        "uploadDate": "2025-06-28",
+        "uploadDate": "2025-06-28T12:00:00+03:00",
         "description": video["title"],
         "contentUrl": video["url"],
         "embedUrl": video["url"].replace("watch?v=", "embed/")
