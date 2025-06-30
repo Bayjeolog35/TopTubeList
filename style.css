@@ -529,15 +529,16 @@ body.dark-mode .about-section strong {
     position: fixed;
     top: 98px;
     left: 0;
-    width: 60px;
+    width: 50px; /* Daha dar */
     height: calc(100vh - 98px);
-    background-color: #0f0f0f;
+    background-color: #1a1a1a; /* Daha yumuşak koyu arka plan */
     border-right: 1px solid #333;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
     z-index: 10;
+    font-size: 0.75em; /* Yazı boyutu küçüldü */
 }
 
 /* Karanlık mod */
@@ -546,21 +547,37 @@ body.dark-mode .alphabet-sidebar {
     border-right-color: #333;
 }
 
+/* Harf linkleri */
 .alphabet-sidebar a {
     text-decoration: none;
-    color: #aaa;
-    padding: 5px 0;
-    font-size: 0.9em;
+    color: #ccc;
+    padding: 6px 0;
     font-weight: bold;
     width: 100%;
     text-align: center;
+    border-bottom: 1px solid #333; /* Her harf arası çizgi */
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Hover ve aktif durum */
 .alphabet-sidebar a:hover,
 .alphabet-sidebar a.active {
     background-color: #333;
     color: #fff;
+}
+
+/* Scrollbar özelleştirme */
+.alphabet-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+.alphabet-sidebar::-webkit-scrollbar-track {
+    background: #222;
+}
+.alphabet-sidebar::-webkit-scrollbar-thumb {
+    background: #444;
+}
+.alphabet-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #666;
 }
 
 /* Ülke listesi ana alan */
