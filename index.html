@@ -525,30 +525,11 @@
 </head>
 
 <body>
-
-<header>
-  <div class="container header-flex">
-    <a href="#" id="logoLink">
-      <img src="TopTubeListLogo.webp" alt="TopTubeList Logo" width="100" height="auto" loading="lazy" decoding="async">
-    </a>
-    <h1>Top YouTube Videos Worldwide</h1>
-    <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
-  </div>
-
-  <nav id="continentNav">
-    <a href="index.html" class="active">Worldwide</a>
-    <a href="asia.html">Asia</a>
-    <a href="europe.html">Europe</a>
-    <a href="africa.html">Africa</a>
-    <a href="north_america.html">North America</a>
-    <a href="south_america.html">South America</a>
-    <a href="oceania.html">Oceania</a>
-  </nav>
-
-</header>
-
-<div class="main-wrapper">
-  <div class="alphabet-sidebar">
+   <div class="layout-wrapper">
+  <!-- SOL PANEL (ALFABE + ÜLKE BUTONLARI) -->
+    <aside class="country-panel">
+      <div class="alphabet-filter">
+    
     <a href="#" class="alphabet-letter" data-letter="all">All</a>
     <a href="#" class="alphabet-letter" data-letter="A">A</a>
     <a href="#" class="alphabet-letter" data-letter="B">B</a>
@@ -577,8 +558,8 @@
     <a href="#" class="alphabet-letter" data-letter="Y">Y</a>
     <a href="#" class="alphabet-letter" data-letter="Z">Z</a>
  </div>
-    
-  <div class="country-list-wrapper">
+
+   <div class="country-list-wrapper">
   <button onclick="location.href='Countries/Afghanistan.html'" data-letter="A">Afghanistan</button>
   <button onclick="location.href='Countries/Albania.html'" data-letter="A">Albania</button>
   <button onclick="location.href='Countries/Algeria.html'" data-letter="A">Algeria</button>
@@ -800,10 +781,36 @@
   <button onclick="location.href='Countries/Zambia.html'" data-letter="Z">Zambia</button>
   <button onclick="location.href='Countries/Zimbabwe.html'" data-letter="Z">Zimbabwe</button>
 </div>
+   </aside>
+   <!-- SAĞ PANEL (GÖVDE) -->
+    <main class="main-content">
+
+   
+<header>
+  <div class="container header-flex">
+    <a href="#" id="logoLink">
+      <img src="TopTubeListLogo.webp" alt="TopTubeList Logo" width="100" height="auto" loading="lazy" decoding="async">
+    </a>
+    <h1>Top YouTube Videos Worldwide</h1>
+    <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
+  </div>
+
+  <nav id="continentNav">
+    <a href="index.html" class="active">Worldwide</a>
+    <a href="asia.html">Asia</a>
+    <a href="europe.html">Europe</a>
+    <a href="africa.html">Africa</a>
+    <a href="north_america.html">North America</a>
+    <a href="south_america.html">South America</a>
+    <a href="oceania.html">Oceania</a>
+  </nav>
+
+</header>
       
  <div id="videoList"></div>
 
 <main>
+  
   <button id="loadMoreBtn">Load More</button>
 
   <!-- About Section -->
