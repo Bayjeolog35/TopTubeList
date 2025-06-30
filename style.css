@@ -516,6 +516,13 @@ body.dark-mode .about-section strong {
 
 /*alfabetik bar*/
 
+/* Container: Alfabetik bar ve ülke listesi yan yana dursun */
+.country-section-container {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 98px); /* Header yüksekliği kadar offset */
+}
+
 /* Alfabetik Kenar Çubuğu */
 .alphabet-sidebar {
     width: 60px; /* Harfler için sabit genişlik */
