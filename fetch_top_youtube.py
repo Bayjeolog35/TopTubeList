@@ -90,5 +90,23 @@ if response.status_code == 200:
 
     print("✅ index.html içine structured data gömüldü.")
 
+    # ➕ YouTube embed iframe kodlarını oluştur
+    embed_html = ""
+    for item in data["items"]:
+        video_id = item["id"]
+        title = item["snippet"]["title"]
+        embed_html += f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{video_id}" title="{title}" frameborder="0" allowfullscreen></iframe>\n\n'
+
+    # HTML'de <!-- VIDEO_EMBEDS --> etiketiyle değiştir
+    if "<!-- VIDEO_EMBEDS -->" in html_content:
+        html_content = html_content.replace("<!-- VIDEO_EMBEDS -->", embed_html)
+
+        with open(HTML_FILE, "w", encoding="utf-8") as f:
+            f.write(html_content)
+
+        print("✅ index.html içine embed videolar eklendi.")
+    else:
+        print("⚠️ index.html içinde <!-- VIDEO_EMBEDS --> etiketi bulunamadı.")
+
 else:
     print("❌ API Hatası:", response.status_code)
