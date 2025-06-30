@@ -106,5 +106,3 @@ if "<!-- VIDEO_EMBEDS -->" in html_content:
     print("✅ index.html içine gizli iframe eklendi.")
 else:
     print("⚠️ index.html içinde <!-- VIDEO_EMBEDS --> etiketi bulunamadı.")
-
-    print("❌ API Hatası:", response.status_code)
