@@ -517,9 +517,11 @@ body.dark-mode .about-section strong {
 /*alfabetik bar*/
 /* Alphabet Sidebar Container */
 .main-wrapper {
-    background-color: transparent;
-}
-
+    display: flex;
+    overflow: hidden;
+    width: fit-content;     /* sadece içerik kadar genişlik */
+    height: fit-content;    /* sadece içerik kadar yükseklik */
+    background-color: transparent; /* isteğe bağlı */
 }
 
 .alphabet-sidebar {
