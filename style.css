@@ -89,7 +89,7 @@ body.dark-mode .logo {
   flex-direction: column;
   gap: 16px;
   max-width: 960px;
-  margin: 30px auto;
+  margin: 30px auto; /* <-- Bu kısım videoları yatayda zaten ortalıyor */
   padding: 0 16px;
 }
 
