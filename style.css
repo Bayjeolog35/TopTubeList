@@ -524,69 +524,87 @@ body.dark-mode .about-section strong {
 }
 
 /* Alfabetik Kenar Çubuğu */
+/* Sol alfabeyi sabitle */
 .alphabet-sidebar {
-  width: 60px;
-  padding: 10px 0;
-  background-color: #0f0f0f;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: sticky;
-  top: 98px;
-  height: calc(100vh - 98px);
-  overflow-y: auto;
-  border-right: 1px solid #333;
+    position: fixed;
+    top: 98px;
+    left: 0;
+    width: 60px;
+    height: calc(100vh - 98px);
+    background-color: #0f0f0f;
+    border-right: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+/* Karanlık mod */
+body.dark-mode .alphabet-sidebar {
+    background-color: #0f0f0f;
+    border-right-color: #333;
 }
 
 .alphabet-sidebar a {
-  text-decoration: none;
-  color: #aaa;
-  padding: 5px 0;
-  font-size: 0.9em;
-  font-weight: bold;
-  width: 100%;
-  text-align: center;
-  transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    color: #aaa;
+    padding: 5px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .alphabet-sidebar a:hover,
 .alphabet-sidebar a.active {
-  background-color: #333;
-  color: #fff;
+    background-color: #333;
+    color: #fff;
 }
 
-/* Ülke Listesi Wrapper */
+/* Ülke listesi ana alan */
 .country-list-wrapper {
-  flex: 1;
-  padding: 10px 20px;
-  overflow-y: auto;
-  background-color: #0f0f0f;
-  color: #fff;
-  height: calc(100vh - 98px);
+    margin-left: 60px; /* Sidebar kadar boşluk bırak */
+    padding: 10px 0;
+    background-color: #0f0f0f;
+    color: #fff;
+    height: calc(100vh - 98px);
+    overflow-y: auto;
 }
 
-/* Ülke butonları kutu gibi grid yapıda */
+/* Karanlık mod */
+body.dark-mode .country-list-wrapper {
+    background-color: #0f0f0f;
+    color: #e0e0e0;
+}
+
 .country-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .country-list button {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  padding: 10px;
-  font-size: 1em;
-  cursor: pointer;
-  color: #fff;
-  text-align: center;
-  transition: background-color 0.2s;
-  border-radius: 6px;
+    background-color: #0f0f0f;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: #fff;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.country-list button:first-child {
+    border-top: 1px solid #333;
 }
 
 .country-list button:hover {
-  background-color: #333;
+    background-color: #1a1a1a;
+    color: #fff;
 }
 
 /*alfabetik bar son*/
