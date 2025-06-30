@@ -526,7 +526,7 @@ body.dark-mode .about-section strong {
 
 .alphabet-sidebar {
     width: 40px; /* Sabit */
-    padding-top: 60px; /* Header ile boşluk */
+    padding-top: 20px; /* Header ile boşluk */
     background-color: #2a2a2a;
     border-right: 1px solid #444;
     overflow-y: hidden; /* Scroll engelle */
