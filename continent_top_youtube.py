@@ -86,7 +86,7 @@ for continent, countries in continent_countries.items():
 
     print(f"✅ Saved: videos_{continent}.json & structured_data_{continent}.json")
 
-   # ➕ İlk video için yalnızca gizli iframe oluştur
+# ➕ İlk video için yalnızca gizli iframe oluştur
 first_item = data["items"][0]
 first_video_id = first_item["id"]
 first_title = first_item["snippet"]["title"]
@@ -102,5 +102,3 @@ if "<!-- VIDEO_EMBEDS -->" in html_content:
     print("✅ index.html içine gizli iframe eklendi.")
 else:
     print("⚠️ index.html içinde <!-- VIDEO_EMBEDS --> etiketi bulunamadı.")
-
-        print(f"❌ {html_file} bulunamadı.")
