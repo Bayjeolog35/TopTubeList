@@ -99,13 +99,17 @@ for continent, countries in continent_countries.items():
         )
 
         # 2️⃣ İlk video için gizli iframe oluştur
-        first_video = top_50[0]
-        iframe_code = f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{first_video["videoId"]}" title="{first_video["title"]}" frameborder="0" allowfullscreen style="display:none;"></iframe>'
-        html_content = html_content.replace("<!-- VIDEO_EMBEDS -->", iframe_code)
+first_video = top_50[0]
+iframe_code = f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{first_video["videoId"]}" title="{first_video["title"]}" frameborder="0" allowfullscreen style="display:none;"></iframe>'
 
-        with open(html_file, "w", encoding="utf-8") as f:
-            f.write(html_content)
+# Önce eski (varsa) iframe'i temizle
+import re
+html_content = re.sub(
+    r'<iframe[^>]*style="display:none;"[^>]*></iframe>', 
+    '', 
+    html_content
+)
 
-        print(f"✅ {html_file} içine structured data ve gizli iframe eklendi.")
-    else:
-        print(f"❌ {html_file} bulunamadı.")
+# Ardından sadece bir iframe ekle
+html_content = html_content.replace("<!-- VIDEO_EMBEDS -->", iframe_code)
+
