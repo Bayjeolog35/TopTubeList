@@ -1,13 +1,27 @@
-/* Genel gövde ve sayfa ayarları */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+/* === Reset & Base === */
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
   color: #0f0f0f;
+  display: flex;
+  flex-direction: column;
 }
 
-/* HEADER */
+main {
+  flex: 1;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* === Header === */
 header {
   background-color: #0f0f0f;
   color: white;
@@ -21,51 +35,24 @@ header {
 }
 
 .logo {
-    height: 60px;
-    width: auto;
-    margin-right: 50px; /* bu daha doğru çünkü boşluk logodan sonra gelsin */
+  height: 60px;
+  width: auto;
+  margin-right: 50px;
 }
 
-#continentNav a.active {
-  background-color: #0d6efd;
-  color: white !important;
-  padding: 6px 12px;
-  border-radius: 6px;
-}
-
-
-/* Karanlık mod için logo daha net */
 body.dark-mode .logo {
   filter: drop-shadow(0 0 1px #000);
 }
 
-/* ✅ Mobil cihazlarda daha iyi hizalama için */
-@media (max-width: 600px) {
-  .header-flex {
-    justify-content: space-between;
-    padding: 0 16px;
-  }
-
-  .logo {
-    height: 60px;
-  }
-
-  .header-flex h1 {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-}
-
-/*kıta isimleri */
-
+/* === Continent Navigation === */
 #continentNav {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
   background-color: #0f0f0f;
-  padding: 4px 10px 6px 10px;
-  flex-wrap: wrap;
-  margin-top: -6px; /* Eskiden -10px idi */
+  padding: 4px 10px;
+  margin-top: -6px;
 }
 
 #continentNav a {
@@ -78,22 +65,90 @@ body.dark-mode .logo {
   transition: background-color 0.2s, color 0.2s;
 }
 
-#continentNav a:hover {
+#continentNav a:hover,
+#continentNav a.active {
   background-color: #065fd4;
-  color: #fff;
+  color: #fff !important;
 }
 
-/* Video listesi */
+/* === Alphabet & Country List === */
+.main-wrapper {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+}
+
+.alphabet-sidebar {
+  width: 40px;
+  padding-top: 10px;
+  background-color: #2a2a2a;
+  border-right: 1px solid #444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.alphabet-sidebar a.alphabet-letter {
+  font-size: 0.8rem;
+  padding: 6px 0;
+  width: 100%;
+  text-align: center;
+  color: #eee;
+  border-bottom: 1px solid #333;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.alphabet-sidebar a.alphabet-letter:hover,
+.alphabet-sidebar a.alphabet-letter.active {
+  background-color: #ddd;
+  color: #000;
+}
+
+.country-list-wrapper {
+  flex-grow: 0;
+  width: fit-content;
+  max-width: 220px;
+  overflow-y: auto;
+  height: 100vh;
+  background-color: #0f0f0f;
+  box-sizing: border-box;
+  padding: 10px;
+  border-left: 1px solid #222;
+}
+
+.country-list-wrapper button {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px 12px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  color: #eee;
+  font-size: 0.95rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.country-list-wrapper button:hover {
+  background-color: #282828;
+  border-color: #555;
+}
+
+/* === Video Cards === */
 #videoList {
   display: flex;
   flex-direction: column;
   gap: 16px;
   max-width: 960px;
-  margin: 30px auto; /* <-- Bu kısım videoları yatayda zaten ortalıyor */
+  margin: 30px auto;
   padding: 0 16px;
 }
 
-/* Video kartı */
 .video-card {
   display: flex;
   background-color: white;
@@ -109,7 +164,6 @@ body.dark-mode .logo {
 
 .video-card img {
   width: 180px;
-  height: 100%;
   object-fit: cover;
 }
 
@@ -158,13 +212,7 @@ body.dark-mode .logo {
   background-color: #004ab3;
 }
 
-/* About Us */
-main {
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
+/* === About Section === */
 .about-section {
   margin-top: 30px;
   text-align: center;
@@ -174,24 +222,15 @@ main {
   color: #111;
 }
 
-.about-section button {
-  background-color: #0d6efd;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-bottom: 15px;
-}
-
 #aboutToggle {
   background-color: #065fd4;
   color: white;
   border: none;
   padding: 10px 20px;
   font-size: 1rem;
-  cursor: pointer;
   border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 15px;
 }
 
 #aboutToggle:hover {
@@ -207,112 +246,20 @@ main {
   color: #333;
 }
 
-body.dark-mode #aboutContent {
-  background-color: #1e1e1e;
-  color: #eee;
-}
-
-body.dark-mode .about-section strong {
-  color: #fff;
-}
-
-.contact-section button {
-  background-color: #0d6efd;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-
-
-
-<style>
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { opacity: 0; transform: translateY(10px); }
-}
-</style>
-
-.hidden {
-  display: none !important;
-}
-
-/* Contact Content alanı düzgün hizalama */
-#contactContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  margin-top: 20px;
-}
-
-/* Form içeriği düzgün görünsün */
-#contactForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-#contactForm input,
-#contactForm textarea {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-#contactForm button {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  font-size: 1rem;
-  background-color: #065fd4;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-#contactForm button:hover {
-  background-color: #004ab3;
-}
-
-
-body.dark-mode #contactForm input,
-body.dark-mode #contactForm textarea {
-  background-color: #2a2a2a;
-  border: 1px solid #555;
-  color: #eee;
-}
-
-body.dark-mode #contactForm input::placeholder,
-body.dark-mode #contactForm textarea::placeholder {
-  color: #aaa;
-}
-
-
-/* Contact Us bölümü */
+/* === Contact Section === */
 .contact-section {
   max-width: 600px;
-  margin: 30px auto 10px;
+  margin: 40px auto;
   text-align: center;
 }
 
 #contactToggle {
   background-color: #065fd4;
   color: white;
-  border: none;
   padding: 10px 20px;
   font-size: 1rem;
-  border-radius: 4px;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
 }
 
@@ -320,130 +267,69 @@ body.dark-mode #contactForm textarea::placeholder {
   background-color: #004ab3;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+#contactContent {
   margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 6px;
 }
 
-.contact-form input,
-.contact-form textarea {
+#contactContent form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+#contactContent input,
+#contactContent textarea {
+  width: 100%;
+  max-width: 400px;
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 100%;
-  box-sizing: border-box;
+  border-radius: 5px;
 }
 
-.contact-form button {
-  padding: 10px;
+#contactContent button[type="submit"] {
   background-color: #065fd4;
   color: white;
-  border: none;
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #004ab3;
-}
-
-
-/* Responsive */
-@media (max-width: 768px) {
-  .video-card {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .video-card img {
-    width: 100%;
-    height: auto;
-  }
-
-  .video-info {
-    padding: 12px;
-    text-align: center;
-  }
-}
-#scrollTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #065fd4;
-  color: white;
-  border: none;
-  padding: 12px 18px;
-  border-radius: 50px;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  transition: background-color 0.3s;
-}
-
-#scrollTopBtn:hover {
-  background-color: #004ab3;
-}
-
-/* Karanlık mod butonu */
-
-header .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-#darkModeToggle {
-  position: absolute;
-  right: 200px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 6px 10px;
-  font-size: 1.1rem;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#darkModeToggle:hover {
-  background-color: #555;
-}
-
-
-#darkModeToggle {
-  margin-left: 20px;
-  padding: 8px 12px;
-  font-size: 1rem;
-  background-color: #333;
-  color: #fff;
+  padding: 10px 20px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
 }
 
-#darkModeToggle:hover {
-  background-color: #555;
+#contactContent button[type="submit"]:hover {
+  background-color: #004ab3;
 }
 
-/* Karanlık mod stilleri */
+/* === Footer === */
+footer {
+  background-color: #0f0f0f;
+  color: #ccc;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+  margin-top: 60px;
+}
+
+/* === Dark Mode === */
 body.dark-mode {
   background-color: #181818;
   color: #e0e0e0;
+}
+
+body.dark-mode .logo {
+  filter: drop-shadow(0 0 1px #000);
 }
 
 body.dark-mode .video-card {
   background-color: #2a2a2a;
   color: #e0e0e0;
   box-shadow: 0 1px 4px rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08); /* Hafif sınır */
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 body.dark-mode .video-info h2 {
@@ -456,150 +342,47 @@ body.dark-mode .video-info p {
 }
 
 body.dark-mode .video-info {
-  background-color: rgba(255, 255, 255, 0.02); /* Yazı arkasına çok hafif zemin */
+  background-color: rgba(255, 255, 255, 0.02);
   border-radius: 6px;
   padding: 10px 14px;
 }
 
-@media (max-width: 768px) {
-  #darkModeToggle {
-    display: none;
-  }
-}
-
-
-body.dark-mode .contact-form input,
-body.dark-mode .contact-form textarea {
-  background-color: #2a2a2a;
-  color: #eee;
-  border: 1px solid #444;
-}
-
-body.dark-mode .contact-form input::placeholder,
-body.dark-mode .contact-form textarea::placeholder {
-  color: #888;
-}
-
-body.dark-mode .contact-form button {
-  background-color: #1976d2;
-}
-
-body.dark-mode .contact-form button:hover {
-  background-color: #1565c0;
-}
-
 body.dark-mode #aboutContent {
-  color: #e0e0e0;
+  background-color: #1e1e1e;
+  color: #eee;
 }
 
 body.dark-mode .about-section strong {
   color: #fff;
 }
 
-/*alfabetik bar*/
-/* Alphabet Sidebar Container */
-.main-wrapper {
-    display: flex;
-    width: fit-content;
-    height: fit-content;
-    background-color: transparent;
+body.dark-mode #contactContent {
+  background-color: #1e1e1e;
+  color: #eee;
 }
 
-
-.alphabet-sidebar {
-    width: 40px; /* Sabit */
-    padding-top: 10px; /* Header ile boşluk */
-    background-color: #2a2a2a;
-    border-right: 1px solid #444;
-    overflow-y: hidden; /* Scroll engelle */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start; /* Harfleri üstte tut */
+body.dark-mode #contactContent input,
+body.dark-mode #contactContent textarea {
+  background-color: #2a2a2a;
+  border: 1px solid #555;
+  color: #eee;
 }
 
-.alphabet-sidebar a.alphabet-letter {
-    font-size: 0.80rem;     /* Küçük puntolu harf */
-    padding: 6px 0;         /* Daha az iç boşluk */
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    color: #eee;
-    border-bottom: 1px solid #333;
-    transition: background-color 0.2s;
+body.dark-mode #contactContent input::placeholder,
+body.dark-mode #contactContent textarea::placeholder {
+  color: #aaa;
 }
 
-.alphabet-sidebar a.alphabet-letter:hover,
-.alphabet-sidebar a.alphabet-letter.active {
-    background-color: #ddd;
-    color: #000;
+body.dark-mode #contactContent button[type="submit"] {
+  background-color: #1976d2;
 }
 
-.country-list-wrapper {
-    flex-grow: 0;
-    width: fit-content; /* sadece içerik kadar genişlik */
-    max-width: 220px; /* yaklaşık 12 harflik alan (12 * ~18px = 216px) */
-    overflow-y: auto;
-    height: 100vh;
-    background-color: #0f0f0f;
-    box-sizing: border-box;
-    padding: 10px;
-    border-left: 1px solid #222;
+body.dark-mode #contactContent button[type="submit"]:hover {
+  background-color: #1565c0;
 }
 
-/* Ülke isim butonları */
-.country-list-wrapper button {
-    white-space: nowrap;         /* Satır kaydırmayı engelle */
-    overflow: hidden;            /* Taşan kısmı gizle */
-    text-overflow: ellipsis;     /* Taşan yere “…” koy */
-    width: 100%;                 /* Container kadar */
-    padding: 10px 12px;
-    background-color: #1e1e1e;
-    border: 1px solid #333;
-    color: #eee;
-    text-align: left;
-    font-size: 0.95rem;
-    transition: background-color 0.2s;
-    cursor: pointer;
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  border-top-color: #444;
+  color: #bbb;
 }
-
-.country-list-wrapper button:hover {
-    background-color: #282828;
-    border-color: #555;
-}
-
-
-/* Karanlık mod */
-body.dark-mode .alphabet-sidebar {
-    background-color: #2a2a2a;
-    border-right: 1px solid #444;
-}
-
-body.dark-mode .alphabet-sidebar a.alphabet-letter {
-    color: #eee;
-    border-bottom-color: #333;
-}
-
-body.dark-mode .alphabet-sidebar a.alphabet-letter:hover,
-body.dark-mode .alphabet-sidebar a.alphabet-letter.active {
-    background-color: #3a3a3a;
-    color: #fff;
-}
-
-body.dark-mode .country-list-wrapper {
-    background-color: #0f0f0f;
-}
-
-body.dark-mode .country-list-wrapper button {
-    background-color: #1e1e1e;
-    border-color: #444;
-    color: #eee;
-}
-
-body.dark-mode .country-list-wrapper button:hover {
-    background-color: #282828;
-    border-color: #555;
-}
-
-/*alfabetik bar son*/
-
