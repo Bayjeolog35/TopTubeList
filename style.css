@@ -516,31 +516,28 @@ body.dark-mode .about-section strong {
 
 /*alfabetik bar*/
 /* Konteyner: sidebar + ülke listesi yan yana */
-.page-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  height: calc(100vh - 98px); /* Header yüksekliği dışında kalan alan */
+/* Tüm yapıyı yatay hizalayacak kapsayıcı */
+.main-wrapper {
+    display: flex;
+    flex-direction: row;
 }
 
-/* Alfabetik Kenar Çubuğu */
-/* Sol alfabeyi sabitle */
+/* Alfabetik bar (sol) */
 .alphabet-sidebar {
     position: fixed;
-    top: 98px; /* header yüksekliğin kadar */
+    top: 98px;
     left: 0;
     width: 50px;
-    height: calc(100vh - 98px); /* ekranın kalan yüksekliği */
+    height: calc(100vh - 98px);
     background-color: #1a1a1a;
     border-right: 1px solid #333;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly; /* harfler arası eşit boşluk */
+    justify-content: space-evenly;
     z-index: 10;
     font-size: 0.75em;
 }
-
 /* Karanlık mod */
 body.dark-mode .alphabet-sidebar {
     background-color: #0f0f0f;
@@ -548,6 +545,8 @@ body.dark-mode .alphabet-sidebar {
 }
 
 /* Harf linkleri */
+
+/* Harflerin görünümü */
 .alphabet-sidebar a {
     text-decoration: none;
     color: #ccc;
@@ -580,16 +579,12 @@ body.dark-mode .alphabet-sidebar {
     background: #666;
 }
 
-/* Ülke listesi ana alan */
+/* Sağdaki ülke listesi (ana içerik) */
 .country-list-wrapper {
-    margin-left: 60px; /* Sidebar kadar boşluk bırak */
-    padding: 10px 0;
-    background-color: #0f0f0f;
-    color: #fff;
-    height: calc(100vh - 98px);
-    overflow-y: auto;
+    margin-left: 50px; /* sidebar kadar boşluk bırak */
+    padding: 20px;
+    width: calc(100% - 50px); /* kalan genişliği alır */
 }
-
 /* Karanlık mod */
 body.dark-mode .country-list-wrapper {
     background-color: #0f0f0f;
