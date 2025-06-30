@@ -18,6 +18,7 @@ params = {
     "regionCode": "US",
     "key": API_KEY
 }
+
 response = requests.get(API_URL, params=params)
 
 if response.status_code == 200:
@@ -41,7 +42,6 @@ if response.status_code == 200:
         video_url = f"https://www.youtube.com/watch?v={item['id']}"
         thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
 
-        # -- videos.json için --
         video = {
             "title": item["snippet"]["title"],
             "views": views_int,
@@ -51,7 +51,6 @@ if response.status_code == 200:
         }
         videos.append(video)
 
-        # -- structured_data.json için --
         structured = {
             "@context": "https://schema.org",
             "@type": "VideoObject",
@@ -64,10 +63,8 @@ if response.status_code == 200:
         }
         structured_items.append(structured)
 
-    # Sıralama
     videos = sorted(videos, key=lambda x: x["views"], reverse=True)
 
-    # JSON çıktıları
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(videos, f, ensure_ascii=False, indent=2)
 
@@ -76,7 +73,7 @@ if response.status_code == 200:
 
     print("✅ videos.json ve structured_data.json güncellendi.")
 
-    # HTML'e gömme
+    # HTML'e gömme işlemleri
     with open(STRUCTURED_DATA_FILE, "r", encoding="utf-8") as f:
         structured_json = f.read()
     structured_script = f'<script type="application/ld+json">\n{structured_json}\n</script>'
@@ -86,15 +83,10 @@ if response.status_code == 200:
 
     html_content = html_content.replace("<!-- STRUCTURED_DATA_HERE -->", structured_script)
 
-    with open(HTML_FILE, "w", encoding="utf-8") as f:
-        f.write(html_content)
-
-    print("✅ index.html içine structured data gömüldü.")
-
-# ✅ En çok izlenen video için iframe oluştur
-top_video = videos[0]
-video_id = top_video["url"].split("v=")[-1]
-iframe_html = f'''
+    # ✅ En çok izlenen video için iframe oluştur ve göm
+    top_video = videos[0]
+    video_id = top_video["url"].split("v=")[-1]
+    iframe_html = f'''
 <iframe 
   width="560" 
   height="315" 
@@ -106,16 +98,12 @@ iframe_html = f'''
   style="position:absolute; width:1px; height:1px; left:-9999px;">
 </iframe>
 '''
+    html_content = html_content.replace(IFRAME_PLACEHOLDER, iframe_html)
 
-# index.html'e iframe gömme
-html_content = html_content.replace(IFRAME_PLACEHOLDER, iframe_html)
+    with open(HTML_FILE, "w", encoding="utf-8") as f:
+        f.write(html_content)
 
-with open(HTML_FILE, "w", encoding="utf-8") as f:
-    f.write(html_content)
-
-print("✅ index.html içine iframe eklendi.")
-
+    print("✅ index.html içine structured data ve iframe eklendi.")
 
 else:
     print("❌ API Hatası:", response.status_code)
-
