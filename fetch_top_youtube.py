@@ -1,8 +1,10 @@
 import requests
 import json
+import os
 from datetime import datetime
 
-API_KEY = "AIzaSyDeEp8zM0PaRG26QlWmACmIkMZVJFu-QW8"
+# 🔐 API key artık gizli bir çevre değişkeninden alınacak
+API_KEY = os.getenv("YOUTUBE_API_KEY")
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
 OUTPUT_FILE = "videos.json"
 STRUCTURED_DATA_FILE = "structured_data.json"
@@ -12,9 +14,9 @@ params = {
     "part": "snippet,statistics",
     "chart": "mostPopular",
     "maxResults": 50,
+    "regionCode": "US",
     "key": API_KEY
 }
-
 response = requests.get(API_URL, params=params)
 
 if response.status_code == 200:
