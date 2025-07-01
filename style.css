@@ -253,6 +253,7 @@ body.dark-mode .logo {
   border-radius: 4px;
   text-align: left;
   white-space: nowrap;
+  text-overflow: ellipsis; /* Gizlenen kısma ... ekler */
    max-width: 15ch;
 }
 
