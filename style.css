@@ -63,7 +63,9 @@ header .container {
   }
 
  .country-panel {
-    display: none !important;
+    display: flex;
+    flex-direction: row; /* 🧱 Yan yana yerleşim */
+    gap: 16px;
     position: fixed;
     top: 60px;
     left: 0;
@@ -73,9 +75,29 @@ header .container {
     background: white;
     z-index: 9998;
     padding: 20px 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    flex-wrap: nowrap;
   }
+
+  .alphabet-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-shrink: 0;
+    width: 28px; /* Harfler için sabit dar genişlik */
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .country-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1; /* Kalan alanı alır */
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+}
 
   .country-panel.active {
     display: flex;
