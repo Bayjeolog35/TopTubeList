@@ -284,15 +284,15 @@ body.dark-mode .logo {
 }
 
 .about-section button {
-display: block;
-  margin: 30px auto;
-  padding: 10px 20px;
-  background-color: #065fd4;
+ background-color: #065fd4;
   color: white;
+  padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 1rem;
+  font-weight: normal;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .about-section button:hover {
