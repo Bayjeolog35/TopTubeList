@@ -574,25 +574,28 @@
     let displayCount = 10;
 
     function renderVideos() {
-      const container = document.getElementById("videoList");
-      container.innerHTML = "";
+  const container = document.getElementById("videoList");
+  container.innerHTML = "";
 
-      allVideos.slice(0, displayCount).forEach(video => {
-        const card = document.createElement("div");
-        card.className = "video-card";
-        card.innerHTML = `
-          <img src="${video.thumbnail}" alt="${video.title}" />
-          <div class="video-info">
-            <h2>${video.title}</h2>
-            <p><strong>Views:</strong> ${video.views_str}</p>
-            <a href="${video.url}" target="_blank">Watch on YouTube</a>
-          </div>
-        `;
-        container.appendChild(card);
-      });
+  allVideos.slice(0, displayCount).forEach(video => {
+    const card = document.createElement("div");
+    card.className = "video-card";
+    card.innerHTML = `
+      <img src="${video.thumbnail}" alt="${video.title}" />
+      <div class="video-info">
+        <h2>${video.title}</h2>
+        <p><strong>Uploaded:</strong> ${new Date(video.uploadDate).toLocaleDateString()}</p>
+        <p><strong>Views:</strong> ${video.views_str}</p>
+        <a href="${video.url}" target="_blank">Watch on YouTube</a>
+      </div>
+    `;
+    container.appendChild(card);
+    setTimeout(() => card.classList.add("show"), 50);
+  });
 
-      document.getElementById("loadMoreBtn").style.display = (displayCount >= allVideos.length) ? "none" : "block";
-    }
+  document.getElementById("loadMoreBtn").style.display =
+    displayCount >= allVideos.length ? "none" : "block";
+}
 
     fetch("videos_europe.json")
       .then(res => res.json())
