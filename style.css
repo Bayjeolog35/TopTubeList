@@ -253,7 +253,6 @@ body.dark-mode .logo {
   border-radius: 4px;
   text-align: left;
   white-space: nowrap;
-  overflow: hidden;     /* Taşanı gizler */
    max-width: 15ch;
 }
 
