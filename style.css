@@ -271,8 +271,6 @@ body.dark-mode .logo {
   flex: 1;
   padding: 20px;
   background-color: var(--bg);
-  min-width: 0;
-  max-width: calc(100% - 250px); /* 250px sol panel genişliği kadar daral */
 }
 
 /* === About Section === */
