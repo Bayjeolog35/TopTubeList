@@ -62,46 +62,54 @@ header .container {
     display: block;
   }
 
- .country-panel {
+@media (max-width: 768px) {
+  .country-panel {
     display: flex;
-    flex-direction: row; /* 🧱 Yan yana yerleşim */
+    flex-direction: row;
     gap: 16px;
     position: fixed;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    max-height: 80%;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%); /* Sayfa ortasına hizala */
+    width: 90%;
+    max-height: 70%;
     overflow-y: auto;
     background: white;
     z-index: 9998;
-    padding: 20px 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    padding: 16px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    border-radius: 12px;
     flex-wrap: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .country-panel.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0); /* animasyonlu açılır */
   }
 
   .alphabet-column {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    flex-shrink: 0;
-    width: 28px; /* Harfler için sabit dar genişlik */
+    width: 30px;
     max-height: 60vh;
     overflow-y: auto;
+    flex-shrink: 0;
   }
 
   .country-column {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    flex: 1; /* Kalan alanı alır */
+    flex: 1;
     max-height: 60vh;
     overflow-y: auto;
   }
 }
-
-  .country-panel.active {
-    display: flex;
-  }
 
   /* Hamburger tıklanınca aktif sınıfı eklenirse görünür olur */
   .country-panel.active {
