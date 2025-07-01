@@ -241,6 +241,7 @@ body.dark-mode .logo {
   flex-direction: column;
   gap: 4px;
   max-height: 90vh;
+  min-width: 160px;
   overflow-y: scroll;
 }
 
