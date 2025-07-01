@@ -235,10 +235,12 @@ body.dark-mode .logo {
   flex-shrink: 0;
 }
 
-.country-column button {
-  overflow: hidden;           /* Taşanı gizle */
-  text-overflow: ellipsis;    /* "..." ile göster */
-  max-width: 180px;           /* Buton genişliği (15 karakter için uygun) */
+.country-column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 
