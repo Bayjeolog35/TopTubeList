@@ -882,29 +882,62 @@
         container.appendChild(card);
       });
 
-      const loadMoreBtn = document.getElementById("loadMoreBtn");
-      if (loadMoreBtn) {
-        loadMoreBtn.style.display = (displayCount >= allVideos.length) ? "none" : "block";
-      }
-    }
+     const loadMoreBtn = document.getElementById("loadMoreBtn");
+let allVideos = [];
+let displayCount = 10;
 
-    fetch("videos.json")
-      .then(response => response.json())
-      .then(videos => {
-        allVideos = videos;
-        renderVideos();
-      })
-      .catch(error => {
-        console.error("❌ Error fetching videos.json:", error);
-      });
+function renderVideos() {
+  const videoList = document.getElementById("videoList");
+  videoList.innerHTML = "";
 
-    const loadMoreBtn = document.getElementById("loadMoreBtn");
-    if (loadMoreBtn) {
-      loadMoreBtn.addEventListener("click", () => {
-        displayCount += 10;
-        renderVideos();
-      });
-    }
+  const videosToShow = allVideos.slice(0, displayCount);
+  videosToShow.forEach((video, index) => {
+    const card = document.createElement("div");
+    card.classList.add("video-card");
+
+    // 🔽 İçeriği ekle (örnek olarak basit içerik)
+    card.innerHTML = `
+      <img src="${video.thumbnail}" alt="${video.title}">
+      <div class="video-info">
+        <h2>${video.title}</h2>
+        <p>${video.channelTitle}</p>
+        <a href="https://www.youtube.com/watch?v=${video.videoId}" target="_blank">Watch on YouTube</a>
+      </div>
+    `;
+
+    videoList.appendChild(card);
+
+    // 🔽 Animasyonlu şekilde göster
+    setTimeout(() => {
+      card.classList.add("show");
+    }, 50 * index); // kartlar sırayla animasyonla gelir
+  });
+
+  // Buton gizle/göster
+  if (loadMoreBtn) {
+    loadMoreBtn.style.display = (displayCount >= allVideos.length) ? "none" : "block";
+  }
+}
+
+// İlk veri çekme
+fetch("videos.json")
+  .then(response => response.json())
+  .then(videos => {
+    allVideos = videos;
+    renderVideos();
+  })
+  .catch(error => {
+    console.error("❌ Error fetching videos.json:", error);
+  });
+
+// Load more tıklanınca
+if (loadMoreBtn) {
+  loadMoreBtn.addEventListener("click", () => {
+    displayCount += 10;
+    renderVideos();
+  });
+}
+
 
     const logoLink = document.getElementById("logoLink");
     if (logoLink) {
