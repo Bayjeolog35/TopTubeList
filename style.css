@@ -286,14 +286,18 @@ body.dark-mode .logo {
 .about-section button {
   background-color: #065fd4;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 22px;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px; /* diğer butonlarla aynı */
   font-size: 1rem;
   font-weight: normal;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: fit-content; /* ya da dilersen sabit bir genişlik */
+  margin: 0 auto;     /* ortalaması için */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* biraz derinlik */
 }
+
 
 .about-section button:hover {
   background-color: #004ab3;
