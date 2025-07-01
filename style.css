@@ -196,15 +196,17 @@ body.dark-mode .logo {
 
 /* Sol panel tüm ülke barı */
 .country-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: #1f1f1f;
+  padding: 12px;
+  overflow-y: auto;
+  z-index: 100;
   display: flex;
-  background-color: var(--bg);
-  padding: 10px;
-  gap: 8px;
-  position: sticky;
-  top: 60px;
-  z-index: 10;
-  align-self: flex-start;
-  flex-shrink: 0;
+  gap: 10px;
 }
 
 /* Düşey alfabe */
@@ -259,9 +261,9 @@ body.dark-mode .logo {
 
 /* Ana içerik */
 .main-content {
-  flex: 1;
+  margin-left: 240px; /* panelin genişliği kadar */
   padding: 20px;
-  background-color: var(--bg);
+  flex: 1;
 }
 
 /* === About Section === */
