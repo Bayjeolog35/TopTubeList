@@ -253,6 +253,9 @@ body.dark-mode .logo {
   border-radius: 4px;
   text-align: left;
   white-space: nowrap;
+  overflow: hidden;     /* Taşanı gizler */
+  text-overflow: ellipsis; /* Gizlenen kısma ... ekler */
+  max-width: 15ch;      /* Genişliği 15 karaktere sınırlar. Eğer sabit piksel isterseniz örn: width: 150px; kullanın */
 }
 
 .country-column button:hover {
