@@ -437,7 +437,7 @@ footer {
   padding: 40px 20px 20px;
   text-align: center;
   color: white;
-  margin-top: 40px;
+  margin-top: 20px;
   border-top: 1px solid #222;
 }
 
@@ -499,7 +499,7 @@ footer {
 }
 
 footer p {
-  margin-top: 0px;
+  margin-bottom: 1px;
   font-size: 0.9rem;
   color: #ccc;
 }
