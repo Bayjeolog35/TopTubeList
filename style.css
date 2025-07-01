@@ -391,7 +391,7 @@ footer {
   /* YENİ EKLENEN / DÜZELTİLEN */
   display: flex; /* JavaScript başlangıçta none yapacağı için bu önemli */
   flex-direction: column;
-  gap: 15px; /* Her bir form grubu arasındaki boşluk */
+  gap: 5px; /* Her bir form grubu arasındaki boşluk */
   /* NOT: display: none; başlangıçta olduğu için bu flex özellikleri JS 'display: block' yaptığında aktif olur. */
   /* Eğer JS ile toggle yaparken sadece 'display' değil, 'max-height' ve 'opacity' gibi özelliklerle animasyonlu açılıp kapanmasını isterseniz,
      o zaman #contactContent için de .show sınıfı ve transition tanımlamanız gerekebilir, tıpkı About Us'ta olduğu gibi.
