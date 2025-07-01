@@ -845,6 +845,8 @@
     <button id="contactToggle">Contact Us</button>
     <div id="contactContent" class="hidden">
       <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+       <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+
         <input type="hidden" name="form-name" value="contact" />
         <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
         <p><label>Your Name<br /><input type="text" name="name" required /></label></p>
