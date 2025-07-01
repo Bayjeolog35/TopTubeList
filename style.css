@@ -239,7 +239,7 @@ padding: 12px 16px;
 .country-panel {
   display: flex;
   background-color: var(--bg);
-  padding: 40px;
+  padding: 70px;
   gap: 8px;
   position: fixed;
   top: 78.5px;
