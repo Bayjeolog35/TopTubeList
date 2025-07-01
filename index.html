@@ -550,10 +550,9 @@
 
 </header>
       <div class="layout-wrapper">
-  <!-- SOL PANEL (ALFABE + ÜLKE BUTONLARI) -->
-    <aside class="country-panel">
-      <div class="alphabet-filter">
-    
+   <!-- SOL PANEL -->
+  <div class="country-panel">
+    <div class="alphabet-column">
     <a href="#" class="alphabet-letter" data-letter="all">All</a>
     <a href="#" class="alphabet-letter" data-letter="A">A</a>
     <a href="#" class="alphabet-letter" data-letter="B">B</a>
@@ -581,9 +580,8 @@
     <a href="#" class="alphabet-letter" data-letter="X">X</a>
     <a href="#" class="alphabet-letter" data-letter="Y">Y</a>
     <a href="#" class="alphabet-letter" data-letter="Z">Z</a>
- </div>
-
-   <div class="country-list-wrapper">
+</div>
+    <div class="country-column">
   <button onclick="location.href='Countries/Afghanistan.html'" data-letter="A">Afghanistan</button>
   <button onclick="location.href='Countries/Albania.html'" data-letter="A">Albania</button>
   <button onclick="location.href='Countries/Algeria.html'" data-letter="A">Algeria</button>
@@ -805,14 +803,19 @@
   <button onclick="location.href='Countries/Zambia.html'" data-letter="Z">Zambia</button>
   <button onclick="location.href='Countries/Zimbabwe.html'" data-letter="Z">Zimbabwe</button>
 </div>
-   </aside>
+  </div>
    <!-- SAĞ PANEL (GÖVDE) -->
  <div id="videoList"></div>
 
 <main>
   
   <button id="loadMoreBtn">Load More</button>
-
+<main class="main-content">
+    <div id="videoList" class="video-list"></div>
+    <button id="loadMoreBtn">Load More</button>
+  </main>
+</div>
+      
   <!-- About Section -->
   <section class="about-section">
     <button id="aboutToggle">About Us</button>
