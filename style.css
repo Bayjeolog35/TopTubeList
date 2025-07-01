@@ -62,8 +62,8 @@ header .container {
     display: block;
   }
 
-  .country-panel {
-    display: none;
+ .country-panel {
+    display: none !important;
     position: fixed;
     top: 60px;
     left: 0;
@@ -81,9 +81,9 @@ header .container {
     display: flex;
   }
 
-  /* Ana içerik sola kayan panel açıldığında görünür kalır */
-  .layout-wrapper {
-    flex-direction: column;
+  /* Hamburger tıklanınca aktif sınıfı eklenirse görünür olur */
+  .country-panel.active {
+    display: flex !important;
   }
 }
 
