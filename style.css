@@ -269,7 +269,7 @@ body.dark-mode .logo {
 /* Ana içerik */
 .main-content {
   flex: 1;
-  padding: 20px;
+  padding: 0px;
   background-color: var(--bg);
 }
 
