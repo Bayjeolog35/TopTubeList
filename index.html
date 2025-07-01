@@ -805,15 +805,9 @@
 </div>
   </div>
    <!-- SAĞ PANEL (GÖVDE) -->
- <div id="videoList"></div>
-
-<main>
-
-  
-<main class="main-content">
-    <div id="videoList" class="video-list"></div>
-    <button id="loadMoreBtn">Load More</button>
-  </main>
+<div id="videoListWrapper" class="main-content">
+  <div id="videoList" class="video-list"></div>
+  <button id="loadMoreBtn">Load More</button>
 </div>
       
   <!-- About Section -->
@@ -925,10 +919,11 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
       }
     });
 
-    // Aktif harfi görsel olarak vurgula
-   document.querySelectorAll(".alphabet-letter").forEach(letter => {
+  // Harfe göre ülke filtreleme
+document.querySelectorAll(".alphabet-letter").forEach(letter => {
   letter.addEventListener("click", function (e) {
     e.preventDefault();
+
     const selectedLetter = this.getAttribute("data-letter");
     const allButtons = document.querySelectorAll(".country-column button");
 
@@ -940,10 +935,12 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
       }
     });
 
+    // Aktif harf görsel vurgusu
     document.querySelectorAll(".alphabet-letter").forEach(a => a.classList.remove("active"));
     this.classList.add("active");
   });
 });
+
 
     }
   });
