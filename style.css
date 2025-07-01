@@ -337,9 +337,11 @@ body.dark-mode .logo {
 #aboutContent p {
   margin-bottom: 20px;
 }
-#aboutContent strong {
-  color: #0d6efd;
+#aboutContent a {
+  color: #222; /* Maviden siyaha çevrildi. */
+  /* text-decoration: underline; // Altı çizili kalmasını isterseniz bırakın, istemezseniz kaldırın */
 }
+
 
 body.dark-mode #aboutContent {
   background-color: #1e1e1e;
