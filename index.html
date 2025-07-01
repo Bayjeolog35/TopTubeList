@@ -526,7 +526,9 @@
 
 <body>
   
-    <main class="main-content">   
+    <main class="main-content">
+
+   
 <header>
   <div class="container header-flex">
     <a href="#" id="logoLink">
@@ -805,8 +807,7 @@
 </div>
   </div>
      <!-- SAĞ PANEL -->
-<main class="">
-
+<main class="main-content">
     <div id="videoList" class="video-list"></div>
     <button id="loadMoreBtn">Load More</button>
       
@@ -864,15 +865,17 @@
 
   /*hamburger menü*/
   
-  document.addEventListener("DOMContentLoaded", function () {
-  // fetch ile video JSON'u çekiliyor mu?
-  fetch("videos.json")
-    .then(response => response.json())
-    .then(data => {
-      allVideos = data;
-      renderVideos();
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const panel = document.querySelector(".country-panel");
+
+  if (hamburger && panel) {
+    hamburger.addEventListener("click", () => {
+      panel.classList.toggle("active");
     });
+  }
 });
+
 
 /*hamburger menü son*/
 
