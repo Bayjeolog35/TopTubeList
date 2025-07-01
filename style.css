@@ -211,8 +211,6 @@ padding: 12px 16px;
   display: flex;
   flex-direction: column;
   gap: 4px;
-  max-height: 70vh;
-  min-width: 160px;
 }
 
 .alphabet-letter {
