@@ -863,34 +863,22 @@
   
 <script>
 
-  /*hamburger menü*/
+ /*hamburger menü*/
   
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const panel = document.querySelector(".country-panel");
 
-  // Menüye tıklayınca toggle
   if (hamburger && panel) {
-    hamburger.addEventListener("click", (e) => {
-      e.stopPropagation(); // Kendi tıklamasında kapanmasın
+    hamburger.addEventListener("click", () => {
       panel.classList.toggle("active");
-    });
-
-    // Panele tıklanırsa kapanmasın
-    panel.addEventListener("click", (e) => {
-      e.stopPropagation();
-    });
-
-    // Boşluğa tıklanırsa panel kapanır
-    document.addEventListener("click", () => {
-      panel.classList.remove("active");
     });
   }
 });
 
 
-
 /*hamburger menü son*/
+
 
 document.addEventListener("DOMContentLoaded", function () {
     let allVideos = [];
