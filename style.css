@@ -40,7 +40,53 @@ header .container {
   position: relative;
 }
 
+/*hamburger menü*/
+
+/* Hamburger buton (sadece mobilde göster) */
+.hamburger {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  font-size: 26px;
+  background: white;
+  color: black;
+  border: none;
+  z-index: 9999;
+  padding: 10px 14px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .country-panel {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    max-height: 80%;
+    overflow-y: auto;
+    background: white;
+    z-index: 9998;
+    padding: 20px 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: none; /* başlangıçta gizli */
+    flex-direction: column;
+  }
+
+  .country-panel.active {
+    display: flex;
+  }
+}
+
+/*hamburger menü son*/
+
 /* === Dark Mode Toggle === */
+
 #darkModeToggle {
   position: absolute;
   right: 200px;
