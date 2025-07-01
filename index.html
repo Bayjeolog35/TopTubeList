@@ -914,19 +914,35 @@
       renderVideos(previousDisplayCount); // Sadece yeni eklenen videoları render et
     });
   }
-document.addEventListener("DOMContentLoaded", function () {
-    const contactToggle = document.getElementById("contactToggle");
-    const contactContent = document.getElementById("contactContent");
+const form = document.getElementById("contactForm"); // Form ID'si "contactForm" olmalı, şu an "contact"
+        const statusDiv = document.getElementById("formStatus");
 
-    if (contactToggle && contactContent) {
-      contactToggle.addEventListener("click", () => {
-        contactContent.style.display = 
-          (contactContent.style.display === "none" || contactContent.style.display === "") 
-          ? "block" 
-          : "none";
-      });
-    }
-  });
+        if (form) {
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+
+                fetch("/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(formData).toString()
+                })
+                    .then(() => {
+                        form.reset();
+                        statusDiv.innerText = "✅ ✅ Message sent successfully!";
+                        statusDiv.style.display = "block";
+                        statusDiv.style.cssText =                             position: fixed; bottom: 20px; right: 20px;
+                            background: #28a745; color: white; padding: 12px 24px;
+                            border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                            font-family: sans-serif; z-index: 9999;
+                            animation: fadeOut 5s forwards;
+                        ;                        setTimeout(() => statusDiv.remove(), 5000);
+                    })
+                    .catch(() => {
+                        alert("❌ Mesaj gönderilemedi. Lütfen tekrar deneyin.");
+                    });
+            });
+        }
     // Logo tıklanınca en üste kaydır
     const logoLink = document.getElementById("logoLink");
     if (logoLink) {
