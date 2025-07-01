@@ -363,10 +363,10 @@ footer {
   margin-top: 40px;
   border-top: 1px solid #ddd;
 }
-
 .contact-section {
   margin: 0 auto;
   max-width: 600px;
+  text-align: center;
 }
 
 #contactToggle {
@@ -385,50 +385,74 @@ footer {
 }
 
 #contactContent {
-  margin-top: 20px;
-  display: none; /* JS tarafından block yapılacak */
-  text-align: left;
-  /* YENİ EKLENEN / DÜZELTİLEN */
-  display: flex; /* JavaScript başlangıçta none yapacağı için bu önemli */
+  display: flex;
   flex-direction: column;
-  gap: 5px; /* Her bir form grubu arasındaki boşluk */
-  /* NOT: display: none; başlangıçta olduğu için bu flex özellikleri JS 'display: block' yaptığında aktif olur. */
-  /* Eğer JS ile toggle yaparken sadece 'display' değil, 'max-height' ve 'opacity' gibi özelliklerle animasyonlu açılıp kapanmasını isterseniz,
-     o zaman #contactContent için de .show sınıfı ve transition tanımlamanız gerekebilir, tıpkı About Us'ta olduğu gibi.
-     Şu anki JS sadece display'i değiştiriyor, bu da ani bir geçiş yapar.
-  */
+  align-items: center;
+  gap: 24px;
+  margin-top: 20px;
+  padding-bottom: 40px;
 }
 
 #contactContent form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
+  width: 100%;
 }
 
 #contactContent input,
 #contactContent textarea {
   width: 100%;
-  max-width: 500px;
-  padding: 10px;
+  max-width: 450px;
+  padding: 12px 16px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
+  box-sizing: border-box;
+}
+
+#contactContent textarea {
+  min-height: 120px;
+  resize: vertical;
 }
 
 #contactContent button[type="submit"] {
   background-color: #065fd4;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 1rem;
   border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 #contactContent button[type="submit"]:hover {
   background-color: #004ab3;
 }
+
+/* Dark mode desteği */
+body.dark-mode #contactContent input,
+body.dark-mode #contactContent textarea {
+  background-color: #2a2a2a;
+  border: 1px solid #555;
+  color: #eee;
+}
+
+body.dark-mode #contactContent input::placeholder,
+body.dark-mode #contactContent textarea::placeholder {
+  color: #aaa;
+}
+
+body.dark-mode #contactContent button[type="submit"] {
+  background-color: #1976d2;
+}
+
+body.dark-mode #contactContent button[type="submit"]:hover {
+  background-color: #1565c0;
+}
+
 
 footer p {
   margin-top: 30px;
@@ -442,24 +466,3 @@ body.dark-mode footer {
   border-top: 1px solid #333;
 }
 
-body.dark-mode #contactToggle,
-body.dark-mode #contactContent button[type="submit"] {
-  background-color: #1976d2;
-}
-
-body.dark-mode #contactToggle:hover,
-body.dark-mode #contactContent button[type="submit"]:hover {
-  background-color: #1565c0;
-}
-
-body.dark-mode #contactContent input,
-body.dark-mode #contactContent textarea {
-  background-color: #2a2a2a;
-  color: #eee;
-  border: 1px solid #444;
-}
-
-body.dark-mode #contactContent input::placeholder,
-body.dark-mode #contactContent textarea::placeholder {
-  color: #aaa;
-}
