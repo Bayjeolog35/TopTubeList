@@ -255,7 +255,6 @@ body.dark-mode .logo {
   white-space: nowrap;
   max-width: 15ch;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .country-column button:hover {
