@@ -302,11 +302,11 @@ body.dark-mode .video-info a {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0f0f0;
+  background: #aaa;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #aaa;
+  background-color: ##1f1f1f;
   border-radius: 10px;
 }
 
