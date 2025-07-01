@@ -925,8 +925,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 aboutContent.style.display = "block";
                 setTimeout(() => {
                     aboutContent.classList.add("show");
-
-                    // ✅ Sayfayı About Us alanına kaydır
                     aboutContent.scrollIntoView({
                         behavior: "smooth",
                         block: "start"
@@ -935,43 +933,36 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-});
 
-
-
-    // --- Contact Us Toggle ---
+    // --- Contact Us Scroll + Toggle ---
     const contactToggle = document.getElementById("contactToggle");
     const contactContent = document.getElementById("contactContent");
 
-    if (contactToggle && contactContent) { // Check if elements exist
+    if (contactToggle && contactContent) {
         contactToggle.addEventListener("click", () => {
-            contactContent.style.display = (contactContent.style.display === "none" || contactContent.style.display === "") ? "block" : "none";
+            if (contactContent.classList.contains("show")) {
+                contactContent.classList.remove("show");
+                setTimeout(() => {
+                    contactContent.style.display = "none";
+                }, 400);
+            } else {
+                contactContent.style.display = "block";
+                setTimeout(() => {
+                    contactContent.classList.add("show");
+                    contactContent.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }, 10);
+            }
         });
     }
-
-
-    // --- Dark Mode Toggle and Initialization ---
-    // NOT: darkModeBtn iki kere tanımlanmıştı, tekilleştirildi.
-    const darkModeBtn = document.getElementById("darkModeToggle");
-
-    if (darkModeBtn) { // Check if button exists
-        darkModeBtn.addEventListener("click", () => {
-            const isDark = document.body.classList.toggle("dark-mode");
-            localStorage.setItem("darkMode", isDark);
-        });
-    }
-
-    // Dark mode'u localStorage'dan yükle
-    if (localStorage.getItem("darkMode") === "true") {
-        document.body.classList.add("dark-mode");
-    }
-
 
     // --- Contact Form Submission ---
     const form = document.getElementById("contactForm");
     const statusDiv = document.getElementById("formStatus");
 
-    if (form && statusDiv) { // Both elements must exist for the form to work
+    if (form && statusDiv) {
         form.addEventListener("submit", function (e) {
             e.preventDefault();
             const formData = new FormData(form);
@@ -985,39 +976,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 form.reset();
                 statusDiv.innerText = "✅ ✅ Message sent successfully!";
                 statusDiv.style.display = "block";
-                // HATA DÜZELTME: style.cssText ataması string içine alındı
-                statusDiv.style.cssText = 
+                statusDiv.style.cssText = `
                     position: fixed; bottom: 20px; right: 20px;
                     background: #28a745; color: white; padding: 12px 24px;
                     border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
                     font-family: sans-serif; z-index: 9999;
                     animation: fadeOut 5s forwards;
-                ;
+                `;
                 setTimeout(() => statusDiv.remove(), 5000);
             })
             .catch(() => {
                 alert("❌ Mesaj gönderilemedi. Lütfen tekrar deneyin.");
             });
-        });
-    }
-
-    // --- About Us Toggle ---
-    const aboutToggle = document.getElementById("aboutToggle");
-    const aboutContent = document.getElementById("aboutContent");
-
-    if (aboutToggle && aboutContent) {
-        aboutToggle.addEventListener("click", () => {
-            if (aboutContent.classList.contains("show")) {
-                aboutContent.classList.remove("show");
-                setTimeout(() => {
-                    aboutContent.style.display = "none";
-                }, 400); // Should match CSS transition duration
-            } else {
-                aboutContent.style.display = "block";
-                setTimeout(() => {
-                    aboutContent.classList.add("show");
-                }, 10); // Small delay to allow display:block to take effect before transition
-            }
         });
     }
 
@@ -1050,16 +1020,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // --- FadeOut animasyonu için style ekleme ---
-    // Bu kısım form gönderimindeki başarı mesajı için gerekli olan animasyon stilini ekler.
+    // --- FadeOut animation style block ---
     const style = document.createElement("style");
-    style.textContent = 
+    style.textContent = `
         @keyframes fadeOut {
             0% { opacity: 1; }
             80% { opacity: 1; }
             100% { opacity: 0; transform: translateY(10px); }
         }
-    ;
+    `;
     document.head.appendChild(style);
 });
 </script>
