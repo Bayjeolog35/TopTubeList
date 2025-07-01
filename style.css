@@ -289,7 +289,7 @@ body.dark-mode .logo {
   border: none;
   border-radius: 6px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: normal;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -316,7 +316,9 @@ body.dark-mode .logo {
 #aboutContent p {
   margin-bottom: 20px;
 }
-
+#aboutContent strong {
+  color: #0d6efd;
+}
 
 body.dark-mode #aboutContent {
   background-color: #1e1e1e;
