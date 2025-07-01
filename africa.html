@@ -583,22 +583,22 @@
     const card = document.createElement("div");
     card.className = "video-card";
     card.innerHTML = `
-      <img src="${video.thumbnailUrl}" alt="${video.name}" />
+      <img src="${video.thumbnail}" alt="${video.title}" />
       <div class="video-info">
-        <h2>${video.name}</h2>
+        <h2>${video.title}</h2>
         <p><strong>Uploaded:</strong> ${new Date(video.uploadDate).toLocaleDateString()}</p>
-        <a href="${video.contentUrl}" target="_blank">Watch on YouTube</a>
+        <p><strong>Views:</strong> ${video.views_str}</p>
+        <a href="${video.url}" target="_blank">Watch on YouTube</a>
       </div>
     `;
     container.appendChild(card);
-
-    // animasyon
     setTimeout(() => card.classList.add("show"), 50);
   });
 
   document.getElementById("loadMoreBtn").style.display =
     displayCount >= allVideos.length ? "none" : "block";
 }
+
 
 
     fetch("videos_africa.json")
