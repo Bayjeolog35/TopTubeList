@@ -331,7 +331,7 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
   background-color: #333;
 }
 
-/* Mobilde hamburger menü */
+/* 🔒 Mobil görünüm için hamburger ve country-panel */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -364,6 +364,7 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
   }
 }
 
+/* ✅ Masaüstünde her zaman görünür */
 @media (min-width: 769px) {
   .country-panel {
     display: flex !important;
@@ -379,7 +380,7 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
     display: none;
   }
 }
-/*hamburger son*/
+
 
   .alphabet-column {
     display: flex;
