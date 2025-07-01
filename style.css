@@ -271,9 +271,10 @@ body.dark-mode .logo {
   flex: 1;
   padding: 20px;
   background-color: var(--bg);
-  max-width: 980px;         /* 🔹 İçeriği daraltır */
-  margin-left: auto;        /* 🔹 Ortalar (sağa yaslamaz) */
-  margin-right: auto;       /* 🔹 Ortalar (sola yaslamaz) */
+  max-width: 960px;         /* maksimum genişlik sınırı */
+  width: 100%;              /* ekran boyutuna uyumlu */
+  box-sizing: border-box;   /* padding dahil genişlik */
+  margin: 0 auto;           /* ortalamak için */
 }
 
 /* === About Section === */
