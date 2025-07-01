@@ -863,14 +863,16 @@
   document.addEventListener("DOMContentLoaded", function () {
     let allVideos = [];
     let displayCount = 10;
+    const videoList = document.getElementById("videoList");
+    const loadMoreBtn = document.getElementById("loadMoreBtn");
 
     function renderVideos() {
-      const container = document.getElementById("videoList");
-      container.innerHTML = "";
+      videoList.innerHTML = "";
 
-      allVideos.slice(0, displayCount).forEach(video => {
+      const videosToShow = allVideos.slice(0, displayCount);
+      videosToShow.forEach((video, index) => {
         const card = document.createElement("div");
-        card.className = "video-card";
+        card.classList.add("video-card");
         card.innerHTML = `
           <img src="${video.thumbnail}" alt="${video.title}" />
           <div class="video-info">
@@ -879,66 +881,39 @@
             <a href="${video.url}" target="_blank">Watch on YouTube</a>
           </div>
         `;
-        container.appendChild(card);
+        videoList.appendChild(card);
+
+        // 🎬 Animasyonla göster
+        setTimeout(() => {
+          card.classList.add("show");
+        }, 50 * index);
       });
 
-     const loadMoreBtn = document.getElementById("loadMoreBtn");
-let allVideos = [];
-let displayCount = 10;
+      if (loadMoreBtn) {
+        loadMoreBtn.style.display = (displayCount >= allVideos.length) ? "none" : "block";
+      }
+    }
 
-function renderVideos() {
-  const videoList = document.getElementById("videoList");
-  videoList.innerHTML = "";
+    // Veri çek
+    fetch("videos.json")
+      .then(response => response.json())
+      .then(videos => {
+        allVideos = videos;
+        renderVideos();
+      })
+      .catch(error => {
+        console.error("❌ Error fetching videos.json:", error);
+      });
 
-  const videosToShow = allVideos.slice(0, displayCount);
-  videosToShow.forEach((video, index) => {
-    const card = document.createElement("div");
-    card.classList.add("video-card");
+    // Load more
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener("click", () => {
+        displayCount += 10;
+        renderVideos();
+      });
+    }
 
-    // 🔽 İçeriği ekle (örnek olarak basit içerik)
-    card.innerHTML = `
-      <img src="${video.thumbnail}" alt="${video.title}">
-      <div class="video-info">
-        <h2>${video.title}</h2>
-        <p>${video.channelTitle}</p>
-        <a href="https://www.youtube.com/watch?v=${video.videoId}" target="_blank">Watch on YouTube</a>
-      </div>
-    `;
-
-    videoList.appendChild(card);
-
-    // 🔽 Animasyonlu şekilde göster
-    setTimeout(() => {
-      card.classList.add("show");
-    }, 50 * index); // kartlar sırayla animasyonla gelir
-  });
-
-  // Buton gizle/göster
-  if (loadMoreBtn) {
-    loadMoreBtn.style.display = (displayCount >= allVideos.length) ? "none" : "block";
-  }
-}
-
-// İlk veri çekme
-fetch("videos.json")
-  .then(response => response.json())
-  .then(videos => {
-    allVideos = videos;
-    renderVideos();
-  })
-  .catch(error => {
-    console.error("❌ Error fetching videos.json:", error);
-  });
-
-// Load more tıklanınca
-if (loadMoreBtn) {
-  loadMoreBtn.addEventListener("click", () => {
-    displayCount += 10;
-    renderVideos();
-  });
-}
-
-
+    // Logo tıklanınca en üste kaydır
     const logoLink = document.getElementById("logoLink");
     if (logoLink) {
       logoLink.addEventListener("click", function (e) {
@@ -947,25 +922,27 @@ if (loadMoreBtn) {
       });
     }
 
-   const aboutToggle = document.getElementById("aboutToggle");
-if (aboutToggle) {
-  const content = document.getElementById("aboutContent");
+    // About Us açılır/kapanır animasyonu
+    const aboutToggle = document.getElementById("aboutToggle");
+    const aboutContent = document.getElementById("aboutContent");
 
-  aboutToggle.addEventListener("click", () => {
-    if (content.classList.contains("show")) {
-      content.classList.remove("show");
-      setTimeout(() => {
-        content.style.display = "none";
-      }, 400); // CSS geçiş süresi ile uyumlu
-    } else {
-      content.style.display = "block";
-      setTimeout(() => {
-        content.classList.add("show");
-      }, 10); // animasyonu tetikle
+    if (aboutToggle && aboutContent) {
+      aboutToggle.addEventListener("click", () => {
+        if (aboutContent.classList.contains("show")) {
+          aboutContent.classList.remove("show");
+          setTimeout(() => {
+            aboutContent.style.display = "none";
+          }, 400);
+        } else {
+          aboutContent.style.display = "block";
+          setTimeout(() => {
+            aboutContent.classList.add("show");
+          }, 10);
+        }
+      });
     }
-  });
-}
 
+    // Dark mode
     const darkModeBtn = document.getElementById("darkModeToggle");
     if (darkModeBtn) {
       darkModeBtn.addEventListener("click", () => {
@@ -974,11 +951,10 @@ if (aboutToggle) {
       });
     }
 
-    // Harfe göre ülke filtreleme
+    // Alfabetik ülke filtresi
     document.querySelectorAll(".alphabet-letter").forEach(letter => {
       letter.addEventListener("click", function (e) {
         e.preventDefault();
-
         const selectedLetter = this.getAttribute("data-letter");
         const allButtons = document.querySelectorAll(".country-column button");
 
@@ -996,6 +972,7 @@ if (aboutToggle) {
     });
   });
 </script>
+
 
 
 <style>
