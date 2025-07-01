@@ -212,7 +212,7 @@ padding: 12px 16px;
 .alphabet-column {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .alphabet-letter {
@@ -223,7 +223,7 @@ padding: 12px 16px;
   background-color: #1f1f1f;
   color: white;
   border-radius: 4px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 
