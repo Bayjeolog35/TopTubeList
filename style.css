@@ -308,3 +308,147 @@ padding: 12px 16px;
 .about-section button:hover {
   background-color: #004ab3;
 }
+#aboutContent {
+  display: none;
+  opacity: 0;
+  transform: translateY(-12px);
+  background-color: #f9f9f9;
+  padding: 30px 24px;
+  border-radius: 12px;
+  color: #222;
+  max-width: 800px;
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #0d6efd;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  scroll-margin-top: 80px; /* header yüksekliğin ne kadarsa buna göre ayarla */
+}
+
+#aboutContent.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+#aboutContent p {
+  margin-bottom: 20px;
+}
+#aboutContent a {
+  color: #222; /* Maviden siyaha çevrildi. */
+  /* text-decoration: underline; // Altı çizili kalmasını isterseniz bırakın, istemezseniz kaldırın */
+}
+
+
+body.dark-mode #aboutContent {
+  background-color: #1e1e1e;
+  color: #ddd;
+  border-left-color: #66b2ff;
+}
+
+body.dark-mode #aboutContent strong {
+  color: #66b2ff;
+}
+
+footer {
+  background-color: #f9f9f9;
+  padding: 40px 20px 20px;
+  text-align: center;
+  color: #333;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+}
+
+.contact-section {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+#contactToggle {
+  background-color: #065fd4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#contactToggle:hover {
+  background-color: #004ab3;
+}
+
+#contactContent {
+  margin-top: 20px;
+  display: none;
+  text-align: left;
+}
+
+#contactContent form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+#contactContent input,
+#contactContent textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#contactContent button[type="submit"] {
+  background-color: #065fd4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#contactContent button[type="submit"]:hover {
+  background-color: #004ab3;
+}
+
+footer p {
+  margin-top: 0px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+body.dark-mode footer {
+  background-color: #121212;
+  color: #ccc;
+  border-top: 1px solid #333;
+}
+
+body.dark-mode #contactToggle,
+body.dark-mode #contactContent button[type="submit"] {
+  background-color: #1976d2;
+}
+
+body.dark-mode #contactToggle:hover,
+body.dark-mode #contactContent button[type="submit"]:hover {
+  background-color: #1565c0;
+}
+
+body.dark-mode #contactContent input,
+body.dark-mode #contactContent textarea {
+  background-color: #2a2a2a;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+body.dark-mode #contactContent input::placeholder,
+body.dark-mode #contactContent textarea::placeholder {
+  color: #aaa;
+}
