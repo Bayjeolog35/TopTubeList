@@ -252,9 +252,10 @@ body.dark-mode .logo {
   color: white;
   border-radius: 4px;
   text-align: left;
-  white-space: nowrap;
-  text-overflow: ellipsis; /* Gizlenen kısma ... ekler */
-   max-width: 15ch;
+ white-space: nowrap;        /* Tek satırda tut */
+  overflow: hidden;           /* Taşanı gizle */
+  text-overflow: ellipsis;    /* "..." ile göster */
+  max-width: 180px;           /* Buton genişliği (15 karakter için uygun) 
 }
 
 .country-column button:hover {
