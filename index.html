@@ -860,14 +860,14 @@
 
   
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   let allVideos = [];
-  let displayCount = 0; // Başlangıçta hiç video göstermemek için 0 yapıldı
+  let displayCount = 0;
   const videoList = document.getElementById("videoList");
   const loadMoreBtn = document.getElementById("loadMoreBtn");
 
-  function renderVideos(startIndex = 0) { // Yeni videoların ekleneceği başlangıç indeksi
-    const videosToAdd = allVideos.slice(startIndex, displayCount); // Sadece eklenecek videoları al
+  function renderVideos(startIndex = 0) {
+    const videosToAdd = allVideos.slice(startIndex, displayCount);
     videosToAdd.forEach((video, index) => {
       const card = document.createElement("div");
       card.classList.add("video-card");
@@ -881,24 +881,21 @@
       `;
       videoList.appendChild(card);
 
-      // 🎬 Animasyonla göster
+      // Opsiyonel animasyon
       setTimeout(() => {
         card.classList.add("show");
-      }, 50 * index); // Bu gecikmeyi isterseniz kaldırabilir veya azaltabilirsiniz
+      }, 50 * index);
     });
 
     if (loadMoreBtn) {
-      // Eğer gösterilecek video kalmadıysa butonu gizle
       loadMoreBtn.style.display = (displayCount >= allVideos.length) ? "none" : "block";
     }
   }
 
-  // Veri çek
   fetch("videos.json")
     .then(response => response.json())
     .then(videos => {
       allVideos = videos;
-      // İlk yüklemede ilk 10 videoyu göster
       displayCount = 10;
       renderVideos(0);
     })
@@ -906,16 +903,29 @@
       console.error("❌ Error fetching videos.json:", error);
     });
 
-  // Load more
   if (loadMoreBtn) {
     loadMoreBtn.addEventListener("click", () => {
-      const previousDisplayCount = displayCount; // Mevcut gösterilen video sayısı
-      displayCount += 10; // Yeni gösterilecek toplam video sayısı
-      renderVideos(previousDisplayCount); // Sadece yeni eklenen videoları render et
+      const previousDisplayCount = displayCount;
+      displayCount += 10;
+      renderVideos(previousDisplayCount);
     });
   }
-<script>
-  const form = document.getElementById("contactForm");
+
+  // Contact Us aç/kapa
+  const contactToggle = document.getElementById("contactToggle");
+  const contactContent = document.getElementById("contactContent");
+  if (contactToggle && contactContent) {
+    contactToggle.addEventListener("click", () => {
+      if (contactContent.style.display === "block") {
+        contactContent.style.display = "none";
+      } else {
+        contactContent.style.display = "block";
+      }
+    });
+  }
+
+  // Contact form submit
+  const form = document.querySelector('form[name="contact"]');
   const statusDiv = document.getElementById("formStatus");
 
   if (form) {
@@ -947,78 +957,76 @@
     });
   }
 
-  // Fade-out animasyonu
+  // About Us toggle
+  const aboutToggle = document.getElementById("aboutToggle");
+  const aboutContent = document.getElementById("aboutContent");
+
+  if (aboutToggle && aboutContent) {
+    aboutToggle.addEventListener("click", () => {
+      if (aboutContent.classList.contains("show")) {
+        aboutContent.classList.remove("show");
+        setTimeout(() => {
+          aboutContent.style.display = "none";
+        }, 400);
+      } else {
+        aboutContent.style.display = "block";
+        setTimeout(() => {
+          aboutContent.classList.add("show");
+        }, 10);
+      }
+    });
+  }
+
+  // Dark mode
+  const darkModeBtn = document.getElementById("darkModeToggle");
+  if (darkModeBtn) {
+    darkModeBtn.addEventListener("click", () => {
+      const isDark = document.body.classList.toggle("dark-mode");
+      localStorage.setItem("darkMode", isDark);
+    });
+  }
+
+  // Harf filtreleme
+  document.querySelectorAll(".alphabet-letter").forEach(letter => {
+    letter.addEventListener("click", function (e) {
+      e.preventDefault();
+      const selectedLetter = this.getAttribute("data-letter");
+      const allButtons = document.querySelectorAll(".country-column button");
+
+      allButtons.forEach(btn => {
+        if (selectedLetter === "all" || btn.getAttribute("data-letter") === selectedLetter) {
+          btn.style.display = "block";
+        } else {
+          btn.style.display = "none";
+        }
+      });
+
+      document.querySelectorAll(".alphabet-letter").forEach(a => a.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+
+  // Logo scroll to top
+  const logoLink = document.getElementById("logoLink");
+  if (logoLink) {
+    logoLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  // FadeOut animasyonu
   const style = document.createElement("style");
   style.textContent = `
     @keyframes fadeOut {
       0% { opacity: 1; }
       80% { opacity: 1; }
-      100% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 0; transform: translateY(10px); }
     }
   `;
   document.head.appendChild(style);
-        }
-    // Logo tıklanınca en üste kaydır
-    const logoLink = document.getElementById("logoLink");
-    if (logoLink) {
-      logoLink.addEventListener("click", function (e) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    }
-
-    // About Us açılır/kapanır animasyonu
-    const aboutToggle = document.getElementById("aboutToggle");
-    const aboutContent = document.getElementById("aboutContent");
-
-    if (aboutToggle && aboutContent) {
-      aboutToggle.addEventListener("click", () => {
-        if (aboutContent.classList.contains("show")) {
-          aboutContent.classList.remove("show");
-          setTimeout(() => {
-            aboutContent.style.display = "none";
-          }, 400);
-        } else {
-          aboutContent.style.display = "block";
-          setTimeout(() => {
-            aboutContent.classList.add("show");
-          }, 10);
-        }
-      });
-    }
-
-    // Dark mode
-    const darkModeBtn = document.getElementById("darkModeToggle");
-    if (darkModeBtn) {
-      darkModeBtn.addEventListener("click", () => {
-        const isDark = document.body.classList.toggle("dark-mode");
-        localStorage.setItem("darkMode", isDark);
-      });
-    }
-
-    // Alfabetik ülke filtresi
-    document.querySelectorAll(".alphabet-letter").forEach(letter => {
-      letter.addEventListener("click", function (e) {
-        e.preventDefault();
-        const selectedLetter = this.getAttribute("data-letter");
-        const allButtons = document.querySelectorAll(".country-column button");
-
-        allButtons.forEach(btn => {
-          if (selectedLetter === "all" || btn.getAttribute("data-letter") === selectedLetter) {
-            btn.style.display = "block";
-          } else {
-            btn.style.display = "none";
-          }
-        });
-
-        document.querySelectorAll(".alphabet-letter").forEach(a => a.classList.remove("active"));
-        this.classList.add("active");
-      });
-    });
-  });
+});
 </script>
-
-
 
 <style>
 @keyframes fadeOut {
