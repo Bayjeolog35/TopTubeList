@@ -871,17 +871,16 @@ document.addEventListener("DOMContentLoaded", function () {
         videosToAdd.forEach((video, index) => {
             const card = document.createElement("div");
             card.classList.add("video-card");
-            card.innerHTML = 
+            card.innerHTML = `
                 <img src="${video.thumbnail}" alt="${video.title}" />
                 <div class="video-info">
                     <h2>${video.title}</h2>
                     <p><strong>Views:</strong> ${video.views_str}</p>
                     <a href="${video.url}" target="_blank">Watch on YouTube</a>
                 </div>
-            ;
+            `;
             videoList.appendChild(card);
 
-            // Opsiyonel animasyon
             setTimeout(() => {
                 card.classList.add("show");
             }, 50 * index);
@@ -910,6 +909,34 @@ document.addEventListener("DOMContentLoaded", function () {
             renderVideos(previousDisplayCount);
         });
     }
+
+    // --- About Us Scroll + Toggle ---
+    const aboutToggle = document.getElementById("aboutToggle");
+    const aboutContent = document.getElementById("aboutContent");
+
+    if (aboutToggle && aboutContent) {
+        aboutToggle.addEventListener("click", () => {
+            if (aboutContent.classList.contains("show")) {
+                aboutContent.classList.remove("show");
+                setTimeout(() => {
+                    aboutContent.style.display = "none";
+                }, 400);
+            } else {
+                aboutContent.style.display = "block";
+                setTimeout(() => {
+                    aboutContent.classList.add("show");
+
+                    // ✅ Sayfayı About Us alanına kaydır
+                    aboutContent.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }, 10);
+            }
+        });
+    }
+});
+
 
 
     // --- Contact Us Toggle ---
