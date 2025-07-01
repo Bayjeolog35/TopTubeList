@@ -147,7 +147,6 @@ body.dark-mode .logo {
 }
 
 
-
 .video-card:hover {
   transform: scale(1.01);
 }
@@ -186,6 +185,23 @@ padding: 12px 16px;
 .video-info a:hover {
   text-decoration: underline;
 }
+
+body.dark-mode .video-card {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .video-info h2 {
+  color: #fff;
+}
+
+body.dark-mode .video-info p {
+  color: #ccc;
+}
+
+body.dark-mode .video-info a {
+  color: #66b2ff;
+}
+
 
 #loadMoreBtn {
   display: block;
