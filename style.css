@@ -489,7 +489,7 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
     position: fixed;
     top: 70px;
     left: 50%;
-    transform: translateX(-50%) translateY(-10px); /* animasyon için hafif yukarıdan başlat */
+    transform: translateX(-50%
     width: 90%;
     max-height: 70%;
     background: white;
