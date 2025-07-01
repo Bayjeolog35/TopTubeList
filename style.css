@@ -334,15 +334,15 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
 /* === Hamburger Menüsü (Sadece mobilde) === */
 .hamburger {
   position: fixed;
-  top: 16px;
-  left: 16px;
+  top: 255px;
+  left: 5px;
   font-size: 26px;
-  background: white;
-  color: black;
+  background: #909090;
+  color: #000;
   border: none;
   z-index: 10000;
-  padding: 10px 14px;
-  border-radius: 6px;
+  padding: 5px 10px;
+  border-radius: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   display: none; /* sadece mobilde gösterilecek */
 }
