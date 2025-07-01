@@ -254,6 +254,7 @@ body.dark-mode .logo {
   text-align: left;
   white-space: nowrap;
   max-width: 15ch;
+  min-width: 15ch;
   text-overflow: ellipsis;
   display: inline-block;
   overflow-x: clip;
