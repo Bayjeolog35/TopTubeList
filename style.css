@@ -240,7 +240,7 @@ body.dark-mode .logo {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  max-height: 78,5vh;
+  max-height: 78.5vh;
   min-width: 160px;
   overflow-y: scroll;
 }
