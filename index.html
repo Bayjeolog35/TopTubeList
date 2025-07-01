@@ -549,6 +549,8 @@
   </nav>
 
 </header>
+
+      <button id="hamburgerBtn" class="hamburger">&#9776;</button>
       <div class="layout-wrapper">
    <!-- SOL PANEL -->
   <div class="country-panel">
@@ -860,6 +862,19 @@
 
   
 <script>
+
+  /*hamburger menü*/
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburgerBtn");
+    const panel = document.querySelector(".country-panel");
+
+    hamburger.addEventListener("click", () => {
+      panel.classList.toggle("active");
+    });
+  });
+/*hamburger menü son*/
+
 document.addEventListener("DOMContentLoaded", function () {
     let allVideos = [];
     let displayCount = 0;
