@@ -926,46 +926,25 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
     });
 
     // Aktif harfi görsel olarak vurgula
+   document.querySelectorAll(".alphabet-letter").forEach(letter => {
+  letter.addEventListener("click", function (e) {
+    e.preventDefault();
+    const selectedLetter = this.getAttribute("data-letter");
+    const allButtons = document.querySelectorAll(".country-column button");
+
+    allButtons.forEach(btn => {
+      if (selectedLetter === "all" || btn.getAttribute("data-letter") === selectedLetter) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    });
+
     document.querySelectorAll(".alphabet-letter").forEach(a => a.classList.remove("active"));
     this.classList.add("active");
   });
 });
 
-
-    if (localStorage.getItem("darkMode") === "true") {
-      document.body.classList.add("dark-mode");
-    }
-
-    const form = document.getElementById("contactForm");
-    const statusDiv = document.getElementById("formStatus");
-
-    if (form) {
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        const formData = new FormData(form);
-
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString()
-        })
-          .then(() => {
-            form.reset();
-            statusDiv.innerText = "✅ ✅ Message sent successfully!";
-            statusDiv.style.display = "block";
-            statusDiv.style.cssText = `
-              position: fixed; bottom: 20px; right: 20px;
-              background: #28a745; color: white; padding: 12px 24px;
-              border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-              font-family: sans-serif; z-index: 9999;
-              animation: fadeOut 5s forwards;
-            `;
-            setTimeout(() => statusDiv.remove(), 5000);
-          })
-          .catch(() => {
-            alert("❌ Mesaj gönderilemedi. Lütfen tekrar deneyin.");
-          });
-      });
     }
   });
 </script>
