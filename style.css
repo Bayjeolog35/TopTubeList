@@ -194,18 +194,6 @@ body.dark-mode .logo {
   display: flex;
 }
 
-/* Sol panel tüm ülke barı */
-.country-panel {
-  display: flex;
-  background-color: var(--bg);
-  padding: 10px;
-  gap: 8px;
-  position: sticky;
-  top: 60px;
-  z-index: 10;
-  align-self: flex-start;
-  flex-shrink: 0;
-}
 
 /* Düşey alfabe */
 .alphabet-column {
@@ -233,6 +221,21 @@ body.dark-mode .logo {
 }
 
 /* Ülke butonları */
+
+/* Sol panel tüm ülke barı */
+.country-panel {
+  display: flex;
+  background-color: var(--bg);
+  padding: 10px;
+  gap: 8px;
+  position: sticky;
+  top: 60px;
+  z-index: 10;
+  align-self: flex-start;
+  flex-shrink: 0;
+  min-width: 220px;
+}
+
 .country-column {
   display: flex;
   flex-direction: column;
