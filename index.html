@@ -911,35 +911,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-
-    // --- About Us Scroll + Toggle ---
-    const aboutToggle = document.getElementById("aboutToggle");
-    const aboutContent = document.getElementById("aboutContent");
-
-    if (aboutToggle && aboutContent) {
-        aboutToggle.addEventListener("click", () => {
-            if (aboutContent.classList.contains("show")) {
-                aboutContent.classList.remove("show");
-                setTimeout(() => {
-                    aboutContent.style.display = "none";
-                }, 400);
-            } else {
-                aboutContent.style.display = "block";
-                setTimeout(() => {
-                    aboutContent.classList.add("show");
-
-                    // ✅ Sayfayı About Us alanına kaydır
-                    aboutContent.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
-                }, 10);
-            }
-        });
-    }
-});
-
-   // --- Contact Us Toggle ---
+    // --- Contact Us Toggle ---
     const contactToggle = document.getElementById("contactToggle");
     const contactContent = document.getElementById("contactContent");
 
@@ -949,7 +921,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-  // --- Contact Form Submission ---
+
+    // --- Dark Mode Toggle and Initialization ---
+    // NOT: darkModeBtn iki kere tanımlanmıştı, tekilleştirildi.
+    const darkModeBtn = document.getElementById("darkModeToggle");
+
+    if (darkModeBtn) { // Check if button exists
+        darkModeBtn.addEventListener("click", () => {
+            const isDark = document.body.classList.toggle("dark-mode");
+            localStorage.setItem("darkMode", isDark);
+        });
+    }
+
+    // Dark mode'u localStorage'dan yükle
+    if (localStorage.getItem("darkMode") === "true") {
+        document.body.classList.add("dark-mode");
+    }
+
+
+    // --- Contact Form Submission ---
     const form = document.getElementById("contactForm");
     const statusDiv = document.getElementById("formStatus");
 
@@ -968,13 +958,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 statusDiv.innerText = "✅ ✅ Message sent successfully!";
                 statusDiv.style.display = "block";
                 // HATA DÜZELTME: style.cssText ataması string içine alındı
-                statusDiv.style.cssText = `
+                statusDiv.style.cssText = 
                     position: fixed; bottom: 20px; right: 20px;
                     background: #28a745; color: white; padding: 12px 24px;
                     border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
                     font-family: sans-serif; z-index: 9999;
                     animation: fadeOut 5s forwards;
-                `;
+                ;
                 setTimeout(() => statusDiv.remove(), 5000);
             })
             .catch(() => {
@@ -982,23 +972,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
-
-    // --- Dark Mode Toggle and Initialization ---
-    // NOT: darkModeBtn iki kere tanımlanmıştı, tekilleştirildi.
-    const darkModeBtn = document.getElementById("darkModeToggle");
-
-    if (darkModeBtn) { // Check if button exists
-        darkModeBtn.addEventListener("click", () => {
-            const isDark = document.body.classList.toggle("dark-mode");
-            localStorage.setItem("darkMode", isDark);
-        });
-    }
-
-    // Dark mode'u localStorage'dan yükle
-    if (localStorage.getItem("darkMode") === "true") {
-        document.body.classList.add("dark-mode");
-    }
-
 
     // --- About Us Toggle ---
     const aboutToggle = document.getElementById("aboutToggle");
@@ -1052,13 +1025,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // --- FadeOut animasyonu için style ekleme ---
     // Bu kısım form gönderimindeki başarı mesajı için gerekli olan animasyon stilini ekler.
     const style = document.createElement("style");
-    style.textContent = `
+    style.textContent = 
         @keyframes fadeOut {
             0% { opacity: 1; }
             80% { opacity: 1; }
             100% { opacity: 0; transform: translateY(10px); }
         }
-    `;
+    ;
     document.head.appendChild(style);
 });
 </script>
