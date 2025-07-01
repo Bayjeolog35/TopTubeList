@@ -881,7 +881,6 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
             videoList.appendChild(card);
 
-            // Opsiyonel animasyon
             setTimeout(() => {
                 card.classList.add("show");
             }, 50 * index);
@@ -911,15 +910,58 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // --- Contact Us Toggle ---
-    const contactToggle = document.getElementById("contactToggle");
-    const contactContent = document.getElementById("contactContent");
+    // --- About Us Scroll + Toggle ---
+    const aboutToggle = document.getElementById("aboutToggle");
+    const aboutContent = document.getElementById("aboutContent");
 
-    if (contactToggle && contactContent) { // Check if elements exist
-        contactToggle.addEventListener("click", () => {
-            contactContent.style.display = (contactContent.style.display === "none" || contactContent.style.display === "") ? "block" : "none";
+    if (aboutToggle && aboutContent) {
+        aboutToggle.addEventListener("click", () => {
+            if (aboutContent.classList.contains("show")) {
+                aboutContent.classList.remove("show");
+                setTimeout(() => {
+                    aboutContent.style.display = "none";
+                }, 400);
+            } else {
+                aboutContent.style.display = "block";
+                setTimeout(() => {
+                    aboutContent.classList.add("show");
+
+                    // ✅ Sayfayı About Us alanına kaydır
+                    aboutContent.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }, 10);
+            }
         });
     }
+});
+
+   // --- Contact Us Toggle ---
+const contactToggle = document.getElementById("contactToggle");
+const contactContent = document.getElementById("contactContent");
+
+if (contactToggle && contactContent) {
+    contactToggle.addEventListener("click", () => {
+        if (contactContent.classList.contains("show")) {
+            contactContent.classList.remove("show");
+            setTimeout(() => {
+                contactContent.style.display = "none";
+            }, 400); // Animasyon süresiyle uyumlu
+        } else {
+            contactContent.style.display = "block";
+            setTimeout(() => {
+                contactContent.classList.add("show");
+
+                // ✅ Sayfayı contact form alanına kaydır
+                contactContent.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }, 10);
+        }
+    });
+}
 
 
     // --- Dark Mode Toggle and Initialization ---
