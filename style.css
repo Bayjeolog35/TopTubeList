@@ -42,77 +42,32 @@ header .container {
 
 /*hamburger menü*/
 /* --- Hamburger menü --- */
-/* === Hamburger Menüsü (Sadece mobilde) === */
-.hamburger {
-  position: fixed;
-  top: 16px;
-  left: 16px;
-  font-size: 26px;
-  background: white;
-  color: black;
-  border: none;
-  z-index: 10000;
-  padding: 10px 14px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  display: none; /* sadece mobilde gösterilecek */
-}
-
 /* === Mobil ekranlarda hamburger gösterilir === */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
   }
 
+@media (max-width: 768px) {
+  /* Mobilde country-panel her zaman gizli başlar */
   .country-panel {
+    display: none !important;
     position: fixed;
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%) translateY(-10px); /* animasyon için hafif yukarıdan başlat */
-    width: 90%;
-    max-height: 70%;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    max-height: 80%;
+    overflow-y: auto;
     background: white;
     z-index: 9998;
-    padding: 16px;
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    flex-wrap: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    padding: 20px 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
   }
 
+  /* Hamburger tıklanınca aktif sınıfı eklenirse görünür olur */
   .country-panel.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0); /* açılırken yukarıdan aşağıya */
-  }
-
-  .alphabet-column {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    width: 30px;
-    max-height: 60vh;
-    overflow-y: auto;
-    flex-shrink: 0;
-  }
-
-  .country-column {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    flex: 1;
-    max-height: 60vh;
-    overflow-y: auto;
-  }
-
-  /* Normalde mobilde paneli tamamen gizle */
-  .layout-wrapper {
-    display: none;
+    display: flex !important;
   }
 }
 
