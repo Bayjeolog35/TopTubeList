@@ -865,16 +865,29 @@
 
   /*hamburger menü*/
   
- document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.getElementById("hamburgerBtn");
-    const panel = document.querySelector(".country-panel");
+            const hamburgerButton = document.getElementById("hamburgerMenu");
+            const leftSidebarPanel = document.getElementById("leftSidebarPanel");
 
-    if (hamburger && panel) {
-      hamburger.addEventListener("click", () => {
-        panel.classList.toggle("active");
-      });
-    }
-  });
+            hamburgerButton.addEventListener("click", () => {
+                leftSidebarPanel.classList.toggle("active");
+                // Sidebar açıldığında sayfanın geri kalanını scroll yapılmaz yap
+                if (leftSidebarPanel.classList.contains("active")) {
+                    document.body.style.overflow = "hidden";
+                } else {
+                    document.body.style.overflow = "";
+                }
+            });
+
+            // Panel dışına tıklayınca kapanması için
+            document.addEventListener("click", (event) => {
+                const isClickInsidePanel = leftSidebarPanel.contains(event.target);
+                const isClickOnHamburger = hamburgerButton.contains(event.target);
+
+                if (!isClickInsidePanel && !isClickOnHamburger && leftSidebarPanel.classList.contains("active")) {
+                    leftSidebarPanel.classList.remove("active");
+                    document.body.style.overflow = "";
+                }
+            });
 
 
 /*hamburger menü son*/
