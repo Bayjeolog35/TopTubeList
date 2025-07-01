@@ -841,14 +841,12 @@
   </section>
 
 <footer>
-  <div class="contact-section">
+   <div class="contact-section">
     <button id="contactToggle">Contact Us</button>
-    <div id="contactContent" class="hidden">
-      <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-  <input type="hidden" name="form-name" value="contact" />
-  <p hidden>
-    <label>Don’t fill this out: <input name="bot-field" /></label>
-  </p>
+    <div id="contactContent" style="display: none;">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
         <p><label>Your Name<br /><input type="text" name="name" required /></label></p>
         <p><label>Your Email<br /><input type="email" name="email" required /></label></p>
         <p><label>Your Message<br /><textarea name="message" rows="5" required></textarea></label></p>
@@ -913,48 +911,49 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Contact Us aç/kapa
-  const contactToggle = document.getElementById("contactToggle");
-  const contactContent = document.getElementById("contactContent");
-  if (contactToggle && contactContent) {
-    contactToggle.addEventListener("click", () => {
-      if (contactContent.style.display === "block") {
-        contactContent.style.display = "none";
-      } else {
-        contactContent.style.display = "block";
-      }
+  document.getElementById("contactToggle").addEventListener("click", () => {
+      const content = document.getElementById("contactContent");
+      content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
     });
-  }
 
-  // Contact form submit
-  const form = document.querySelector('form[name="contact"]');
-  const statusDiv = document.getElementById("formStatus");
+    const darkModeBtn = document.getElementById("darkModeToggle");
+    darkModeBtn.addEventListener("click", () => {
+      const isDark = document.body.classList.toggle("dark-mode");
+      localStorage.setItem("darkMode", isDark);
+    });
 
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const formData = new FormData(form);
+    if (localStorage.getItem("darkMode") === "true") {
+      document.body.classList.add("dark-mode");
+    }
 
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
-      })
-        .then(() => {
-          form.reset();
-          statusDiv.innerText = "✅ Message sent successfully!";
-          statusDiv.style.display = "block";
-          statusDiv.style.cssText = `
-            position: fixed; bottom: 20px; right: 20px;
-            background: #28a745; color: white; padding: 12px 24px;
-            border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            font-family: sans-serif; z-index: 9999;
-            animation: fadeOut 5s forwards;
-          `;
-          setTimeout(() => statusDiv.remove(), 5000);
+    const form = document.getElementById("contactForm");
+    const statusDiv = document.getElementById("formStatus");
+
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
         })
-        .catch(() => {
-          alert("❌ Message could not be sent. Please try again.");
+          .then(() => {
+            form.reset();
+            statusDiv.innerText = "✅ ✅ Message sent successfully!";
+            statusDiv.style.display = "block";
+            statusDiv.style.cssText = 
+              position: fixed; bottom: 20px; right: 20px;
+              background: #28a745; color: white; padding: 12px 24px;
+              border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+              font-family: sans-serif; z-index: 9999;
+              animation: fadeOut 5s forwards;
+            ;
+            setTimeout(() => statusDiv.remove(), 5000);
+          })
+          .catch(() => {
+            alert("❌ Mesaj gönderilemedi. Lütfen tekrar deneyin.");
         });
     });
   }
