@@ -254,7 +254,7 @@ body.dark-mode .logo {
   text-align: left;
   white-space: nowrap;
   overflow: hidden;     /* Taşanı gizler */
-  text-overflow: ellipsis; /* Gizlenen kısma ... ekler */
+   max-width: 15ch;
 }
 
 .country-column button:hover {
