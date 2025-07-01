@@ -861,57 +861,59 @@
   
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    let allVideos = [];
-    let displayCount = 10;
-    const videoList = document.getElementById("videoList");
-    const loadMoreBtn = document.getElementById("loadMoreBtn");
+  let allVideos = [];
+  let displayCount = 0; // Başlangıçta hiç video göstermemek için 0 yapıldı
+  const videoList = document.getElementById("videoList");
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
 
-    function renderVideos() {
-      videoList.innerHTML = "";
+  function renderVideos(startIndex = 0) { // Yeni videoların ekleneceği başlangıç indeksi
+    const videosToAdd = allVideos.slice(startIndex, displayCount); // Sadece eklenecek videoları al
+    videosToAdd.forEach((video, index) => {
+      const card = document.createElement("div");
+      card.classList.add("video-card");
+      card.innerHTML = `
+        <img src="${video.thumbnail}" alt="${video.title}" />
+        <div class="video-info">
+          <h2>${video.title}</h2>
+          <p><strong>Views:</strong> ${video.views_str}</p>
+          <a href="${video.url}" target="_blank">Watch on YouTube</a>
+        </div>
+      `;
+      videoList.appendChild(card);
 
-      const videosToShow = allVideos.slice(0, displayCount);
-      videosToShow.forEach((video, index) => {
-        const card = document.createElement("div");
-        card.classList.add("video-card");
-        card.innerHTML = `
-          <img src="${video.thumbnail}" alt="${video.title}" />
-          <div class="video-info">
-            <h2>${video.title}</h2>
-            <p><strong>Views:</strong> ${video.views_str}</p>
-            <a href="${video.url}" target="_blank">Watch on YouTube</a>
-          </div>
-        `;
-        videoList.appendChild(card);
+      // 🎬 Animasyonla göster
+      setTimeout(() => {
+        card.classList.add("show");
+      }, 50 * index); // Bu gecikmeyi isterseniz kaldırabilir veya azaltabilirsiniz
+    });
 
-        // 🎬 Animasyonla göster
-        setTimeout(() => {
-          card.classList.add("show");
-        }, 2 * index);
-      });
-
-      if (loadMoreBtn) {
-        loadMoreBtn.style.display = (displayCount >= allVideos.length) ? "none" : "block";
-      }
-    }
-
-    // Veri çek
-    fetch("videos.json")
-      .then(response => response.json())
-      .then(videos => {
-        allVideos = videos;
-        renderVideos();
-      })
-      .catch(error => {
-        console.error("❌ Error fetching videos.json:", error);
-      });
-
-    // Load more
     if (loadMoreBtn) {
-      loadMoreBtn.addEventListener("click", () => {
-        displayCount += 10;
-        renderVideos();
-      });
+      // Eğer gösterilecek video kalmadıysa butonu gizle
+      loadMoreBtn.style.display = (displayCount >= allVideos.length) ? "none" : "block";
     }
+  }
+
+  // Veri çek
+  fetch("videos.json")
+    .then(response => response.json())
+    .then(videos => {
+      allVideos = videos;
+      // İlk yüklemede ilk 10 videoyu göster
+      displayCount = 10;
+      renderVideos(0);
+    })
+    .catch(error => {
+      console.error("❌ Error fetching videos.json:", error);
+    });
+
+  // Load more
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener("click", () => {
+      const previousDisplayCount = displayCount; // Mevcut gösterilen video sayısı
+      displayCount += 10; // Yeni gösterilecek toplam video sayısı
+      renderVideos(previousDisplayCount); // Sadece yeni eklenen videoları render et
+    });
+  }
 
     // Logo tıklanınca en üste kaydır
     const logoLink = document.getElementById("logoLink");
