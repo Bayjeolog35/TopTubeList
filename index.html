@@ -917,31 +917,6 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
         btn.style.display = "none";
       }
     });
-
-  // Harfe göre ülke filtreleme
-document.querySelectorAll(".alphabet-letter").forEach(letter => {
-  letter.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const selectedLetter = this.getAttribute("data-letter");
-    const allButtons = document.querySelectorAll(".country-column button");
-
-    allButtons.forEach(btn => {
-      if (selectedLetter === "all" || btn.getAttribute("data-letter") === selectedLetter) {
-        btn.style.display = "block";
-      } else {
-        btn.style.display = "none";
-      }
-    });
-
-    // Aktif harf görsel vurgusu
-    document.querySelectorAll(".alphabet-letter").forEach(a => a.classList.remove("active"));
-    this.classList.add("active");
-  });
-});
-
-
-    }
   });
 </script>
 
