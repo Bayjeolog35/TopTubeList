@@ -283,13 +283,14 @@ body.dark-mode .logo {
 }
 
 .about-section button {
-  background-color: #0d6efd;
+  background-color: #065fd4;
   color: white;
-  border: none;
   padding: 10px 20px;
+  border: none;
   border-radius: 6px;
-  cursor: pointer;
+  font-size: 1rem;
   font-weight: 600;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
