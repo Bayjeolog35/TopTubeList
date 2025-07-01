@@ -313,16 +313,17 @@ padding: 12px 16px;
 
 /* Sol panel tüm ülke barı */
 .country-panel {
-  display: flex;
+  position: sticky;
+  top: 80px; /* header yüksekliğine göre ayarla */
+  z-index: 10;
   background-color: var(--bg);
   padding: 10px;
   gap: 8px;
-  position: sticky;
-  top: 78.5px;
-  z-index: 10;
   align-self: flex-start;
   flex-shrink: 0;
+  height: fit-content;
 }
+
 
 .country-column {
   display: flex;
