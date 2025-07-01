@@ -255,8 +255,6 @@ body.dark-mode .logo {
   white-space: nowrap;
   overflow: hidden;     /* Taşanı gizler */
   text-overflow: ellipsis; /* Gizlenen kısma ... ekler */
-  max-width: 15ch;      /* Genişliği 15 karaktere sınırlar. Eğer sabit piksel isterseniz örn: width: 150px; kullanın */
-  width: 150px;
 }
 
 .country-column button:hover {
