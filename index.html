@@ -865,14 +865,17 @@
 
   /*hamburger menü*/
   
-  document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById("hamburgerBtn");
-    const panel = document.querySelector(".country-panel");
+ document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const panel = document.querySelector(".country-panel");
 
+  if (hamburger && panel) {
     hamburger.addEventListener("click", () => {
       panel.classList.toggle("active");
     });
-  });
+  }
+});
+
 /*hamburger menü son*/
 
 document.addEventListener("DOMContentLoaded", function () {
