@@ -914,7 +914,19 @@
       renderVideos(previousDisplayCount); // Sadece yeni eklenen videoları render et
     });
   }
+document.addEventListener("DOMContentLoaded", function () {
+    const contactToggle = document.getElementById("contactToggle");
+    const contactContent = document.getElementById("contactContent");
 
+    if (contactToggle && contactContent) {
+      contactToggle.addEventListener("click", () => {
+        contactContent.style.display = 
+          (contactContent.style.display === "none" || contactContent.style.display === "") 
+          ? "block" 
+          : "none";
+      });
+    }
+  });
     // Logo tıklanınca en üste kaydır
     const logoLink = document.getElementById("logoLink");
     if (logoLink) {
