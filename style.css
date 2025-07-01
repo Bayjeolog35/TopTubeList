@@ -332,53 +332,37 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
 }
 
 /* === Hamburger Menüsü (Sadece mobilde) === */
-.hamburger {
-  position: fixed;
-  top: 255px;
-  left: 5px;
-  font-size: 26px;
-  background: #909090;
-  color: #000;
-  border: none;
-  z-index: 10000;
-  padding: 5px 10px;
-  border-radius: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  display: none; /* sadece mobilde gösterilecek */
-}
-
-/* === Mobil ekranlarda hamburger gösterilir === */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
   .country-panel {
     position: fixed;
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%) translateY(-10px); /* animasyon için hafif yukarıdan başlat */
-    width: 90%;
-    max-height: 70%;
-    background: white;
-    z-index: 9998;
-    padding: 16px;
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    flex-wrap: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    top: 60px; /* header yüksekliğine göre ayarla */
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #111;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
   }
 
   .country-panel.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0); /* açılırken yukarıdan aşağıya */
+    transform: translateX(0);
   }
+
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+  }
+}
 
 
 
