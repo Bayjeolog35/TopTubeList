@@ -1,0 +1,31 @@
+name: Generate Country HTML Pages
+
+on:
+  workflow_dispatch:  # MANUEL çalıştırma butonunu aktif eder
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate HTML files for each country
+        run: python generate_country_html.py
+
+      - name: Commit and Push HTML files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add */index.html
+          git commit -m "Generate/Update country HTML pages"
+          git push
