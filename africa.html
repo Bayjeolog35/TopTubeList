@@ -1085,7 +1085,11 @@ document.addEventListener("DOMContentLoaded", () => {
         allVideos = videos;
         renderVideos();
       });
-
+ 
+    document.getElementById("loadMoreBtn").addEventListener("click", () => {
+      displayCount += 10;
+      renderVideos();
+    });
 
   });
 </script>
