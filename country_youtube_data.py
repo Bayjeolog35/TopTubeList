@@ -10,7 +10,8 @@ YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 if not YOUTUBE_API_KEY:
     raise ValueError("YOUTUBE_API_KEY ortam değişkeni ayarlanmamış. Lütfen API anahtarınızı ayarlayın.")
 
-YOUTUBE_API_BASE_URL = "https://www.googleapis.com/youtube.com/v3/"
+# **DÜZELTME:** YouTube Data API'nin doğru base URL'si
+YOUTUBE_API_BASE_URL = "https://www.googleapis.com/youtube/v3/"
 
 def format_number(num):
     """Sayıyı okunabilir formatta döndürür (örn: 1.2M, 50K)."""
@@ -55,7 +56,7 @@ def process_video_data(item):
         "title": title,
         "channelTitle": channel_title,
         "thumbnail": thumbnail,
-        "url": f"https://www.youtube.com/watch?v={video_id}",
+        "url": f"https://www.youtube.com/watch?v={video_id}", # YouTube video URL'si
         "uploadDate": upload_date,
         "views": views,
         "views_str": format_number(views),
@@ -96,7 +97,7 @@ def generate_structured_data(videos, country_name, country_code):
                 "description": f"Trending video from {video['channelTitle']} in {country_name}",
                 "thumbnailUrl": video["thumbnail"],
                 "uploadDate": video["uploadDate"],
-                "embedUrl": f"https://www.youtube.com/embed/{video['id']}",
+                "embedUrl": f"https://www.youtube.com/embed/{video['id']}", # Embed URL'si
                 "interactionStatistic": {
                     "@type": "InteractionCounter",
                     "interactionType": "http://schema.org/WatchAction",
@@ -128,7 +129,7 @@ def main():
             videos_data = [process_video_data(item) for item in youtube_response.get("items", [])]
             
             if not videos_data: # Eğer video verisi boşsa uyarı ver
-                print(f"  --> Warning: No trending video data found for {display_name} ({country_code}) via YouTube API.")
+                print(f"  --> Warning: No trending video data found for {display_name} ({country_code}) via YouTube API. Creating empty JSONs.")
             
             # JSON dosyalarını kaydet (Country_data/videos altına)
             videos_output_path = os.path.join(output_dir_videos, f"videos_{country_folder_name}.json")
@@ -146,9 +147,37 @@ def main():
         except requests.exceptions.RequestException as e:
             # API ile ilgili bir hata (403 Forbidden, 400 Bad Request vb.)
             print(f"  --> Error fetching data for {display_name} ({country_code}): {e}")
+            # Hata durumunda da boş JSON dosyaları oluşturmak, generate_country_html.py'nin çökmesini engeller
+            empty_videos_data = []
+            empty_structured_data = {}
+            
+            videos_output_path = os.path.join(output_dir_videos, f"videos_{country_folder_name}.json")
+            with open(videos_output_path, "w", encoding="utf-8") as f:
+                json.dump(empty_videos_data, f, ensure_ascii=False, indent=2)
+            print(f"  --> Created empty videos JSON for {display_name} due to API error.")
+
+            structured_data_output_path = os.path.join(output_dir_structured_data, f"structured_data_{country_folder_name}.json")
+            with open(structured_data_output_path, "w", encoding="utf-8") as f:
+                json.dump(empty_structured_data, f, ensure_ascii=False, indent=2)
+            print(f"  --> Created empty structured data JSON for {display_name} due to API error.")
+
         except Exception as e:
             # Diğer beklenmeyen hatalar
             print(f"  --> An unexpected error occurred for {display_name} ({country_code}): {e}")
+            # Beklenmeyen hata durumunda da boş JSON dosyaları oluştur
+            empty_videos_data = []
+            empty_structured_data = {}
+            
+            videos_output_path = os.path.join(output_dir_videos, f"videos_{country_folder_name}.json")
+            with open(videos_output_path, "w", encoding="utf-8") as f:
+                json.dump(empty_videos_data, f, ensure_ascii=False, indent=2)
+            print(f"  --> Created empty videos JSON for {display_name} due to unexpected error.")
+
+            structured_data_output_path = os.path.join(output_dir_structured_data, f"structured_data_{country_folder_name}.json")
+            with open(structured_data_output_path, "w", encoding="utf-8") as f:
+                json.dump(empty_structured_data, f, ensure_ascii=False, indent=2)
+            print(f"  --> Created empty structured data JSON for {display_name} due to unexpected error.")
+
 
 if __name__ == "__main__":
     main()
