@@ -1,0 +1,40 @@
+name: Generate HTML Files
+
+on:
+  push:
+    branches:
+      - main  # Bu iş akışını main branch'ine yapılan her push'ta çalıştır
+  workflow_dispatch: # Bu, iş akışını GitHub UI'dan manuel olarak tetiklemenizi sağlar.
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest # İşlem için Ubuntu işletim sistemi kullan
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4 # Depoyu runner'a kopyala
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x' # Python 3'ün en son sürümünü kullan
+
+    - name: Install dependencies
+      run: |
+        # Eğer projenizde requirements.txt varsa burayı kullanın
+        # pip install -r requirements.txt
+        echo "No specific Python dependencies to install." # Şu an için ek bağımlılık yok
+
+    - name: Generate HTML files
+      run: |
+        python generate_html.py # Python betiğinizi çalıştırın
+
+    - name: Commit and Push HTML files
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@github.com"
+        git add *.html
+        git commit -m "chore: Regenerate HTML files" || echo "No changes to commit"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub tarafından otomatik sağlanan token
