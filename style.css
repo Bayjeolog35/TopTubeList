@@ -354,8 +354,7 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
     display: block;
   }
 
-  .country-panel {
-    position: fixed;
+  position: fixed;
     top: 70px;
     left: 50%;
     transform: translateX(-50%) translateY(-10px); /* animasyon için hafif yukarıdan başlat */
