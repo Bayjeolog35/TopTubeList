@@ -399,8 +399,8 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
 }
 
 /*LOAD MORE BUTTON*/
-
-display: block;
+#loadMoreBtn {
+  display: block;
   margin: 30px auto;
   padding: 10px 20px;
   background-color: #065fd4;
@@ -410,6 +410,7 @@ display: block;
   font-size: 1rem;
   cursor: pointer;
 }
+
 
 /* === About Section === */
 .about-section {
