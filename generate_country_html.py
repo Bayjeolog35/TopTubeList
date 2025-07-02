@@ -12,6 +12,8 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
     os.makedirs(country_dir, exist_ok=True)
 
     # HTML şablonu (Yollar ülke klasöründen ana dizine göre ayarlandı)
+    # NOT: JavaScript içindeki süslü parantezlerin (örn: { opacity: 1; }) Python formatlama tarafından yanlış algılanmaması için '{{' ve '}}' kullanıldı.
+    # HTML etiketleri içinde dinamik olarak dolacak yerler için tek '{' ve '}' kullanılmaya devam edildi.
     html_template = r"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -157,114 +159,115 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
 
     <script>
         // --- FadeOut animation style block ---
+        // JavaScript içindeki CSS için '{{' ve '}}' kullanıldı
         const style = document.createElement("style");
         style.textContent = `
-            @keyframes fadeOut {
-                0% { opacity: 1; }
-                80% { opacity: 1; }
-                100% { opacity: 0; transform: translateY(10px); }
-            }
+            @keyframes fadeOut {{
+                0% {{ opacity: 1; }}
+                80% {{ opacity: 1; }}
+                100% {{ opacity: 0; transform: translateY(10px); }}
+            }}
         `;
         document.head.appendChild(style);
 
         // --- Dark Mode Toggle ---
-        document.addEventListener("DOMContentLoaded", () => {
+        document.addEventListener("DOMContentLoaded", () => {{
             const darkModeToggle = document.getElementById("darkModeToggle");
             const savedMode = localStorage.getItem("darkMode");
-            if (savedMode === "true") {
+            if (savedMode === "true") {{
                 document.body.classList.add("dark-mode");
-            }
-            if (darkModeToggle) {
-                darkModeToggle.addEventListener("click", () => {
+            }}
+            if (darkModeToggle) {{
+                darkModeToggle.addEventListener("click", () => {{
                     const isDarkNow = document.body.classList.toggle("dark-mode");
                     localStorage.setItem("darkMode", isDarkNow);
-                });
-            }
-        });
+                }});
+            }}
+        }});
 
         // --- Harf filtreleme ---
-        document.querySelectorAll(".alphabet-letter").forEach(letter => {
-            letter.addEventListener("click", function (e) {
+        document.querySelectorAll(".alphabet-letter").forEach(letter => {{
+            letter.addEventListener("click", function (e) {{
                 e.preventDefault();
                 const selectedLetter = this.getAttribute("data-letter");
                 const allButtons = document.querySelectorAll(".country-column button");
 
-                allButtons.forEach(btn => {
-                    if (selectedLetter === "all" || btn.getAttribute("data-letter") === selectedLetter) {
+                allButtons.forEach(btn => {{
+                    if (selectedLetter === "all" || btn.getAttribute("data-letter") === selectedLetter) {{
                         btn.style.display = "block";
-                    } else {
+                    }} else {{
                         btn.style.display = "none";
-                    }
-                });
+                    }}
+                }});
 
                 document.querySelectorAll(".alphabet-letter").forEach(a => a.classList.remove("active"));
                 this.classList.add("active");
-            });
-        });
+            }});
+        }});
 
         // --- Contact Us Scroll + Toggle ---
         const contactToggle = document.getElementById("contactToggle");
         const contactContent = document.getElementById("contactContent");
 
-        if (contactToggle && contactContent) {
-            contactToggle.addEventListener("click", () => {
-                if (contactContent.classList.contains("show")) {
+        if (contactToggle && contactContent) {{
+            contactToggle.addEventListener("click", () => {{
+                if (contactContent.classList.contains("show")) {{
                     contactContent.classList.remove("show");
-                    setTimeout(() => {
+                    setTimeout(() => {{
                         contactContent.style.display = "none";
-                    }, 400);
-                } else {
+                    }}, 400);
+                }} else {{
                     contactContent.style.display = "block";
-                    setTimeout(() => {
+                    setTimeout(() => {{
                         contactContent.classList.add("show");
-                        contactContent.scrollIntoView({
+                        contactContent.scrollIntoView({{
                             behavior: "smooth",
                             block: "start"
-                        });
-                    }, 10);
-                }
-            });
-        }
+                        }});
+                    }}, 10);
+                }}
+            }});
+        }}
 
         // --- About Us Scroll + Toggle ---
         const aboutToggle = document.getElementById("aboutToggle");
         const aboutContent = document.getElementById("aboutContent");
 
-        if (aboutToggle && aboutContent) {
-            aboutToggle.addEventListener("click", () => {
-                if (aboutContent.classList.contains("show")) {
+        if (aboutToggle && aboutContent) {{
+            aboutToggle.addEventListener("click", () => {{
+                if (aboutContent.classList.contains("show")) {{
                     aboutContent.classList.remove("show");
-                    setTimeout(() => {
+                    setTimeout(() => {{
                         aboutContent.style.display = "none";
-                    }, 400);
-                } else {
+                    }}, 400);
+                }} else {{
                     aboutContent.style.display = "block";
-                    setTimeout(() => {
+                    setTimeout(() => {{
                         aboutContent.classList.add("show");
-                        aboutContent.scrollIntoView({
+                        aboutContent.scrollIntoView({{
                             behavior: "smooth",
                             block: "start"
-                        });
-                    }, 10);
-                }
-            });
-        }
+                        }});
+                    }}, 10);
+                }}
+            }});
+        }}
 
         // --- Contact Form Submission ---
         const form = document.querySelector("form[name='contact']");
         const statusDiv = document.getElementById("formStatus");
 
-        if (form && statusDiv) {
-            form.addEventListener("submit", function (e) {
+        if (form && statusDiv) {{
+            form.addEventListener("submit", function (e) {{
                 e.preventDefault();
                 const formData = new FormData(form);
 
-                fetch("/", {
+                fetch("/", {{
                     method: "POST",
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    headers: {{ "Content-Type": "application/x-www-form-urlencoded" }},
                     body: new URLSearchParams(formData).toString()
-                })
-                .then(() => {
+                }})
+                .then(() => {{
                     form.reset();
                     statusDiv.innerText = "✅ ✅ Message sent successfully!";
                     statusDiv.style.display = "block";
@@ -276,71 +279,71 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
                         animation: fadeOut 5s forwards;
                     `;
                     setTimeout(() => statusDiv.remove(), 5000);
-                })
-                .catch(() => {
+                }})
+                .catch(() => {{
                     alert("❌ Mesaj gönderilemedi. Lütfen tekrar deneyin.");
-                });
-            });
-        }
+                }});
+            }});
+        }}
         
         /* Video Render*/
-        document.addEventListener("DOMContentLoaded", () => {
+        document.addEventListener("DOMContentLoaded", () => {{
             const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
             document.body.classList.toggle('dark-mode', darkModeEnabled);
 
             let allVideos = [];
             let displayCount = 10;
 
-            function renderVideos() {
+            function renderVideos() {{
                 const container = document.getElementById("videoList");
                 container.innerHTML = "";
 
-                allVideos.slice(0, displayCount).forEach(video => {
+                allVideos.slice(0, displayCount).forEach(video => {{
                     const card = document.createElement("div");
                     card.className = "video-card";
                     card.innerHTML = `
-                        <img src="${video.thumbnail}" alt="${video.title}" />
+                        <img src="${{video.thumbnail}}" alt="${{video.title}}" />
                         <div class="video-info">
-                            <h2>${video.title}</h2>
-                            <p><strong>Uploaded:</strong> ${new Date(video.uploadDate).toLocaleDateString()}</p>
-                            <p><strong>Views:</strong> ${video.views_str}</p>
-                            <a href="${video.url}" target="_blank">Watch on YouTube</a>
+                            <h2>${{video.title}}</h2>
+                            <p><strong>Uploaded:</strong> ${{new Date(video.uploadDate).toLocaleDateString()}}</p>
+                            <p><strong>Views:</strong> ${{video.views_str}}</p>
+                            <a href="${{video.url}}" target="_blank">Watch on YouTube</a>
                         </div>
                     `;
                     container.appendChild(card);
                     setTimeout(() => card.classList.add("show"), 50);
-                });
+                }});
 
                 document.getElementById("loadMoreBtn").style.display =
                     displayCount >= allVideos.length ? "none" : "block";
-            }
+            }}
 
             // JSON dosyasının yolu güncellendi: "../Country_data/videos/videos_{country_folder_name}.json"
             fetch("../Country_data/videos/videos_{country_folder_name}.json")
                 .then(res => res.json())
-                .then(videos => {
+                .then(videos => {{
                     allVideos = videos;
                     renderVideos();
-                })
+                }})
                 .catch(error => console.error('Error fetching videos:', error));
             
-            document.getElementById("loadMoreBtn").addEventListener("click", () => {
+            document.getElementById("loadMoreBtn").addEventListener("click", () => {{
                 displayCount += 10;
                 renderVideos();
-            });
-        });
+            }});
+        }});
     </script>
 </body>
 </html>
 """
     
     continent_of_country = ""
-    for continent, countries_in_continent in CONTINENT_COUNTRIES.items():
-        # COUNTRY_INFO'daki country_folder_name'e karşılık gelen ülke kodunu bul
-        country_code_for_folder = COUNTRY_INFO.get(country_folder_name, {}).get("code")
-        if country_code_for_folder and country_code_for_folder in countries_in_continent:
-            continent_of_country = continent
-            break
+    country_code_for_folder = COUNTRY_INFO.get(country_folder_name, {}).get("code")
+    if country_code_for_folder: # Eğer ülke kodu varsa kıtayı bulmaya çalış
+        for continent, countries_in_continent in CONTINENT_COUNTRIES.items():
+            if country_code_for_folder in countries_in_continent:
+                continent_of_country = continent
+                break
 
     asia_active = 'active' if continent_of_country == 'asia' else ''
     europe_active = 'active' if continent_of_country == 'europe' else ''
@@ -389,14 +392,22 @@ def main():
         structured_data = {}
 
         if os.path.exists(videos_file):
-            with open(videos_file, "r", encoding="utf-8") as f:
-                videos_data = json.load(f)
+            try:
+                with open(videos_file, "r", encoding="utf-8") as f:
+                    videos_data = json.load(f)
+            except json.JSONDecodeError:
+                print(f"Hata: {videos_file} dosyası bozuk veya geçersiz JSON içeriyor. Boş veri ile devam ediliyor.")
+                videos_data = []
         else:
             print(f"Uyarı: {videos_file} bulunamadı. Bu ülke için video verisi olmayacak.")
 
         if os.path.exists(structured_data_file):
-            with open(structured_data_file, "r", encoding="utf-8") as f:
-                structured_data = json.load(f)
+            try:
+                with open(structured_data_file, "r", encoding="utf-8") as f:
+                    structured_data = json.load(f)
+            except json.JSONDecodeError:
+                print(f"Hata: {structured_data_file} dosyası bozuk veya geçersiz JSON içeriyor. Boş veri ile devam ediliyor.")
+                structured_data = {}
         else:
             print(f"Uyarı: {structured_data_file} bulunamadı. Bu ülke için yapılandırılmış veri olmayacak.")
 
