@@ -254,8 +254,8 @@ body.dark-mode .video-info a {
 .country-panel {
   display: flex;
   background-color: var(--bg);
-  padding-right: 60px;
-  padding-bottom: 60px;
+  padding-right: 43px;
+  padding-bottom: 48px;
   gap: 8px;
   position: fixed;
   top: 78.5px;
