@@ -73,7 +73,8 @@ def generate_structured_data(videos, country_name, country_code):
     if not videos:
         return {}
 
-   top_videos = videos
+    top_videos = videos  # ← BU SATIR BURAYA GİRMELİ
+
 
     structured_data = {
         "@context": "http://schema.org",
