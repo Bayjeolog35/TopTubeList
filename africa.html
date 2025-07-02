@@ -895,27 +895,21 @@
 document.addEventListener("DOMContentLoaded", () => {
   const darkModeToggle = document.getElementById("darkModeToggle");
 
-  // Kaydedilen tema tercihine göre dark mode'u uygula
+  // Sayfa yüklendiğinde dark mode'u uygula
   const savedMode = localStorage.getItem("darkMode");
-  const isDark = savedMode === "true";
-
-  if (isDark) {
+  if (savedMode === "true") {
     document.body.classList.add("dark-mode");
-    if (darkModeToggle) darkModeToggle.textContent = "☀️";
-  } else {
-    document.body.classList.remove("dark-mode");
-    if (darkModeToggle) darkModeToggle.textContent = "🌙";
   }
 
-  // Butona tıklanınca dark mode'u değiştir ve kaydet
+  // Tıklanınca dark mode'u toggle et
   if (darkModeToggle) {
     darkModeToggle.addEventListener("click", () => {
       const isDarkNow = document.body.classList.toggle("dark-mode");
       localStorage.setItem("darkMode", isDarkNow);
-      darkModeToggle.textContent = isDarkNow ? "☀️" : "🌙";
     });
   }
 });
+
   
   
    // --- Harf filtreleme ---
