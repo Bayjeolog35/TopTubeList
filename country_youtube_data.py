@@ -2,17 +2,15 @@ import os
 import json
 import requests
 from datetime import datetime
-from country_data import COUNTRY_INFO # country_data.py dosyasından bilgileri import ediyoruz
+from country_data import COUNTRY_INFO # WORLDWIDE_AGGREGATION_COUNTRIES artık import edilmiyor
 
 # YouTube Data API Key'inizi ortam değişkeninden alın
-# Ortam değişkeni olarak ayarlamanız daha güvenlidir: export YOUTUBE_API_KEY="YOUR_API_KEY"
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 
-# API Anahtarının varlığını kontrol et
 if not YOUTUBE_API_KEY:
     raise ValueError("YOUTUBE_API_KEY ortam değişkeni ayarlanmamış. Lütfen API anahtarınızı ayarlayın.")
 
-YOUTUBE_API_BASE_URL = "https://www.googleapis.com/youtube/v3/"
+YOUTUBE_API_BASE_URL = "https://www.googleapis.com/youtube.com/v3/"
 
 def format_number(num):
     """Sayıyı okunabilir formatta döndürür (örn: 1.2M, 50K)."""
@@ -40,7 +38,7 @@ def get_trending_videos(region_code, max_results=20):
 def process_video_data(item):
     """API yanıtından gerekli video bilgilerini çıkarır."""
     snippet = item["snippet"]
-    statistics = item.get("statistics", {}) # İstatistikler her zaman olmayabilir
+    statistics = item.get("statistics", {})
     
     title = snippet.get("title", "No Title")
     channel_title = snippet.get("channelTitle", "Unknown Channel")
@@ -57,10 +55,7 @@ def process_video_data(item):
         "title": title,
         "channelTitle": channel_title,
         "thumbnail": thumbnail,
-        # Googleusercontent.com URL'leri Google CDN'den video yüklemek için kullanılır.
-        # Bu URL'ler genellikle doğrudan YouTube embed URL'leri değildir.
-        # Ancak daha önce belirttiğiniz formatı koruyorum.
-        "url": f"https://www.youtube.com/watch?v={video_id}",
+        "url": f"https://www.youtube.com/watch?v={video_id}", # Bu URL'ler genellikle YouTube'a yönlendirmeli
         "uploadDate": upload_date,
         "views": views,
         "views_str": format_number(views),
@@ -68,13 +63,12 @@ def process_video_data(item):
         "comments": comments
     }
 
-def generate_structured_data(videos, country_name, country_code):
+def generate_structured_data(videos, country_name, country_code): # Parametre isimleri geri alındı
     """Yapılandırılmış veri (Schema.org) oluşturur."""
     if not videos:
         return {}
 
-    top_videos = videos  # ← BU SATIR BURAYA GİRMELİ
-
+    top_videos = videos[:5] # İlk 5 videoyu al
 
     structured_data = {
         "@context": "http://schema.org",
@@ -84,7 +78,7 @@ def generate_structured_data(videos, country_name, country_code):
         "publisher": {
             "@type": "Organization",
             "name": "TopTubeList",
-            "url": "https://toptubelist.com/" # Sitenizin ana URL'si
+            "url": "https://toptubelist.com/"
         },
         "mainEntity": {
             "@type": "ItemList",
@@ -102,8 +96,6 @@ def generate_structured_data(videos, country_name, country_code):
                 "description": f"Trending video from {video['channelTitle']} in {country_name}",
                 "thumbnailUrl": video["thumbnail"],
                 "uploadDate": video["uploadDate"],
-                # embedUrl da genelde doğrudan youtube.com/embed/VIDEO_ID şeklindedir.
-                # Ancak önceki formatı koruyorum.
                 "embedUrl": f"https://www.youtube.com/embed/{video['id']}",
                 "interactionStatistic": {
                     "@type": "InteractionCounter",
