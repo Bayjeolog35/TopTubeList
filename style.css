@@ -383,10 +383,11 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
 
   /* Normalde mobilde paneli tamamen gizle */
 @media (max-width: 768px) {
-  .layout-wrapper.hide-when-panel-active {
+  .layout-wrapper.hide-when-panel-active:not(.side-button) {
     display: none;
   }
 }
+
 
 /*hamburger menü son*/
 
