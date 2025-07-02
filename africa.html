@@ -1079,15 +1079,7 @@ darkModeToggle.addEventListener("click", () => {
         renderVideos();
       });
 
-    document.getElementById("loadMoreBtn").addEventListener("click", () => {
-      displayCount += 10;
-      renderVideos();
-    });
 
-    document.getElementById("darkModeToggle").addEventListener("click", () => {
-      const isDark = document.body.classList.toggle('dark-mode');
-      localStorage.setItem('darkMode', isDark);
-    });
   });
 </script>
 
