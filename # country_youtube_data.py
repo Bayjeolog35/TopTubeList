@@ -6,13 +6,11 @@ import requests
 from datetime import datetime
 from country_data import COUNTRY_INFO # country_data.py dosyasından bilgileri import ediyoruz
 
-# YouTube Data API Key'inizi buraya girin
-# Ortam değişkeni olarak ayarlamanız daha güvenlidir: export YOUTUBE_API_KEY="YOUR_API_KEY"
+# country_youtube_data.py içinde
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 
 if not YOUTUBE_API_KEY:
     raise ValueError("YOUTUBE_API_KEY ortam değişkeni ayarlanmamış. Lütfen API anahtarınızı ayarlayın.")
-
 YOUTUBE_API_BASE_URL = "https://www.googleapis.com/youtube/v3/"
 
 def format_number(num):
