@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -877,7 +877,6 @@
 
 <script>
 
-document.addEventListener("DOMContentLoaded", () => {
   
  // hamburger menü
   document.addEventListener("DOMContentLoaded", () => {
@@ -893,31 +892,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // --- Dark Mode Toggle ---
-const darkModeToggle = document.getElementById("darkModeToggle");
-
-function applySavedTheme() {
-    const saved = localStorage.getItem("preferred-theme");
-    if (saved === "dark") {
-        document.body.classList.add("dark-mode");
-        if (darkModeToggle) darkModeToggle.textContent = "☀️";
-    }
-}
-
-function updateThemeIcon() {
-    if (!darkModeToggle) return;
-    darkModeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
-}
-
-applySavedTheme();
-
-if (darkModeToggle) {
-    darkModeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-        updateThemeIcon();
-        localStorage.setItem("preferred-theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+ document.getElementById("darkModeToggle").addEventListener("click", () => {
+      const isDark = document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', isDark);
     });
-}
-
+  
   
    // --- Harf filtreleme ---
     document.querySelectorAll(".alphabet-letter").forEach(letter => {
