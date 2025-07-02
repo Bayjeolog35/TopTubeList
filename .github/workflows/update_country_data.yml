@@ -1,7 +1,9 @@
-name: Update Country YouTube Data (Manual)
+name: Update Country YouTube Data Every 3 Hours
 
 on:
-  workflow_dispatch:  # Manuel çalıştırma butonunu etkinleştirir
+  schedule:
+    - cron: "0 */3 * * *"  # Her 3 saatte bir (UTC saatine göre)
+  workflow_dispatch:        # Manuel tetikleme de açık
 
 jobs:
   update-videos:
