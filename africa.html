@@ -873,6 +873,22 @@
 
 
 <script>
+  
+ // hamburger menü
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const panel = document.querySelector(".country-panel");
+
+    if (hamburger && panel) {
+      hamburger.addEventListener("click", () => {
+        panel.classList.toggle("active");
+      });
+    }
+  });
+
+  
+  /* Video Render*/
+  
   document.addEventListener("DOMContentLoaded", () => {
     const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
     document.body.classList.toggle('dark-mode', darkModeEnabled);
