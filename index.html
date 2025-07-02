@@ -881,7 +881,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /*hamburger menü son*/
+  // --- Dark Mode Toggle ---
+document.addEventListener("DOMContentLoaded", () => {
+  const darkModeToggle = document.getElementById("darkModeToggle");
 
+  // Sayfa yüklendiğinde dark mode'u uygula
+  const savedMode = localStorage.getItem("darkMode");
+  if (savedMode === "true") {
+    document.body.classList.add("dark-mode");
+  }
+
+  // Tıklanınca dark mode'u toggle et
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", () => {
+      const isDarkNow = document.body.classList.toggle("dark-mode");
+      localStorage.setItem("darkMode", isDarkNow);
+    });
+  }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     let allVideos = [];
@@ -914,6 +931,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+  
     fetch("videos.json")
         .then(response => response.json())
         .then(videos => {
@@ -933,24 +951,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-  // --- Dark Mode Toggle ---
-document.addEventListener("DOMContentLoaded", () => {
-  const darkModeToggle = document.getElementById("darkModeToggle");
-
-  // Sayfa yüklendiğinde dark mode'u uygula
-  const savedMode = localStorage.getItem("darkMode");
-  if (savedMode === "true") {
-    document.body.classList.add("dark-mode");
-  }
-
-  // Tıklanınca dark mode'u toggle et
-  if (darkModeToggle) {
-    darkModeToggle.addEventListener("click", () => {
-      const isDarkNow = document.body.classList.toggle("dark-mode");
-      localStorage.setItem("darkMode", isDarkNow);
-    });
-  }
-});
 
     // --- About Us Scroll + Toggle ---
     const aboutToggle = document.getElementById("aboutToggle");
