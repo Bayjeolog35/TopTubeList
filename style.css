@@ -355,29 +355,32 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
   }
 
   .country-panel {
-  position: fixed;
-  top: 70px;
-  left: 5%;
-  width: 90%;
-  max-height: 70%;
-  background: white;
-  z-index: 9998;
-  padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  flex-wrap: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-}
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px); /* animasyon için hafif yukarıdan başlat */
+    width: 90%;
+    max-height: 70%;
+    background: white;
+    z-index: 9998;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    flex-wrap: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
 
-.country-panel.active {
-  opacity: 1;
-  visibility: visible;
-}
+  .country-panel.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0); /* açılırken yukarıdan aşağıya */
+  }
+
   .alphabet-column {
     display: flex;
     flex-direction: column;
@@ -397,9 +400,9 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
     overflow-y: auto;
   }
 
-  /* Normalde mobilde paneli tamamen gizle 
+  /* Normalde mobilde paneli tamamen gizle */
   .layout-wrapper {
-    display: none; */
+    display: none;
   }
 }
 
@@ -580,5 +583,3 @@ body.dark-mode #contactContent input::placeholder,
 body.dark-mode #contactContent textarea::placeholder {
   color: #aaa;
 }
-style.css
-style.css görüntüleniyor.
