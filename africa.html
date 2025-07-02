@@ -891,18 +891,23 @@
   });
 
 
+// Sayfa yüklendiğinde dark mode tercihini uygula
+const darkModeToggle = document.getElementById("darkModeToggle");
+const savedMode = localStorage.getItem("darkMode");
 
-// Sayfa yüklendiğinde tema kontrolü
-if (localStorage.getItem("darkMode") === "true") {
+if (savedMode === "true") {
   document.body.classList.add("dark-mode");
+  darkModeToggle.textContent = "☀️"; // Light mode simgesi
+} else {
+  darkModeToggle.textContent = "🌙"; // Dark mode simgesi
 }
 
-// Butona tıklayınca mod değiştir
-document.getElementById("darkModeToggle").addEventListener("click", () => {
+// Tıklayınca toggle + localStorage güncelle
+darkModeToggle.addEventListener("click", () => {
   const isDark = document.body.classList.toggle("dark-mode");
   localStorage.setItem("darkMode", isDark);
+  darkModeToggle.textContent = isDark ? "☀️" : "🌙";
 });
-
 
   
   
