@@ -485,11 +485,11 @@ body.dark-mode #aboutContent strong {
 }
 
 footer {
-  background-color: #000;
-  padding: 40px 20px 20px;
+background-color: #000;
+  padding: 10px 5px 5px;
   text-align: center;
   color: white;
-  margin-top: 20px;
+  margin-top: 10px;
   border-top: 1px solid #222;
 }
 
