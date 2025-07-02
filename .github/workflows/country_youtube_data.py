@@ -1,50 +1,39 @@
-name: Generate Country Data and HTML
+name: Update Country Data Every 3 Hours
 
 on:
-  push:
-    branches:
-      - main # main branch'ine push yapıldığında tetikle
   schedule:
-    - cron: '0 */3 * * *' # Her 3 saatte bir tetikle (Örn: 03:00, 06:00, 09:00, ...)
+    - cron: "0 */3 * * *"  # Her 3 saatte bir UTC
+  workflow_dispatch:       # Manuel tetikleme seçeneği
+  push:
+    paths:
+      - "Country_automation.py"
+      - "country_data.py"
 
 jobs:
-  update_content:
-    runs-on: ubuntu-latest # İş akışını Ubuntu işletim sistemi üzerinde çalıştır
-
-    permissions:
-      contents: write # Dosyaları depoya geri yazma izni ver
+  run-script:
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4 # Depo kodunu çek
+      uses: actions/checkout@v3
 
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.x' # En son Python 3 sürümünü kullan
+        python-version: "3.11"
 
     - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install requests # requests kütüphanesini yükle
+      run: pip install requests
 
-    - name: Fetch YouTube Data (videos.json, structured_data.json)
+    - name: Run country automation script
       env:
-        YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }} # GitHub Secret'tan API anahtarını ortam değişkeni olarak ayarla
-      run: |
-        python country_youtube_data.py
-      working-directory: ./ # Betiğin proje kök dizininde çalıştığından emin olun
+        YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      run: python Country_automation.py
 
-    - name: Generate Country HTML Pages
+    - name: Commit updated data
       run: |
-        python generate_country_html.py
-      working-directory: ./ # Betiğin proje kök dizininde çalıştığından emin olun
-
-    - name: Commit and Push generated files
-      run: |
-        git config user.name "GitHub Actions Bot" # Git kullanıcı adını ayarla
-        git config user.email "github-actions-bot@example.com" # Git e-posta adresini ayarla
-        git add Country_data/ # Ülke verisi JSON dosyalarını ekle
-        git add */index.html # Tüm ülke klasörlerindeki index.html dosyalarını ekle (örn: Turkey/index.html)
-        git diff --quiet || git commit -m "feat: Automate country data and HTML generation [skip ci]" # Değişiklik varsa commit yap
-        git push # Değişiklikleri push yap
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
+        git add Country_data/*
+        git commit -m "Update country video and structured data [CI]" || echo "No changes to commit"
+        git push
