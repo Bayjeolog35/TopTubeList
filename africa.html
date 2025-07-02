@@ -949,7 +949,31 @@
             }
         });
     }
+ // --- About Us Scroll + Toggle ---
+    const aboutToggle = document.getElementById("aboutToggle");
+    const aboutContent = document.getElementById("aboutContent");
 
+    if (aboutToggle && aboutContent) {
+        aboutToggle.addEventListener("click", () => {
+            if (aboutContent.classList.contains("show")) {
+                aboutContent.classList.remove("show");
+                setTimeout(() => {
+                    aboutContent.style.display = "none";
+                }, 400);
+            } else {
+                aboutContent.style.display = "block";
+                setTimeout(() => {
+                    aboutContent.classList.add("show");
+                    aboutContent.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }, 10);
+            }
+        });
+    }
+
+  
     // --- Contact Form Submission ---
     const form = document.getElementById("contactForm");
     const statusDiv = document.getElementById("formStatus");
