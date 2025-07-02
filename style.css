@@ -318,8 +318,8 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
 /* === Hamburger Menüsü (Sadece mobilde) === */
 .hamburger {
   position: fixed;
-  top: 16px;
-  left: 16px;
+  top: 262px;
+  left: 10px;
   font-size: 26px;
   background: white;
   color: black;
@@ -339,12 +339,12 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
 
   .country-panel {
     position: fixed;
-    top: 70px;
-    left: 50%;
+    top: 262px;
+    left: 25%;
     transform: translateX(-50%) translateY(-10px); /* animasyon için hafif yukarıdan başlat */
-    width: 90%;
-    max-height: 70%;
-    background: white;
+    width: 45%;
+    max-height: 100%;
+    background: rgb(255 255 255 / 79%);
     z-index: 9998;
     padding: 16px;
     border-radius: 12px;
@@ -368,7 +368,7 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    width: 30px;
+    width: 50px;
     max-height: 60vh;
     overflow-y: auto;
     flex-shrink: 0;
