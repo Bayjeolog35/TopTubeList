@@ -73,8 +73,7 @@ def generate_structured_data(videos, country_name, country_code):
     if not videos:
         return {}
 
-    # İlk 5 videoyu al
-    top_videos = videos[:5]
+   top_videos = videos
 
     structured_data = {
         "@context": "http://schema.org",
