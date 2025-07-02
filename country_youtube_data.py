@@ -2,7 +2,7 @@ import os
 import json
 import requests
 from datetime import datetime
-from country_data import COUNTRY_INFO # WORLDWIDE_AGGREGATION_COUNTRIES artık import edilmiyor
+from country_data import COUNTRY_INFO
 
 # YouTube Data API Key'inizi ortam değişkeninden alın
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
@@ -55,7 +55,7 @@ def process_video_data(item):
         "title": title,
         "channelTitle": channel_title,
         "thumbnail": thumbnail,
-        "url": f"https://www.youtube.com/watch?v={video_id}", # Bu URL'ler genellikle YouTube'a yönlendirmeli
+        "url": f"https://www.youtube.com/watch?v={video_id}",
         "uploadDate": upload_date,
         "views": views,
         "views_str": format_number(views),
@@ -63,7 +63,7 @@ def process_video_data(item):
         "comments": comments
     }
 
-def generate_structured_data(videos, country_name, country_code): # Parametre isimleri geri alındı
+def generate_structured_data(videos, country_name, country_code):
     """Yapılandırılmış veri (Schema.org) oluşturur."""
     if not videos:
         return {}
@@ -127,6 +127,9 @@ def main():
             
             videos_data = [process_video_data(item) for item in youtube_response.get("items", [])]
             
+            if not videos_data: # Eğer video verisi boşsa uyarı ver
+                print(f"  --> Warning: No trending video data found for {display_name} ({country_code}) via YouTube API.")
+            
             # JSON dosyalarını kaydet (Country_data/videos altına)
             videos_output_path = os.path.join(output_dir_videos, f"videos_{country_folder_name}.json")
             with open(videos_output_path, "w", encoding="utf-8") as f:
@@ -142,10 +145,10 @@ def main():
 
         except requests.exceptions.RequestException as e:
             # API ile ilgili bir hata (403 Forbidden, 400 Bad Request vb.)
-            print(f"Error fetching data for {display_name} ({country_code}): {e}")
+            print(f"  --> Error fetching data for {display_name} ({country_code}): {e}")
         except Exception as e:
             # Diğer beklenmeyen hatalar
-            print(f"An unexpected error occurred for {display_name} ({country_code}): {e}")
+            print(f"  --> An unexpected error occurred for {display_name} ({country_code}): {e}")
 
 if __name__ == "__main__":
     main()
