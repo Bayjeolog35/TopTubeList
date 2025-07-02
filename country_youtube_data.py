@@ -1,16 +1,17 @@
-# country_youtube_data.py
-
 import os
 import json
 import requests
 from datetime import datetime
 from country_data import COUNTRY_INFO # country_data.py dosyasından bilgileri import ediyoruz
 
-# country_youtube_data.py içinde
+# YouTube Data API Key'inizi ortam değişkeninden alın
+# Ortam değişkeni olarak ayarlamanız daha güvenlidir: export YOUTUBE_API_KEY="YOUR_API_KEY"
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 
+# API Anahtarının varlığını kontrol et
 if not YOUTUBE_API_KEY:
     raise ValueError("YOUTUBE_API_KEY ortam değişkeni ayarlanmamış. Lütfen API anahtarınızı ayarlayın.")
+
 YOUTUBE_API_BASE_URL = "https://www.googleapis.com/youtube/v3/"
 
 def format_number(num):
@@ -56,6 +57,9 @@ def process_video_data(item):
         "title": title,
         "channelTitle": channel_title,
         "thumbnail": thumbnail,
+        # Googleusercontent.com URL'leri Google CDN'den video yüklemek için kullanılır.
+        # Bu URL'ler genellikle doğrudan YouTube embed URL'leri değildir.
+        # Ancak daha önce belirttiğiniz formatı koruyorum.
         "url": f"https://www.youtube.com/watch?v={video_id}",
         "uploadDate": upload_date,
         "views": views,
@@ -98,6 +102,8 @@ def generate_structured_data(videos, country_name, country_code):
                 "description": f"Trending video from {video['channelTitle']} in {country_name}",
                 "thumbnailUrl": video["thumbnail"],
                 "uploadDate": video["uploadDate"],
+                # embedUrl da genelde doğrudan youtube.com/embed/VIDEO_ID şeklindedir.
+                # Ancak önceki formatı koruyorum.
                 "embedUrl": f"https://www.youtube.com/embed/{video['id']}",
                 "interactionStatistic": {
                     "@type": "InteractionCounter",
@@ -115,6 +121,7 @@ def main():
     output_dir_videos = os.path.join(base_output_dir, "videos")
     output_dir_structured_data = os.path.join(base_output_dir, "structured_data")
 
+    # Klasörleri oluştur, zaten varsa sorun değil
     os.makedirs(output_dir_videos, exist_ok=True)
     os.makedirs(output_dir_structured_data, exist_ok=True)
 
@@ -142,8 +149,10 @@ def main():
             print(f"Generated structured data to {structured_data_output_path}")
 
         except requests.exceptions.RequestException as e:
+            # API ile ilgili bir hata (403 Forbidden, 400 Bad Request vb.)
             print(f"Error fetching data for {display_name} ({country_code}): {e}")
         except Exception as e:
+            # Diğer beklenmeyen hatalar
             print(f"An unexpected error occurred for {display_name} ({country_code}): {e}")
 
 if __name__ == "__main__":
