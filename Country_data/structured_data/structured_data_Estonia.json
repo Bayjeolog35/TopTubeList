@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 102768225
+            "userInteractionCount": 103124258
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 10263517
+            "userInteractionCount": 10359711
           },
           "url": "https://www.youtube.com/watch?v=K56O5RdE3KM"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 9017969
+            "userInteractionCount": 9028202
           },
           "url": "https://www.youtube.com/watch?v=aEHsTVqphrY"
         }
@@ -68,60 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Who's clever now?😳😂 @isabellaafro",
-          "description": "Trending video from Jaymondy in Estonia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/-Wli1tM-EPw/hqdefault.jpg",
-          "uploadDate": "2025-06-30T14:15:01Z",
-          "embedUrl": "https://www.youtube.com/embed/-Wli1tM-EPw",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 22703161
-          },
-          "url": "https://www.youtube.com/watch?v=-Wli1tM-EPw"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "6 комнат! Пройди Испытания, Чтобы Выйти ! (Marlow, DK, ФрамеТамер, Кореш, Горилла, Nowkie)",
-          "description": "Trending video from ExileShow in Estonia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/kJoPssfEnO8/hqdefault.jpg",
-          "uploadDate": "2025-06-30T16:28:17Z",
-          "embedUrl": "https://www.youtube.com/embed/kJoPssfEnO8",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3102147
-          },
-          "url": "https://www.youtube.com/watch?v=kJoPssfEnO8"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Which Shoes Will Protect Your Feet?",
-          "description": "Trending video from Ben Azelart in Estonia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
-          "uploadDate": "2025-06-24T21:50:02Z",
-          "embedUrl": "https://www.youtube.com/embed/nj6W9v6yjFk",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 129136516
-          },
-          "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
         "item": {
           "@type": "VideoObject",
           "name": "Как мы потеряли идеальный банан",
@@ -132,9 +78,63 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1758799
+            "userInteractionCount": 1811345
           },
           "url": "https://www.youtube.com/watch?v=yh5syR6depU"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who's clever now?😳😂 @isabellaafro",
+          "description": "Trending video from Jaymondy in Estonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/-Wli1tM-EPw/hqdefault.jpg",
+          "uploadDate": "2025-06-30T14:15:01Z",
+          "embedUrl": "https://www.youtube.com/embed/-Wli1tM-EPw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 22910625
+          },
+          "url": "https://www.youtube.com/watch?v=-Wli1tM-EPw"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "6 комнат! Пройди Испытания, Чтобы Выйти ! (Marlow, DK, ФрамеТамер, Кореш, Горилла, Nowkie)",
+          "description": "Trending video from ExileShow in Estonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/kJoPssfEnO8/hqdefault.jpg",
+          "uploadDate": "2025-06-30T16:28:17Z",
+          "embedUrl": "https://www.youtube.com/embed/kJoPssfEnO8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 3115253
+          },
+          "url": "https://www.youtube.com/watch?v=kJoPssfEnO8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Which Shoes Will Protect Your Feet?",
+          "description": "Trending video from Ben Azelart in Estonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
+          "uploadDate": "2025-06-24T21:50:02Z",
+          "embedUrl": "https://www.youtube.com/embed/nj6W9v6yjFk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 129139367
+          },
+          "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
         }
       },
       {
@@ -150,7 +150,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 20920406
+            "userInteractionCount": 21157483
           },
           "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
         }
@@ -168,7 +168,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 153145065
+            "userInteractionCount": 153178640
           },
           "url": "https://www.youtube.com/watch?v=pe_ejTiIcSs"
         }
@@ -186,7 +186,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 92704
+            "userInteractionCount": 92786
           },
           "url": "https://www.youtube.com/watch?v=Rk8_DbSq2GM"
         }
@@ -204,7 +204,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 639239
+            "userInteractionCount": 653022
           },
           "url": "https://www.youtube.com/watch?v=STvQ1oygD8U"
         }
@@ -222,7 +222,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 6249547
+            "userInteractionCount": 6256737
           },
           "url": "https://www.youtube.com/watch?v=ztq8qqWVoLE"
         }
@@ -240,7 +240,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2581132
+            "userInteractionCount": 2583190
           },
           "url": "https://www.youtube.com/watch?v=9kgu7WKJbow"
         }
@@ -258,7 +258,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2593589
+            "userInteractionCount": 2598583
           },
           "url": "https://www.youtube.com/watch?v=IgK3KgGEdTg"
         }
@@ -276,7 +276,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2560095
+            "userInteractionCount": 2563454
           },
           "url": "https://www.youtube.com/watch?v=OR3FaAJE3t4"
         }
@@ -294,7 +294,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 13006892
+            "userInteractionCount": 13013064
           },
           "url": "https://www.youtube.com/watch?v=kpnoibF4eNg"
         }
@@ -312,7 +312,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4241234
+            "userInteractionCount": 4252659
           },
           "url": "https://www.youtube.com/watch?v=NrkaJ93R-8o"
         }
@@ -330,7 +330,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2868658
+            "userInteractionCount": 2911323
           },
           "url": "https://www.youtube.com/watch?v=iXmFVIqMkSE"
         }
@@ -348,7 +348,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3453695
+            "userInteractionCount": 3564110
           },
           "url": "https://www.youtube.com/watch?v=q3OueDwIXeg"
         }
@@ -366,7 +366,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 51628378
+            "userInteractionCount": 51642569
           },
           "url": "https://www.youtube.com/watch?v=kflYxob7uRM"
         }

@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 845747
+            "userInteractionCount": 846993
           },
           "url": "https://www.youtube.com/watch?v=Z1wIq4X2Ko0"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3675180
+            "userInteractionCount": 3677079
           },
           "url": "https://www.youtube.com/watch?v=80qpfeBklWc"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 13421837
+            "userInteractionCount": 13469065
           },
           "url": "https://www.youtube.com/watch?v=xn8mQqz2xmM"
         }
@@ -78,7 +78,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 193230
+            "userInteractionCount": 193950
           },
           "url": "https://www.youtube.com/watch?v=gREizcLA6oM"
         }
@@ -86,24 +86,6 @@
       {
         "@type": "ListItem",
         "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "여동생과 단둘이 3박4일 울릉도 여행하기 - 울릉도",
-          "description": "Trending video from 노마드션 No mad Shaun in Korea (South)",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Ji_Tm4NQq68/hqdefault.jpg",
-          "uploadDate": "2025-07-01T09:02:26Z",
-          "embedUrl": "https://www.youtube.com/embed/Ji_Tm4NQq68",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 606298
-          },
-          "url": "https://www.youtube.com/watch?v=Ji_Tm4NQq68"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
         "item": {
           "@type": "VideoObject",
           "name": "[#WSWF] 〈글로벌 아티스트 퍼포먼스 미션〉| BUMSUP(범접)",
@@ -114,32 +96,32 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2024415
+            "userInteractionCount": 2027680
           },
           "url": "https://www.youtube.com/watch?v=8ZpL_uXnYGQ"
         }
       },
       {
         "@type": "ListItem",
-        "position": 7,
+        "position": 6,
         "item": {
           "@type": "VideoObject",
-          "name": "[ENG SUB] 지상렬 염경환 {짠한형} EP. 99 홈쇼핑으로 50억 벌었거든요. KBS·MBC·SBS 다 OUT! 염경환 예능 은퇴 선언",
-          "description": "Trending video from 짠한형 신동엽 in Korea (South)",
-          "thumbnailUrl": "https://i.ytimg.com/vi/tirco8BBkVQ/hqdefault.jpg",
-          "uploadDate": "2025-06-30T09:00:07Z",
-          "embedUrl": "https://www.youtube.com/embed/tirco8BBkVQ",
+          "name": "여동생과 단둘이 3박4일 울릉도 여행하기 - 울릉도",
+          "description": "Trending video from 노마드션 No mad Shaun in Korea (South)",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Ji_Tm4NQq68/hqdefault.jpg",
+          "uploadDate": "2025-07-01T09:02:26Z",
+          "embedUrl": "https://www.youtube.com/embed/Ji_Tm4NQq68",
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1056414
+            "userInteractionCount": 606845
           },
-          "url": "https://www.youtube.com/watch?v=tirco8BBkVQ"
+          "url": "https://www.youtube.com/watch?v=Ji_Tm4NQq68"
         }
       },
       {
         "@type": "ListItem",
-        "position": 8,
+        "position": 7,
         "item": {
           "@type": "VideoObject",
           "name": "할머니가 해주셨던 추억의 '꽈리고추 무름' 정말 간단한데 맛있어요!!",
@@ -150,9 +132,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 148774
+            "userInteractionCount": 149063
           },
           "url": "https://www.youtube.com/watch?v=fZH6FOaZYq4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "[ENG SUB] 지상렬 염경환 {짠한형} EP. 99 홈쇼핑으로 50억 벌었거든요. KBS·MBC·SBS 다 OUT! 염경환 예능 은퇴 선언",
+          "description": "Trending video from 짠한형 신동엽 in Korea (South)",
+          "thumbnailUrl": "https://i.ytimg.com/vi/tirco8BBkVQ/hqdefault.jpg",
+          "uploadDate": "2025-06-30T09:00:07Z",
+          "embedUrl": "https://www.youtube.com/embed/tirco8BBkVQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1057378
+          },
+          "url": "https://www.youtube.com/watch?v=tirco8BBkVQ"
         }
       },
       {
@@ -168,7 +168,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1534943
+            "userInteractionCount": 1535227
           },
           "url": "https://www.youtube.com/watch?v=EbxCy2GEPIs"
         }
@@ -186,7 +186,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1813482
+            "userInteractionCount": 1816420
           },
           "url": "https://www.youtube.com/watch?v=-DYg4IjGLUk"
         }
@@ -204,7 +204,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1680383
+            "userInteractionCount": 1683946
           },
           "url": "https://www.youtube.com/watch?v=da68UOXfQ_s"
         }
@@ -222,7 +222,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 209630
+            "userInteractionCount": 209988
           },
           "url": "https://www.youtube.com/watch?v=zN8K_uE1LYg"
         }
@@ -240,7 +240,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1234359
+            "userInteractionCount": 1235087
           },
           "url": "https://www.youtube.com/watch?v=katO8j29gJw"
         }
@@ -258,7 +258,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 264910
+            "userInteractionCount": 265065
           },
           "url": "https://www.youtube.com/watch?v=LSZEAUi0mRY"
         }
@@ -276,7 +276,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 373408
+            "userInteractionCount": 374280
           },
           "url": "https://www.youtube.com/watch?v=q3NQlrduBdE"
         }
@@ -294,7 +294,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 89826
+            "userInteractionCount": 90170
           },
           "url": "https://www.youtube.com/watch?v=EGl-C6VZvDg"
         }
@@ -312,7 +312,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 266731
+            "userInteractionCount": 267395
           },
           "url": "https://www.youtube.com/watch?v=rp5hC_1oNnU"
         }
@@ -330,7 +330,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 27708945
+            "userInteractionCount": 27720576
           },
           "url": "https://www.youtube.com/watch?v=M2WTUoy4y6E"
         }
@@ -338,24 +338,6 @@
       {
         "@type": "ListItem",
         "position": 19,
-        "item": {
-          "@type": "VideoObject",
-          "name": "[SUB] 블랙홀 같은 준수의 매력에 홀린 야노 시호💕 \"사랑에 빠질 것 같아요\" #내아이의사생활 EP.27",
-          "description": "Trending video from ENA 이엔에이 in Korea (South)",
-          "thumbnailUrl": "https://i.ytimg.com/vi/akl_j4YfEqU/hqdefault.jpg",
-          "uploadDate": "2025-06-29T12:20:00Z",
-          "embedUrl": "https://www.youtube.com/embed/akl_j4YfEqU",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1021294
-          },
-          "url": "https://www.youtube.com/watch?v=akl_j4YfEqU"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 20,
         "item": {
           "@type": "VideoObject",
           "name": "[미연이의 뮤트로] 에어컨 대신 프나 라이브? 듣자마자 바다 가고픈 미연x프나 플리 추천🌴  | 새출발썰 , LIKE YOU BETTER",
@@ -366,9 +348,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 173807
+            "userInteractionCount": 174150
           },
           "url": "https://www.youtube.com/watch?v=JVBS0hfq7JA"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "VideoObject",
+          "name": "[SUB] 블랙홀 같은 준수의 매력에 홀린 야노 시호💕 \"사랑에 빠질 것 같아요\" #내아이의사생활 EP.27",
+          "description": "Trending video from ENA 이엔에이 in Korea (South)",
+          "thumbnailUrl": "https://i.ytimg.com/vi/akl_j4YfEqU/hqdefault.jpg",
+          "uploadDate": "2025-06-29T12:20:00Z",
+          "embedUrl": "https://www.youtube.com/embed/akl_j4YfEqU",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1022120
+          },
+          "url": "https://www.youtube.com/watch?v=akl_j4YfEqU"
         }
       }
     ]

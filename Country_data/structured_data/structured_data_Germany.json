@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 340802
+            "userInteractionCount": 344919
           },
           "url": "https://www.youtube.com/watch?v=La6KbUhHObk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 111034
+            "userInteractionCount": 113828
           },
           "url": "https://www.youtube.com/watch?v=153ItJ5DN1A"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 7824913
+            "userInteractionCount": 7832287
           },
           "url": "https://www.youtube.com/watch?v=c_I6CJkS4aQ"
         }
@@ -78,7 +78,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 70784
+            "userInteractionCount": 72473
           },
           "url": "https://www.youtube.com/watch?v=JXtiuADWVPI"
         }
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 222297
+            "userInteractionCount": 225738
           },
           "url": "https://www.youtube.com/watch?v=FsuPKtR1deY"
         }
@@ -104,24 +104,6 @@
       {
         "@type": "ListItem",
         "position": 6,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Heute mit Hitzepeak regional schwere Gewitter - Lokale Unwettergefahr vor allem durch heftigen Sturm",
-          "description": "Trending video from Kachelmannwetter in Germany",
-          "thumbnailUrl": "https://i.ytimg.com/vi/DOJZVq2neR4/hqdefault.jpg",
-          "uploadDate": "2025-07-02T06:39:06Z",
-          "embedUrl": "https://www.youtube.com/embed/DOJZVq2neR4",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 102825
-          },
-          "url": "https://www.youtube.com/watch?v=DOJZVq2neR4"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
         "item": {
           "@type": "VideoObject",
           "name": "Wie ich Elden Ring Shadow of the Erdtree bezwungen habe",
@@ -132,14 +114,14 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 99616
+            "userInteractionCount": 100561
           },
           "url": "https://www.youtube.com/watch?v=Q4RVvT8hIeo"
         }
       },
       {
         "@type": "ListItem",
-        "position": 8,
+        "position": 7,
         "item": {
           "@type": "VideoObject",
           "name": "Unangenehme Fragen an diese Influencer..",
@@ -150,9 +132,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 88024
+            "userInteractionCount": 89961
           },
           "url": "https://www.youtube.com/watch?v=iPQ3-LNLxC0"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Heute mit Hitzepeak regional schwere Gewitter - Lokale Unwettergefahr vor allem durch heftigen Sturm",
+          "description": "Trending video from Kachelmannwetter in Germany",
+          "thumbnailUrl": "https://i.ytimg.com/vi/DOJZVq2neR4/hqdefault.jpg",
+          "uploadDate": "2025-07-02T06:39:06Z",
+          "embedUrl": "https://www.youtube.com/embed/DOJZVq2neR4",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 103327
+          },
+          "url": "https://www.youtube.com/watch?v=DOJZVq2neR4"
         }
       },
       {
@@ -168,7 +168,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 56890
+            "userInteractionCount": 57457
           },
           "url": "https://www.youtube.com/watch?v=yLsnJ8kOpOU"
         }
@@ -186,7 +186,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 114406
+            "userInteractionCount": 118121
           },
           "url": "https://www.youtube.com/watch?v=PAZOJF9sgRc"
         }
@@ -204,7 +204,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 63900
+            "userInteractionCount": 64500
           },
           "url": "https://www.youtube.com/watch?v=2MJe37ovrfA"
         }
@@ -212,24 +212,6 @@
       {
         "@type": "ListItem",
         "position": 12,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Verfolgungsjagd in Berlin: Schüsse auf Polizei nach Geldtransporter-Überfall",
-          "description": "Trending video from rbb24 in Germany",
-          "thumbnailUrl": "https://i.ytimg.com/vi/azwT1JBA2s8/hqdefault.jpg",
-          "uploadDate": "2025-07-01T11:49:26Z",
-          "embedUrl": "https://www.youtube.com/embed/azwT1JBA2s8",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 114990
-          },
-          "url": "https://www.youtube.com/watch?v=azwT1JBA2s8"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 13,
         "item": {
           "@type": "VideoObject",
           "name": "Borussia Dortmund - CF Monterrey | FIFA Club World Cup 2025 | DAZN Highlights",
@@ -240,9 +222,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 848042
+            "userInteractionCount": 859313
           },
           "url": "https://www.youtube.com/watch?v=L2DEHKqTZ2M"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Verfolgungsjagd in Berlin: Schüsse auf Polizei nach Geldtransporter-Überfall",
+          "description": "Trending video from rbb24 in Germany",
+          "thumbnailUrl": "https://i.ytimg.com/vi/azwT1JBA2s8/hqdefault.jpg",
+          "uploadDate": "2025-07-01T11:49:26Z",
+          "embedUrl": "https://www.youtube.com/embed/azwT1JBA2s8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 115438
+          },
+          "url": "https://www.youtube.com/watch?v=azwT1JBA2s8"
         }
       },
       {
@@ -258,7 +258,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 155731
+            "userInteractionCount": 157484
           },
           "url": "https://www.youtube.com/watch?v=t1zVPYrwPS8"
         }
@@ -276,7 +276,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2766615
+            "userInteractionCount": 2776875
           },
           "url": "https://www.youtube.com/watch?v=542rY0DQHIM"
         }
@@ -294,7 +294,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 13421837
+            "userInteractionCount": 13469065
           },
           "url": "https://www.youtube.com/watch?v=xn8mQqz2xmM"
         }
@@ -312,7 +312,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1510058
+            "userInteractionCount": 1513977
           },
           "url": "https://www.youtube.com/watch?v=3by41z1dt6I"
         }
@@ -330,7 +330,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 156106
+            "userInteractionCount": 157308
           },
           "url": "https://www.youtube.com/watch?v=TPKwyQ1-1tY"
         }
@@ -348,7 +348,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1632416
+            "userInteractionCount": 1642662
           },
           "url": "https://www.youtube.com/watch?v=qyUfSHMehXo"
         }
@@ -366,7 +366,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1066764
+            "userInteractionCount": 1073224
           },
           "url": "https://www.youtube.com/watch?v=efOW5NUTYB8"
         }

@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 7824913
+            "userInteractionCount": 7832287
           },
           "url": "https://www.youtube.com/watch?v=c_I6CJkS4aQ"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 13006892
+            "userInteractionCount": 13013064
           },
           "url": "https://www.youtube.com/watch?v=kpnoibF4eNg"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 8151658
+            "userInteractionCount": 8186633
           },
           "url": "https://www.youtube.com/watch?v=KD18ddeFuyM"
         }
@@ -78,7 +78,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3494539
+            "userInteractionCount": 3513580
           },
           "url": "https://www.youtube.com/watch?v=UyzbSeVBxvk"
         }
@@ -86,24 +86,6 @@
       {
         "@type": "ListItem",
         "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Project Hail Mary - Official Trailer",
-          "description": "Trending video from Amazon MGM Studios in Australia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/m08TxIsFTRI/hqdefault.jpg",
-          "uploadDate": "2025-06-30T12:21:25Z",
-          "embedUrl": "https://www.youtube.com/embed/m08TxIsFTRI",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 10861779
-          },
-          "url": "https://www.youtube.com/watch?v=m08TxIsFTRI"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
         "item": {
           "@type": "VideoObject",
           "name": "This mechanism shrinks when pulled",
@@ -114,9 +96,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4346684
+            "userInteractionCount": 4362011
           },
           "url": "https://www.youtube.com/watch?v=-QTkPfq7w1A"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Project Hail Mary - Official Trailer",
+          "description": "Trending video from Amazon MGM Studios in Australia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/m08TxIsFTRI/hqdefault.jpg",
+          "uploadDate": "2025-06-30T12:21:25Z",
+          "embedUrl": "https://www.youtube.com/embed/m08TxIsFTRI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 10916348
+          },
+          "url": "https://www.youtube.com/watch?v=m08TxIsFTRI"
         }
       },
       {
@@ -132,7 +132,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1632416
+            "userInteractionCount": 1642662
           },
           "url": "https://www.youtube.com/watch?v=qyUfSHMehXo"
         }
@@ -140,24 +140,6 @@
       {
         "@type": "ListItem",
         "position": 8,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Season 3 The Abyss Awakens | Dev Vision Vol. 07 | Marvel Rivals",
-          "description": "Trending video from Marvel Rivals in Australia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/J0_hbNp251M/hqdefault.jpg",
-          "uploadDate": "2025-07-01T17:29:54Z",
-          "embedUrl": "https://www.youtube.com/embed/J0_hbNp251M",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 664704
-          },
-          "url": "https://www.youtube.com/watch?v=J0_hbNp251M"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 9,
         "item": {
           "@type": "VideoObject",
           "name": "The greatest songwriting theft of all time",
@@ -168,9 +150,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 537083
+            "userInteractionCount": 546951
           },
           "url": "https://www.youtube.com/watch?v=SsjlmLgzrBY"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Season 3 The Abyss Awakens | Dev Vision Vol. 07 | Marvel Rivals",
+          "description": "Trending video from Marvel Rivals in Australia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/J0_hbNp251M/hqdefault.jpg",
+          "uploadDate": "2025-07-01T17:29:54Z",
+          "embedUrl": "https://www.youtube.com/embed/J0_hbNp251M",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 666936
+          },
+          "url": "https://www.youtube.com/watch?v=J0_hbNp251M"
         }
       },
       {
@@ -186,7 +186,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1231328
+            "userInteractionCount": 1241847
           },
           "url": "https://www.youtube.com/watch?v=VUzP2PvXeoY"
         }
@@ -204,7 +204,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2766615
+            "userInteractionCount": 2776875
           },
           "url": "https://www.youtube.com/watch?v=542rY0DQHIM"
         }
@@ -222,7 +222,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2273106
+            "userInteractionCount": 2284870
           },
           "url": "https://www.youtube.com/watch?v=t-oLGxzHyWQ"
         }
@@ -240,7 +240,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 13421837
+            "userInteractionCount": 13469065
           },
           "url": "https://www.youtube.com/watch?v=xn8mQqz2xmM"
         }
@@ -258,7 +258,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 6217472
+            "userInteractionCount": 6303658
           },
           "url": "https://www.youtube.com/watch?v=jz8pLlPhSeY"
         }
@@ -276,7 +276,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1076181
+            "userInteractionCount": 1083634
           },
           "url": "https://www.youtube.com/watch?v=3Nlb-m_vKYM"
         }
@@ -294,7 +294,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 271524
+            "userInteractionCount": 271732
           },
           "url": "https://www.youtube.com/watch?v=9qdqkpNO_I8"
         }
@@ -312,7 +312,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 931576
+            "userInteractionCount": 934344
           },
           "url": "https://www.youtube.com/watch?v=kIhLPAWKKsg"
         }
@@ -320,24 +320,6 @@
       {
         "@type": "ListItem",
         "position": 18,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Nothing Headphone 1 Review: As Good as They Look?",
-          "description": "Trending video from Marques Brownlee in Australia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/A94RrC8Mg0o/hqdefault.jpg",
-          "uploadDate": "2025-07-01T17:32:07Z",
-          "embedUrl": "https://www.youtube.com/embed/A94RrC8Mg0o",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2293064
-          },
-          "url": "https://www.youtube.com/watch?v=A94RrC8Mg0o"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 19,
         "item": {
           "@type": "VideoObject",
           "name": "When Your Body Attacks Itself – Autoimmune",
@@ -348,9 +330,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1066764
+            "userInteractionCount": 1073224
           },
           "url": "https://www.youtube.com/watch?v=efOW5NUTYB8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Nothing Headphone 1 Review: As Good as They Look?",
+          "description": "Trending video from Marques Brownlee in Australia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/A94RrC8Mg0o/hqdefault.jpg",
+          "uploadDate": "2025-07-01T17:32:07Z",
+          "embedUrl": "https://www.youtube.com/embed/A94RrC8Mg0o",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2310424
+          },
+          "url": "https://www.youtube.com/watch?v=A94RrC8Mg0o"
         }
       },
       {
@@ -366,7 +366,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2664249
+            "userInteractionCount": 2670979
           },
           "url": "https://www.youtube.com/watch?v=mBSPJ_QeUxY"
         }

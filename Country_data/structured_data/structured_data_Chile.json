@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3413352
+            "userInteractionCount": 3458417
           },
           "url": "https://www.youtube.com/watch?v=W91CXLxz-iY"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 938862
+            "userInteractionCount": 951887
           },
           "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2713344
+            "userInteractionCount": 2716821
           },
           "url": "https://www.youtube.com/watch?v=-PR00YxNuao"
         }
@@ -78,7 +78,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 929774
+            "userInteractionCount": 942866
           },
           "url": "https://www.youtube.com/watch?v=wmDouI8cf6Y"
         }
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 246138
+            "userInteractionCount": 250865
           },
           "url": "https://www.youtube.com/watch?v=oTyslElj8YA"
         }
@@ -114,7 +114,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1410265
+            "userInteractionCount": 1416536
           },
           "url": "https://www.youtube.com/watch?v=pZ_4GMBo3Zk"
         }
@@ -132,7 +132,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 13421837
+            "userInteractionCount": 13469065
           },
           "url": "https://www.youtube.com/watch?v=xn8mQqz2xmM"
         }
@@ -150,7 +150,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2766615
+            "userInteractionCount": 2776875
           },
           "url": "https://www.youtube.com/watch?v=542rY0DQHIM"
         }
@@ -168,7 +168,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 441651
+            "userInteractionCount": 441975
           },
           "url": "https://www.youtube.com/watch?v=H5Z91Y1DllQ"
         }
@@ -186,7 +186,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3466183
+            "userInteractionCount": 3485897
           },
           "url": "https://www.youtube.com/watch?v=vTgzntPTAyo"
         }
@@ -204,7 +204,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 565435
+            "userInteractionCount": 567283
           },
           "url": "https://www.youtube.com/watch?v=0OwB0fhpO6E"
         }
@@ -222,7 +222,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1892513
+            "userInteractionCount": 1893443
           },
           "url": "https://www.youtube.com/watch?v=GABe7zkqt3Y"
         }
@@ -230,24 +230,6 @@
       {
         "@type": "ListItem",
         "position": 13,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Marcos Villalobos, Daniel Cuevas - MANIACA (Video Oficial)",
-          "description": "Trending video from MarcosVillalobosVEVO in Chile",
-          "thumbnailUrl": "https://i.ytimg.com/vi/CALasbhUPb4/hqdefault.jpg",
-          "uploadDate": "2025-07-02T00:00:06Z",
-          "embedUrl": "https://www.youtube.com/embed/CALasbhUPb4",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 155768
-          },
-          "url": "https://www.youtube.com/watch?v=CALasbhUPb4"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 14,
         "item": {
           "@type": "VideoObject",
           "name": "Remodelando mi Taller en 24 HORAS",
@@ -258,9 +240,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 267981
+            "userInteractionCount": 269560
           },
           "url": "https://www.youtube.com/watch?v=FbVd8TMp4iQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Marcos Villalobos, Daniel Cuevas - MANIACA (Video Oficial)",
+          "description": "Trending video from MarcosVillalobosVEVO in Chile",
+          "thumbnailUrl": "https://i.ytimg.com/vi/CALasbhUPb4/hqdefault.jpg",
+          "uploadDate": "2025-07-02T00:00:06Z",
+          "embedUrl": "https://www.youtube.com/embed/CALasbhUPb4",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 159271
+          },
+          "url": "https://www.youtube.com/watch?v=CALasbhUPb4"
         }
       },
       {
@@ -276,7 +276,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 13006892
+            "userInteractionCount": 13013064
           },
           "url": "https://www.youtube.com/watch?v=kpnoibF4eNg"
         }
@@ -294,7 +294,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 359930
+            "userInteractionCount": 362779
           },
           "url": "https://www.youtube.com/watch?v=GJMQtw1bn4M"
         }
@@ -312,7 +312,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 6890874
+            "userInteractionCount": 6894291
           },
           "url": "https://www.youtube.com/watch?v=Ocd0-HdrGtc"
         }
@@ -330,7 +330,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 526769
+            "userInteractionCount": 532634
           },
           "url": "https://www.youtube.com/watch?v=8i1PMi1I_Wk"
         }
@@ -348,7 +348,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 844405
+            "userInteractionCount": 844798
           },
           "url": "https://www.youtube.com/watch?v=7Z4zF77FFOU"
         }
@@ -366,7 +366,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3047692
+            "userInteractionCount": 3053419
           },
           "url": "https://www.youtube.com/watch?v=ysSxvkYokcM"
         }
