@@ -398,12 +398,6 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
     overflow-y: auto;
   }
 
-  /* Normalde mobilde paneli tamamen gizle */
-  .layout-wrapper {
-    display: none;
-  }
-}
-
 /*hamburger menü son*/
 
 /* Ana içerik */
