@@ -1,3 +1,40 @@
+İleti dizisi açıldı. 1 okunmuş ileti.
+
+İçeriğe atla
+Gmail ürününü ekran okuyucularla birlikte kullanma
+17.881 ileti dizisinden 7.
+(konu yok)
+Gelen Kutusu
+
+Muhammet Furkan Şentürk <m.furkan.senturk@gmail.com>
+Ekler
+02:00 (10 saat önce)
+Alıcı: ben
+
+
+
+
+
+
+
+M. Furkan ŞENTÜRK
+Arama Jeoloğu
+Exploration Geologist
+Koza Altin Isletmeleri A.S.
+
+Istanbul Yolu 10. km No:310 ; Batikent / ANKARA
+
+Gsm: +90 551 212 6570
+
+E-mail : furkan.senturk@kozagold.com
+
+Web: www.kozaaltin.com.tr
+
+
+
+
+ 2 ek
+  • Gmail tarafından tarandı
 /* === Genel Ayarlar === */
 body {
   font-family: Arial, sans-serif;
@@ -354,7 +391,8 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
     display: block;
   }
 
-  position: fixed;
+  .country-panel {
+    position: fixed;
     top: 70px;
     left: 50%;
     transform: translateX(-50%) translateY(-10px); /* animasyon için hafif yukarıdan başlat */
@@ -399,6 +437,10 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
     overflow-y: auto;
   }
 
+  /* Normalde mobilde paneli tamamen gizle */
+  .layout-wrapper {
+    display: none;
+  }
 }
 
 /*hamburger menü son*/
@@ -578,3 +620,5 @@ body.dark-mode #contactContent input::placeholder,
 body.dark-mode #contactContent textarea::placeholder {
   color: #aaa;
 }
+style.css
+style.css görüntüleniyor.
