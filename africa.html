@@ -890,29 +890,30 @@
   });
 
 
-  // --- Dark Mode Toggle ---
+// --- Dark Mode Toggle ---
 const darkModeToggle = document.getElementById("darkModeToggle");
+
+function applySavedTheme() {
+    const saved = localStorage.getItem("preferred-theme");
+    if (saved === "dark") {
+        document.body.classList.add("dark-mode");
+        if (darkModeToggle) darkModeToggle.textContent = "☀️";
+    }
+}
+
+function updateThemeIcon() {
+    if (!darkModeToggle) return;
+    darkModeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+}
+
+applySavedTheme();
+
 if (darkModeToggle) {
     darkModeToggle.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
-
-        // Buton simgesini değiştir (isteğe bağlı)
-        if (document.body.classList.contains("dark-mode")) {
-            darkModeToggle.textContent = "☀️"; // Light mode simgesi
-        } else {
-            darkModeToggle.textContent = "🌙"; // Dark mode simgesi
-        }
-
-        // Tercihi localStorage'a kaydet (isteğe bağlı)
+        updateThemeIcon();
         localStorage.setItem("preferred-theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
     });
-
-    // Sayfa yüklendiğinde önceki tercih varsa uygula
-    const savedTheme = localStorage.getItem("preferred-theme");
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark-mode");
-        darkModeToggle.textContent = "☀️";
-    }
 }
 
   
@@ -956,6 +957,7 @@ if (darkModeToggle) {
     `;
     document.head.appendChild(style);
 
+  
  // --- Contact Us Scroll + Toggle ---
     const contactToggle = document.getElementById("contactToggle");
     const contactContent = document.getElementById("contactContent");
@@ -979,6 +981,8 @@ if (darkModeToggle) {
             }
         });
     }
+
+  
  // --- About Us Scroll + Toggle ---
     const aboutToggle = document.getElementById("aboutToggle");
     const aboutContent = document.getElementById("aboutContent");
