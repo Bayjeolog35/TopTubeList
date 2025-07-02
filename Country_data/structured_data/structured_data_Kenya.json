@@ -1,0 +1,376 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "Trending YouTube Videos in Kenya",
+  "description": "Most popular YouTube videos currently trending in Kenya.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TopTubeList",
+    "url": "https://toptubelist.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who was faster? 😳😱 @isabellaafro",
+          "description": "Trending video from Jaymondy in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:30:33Z",
+          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 102768225
+          },
+          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Mbosso - Pawa (Official Music Video)",
+          "description": "Trending video from Mbosso in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/VTbo8E8es9A/hqdefault.jpg",
+          "uploadDate": "2025-06-19T15:00:06Z",
+          "embedUrl": "https://www.youtube.com/embed/VTbo8E8es9A",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 5429524
+          },
+          "url": "https://www.youtube.com/watch?v=VTbo8E8es9A"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "AFRICAN HOME: THE GOOD, THE BAD AND THE UGLY",
+          "description": "Trending video from SamSpedy in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/DYePIt01etc/hqdefault.jpg",
+          "uploadDate": "2025-06-30T17:02:11Z",
+          "embedUrl": "https://www.youtube.com/embed/DYePIt01etc",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1278101
+          },
+          "url": "https://www.youtube.com/watch?v=DYePIt01etc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Breaking4 Live: Faith Kipyegon vs. the 4-Minute Mile | Nike",
+          "description": "Trending video from Nike in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/kZNHaUtLCnA/hqdefault.jpg",
+          "uploadDate": "2025-06-26T18:31:36Z",
+          "embedUrl": "https://www.youtube.com/embed/kZNHaUtLCnA",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 0
+          },
+          "url": "https://www.youtube.com/watch?v=kZNHaUtLCnA"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Which Shoes Will Protect Your Feet?",
+          "description": "Trending video from Ben Azelart in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
+          "uploadDate": "2025-06-24T21:50:02Z",
+          "embedUrl": "https://www.youtube.com/embed/nj6W9v6yjFk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 129136516
+          },
+          "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Al-Hilal STUNS Manchester City 4-3! | 2025 FIFA Club World Cup Highlights",
+          "description": "Trending video from DAZN Football in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/c_I6CJkS4aQ/hqdefault.jpg",
+          "uploadDate": "2025-07-01T04:12:43Z",
+          "embedUrl": "https://www.youtube.com/embed/c_I6CJkS4aQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 7824913
+          },
+          "url": "https://www.youtube.com/watch?v=c_I6CJkS4aQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Kenya descends into CHAOS as MASSIVE violent protests erupt against police brutality",
+          "description": "Trending video from Daily Express in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/awAlBE57zlA/hqdefault.jpg",
+          "uploadDate": "2025-06-25T15:01:00Z",
+          "embedUrl": "https://www.youtube.com/embed/awAlBE57zlA",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 462828
+          },
+          "url": "https://www.youtube.com/watch?v=awAlBE57zlA"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Big problem for the hungry Hulk...😁 #shorts",
+          "description": "Trending video from Marvelix in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/f2QnEza9dVk/hqdefault.jpg",
+          "uploadDate": "2025-06-30T15:54:56Z",
+          "embedUrl": "https://www.youtube.com/embed/f2QnEza9dVk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 12139103
+          },
+          "url": "https://www.youtube.com/watch?v=f2QnEza9dVk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Wasn't my fault tho!😳 @isabellaafro",
+          "description": "Trending video from Jaymondy in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/cllwgGfFwKg/hqdefault.jpg",
+          "uploadDate": "2025-06-28T13:35:01Z",
+          "embedUrl": "https://www.youtube.com/embed/cllwgGfFwKg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 40702349
+          },
+          "url": "https://www.youtube.com/watch?v=cllwgGfFwKg"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Can An EXTREMELY  STRONG Pressure Washer Slice a Human Hand?",
+          "description": "Trending video from Mini Katana in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/p6APdJSEUok/hqdefault.jpg",
+          "uploadDate": "2025-06-27T01:01:00Z",
+          "embedUrl": "https://www.youtube.com/embed/p6APdJSEUok",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 16439683
+          },
+          "url": "https://www.youtube.com/watch?v=p6APdJSEUok"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "VideoObject",
+          "name": "这也太厉害了 #火影忍者 #joker#cosplay",
+          "description": "Trending video from 佐助与鸣人 in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/YFXS0F2IxmM/hqdefault.jpg",
+          "uploadDate": "2025-06-29T04:00:41Z",
+          "embedUrl": "https://www.youtube.com/embed/YFXS0F2IxmM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 41774999
+          },
+          "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Tom&Jerry🥰Funny moment 🤣 #shorts #shortvideo",
+          "description": "Trending video from Krishna Avyu in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/xsMzHLJyx10/hqdefault.jpg",
+          "uploadDate": "2025-06-27T13:46:50Z",
+          "embedUrl": "https://www.youtube.com/embed/xsMzHLJyx10",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 22886267
+          },
+          "url": "https://www.youtube.com/watch?v=xsMzHLJyx10"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Can Tape Hold My Sons Weight? #shorts #viral #tiktok",
+          "description": "Trending video from Kate Brush in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/tm2mLtsA2Yc/hqdefault.jpg",
+          "uploadDate": "2025-06-27T09:35:30Z",
+          "embedUrl": "https://www.youtube.com/embed/tm2mLtsA2Yc",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20555195
+          },
+          "url": "https://www.youtube.com/watch?v=tm2mLtsA2Yc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Repeat The Trick or Swim 🥶💦",
+          "description": "Trending video from Celine Dept in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/aHrK586PVeI/hqdefault.jpg",
+          "uploadDate": "2025-07-01T15:00:02Z",
+          "embedUrl": "https://www.youtube.com/embed/aHrK586PVeI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20920406
+          },
+          "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "VideoObject",
+          "name": "ITALIAN BRAINROT GETTING ON THE SCHOOL BUS!",
+          "description": "Trending video from The Noob Family in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/LWxeJkepuEQ/hqdefault.jpg",
+          "uploadDate": "2025-06-28T17:32:21Z",
+          "embedUrl": "https://www.youtube.com/embed/LWxeJkepuEQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20475540
+          },
+          "url": "https://www.youtube.com/watch?v=LWxeJkepuEQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Jovial x Otile Brown - I Got You (4K Visualizer)",
+          "description": "Trending video from JOVIAL in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nSHcKVkRMq8/hqdefault.jpg",
+          "uploadDate": "2025-06-20T11:00:07Z",
+          "embedUrl": "https://www.youtube.com/embed/nSHcKVkRMq8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 640845
+          },
+          "url": "https://www.youtube.com/watch?v=nSHcKVkRMq8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "VideoObject",
+          "name": "They didn't expected this art😂💕",
+          "description": "Trending video from Eternal Love in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/D_zzbW_8GmQ/hqdefault.jpg",
+          "uploadDate": "2025-06-24T16:00:21Z",
+          "embedUrl": "https://www.youtube.com/embed/D_zzbW_8GmQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 37025662
+          },
+          "url": "https://www.youtube.com/watch?v=D_zzbW_8GmQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "VideoObject",
+          "name": "MY BABY, HEAVEN, HAS NEVER BEEN AWAY FROM US FOR THIS LONG 🥹 || DIANA BAHATI",
+          "description": "Trending video from DIANA BAHATI in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Blim925gZjE/hqdefault.jpg",
+          "uploadDate": "2025-06-27T12:00:06Z",
+          "embedUrl": "https://www.youtube.com/embed/Blim925gZjE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 330625
+          },
+          "url": "https://www.youtube.com/watch?v=Blim925gZjE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "VideoObject",
+          "name": "LIVE | Real Madrid vs Juventus | Round of 16 | FIFA CLUB WORLD CUP | SportyTV",
+          "description": "Trending video from SportyTV in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Vr0uSr6093g/hqdefault.jpg",
+          "uploadDate": "2025-07-01T21:39:43Z",
+          "embedUrl": "https://www.youtube.com/embed/Vr0uSr6093g",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 814887
+          },
+          "url": "https://www.youtube.com/watch?v=Vr0uSr6093g"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "VideoObject",
+          "name": "NASTY FEELINGS - DESTINY ETIKO, CHIKE DANIELS, EBERE OKARO, BIBI SONYE, LATEST 2025 NIGERIAN MOVIE",
+          "description": "Trending video from Chinemelu's Channel in Kenya",
+          "thumbnailUrl": "https://i.ytimg.com/vi/taWwwPo8PaY/hqdefault.jpg",
+          "uploadDate": "2025-06-30T16:00:54Z",
+          "embedUrl": "https://www.youtube.com/embed/taWwwPo8PaY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 835837
+          },
+          "url": "https://www.youtube.com/watch?v=taWwwPo8PaY"
+        }
+      }
+    ]
+  }
+}

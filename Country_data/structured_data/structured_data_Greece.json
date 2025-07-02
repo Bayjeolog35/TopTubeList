@@ -1,0 +1,376 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "Trending YouTube Videos in Greece",
+  "description": "Most popular YouTube videos currently trending in Greece.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TopTubeList",
+    "url": "https://toptubelist.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who was faster? 😳😱 @isabellaafro",
+          "description": "Trending video from Jaymondy in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:30:33Z",
+          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 102768225
+          },
+          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "这也太厉害了 #火影忍者 #joker#cosplay",
+          "description": "Trending video from 佐助与鸣人 in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/YFXS0F2IxmM/hqdefault.jpg",
+          "uploadDate": "2025-06-29T04:00:41Z",
+          "embedUrl": "https://www.youtube.com/embed/YFXS0F2IxmM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 41774999
+          },
+          "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "I Stole His Brainrots… 😋🦈 (Steal a Brainrot Roblox ASMR)",
+          "description": "Trending video from Spizee in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/u8hQ_nBD8eg/hqdefault.jpg",
+          "uploadDate": "2025-06-28T17:42:38Z",
+          "embedUrl": "https://www.youtube.com/embed/u8hQ_nBD8eg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 32368167
+          },
+          "url": "https://www.youtube.com/watch?v=u8hQ_nBD8eg"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "If You Spill, You Lose!",
+          "description": "Trending video from MrBeast in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/gGcaGdHlt60/hqdefault.jpg",
+          "uploadDate": "2025-06-25T17:00:08Z",
+          "embedUrl": "https://www.youtube.com/embed/gGcaGdHlt60",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 101885347
+          },
+          "url": "https://www.youtube.com/watch?v=gGcaGdHlt60"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who's clever now?😳😂 @isabellaafro",
+          "description": "Trending video from Jaymondy in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/-Wli1tM-EPw/hqdefault.jpg",
+          "uploadDate": "2025-06-30T14:15:01Z",
+          "embedUrl": "https://www.youtube.com/embed/-Wli1tM-EPw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 22703161
+          },
+          "url": "https://www.youtube.com/watch?v=-Wli1tM-EPw"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Όλο το ΤΡΙΜΠΟΥΡΔΕΛΟ με τους διαλόγους ΟΠΕΚΕΠΕ σε ένα βίντεο | Luben TV",
+          "description": "Trending video from Luben TV in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/neVw1t8q0sk/hqdefault.jpg",
+          "uploadDate": "2025-07-02T13:58:52Z",
+          "embedUrl": "https://www.youtube.com/embed/neVw1t8q0sk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 105324
+          },
+          "url": "https://www.youtube.com/watch?v=neVw1t8q0sk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Δοκιμάσαμε Προσομοιωτή Γέννας!",
+          "description": "Trending video from Unboxholics in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/yFoYWSxYFh4/hqdefault.jpg",
+          "uploadDate": "2025-07-01T11:30:57Z",
+          "embedUrl": "https://www.youtube.com/embed/yFoYWSxYFh4",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 167129
+          },
+          "url": "https://www.youtube.com/watch?v=yFoYWSxYFh4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Snag, you're it 😜 #afv #fail #funny #shorts",
+          "description": "Trending video from America's Funniest Home Videos in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Ehc68ClCuFE/hqdefault.jpg",
+          "uploadDate": "2025-06-25T01:00:15Z",
+          "embedUrl": "https://www.youtube.com/embed/Ehc68ClCuFE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 8893572
+          },
+          "url": "https://www.youtube.com/watch?v=Ehc68ClCuFE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Μιχάλης Χατζηγιάννης & Χρήστος Μάστορας - Χόρεψε - Official Music Video",
+          "description": "Trending video from PanikRecordsTube in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/TwaVSAAQ83g/hqdefault.jpg",
+          "uploadDate": "2025-06-26T14:00:52Z",
+          "embedUrl": "https://www.youtube.com/embed/TwaVSAAQ83g",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 347158
+          },
+          "url": "https://www.youtube.com/watch?v=TwaVSAAQ83g"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Squid Game Pranks #shorts",
+          "description": "Trending video from Mr DegrEE in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/kflYxob7uRM/hqdefault.jpg",
+          "uploadDate": "2025-06-25T05:57:20Z",
+          "embedUrl": "https://www.youtube.com/embed/kflYxob7uRM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 51628378
+          },
+          "url": "https://www.youtube.com/watch?v=kflYxob7uRM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Which Shoes Will Protect Your Feet?",
+          "description": "Trending video from Ben Azelart in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
+          "uploadDate": "2025-06-24T21:50:02Z",
+          "embedUrl": "https://www.youtube.com/embed/nj6W9v6yjFk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 129136516
+          },
+          "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Ελένη Φουρέιρα, Ρία Ελληνίδου, Display - Άναψε Το Τσιγάρο | Mad VMA 2025 από την ΔΕΗ",
+          "description": "Trending video from Mad TV Specials in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/4fVadGJMeTM/hqdefault.jpg",
+          "uploadDate": "2025-06-29T23:24:14Z",
+          "embedUrl": "https://www.youtube.com/embed/4fVadGJMeTM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 103195
+          },
+          "url": "https://www.youtube.com/watch?v=4fVadGJMeTM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Repeat The Trick or Swim 🥶💦",
+          "description": "Trending video from Celine Dept in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/aHrK586PVeI/hqdefault.jpg",
+          "uploadDate": "2025-07-01T15:00:02Z",
+          "embedUrl": "https://www.youtube.com/embed/aHrK586PVeI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20920406
+          },
+          "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "VideoObject",
+          "name": "ΟΠΕΚΕΠΕ: «Γνώριζε ο Μητσοτάκης» ο Μάριος Σαλμάς δείχνει τον Πρωθυπουργό πίσω από το σκάνδαλο",
+          "description": "Trending video from Kontra Channel in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/zSnkC2rK8oM/hqdefault.jpg",
+          "uploadDate": "2025-07-01T01:45:46Z",
+          "embedUrl": "https://www.youtube.com/embed/zSnkC2rK8oM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 120902
+          },
+          "url": "https://www.youtube.com/watch?v=zSnkC2rK8oM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Kindness Pool Rescue 🌊 Heartwarming Sunglasses Return #kindness #pool #shorts",
+          "description": "Trending video from Fabiosa Best Lifehacks in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/N_YZlt0iARQ/hqdefault.jpg",
+          "uploadDate": "2025-06-25T13:00:46Z",
+          "embedUrl": "https://www.youtube.com/embed/N_YZlt0iARQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 11820258
+          },
+          "url": "https://www.youtube.com/watch?v=N_YZlt0iARQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "VideoObject",
+          "name": "ΑΠΟΦΥΓΕ ΤΟ ΚΟΡΙΤΣΙ!",
+          "description": "Trending video from GL Family in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/t38RzkwlB_Y/hqdefault.jpg",
+          "uploadDate": "2025-07-01T12:21:07Z",
+          "embedUrl": "https://www.youtube.com/embed/t38RzkwlB_Y",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 359772
+          },
+          "url": "https://www.youtube.com/watch?v=t38RzkwlB_Y"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "VideoObject",
+          "name": "How did this not go in? 🤣",
+          "description": "Trending video from UEFA in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/1VeG0FqkLR4/hqdefault.jpg",
+          "uploadDate": "2025-06-23T15:30:00Z",
+          "embedUrl": "https://www.youtube.com/embed/1VeG0FqkLR4",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20109069
+          },
+          "url": "https://www.youtube.com/watch?v=1VeG0FqkLR4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "VideoObject",
+          "name": "They didn't expected this art😂💕",
+          "description": "Trending video from Eternal Love in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/D_zzbW_8GmQ/hqdefault.jpg",
+          "uploadDate": "2025-06-24T16:00:21Z",
+          "embedUrl": "https://www.youtube.com/embed/D_zzbW_8GmQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 37025662
+          },
+          "url": "https://www.youtube.com/watch?v=D_zzbW_8GmQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "VideoObject",
+          "name": "本以为胜券在握，没想到天都塌了#母女日常 #亲子日常#万万想不到",
+          "description": "Trending video from 大然和淼淼 in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/irE9_zRNUEM/hqdefault.jpg",
+          "uploadDate": "2025-06-28T16:30:16Z",
+          "embedUrl": "https://www.youtube.com/embed/irE9_zRNUEM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 9953776
+          },
+          "url": "https://www.youtube.com/watch?v=irE9_zRNUEM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Women VS Men 👩🏻👨🏻 wrapping presents #elsarca #tiktok",
+          "description": "Trending video from Elsa Arca in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Ifqt-6mTvl8/hqdefault.jpg",
+          "uploadDate": "2025-06-28T08:09:49Z",
+          "embedUrl": "https://www.youtube.com/embed/Ifqt-6mTvl8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 16880158
+          },
+          "url": "https://www.youtube.com/watch?v=Ifqt-6mTvl8"
+        }
+      }
+    ]
+  }
+}

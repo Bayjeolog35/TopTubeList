@@ -1,0 +1,376 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "Trending YouTube Videos in Colombia",
+  "description": "Most popular YouTube videos currently trending in Colombia.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TopTubeList",
+    "url": "https://toptubelist.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "VIAJANDO SOLO de COLOR AMARILLO en TREN",
+          "description": "Trending video from Juan De Dios Pantoja in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/W91CXLxz-iY/hqdefault.jpg",
+          "uploadDate": "2025-07-01T16:29:05Z",
+          "embedUrl": "https://www.youtube.com/embed/W91CXLxz-iY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 3413352
+          },
+          "url": "https://www.youtube.com/watch?v=W91CXLxz-iY"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Todo el mundo me pidió que hiciera esto en Colombia...",
+          "description": "Trending video from TheGrefg in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/8i1PMi1I_Wk/hqdefault.jpg",
+          "uploadDate": "2025-07-01T19:30:34Z",
+          "embedUrl": "https://www.youtube.com/embed/8i1PMi1I_Wk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 526769
+          },
+          "url": "https://www.youtube.com/watch?v=8i1PMi1I_Wk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Robé un BRAINROT BUG (SECRETO) a un ESTAFADOR en STEAL a BRAINROT",
+          "description": "Trending video from SoyNeto in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Ti7tEA-PeJY/hqdefault.jpg",
+          "uploadDate": "2025-07-01T23:31:15Z",
+          "embedUrl": "https://www.youtube.com/embed/Ti7tEA-PeJY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 938862
+          },
+          "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "¡#ALHILAL HISTÓRICO! DEJÓ AFUERA al #MANCHESTERCITY | Manchester City 3–4 Al Hilal | Resumen",
+          "description": "Trending video from DSports in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/-PR00YxNuao/hqdefault.jpg",
+          "uploadDate": "2025-07-01T03:48:21Z",
+          "embedUrl": "https://www.youtube.com/embed/-PR00YxNuao",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2713344
+          },
+          "url": "https://www.youtube.com/watch?v=-PR00YxNuao"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "✅ ARMADURA y GOLEM de COBRE 👉 Preview 1.21.100.23 Minecraft",
+          "description": "Trending video from Bobicraft in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/wmDouI8cf6Y/hqdefault.jpg",
+          "uploadDate": "2025-07-01T21:55:47Z",
+          "embedUrl": "https://www.youtube.com/embed/wmDouI8cf6Y",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 929774
+          },
+          "url": "https://www.youtube.com/watch?v=wmDouI8cf6Y"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Medellín vs. Santa Fe (resumen y goles) | Liga BetPlay Dimayor 2025-1 |  Final - Vuelta",
+          "description": "Trending video from Win Sports in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/8vrS3FivFLE/hqdefault.jpg",
+          "uploadDate": "2025-06-30T02:44:36Z",
+          "embedUrl": "https://www.youtube.com/embed/8vrS3FivFLE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 480720
+          },
+          "url": "https://www.youtube.com/watch?v=8vrS3FivFLE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "VideoObject",
+          "name": "FLORINDA MEZA: Amor con factura AJENA - Mal De Amores",
+          "description": "Trending video from EvaDeMetal in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/oTyslElj8YA/hqdefault.jpg",
+          "uploadDate": "2025-07-01T23:18:50Z",
+          "embedUrl": "https://www.youtube.com/embed/oTyslElj8YA",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 246138
+          },
+          "url": "https://www.youtube.com/watch?v=oTyslElj8YA"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "BABYMONSTER - ‘HOT SAUCE’ M/V",
+          "description": "Trending video from BABYMONSTER in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/xn8mQqz2xmM/hqdefault.jpg",
+          "uploadDate": "2025-07-01T09:00:07Z",
+          "embedUrl": "https://www.youtube.com/embed/xn8mQqz2xmM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 13421837
+          },
+          "url": "https://www.youtube.com/watch?v=xn8mQqz2xmM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Manchester City vs Al Hilal (3-4) | Resumen | Highlights Mundial de Clubes FIFA 2025™",
+          "description": "Trending video from DAZN Fútbol in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/pZ_4GMBo3Zk/hqdefault.jpg",
+          "uploadDate": "2025-07-01T07:40:24Z",
+          "embedUrl": "https://www.youtube.com/embed/pZ_4GMBo3Zk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1410265
+          },
+          "url": "https://www.youtube.com/watch?v=pZ_4GMBo3Zk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Los trucos sucios de los hoteles de lujo para sacar más dinero 💵🏨",
+          "description": "Trending video from Luisito Comunica in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/vTgzntPTAyo/hqdefault.jpg",
+          "uploadDate": "2025-06-30T17:28:00Z",
+          "embedUrl": "https://www.youtube.com/embed/vTgzntPTAyo",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 3466183
+          },
+          "url": "https://www.youtube.com/watch?v=vTgzntPTAyo"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "VideoObject",
+          "name": "🔴 MEDELLIN VS SANTA FE PARTIDO EN VIVO / FINAL LIGA BETPLAY DIMAYOR 2025",
+          "description": "Trending video from VERDOLAGA TV in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/vVt97ZLhwDQ/hqdefault.jpg",
+          "uploadDate": "2025-06-30T03:33:45Z",
+          "embedUrl": "https://www.youtube.com/embed/vVt97ZLhwDQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 302174
+          },
+          "url": "https://www.youtube.com/watch?v=vVt97ZLhwDQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "VideoObject",
+          "name": "#FLUMINENSE SORPRENDIÓ al #INTER de LAUTARO y ESTÁ en CUARTOS | Inter Milán 0–2 Fluminense | Resumen",
+          "description": "Trending video from DSports in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/GABe7zkqt3Y/hqdefault.jpg",
+          "uploadDate": "2025-06-30T21:15:04Z",
+          "embedUrl": "https://www.youtube.com/embed/GABe7zkqt3Y",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1892513
+          },
+          "url": "https://www.youtube.com/watch?v=GABe7zkqt3Y"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Como Es",
+          "description": "Trending video from Natanael Cano - Topic in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/tD6zVPG63AU/hqdefault.jpg",
+          "uploadDate": "2025-07-02T00:01:41Z",
+          "embedUrl": "https://www.youtube.com/embed/tD6zVPG63AU",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 625573
+          },
+          "url": "https://www.youtube.com/watch?v=tD6zVPG63AU"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Chespirito: Sin Querer Queriendo | Episodio 5 Avance | Max",
+          "description": "Trending video from Max Latinoamérica in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/GJMQtw1bn4M/hqdefault.jpg",
+          "uploadDate": "2025-06-30T18:00:24Z",
+          "embedUrl": "https://www.youtube.com/embed/GJMQtw1bn4M",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 359930
+          },
+          "url": "https://www.youtube.com/watch?v=GJMQtw1bn4M"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Marcos Villalobos, Daniel Cuevas - MANIACA (Video Oficial)",
+          "description": "Trending video from MarcosVillalobosVEVO in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/CALasbhUPb4/hqdefault.jpg",
+          "uploadDate": "2025-07-02T00:00:06Z",
+          "embedUrl": "https://www.youtube.com/embed/CALasbhUPb4",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 155768
+          },
+          "url": "https://www.youtube.com/watch?v=CALasbhUPb4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "VideoObject",
+          "name": "NEW MOB AND GEAR IN THE NEXT GAME DROP!",
+          "description": "Trending video from Minecraft in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/542rY0DQHIM/hqdefault.jpg",
+          "uploadDate": "2025-07-01T16:06:23Z",
+          "embedUrl": "https://www.youtube.com/embed/542rY0DQHIM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2766615
+          },
+          "url": "https://www.youtube.com/watch?v=542rY0DQHIM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Medellín 1 vs 2 Santa Fe | Final Vuelta Liga Betplay 2025 I",
+          "description": "Trending video from Marín in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/ZEmOKm_LKwQ/hqdefault.jpg",
+          "uploadDate": "2025-06-30T05:33:49Z",
+          "embedUrl": "https://www.youtube.com/embed/ZEmOKm_LKwQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 92583
+          },
+          "url": "https://www.youtube.com/watch?v=ZEmOKm_LKwQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Kybba, Ryan Castro, Sean Paul & Busy Signal - BA BA BAD REMIX (Video Oficial)",
+          "description": "Trending video from Ryan Castro in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/dn3d8awSA0c/hqdefault.jpg",
+          "uploadDate": "2025-06-28T18:00:06Z",
+          "embedUrl": "https://www.youtube.com/embed/dn3d8awSA0c",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1631954
+          },
+          "url": "https://www.youtube.com/watch?v=dn3d8awSA0c"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "VideoObject",
+          "name": "¡TOPURIA NO PERDONÓ A OLIVEIRA, LO NOQUEÓ EN EL PRIMER ASALTO Y MANTUVO EL INVICTO! | RESUMEN",
+          "description": "Trending video from ESPN KnockOut in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/0OwB0fhpO6E/hqdefault.jpg",
+          "uploadDate": "2025-06-29T14:28:56Z",
+          "embedUrl": "https://www.youtube.com/embed/0OwB0fhpO6E",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 565435
+          },
+          "url": "https://www.youtube.com/watch?v=0OwB0fhpO6E"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Ilia Topuria Knocks Out Charles Oliveira 👊 | UFC 317",
+          "description": "Trending video from UFC in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/kpnoibF4eNg/hqdefault.jpg",
+          "uploadDate": "2025-06-29T05:14:05Z",
+          "embedUrl": "https://www.youtube.com/embed/kpnoibF4eNg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 13006892
+          },
+          "url": "https://www.youtube.com/watch?v=kpnoibF4eNg"
+        }
+      }
+    ]
+  }
+}

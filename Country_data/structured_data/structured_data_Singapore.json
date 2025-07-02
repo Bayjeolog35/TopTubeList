@@ -1,0 +1,376 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "Trending YouTube Videos in Singapore",
+  "description": "Most popular YouTube videos currently trending in Singapore.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TopTubeList",
+    "url": "https://toptubelist.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "女友蒙着男友眼睛以为她又搞恶作剧，没想到竟然是要求婚！#整蛊 #搞笑",
+          "description": "Trending video from 依然夏天 in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/OrPvHsv3iTE/hqdefault.jpg",
+          "uploadDate": "2025-06-24T14:52:44Z",
+          "embedUrl": "https://www.youtube.com/embed/OrPvHsv3iTE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2130423
+          },
+          "url": "https://www.youtube.com/watch?v=OrPvHsv3iTE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "They didn't expected this art😂💕",
+          "description": "Trending video from Eternal Love in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/D_zzbW_8GmQ/hqdefault.jpg",
+          "uploadDate": "2025-06-24T16:00:21Z",
+          "embedUrl": "https://www.youtube.com/embed/D_zzbW_8GmQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 37025662
+          },
+          "url": "https://www.youtube.com/watch?v=D_zzbW_8GmQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who was faster? 😳😱 @isabellaafro",
+          "description": "Trending video from Jaymondy in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:30:33Z",
+          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 102768225
+          },
+          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Man is a top Chinese cuisine chef. #action #viralvideo",
+          "description": "Trending video from CineSpotlight in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/aBeRw1KwyyE/hqdefault.jpg",
+          "uploadDate": "2025-06-27T13:00:01Z",
+          "embedUrl": "https://www.youtube.com/embed/aBeRw1KwyyE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 10922394
+          },
+          "url": "https://www.youtube.com/watch?v=aBeRw1KwyyE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "aespa 에스파 'Dirty Work' MV",
+          "description": "Trending video from SMTOWN in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/M2WTUoy4y6E/hqdefault.jpg",
+          "uploadDate": "2025-06-27T03:59:07Z",
+          "embedUrl": "https://www.youtube.com/embed/M2WTUoy4y6E",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 27708945
+          },
+          "url": "https://www.youtube.com/watch?v=M2WTUoy4y6E"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "என்னப்பா பால்'ல தண்ணி கலக்குற😂 | Senthil Best Comedy Tamil | #tamilmovie #senthilcomedy",
+          "description": "Trending video from Superhit Tamil Comedy - 4K in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/JlJ2Kc2LUyE/hqdefault.jpg",
+          "uploadDate": "2025-06-28T11:45:03Z",
+          "embedUrl": "https://www.youtube.com/embed/JlJ2Kc2LUyE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 3838136
+          },
+          "url": "https://www.youtube.com/watch?v=JlJ2Kc2LUyE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Al-Hilal STUNS Manchester City 4-3! | 2025 FIFA Club World Cup Highlights",
+          "description": "Trending video from DAZN Football in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/c_I6CJkS4aQ/hqdefault.jpg",
+          "uploadDate": "2025-07-01T04:12:43Z",
+          "embedUrl": "https://www.youtube.com/embed/c_I6CJkS4aQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 7824913
+          },
+          "url": "https://www.youtube.com/watch?v=c_I6CJkS4aQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Watch full video👆Endrendrum Kadhal Super Scenes - #vijay #rambha #raghuvaran #radharavi #shorts",
+          "description": "Trending video from API Tamil Hits in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/m0jQ7e6Om0c/hqdefault.jpg",
+          "uploadDate": "2025-06-29T05:00:48Z",
+          "embedUrl": "https://www.youtube.com/embed/m0jQ7e6Om0c",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2901466
+          },
+          "url": "https://www.youtube.com/watch?v=m0jQ7e6Om0c"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Duraisingam Takes Charge as ACP 😎🔥| #Singam #surya #anushka #santhanam #actionscene",
+          "description": "Trending video from Sun NXT Shorts in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nvm_0LSbyzo/hqdefault.jpg",
+          "uploadDate": "2025-06-30T07:30:24Z",
+          "embedUrl": "https://www.youtube.com/embed/nvm_0LSbyzo",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2775646
+          },
+          "url": "https://www.youtube.com/watch?v=nvm_0LSbyzo"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "VideoObject",
+          "name": "BABYMONSTER - ‘HOT SAUCE’ M/V",
+          "description": "Trending video from BABYMONSTER in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/xn8mQqz2xmM/hqdefault.jpg",
+          "uploadDate": "2025-07-01T09:00:07Z",
+          "embedUrl": "https://www.youtube.com/embed/xn8mQqz2xmM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 13421837
+          },
+          "url": "https://www.youtube.com/watch?v=xn8mQqz2xmM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "VideoObject",
+          "name": "“Golden” Official Lyric Video | KPop Demon Hunters | Sony Animation",
+          "description": "Trending video from Sony Pictures Animation in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/yebNIHKAC4A/hqdefault.jpg",
+          "uploadDate": "2025-06-23T22:30:00Z",
+          "embedUrl": "https://www.youtube.com/embed/yebNIHKAC4A",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 16626805
+          },
+          "url": "https://www.youtube.com/watch?v=yebNIHKAC4A"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "VideoObject",
+          "name": "How To Fool Your Brain!",
+          "description": "Trending video from Mark Rober in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/eW8ZNkuLhZw/hqdefault.jpg",
+          "uploadDate": "2025-06-27T15:30:20Z",
+          "embedUrl": "https://www.youtube.com/embed/eW8ZNkuLhZw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20190368
+          },
+          "url": "https://www.youtube.com/watch?v=eW8ZNkuLhZw"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "VideoObject",
+          "name": "British Highschoolers try Texas Brisket for the first time!",
+          "description": "Trending video from JOLLY in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/1gib_Cze-sw/hqdefault.jpg",
+          "uploadDate": "2025-06-25T16:00:02Z",
+          "embedUrl": "https://www.youtube.com/embed/1gib_Cze-sw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 15439232
+          },
+          "url": "https://www.youtube.com/watch?v=1gib_Cze-sw"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Karma 🚴‍♂️ Instant Payback for Blocking Disabled Spot! #karma #parkingfail #shorts",
+          "description": "Trending video from Fabiosa Animated in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/IB1CKzV9A-Y/hqdefault.jpg",
+          "uploadDate": "2025-06-22T13:00:27Z",
+          "embedUrl": "https://www.youtube.com/embed/IB1CKzV9A-Y",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 12238618
+          },
+          "url": "https://www.youtube.com/watch?v=IB1CKzV9A-Y"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "VideoObject",
+          "name": "* cái kết của những kẻ bắt nạt  [Nam Phương] #namphuong #shorts #funny #comedy #action",
+          "description": "Trending video from Nam Phương in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/jmIeJ--22ak/hqdefault.jpg",
+          "uploadDate": "2025-06-23T16:30:25Z",
+          "embedUrl": "https://www.youtube.com/embed/jmIeJ--22ak",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 14756087
+          },
+          "url": "https://www.youtube.com/watch?v=jmIeJ--22ak"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Watch 👆 Trending Shorts From the Movie ' EETTI ' - #trendingshorts #atharvaa #sridivya #ayngaran",
+          "description": "Trending video from Ayngaran Tamil Movie Comedy in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/fU3imiU0Jy4/hqdefault.jpg",
+          "uploadDate": "2025-06-26T08:30:17Z",
+          "embedUrl": "https://www.youtube.com/embed/fU3imiU0Jy4",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 313715
+          },
+          "url": "https://www.youtube.com/watch?v=fU3imiU0Jy4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "VideoObject",
+          "name": "good boyfriend",
+          "description": "Trending video from Michael Reeves in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/u0KPa34PoZA/hqdefault.jpg",
+          "uploadDate": "2025-06-28T21:31:36Z",
+          "embedUrl": "https://www.youtube.com/embed/u0KPa34PoZA",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 4379138
+          },
+          "url": "https://www.youtube.com/watch?v=u0KPa34PoZA"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "VideoObject",
+          "name": "她盛裝出席，做了最勇敢的事🎓",
+          "description": "Trending video from 五件小事 in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/VRV4twnLCMA/hqdefault.jpg",
+          "uploadDate": "2025-06-23T12:30:40Z",
+          "embedUrl": "https://www.youtube.com/embed/VRV4twnLCMA",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2570271
+          },
+          "url": "https://www.youtube.com/watch?v=VRV4twnLCMA"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "VideoObject",
+          "name": "SOS on the Train… What Happened Next Was Unexpected #ONEMAN #UKsafety #SegnaleSOS #NotsignalErkannt",
+          "description": "Trending video from ONE MAN in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/VpsK5u5-xdY/hqdefault.jpg",
+          "uploadDate": "2025-06-22T00:00:41Z",
+          "embedUrl": "https://www.youtube.com/embed/VpsK5u5-xdY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 8318762
+          },
+          "url": "https://www.youtube.com/watch?v=VpsK5u5-xdY"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "VideoObject",
+          "name": "You Won’t Believe What the Previous Tenants Covered Up! 😲",
+          "description": "Trending video from LADbible Ireland in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Z_luFgJCwg0/hqdefault.jpg",
+          "uploadDate": "2025-06-23T14:30:34Z",
+          "embedUrl": "https://www.youtube.com/embed/Z_luFgJCwg0",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 10622479
+          },
+          "url": "https://www.youtube.com/watch?v=Z_luFgJCwg0"
+        }
+      }
+    ]
+  }
+}

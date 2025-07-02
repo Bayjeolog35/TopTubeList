@@ -1,0 +1,376 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "Trending YouTube Videos in Japan",
+  "description": "Most popular YouTube videos currently trending in Japan.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TopTubeList",
+    "url": "https://toptubelist.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "【本音】彼氏オーディションの裏側密着vlog。",
+          "description": "Trending video from Rちゃん in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/qrPjsO9remA/hqdefault.jpg",
+          "uploadDate": "2025-07-01T11:01:26Z",
+          "embedUrl": "https://www.youtube.com/embed/qrPjsO9remA",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 229456
+          },
+          "url": "https://www.youtube.com/watch?v=qrPjsO9remA"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "BABYMONSTER - ‘HOT SAUCE’ M/V",
+          "description": "Trending video from BABYMONSTER in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/xn8mQqz2xmM/hqdefault.jpg",
+          "uploadDate": "2025-07-01T09:00:07Z",
+          "embedUrl": "https://www.youtube.com/embed/xn8mQqz2xmM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 13421837
+          },
+          "url": "https://www.youtube.com/watch?v=xn8mQqz2xmM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "日米通算2705安打 松井稼頭央が初登場！史上最高のスイッチヒッターの打撃術【バッターズバイブル】",
+          "description": "Trending video from フルタの方程式【古田敦也 公式チャンネル】 in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SYzCnskNAyc/hqdefault.jpg",
+          "uploadDate": "2025-07-01T12:01:03Z",
+          "embedUrl": "https://www.youtube.com/embed/SYzCnskNAyc",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 399189
+          },
+          "url": "https://www.youtube.com/watch?v=SYzCnskNAyc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "【エバース】ABCお笑いグランプリ決勝ネタ「棺桶」【漫才】",
+          "description": "Trending video from エバースチャンネル in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/R05TQhAfwLE/hqdefault.jpg",
+          "uploadDate": "2025-07-01T09:00:46Z",
+          "embedUrl": "https://www.youtube.com/embed/R05TQhAfwLE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 341810
+          },
+          "url": "https://www.youtube.com/watch?v=R05TQhAfwLE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "RIZIN WORLD GP 2025 フライ級トーナメント抽選会 | Flyweight Tournament 1st Round Draw",
+          "description": "Trending video from RIZIN FIGHTING FEDERATION in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/7sLtHs_elbI/hqdefault.jpg",
+          "uploadDate": "2025-07-01T11:05:51Z",
+          "embedUrl": "https://www.youtube.com/embed/7sLtHs_elbI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 368189
+          },
+          "url": "https://www.youtube.com/watch?v=7sLtHs_elbI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "INI｜'Pineapple Juice' Track Video",
+          "description": "Trending video from INI in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/TrKeM_rCsko/hqdefault.jpg",
+          "uploadDate": "2025-07-01T12:00:56Z",
+          "embedUrl": "https://www.youtube.com/embed/TrKeM_rCsko",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 325694
+          },
+          "url": "https://www.youtube.com/watch?v=TrKeM_rCsko"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "VideoObject",
+          "name": "乃木坂46『Same numbers』MUSIC VIDEO",
+          "description": "Trending video from 乃木坂46 OFFICIAL YouTube CHANNEL in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/g70yImobLm4/hqdefault.jpg",
+          "uploadDate": "2025-06-30T15:00:07Z",
+          "embedUrl": "https://www.youtube.com/embed/g70yImobLm4",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1128527
+          },
+          "url": "https://www.youtube.com/watch?v=g70yImobLm4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "back number - ある未来より愛を込めて 【モスバーガー「食べるHAPPY」篇 CMソング】",
+          "description": "Trending video from back number in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/IXHWPQv1JZY/hqdefault.jpg",
+          "uploadDate": "2025-07-01T12:00:06Z",
+          "embedUrl": "https://www.youtube.com/embed/IXHWPQv1JZY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 237477
+          },
+          "url": "https://www.youtube.com/watch?v=IXHWPQv1JZY"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "VideoObject",
+          "name": "【Rちゃん彼氏オーディション】のすけの密着動画を撮りました",
+          "description": "Trending video from 時間マスターなりたい　あだち in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/TOd7e84B5uM/hqdefault.jpg",
+          "uploadDate": "2025-07-01T12:01:04Z",
+          "embedUrl": "https://www.youtube.com/embed/TOd7e84B5uM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 206204
+          },
+          "url": "https://www.youtube.com/watch?v=TOd7e84B5uM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Mrs. GREEN APPLE - Carrying Happiness (Tokyo Disney Resort Version/Audio Only)",
+          "description": "Trending video from DisneyMusicJapanVEVO in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SNTe1uC-YOk/hqdefault.jpg",
+          "uploadDate": "2025-07-01T04:00:46Z",
+          "embedUrl": "https://www.youtube.com/embed/SNTe1uC-YOk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 183103
+          },
+          "url": "https://www.youtube.com/watch?v=SNTe1uC-YOk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "VideoObject",
+          "name": "ダイダイダイダイダイキライ／まふまふ×めいちゃん【歌ってみた】",
+          "description": "Trending video from まふまふちゃんねる in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/DTXgp84lOM8/hqdefault.jpg",
+          "uploadDate": "2025-07-01T09:00:14Z",
+          "embedUrl": "https://www.youtube.com/embed/DTXgp84lOM8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 430563
+          },
+          "url": "https://www.youtube.com/watch?v=DTXgp84lOM8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Aぇ! group【人望王決定戦】WEST.さん、なにわ男子、さらにあの人も初登場！感謝です😭",
+          "description": "Trending video from Aぇ! group in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/hN9YEJmNUE0/hqdefault.jpg",
+          "uploadDate": "2025-07-01T12:01:30Z",
+          "embedUrl": "https://www.youtube.com/embed/hN9YEJmNUE0",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 411711
+          },
+          "url": "https://www.youtube.com/watch?v=hN9YEJmNUE0"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Carrying Happiness (Tokyo Disney Resort Version)",
+          "description": "Trending video from Mrs. GREEN APPLE - Topic in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/IuqOS2GNqo0/hqdefault.jpg",
+          "uploadDate": "2025-06-30T10:04:06Z",
+          "embedUrl": "https://www.youtube.com/embed/IuqOS2GNqo0",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 449589
+          },
+          "url": "https://www.youtube.com/watch?v=IuqOS2GNqo0"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "VideoObject",
+          "name": "【あなたとわたしは14歳差】坂上夫妻、夫婦の本音。～愛情と信頼～",
+          "description": "Trending video from 坂上家のチャンネル in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/B1BcrhFyLhc/hqdefault.jpg",
+          "uploadDate": "2025-07-01T11:00:31Z",
+          "embedUrl": "https://www.youtube.com/embed/B1BcrhFyLhc",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 232187
+          },
+          "url": "https://www.youtube.com/watch?v=B1BcrhFyLhc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "VideoObject",
+          "name": "KinKi Kids【KinKi Kids Concert 2024-2025 ～DOMOTO～　冒頭7分21秒 ノーカット】",
+          "description": "Trending video from KinKi Kids in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/072Lj1LyErc/hqdefault.jpg",
+          "uploadDate": "2025-07-01T09:00:01Z",
+          "embedUrl": "https://www.youtube.com/embed/072Lj1LyErc",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 172058
+          },
+          "url": "https://www.youtube.com/watch?v=072Lj1LyErc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "VideoObject",
+          "name": "赤ちゃんと初対面を果たしたポメラニアンの反応が感動的でした…",
+          "description": "Trending video from ポメラニアンのポメくん in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/K8hss56sZb8/hqdefault.jpg",
+          "uploadDate": "2025-07-01T11:02:00Z",
+          "embedUrl": "https://www.youtube.com/embed/K8hss56sZb8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 195408
+          },
+          "url": "https://www.youtube.com/watch?v=K8hss56sZb8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "VideoObject",
+          "name": "なりふり構わないアイドル達と一致するまで終われまテン【ラウンジ】",
+          "description": "Trending video from らっだぁ in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/-os6UWRb8ds/hqdefault.jpg",
+          "uploadDate": "2025-07-01T09:00:01Z",
+          "embedUrl": "https://www.youtube.com/embed/-os6UWRb8ds",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 362919
+          },
+          "url": "https://www.youtube.com/watch?v=-os6UWRb8ds"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "VideoObject",
+          "name": "【※痛い表現がございます】配信を中断して病院へ…かなたその運命やいかに！？【天音かなた/ホロライブ】",
+          "description": "Trending video from Kanata Ch. 天音かなた in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/4ByDuFSGvoQ/hqdefault.jpg",
+          "uploadDate": "2025-07-01T11:02:12Z",
+          "embedUrl": "https://www.youtube.com/embed/4ByDuFSGvoQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 433012
+          },
+          "url": "https://www.youtube.com/watch?v=4ByDuFSGvoQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "VideoObject",
+          "name": "いきなりBBQ第７弾③【水道橋博士が語る！うつ闘病、議員時代の苦悩】",
+          "description": "Trending video from 千原ジュニアYouTube in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/keIpWper264/hqdefault.jpg",
+          "uploadDate": "2025-07-01T10:36:03Z",
+          "embedUrl": "https://www.youtube.com/embed/keIpWper264",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 184186
+          },
+          "url": "https://www.youtube.com/watch?v=keIpWper264"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "VideoObject",
+          "name": "今年こそオーバーオール優勝を獲る。",
+          "description": "Trending video from 山澤 礼明【筋肉チャンネル】 in Japan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/sbqcjNrODzI/hqdefault.jpg",
+          "uploadDate": "2025-06-30T12:20:22Z",
+          "embedUrl": "https://www.youtube.com/embed/sbqcjNrODzI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 685469
+          },
+          "url": "https://www.youtube.com/watch?v=sbqcjNrODzI"
+        }
+      }
+    ]
+  }
+}

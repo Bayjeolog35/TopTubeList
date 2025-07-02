@@ -1,0 +1,376 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "Trending YouTube Videos in France",
+  "description": "Most popular YouTube videos currently trending in France.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TopTubeList",
+    "url": "https://toptubelist.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "On doit improviser sur scène avec Anyme, Nico et Elian (c'était grave drôle)",
+          "description": "Trending video from ByIlhan in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/fnZoezV5EcI/hqdefault.jpg",
+          "uploadDate": "2025-06-30T16:56:52Z",
+          "embedUrl": "https://www.youtube.com/embed/fnZoezV5EcI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1360007
+          },
+          "url": "https://www.youtube.com/watch?v=fnZoezV5EcI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "DANS UN AIRBNB HANTÉ",
+          "description": "Trending video from LE GRAND JD in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/6WhO9K6PzjQ/hqdefault.jpg",
+          "uploadDate": "2025-06-30T16:15:01Z",
+          "embedUrl": "https://www.youtube.com/embed/6WhO9K6PzjQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 865904
+          },
+          "url": "https://www.youtube.com/watch?v=6WhO9K6PzjQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "1000€ dans la ville la MOINS CHÈRE d'Afrique",
+          "description": "Trending video from CYRILmp4 in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/hMVYkYy0rzE/hqdefault.jpg",
+          "uploadDate": "2025-07-01T16:01:19Z",
+          "embedUrl": "https://www.youtube.com/embed/hMVYkYy0rzE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 380185
+          },
+          "url": "https://www.youtube.com/watch?v=hMVYkYy0rzE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Un Québécois teste les chaînes de restaurants en France avec Elian",
+          "description": "Trending video from Gurky in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/4TD9PZFUN2o/hqdefault.jpg",
+          "uploadDate": "2025-07-01T15:02:16Z",
+          "embedUrl": "https://www.youtube.com/embed/4TD9PZFUN2o",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 529622
+          },
+          "url": "https://www.youtube.com/watch?v=4TD9PZFUN2o"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Il organisait des jeux macabres avec ses victimes...",
+          "description": "Trending video from SQUEEZIE in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Fb1Z3cMAlrc/hqdefault.jpg",
+          "uploadDate": "2025-06-29T17:11:34Z",
+          "embedUrl": "https://www.youtube.com/embed/Fb1Z3cMAlrc",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 3320244
+          },
+          "url": "https://www.youtube.com/watch?v=Fb1Z3cMAlrc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "COMMENT ONT-ILS ÉTÉ RETROUVÉS ? 🔎❌",
+          "description": "Trending video from Trash in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/E_uUP05926s/hqdefault.jpg",
+          "uploadDate": "2025-07-01T14:53:42Z",
+          "embedUrl": "https://www.youtube.com/embed/E_uUP05926s",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 306834
+          },
+          "url": "https://www.youtube.com/watch?v=E_uUP05926s"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "VideoObject",
+          "name": "DRESS TO IMPRESS IRL 3 (Avec Anyme, Doigby, Isaak, Joyca, Kaatsup, Léa Elui, Michou, Natoo et Romy)",
+          "description": "Trending video from Maghla in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/0WEhkz1yyNc/hqdefault.jpg",
+          "uploadDate": "2025-06-29T16:00:03Z",
+          "embedUrl": "https://www.youtube.com/embed/0WEhkz1yyNc",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1983066
+          },
+          "url": "https://www.youtube.com/watch?v=0WEhkz1yyNc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Je goûte le Burger à la Crevette et les nouveautés du monde chez McDonald's (une vraie réussite !)",
+          "description": "Trending video from Valouzz in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/JcpfK1oaHr0/hqdefault.jpg",
+          "uploadDate": "2025-07-02T10:00:39Z",
+          "embedUrl": "https://www.youtube.com/embed/JcpfK1oaHr0",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 154640
+          },
+          "url": "https://www.youtube.com/watch?v=JcpfK1oaHr0"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "VideoObject",
+          "name": "HOT ONES : Manu Payet se fait tatouer en direct",
+          "description": "Trending video from Studio Bagel in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/zT_jpwOtfcM/hqdefault.jpg",
+          "uploadDate": "2025-06-30T15:30:37Z",
+          "embedUrl": "https://www.youtube.com/embed/zT_jpwOtfcM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 475068
+          },
+          "url": "https://www.youtube.com/watch?v=zT_jpwOtfcM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "VideoObject",
+          "name": "TROUVE LE BUZZER ! (Avec Djilsi, Mcfly et Carlito)",
+          "description": "Trending video from JOYCA in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/B4FMlrv88-A/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:33:18Z",
+          "embedUrl": "https://www.youtube.com/embed/B4FMlrv88-A",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2348577
+          },
+          "url": "https://www.youtube.com/watch?v=B4FMlrv88-A"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "VideoObject",
+          "name": "\"J’AI REFUSÉ QU’ELLE FOUILLE MON TEL !!!\" | Hot Girls Only #52",
+          "description": "Trending video from Hot Girls Only in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/M1q9GcOMB8g/hqdefault.jpg",
+          "uploadDate": "2025-07-01T16:14:43Z",
+          "embedUrl": "https://www.youtube.com/embed/M1q9GcOMB8g",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 57798
+          },
+          "url": "https://www.youtube.com/watch?v=M1q9GcOMB8g"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "VideoObject",
+          "name": "BABYMONSTER - ‘HOT SAUCE’ M/V",
+          "description": "Trending video from BABYMONSTER in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/xn8mQqz2xmM/hqdefault.jpg",
+          "uploadDate": "2025-07-01T09:00:07Z",
+          "embedUrl": "https://www.youtube.com/embed/xn8mQqz2xmM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 13421837
+          },
+          "url": "https://www.youtube.com/watch?v=xn8mQqz2xmM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Météo du Mercredi 2 au Mardi 8 Juillet 2025",
+          "description": "Trending video from Météo Express in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/p0tFPWUKp0c/hqdefault.jpg",
+          "uploadDate": "2025-07-01T19:04:17Z",
+          "embedUrl": "https://www.youtube.com/embed/p0tFPWUKp0c",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 113805
+          },
+          "url": "https://www.youtube.com/watch?v=p0tFPWUKp0c"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "VideoObject",
+          "name": "MICHAEL JACKSON : l'album le plus légendaire ? (Thriller)",
+          "description": "Trending video from SEB in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/jzHZikr5TKo/hqdefault.jpg",
+          "uploadDate": "2025-06-29T14:48:10Z",
+          "embedUrl": "https://www.youtube.com/embed/jzHZikr5TKo",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1031225
+          },
+          "url": "https://www.youtube.com/watch?v=jzHZikr5TKo"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "VideoObject",
+          "name": "POUR COMBIEN ? (Je lui organise un date💀) AVEC HELYDIA",
+          "description": "Trending video from Flamby in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/vf2FD1ynSgI/hqdefault.jpg",
+          "uploadDate": "2025-06-30T15:15:04Z",
+          "embedUrl": "https://www.youtube.com/embed/vf2FD1ynSgI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 378534
+          },
+          "url": "https://www.youtube.com/watch?v=vf2FD1ynSgI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "VideoObject",
+          "name": "LE JEU DE LA CONFIANCE ! (avec Byllhan)",
+          "description": "Trending video from Michou in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/aytqilxtZmA/hqdefault.jpg",
+          "uploadDate": "2025-06-29T09:15:00Z",
+          "embedUrl": "https://www.youtube.com/embed/aytqilxtZmA",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1771968
+          },
+          "url": "https://www.youtube.com/watch?v=aytqilxtZmA"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "VideoObject",
+          "name": "McWALTER, LE FILM -  TEASER (2025) MISTER V, SIMON ASTIER",
+          "description": "Trending video from Mister V in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/99fKlVqoinQ/hqdefault.jpg",
+          "uploadDate": "2025-06-30T16:00:31Z",
+          "embedUrl": "https://www.youtube.com/embed/99fKlVqoinQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 380979
+          },
+          "url": "https://www.youtube.com/watch?v=99fKlVqoinQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "VideoObject",
+          "name": "1540 : La pire canicule de l'Histoire ! ☀️🥵",
+          "description": "Trending video from Pépites d'Histoire in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/UovahGZODG8/hqdefault.jpg",
+          "uploadDate": "2025-07-01T05:00:35Z",
+          "embedUrl": "https://www.youtube.com/embed/UovahGZODG8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 52196
+          },
+          "url": "https://www.youtube.com/watch?v=UovahGZODG8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Cash Money",
+          "description": "Trending video from Freeze Corleone - Topic in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/iPkarC9C1Y0/hqdefault.jpg",
+          "uploadDate": "2025-07-01T10:42:02Z",
+          "embedUrl": "https://www.youtube.com/embed/iPkarC9C1Y0",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 64403
+          },
+          "url": "https://www.youtube.com/watch?v=iPkarC9C1Y0"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Les pires anecdates de nos abonnés feat Adèle Castillon",
+          "description": "Trending video from Mcfly et Carlito in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/RvSV_RUpovo/hqdefault.jpg",
+          "uploadDate": "2025-07-01T16:19:56Z",
+          "embedUrl": "https://www.youtube.com/embed/RvSV_RUpovo",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 886074
+          },
+          "url": "https://www.youtube.com/watch?v=RvSV_RUpovo"
+        }
+      }
+    ]
+  }
+}

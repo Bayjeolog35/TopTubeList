@@ -1,0 +1,376 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "Trending YouTube Videos in Lithuania",
+  "description": "Most popular YouTube videos currently trending in Lithuania.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TopTubeList",
+    "url": "https://toptubelist.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "PREMJERAS ir PARTNERIAI |  #SUREIKŠMINKIM || Laisvės TV & ‪@sienatyrimai‬ TYRIMAS",
+          "description": "Trending video from LaisvėsTV in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/duc5jdlQWK8/hqdefault.jpg",
+          "uploadDate": "2025-06-29T17:05:59Z",
+          "embedUrl": "https://www.youtube.com/embed/duc5jdlQWK8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 139887
+          },
+          "url": "https://www.youtube.com/watch?v=duc5jdlQWK8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who was faster? 😳😱 @isabellaafro",
+          "description": "Trending video from Jaymondy in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:30:33Z",
+          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 102768225
+          },
+          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Nepatogūs klausimai su Rolandu Mackevičiumi. Svečiuose – Paulius Vaitiekūnas",
+          "description": "Trending video from Delfi in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/NlhS9ZxN2hs/hqdefault.jpg",
+          "uploadDate": "2025-06-29T16:00:06Z",
+          "embedUrl": "https://www.youtube.com/embed/NlhS9ZxN2hs",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 104745
+          },
+          "url": "https://www.youtube.com/watch?v=NlhS9ZxN2hs"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Jovani x Ieva Veri - Laikyk Arčiau (feat. Jurijus)",
+          "description": "Trending video from Jovani in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/4oLOgzsa0mo/hqdefault.jpg",
+          "uploadDate": "2025-06-25T06:00:07Z",
+          "embedUrl": "https://www.youtube.com/embed/4oLOgzsa0mo",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 220508
+          },
+          "url": "https://www.youtube.com/watch?v=4oLOgzsa0mo"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "I Stole His Brainrots… 😋🦈 (Steal a Brainrot Roblox ASMR)",
+          "description": "Trending video from Spizee in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/u8hQ_nBD8eg/hqdefault.jpg",
+          "uploadDate": "2025-06-28T17:42:38Z",
+          "embedUrl": "https://www.youtube.com/embed/u8hQ_nBD8eg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 32368167
+          },
+          "url": "https://www.youtube.com/watch?v=u8hQ_nBD8eg"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who's clever now?😳😂 @isabellaafro",
+          "description": "Trending video from Jaymondy in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/-Wli1tM-EPw/hqdefault.jpg",
+          "uploadDate": "2025-06-30T14:15:01Z",
+          "embedUrl": "https://www.youtube.com/embed/-Wli1tM-EPw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 22703161
+          },
+          "url": "https://www.youtube.com/watch?v=-Wli1tM-EPw"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Safas ir Viktoras - Skolą Grąžinti",
+          "description": "Trending video from Safas in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/FU509vCC1Ho/hqdefault.jpg",
+          "uploadDate": "2025-06-25T17:15:12Z",
+          "embedUrl": "https://www.youtube.com/embed/FU509vCC1Ho",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 113007
+          },
+          "url": "https://www.youtube.com/watch?v=FU509vCC1Ho"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Первое использование противобункeрной бoмбы #амитеш #технологии",
+          "description": "Trending video from Amitesh in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/NrkaJ93R-8o/hqdefault.jpg",
+          "uploadDate": "2025-06-27T15:50:41Z",
+          "embedUrl": "https://www.youtube.com/embed/NrkaJ93R-8o",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 4241234
+          },
+          "url": "https://www.youtube.com/watch?v=NrkaJ93R-8o"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "VideoObject",
+          "name": "ZYGGA - Išsaugoki (Official Music Video)",
+          "description": "Trending video from ZYGGA MUSIC in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/RgpycVMwgkA/hqdefault.jpg",
+          "uploadDate": "2025-06-26T09:01:15Z",
+          "embedUrl": "https://www.youtube.com/embed/RgpycVMwgkA",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 71187
+          },
+          "url": "https://www.youtube.com/watch?v=RgpycVMwgkA"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "VideoObject",
+          "name": "How Dalgona Candy Is Made",
+          "description": "Trending video from Nick DiGiovanni in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/K56O5RdE3KM/hqdefault.jpg",
+          "uploadDate": "2025-07-01T16:00:36Z",
+          "embedUrl": "https://www.youtube.com/embed/K56O5RdE3KM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 10263517
+          },
+          "url": "https://www.youtube.com/watch?v=K56O5RdE3KM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Repeat The Trick or Swim 🥶💦",
+          "description": "Trending video from Celine Dept in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/aHrK586PVeI/hqdefault.jpg",
+          "uploadDate": "2025-07-01T15:00:02Z",
+          "embedUrl": "https://www.youtube.com/embed/aHrK586PVeI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20920406
+          },
+          "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "VideoObject",
+          "name": "„Kitokie pasikalbėjimai“ su Laura Dragūnaite",
+          "description": "Trending video from Kitokie pasikalbėjimai in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/5vXyo3SnzfU/hqdefault.jpg",
+          "uploadDate": "2025-06-30T16:00:18Z",
+          "embedUrl": "https://www.youtube.com/embed/5vXyo3SnzfU",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 51768
+          },
+          "url": "https://www.youtube.com/watch?v=5vXyo3SnzfU"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "VideoObject",
+          "name": "这也太厉害了 #火影忍者 #joker#cosplay",
+          "description": "Trending video from 佐助与鸣人 in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/YFXS0F2IxmM/hqdefault.jpg",
+          "uploadDate": "2025-06-29T04:00:41Z",
+          "embedUrl": "https://www.youtube.com/embed/YFXS0F2IxmM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 41774999
+          },
+          "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Squid Game Pranks #shorts",
+          "description": "Trending video from Mr DegrEE in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/kflYxob7uRM/hqdefault.jpg",
+          "uploadDate": "2025-06-25T05:57:20Z",
+          "embedUrl": "https://www.youtube.com/embed/kflYxob7uRM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 51628378
+          },
+          "url": "https://www.youtube.com/watch?v=kflYxob7uRM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Which Shoes Will Protect Your Feet?",
+          "description": "Trending video from Ben Azelart in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
+          "uploadDate": "2025-06-24T21:50:02Z",
+          "embedUrl": "https://www.youtube.com/embed/nj6W9v6yjFk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 129136516
+          },
+          "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Color Change✋Red Diamond views botton…",
+          "description": "Trending video from ISSEI / いっせい in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/rMa17XivaKY/hqdefault.jpg",
+          "uploadDate": "2025-06-28T12:01:38Z",
+          "embedUrl": "https://www.youtube.com/embed/rMa17XivaKY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 28822515
+          },
+          "url": "https://www.youtube.com/watch?v=rMa17XivaKY"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Tyrimas PREMJERAS ir PARTNERIAI aptarimas | TAPINAS, ČERNIAUSKAS, URBONAITĖ || #sureikšminkim",
+          "description": "Trending video from LaisvėsTV in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/UuK99RIsQJY/hqdefault.jpg",
+          "uploadDate": "2025-06-29T17:00:41Z",
+          "embedUrl": "https://www.youtube.com/embed/UuK99RIsQJY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 52455
+          },
+          "url": "https://www.youtube.com/watch?v=UuK99RIsQJY"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Women VS Men 👩🏻👨🏻 wrapping presents #elsarca #tiktok",
+          "description": "Trending video from Elsa Arca in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Ifqt-6mTvl8/hqdefault.jpg",
+          "uploadDate": "2025-06-28T08:09:49Z",
+          "embedUrl": "https://www.youtube.com/embed/Ifqt-6mTvl8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 16880158
+          },
+          "url": "https://www.youtube.com/watch?v=Ifqt-6mTvl8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "VideoObject",
+          "name": "The Next Generation of Heroes? 😂 | Superpower Tryouts at Zoom Academy! #movie #shorts #edit",
+          "description": "Trending video from Aaliyah Skit in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/q3OueDwIXeg/hqdefault.jpg",
+          "uploadDate": "2025-07-01T15:59:46Z",
+          "embedUrl": "https://www.youtube.com/embed/q3OueDwIXeg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 3453695
+          },
+          "url": "https://www.youtube.com/watch?v=q3OueDwIXeg"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Lilas ir Innomine -  Personažas",
+          "description": "Trending video from Lilas ir Innomine in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SZ0OFGvQ6h8/hqdefault.jpg",
+          "uploadDate": "2025-06-18T06:59:30Z",
+          "embedUrl": "https://www.youtube.com/embed/SZ0OFGvQ6h8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 182536
+          },
+          "url": "https://www.youtube.com/watch?v=SZ0OFGvQ6h8"
+        }
+      }
+    ]
+  }
+}

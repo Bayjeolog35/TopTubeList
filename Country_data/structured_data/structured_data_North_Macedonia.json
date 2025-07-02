@@ -1,0 +1,376 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "Trending YouTube Videos in North Macedonia",
+  "description": "Most popular YouTube videos currently trending in North Macedonia.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TopTubeList",
+    "url": "https://toptubelist.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who was faster? 😳😱 @isabellaafro",
+          "description": "Trending video from Jaymondy in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:30:33Z",
+          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 102768225
+          },
+          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "这也太厉害了 #火影忍者 #joker#cosplay",
+          "description": "Trending video from 佐助与鸣人 in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/YFXS0F2IxmM/hqdefault.jpg",
+          "uploadDate": "2025-06-29T04:00:41Z",
+          "embedUrl": "https://www.youtube.com/embed/YFXS0F2IxmM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 41774999
+          },
+          "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Teodora - 101 ZMIJA feat. Jala Brat (Official Video)",
+          "description": "Trending video from SevenSky in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/8pjgzO-4STw/hqdefault.jpg",
+          "uploadDate": "2025-06-24T12:00:02Z",
+          "embedUrl": "https://www.youtube.com/embed/8pjgzO-4STw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2636494
+          },
+          "url": "https://www.youtube.com/watch?v=8pjgzO-4STw"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "I Stole His Brainrots… 😋🦈 (Steal a Brainrot Roblox ASMR)",
+          "description": "Trending video from Spizee in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/u8hQ_nBD8eg/hqdefault.jpg",
+          "uploadDate": "2025-06-28T17:42:38Z",
+          "embedUrl": "https://www.youtube.com/embed/u8hQ_nBD8eg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 32368167
+          },
+          "url": "https://www.youtube.com/watch?v=u8hQ_nBD8eg"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "ITALIAN BRAINROT GETTING ON THE SCHOOL BUS!",
+          "description": "Trending video from The Noob Family in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/LWxeJkepuEQ/hqdefault.jpg",
+          "uploadDate": "2025-06-28T17:32:21Z",
+          "embedUrl": "https://www.youtube.com/embed/LWxeJkepuEQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20475540
+          },
+          "url": "https://www.youtube.com/watch?v=LWxeJkepuEQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "2TON x DAFINA ZEQIRI - PIJA",
+          "description": "Trending video from 2TONoffical in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/rya_ugRICvs/hqdefault.jpg",
+          "uploadDate": "2025-06-19T15:00:06Z",
+          "embedUrl": "https://www.youtube.com/embed/rya_ugRICvs",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 4600690
+          },
+          "url": "https://www.youtube.com/watch?v=rya_ugRICvs"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "VideoObject",
+          "name": "If You Spill, You Lose!",
+          "description": "Trending video from MrBeast in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/gGcaGdHlt60/hqdefault.jpg",
+          "uploadDate": "2025-06-25T17:00:08Z",
+          "embedUrl": "https://www.youtube.com/embed/gGcaGdHlt60",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 101885347
+          },
+          "url": "https://www.youtube.com/watch?v=gGcaGdHlt60"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Kindness ❤️ in a Visitation Room: A Heartfelt Reunion #kindness #family #shorts",
+          "description": "Trending video from Fabiosa Best Lifehacks in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nBYqkQ8G990/hqdefault.jpg",
+          "uploadDate": "2025-06-30T14:01:21Z",
+          "embedUrl": "https://www.youtube.com/embed/nBYqkQ8G990",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1684418
+          },
+          "url": "https://www.youtube.com/watch?v=nBYqkQ8G990"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Women VS Men 👩🏻👨🏻 wrapping presents #elsarca #tiktok",
+          "description": "Trending video from Elsa Arca in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Ifqt-6mTvl8/hqdefault.jpg",
+          "uploadDate": "2025-06-28T08:09:49Z",
+          "embedUrl": "https://www.youtube.com/embed/Ifqt-6mTvl8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 16880158
+          },
+          "url": "https://www.youtube.com/watch?v=Ifqt-6mTvl8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Cool Items!🥰 New Gadgets, Smart Appliances, Kitchen Tools Utensils, Home Cleaning, Beauty #shorts",
+          "description": "Trending video from Cool Items Official in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/94u9RkfU1Ac/hqdefault.jpg",
+          "uploadDate": "2025-06-27T11:00:14Z",
+          "embedUrl": "https://www.youtube.com/embed/94u9RkfU1Ac",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 44768797
+          },
+          "url": "https://www.youtube.com/watch?v=94u9RkfU1Ac"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Grrr or GRRR ?",
+          "description": "Trending video from TwinsOvezov   in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/vPJIgoDQ6oc/hqdefault.jpg",
+          "uploadDate": "2025-06-23T14:01:28Z",
+          "embedUrl": "https://www.youtube.com/embed/vPJIgoDQ6oc",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 24379879
+          },
+          "url": "https://www.youtube.com/watch?v=vPJIgoDQ6oc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Which Shoes Will Protect Your Feet?",
+          "description": "Trending video from Ben Azelart in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
+          "uploadDate": "2025-06-24T21:50:02Z",
+          "embedUrl": "https://www.youtube.com/embed/nj6W9v6yjFk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 129136516
+          },
+          "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Tung Sahur or Tralalelo Tralala? 😏 @coolskull17",
+          "description": "Trending video from Andrey Grechka in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/RiPEMrjoGfQ/hqdefault.jpg",
+          "uploadDate": "2025-06-27T09:00:42Z",
+          "embedUrl": "https://www.youtube.com/embed/RiPEMrjoGfQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 30026305
+          },
+          "url": "https://www.youtube.com/watch?v=RiPEMrjoGfQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "VideoObject",
+          "name": "VO CENTAR \"Carot Palco\" e gol!",
+          "description": "Trending video from Vasko Eftov in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/dUrJ5-fQ17M/hqdefault.jpg",
+          "uploadDate": "2025-06-29T20:05:06Z",
+          "embedUrl": "https://www.youtube.com/embed/dUrJ5-fQ17M",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 81602
+          },
+          "url": "https://www.youtube.com/watch?v=dUrJ5-fQ17M"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "VideoObject",
+          "name": "The brakes failed",
+          "description": "Trending video from TyphoonFast 5 in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nju-35kb21Y/hqdefault.jpg",
+          "uploadDate": "2025-06-28T21:09:30Z",
+          "embedUrl": "https://www.youtube.com/embed/nju-35kb21Y",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 9162454
+          },
+          "url": "https://www.youtube.com/watch?v=nju-35kb21Y"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "VideoObject",
+          "name": "小丑接山海经 #小丑 #天使 #shorts",
+          "description": "Trending video from 好人小丑 in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/ahzyfxZsjwM/hqdefault.jpg",
+          "uploadDate": "2025-06-27T09:30:01Z",
+          "embedUrl": "https://www.youtube.com/embed/ahzyfxZsjwM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 15386865
+          },
+          "url": "https://www.youtube.com/watch?v=ahzyfxZsjwM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Albos - Katile",
+          "description": "Trending video from ALBOS in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/4EkJQZJKjks/hqdefault.jpg",
+          "uploadDate": "2025-06-30T17:00:05Z",
+          "embedUrl": "https://www.youtube.com/embed/4EkJQZJKjks",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 305234
+          },
+          "url": "https://www.youtube.com/watch?v=4EkJQZJKjks"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "VideoObject",
+          "name": "2TON x GJIKO - BROKE TO RICH",
+          "description": "Trending video from 2TONoffical in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/kf__TPQXWOI/hqdefault.jpg",
+          "uploadDate": "2025-06-26T15:00:06Z",
+          "embedUrl": "https://www.youtube.com/embed/kf__TPQXWOI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1018875
+          },
+          "url": "https://www.youtube.com/watch?v=kf__TPQXWOI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Repeat The Trick or Swim 🥶💦",
+          "description": "Trending video from Celine Dept in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/aHrK586PVeI/hqdefault.jpg",
+          "uploadDate": "2025-07-01T15:00:02Z",
+          "embedUrl": "https://www.youtube.com/embed/aHrK586PVeI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20920406
+          },
+          "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "VideoObject",
+          "name": "$500 Water vs $1 Water – Blind Taste Test!",
+          "description": "Trending video from The Richey Family in North Macedonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/IjCJ3P7SL9M/hqdefault.jpg",
+          "uploadDate": "2025-06-27T15:02:00Z",
+          "embedUrl": "https://www.youtube.com/embed/IjCJ3P7SL9M",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 70484166
+          },
+          "url": "https://www.youtube.com/watch?v=IjCJ3P7SL9M"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,376 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "Trending YouTube Videos in Tanzania",
+  "description": "Most popular YouTube videos currently trending in Tanzania.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TopTubeList",
+    "url": "https://toptubelist.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "LISSU AWASHA MOTO MBELE YA HAKIMU, ONA WALIVYO JIBIZANA KWA HOJA KALI",
+          "description": "Trending video from Mbengo Tv in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/zOm_Hqd5XH4/hqdefault.jpg",
+          "uploadDate": "2025-07-01T07:51:18Z",
+          "embedUrl": "https://www.youtube.com/embed/zOm_Hqd5XH4",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 183147
+          },
+          "url": "https://www.youtube.com/watch?v=zOm_Hqd5XH4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Yanga SC 2-0 Simba SC | Highlights | Kariakoo Derby | NBC PL 25/06/2025",
+          "description": "Trending video from Azam TV in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/7rMmqbh6AxI/hqdefault.jpg",
+          "uploadDate": "2025-06-27T12:15:01Z",
+          "embedUrl": "https://www.youtube.com/embed/7rMmqbh6AxI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 410278
+          },
+          "url": "https://www.youtube.com/watch?v=7rMmqbh6AxI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Mbosso - Pawa (Official Music Video)",
+          "description": "Trending video from Mbosso in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/VTbo8E8es9A/hqdefault.jpg",
+          "uploadDate": "2025-06-19T15:00:06Z",
+          "embedUrl": "https://www.youtube.com/embed/VTbo8E8es9A",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 5429524
+          },
+          "url": "https://www.youtube.com/watch?v=VTbo8E8es9A"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "MAJONZI SAME: FAMILIA YA MZEE KILUVIA YAANGAMIA, NDUGU 10 WATEKETEA WALIPOKUWA NJIANI KWENDA HARUSI",
+          "description": "Trending video from Mwananchi Digital in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/WC6bG3razlU/hqdefault.jpg",
+          "uploadDate": "2025-06-29T13:44:11Z",
+          "embedUrl": "https://www.youtube.com/embed/WC6bG3razlU",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 140997
+          },
+          "url": "https://www.youtube.com/watch?v=WC6bG3razlU"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "LISSU AMBANA WAKILI WA SERIKALI - \"MNACHUNGUZA VITU GANI KAMA SIO NJAMA NA UZEMBE?\"",
+          "description": "Trending video from Wasafi Media in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/sdoA3zCIURE/hqdefault.jpg",
+          "uploadDate": "2025-07-01T09:04:01Z",
+          "embedUrl": "https://www.youtube.com/embed/sdoA3zCIURE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 141380
+          },
+          "url": "https://www.youtube.com/watch?v=sdoA3zCIURE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Harmonize Feat. Rudeboy - Best Couple (Official Lyrics Audio)",
+          "description": "Trending video from Harmonize in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/0yVVHHDbrvg/hqdefault.jpg",
+          "uploadDate": "2025-06-26T21:00:06Z",
+          "embedUrl": "https://www.youtube.com/embed/0yVVHHDbrvg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 841358
+          },
+          "url": "https://www.youtube.com/watch?v=0yVVHHDbrvg"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who was faster? 😳😱 @isabellaafro",
+          "description": "Trending video from Jaymondy in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:30:33Z",
+          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 102768225
+          },
+          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Diamond Platnumz x Masterpiece YVK ft Xman RSA & Lintonto - Down. (Official Audio)",
+          "description": "Trending video from Diamond Platnumz in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/5xBNZyiRIZw/hqdefault.jpg",
+          "uploadDate": "2025-06-26T23:22:53Z",
+          "embedUrl": "https://www.youtube.com/embed/5xBNZyiRIZw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 366449
+          },
+          "url": "https://www.youtube.com/watch?v=5xBNZyiRIZw"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Perfect composure 👏",
+          "description": "Trending video from UEFA in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/p_s9zpxbd0I/hqdefault.jpg",
+          "uploadDate": "2025-06-18T11:01:24Z",
+          "embedUrl": "https://www.youtube.com/embed/p_s9zpxbd0I",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 11561636
+          },
+          "url": "https://www.youtube.com/watch?v=p_s9zpxbd0I"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Al-Hilal STUNS Manchester City 4-3! | 2025 FIFA Club World Cup Highlights",
+          "description": "Trending video from DAZN Football in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/c_I6CJkS4aQ/hqdefault.jpg",
+          "uploadDate": "2025-07-01T04:12:43Z",
+          "embedUrl": "https://www.youtube.com/embed/c_I6CJkS4aQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 7824913
+          },
+          "url": "https://www.youtube.com/watch?v=c_I6CJkS4aQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Wasn't my fault tho!😳 @isabellaafro",
+          "description": "Trending video from Jaymondy in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/cllwgGfFwKg/hqdefault.jpg",
+          "uploadDate": "2025-06-28T13:35:01Z",
+          "embedUrl": "https://www.youtube.com/embed/cllwgGfFwKg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 40702349
+          },
+          "url": "https://www.youtube.com/watch?v=cllwgGfFwKg"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "VideoObject",
+          "name": "How did this not go in? 🤣",
+          "description": "Trending video from UEFA in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/1VeG0FqkLR4/hqdefault.jpg",
+          "uploadDate": "2025-06-23T15:30:00Z",
+          "embedUrl": "https://www.youtube.com/embed/1VeG0FqkLR4",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20109069
+          },
+          "url": "https://www.youtube.com/watch?v=1VeG0FqkLR4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "VideoObject",
+          "name": "CHADEMA KUGOMA KUSAINI - FID Q AWABANANISHA SWALI GUMU WANASHERIA",
+          "description": "Trending video from CHAMPION HABARI in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/WHXrcIW9N80/hqdefault.jpg",
+          "uploadDate": "2025-06-21T20:46:21Z",
+          "embedUrl": "https://www.youtube.com/embed/WHXrcIW9N80",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 298184
+          },
+          "url": "https://www.youtube.com/watch?v=WHXrcIW9N80"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Ibraah - Asante (Official Visualizer)",
+          "description": "Trending video from Ibraah in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/HWlhJ_Rr4SE/hqdefault.jpg",
+          "uploadDate": "2025-07-01T16:28:44Z",
+          "embedUrl": "https://www.youtube.com/embed/HWlhJ_Rr4SE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 147003
+          },
+          "url": "https://www.youtube.com/watch?v=HWlhJ_Rr4SE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Mbosso - Pawa (Official Lyric Video)",
+          "description": "Trending video from Mbosso in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/lrajSlyzCS4/hqdefault.jpg",
+          "uploadDate": "2025-06-12T21:05:46Z",
+          "embedUrl": "https://www.youtube.com/embed/lrajSlyzCS4",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 3866455
+          },
+          "url": "https://www.youtube.com/watch?v=lrajSlyzCS4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "VideoObject",
+          "name": "They didn't expected this art😂💕",
+          "description": "Trending video from Eternal Love in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/D_zzbW_8GmQ/hqdefault.jpg",
+          "uploadDate": "2025-06-24T16:00:21Z",
+          "embedUrl": "https://www.youtube.com/embed/D_zzbW_8GmQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 37025662
+          },
+          "url": "https://www.youtube.com/watch?v=D_zzbW_8GmQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "VideoObject",
+          "name": "CHIEFGODLOVE AKUTANA NA BABA YAKE ALIETREND AFUNGUKA MENGI MAISHA MAGUMU SANA NAOMBA NISAIDIE",
+          "description": "Trending video from Carrymastory in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/YmGH22l_B4k/hqdefault.jpg",
+          "uploadDate": "2025-07-01T13:43:21Z",
+          "embedUrl": "https://www.youtube.com/embed/YmGH22l_B4k",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 29892
+          },
+          "url": "https://www.youtube.com/watch?v=YmGH22l_B4k"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "VideoObject",
+          "name": "聰明的自救辦法！ #短剧 #正能量 #缅北",
+          "description": "Trending video from 小宾厂长 in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/GF-42bOkx-I/hqdefault.jpg",
+          "uploadDate": "2025-06-18T11:00:21Z",
+          "embedUrl": "https://www.youtube.com/embed/GF-42bOkx-I",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 18137654
+          },
+          "url": "https://www.youtube.com/watch?v=GF-42bOkx-I"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "VideoObject",
+          "name": "DUNIA (Ep 95)",
+          "description": "Trending video from ASMA FILMS  in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/8sz_OB-w0fQ/hqdefault.jpg",
+          "uploadDate": "2025-06-30T19:34:50Z",
+          "embedUrl": "https://www.youtube.com/embed/8sz_OB-w0fQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 876123
+          },
+          "url": "https://www.youtube.com/watch?v=8sz_OB-w0fQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "VideoObject",
+          "name": "MTIFUANO MKALI wa LISSU vs WAKILI wa SERIKALI - WAJIBIZANA MBELE ya HAKIMU - KESI YASOGEZWA MBELE...",
+          "description": "Trending video from Global TV  Online in Tanzania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/TDMEt99NSm8/hqdefault.jpg",
+          "uploadDate": "2025-06-16T08:27:21Z",
+          "embedUrl": "https://www.youtube.com/embed/TDMEt99NSm8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 389603
+          },
+          "url": "https://www.youtube.com/watch?v=TDMEt99NSm8"
+        }
+      }
+    ]
+  }
+}

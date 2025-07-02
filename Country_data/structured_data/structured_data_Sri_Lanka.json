@@ -1,0 +1,376 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "Trending YouTube Videos in Sri Lanka",
+  "description": "Most popular YouTube videos currently trending in Sri Lanka.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TopTubeList",
+    "url": "https://toptubelist.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who was faster? 😳😱 @isabellaafro",
+          "description": "Trending video from Jaymondy in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:30:33Z",
+          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 102768225
+          },
+          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Lakai Sikai - Aluth Bodima | ලකයි සිකයි - අලුත් බෝඩිම",
+          "description": "Trending video from Lakai Sikai - ලකයි සිකයි in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/yY1ex61NEC8/hqdefault.jpg",
+          "uploadDate": "2025-06-28T06:38:09Z",
+          "embedUrl": "https://www.youtube.com/embed/yY1ex61NEC8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 940928
+          },
+          "url": "https://www.youtube.com/watch?v=yY1ex61NEC8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Janai Priyai - Tikiri | ජනයි ප්‍රියයි -ටිකිරි 😉😀",
+          "description": "Trending video from Janai Priyai in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/UC4RpLG6AYk/hqdefault.jpg",
+          "uploadDate": "2025-06-28T04:30:30Z",
+          "embedUrl": "https://www.youtube.com/embed/UC4RpLG6AYk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 792601
+          },
+          "url": "https://www.youtube.com/watch?v=UC4RpLG6AYk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "They didn't expected this art😂💕",
+          "description": "Trending video from Eternal Love in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/D_zzbW_8GmQ/hqdefault.jpg",
+          "uploadDate": "2025-06-24T16:00:21Z",
+          "embedUrl": "https://www.youtube.com/embed/D_zzbW_8GmQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 37025662
+          },
+          "url": "https://www.youtube.com/watch?v=D_zzbW_8GmQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "这也太厉害了 #火影忍者 #joker#cosplay",
+          "description": "Trending video from 佐助与鸣人 in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/YFXS0F2IxmM/hqdefault.jpg",
+          "uploadDate": "2025-06-29T04:00:41Z",
+          "embedUrl": "https://www.youtube.com/embed/YFXS0F2IxmM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 41774999
+          },
+          "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Can Tape Hold My Sons Weight? #shorts #viral #tiktok",
+          "description": "Trending video from Kate Brush in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/tm2mLtsA2Yc/hqdefault.jpg",
+          "uploadDate": "2025-06-27T09:35:30Z",
+          "embedUrl": "https://www.youtube.com/embed/tm2mLtsA2Yc",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20555195
+          },
+          "url": "https://www.youtube.com/watch?v=tm2mLtsA2Yc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "VideoObject",
+          "name": "කහ වතුර 😂😂",
+          "description": "Trending video from 3පෝශ family in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Y1E2lAznQE8/hqdefault.jpg",
+          "uploadDate": "2025-06-21T10:01:46Z",
+          "embedUrl": "https://www.youtube.com/embed/Y1E2lAznQE8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 949423
+          },
+          "url": "https://www.youtube.com/watch?v=Y1E2lAznQE8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Sleeping nowadays 😴 #elsarca #tiktok",
+          "description": "Trending video from Elsa Arca in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/RJlkHRa150g/hqdefault.jpg",
+          "uploadDate": "2025-06-30T04:41:07Z",
+          "embedUrl": "https://www.youtube.com/embed/RJlkHRa150g",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 14339175
+          },
+          "url": "https://www.youtube.com/watch?v=RJlkHRa150g"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "VideoObject",
+          "name": "If You Spill, You Lose!",
+          "description": "Trending video from MrBeast in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/gGcaGdHlt60/hqdefault.jpg",
+          "uploadDate": "2025-06-25T17:00:08Z",
+          "embedUrl": "https://www.youtube.com/embed/gGcaGdHlt60",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 101885347
+          },
+          "url": "https://www.youtube.com/watch?v=gGcaGdHlt60"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Tom 🍓 Jerry (Nandu&Ammu)Real End Twist😍🎈#v5familyshow  #shorts #viralvideo",
+          "description": "Trending video from V5 Family Show in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/hPxBzoSzcIY/hqdefault.jpg",
+          "uploadDate": "2025-06-23T14:50:11Z",
+          "embedUrl": "https://www.youtube.com/embed/hPxBzoSzcIY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 44680953
+          },
+          "url": "https://www.youtube.com/watch?v=hPxBzoSzcIY"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "VideoObject",
+          "name": "🫨Yenna da animal idhu kandu pudinga paapo....#shorts #trending #viralvideo #cake #minivlog",
+          "description": "Trending video from Tharu's_passion in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/gpZf5n1TWi0/hqdefault.jpg",
+          "uploadDate": "2025-06-30T12:31:00Z",
+          "embedUrl": "https://www.youtube.com/embed/gpZf5n1TWi0",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2725842
+          },
+          "url": "https://www.youtube.com/watch?v=gpZf5n1TWi0"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Father surprise to kid 🥰🥰🥰🥰 #shortsfeed #trendingshorts #emotional",
+          "description": "Trending video from VR VLOGS💯 in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/dTqPpZK_zRw/hqdefault.jpg",
+          "uploadDate": "2025-06-20T12:59:26Z",
+          "embedUrl": "https://www.youtube.com/embed/dTqPpZK_zRw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 39051284
+          },
+          "url": "https://www.youtube.com/watch?v=dTqPpZK_zRw"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Which Shoes Will Protect Your Feet?",
+          "description": "Trending video from Ben Azelart in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
+          "uploadDate": "2025-06-24T21:50:02Z",
+          "embedUrl": "https://www.youtube.com/embed/nj6W9v6yjFk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 129136516
+          },
+          "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "VideoObject",
+          "name": "🔴 LIVE  | 2nd Test - Day 3 | Bangladesh tour of Sri Lanka 2025",
+          "description": "Trending video from Sri Lanka Cricket in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/cOvI9yDomSA/hqdefault.jpg",
+          "uploadDate": "2025-06-27T12:33:35Z",
+          "embedUrl": "https://www.youtube.com/embed/cOvI9yDomSA",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1512865
+          },
+          "url": "https://www.youtube.com/watch?v=cOvI9yDomSA"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "VideoObject",
+          "name": "풍선 챌린지⁉️🎈 Ballon Challenge",
+          "description": "Trending video from 팀일루션 노성율 in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/qwlofJOM38Q/hqdefault.jpg",
+          "uploadDate": "2025-06-29T13:01:35Z",
+          "embedUrl": "https://www.youtube.com/embed/qwlofJOM38Q",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 11295554
+          },
+          "url": "https://www.youtube.com/watch?v=qwlofJOM38Q"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Hairband that looks like real bangs",
+          "description": "Trending video from 승비니 Seungbini in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/q2mdCWEZTSE/hqdefault.jpg",
+          "uploadDate": "2025-06-29T09:55:00Z",
+          "embedUrl": "https://www.youtube.com/embed/q2mdCWEZTSE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 18211582
+          },
+          "url": "https://www.youtube.com/watch?v=q2mdCWEZTSE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "VideoObject",
+          "name": "🔴 LIVE | 2nd Test - Day 2 | Bangladesh tour of Sri Lanka 2025",
+          "description": "Trending video from Sri Lanka Cricket in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/YfR9vzVneBM/hqdefault.jpg",
+          "uploadDate": "2025-06-26T12:40:48Z",
+          "embedUrl": "https://www.youtube.com/embed/YfR9vzVneBM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2009338
+          },
+          "url": "https://www.youtube.com/watch?v=YfR9vzVneBM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Big problem for the hungry Hulk...😁 #shorts",
+          "description": "Trending video from Marvelix in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/f2QnEza9dVk/hqdefault.jpg",
+          "uploadDate": "2025-06-30T15:54:56Z",
+          "embedUrl": "https://www.youtube.com/embed/f2QnEza9dVk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 12139103
+          },
+          "url": "https://www.youtube.com/watch?v=f2QnEza9dVk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "VideoObject",
+          "name": "🤣🤣 என்னடா இது Twins சோதனை #tamil #comedy #viralvideo @SonAndDadOfficial",
+          "description": "Trending video from Son And Dad in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/AQZaVfWP8TE/hqdefault.jpg",
+          "uploadDate": "2025-06-25T11:00:16Z",
+          "embedUrl": "https://www.youtube.com/embed/AQZaVfWP8TE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 4739337
+          },
+          "url": "https://www.youtube.com/watch?v=AQZaVfWP8TE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Watch full video👆Endrendrum Kadhal Super Scenes - #vijay #rambha #raghuvaran #radharavi #shorts",
+          "description": "Trending video from API Tamil Hits in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/m0jQ7e6Om0c/hqdefault.jpg",
+          "uploadDate": "2025-06-29T05:00:48Z",
+          "embedUrl": "https://www.youtube.com/embed/m0jQ7e6Om0c",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2901466
+          },
+          "url": "https://www.youtube.com/watch?v=m0jQ7e6Om0c"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,376 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "Trending YouTube Videos in Austria",
+  "description": "Most popular YouTube videos currently trending in Austria.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TopTubeList",
+    "url": "https://toptubelist.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Extremwetter in Baden-Württemberg: Hagelsturm verwandelt Sipplingen in Eislandschaft",
+          "description": "Trending video from wettercom in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/153ItJ5DN1A/hqdefault.jpg",
+          "uploadDate": "2025-07-02T09:46:48Z",
+          "embedUrl": "https://www.youtube.com/embed/153ItJ5DN1A",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 111034
+          },
+          "url": "https://www.youtube.com/watch?v=153ItJ5DN1A"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Ich habe ALLE Herzen verloren...",
+          "description": "Trending video from Platin in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/JXtiuADWVPI/hqdefault.jpg",
+          "uploadDate": "2025-07-02T10:00:28Z",
+          "embedUrl": "https://www.youtube.com/embed/JXtiuADWVPI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 70784
+          },
+          "url": "https://www.youtube.com/watch?v=JXtiuADWVPI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Al-Hilal STUNS Manchester City 4-3! | 2025 FIFA Club World Cup Highlights",
+          "description": "Trending video from DAZN Football in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/c_I6CJkS4aQ/hqdefault.jpg",
+          "uploadDate": "2025-07-01T04:12:43Z",
+          "embedUrl": "https://www.youtube.com/embed/c_I6CJkS4aQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 7824913
+          },
+          "url": "https://www.youtube.com/watch?v=c_I6CJkS4aQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Unangenehme Fragen an diese Influencer..",
+          "description": "Trending video from Denizon in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/iPQ3-LNLxC0/hqdefault.jpg",
+          "uploadDate": "2025-07-01T18:04:26Z",
+          "embedUrl": "https://www.youtube.com/embed/iPQ3-LNLxC0",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 88024
+          },
+          "url": "https://www.youtube.com/watch?v=iPQ3-LNLxC0"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Darum gibt es keine XXL-Solarparks in der Sahara",
+          "description": "Trending video from Breaking Lab in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/t1zVPYrwPS8/hqdefault.jpg",
+          "uploadDate": "2025-07-01T15:01:41Z",
+          "embedUrl": "https://www.youtube.com/embed/t1zVPYrwPS8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 155731
+          },
+          "url": "https://www.youtube.com/watch?v=t1zVPYrwPS8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "🏆😍Mit KRASSESTEM Meta DECK 10.000 TROPHÄEN hitten?! - Clash Royale Pay2Win Account!",
+          "description": "Trending video from Trymacs in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/PAZOJF9sgRc/hqdefault.jpg",
+          "uploadDate": "2025-07-02T10:15:03Z",
+          "embedUrl": "https://www.youtube.com/embed/PAZOJF9sgRc",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 114406
+          },
+          "url": "https://www.youtube.com/watch?v=PAZOJF9sgRc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Der große Neustart an der \"DiNo\"! 📚🎉 #496 | Krass Schule",
+          "description": "Trending video from Krass Schule - Die jungen Lehrer in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/2MJe37ovrfA/hqdefault.jpg",
+          "uploadDate": "2025-07-01T15:00:06Z",
+          "embedUrl": "https://www.youtube.com/embed/2MJe37ovrfA",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 63900
+          },
+          "url": "https://www.youtube.com/watch?v=2MJe37ovrfA"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "The Running Man | Official Trailer (2025 Movie) - Edgar Wright, Glen Powell",
+          "description": "Trending video from Paramount Pictures in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/KD18ddeFuyM/hqdefault.jpg",
+          "uploadDate": "2025-07-01T13:00:03Z",
+          "embedUrl": "https://www.youtube.com/embed/KD18ddeFuyM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 8151658
+          },
+          "url": "https://www.youtube.com/watch?v=KD18ddeFuyM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "VideoObject",
+          "name": "This mechanism shrinks when pulled",
+          "description": "Trending video from Veritasium in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/-QTkPfq7w1A/hqdefault.jpg",
+          "uploadDate": "2025-06-30T18:02:42Z",
+          "embedUrl": "https://www.youtube.com/embed/-QTkPfq7w1A",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 4346684
+          },
+          "url": "https://www.youtube.com/watch?v=-QTkPfq7w1A"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Wie ich Elden Ring Shadow of the Erdtree bezwungen habe",
+          "description": "Trending video from Jodarum in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Q4RVvT8hIeo/hqdefault.jpg",
+          "uploadDate": "2025-07-01T15:03:01Z",
+          "embedUrl": "https://www.youtube.com/embed/Q4RVvT8hIeo",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 99616
+          },
+          "url": "https://www.youtube.com/watch?v=Q4RVvT8hIeo"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Borussia Dortmund - CF Monterrey | FIFA Club World Cup 2025 | DAZN Highlights",
+          "description": "Trending video from DAZN Fußball in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/L2DEHKqTZ2M/hqdefault.jpg",
+          "uploadDate": "2025-07-02T04:58:39Z",
+          "embedUrl": "https://www.youtube.com/embed/L2DEHKqTZ2M",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 848042
+          },
+          "url": "https://www.youtube.com/watch?v=L2DEHKqTZ2M"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "VideoObject",
+          "name": "When Your Body Attacks Itself – Autoimmune",
+          "description": "Trending video from Kurzgesagt – In a Nutshell in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/efOW5NUTYB8/hqdefault.jpg",
+          "uploadDate": "2025-07-01T14:00:01Z",
+          "embedUrl": "https://www.youtube.com/embed/efOW5NUTYB8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1066764
+          },
+          "url": "https://www.youtube.com/watch?v=efOW5NUTYB8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "VideoObject",
+          "name": "NEW MOB AND GEAR IN THE NEXT GAME DROP!",
+          "description": "Trending video from Minecraft in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/542rY0DQHIM/hqdefault.jpg",
+          "uploadDate": "2025-07-01T16:06:23Z",
+          "embedUrl": "https://www.youtube.com/embed/542rY0DQHIM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2766615
+          },
+          "url": "https://www.youtube.com/watch?v=542rY0DQHIM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Bin hässlich aber fahre Porsche",
+          "description": "Trending video from Moji in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/uv-IKNhOAVk/hqdefault.jpg",
+          "uploadDate": "2025-06-30T15:59:16Z",
+          "embedUrl": "https://www.youtube.com/embed/uv-IKNhOAVk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 184338
+          },
+          "url": "https://www.youtube.com/watch?v=uv-IKNhOAVk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "VideoObject",
+          "name": "“Golden” Official Lyric Video | KPop Demon Hunters | Sony Animation",
+          "description": "Trending video from Sony Pictures Animation in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/yebNIHKAC4A/hqdefault.jpg",
+          "uploadDate": "2025-06-23T22:30:00Z",
+          "embedUrl": "https://www.youtube.com/embed/yebNIHKAC4A",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 16626805
+          },
+          "url": "https://www.youtube.com/watch?v=yebNIHKAC4A"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "VideoObject",
+          "name": "NADERS 1. PROFI VERTRAG ⚽️ | Nader Louisa",
+          "description": "Trending video from Jindaouis in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/dH1ZazQcGoM/hqdefault.jpg",
+          "uploadDate": "2025-06-29T18:40:03Z",
+          "embedUrl": "https://www.youtube.com/embed/dH1ZazQcGoM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 889878
+          },
+          "url": "https://www.youtube.com/watch?v=dH1ZazQcGoM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Was passiert direkt in der ERSTEN FOLGE?! | Beauty & The Nerd Staffel 6 Folge 1",
+          "description": "Trending video from FilowLIVE in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/M_ZuwXsMjI4/hqdefault.jpg",
+          "uploadDate": "2025-06-30T14:00:41Z",
+          "embedUrl": "https://www.youtube.com/embed/M_ZuwXsMjI4",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 185669
+          },
+          "url": "https://www.youtube.com/watch?v=M_ZuwXsMjI4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "VideoObject",
+          "name": "BABYMONSTER - ‘HOT SAUCE’ M/V",
+          "description": "Trending video from BABYMONSTER in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/xn8mQqz2xmM/hqdefault.jpg",
+          "uploadDate": "2025-07-01T09:00:07Z",
+          "embedUrl": "https://www.youtube.com/embed/xn8mQqz2xmM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 13421837
+          },
+          "url": "https://www.youtube.com/watch?v=xn8mQqz2xmM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Warum hört ihr nicht endlich damit auf..? - Jurassic World: Die Wiedergeburt Filmkritik",
+          "description": "Trending video from BeHaind in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/CfbSRDr8dhg/hqdefault.jpg",
+          "uploadDate": "2025-06-30T16:14:13Z",
+          "embedUrl": "https://www.youtube.com/embed/CfbSRDr8dhg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 231611
+          },
+          "url": "https://www.youtube.com/watch?v=CfbSRDr8dhg"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Ich surfe auf dem gefährlichsten Zug der Welt (wirklich)",
+          "description": "Trending video from SELTIX in Austria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/JvA0rBpl1zk/hqdefault.jpg",
+          "uploadDate": "2025-06-30T19:21:02Z",
+          "embedUrl": "https://www.youtube.com/embed/JvA0rBpl1zk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 121824
+          },
+          "url": "https://www.youtube.com/watch?v=JvA0rBpl1zk"
+        }
+      }
+    ]
+  }
+}

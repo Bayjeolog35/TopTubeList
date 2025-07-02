@@ -1,0 +1,376 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "Trending YouTube Videos in Slovakia",
+  "description": "Most popular YouTube videos currently trending in Slovakia.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TopTubeList",
+    "url": "https://toptubelist.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who was faster? 😳😱 @isabellaafro",
+          "description": "Trending video from Jaymondy in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:30:33Z",
+          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 102768225
+          },
+          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "$500 Water vs $1 Water – Blind Taste Test!",
+          "description": "Trending video from The Richey Family in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/IjCJ3P7SL9M/hqdefault.jpg",
+          "uploadDate": "2025-06-27T15:02:00Z",
+          "embedUrl": "https://www.youtube.com/embed/IjCJ3P7SL9M",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 70484166
+          },
+          "url": "https://www.youtube.com/watch?v=IjCJ3P7SL9M"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who's clever now?😳😂 @isabellaafro",
+          "description": "Trending video from Jaymondy in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/-Wli1tM-EPw/hqdefault.jpg",
+          "uploadDate": "2025-06-30T14:15:01Z",
+          "embedUrl": "https://www.youtube.com/embed/-Wli1tM-EPw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 22703161
+          },
+          "url": "https://www.youtube.com/watch?v=-Wli1tM-EPw"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Repeat The Trick or Swim 🥶💦",
+          "description": "Trending video from Celine Dept in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/aHrK586PVeI/hqdefault.jpg",
+          "uploadDate": "2025-07-01T15:00:02Z",
+          "embedUrl": "https://www.youtube.com/embed/aHrK586PVeI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20920406
+          },
+          "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Snag, you're it 😜 #afv #fail #funny #shorts",
+          "description": "Trending video from America's Funniest Home Videos in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Ehc68ClCuFE/hqdefault.jpg",
+          "uploadDate": "2025-06-25T01:00:15Z",
+          "embedUrl": "https://www.youtube.com/embed/Ehc68ClCuFE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 8893572
+          },
+          "url": "https://www.youtube.com/watch?v=Ehc68ClCuFE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "这也太厉害了 #火影忍者 #joker#cosplay",
+          "description": "Trending video from 佐助与鸣人 in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/YFXS0F2IxmM/hqdefault.jpg",
+          "uploadDate": "2025-06-29T04:00:41Z",
+          "embedUrl": "https://www.youtube.com/embed/YFXS0F2IxmM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 41774999
+          },
+          "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "VideoObject",
+          "name": "CUSTOM LABUBU part 1.",
+          "description": "Trending video from rastopauliny in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/PDyeBMVFuRA/hqdefault.jpg",
+          "uploadDate": "2025-06-27T11:53:41Z",
+          "embedUrl": "https://www.youtube.com/embed/PDyeBMVFuRA",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 160572
+          },
+          "url": "https://www.youtube.com/watch?v=PDyeBMVFuRA"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "SIMA - SORRY (prod.Gajlo & H0wdy)",
+          "description": "Trending video from SIMA Official in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/jnkKpOoqoxk/hqdefault.jpg",
+          "uploadDate": "2025-06-22T18:00:08Z",
+          "embedUrl": "https://www.youtube.com/embed/jnkKpOoqoxk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 282377
+          },
+          "url": "https://www.youtube.com/watch?v=jnkKpOoqoxk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "VideoObject",
+          "name": "I Stole His Brainrots… 😋🦈 (Steal a Brainrot Roblox ASMR)",
+          "description": "Trending video from Spizee in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/u8hQ_nBD8eg/hqdefault.jpg",
+          "uploadDate": "2025-06-28T17:42:38Z",
+          "embedUrl": "https://www.youtube.com/embed/u8hQ_nBD8eg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 32368167
+          },
+          "url": "https://www.youtube.com/watch?v=u8hQ_nBD8eg"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Squid Game Pranks #shorts",
+          "description": "Trending video from Mr DegrEE in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/kflYxob7uRM/hqdefault.jpg",
+          "uploadDate": "2025-06-25T05:57:20Z",
+          "embedUrl": "https://www.youtube.com/embed/kflYxob7uRM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 51628378
+          },
+          "url": "https://www.youtube.com/watch?v=kflYxob7uRM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Ewa Farna o chvilkách v zákulisí před nástupem na podium s celebritou Dua Lipa",
+          "description": "Trending video from DVTV in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/--DJ1N4xF2o/hqdefault.jpg",
+          "uploadDate": "2025-06-25T17:30:01Z",
+          "embedUrl": "https://www.youtube.com/embed/--DJ1N4xF2o",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 298015
+          },
+          "url": "https://www.youtube.com/watch?v=--DJ1N4xF2o"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "VideoObject",
+          "name": "KALI feat. SIMA - KÝM SA DÁ (prod.PETER PANN)",
+          "description": "Trending video from KALI RECORDS in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/wvuxfS3F-v8/hqdefault.jpg",
+          "uploadDate": "2025-06-20T07:00:07Z",
+          "embedUrl": "https://www.youtube.com/embed/wvuxfS3F-v8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 675364
+          },
+          "url": "https://www.youtube.com/watch?v=wvuxfS3F-v8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "VideoObject",
+          "name": "If You Spill, You Lose!",
+          "description": "Trending video from MrBeast in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/gGcaGdHlt60/hqdefault.jpg",
+          "uploadDate": "2025-06-25T17:00:08Z",
+          "embedUrl": "https://www.youtube.com/embed/gGcaGdHlt60",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 101885347
+          },
+          "url": "https://www.youtube.com/watch?v=gGcaGdHlt60"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "VideoObject",
+          "name": "本以为胜券在握，没想到天都塌了#母女日常 #亲子日常#万万想不到",
+          "description": "Trending video from 大然和淼淼 in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/irE9_zRNUEM/hqdefault.jpg",
+          "uploadDate": "2025-06-28T16:30:16Z",
+          "embedUrl": "https://www.youtube.com/embed/irE9_zRNUEM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 9953776
+          },
+          "url": "https://www.youtube.com/watch?v=irE9_zRNUEM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "VideoObject",
+          "name": "360 reasons to hold your breath 🏍️🧨 #motogp",
+          "description": "Trending video from Red Bull Motorsports in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/1t7YwaHuNzM/hqdefault.jpg",
+          "uploadDate": "2025-06-26T10:30:37Z",
+          "embedUrl": "https://www.youtube.com/embed/1t7YwaHuNzM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 8166853
+          },
+          "url": "https://www.youtube.com/watch?v=1t7YwaHuNzM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Kindness Pool Rescue 🌊 Heartwarming Sunglasses Return #kindness #pool #shorts",
+          "description": "Trending video from Fabiosa Best Lifehacks in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/N_YZlt0iARQ/hqdefault.jpg",
+          "uploadDate": "2025-06-25T13:00:46Z",
+          "embedUrl": "https://www.youtube.com/embed/N_YZlt0iARQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 11820258
+          },
+          "url": "https://www.youtube.com/watch?v=N_YZlt0iARQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Which Shoes Will Protect Your Feet?",
+          "description": "Trending video from Ben Azelart in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
+          "uploadDate": "2025-06-24T21:50:02Z",
+          "embedUrl": "https://www.youtube.com/embed/nj6W9v6yjFk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 129136516
+          },
+          "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Siblings vs Me eating 😭.     @AstonBaillie",
+          "description": "Trending video from Speed McQueen  in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/wiCvUAq8YvA/hqdefault.jpg",
+          "uploadDate": "2025-06-25T19:18:17Z",
+          "embedUrl": "https://www.youtube.com/embed/wiCvUAq8YvA",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 12169575
+          },
+          "url": "https://www.youtube.com/watch?v=wiCvUAq8YvA"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "VideoObject",
+          "name": "$500 For Every Digit You Solve",
+          "description": "Trending video from ZHC in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/_3zn1FJusCU/hqdefault.jpg",
+          "uploadDate": "2025-06-27T11:01:12Z",
+          "embedUrl": "https://www.youtube.com/embed/_3zn1FJusCU",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 930539
+          },
+          "url": "https://www.youtube.com/watch?v=_3zn1FJusCU"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Zobral som mamu na plastickú operáciu (PRED A PO)",
+          "description": "Trending video from Expl0ited in Slovakia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/z52fcezafJk/hqdefault.jpg",
+          "uploadDate": "2025-06-23T15:48:04Z",
+          "embedUrl": "https://www.youtube.com/embed/z52fcezafJk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 168180
+          },
+          "url": "https://www.youtube.com/watch?v=z52fcezafJk"
+        }
+      }
+    ]
+  }
+}

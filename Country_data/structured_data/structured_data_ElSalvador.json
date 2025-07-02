@@ -1,0 +1,376 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "Trending YouTube Videos in El Salvador",
+  "description": "Most popular YouTube videos currently trending in El Salvador.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TopTubeList",
+    "url": "https://toptubelist.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who was faster? 😳😱 @isabellaafro",
+          "description": "Trending video from Jaymondy in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:30:33Z",
+          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 102768225
+          },
+          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Which Shoes Will Protect Your Feet?",
+          "description": "Trending video from Ben Azelart in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
+          "uploadDate": "2025-06-24T21:50:02Z",
+          "embedUrl": "https://www.youtube.com/embed/nj6W9v6yjFk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 129136516
+          },
+          "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "这也太厉害了 #火影忍者 #joker#cosplay",
+          "description": "Trending video from 佐助与鸣人 in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/YFXS0F2IxmM/hqdefault.jpg",
+          "uploadDate": "2025-06-29T04:00:41Z",
+          "embedUrl": "https://www.youtube.com/embed/YFXS0F2IxmM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 41774999
+          },
+          "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "SQUID GAME HOUSE vs GUARDS 🏠🦑🥷",
+          "description": "Trending video from A4 in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/KdXQIYc6xWY/hqdefault.jpg",
+          "uploadDate": "2025-06-21T14:05:16Z",
+          "embedUrl": "https://www.youtube.com/embed/KdXQIYc6xWY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 89113424
+          },
+          "url": "https://www.youtube.com/watch?v=KdXQIYc6xWY"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Can Starbucks spell brainrots’ names right?",
+          "description": "Trending video from The Richey Family in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/jDqmb1X5INM/hqdefault.jpg",
+          "uploadDate": "2025-06-21T15:01:43Z",
+          "embedUrl": "https://www.youtube.com/embed/jDqmb1X5INM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 87541984
+          },
+          "url": "https://www.youtube.com/watch?v=jDqmb1X5INM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Tung Sahur or Tralalelo Tralala? 😏 @coolskull17",
+          "description": "Trending video from Andrey Grechka in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/RiPEMrjoGfQ/hqdefault.jpg",
+          "uploadDate": "2025-06-27T09:00:42Z",
+          "embedUrl": "https://www.youtube.com/embed/RiPEMrjoGfQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 30026305
+          },
+          "url": "https://www.youtube.com/watch?v=RiPEMrjoGfQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Estos animales duermen muy raro 😨 #shorts",
+          "description": "Trending video from Jexs in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/K0pZvsHbzP0/hqdefault.jpg",
+          "uploadDate": "2025-06-24T19:46:07Z",
+          "embedUrl": "https://www.youtube.com/embed/K0pZvsHbzP0",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 9514625
+          },
+          "url": "https://www.youtube.com/watch?v=K0pZvsHbzP0"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Repeat The Trick or Swim 🥶💦",
+          "description": "Trending video from Celine Dept in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/aHrK586PVeI/hqdefault.jpg",
+          "uploadDate": "2025-07-01T15:00:02Z",
+          "embedUrl": "https://www.youtube.com/embed/aHrK586PVeI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20920406
+          },
+          "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "VideoObject",
+          "name": "ITALIAN BRAINROT GETTING ON THE SCHOOL BUS!",
+          "description": "Trending video from The Noob Family in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/LWxeJkepuEQ/hqdefault.jpg",
+          "uploadDate": "2025-06-28T17:32:21Z",
+          "embedUrl": "https://www.youtube.com/embed/LWxeJkepuEQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20475540
+          },
+          "url": "https://www.youtube.com/watch?v=LWxeJkepuEQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Lo más valioso de la casa de Dios.",
+          "description": "Trending video from GONZOK in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/LNRtwrh9XRs/hqdefault.jpg",
+          "uploadDate": "2025-06-25T23:34:15Z",
+          "embedUrl": "https://www.youtube.com/embed/LNRtwrh9XRs",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 7813894
+          },
+          "url": "https://www.youtube.com/watch?v=LNRtwrh9XRs"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Anuel AA - Little Demon (Video Oficial)",
+          "description": "Trending video from Anuel AA in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Zmd_KO2Lric/hqdefault.jpg",
+          "uploadDate": "2025-06-26T23:00:23Z",
+          "embedUrl": "https://www.youtube.com/embed/Zmd_KO2Lric",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 9606137
+          },
+          "url": "https://www.youtube.com/watch?v=Zmd_KO2Lric"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "VideoObject",
+          "name": "KAROL G - Papasito (Official Video)",
+          "description": "Trending video from KarolGVEVO in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/15iEJ0qY_70/hqdefault.jpg",
+          "uploadDate": "2025-06-20T16:00:02Z",
+          "embedUrl": "https://www.youtube.com/embed/15iEJ0qY_70",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 26436280
+          },
+          "url": "https://www.youtube.com/watch?v=15iEJ0qY_70"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Tom&Jerry🥰Funny moment 🤣 #shorts #shortvideo",
+          "description": "Trending video from Krishna Avyu in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/xsMzHLJyx10/hqdefault.jpg",
+          "uploadDate": "2025-06-27T13:46:50Z",
+          "embedUrl": "https://www.youtube.com/embed/xsMzHLJyx10",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 22886267
+          },
+          "url": "https://www.youtube.com/watch?v=xsMzHLJyx10"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Videos Que Se Sienten 💀",
+          "description": "Trending video from DeiK in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/y1IrvJob6JI/hqdefault.jpg",
+          "uploadDate": "2025-06-24T20:15:02Z",
+          "embedUrl": "https://www.youtube.com/embed/y1IrvJob6JI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 8951943
+          },
+          "url": "https://www.youtube.com/watch?v=y1IrvJob6JI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Grrr or GRRR ?",
+          "description": "Trending video from TwinsOvezov   in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/vPJIgoDQ6oc/hqdefault.jpg",
+          "uploadDate": "2025-06-23T14:01:28Z",
+          "embedUrl": "https://www.youtube.com/embed/vPJIgoDQ6oc",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 24379879
+          },
+          "url": "https://www.youtube.com/watch?v=vPJIgoDQ6oc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "VideoObject",
+          "name": "El niño y un tigre están en el mar. #peliculas #movie  #shorts",
+          "description": "Trending video from GG Movies in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/pL9-Rd89YPk/hqdefault.jpg",
+          "uploadDate": "2025-06-26T11:01:41Z",
+          "embedUrl": "https://www.youtube.com/embed/pL9-Rd89YPk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 5692132
+          },
+          "url": "https://www.youtube.com/watch?v=pL9-Rd89YPk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "VideoObject",
+          "name": "que buena idea!",
+          "description": "Trending video from Futbol Activo in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/9Mw2YjzstkU/hqdefault.jpg",
+          "uploadDate": "2025-07-01T13:03:43Z",
+          "embedUrl": "https://www.youtube.com/embed/9Mw2YjzstkU",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2810960
+          },
+          "url": "https://www.youtube.com/watch?v=9Mw2YjzstkU"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Teach the stubborn a lesson! #HanhLamofficial #Shortyoutube #kindness #help #hero #respect #action",
+          "description": "Trending video from Hanh Lam Official in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SuXWhcWdPNc/hqdefault.jpg",
+          "uploadDate": "2025-06-24T03:00:35Z",
+          "embedUrl": "https://www.youtube.com/embed/SuXWhcWdPNc",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 13809068
+          },
+          "url": "https://www.youtube.com/watch?v=SuXWhcWdPNc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "VideoObject",
+          "name": "LATA DE REFRESCO SECRETA!! 😲😲 3",
+          "description": "Trending video from DanElCurioso in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/5knq7ye7B68/hqdefault.jpg",
+          "uploadDate": "2025-06-20T15:00:10Z",
+          "embedUrl": "https://www.youtube.com/embed/5knq7ye7B68",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 13020708
+          },
+          "url": "https://www.youtube.com/watch?v=5knq7ye7B68"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Lose 100 LBs, Win $250,000!",
+          "description": "Trending video from MrBeast in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/pe_ejTiIcSs/hqdefault.jpg",
+          "uploadDate": "2025-06-21T16:00:01Z",
+          "embedUrl": "https://www.youtube.com/embed/pe_ejTiIcSs",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 153145065
+          },
+          "url": "https://www.youtube.com/watch?v=pe_ejTiIcSs"
+        }
+      }
+    ]
+  }
+}

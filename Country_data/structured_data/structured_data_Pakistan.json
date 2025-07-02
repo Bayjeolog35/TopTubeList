@@ -1,0 +1,376 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "Trending YouTube Videos in Pakistan",
+  "description": "Most popular YouTube videos currently trending in Pakistan.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TopTubeList",
+    "url": "https://toptubelist.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who was faster? 😳😱 @isabellaafro",
+          "description": "Trending video from Jaymondy in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:30:33Z",
+          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 102768225
+          },
+          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Seat belt is very important 😲 🥰 #seemavinaylamba  #seevila",
+          "description": "Trending video from seeVi la in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/KSyEfuZcMCM/hqdefault.jpg",
+          "uploadDate": "2025-06-28T07:00:17Z",
+          "embedUrl": "https://www.youtube.com/embed/KSyEfuZcMCM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20226151
+          },
+          "url": "https://www.youtube.com/watch?v=KSyEfuZcMCM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Zamana Tumhara Ya Hussain | Nadeem Sarwar | 46th Album - 2025 / 1447",
+          "description": "Trending video from Nadeem Sarwar in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/DIuGmBxdW0I/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:00:07Z",
+          "embedUrl": "https://www.youtube.com/embed/DIuGmBxdW0I",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 4494757
+          },
+          "url": "https://www.youtube.com/watch?v=DIuGmBxdW0I"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "😂Unbox mystery with the Labubu Have A Seat Series Doll Mystery Box.This blind box contains 6 models",
+          "description": "Trending video from Rj Mobile 01 in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/W2KEWRPddN4/hqdefault.jpg",
+          "uploadDate": "2025-06-29T10:54:03Z",
+          "embedUrl": "https://www.youtube.com/embed/W2KEWRPddN4",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 17732130
+          },
+          "url": "https://www.youtube.com/watch?v=W2KEWRPddN4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Which Shoes Will Protect Your Feet?",
+          "description": "Trending video from Ben Azelart in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
+          "uploadDate": "2025-06-24T21:50:02Z",
+          "embedUrl": "https://www.youtube.com/embed/nj6W9v6yjFk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 129136516
+          },
+          "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Last tak nhi dekha toh kya dekha🤣🌧️ #comedy #chetanmonga #shorts",
+          "description": "Trending video from Cheri's World in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/BgLt9BZ4OLY/hqdefault.jpg",
+          "uploadDate": "2025-06-30T08:24:36Z",
+          "embedUrl": "https://www.youtube.com/embed/BgLt9BZ4OLY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 10464612
+          },
+          "url": "https://www.youtube.com/watch?v=BgLt9BZ4OLY"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "VideoObject",
+          "name": "चिक्की निकली हगोड़ी💩🥴🤣 #funny #family #viralvideo #comedy #kajalsoni @kajalsoni",
+          "description": "Trending video from Kajal Soni in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/yVJiZQK3rD4/hqdefault.jpg",
+          "uploadDate": "2025-06-22T06:44:24Z",
+          "embedUrl": "https://www.youtube.com/embed/yVJiZQK3rD4",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 49108299
+          },
+          "url": "https://www.youtube.com/watch?v=yVJiZQK3rD4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "VideoObject",
+          "name": "That One Slow Eater 😂😂 #shorts #trending",
+          "description": "Trending video from Adarsh Solanki in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/jBAxtUKJx5A/hqdefault.jpg",
+          "uploadDate": "2025-06-22T03:37:31Z",
+          "embedUrl": "https://www.youtube.com/embed/jBAxtUKJx5A",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 40233403
+          },
+          "url": "https://www.youtube.com/watch?v=jBAxtUKJx5A"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "VideoObject",
+          "name": "जैसा को तैसा 😆 #funny #shorts",
+          "description": "Trending video from Harish prajapati in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/IA6zftdRDxc/hqdefault.jpg",
+          "uploadDate": "2025-07-02T00:30:26Z",
+          "embedUrl": "https://www.youtube.com/embed/IA6zftdRDxc",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 7466906
+          },
+          "url": "https://www.youtube.com/watch?v=IA6zftdRDxc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Maa❤️ #maa #shortvideo",
+          "description": "Trending video from Mr King2.O in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/JIZjT44b7IM/hqdefault.jpg",
+          "uploadDate": "2025-06-29T03:40:00Z",
+          "embedUrl": "https://www.youtube.com/embed/JIZjT44b7IM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 7828030
+          },
+          "url": "https://www.youtube.com/watch?v=JIZjT44b7IM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "VideoObject",
+          "name": "这也太厉害了 #火影忍者 #joker#cosplay",
+          "description": "Trending video from 佐助与鸣人 in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/YFXS0F2IxmM/hqdefault.jpg",
+          "uploadDate": "2025-06-29T04:00:41Z",
+          "embedUrl": "https://www.youtube.com/embed/YFXS0F2IxmM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 41774999
+          },
+          "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Mard ho ya Aurat ? 😡 #shorts #sareaam #iqrarulhassan",
+          "description": "Trending video from Sar e Aam in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/tfIK7rVcn_k/hqdefault.jpg",
+          "uploadDate": "2025-06-26T15:30:36Z",
+          "embedUrl": "https://www.youtube.com/embed/tfIK7rVcn_k",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1390390
+          },
+          "url": "https://www.youtube.com/watch?v=tfIK7rVcn_k"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Tom 🍓 Jerry (Nandu&Ammu)Real End Twist😍🎈#v5familyshow  #shorts #viralvideo",
+          "description": "Trending video from V5 Family Show in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/hPxBzoSzcIY/hqdefault.jpg",
+          "uploadDate": "2025-06-23T14:50:11Z",
+          "embedUrl": "https://www.youtube.com/embed/hPxBzoSzcIY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 44680953
+          },
+          "url": "https://www.youtube.com/watch?v=hPxBzoSzcIY"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Mann Mast Malang Last Episode 56 [Eng Sub] Presented by Diamond Paints & Ujooba Beauty Cream",
+          "description": "Trending video from HAR PAL GEO in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/_tPCT_22sQk/hqdefault.jpg",
+          "uploadDate": "2025-06-29T16:00:55Z",
+          "embedUrl": "https://www.youtube.com/embed/_tPCT_22sQk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 10302140
+          },
+          "url": "https://www.youtube.com/watch?v=_tPCT_22sQk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "VideoObject",
+          "name": "How Smart Baby Can Seek Help#Harley Quinn #joker",
+          "description": "Trending video from Harley Quinn with the Joker in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/qdMQoNaoohQ/hqdefault.jpg",
+          "uploadDate": "2025-06-28T19:32:32Z",
+          "embedUrl": "https://www.youtube.com/embed/qdMQoNaoohQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 27050091
+          },
+          "url": "https://www.youtube.com/watch?v=qdMQoNaoohQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Sleeping nowadays 😴 #elsarca #tiktok",
+          "description": "Trending video from Elsa Arca in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/RJlkHRa150g/hqdefault.jpg",
+          "uploadDate": "2025-06-30T04:41:07Z",
+          "embedUrl": "https://www.youtube.com/embed/RJlkHRa150g",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 14339175
+          },
+          "url": "https://www.youtube.com/watch?v=RJlkHRa150g"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Har Dam Nara | Ali Shanawar | 2025 / 1447",
+          "description": "Trending video from Nadeem Sarwar in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/929WA0F1p54/hqdefault.jpg",
+          "uploadDate": "2025-06-30T12:30:07Z",
+          "embedUrl": "https://www.youtube.com/embed/929WA0F1p54",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1954150
+          },
+          "url": "https://www.youtube.com/watch?v=929WA0F1p54"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Tom&Jerry🥰Funny moment 🤣 #shorts #shortvideo",
+          "description": "Trending video from Krishna Avyu in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/xsMzHLJyx10/hqdefault.jpg",
+          "uploadDate": "2025-06-27T13:46:50Z",
+          "embedUrl": "https://www.youtube.com/embed/xsMzHLJyx10",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 22886267
+          },
+          "url": "https://www.youtube.com/watch?v=xsMzHLJyx10"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "VideoObject",
+          "name": "$500 Water vs $1 Water – Blind Taste Test!",
+          "description": "Trending video from The Richey Family in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/IjCJ3P7SL9M/hqdefault.jpg",
+          "uploadDate": "2025-06-27T15:02:00Z",
+          "embedUrl": "https://www.youtube.com/embed/IjCJ3P7SL9M",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 70484166
+          },
+          "url": "https://www.youtube.com/watch?v=IjCJ3P7SL9M"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Swimming pool mai kya hogaya😱😭💔 #trending #emotional #motivation #shorts",
+          "description": "Trending video from Noman Official in Pakistan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/4GIRhUnwRAI/hqdefault.jpg",
+          "uploadDate": "2025-06-22T15:34:54Z",
+          "embedUrl": "https://www.youtube.com/embed/4GIRhUnwRAI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 16817285
+          },
+          "url": "https://www.youtube.com/watch?v=4GIRhUnwRAI"
+        }
+      }
+    ]
+  }
+}
