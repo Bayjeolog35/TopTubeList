@@ -382,7 +382,6 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
   }
 
   /* Normalde mobilde paneli tamamen gizle */
-@media (max-width: 768px) {
   .layout-wrapper.hide-when-panel-active:not(.site-button) {
     display: none;
   }
