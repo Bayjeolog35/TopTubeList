@@ -812,29 +812,32 @@
   <section class="about-section">
     <button id="aboutToggle" class="site-button">About Us</button>
     <div id="aboutContent">
-  <p><strong>Who are we?</strong><br>
-  Welcome to <strong>TopTubeList</strong> — the home of global <strong>YouTube video rankings</strong>. We're a data-driven platform created for trend-seekers, content creators, marketers, and everyday fans who want to know exactly what’s trending on YouTube — country by country, continent by continent. Our mission is to provide open and accurate access to the <strong>most viewed YouTube videos</strong> from every corner of the world.</p>
+ <p><strong>What is TopTubeList?</strong><br>
+    TopTubeList helps you quickly see what people are watching on YouTube. You can explore videos by continent or country. No clutter, no fancy talk. Just a clean snapshot of the most viewed videos — updated every 3 hours.</p>
 
-  <p><strong>Why does this matter?</strong><br>
-  In the digital age, YouTube is more than entertainment — it’s culture. It shapes opinions, sparks conversations, and launches careers. Whether it's a viral short, an explosive music video, or a game-changing documentary, millions turn to YouTube every day. By tracking the <strong>top trending YouTube videos</strong>, we give you a real-time pulse on what people are watching — not just locally, but globally.</p>
+    <p><strong>Why did we build this site?</strong><br>
+    My wife was in the kitchen cooking. My mission was clear: to answer that sacred question… <em>“What should we watch while eating?”</em><br>
+    Then suddenly, I found myself thinking: <em>“What do other couples watch during dinner?”</em> So, like anyone else, I turned to Google.</p>
 
-  <p><strong>How does it work?</strong><br>
-  Using the official <strong>YouTube Data API</strong>, we monitor and update statistics for the most-watched videos in over 190 countries and across all continents. Every <strong>3 hours</strong>, our system fetches fresh data — no manual updates, no guesswork. This ensures that you're always seeing the most accurate and up-to-date information. We categorize and sort content so you can explore the most popular YouTube videos by region, discover regional trends, and see how global content performs across borders.</p>
+    <p><strong>And what did I find?</strong><br>
+    “Most watched videos in June”…<br>
+    “Top videos of 2025”…<br>
+    Basically, just a highlight reel of the past.<br>
+    But I wasn’t looking for nostalgia — I wanted to know what’s trending <strong>right now</strong>.</p>
 
-  <p><strong>Who is this for?</strong><br>
-  Whether you're a digital marketer analyzing trends, a creator seeking inspiration, or just a curious browser, TopTubeList gives you an easy way to discover what’s hot on YouTube <em>right now</em>. We provide a clean, ad-light experience with no paywalls, no accounts required, and no fluff — just pure insights.</p>
+    <p>That day, we may not have found the perfect video to watch...<br>
+    But I realized we weren’t alone.<br>
+    There must be thousands of people wondering the exact same thing.<br>
+    And that’s when the idea of TopTubeList was born.</p>
 
-  <p><strong>What makes us different?</strong><br>
-  Unlike generic trend charts, we focus on clarity, speed, and geographical accuracy. Our lists are updated frequently, and we don’t limit ourselves to just one country or genre. From <strong>North America</strong> to <strong>Asia</strong>, from viral <strong>YouTube Shorts</strong> to high-budget movie trailers, we showcase what the world is watching — all in one place.</p>
+    <p><strong>And the cherry on top?</strong><br>
+    For creators who make “compilation videos” using trending clips, this site is basically a goldmine.</p>
 
-  <p><strong>How can you help?</strong><br>
-  We’re not asking for donations. But if you find our platform valuable, consider sharing it with others. Every visit, link, and mention helps us grow — and keeps the platform free and open to everyone. Supporting TopTubeList means supporting transparency in digital culture.</p>
+    <p><strong>How does it work?</strong><br>
+    Every 3 hours, we pull the most popular videos using YouTube’s official Data API. Then we sort them by country and continent, so you can easily see what’s trending anywhere in the world.</p>
 
-  <p><strong>What’s next?</strong><br>
-  In the near future, we’ll be adding features like historical trend charts, creator spotlight pages, and region-based comparison tools. Our goal is to become the go-to archive for <strong>YouTube trends</strong> — from breakout hits to long-term legends.</p>
-
-  <p><strong>Trending. Refreshed. Tracked.</strong><br>
-  That’s TopTubeList. Stay curious. Stay informed.</p>
+    <p><strong>This is TopTubeList.</strong><br>
+    If it’s trending, chances are… we’ve already listed it. 😉</p>
 </div>
 
   </section>
@@ -886,6 +889,25 @@
     }
   });
 
+ // Buton simgesini değiştir (isteğe bağlı)
+        if (document.body.classList.contains("dark-mode")) {
+            darkModeToggle.textContent = "☀️"; // Light mode simgesi
+        } else {
+            darkModeToggle.textContent = "🌙"; // Dark mode simgesi
+        }
+
+        // Tercihi localStorage'a kaydet (isteğe bağlı)
+        localStorage.setItem("preferred-theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    });
+
+    // Sayfa yüklendiğinde önceki tercih varsa uygula
+    const savedTheme = localStorage.getItem("preferred-theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        darkModeToggle.textContent = "☀️";
+    }
+}
+  
    // --- Harf filtreleme ---
     document.querySelectorAll(".alphabet-letter").forEach(letter => {
         letter.addEventListener("click", function (e) {
