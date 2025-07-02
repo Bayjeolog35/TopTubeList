@@ -520,19 +520,24 @@ background-color: #000;
 /*BUTTON STYLES*/
 
 .site-button {
+display: inline-block;
+  min-width: 160px;
+  text-align: center;
+  margin: 10px auto; /* Ortalar ve eşit boşluk bırakır */
+  
   background-color: #065fd4;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  min-width: 160px; /* Sabit genişlik */
-  text-align: center; /* Uzun yazılarda hizalama */
-  white-space: nowrap; /* Taşmayı engelle */
-  box-sizing: border-box; /* Padding dahil genişlik */
+
+.site-button:hover {
+  background-color: #004ab3;
 }
+
 
 .site-button:hover {
   background-color: #004ab3;
