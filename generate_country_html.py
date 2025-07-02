@@ -223,17 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {{
         }});
     }});
 
-    // --- FadeOut animation style block ---
-    const style = document.createElement("style");
-    style.textContent = `
-        @keyframes fadeOut {{
-            0% {{ opacity: 1; }}
-            80% {{ opacity: 1; }}
-            100% {{ opacity: 0; transform: translateY(10px); }}
-        }}
-    `;
-    document.head.appendChild(style);
-
+  
   
  // --- Contact Us Scroll + Toggle ---
     const contactToggle = document.getElementById("contactToggle");
