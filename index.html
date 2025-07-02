@@ -934,29 +934,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
   // --- Dark Mode Toggle ---
-const darkModeToggle = document.getElementById("darkModeToggle");
-if (darkModeToggle) {
+document.addEventListener("DOMContentLoaded", () => {
+  const darkModeToggle = document.getElementById("darkModeToggle");
+
+  // Sayfa yüklendiğinde dark mode'u uygula
+  const savedMode = localStorage.getItem("darkMode");
+  if (savedMode === "true") {
+    document.body.classList.add("dark-mode");
+  }
+
+  // Tıklanınca dark mode'u toggle et
+  if (darkModeToggle) {
     darkModeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-
-        // Buton simgesini değiştir (isteğe bağlı)
-        if (document.body.classList.contains("dark-mode")) {
-            darkModeToggle.textContent = "☀️"; // Light mode simgesi
-        } else {
-            darkModeToggle.textContent = "🌙"; // Dark mode simgesi
-        }
-
-        // Tercihi localStorage'a kaydet (isteğe bağlı)
-        localStorage.setItem("preferred-theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+      const isDarkNow = document.body.classList.toggle("dark-mode");
+      localStorage.setItem("darkMode", isDarkNow);
     });
+  }
+});
 
-    // Sayfa yüklendiğinde önceki tercih varsa uygula
-    const savedTheme = localStorage.getItem("preferred-theme");
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark-mode");
-        darkModeToggle.textContent = "☀️";
-    }
-}
     // --- About Us Scroll + Toggle ---
     const aboutToggle = document.getElementById("aboutToggle");
     const aboutContent = document.getElementById("aboutContent");
