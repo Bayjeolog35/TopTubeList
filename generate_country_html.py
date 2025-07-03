@@ -636,14 +636,15 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
         country_buttons_html.append(
             f'''<button onclick="location.href='../{sanitized_folder_name}/'" data-letter="{first_letter}" class="country-button{is_current_country_active}">{c_display_name}</button>'''
         )
-
-
+    
+    
     country_dir = os.path.join(os.getcwd(), country_folder_name)
     os.makedirs(country_dir, exist_ok=True)
 
     # JavaScript ile video listesini doldurmak yerine, doğrudan HTML şablonuna dahil edilecek bir placeholder belirle
     # Eğer video verisi boşsa, doğrudan bir mesaj göster
- if not videos_data:
+
+    if not videos_data:
     video_list_html_placeholder = """
     <div id="videoList" class="video-list">
         <div style="padding: 40px; text-align: center; grid-column: 1 / -1;">
@@ -654,8 +655,8 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
     </div>
     <button id="loadMoreBtn" class="site-button" style="display: none;">Load More</button>
     """
- else:
-    video_list_html_placeholder = f'''
+    else:
+    video_list_html_placeholder = f"""
     <div id="videoList" class="video-list"></div>
     <button id="loadMoreBtn" class="site-button">Load More</button>
     <script>
@@ -674,8 +675,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
                 renderVideos();
             }});
     </script>
-    '''
-
+    """
 
 
 
