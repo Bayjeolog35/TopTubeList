@@ -7,10 +7,6 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
     """Belirtilen ülke için HTML dosyasını oluşturur."""
 
     display_country_name = COUNTRY_INFO.get(country_folder_name, {}).get("display_name", country_folder_name.replace('_', ' '))
-
-    country_dir = os.path.join(os.getcwd(), country_folder_name)
-    os.makedirs(country_dir, exist_ok=True)
-
     # HTML şablonu (Yollar ülke klasöründen ana dizine göre ayarlandı)
     # NOT: JavaScript içindeki süslü parantezlerin (örn: { opacity: 1; }) Python formatlama tarafından yanlış algılanmaması için '{{' ve '}}' kullanıldı.
     # HTML etiketleri içinde dinamik olarak dolacak yerler için tek '{' ve '}' kullanılmaya devam edildi.
@@ -361,18 +357,20 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
         country_buttons_html.append(f'<button onclick="location.href=\'../{c_folder_name}/index.html\'" data-letter="{first_letter}">{c_display_name}</button>')
     country_buttons_html = "\n".join(country_buttons_html)
 
-if not videos_data:
-    video_list_html = """
-    <div style="padding: 40px; text-align: center;">
-        <h2>📡 Sorry!</h2>
-        <p>We couldn’t fetch trending YouTube videos for this country at the moment.</p>
-        <p><em>(YouTube API might not be returning data for this region right now.)</em></p>
-    </div>
-    """
-else:
-    video_list_html = '<div id="videoList" class="video-list"></div>\n<button id="loadMoreBtn" class="site-button">Load More</button>'
+    country_dir = os.path.join(os.getcwd(), country_folder_name)
+    os.makedirs(country_dir, exist_ok=True)
 
-    
+    if not videos_data:
+        video_list_html = """
+        <div style="padding: 40px; text-align: center;">
+            <h2>📡 Sorry!</h2>
+            <p>We couldn’t fetch trending YouTube videos for this country at the moment.</p>
+            <p><em>(YouTube API might not be returning data for this region right now.)</em></p>
+        </div>
+        """
+    else:
+        video_list_html = '<div id="videoList" class="video-list"></div>\n<button id="loadMoreBtn" class="site-button">Load More</button>'
+
     html_content = html_template.format(
         display_country_name=display_country_name,
         country_folder_name=country_folder_name,
@@ -392,6 +390,7 @@ else:
         f.write(html_content)
     print(f"{output_path} oluşturuldu.")
 
+      
 def main():
     # JSON dosyalarını yeni yoldan oku
     base_data_dir = "Country_data"
