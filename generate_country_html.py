@@ -1,7 +1,7 @@
 import json
 import os
 import re
-from country_data import COUNTRY_INFO, CONTINENT_COUNTRIES # WORLDWIDE_AGGREGATION_COUNTRIES kaldırıldı.
+from country_data import COUNTRY_INFO, CONTINENT_COUNTRIES
 
 def generate_html_file(country_folder_name, videos_data, structured_data):
     """Belirtilen ülke için HTML dosyasını oluşturur."""
@@ -45,7 +45,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
         <a href="../asia.html" class="{asia_active}">Asia</a>
         <a href="../europe.html" class="{europe_active}">Europe</a>
         <a href="../africa.html" class="{africa_active}">Africa</a>
-        <a href="../north_america.html" class="active">North America</a>
+        <a href="../north_america.html" class="{north_america_active}">North America</a>
         <a href="../south_america.html" class="{south_america_active}">South America</a>
         <a href="../oceania.html" class="{oceania_active}">Oceania</a>
     </nav>
@@ -90,7 +90,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
         </div>
     </main>
     
-    {video_list_html} {/* Burası değişti: videoList div'i video_list_html ile dinamik olarak doldurulacak */}
+    {video_list_html} {/* videoList div'i video_list_html ile dinamik olarak doldurulacak */}
     
     <section class="about-section">
         <button id="aboutToggle" class="site-button">About Us</button>
@@ -281,7 +281,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
             }});
         }}
         
-        /* Video Render (Burada fetch URL'si dinamik olmalı)*/
+        /* Video Render */
         document.addEventListener("DOMContentLoaded", () => {{
             const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
             document.body.classList.toggle('dark-mode', darkModeEnabled);
@@ -296,7 +296,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
                 if (allVideos.length === 0) {{
                     // Video yoksa özel mesaj göster
                     container.innerHTML = `
-                        <div style="padding: 40px; text-align: center;">
+                        <div style="padding: 40px; text-align: center; grid-column: 1 / -1;">
                             <h2>📡 Sorry!</h2>
                             <p>We couldn’t fetch trending YouTube videos for this country at the moment.</p>
                             <p><em>(YouTube API might not be returning data for this region right now.)</em></p>
@@ -377,8 +377,12 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
     for c_folder_name, c_info in sorted_country_info:
         c_display_name = c_info.get("display_name", c_folder_name.replace('_', ' '))
         first_letter = c_display_name[0].upper()
-        # Ülke linkleri için göreceli yol: ../[ülke_adı]/index.html
-        country_buttons_html.append(f'<button onclick="location.href=\'../{c_folder_name}/index.html\'" data-letter="{first_letter}">{c_display_name}</button>')
+        
+        # Eğer bu döngüdeki ülke (c_folder_name) şu anda HTML'ini oluşturduğumuz ülke (country_folder_name) ise 'active' sınıfını ekle
+        is_current_country_active = " active" if c_folder_name == country_folder_name else ""
+        
+        # Class attribute'ine hem genel 'country-button' sınıfını hem de 'active' sınıfını ekliyoruz.
+        country_buttons_html.append(f'<button onclick="location.href=\'../{c_folder_name}/index.html\'" data-letter="{first_letter}" class="country-button{is_current_country_active}">{c_display_name}</button>')
     country_buttons_html = "\n".join(country_buttons_html)
 
     country_dir = os.path.join(os.getcwd(), country_folder_name)
@@ -406,14 +410,14 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
         display_country_name=display_country_name,
         country_folder_name=country_folder_name,
         structured_data_json=json.dumps(structured_data, indent=2),
-        asia_active=asia_active,
+        asia_active=asia_active, 
         europe_active=europe_active,
         africa_active=africa_active,
-        north_america_active=north_america_active, # Buradaki active sınıfını sabit "active" yerine dinamik yapmayı düşünebilirsiniz.
+        north_america_active=north_america_active,
         south_america_active=south_america_active,
         oceania_active=oceania_active,
         country_buttons=country_buttons_html,
-        video_list_html=video_list_html_placeholder # Değişken adı ve kullanımı güncellendi
+        video_list_html=video_list_html_placeholder
     )
 
     output_path = os.path.join(country_dir, "index.html")
