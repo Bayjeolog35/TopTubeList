@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>Trending YouTube Videos in trinidad-and-tobago - Updated Every 3 Hours | TopTubeList</title>
-    <meta name="description" content="Watch the most popular YouTube videos trending across trinidad-and-tobago. Stay current with viral content.">
-    <meta name="keywords" content="YouTube trends trinidad-and-tobago, popular videos trinidad-and-tobago, trending YouTube, viral content">
+    <title>Trending YouTube Videos in Trinidad-And-Tobago - Updated Every 3 Hours | TopTubeList</title>
+    <meta name="description" content="Watch the most popular YouTube videos trending across Trinidad-And-Tobago. Stay current with viral content.">
+    <meta name="keywords" content="YouTube trends Trinidad-And-Tobago, popular videos Trinidad-And-Tobago, trending YouTube, viral content">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://toptubelist.com/trinidad-and-tobago/" />
     <link rel="stylesheet" href="../style.css" />
@@ -21,7 +21,7 @@
     <div class="container header-flex">
         <a href="../index.html" id="logoLink"> <img src="../TopTubeListLogo.webp" alt="TopTubeList Logo" width="100" style="margin-right: 12px; vertical-align: middle;">
         </a>
-        <h1>Most Viewed in trinidad-and-tobago</h1>
+        <h1>Most Viewed in Trinidad-And-Tobago</h1>
         <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
     </div>
 
@@ -145,6 +145,14 @@
 <button onclick="location.href='../haiti/'" data-letter="H" class="country-button">Haiti</button>
 <button onclick="location.href='../honduras/'" data-letter="H" class="country-button">Honduras</button>
 <button onclick="location.href='../hungary/'" data-letter="H" class="country-button">Hungary</button>
+<button onclick="location.href='../ıceland/'" data-letter="I" class="country-button">Iceland</button>
+<button onclick="location.href='../ındia/'" data-letter="I" class="country-button">India</button>
+<button onclick="location.href='../ındonesia/'" data-letter="I" class="country-button">Indonesia</button>
+<button onclick="location.href='../ıran/'" data-letter="I" class="country-button">Iran</button>
+<button onclick="location.href='../ıraq/'" data-letter="I" class="country-button">Iraq</button>
+<button onclick="location.href='../ıreland/'" data-letter="I" class="country-button">Ireland</button>
+<button onclick="location.href='../ısrael/'" data-letter="I" class="country-button">Israel</button>
+<button onclick="location.href='../ıtaly/'" data-letter="I" class="country-button">Italy</button>
 <button onclick="location.href='../jamaica/'" data-letter="J" class="country-button">Jamaica</button>
 <button onclick="location.href='../japan/'" data-letter="J" class="country-button">Japan</button>
 <button onclick="location.href='../jordan/'" data-letter="J" class="country-button">Jordan</button>
@@ -258,27 +266,15 @@
 <button onclick="location.href='../yemen/'" data-letter="Y" class="country-button">Yemen</button>
 <button onclick="location.href='../zambia/'" data-letter="Z" class="country-button">Zambia</button>
 <button onclick="location.href='../zimbabwe/'" data-letter="Z" class="country-button">Zimbabwe</button>
-<button onclick="location.href='../ıceland/'" data-letter="I" class="country-button">Iceland</button>
-<button onclick="location.href='../ındia/'" data-letter="I" class="country-button">India</button>
-<button onclick="location.href='../ındonesia/'" data-letter="I" class="country-button">Indonesia</button>
-<button onclick="location.href='../ıran/'" data-letter="I" class="country-button">Iran</button>
-<button onclick="location.href='../ıraq/'" data-letter="I" class="country-button">Iraq</button>
-<button onclick="location.href='../ıreland/'" data-letter="I" class="country-button">Ireland</button>
-<button onclick="location.href='../ısrael/'" data-letter="I" class="country-button">Israel</button>
-<button onclick="location.href='../ıtaly/'" data-letter="I" class="country-button">Italy</button>
             </div>
         </div>
 </main>
     
     
-    <div id="videoList" class="video-list">
-        <div style="padding: 40px; text-align: center; grid-column: 1 / -1;">
-            <h2>📡 Sorry!</h2>
-            <p>We couldn't fetch trending YouTube videos for this country at the moment.</p>
-            <p><em>(YouTube API might not be returning data for this region right now.)</em></p>
-        </div>
+    <div class="video-list-wrapper">
+        <div id="videoList" class="video-list"></div>
+        <button id="loadMoreBtn" class="site-button">Load More</button>
     </div>
-    <button id="loadMoreBtn" class="site-button" style="display: none;">Load More</button>
      <section class="about-section">
         <button id="aboutToggle" class="site-button">About Us</button>
         <div id="aboutContent">
@@ -498,10 +494,12 @@
             document.body.classList.toggle('dark-mode', darkModeEnabled);
 
             let allVideos = [];
-            let displayCount = 10;
+            let displayCount = 20; // Başlangıçta 20 video göster
 
             function renderVideos() {
                 const container = document.getElementById("videoList");
+                if (!container) return; // container yoksa çık
+
                 container.innerHTML = ""; // İçeriği temizle
 
                 if (allVideos.length === 0) {
@@ -513,7 +511,8 @@
                             <p><em>(YouTube API might not be returning data for this region right now.)</em></p>
                         </div>
                     `;
-                    document.getElementById("loadMoreBtn").style.display = "none";
+                    const loadMoreBtn = document.getElementById("loadMoreBtn");
+                    if (loadMoreBtn) loadMoreBtn.style.display = "none";
                     return; // Fonksiyondan çık
                 }
 
@@ -523,7 +522,7 @@
                     card.innerHTML = `
                         <img src="${video.thumbnail}" alt="${video.title}" />
                         <div class="video-info">
-                            <h2>${video.title}</h2>
+                            <h3>${video.title}</h3>
                             <p><strong>Uploaded:</strong> ${new Date(video.uploadDate).toLocaleDateString()}</p>
                             <p><strong>Views:</strong> ${video.views_str}</p>
                             <a href="${video.url}" target="_blank">Watch on YouTube</a>
@@ -533,14 +532,20 @@
                     setTimeout(() => card.classList.add("show"), 50);
                 });
 
-                document.getElementById("loadMoreBtn").style.display =
-                    displayCount >= allVideos.length ? "none" : "block";
+                const loadMoreBtn = document.getElementById("loadMoreBtn");
+                if (loadMoreBtn) {
+                    loadMoreBtn.style.display =
+                        displayCount >= allVideos.length ? "none" : "block";
+                }
             }
 
             // JSON dosyasının yolu dinamik olarak Python'dan geliyor
-            fetch("../Country_data/videos/videos_trinidad-and-tobago.json")
+            // DİKKAT: Burada yolu mutlak yapıyoruz!
+            fetch("/Country_data/videos/videos-trinidad-and-tobago.json") 
                 .then(res => {
                     if (!res.ok) {
+                        // Eğer dosya bulunamazsa (404) veya başka bir HTTP hatası olursa
+                        console.error(`HTTP error fetching videos: ${res.status} for /Country_data/videos/videos-trinidad-and-tobago.json`);
                         throw new Error(`HTTP error! status: ${res.status}`);
                     }
                     return res.json();
@@ -555,10 +560,13 @@
                     renderVideos(); // Boş liste ile tekrar render et (hata mesajını gösterir)
                 });
             
-            document.getElementById("loadMoreBtn").addEventListener("click", () => {
-                displayCount += 10;
-                renderVideos();
-            });
+            const loadMoreBtn = document.getElementById("loadMoreBtn");
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener("click", () => {
+                    displayCount += 10;
+                    renderVideos();
+                });
+            }
         });
     </script>
 </body>
