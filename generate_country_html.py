@@ -27,9 +27,12 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103"
         crossorigin="anonymous"></script>
 
-    <script type="application/ld+json">
-{structured_data_json}
-</script>
+if structured_data:
+    structured_data_block = f"""<script type="application/ld+json">
+{json.dumps(structured_data, indent=2)}
+</script>"""
+else:
+    structured_data_block = ""
 </head>
 <body>
 <header>
@@ -409,7 +412,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
     html_content = html_template.format(
         display_country_name=display_country_name,
         country_folder_name=country_folder_name,
-        structured_data_json=json.dumps(structured_data, indent=2),
+        {structured_data_block}
         asia_active=asia_active, 
         europe_active=europe_active,
         africa_active=africa_active,
