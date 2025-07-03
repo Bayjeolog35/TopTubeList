@@ -623,8 +623,8 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
                         <img src="${{video.thumbnail}}" alt="${{video.title}}" />
                         <div class="video-info">
                             <h3>${{video.title}}</h3>
-                            <p><strong>Uploaded:</strong> ${{video.published_date_formatted}}</p>
-                            <p><strong>Views:</strong> ${{video.views_formatted}}</p>
+                            <p><strong>Uploaded:</strong> ${{new Date(video.uploadDate).toLocaleDateString()}}</p>
+                            <p><strong>Views:</strong> ${{video.views_str}}</p>
                             <a href="${{video.url}}" target="_blank">Watch on YouTube</a>
                         </div>
                     `;
