@@ -27,11 +27,11 @@ jobs:
     #   # run: pip install -r requirements.txt
 
     - name: Dosya Adı Standardizasyon Betiğini Çalıştır
-      # Betiğin deponuzun kök dizininde olduğunu varsayar.
-      # Eğer betik bir alt dizinde (örn: scripts/rename_script.py) ise yolu güncelleyin.
-      run: python rename_script.py
+    
+    run: python scripts/rename_script.py # Yolunuzu buraya göre ayarlayın
 
-    - name: Değişiklikleri Kontrol Et
+    - name: Deüişiklikleri Kontrol Et
+    
       id: git_status # Bu adımın çıktısını almak için bir ID atıyoruz
       run: |
         # Git kullanıcı adını ve e-postasını ayarlar (otomatik commit için gereklidir)
