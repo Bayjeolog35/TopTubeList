@@ -223,7 +223,7 @@ def main():
     "brunei": {"code": "bn"},
     "bulgaria": {"code": "bg"},
     "burkina-faso": {"code": "bf", "display-name": "burkina faso"},
-    "burundi": {"code": "bı"},
+    "burundi": {"code": "bi"},
     "cabo-verde": {"code": "cv", "display-name": "cabo verde"},
     "cambodia": {"code": "kh"},
     "cameroon": {"code": "cm"},
@@ -237,7 +237,7 @@ def main():
     "congo-democratic-republicofthe": {"code": "cd", "display-name": "congo (democratic republic of the)"},
     "congo-republic-of-the": {"code": "cg", "display-name": "congo (republic of the)"},
     "costa-rica": {"code": "cr", "display-name": "costa rica"},
-    "cote-dıvoire": {"code": "cı", "display-name": "cote d'ıvoire"},
+    "cote-divoire": {"code": "ci", "display-name": "cote d'ivoire"},
     "croatia": {"code": "hr"},
     "cuba": {"code": "cu"}, # youtube'da küba için doğrudan trend verisi kısıtlı olabilir
     "cyprus": {"code": "cy"},
@@ -249,14 +249,14 @@ def main():
     "east-timor": {"code": "tl", "display-name": "east timor"},
     "ecuador": {"code": "ec"},
     "egypt": {"code": "eg"},
-    "elsalvador": {"code": "sv", "display-name": "el salvador"},
+    "el-salvador": {"code": "sv", "display-name": "el salvador"},
     "equatorial-guinea": {"code": "gq", "display-name": "equatorial guinea"},
     "eritrea": {"code": "er"},
     "estonia": {"code": "ee"},
     "eswatini": {"code": "sz"},
     "ethiopia": {"code": "et"},
     "fiji": {"code": "fj"},
-    "finland": {"code": "fı"},
+    "finland": {"code": "fi"},
     "france": {"code": "fr"},
     "gabon": {"code": "ga"},
     "gambia": {"code": "gm"},
@@ -272,23 +272,23 @@ def main():
     "haiti": {"code": "ht"},
     "honduras": {"code": "hn"},
     "hungary": {"code": "hu"},
-    "ıceland": {"code": "ıs"},
-    "ındia": {"code": "ın"},
-    "ındonesia": {"code": "ıd"},
-    "ıran": {"code": "ır"}, # youtube'da iran için doğrudan trend verisi kısıtlı olabilir
-    "ıraq": {"code": "ıq"},
-    "ıreland": {"code": "ıe"},
-    "ısrael": {"code": "ıl"},
-    "ıtaly": {"code": "ıt"},
+    "iceland": {"code": "is"},
+    "india": {"code": "in"},
+    "indonesia": {"code": "id"},
+    "iran": {"code": "ir"}, # youtube'da iran için doğrudan trend verisi kısıtlı olabilir
+    "iraq": {"code": "iq"},
+    "ireland": {"code": "ie"},
+    "israel": {"code": "il"},
+    "italy": {"code": "it"},
     "jamaica": {"code": "jm"},
     "japan": {"code": "jp"},
     "jordan": {"code": "jo"},
     "kazakhstan": {"code": "kz"},
     "kenya": {"code": "ke"},
-    "kiribati": {"code": "kı"},
+    "kiribati": {"code": "ki"},
     "korea-north": {"code": "kp", "display-name": "korea (north)"}, # youtube'da kuzey kore için doğrudan trend verisi kısıtlı olabilir
     "korea-south": {"code": "kr", "display-name": "korea (south)"},
-    "kosovo": {"code": "xk", "display-name": "kosovo"}, # ıso 3166-1 alpha-2 standardına dahil değil, dikkat
+    "kosovo": {"code": "xk", "display-name": "kosovo"}, # iso 3166-1 alpha-2 standardına dahil değil, dikkat
     "kuwait": {"code": "kw"},
     "kyrgyzstan": {"code": "kg"},
     "laos": {"code": "la"},
@@ -297,7 +297,7 @@ def main():
     "lesotho": {"code": "ls"},
     "liberia": {"code": "lr"},
     "libya": {"code": "ly"},
-    "liechtenstein": {"code": "lı"},
+    "liechtenstein": {"code": "li"},
     "lithuania": {"code": "lt"},
     "luxembourg": {"code": "lu"},
     "madagascar": {"code": "mg"},
@@ -306,7 +306,7 @@ def main():
     "maldives": {"code": "mv"},
     "mali": {"code": "ml"},
     "malta": {"code": "mt"},
-    "marshall-ıslands": {"code": "mh", "display-name": "marshall ıslands"},
+    "marshall-islands": {"code": "mh", "display-name": "marshall islands"},
     "mauritania": {"code": "mr"},
     "mauritius": {"code": "mu"},
     "mexico": {"code": "mx"},
@@ -323,7 +323,7 @@ def main():
     "nepal": {"code": "np"},
     "netherlands": {"code": "nl"},
     "new-zealand": {"code": "nz", "display-name": "new zealand"},
-    "nicaragua": {"code": "nı"},
+    "nicaragua": {"code": "ni"},
     "niger": {"code": "ne"},
     "nigeria": {"code": "ng"},
     "north-macedonia": {"code": "mk", "display-name": "north macedonia"},
@@ -356,8 +356,8 @@ def main():
     "sierra-leone": {"code": "sl", "display-name": "sierra leone"},
     "singapore": {"code": "sg"},
     "slovakia": {"code": "sk"},
-    "slovenia": {"code": "sı"},
-    "solomon-ıslands": {"code": "sb", "display-name": "solomon ıslands"},
+    "slovenia": {"code": "si"},
+    "solomon-islands": {"code": "sb", "display-name": "solomon islands"},
     "somalia": {"code": "so"},
     "south-africa": {"code": "za", "display-name": "south africa"},
     "south-sudan": {"code": "ss", "display-name": "south sudan"},
@@ -393,9 +393,9 @@ def main():
     "yemen": {"code": "ye"},
     "zambia": {"code": "zm"},
     "zimbabwe": {"code": "zw"}
-  }
+    }
 
-  for country_folder, country_info in country_codes_to_process.items():
+    for country_folder, country_info in country_codes_to_process.items():
         country_code = country_info["code"]
         print(f"\nİşleniyor: {country_folder} ({country_code})")
         
