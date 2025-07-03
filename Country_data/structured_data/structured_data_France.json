@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1376110
+            "userInteractionCount": 1421667
           },
           "url": "https://www.youtube.com/watch?v=fnZoezV5EcI"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 880288
+            "userInteractionCount": 921987
           },
           "url": "https://www.youtube.com/watch?v=6WhO9K6PzjQ"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 388649
+            "userInteractionCount": 408633
           },
           "url": "https://www.youtube.com/watch?v=hMVYkYy0rzE"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Un Québécois teste les chaînes de restaurants en France avec Elian",
-          "description": "Trending video from Gurky in France",
-          "thumbnailUrl": "https://i.ytimg.com/vi/4TD9PZFUN2o/hqdefault.jpg",
-          "uploadDate": "2025-07-01T15:02:16Z",
-          "embedUrl": "https://www.youtube.com/embed/4TD9PZFUN2o",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 541936
-          },
-          "url": "https://www.youtube.com/watch?v=4TD9PZFUN2o"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Il organisait des jeux macabres avec ses victimes...",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3358309
+            "userInteractionCount": 3478610
           },
           "url": "https://www.youtube.com/watch?v=Fb1Z3cMAlrc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Un Québécois teste les chaînes de restaurants en France avec Elian",
+          "description": "Trending video from Gurky in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/4TD9PZFUN2o/hqdefault.jpg",
+          "uploadDate": "2025-07-01T15:02:16Z",
+          "embedUrl": "https://www.youtube.com/embed/4TD9PZFUN2o",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 569955
+          },
+          "url": "https://www.youtube.com/watch?v=4TD9PZFUN2o"
         }
       }
     ]

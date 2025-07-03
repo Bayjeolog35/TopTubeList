@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 103458428
+            "userInteractionCount": 105446660
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 40836624
+            "userInteractionCount": 41179257
           },
           "url": "https://www.youtube.com/watch?v=cllwgGfFwKg"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 42123062
+            "userInteractionCount": 42981491
           },
           "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
         }
@@ -68,6 +68,24 @@
       {
         "@type": "ListItem",
         "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Parents surprised 🥰🥰🥰🥰🥰",
+          "description": "Trending video from VR VLOGS💯 in Senegal",
+          "thumbnailUrl": "https://i.ytimg.com/vi/57ifnvrZ9BQ/hqdefault.jpg",
+          "uploadDate": "2025-07-01T12:30:06Z",
+          "embedUrl": "https://www.youtube.com/embed/57ifnvrZ9BQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 13953015
+          },
+          "url": "https://www.youtube.com/watch?v=57ifnvrZ9BQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Tom&Jerry🥰Funny moment 🤣 #shorts #shortvideo",
@@ -78,27 +96,9 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 22950992
+            "userInteractionCount": 23156476
           },
           "url": "https://www.youtube.com/watch?v=xsMzHLJyx10"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "BÉTÉ BÉTÉ - Saison 2 - Episode 58 **VOSTFR**",
-          "description": "Trending video from EvenProd in Senegal",
-          "thumbnailUrl": "https://i.ytimg.com/vi/9tW8EGzhSEI/hqdefault.jpg",
-          "uploadDate": "2025-06-30T20:30:02Z",
-          "embedUrl": "https://www.youtube.com/embed/9tW8EGzhSEI",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2946449
-          },
-          "url": "https://www.youtube.com/watch?v=9tW8EGzhSEI"
         }
       }
     ]

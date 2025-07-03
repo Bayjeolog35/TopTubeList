@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 285487
+            "userInteractionCount": 311491
           },
           "url": "https://www.youtube.com/watch?v=MxhQuAT8F1k"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 235058
+            "userInteractionCount": 258951
           },
           "url": "https://www.youtube.com/watch?v=Ur0FF_rKFFQ"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "ملخص مباراة الهلال و مانشستر سيتي 4-3 في كأس العالم للأندية",
-          "description": "Trending video from MBC1 in Algeria",
-          "thumbnailUrl": "https://i.ytimg.com/vi/sWjkAPI4NZ8/hqdefault.jpg",
-          "uploadDate": "2025-07-01T03:58:00Z",
-          "embedUrl": "https://www.youtube.com/embed/sWjkAPI4NZ8",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2486258
-          },
-          "url": "https://www.youtube.com/watch?v=sWjkAPI4NZ8"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Kader tirigo / problème fiya machi zahri / ft tchiko 22 clips officiel 2025",
@@ -78,9 +60,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 215333
+            "userInteractionCount": 239197
           },
           "url": "https://www.youtube.com/watch?v=zRuxywQD7Pc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "ملخص مباراة الهلال و مانشستر سيتي 4-3 في كأس العالم للأندية",
+          "description": "Trending video from MBC1 in Algeria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/sWjkAPI4NZ8/hqdefault.jpg",
+          "uploadDate": "2025-07-01T03:58:00Z",
+          "embedUrl": "https://www.youtube.com/embed/sWjkAPI4NZ8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2534130
+          },
+          "url": "https://www.youtube.com/watch?v=sWjkAPI4NZ8"
         }
       },
       {
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 515276
+            "userInteractionCount": 529408
           },
           "url": "https://www.youtube.com/watch?v=ZkXf7s8QXRw"
         }

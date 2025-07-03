@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3510262
+            "userInteractionCount": 3781967
           },
           "url": "https://www.youtube.com/watch?v=W91CXLxz-iY"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 669462
+            "userInteractionCount": 800390
           },
           "url": "https://www.youtube.com/watch?v=tD6zVPG63AU"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Manchester City vs Al Hilal (3-4) | Resumen | Highlights Mundial de Clubes FIFA 2025™",
-          "description": "Trending video from DAZN Fútbol in Guatemala",
-          "thumbnailUrl": "https://i.ytimg.com/vi/pZ_4GMBo3Zk/hqdefault.jpg",
-          "uploadDate": "2025-07-01T07:40:24Z",
-          "embedUrl": "https://www.youtube.com/embed/pZ_4GMBo3Zk",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1422320
-          },
-          "url": "https://www.youtube.com/watch?v=pZ_4GMBo3Zk"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Marcos Villalobos, Daniel Cuevas - MANIACA (Video Oficial)",
@@ -78,9 +60,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 162778
+            "userInteractionCount": 188772
           },
           "url": "https://www.youtube.com/watch?v=CALasbhUPb4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Manchester City vs Al Hilal (3-4) | Resumen | Highlights Mundial de Clubes FIFA 2025™",
+          "description": "Trending video from DAZN Fútbol in Guatemala",
+          "thumbnailUrl": "https://i.ytimg.com/vi/pZ_4GMBo3Zk/hqdefault.jpg",
+          "uploadDate": "2025-07-01T07:40:24Z",
+          "embedUrl": "https://www.youtube.com/embed/pZ_4GMBo3Zk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1457347
+          },
+          "url": "https://www.youtube.com/watch?v=pZ_4GMBo3Zk"
         }
       },
       {
@@ -88,17 +88,17 @@
         "position": 5,
         "item": {
           "@type": "VideoObject",
-          "name": "Con GARRA CHAPÍN, GUATEMALA AVANZA a SEMIFINALES tras DRAMÁTICOS PENALES ante CANADÁ | Copa Oro",
-          "description": "Trending video from ESPN Deportes in Guatemala",
-          "thumbnailUrl": "https://i.ytimg.com/vi/j3eRZHjTGYY/hqdefault.jpg",
-          "uploadDate": "2025-06-29T22:45:49Z",
-          "embedUrl": "https://www.youtube.com/embed/j3eRZHjTGYY",
+          "name": "Chespirito: Sin Querer Queriendo | Episodio 5 Avance | Max",
+          "description": "Trending video from Max Latinoamérica in Guatemala",
+          "thumbnailUrl": "https://i.ytimg.com/vi/GJMQtw1bn4M/hqdefault.jpg",
+          "uploadDate": "2025-06-30T18:00:24Z",
+          "embedUrl": "https://www.youtube.com/embed/GJMQtw1bn4M",
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 392447
+            "userInteractionCount": 385776
           },
-          "url": "https://www.youtube.com/watch?v=j3eRZHjTGYY"
+          "url": "https://www.youtube.com/watch?v=GJMQtw1bn4M"
         }
       }
     ]

@@ -16,24 +16,6 @@
         "position": 1,
         "item": {
           "@type": "VideoObject",
-          "name": "Как мы потеряли идеальный банан",
-          "description": "Trending video from i11ushenka in Russia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/yh5syR6depU/hqdefault.jpg",
-          "uploadDate": "2025-07-02T09:00:53Z",
-          "embedUrl": "https://www.youtube.com/embed/yh5syR6depU",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1843658
-          },
-          "url": "https://www.youtube.com/watch?v=yh5syR6depU"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "VideoObject",
           "name": "Арбуз наехал на деда! 😈",
           "description": "Trending video from Edward Bil in Russia",
           "thumbnailUrl": "https://i.ytimg.com/vi/gKKT2Ai4LIY/hqdefault.jpg",
@@ -42,9 +24,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 565065
+            "userInteractionCount": 639846
           },
           "url": "https://www.youtube.com/watch?v=gKKT2Ai4LIY"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Как мы потеряли идеальный банан",
+          "description": "Trending video from i11ushenka in Russia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/yh5syR6depU/hqdefault.jpg",
+          "uploadDate": "2025-07-02T09:00:53Z",
+          "embedUrl": "https://www.youtube.com/embed/yh5syR6depU",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2029492
+          },
+          "url": "https://www.youtube.com/watch?v=yh5syR6depU"
         }
       },
       {
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 504190
+            "userInteractionCount": 523693
           },
           "url": "https://www.youtube.com/watch?v=w7GW6vQrrls"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "ОСТАВИЛИ ДРУЗЕЙ НАЕДИНЕ С 4 ДЕТЬМИ! Под скрытыми камерами / ОНИ СБЕЖАЛИ!",
-          "description": "Trending video from Димасблог in Russia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/VVI1nBOLRIc/hqdefault.jpg",
-          "uploadDate": "2025-07-02T14:00:06Z",
-          "embedUrl": "https://www.youtube.com/embed/VVI1nBOLRIc",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 185477
-          },
-          "url": "https://www.youtube.com/watch?v=VVI1nBOLRIc"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "МЕДНЫЙ ГООООООЛем",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 647242
+            "userInteractionCount": 665523
           },
           "url": "https://www.youtube.com/watch?v=b2zgMO63rQ0"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "$1 vs $1000 Nerf Gun!",
+          "description": "Trending video from Jesser in Russia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/am_Rb1QZzxs/hqdefault.jpg",
+          "uploadDate": "2025-07-01T20:00:03Z",
+          "embedUrl": "https://www.youtube.com/embed/am_Rb1QZzxs",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 4099458
+          },
+          "url": "https://www.youtube.com/watch?v=am_Rb1QZzxs"
         }
       }
     ]

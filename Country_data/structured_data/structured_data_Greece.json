@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 103458428
+            "userInteractionCount": 105446660
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 42123062
+            "userInteractionCount": 42981491
           },
           "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "I Stole His Brainrots… 😋🦈 (Steal a Brainrot Roblox ASMR)",
-          "description": "Trending video from Spizee in Greece",
-          "thumbnailUrl": "https://i.ytimg.com/vi/u8hQ_nBD8eg/hqdefault.jpg",
-          "uploadDate": "2025-06-28T17:42:38Z",
-          "embedUrl": "https://www.youtube.com/embed/u8hQ_nBD8eg",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 32621678
-          },
-          "url": "https://www.youtube.com/watch?v=u8hQ_nBD8eg"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Όλο το ΤΡΙΜΠΟΥΡΔΕΛΟ με τους διαλόγους ΟΠΕΚΕΠΕ σε ένα βίντεο | Luben TV",
@@ -78,9 +60,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 121065
+            "userInteractionCount": 153049
           },
           "url": "https://www.youtube.com/watch?v=neVw1t8q0sk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "I Stole His Brainrots… 😋🦈 (Steal a Brainrot Roblox ASMR)",
+          "description": "Trending video from Spizee in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/u8hQ_nBD8eg/hqdefault.jpg",
+          "uploadDate": "2025-06-28T17:42:38Z",
+          "embedUrl": "https://www.youtube.com/embed/u8hQ_nBD8eg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 33341015
+          },
+          "url": "https://www.youtube.com/watch?v=u8hQ_nBD8eg"
         }
       },
       {
@@ -88,17 +88,17 @@
         "position": 5,
         "item": {
           "@type": "VideoObject",
-          "name": "Who's clever now?😳😂 @isabellaafro",
-          "description": "Trending video from Jaymondy in Greece",
-          "thumbnailUrl": "https://i.ytimg.com/vi/-Wli1tM-EPw/hqdefault.jpg",
-          "uploadDate": "2025-06-30T14:15:01Z",
-          "embedUrl": "https://www.youtube.com/embed/-Wli1tM-EPw",
+          "name": "If You Spill, You Lose!",
+          "description": "Trending video from MrBeast in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/gGcaGdHlt60/hqdefault.jpg",
+          "uploadDate": "2025-06-25T17:00:08Z",
+          "embedUrl": "https://www.youtube.com/embed/gGcaGdHlt60",
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 23091364
+            "userInteractionCount": 102071149
           },
-          "url": "https://www.youtube.com/watch?v=-Wli1tM-EPw"
+          "url": "https://www.youtube.com/watch?v=gGcaGdHlt60"
         }
       }
     ]

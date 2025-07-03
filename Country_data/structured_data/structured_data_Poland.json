@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1618123
+            "userInteractionCount": 1659286
           },
           "url": "https://www.youtube.com/watch?v=VoczEAteGkw"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 897164
+            "userInteractionCount": 915039
           },
           "url": "https://www.youtube.com/watch?v=valTlZCLRPE"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1458214
+            "userInteractionCount": 1468577
           },
           "url": "https://www.youtube.com/watch?v=1TZKxBa-hTE"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Who was faster? 😳😱 @isabellaafro",
-          "description": "Trending video from Jaymondy in Poland",
-          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
-          "uploadDate": "2025-06-29T11:30:33Z",
-          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 103458428
-          },
-          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "NIE ZGADNIESZ PRAWDZIWEJ HISTORII - KARA!!!",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 462750
+            "userInteractionCount": 596066
           },
           "url": "https://www.youtube.com/watch?v=1GS8jrHY3uI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "How Much Money Can You Make Collecting Trolleys in the Airport?",
+          "description": "Trending video from The Richey Family in Poland",
+          "thumbnailUrl": "https://i.ytimg.com/vi/g0Ygas1Nj9U/hqdefault.jpg",
+          "uploadDate": "2025-07-02T15:02:00Z",
+          "embedUrl": "https://www.youtube.com/embed/g0Ygas1Nj9U",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 4413109
+          },
+          "url": "https://www.youtube.com/watch?v=g0Ygas1Nj9U"
         }
       }
     ]

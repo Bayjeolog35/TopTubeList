@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2486258
+            "userInteractionCount": 2534130
           },
           "url": "https://www.youtube.com/watch?v=sWjkAPI4NZ8"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2713597
+            "userInteractionCount": 2750491
           },
           "url": "https://www.youtube.com/watch?v=xOBMKLCNHtw"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 261938
+            "userInteractionCount": 285804
           },
           "url": "https://www.youtube.com/watch?v=KQgMDxlC_oo"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "فوز ريال مدريد على يوفنتوس 1-0 كأس العالم للأندية",
-          "description": "Trending video from MBC MASR 2 in Jordan",
-          "thumbnailUrl": "https://i.ytimg.com/vi/fxRH4E_LbHM/hqdefault.jpg",
-          "uploadDate": "2025-07-01T21:20:05Z",
-          "embedUrl": "https://www.youtube.com/embed/fxRH4E_LbHM",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 487464
-          },
-          "url": "https://www.youtube.com/watch?v=fxRH4E_LbHM"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "تحدي الخزنة مع أبو عابد 😳🔥",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 503951
+            "userInteractionCount": 529698
           },
           "url": "https://www.youtube.com/watch?v=_O55tZFtTx4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "اول شخص يحصل على الكريمنال الذهبي !!",
+          "description": "Trending video from SA7RAWI in Jordan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/ZkXf7s8QXRw/hqdefault.jpg",
+          "uploadDate": "2025-07-01T10:01:07Z",
+          "embedUrl": "https://www.youtube.com/embed/ZkXf7s8QXRw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 529408
+          },
+          "url": "https://www.youtube.com/watch?v=ZkXf7s8QXRw"
         }
       }
     ]

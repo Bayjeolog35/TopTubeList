@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3510262
+            "userInteractionCount": 3781967
           },
           "url": "https://www.youtube.com/watch?v=W91CXLxz-iY"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 537947
+            "userInteractionCount": 570002
           },
           "url": "https://www.youtube.com/watch?v=8i1PMi1I_Wk"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Robé un BRAINROT BUG (SECRETO) a un ESTAFADOR en STEAL a BRAINROT",
-          "description": "Trending video from SoyNeto in Colombia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Ti7tEA-PeJY/hqdefault.jpg",
-          "uploadDate": "2025-07-01T23:31:15Z",
-          "embedUrl": "https://www.youtube.com/embed/Ti7tEA-PeJY",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 967003
-          },
-          "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "¡#ALHILAL HISTÓRICO! DEJÓ AFUERA al #MANCHESTERCITY | Manchester City 3–4 Al Hilal | Resumen",
@@ -78,9 +60,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2720651
+            "userInteractionCount": 2748949
           },
           "url": "https://www.youtube.com/watch?v=-PR00YxNuao"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Robé un BRAINROT BUG (SECRETO) a un ESTAFADOR en STEAL a BRAINROT",
+          "description": "Trending video from SoyNeto in Colombia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Ti7tEA-PeJY/hqdefault.jpg",
+          "uploadDate": "2025-07-01T23:31:15Z",
+          "embedUrl": "https://www.youtube.com/embed/Ti7tEA-PeJY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1044842
+          },
+          "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
         }
       },
       {
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 955504
+            "userInteractionCount": 1016871
           },
           "url": "https://www.youtube.com/watch?v=wmDouI8cf6Y"
         }
