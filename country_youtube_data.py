@@ -4,24 +4,30 @@ import requests
 from bs4 import BeautifulSoup
 from country_data import COUNTRY_INFO
 
-# YouTube Data API Key
-YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
+# GitHub Actions için özel ayar
+if os.getenv('CI'):
+    YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY')
+else:
+    # Local development için .env dosyasından oku
+    from dotenv import load_dotenv
+    load_dotenv()
+    YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY')
+
 if not YOUTUBE_API_KEY:
-    raise ValueError("YouTube API key bulunamadı!")
+    raise ValueError("API key bulunamadı! GitHub Secrets'ta YOUTUBE_API_KEY tanımlayın.")
 
 YOUTUBE_API_BASE_URL = "https://www.googleapis.com/youtube/v3/"
 
 def format_number(num):
-    """Sayıları daha okunabilir hale getirir (1.5M, 150K gibi)"""
-    if num >= 1_000_000:
-        return f"{num/1_000_000:.1f}M"
-    elif num >= 1_000:
-        return f"{num/1_000:.1f}K"
-    return str(num)
+    """Sayı formatlama: 1.5M, 150K gibi"""
+    for unit in ['', 'K', 'M', 'B']:
+        if abs(num) < 1000:
+            return f"{num:.1f}{unit}"
+        num /= 1000
+    return f"{num:.1f}B"
 
 def get_trending_videos(region_code, max_results=50):
-    """YouTube'dan trend videoları çeker"""
-    url = f"{YOUTUBE_API_BASE_URL}videos"
+    """YouTube API'den trend videoları çek"""
     params = {
         "part": "snippet,statistics,contentDetails",
         "chart": "mostPopular",
@@ -29,107 +35,147 @@ def get_trending_videos(region_code, max_results=50):
         "maxResults": max_results,
         "key": YOUTUBE_API_KEY
     }
-    response = requests.get(url, params=params)
-    response.raise_for_status()
-    return response.json()
+    try:
+        response = requests.get(f"{YOUTUBE_API_BASE_URL}videos", params=params, timeout=10)
+        response.raise_for_status()
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"API Hatası: {str(e)}")
+        return None
 
 def process_video_data(item):
-    """Ham video verisini işler"""
-    snippet = item["snippet"]
+    """Video verilerini işle"""
+    snippet = item.get("snippet", {})
     stats = item.get("statistics", {})
     
     return {
         "id": item["id"],
         "title": snippet.get("title", "Başlık Yok"),
         "channel": snippet.get("channelTitle", "Kanal Yok"),
-        "thumbnail": snippet["thumbnails"]["high"]["url"] if "thumbnails" in snippet else "",
+        "thumbnail": snippet.get("thumbnails", {}).get("high", {}).get("url", ""),
         "url": f"https://youtube.com/watch?v={item['id']}",
         "embed_url": f"https://youtube.com/embed/{item['id']}",
         "views": int(stats.get("viewCount", 0)),
         "likes": int(stats.get("likeCount", 0)),
         "comments": int(stats.get("commentCount", 0)),
-        "views_str": format_number(int(stats.get("viewCount", 0))),
-        "likes_str": format_number(int(stats.get("likeCount", 0)))
+        "published_at": snippet.get("publishedAt", "")
     }
 
 def update_html_file(country_folder, videos):
-    """HTML dosyasını günceller"""
+    """GitHub Pages için HTML güncelleme"""
     html_path = os.path.join(country_folder, "index.html")
     
     if not os.path.exists(html_path):
-        print(f"⚠️ {country_folder} için HTML dosyası bulunamadı!")
-        return
+        print(f"{country_folder} için HTML bulunamadı, yeni oluşturuluyor...")
+        # GitHub Pages için temel HTML şablonu
+        base_html = f"""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trend Videos - {country_folder.replace('_', ' ')}</title>
+    <style>
+        body {{ font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }}
+        .video-container {{ margin: 20px 0; }}
+        iframe {{ max-width: 100%; }}
+        .video-list {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }}
+    </style>
+</head>
+<body>
+    <h1>{country_folder.replace('_', ' ')} Trend Videolar</h1>
+    <div id="top-video" class="video-container"></div>
+    <div class="video-list"></div>
+</body>
+</html>
+        """
+        with open(html_path, 'w', encoding='utf-8') as f:
+            f.write(base_html)
     
-    try:
-        with open(html_path, 'r', encoding='utf-8') as f:
-            soup = BeautifulSoup(f, 'html.parser')
+    with open(html_path, 'r+', encoding='utf-8') as f:
+        soup = BeautifulSoup(f, 'html.parser')
         
-        # En çok izlenen video için iframe ekle
-        if videos:
+        # Top video container
+        top_div = soup.find('div', id='top-video')
+        if top_div and videos:
             top_video = max(videos, key=lambda x: x["views"])
+            new_iframe = soup.new_tag('iframe',
+                                    src=top_video["embed_url"],
+                                    width="560",
+                                    height="315",
+                                    frameborder="0",
+                                    allowfullscreen="")
+            top_div.clear()
+            top_div.append(new_iframe)
             
-            # Eski iframe'i temizle
-            for iframe in soup.find_all('iframe'):
-                iframe.decompose()
+            # Video bilgileri
+            info_div = soup.new_tag('div')
+            title = soup.new_tag('h2')
+            title.string = top_video["title"]
+            channel = soup.new_tag('p')
+            channel.string = f"Kanal: {top_video['channel']}"
+            views = soup.new_tag('p')
+            views.string = f"İzlenme: {format_number(top_video['views'])}"
             
-            # Yeni iframe ekle
-            iframe = soup.new_tag('iframe',
-                                src=top_video["embed_url"],
-                                width="560",
-                                height="315",
-                                frameborder="0",
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
-                                allowfullscreen="")
-            
-            # Uygun bir yere ekle (örneğin <div id="top-video">)
-            container = soup.find('div', id='top-video') or soup.new_tag('div', id='top-video')
-            container.append(iframe)
-            if not soup.find('div', id='top-video'):
-                soup.body.insert(0, container)
+            info_div.extend([title, channel, views])
+            top_div.append(info_div)
+        
+        # Video listesi
+        video_list = soup.find('div', class_='video-list')
+        if video_list:
+            video_list.clear()
+            for video in videos[:20]:  # İlk 20 video
+                video_card = soup.new_tag('div', **{'class': 'video-card'})
+                
+                # Thumbnail ve bağlantı
+                link = soup.new_tag('a', href=video["url"], target="_blank")
+                img = soup.new_tag('img', src=video["thumbnail"], alt=video["title"])
+                img['style'] = "width:100%; border-radius:8px;"
+                link.append(img)
+                
+                # Başlık
+                title = soup.new_tag('h3')
+                title.string = video["title"]
+                
+                # Bilgiler
+                info = soup.new_tag('p')
+                info.string = f"{video['channel']} • {format_number(video['views'])} izlenme"
+                
+                video_card.extend([link, title, info])
+                video_list.append(video_card)
         
         # Değişiklikleri kaydet
-        with open(html_path, 'w', encoding='utf-8') as f:
-            f.write(str(soup))
-        
-        print(f"✅ {country_folder} HTML'si güncellendi")
-    
-    except Exception as e:
-        print(f"❌ {country_folder} HTML güncelleme hatası: {str(e)}")
-
-def save_video_data(country_name, videos):
-    """Video verilerini JSON olarak kaydeder"""
-    os.makedirs("Country_data/videos", exist_ok=True)
-    file_path = f"Country_data/videos/videos_{country_name}.json"
-    
-    with open(file_path, 'w', encoding='utf-8') as f:
-        json.dump(videos, f, ensure_ascii=False, indent=2)
-    
-    print(f"📁 {country_name} video verileri kaydedildi")
+        f.seek(0)
+        f.write(str(soup))
+        f.truncate()
 
 def main():
+    # GitHub için gerekli klasörleri oluştur
+    os.makedirs("Country_data/videos", exist_ok=True)
+    
     for country_folder, info in COUNTRY_INFO.items():
         country_code = info["code"]
-        print(f"\n🔍 {country_folder} işleniyor...")
+        print(f"\nİşleniyor: {country_folder} ({country_code})")
         
         try:
-            # YouTube'dan veri çek
+            # YouTube verilerini al
             data = get_trending_videos(country_code)
-            videos = [process_video_data(item) for item in data.get("items", [])]
-            
-            if not videos:
-                print("⚠️ Hiç video bulunamadı!")
+            if not data or 'items' not in data:
+                print("Veri alınamadı, atlanıyor...")
                 continue
+                
+            videos = [process_video_data(item) for item in data['items']]
             
-            # Verileri kaydet
-            save_video_data(country_folder, videos)
+            # JSON olarak kaydet
+            with open(f"Country_data/videos/videos_{country_folder}.json", 'w', encoding='utf-8') as f:
+                json.dump(videos, f, ensure_ascii=False, indent=2)
             
             # HTML'yi güncelle
             update_html_file(country_folder, videos)
             
-        except requests.exceptions.RequestException as e:
-            print(f"❌ YouTube API hatası: {str(e)}")
         except Exception as e:
-            print(f"❌ Beklenmeyen hata: {str(e)}")
+            print(f"Hata oluştu: {str(e)}")
+            continue
 
 if __name__ == "__main__":
     main()
