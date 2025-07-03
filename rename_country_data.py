@@ -78,7 +78,7 @@ def rename_files_to_standard_format(directory):
 if __name__ == "__main__":
     # Hedef dizini burada belirtin.
     # Eğer bu betik, 'Country_data' ile aynı seviyede çalışıyorsa, yol doğru olacaktır.
-    target_directory = "Country_data/videos"
+    target_directory = "Country_data/structured_data"
 
     # Dizin mevcut değilse kullanıcıyı bilgilendir
     if not os.path.isdir(target_directory):
