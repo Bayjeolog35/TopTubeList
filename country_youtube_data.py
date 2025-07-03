@@ -2,7 +2,6 @@ import os
 import json
 import requests
 from bs4 import BeautifulSoup
-from country_data import COUNTRY_INFO
 
 # GitHub Actions için özel ayar
 if os.getenv('CI'):
