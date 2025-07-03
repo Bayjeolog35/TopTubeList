@@ -1,225 +1,249 @@
 import json
 import os
 import re
-# Assuming country_data is correctly imported and available
-# from country_data import COUNTRY_INFO, CONTINENT_COUNTRIES
 
-# Placeholder for COUNTRY_INFO and CONTINENT_COUNTRIES for demonstration
+# Bu COUNTRY_INFO sözlüğünü gerçek verilerinizle güncellemeyi unutmayın.
+# Eğer API'den gelen kodlarda veya display-name'lerde farklılık varsa, burayı düzeltin.
 COUNTRY_INFO = {
-    "afghanistan": {"code": "af"},
-    "albania": {"code": "al"},
-    "algeria": {"code": "dz"},
-    "andorra": {"code": "ad"},
-    "angola": {"code": "ao"},
-    "argentina": {"code": "ar"},
-    "armenia": {"code": "am"},
-    "australia": {"code": "au"},
-    "austria": {"code": "at"},
-    "azerbaijan": {"code": "az"},
-    "bahamas": {"code": "bs"},
-    "bahrain": {"code": "bh"},
-    "bangladesh": {"code": "bd"},
-    "barbados": {"code": "bb"},
-    "belarus": {"code": "by"},
-    "belgium": {"code": "be"},
-    "belize": {"code": "bz"},
-    "benin": {"code": "bj"},
-    "bhutan": {"code": "bt"},
-    "bolivia": {"code": "bo"},
-    "bosnia-and-herzegovina": {"code": "ba", "display-name": "bosnia and herzegovina"},
-    "botswana": {"code": "bw"},
-    "brazil": {"code": "br"},
-    "brunei": {"code": "bn"},
-    "bulgaria": {"code": "bg"},
-    "burkina-faso": {"code": "bf", "display-name": "burkina faso"},
-    "burundi": {"code": "bı"},
-    "cabo-verde": {"code": "cv", "display-name": "cabo verde"},
-    "cambodia": {"code": "kh"},
-    "cameroon": {"code": "cm"},
-    "canada": {"code": "ca"},
-    "central-african-republic": {"code": "cf", "display-name": "central african republic"},
-    "chad": {"code": "td"},
-    "chile": {"code": "cl"},
-    "china": {"code": "cn"}, # youtube'da çin için doğrudan trend verisi kısıtlı olabilir
-    "colombia": {"code": "co"},
-    "comoros": {"code": "km"},
-    "congo-democratic-republicofthe": {"code": "cd", "display-name": "congo (democratic republic of the)"},
-    "congo-republic-of-the": {"code": "cg", "display-name": "congo (republic of the)"},
-    "costa-rica": {"code": "cr", "display-name": "costa rica"},
-    "cote-dıvoire": {"code": "cı", "display-name": "cote d'ıvoire"},
-    "croatia": {"code": "hr"},
-    "cuba": {"code": "cu"}, # youtube'da küba için doğrudan trend verisi kısıtlı olabilir
-    "cyprus": {"code": "cy"},
-    "czech-republic": {"code": "cz", "display-name": "czech republic"},
-    "denmark": {"code": "dk"},
-    "djibouti": {"code": "dj"},
-    "dominica": {"code": "dm"},
-    "dominican-republic": {"code": "do", "display-name": "dominican republic"},
-    "east-timor": {"code": "tl", "display-name": "east timor"},
-    "ecuador": {"code": "ec"},
-    "egypt": {"code": "eg"},
-    "elsalvador": {"code": "sv", "display-name": "el salvador"},
-    "equatorial-guinea": {"code": "gq", "display-name": "equatorial guinea"},
-    "eritrea": {"code": "er"},
-    "estonia": {"code": "ee"},
-    "eswatini": {"code": "sz"},
-    "ethiopia": {"code": "et"},
-    "fiji": {"code": "fj"},
-    "finland": {"code": "fı"},
-    "france": {"code": "fr"},
-    "gabon": {"code": "ga"},
-    "gambia": {"code": "gm"},
-    "georgia": {"code": "ge"},
-    "germany": {"code": "de"},
-    "ghana": {"code": "gh"},
-    "greece": {"code": "gr"},
-    "grenada": {"code": "gd"},
-    "guatemala": {"code": "gt"},
-    "guinea": {"code": "gn"},
-    "guinea-bissau": {"code": "gw", "display-name": "guinea-bissau"},
-    "guyana": {"code": "gy"},
-    "haiti": {"code": "ht"},
-    "honduras": {"code": "hn"},
-    "hungary": {"code": "hu"},
-    "ıceland": {"code": "ıs"},
-    "ındia": {"code": "ın"},
-    "ındonesia": {"code": "ıd"},
-    "ıran": {"code": "ır"}, # youtube'da iran için doğrudan trend verisi kısıtlı olabilir
-    "ıraq": {"code": "ıq"},
-    "ıreland": {"code": "ıe"},
-    "ısrael": {"code": "ıl"},
-    "ıtaly": {"code": "ıt"},
-    "jamaica": {"code": "jm"},
-    "japan": {"code": "jp"},
-    "jordan": {"code": "jo"},
-    "kazakhstan": {"code": "kz"},
-    "kenya": {"code": "ke"},
-    "kiribati": {"code": "kı"},
-    "korea-north": {"code": "kp", "display-name": "korea (north)"}, # youtube'da kuzey kore için doğrudan trend verisi kısıtlı olabilir
-    "korea-south": {"code": "kr", "display-name": "korea (south)"},
-    "kosovo": {"code": "xk", "display-name": "kosovo"}, # ıso 3166-1 alpha-2 standardına dahil değil, dikkat
-    "kuwait": {"code": "kw"},
-    "kyrgyzstan": {"code": "kg"},
-    "laos": {"code": "la"},
-    "latvia": {"code": "lv"},
-    "lebanon": {"code": "lb"},
-    "lesotho": {"code": "ls"},
-    "liberia": {"code": "lr"},
-    "libya": {"code": "ly"},
-    "liechtenstein": {"code": "lı"},
-    "lithuania": {"code": "lt"},
-    "luxembourg": {"code": "lu"},
-    "madagascar": {"code": "mg"},
-    "malawi": {"code": "mw"},
-    "malaysia": {"code": "my"},
-    "maldives": {"code": "mv"},
-    "mali": {"code": "ml"},
-    "malta": {"code": "mt"},
-    "marshall-ıslands": {"code": "mh", "display-name": "marshall ıslands"},
-    "mauritania": {"code": "mr"},
-    "mauritius": {"code": "mu"},
-    "mexico": {"code": "mx"},
-    "micronesia": {"code": "fm"},
-    "moldova": {"code": "md"},
-    "monaco": {"code": "mc"},
-    "mongolia": {"code": "mn"},
-    "montenegro": {"code": "me"},
-    "morocco": {"code": "ma"},
-    "mozambique": {"code": "mz"},
-    "myanmar": {"code": "mm"},
-    "namibia": {"code": "na"},
-    "nauru": {"code": "nr"},
-    "nepal": {"code": "np"},
-    "netherlands": {"code": "nl"},
-    "new-zealand": {"code": "nz", "display-name": "new zealand"},
-    "nicaragua": {"code": "nı"},
-    "niger": {"code": "ne"},
-    "nigeria": {"code": "ng"},
-    "north-macedonia": {"code": "mk", "display-name": "north macedonia"},
-    "norway": {"code": "no"},
-    "oman": {"code": "om"},
-    "pakistan": {"code": "pk"},
-    "palau": {"code": "pw"},
-    "palestine": {"code": "ps"},
-    "panama": {"code": "pa"},
-    "papua-new-guinea": {"code": "pg", "display-name": "papua new guinea"},
-    "paraguay": {"code": "py"},
-    "peru": {"code": "pe"},
-    "philippines": {"code": "ph"},
-    "poland": {"code": "pl"},
-    "portugal": {"code": "pt"},
-    "qatar": {"code": "qa"},
-    "romania": {"code": "ro"},
-    "russia": {"code": "ru"},
-    "rwanda": {"code": "rw"},
-    "saint-kitts-and-nevis": {"code": "kn", "display-name": "saint kitts and nevis"},
-    "saint-lucia": {"code": "lc", "display-name": "saint lucia"},
-    "saint-vincent-and-the-grenadines": {"code": "vc", "display-name": "saint vincent and the grenadines"},
-    "samoa": {"code": "ws"},
-    "san-marino": {"code": "sm", "display-name": "san marino"},
-    "sao-tome-and-principe": {"code": "st", "display-name": "sao tome and principe"},
-    "saudi-arabia": {"code": "sa", "display-name": "saudi arabia"},
-    "senegal": {"code": "sn"},
-    "serbia": {"code": "rs"},
-    "seychelles": {"code": "sc"},
-    "sierra-leone": {"code": "sl", "display-name": "sierra leone"},
-    "singapore": {"code": "sg"},
-    "slovakia": {"code": "sk"},
-    "slovenia": {"code": "sı"},
-    "solomon-ıslands": {"code": "sb", "display-name": "solomon ıslands"},
-    "somalia": {"code": "so"},
-    "south-africa": {"code": "za", "display-name": "south africa"},
-    "south-sudan": {"code": "ss", "display-name": "south sudan"},
-    "spain": {"code": "es"},
-    "sri-lanka": {"code": "lk", "display-name": "sri lanka"},
-    "sudan": {"code": "sd"},
-    "suriname": {"code": "sr"},
-    "sweden": {"code": "se"},
-    "switzerland": {"code": "ch"},
-    "syria": {"code": "sy"},
-    "taiwan": {"code": "tw"},
-    "tajikistan": {"code": "tj"},
-    "tanzania": {"code": "tz"},
-    "thailand": {"code": "th"},
-    "togo": {"code": "tg"},
-    "tonga": {"code": "to"},
-    "trinidad-and-tobago": {"code": "tt", "display-name": "trinidad and tobago"},
-    "tunisia": {"code": "tn"},
-    "turkey": {"code": "tr"},
-    "turkmenistan": {"code": "tm"},
-    "tuvalu": {"code": "tv"},
-    "uganda": {"code": "ug"},
-    "ukraine": {"code": "ua"},
-    "united-arab-emirates": {"code": "ae", "display-name": "united arab emirates"},
-    "united-kingdom": {"code": "gb", "display-name": "united kingdom"},
-    "united-states": {"code": "us", "display-name": "united states"},
-    "uruguay": {"code": "uy"},
-    "uzbekistan": {"code": "uz"},
-    "vanuatu": {"code": "vu"},
-    "vatican-city": {"code": "va", "display-name": "vatican city"},
-    "venezuela": {"code": "ve"},
-    "vietnam": {"code": "vn"},
-    "yemen": {"code": "ye"},
-    "zambia": {"code": "zm"},
-    "zimbabwe": {"code": "zw"}
+    "afghanistan": {"code": "AF"},
+    "albania": {"code": "AL"},
+    "algeria": {"code": "DZ"},
+    "andorra": {"code": "AD"},
+    "angola": {"code": "AO"},
+    "argentina": {"code": "AR"},
+    "armenia": {"code": "AM"},
+    "australia": {"code": "AU"},
+    "austria": {"code": "AT"},
+    "azerbaijan": {"code": "AZ"},
+    "bahamas": {"code": "BS"},
+    "bahrain": {"code": "BH"},
+    "bangladesh": {"code": "BD"},
+    "barbados": {"code": "BB"},
+    "belarus": {"code": "BY"},
+    "belgium": {"code": "BE"},
+    "belize": {"code": "BZ"},
+    "benin": {"code": "BJ"},
+    "bhutan": {"code": "BT"},
+    "bolivia": {"code": "BO"},
+    "bosnia-and-herzegovina": {"code": "BA", "display_name": "Bosnia and Herzegovina"},
+    "botswana": {"code": "BW"},
+    "brazil": {"code": "BR"},
+    "brunei": {"code": "BN"},
+    "bulgaria": {"code": "BG"},
+    "burkina-faso": {"code": "BF", "display_name": "Burkina Faso"},
+    "burundi": {"code": "BI"}, # Bı -> BI düzeltildi
+    "cabo-verde": {"code": "CV", "display_name": "Cabo Verde"},
+    "cambodia": {"code": "KH"},
+    "cameroon": {"code": "CM"},
+    "canada": {"code": "CA"},
+    "central-african-republic": {"code": "CF", "display_name": "Central African Republic"},
+    "chad": {"code": "TD"},
+    "chile": {"code": "CL"},
+    "china": {"code": "CN"},
+    "colombia": {"code": "CO"},
+    "comoros": {"code": "KM"},
+    "congo-democratic-republicofthe": {"code": "CD", "display_name": "Congo (Democratic Republic of the)"},
+    "congo-republic-of-the": {"code": "CG", "display_name": "Congo (Republic of the)"},
+    "costa-rica": {"code": "CR", "display_name": "Costa Rica"},
+    "cote-divoire": {"code": "CI", "display_name": "Cote d'Ivoire"}, # ıvoire -> ivoire düzeltildi
+    "croatia": {"code": "HR"},
+    "cuba": {"code": "CU"},
+    "cyprus": {"code": "CY"},
+    "czech-republic": {"code": "CZ", "display_name": "Czech Republic"},
+    "denmark": {"code": "DK"},
+    "djibouti": {"code": "DJ"},
+    "dominica": {"code": "DM"},
+    "dominican-republic": {"code": "DO", "display_name": "Dominican Republic"},
+    "east-timor": {"code": "TL", "display_name": "East Timor"},
+    "ecuador": {"code": "EC"},
+    "egypt": {"code": "EG"},
+    "el-salvador": {"code": "SV", "display_name": "El Salvador"}, # elsalvador -> el-salvador düzeltildi
+    "equatorial-guinea": {"code": "GQ", "display_name": "Equatorial Guinea"},
+    "eritrea": {"code": "ER"},
+    "estonia": {"code": "EE"},
+    "eswatini": {"code": "SZ"},
+    "ethiopia": {"code": "ET"},
+    "fiji": {"code": "FJ"},
+    "finland": {"code": "FI"}, # fı -> FI düzeltildi
+    "france": {"code": "FR"},
+    "gabon": {"code": "GA"},
+    "gambia": {"code": "GM"},
+    "georgia": {"code": "GE"},
+    "germany": {"code": "DE"},
+    "ghana": {"code": "GH"},
+    "greece": {"code": "GR"},
+    "grenada": {"code": "GD"},
+    "guatemala": {"code": "GT"},
+    "guinea": {"code": "GN"},
+    "guinea-bissau": {"code": "GW", "display_name": "Guinea-Bissau"},
+    "guyana": {"code": "GY"},
+    "haiti": {"code": "HT"},
+    "honduras": {"code": "HN"},
+    "hungary": {"code": "HU"},
+    "iceland": {"code": "IS"}, # ıceland -> iceland, ıs -> IS düzeltildi
+    "india": {"code": "IN"}, # ındia -> india düzeltildi
+    "indonesia": {"code": "ID"}, # ındonesia -> indonesia, ıd -> ID düzeltildi
+    "iran": {"code": "IR"}, # ıran -> iran, ır -> IR düzeltildi
+    "iraq": {"code": "IQ"}, # ıraq -> iraq, ıq -> IQ düzeltildi
+    "ireland": {"code": "IE"}, # ıreland -> ireland, ıe -> IE düzeltildi
+    "israel": {"code": "IL"}, # ısrael -> israel düzeltildi
+    "italy": {"code": "IT"}, # ıtaly -> italy, ıt -> IT düzeltildi
+    "jamaica": {"code": "JM"},
+    "japan": {"code": "JP"},
+    "jordan": {"code": "JO"},
+    "kazakhstan": {"code": "KZ"},
+    "kenya": {"code": "KE"},
+    "kiribati": {"code": "KI"}, # kı -> KI düzeltildi
+    "korea-north": {"code": "KP", "display_name": "Korea (North)"},
+    "korea-south": {"code": "KR", "display_name": "Korea (South)"},
+    "kosovo": {"code": "XK", "display_name": "Kosovo"},
+    "kuwait": {"code": "KW"},
+    "kyrgyzstan": {"code": "KG"},
+    "laos": {"code": "LA"},
+    "latvia": {"code": "LV"},
+    "lebanon": {"code": "LB"},
+    "lesotho": {"code": "LS"},
+    "liberia": {"code": "LR"},
+    "libya": {"code": "LY"},
+    "liechtenstein": {"code": "LI"}, # lı -> LI düzeltildi
+    "lithuania": {"code": "LT"},
+    "luxembourg": {"code": "LU"},
+    "madagascar": {"code": "MG"},
+    "malawi": {"code": "MW"},
+    "malaysia": {"code": "MY"},
+    "maldives": {"code": "MV"},
+    "mali": {"code": "ML"},
+    "malta": {"code": "MT"},
+    "marshall-islands": {"code": "MH", "display_name": "Marshall Islands"}, # ıslands -> islands düzeltildi
+    "mauritania": {"code": "MR"},
+    "mauritius": {"code": "MU"},
+    "mexico": {"code": "MX"},
+    "micronesia": {"code": "FM"},
+    "moldova": {"code": "MD"},
+    "monaco": {"code": "MC"},
+    "mongolia": {"code": "MN"},
+    "montenegro": {"code": "ME"},
+    "morocco": {"code": "MA"},
+    "mozambique": {"code": "MZ"},
+    "myanmar": {"code": "MM"},
+    "namibia": {"code": "NA"},
+    "nauru": {"code": "NR"},
+    "nepal": {"code": "NP"},
+    "netherlands": {"code": "NL"},
+    "new-zealand": {"code": "NZ", "display_name": "New Zealand"},
+    "nicaragua": {"code": "NI"}, # nı -> NI düzeltildi
+    "niger": {"code": "NE"},
+    "nigeria": {"code": "NG"},
+    "north-macedonia": {"code": "MK", "display_name": "North Macedonia"},
+    "norway": {"code": "NO"},
+    "oman": {"code": "OM"},
+    "pakistan": {"code": "PK"},
+    "palau": {"code": "PW"},
+    "palestine": {"code": "PS"},
+    "panama": {"code": "PA"},
+    "papua-new-guinea": {"code": "PG", "display_name": "Papua New Guinea"},
+    "paraguay": {"code": "PY"},
+    "peru": {"code": "PE"},
+    "philippines": {"code": "PH"},
+    "poland": {"code": "PL"},
+    "portugal": {"code": "PT"},
+    "qatar": {"code": "QA"},
+    "romania": {"code": "RO"},
+    "russia": {"code": "RU"},
+    "rwanda": {"code": "RW"},
+    "saint-kitts-and-nevis": {"code": "KN", "display_name": "Saint Kitts and Nevis"},
+    "saint-lucia": {"code": "LC", "display_name": "Saint Lucia"},
+    "saint-vincent-and-the-grenadines": {"code": "VC", "display_name": "Saint Vincent and the Grenadines"},
+    "samoa": {"code": "WS"},
+    "san-marino": {"code": "SM", "display_name": "San Marino"},
+    "sao-tome-and-principe": {"code": "ST", "display_name": "Sao Tome and Principe"},
+    "saudi-arabia": {"code": "SA", "display_name": "Saudi Arabia"},
+    "senegal": {"code": "SN"},
+    "serbia": {"code": "RS"},
+    "seychelles": {"code": "SC"},
+    "sierra-leone": {"code": "SL", "display_name": "Sierra Leone"},
+    "singapore": {"code": "SG"},
+    "slovakia": {"code": "SK"},
+    "slovenia": {"code": "SI"}, # sı -> SI düzeltildi
+    "solomon-islands": {"code": "SB", "display_name": "Solomon Islands"}, # ıslands -> islands düzeltildi
+    "somalia": {"code": "SO"},
+    "south-africa": {"code": "ZA", "display_name": "South Africa"},
+    "south-sudan": {"code": "SS", "display_name": "South Sudan"},
+    "spain": {"code": "ES"},
+    "sri-lanka": {"code": "LK", "display_name": "Sri Lanka"},
+    "sudan": {"code": "SD"},
+    "suriname": {"code": "SR"},
+    "sweden": {"code": "SE"},
+    "switzerland": {"code": "CH"},
+    "syria": {"code": "SY"},
+    "taiwan": {"code": "TW"},
+    "tajikistan": {"code": "TJ"},
+    "tanzania": {"code": "TZ"},
+    "thailand": {"code": "TH"},
+    "togo": {"code": "TG"},
+    "tonga": {"code": "TO"},
+    "trinidad-and-tobago": {"code": "TT", "display_name": "Trinidad and Tobago"},
+    "tunisia": {"code": "TN"},
+    "turkey": {"code": "TR"},
+    "turkmenistan": {"code": "TM"},
+    "tuvalu": {"code": "TV"},
+    "uganda": {"code": "UG"},
+    "ukraine": {"code": "UA"},
+    "united-arab-emirates": {"code": "AE", "display_name": "United Arab Emirates"},
+    "united-kingdom": {"code": "GB", "display_name": "United Kingdom"},
+    "united-states": {"code": "US", "display_name": "United States"},
+    "uruguay": {"code": "UY"},
+    "uzbekistan": {"code": "UZ"},
+    "vanuatu": {"code": "VU"},
+    "vatican-city": {"code": "VA", "display_name": "Vatican City"},
+    "venezuela": {"code": "VE"},
+    "vietnam": {"code": "VN"},
+    "yemen": {"code": "YE"},
+    "zambia": {"code": "ZM"},
+    "zimbabwe": {"code": "ZW"}
 }
 
+# Kıta bilgilerini ekliyoruz. Bu listelerin COUNTRY_INFO'daki 'code' değerleriyle eşleştiğinden emin olun.
+# Örnek olarak bazılarını ekledim, tamamını projenize göre doldurmalısınız.
 CONTINENT_COUNTRIES = {
-    "asia": ["AF", "IN", "TR"], # Adding TR to Asia for this example, adjust as needed
-    "europe": [],
-    "africa": [],
-    "north_america": ["US"],
-    "south_america": [],
-    "oceania": [],
+    "asia": [
+        "AF", "AM", "AZ", "BH", "BD", "BT", "CN", "CY", "GE", "IN", "ID", "IR", "IQ", "IL", "JP", "JO", "KZ",
+        "KH", "KP", "KR", "KW", "KG", "LA", "LB", "MY", "MV", "MN", "MM", "NP", "OM", "PK", "PS", "PH", "QA",
+        "SA", "SG", "LK", "SY", "TW", "TJ", "TH", "TL", "TR", "TM", "AE", "UZ", "VN", "YE"
+    ],
+    "europe": [
+        "AL", "AD", "AT", "BY", "BE", "BA", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU",
+        "IS", "IE", "IT", "XK", "LV", "LI", "LT", "LU", "MD", "MC", "ME", "NL", "MK", "NO", "PL", "PT", "RO",
+        "RU", "SM", "RS", "SK", "SI", "ES", "SE", "CH", "UA", "GB", "VA"
+    ],
+    "africa": [
+        "DZ", "AO", "BJ", "BW", "BF", "BI", "CM", "CV", "CF", "TD", "KM", "CG", "CD", "CI", "DJ", "EG", "GQ",
+        "ER", "SZ", "ET", "GA", "GM", "GH", "GN", "GW", "KE", "LS", "LR", "LY", "MG", "MW", "ML", "MR", "MU",
+        "MZ", "NA", "NE", "NG", "RW", "ST", "SN", "SC", "SL", "SO", "ZA", "SS", "SD", "TG", "TN", "UG", "ZM", "ZW"
+    ],
+    "north_america": [
+        "AG", "BS", "BB", "BZ", "CA", "CR", "CU", "DM", "DO", "SV", "GD", "GT", "HT", "HN", "JM", "MX", "NI",
+        "PA", "KN", "LC", "VC", "TT", "US"
+    ],
+    "south_america": [
+        "AR", "BO", "BR", "CL", "CO", "EC", "GY", "PY", "PE", "SR", "UY", "VE"
+    ],
+    "oceania": [
+        "AU", "FJ", "KI", "MH", "FM", "NR", "NZ", "PW", "PG", "WS", "SB", "TO", "TV", "VU"
+    ],
 }
 
 
 def generate_html_file(country_folder_name, videos_data, structured_data):
     """Belirtilen ülke için HTML dosyasını oluşturur."""
 
+    # Klasör ve URL'lerde kullanılacak tireli isim
+    sanitized_country_name_for_url = country_folder_name.replace('_', '-')
+
+    # Görüntülenecek ülke adı (baş harfleri büyük)
     display_country_name = COUNTRY_INFO.get(
         country_folder_name, {}
-    ).get("display_name", country_folder_name.replace('_', ' ')).title() # .title() ekledim, daha düzgün görünür
+    ).get("display_name", country_folder_name.replace('-', ' ').replace('_', ' ')).title()
 
     # Structured data JSON-LD bloğunu oluştur
     structured_data_block = ""
@@ -231,7 +255,44 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
             '\n</script>'
         )
 
-    # HTML şablonu
+    # Kıtaya göre aktif sınıfı belirle
+    continent_of_country = ""
+    country_code_for_folder = COUNTRY_INFO.get(country_folder_name, {}).get("code")
+    if country_code_for_folder:
+        for continent, countries_in_continent in CONTINENT_COUNTRIES.items():
+            if country_code_for_folder.upper() in [c.upper() for c in countries_in_continent]:
+                continent_of_country = continent
+                break
+
+    continent_active_classes = {
+        'asia_active': 'active' if continent_of_country == 'asia' else '',
+        'europe_active': 'active' if continent_of_country == 'europe' else '',
+        'africa_active': 'active' if continent_of_country == 'africa' else '',
+        'north_america_active': 'active' if continent_of_country == 'north_america' else '',
+        'south_america_active': 'active' if continent_of_country == 'south_america' else '',
+        'oceania_active': 'active' if continent_of_country == 'oceania' else '',
+    }
+
+    country_buttons_html = []
+    sorted_country_info = sorted(
+        COUNTRY_INFO.items(),
+        key=lambda item: item[1].get("display_name", item[0].replace('_', ' ')).title()
+    )
+
+    for c_folder_name, c_info in sorted_country_info:
+        c_display_name = c_info.get("display_name", c_folder_name.replace('_', ' ')).title()
+        first_letter = c_display_name[0].upper()
+        
+        # Ülke butonlarının href'i için de tireli isim kullanıyoruz
+        country_button_link_name = c_folder_name.replace("_", "-")
+
+        is_current_country_active = " active" if c_folder_name == country_folder_name else ""
+
+        country_buttons_html.append(
+            f'''<button onclick="location.href='../{country_button_link_name}/'" data-letter="{first_letter}" class="country-button{is_current_country_active}">{c_display_name}</button>'''
+        )
+
+    # HTML şablonu (JavaScript'teki fetch yolu mutlak yapıldı ve tireli isme uygun)
     html_template = r"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -242,7 +303,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
     <meta name="description" content="Watch the most popular YouTube videos trending across {display_country_name}. Stay current with viral content.">
     <meta name="keywords" content="YouTube trends {display_country_name}, popular videos {display_country_name}, trending YouTube, viral content">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://toptubelist.com/{country_folder_name}/" />
+    <link rel="canonical" href="https://toptubelist.com/{sanitized_country_name_for_url}/" />
     <link rel="stylesheet" href="../style.css" />
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103"
@@ -309,7 +370,12 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
         </div>
 </main>
     
-    {video_list_html} <section class="about-section">
+    <div class="video-list-wrapper">
+        <div id="videoList" class="video-list"></div>
+        <button id="loadMoreBtn" class="site-button">Load More</button>
+    </div>
+
+    <section class="about-section">
         <button id="aboutToggle" class="site-button">About Us</button>
         <div id="aboutContent">
             <p><strong>What is TopTubeList?</strong><br>
@@ -574,12 +640,12 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
             }}
 
             // JSON dosyasının yolu dinamik olarak Python'dan geliyor
-            // DİKKAT: Burada yolu mutlak yapıyoruz!
-            fetch("/Country_data/videos/videos-{country_folder_name}.json") 
+            // DİKKAT: Burada yolu mutlak yapıyoruz ve tireli dosya ismini kullanıyoruz!
+            fetch("/Country_data/videos/videos-{sanitized_country_name_for_url}.json") 
                 .then(res => {{
                     if (!res.ok) {{
                         // Eğer dosya bulunamazsa (404) veya başka bir HTTP hatası olursa
-                        console.error(`HTTP error fetching videos: ${{res.status}} for /Country_data/videos/videos-{country_folder_name}.json`);
+                        console.error(`HTTP error fetching videos: ${{res.status}} for /Country_data/videos/videos-{sanitized_country_name_for_url}.json`);
                         throw new Error(`HTTP error! status: ${{res.status}}`);
                     }}
                     return res.json();
@@ -607,107 +673,60 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
 </html>
 """
     
-    continent_of_country = ""
-    country_code_for_folder = COUNTRY_INFO.get(country_folder_name, {}).get("code")
-    if country_code_for_folder:
-        for continent, countries_in_continent in CONTINENT_COUNTRIES.items():
-            if country_code_for_folder.upper() in [c.upper() for c in countries_in_continent]: # Kodları büyük harfe çevirerek karşılaştır
-                continent_of_country = continent
-                break
-
-    # Kıtalar için active sınıfı, şu anki ülkenin kıtasına göre belirlenir
-    # Bu kısmı Python tarafında düzgünce formatlamamız gerekiyor
-    continent_active_classes = {
-        'asia_active': 'active' if continent_of_country == 'asia' else '',
-        'europe_active': 'active' if continent_of_country == 'europe' else '',
-        'africa_active': 'active' if continent_of_country == 'africa' else '',
-        'north_america_active': 'active' if continent_of_country == 'north_america' else '',
-        'south_america_active': 'active' if continent_of_country == 'south_america' else '',
-        'oceania_active': 'active' if continent_of_country == 'oceania' else '',
-    }
-
-
-    country_buttons_html = []
-    sorted_country_info = sorted(
-        COUNTRY_INFO.items(),
-        key=lambda item: item[1].get("display_name", item[0].replace('_', ' ')).title() # Sorting key'i de title() ile güncelledim
-    )
-
-    for c_folder_name, c_info in sorted_country_info:
-        c_display_name = c_info.get("display_name", c_folder_name.replace('_', ' ')).title()
-        first_letter = c_display_name[0].upper()
-
-        sanitized_folder_name = c_folder_name.replace("_", "-")
-
-        is_current_country_active = " active" if c_folder_name == country_folder_name else ""
-
-        country_buttons_html.append(
-            f'''<button onclick="location.href='../{sanitized_folder_name}/'" data-letter="{first_letter}" class="country-button{is_current_country_active}">{c_display_name}</button>'''
-        )
-    
-    country_dir = os.path.join(os.getcwd(), country_folder_name)
-    os.makedirs(country_dir, exist_ok=True)
-
-    # JavaScript ile video listesini doldurmak yerine, doğrudan HTML şablonuna dahil edilecek bir placeholder belirle
-    # Eğer video verisi boşsa, doğrudan bir mesaj göster
-
-    # Video listesini direkt HTML'e değil, JavaScript'in dolduracağı boş bir div olarak bırakıyoruz.
-    # Hata mesajı JavaScript tarafından kontrol edilecek.
-    video_list_html_placeholder = """
-    <div class="video-list-wrapper">
-        <div id="videoList" class="video-list"></div>
-        <button id="loadMoreBtn" class="site-button">Load More</button>
-    </div>
-    """
-    # Note: `video_list_html` adı, HTML şablonunda doğrudan doldurulacak bir yer gibi duruyor.
-    # Ancak JavaScript ile dinamik olarak doldurulacağı için, burada sadece container'ı koymak yeterli.
-    # JavaScript'in içindeki fetch çağrısı, doğru `country_folder_name` ile otomatik olarak güncellenecek.
-
-
+    # HTML içeriğini formatla
     html_content = html_template.format(
         display_country_name=display_country_name,
-        country_folder_name=country_folder_name.replace('_', '-'), # URL'lerde tire kullanmak daha iyidir
+        sanitized_country_name_for_url=sanitized_country_name_for_url, # URL ve JS için tireli isim
         structured_data_block=structured_data_block,
-        **continent_active_classes, # Kıtaların aktif sınıflarını doğrudan geç
-        country_buttons="\n".join(country_buttons_html), # Join the list into a single string
-        video_list_html=video_list_html_placeholder # Bu placeholder zaten JS tarafından doldurulacak bir alan
+        **continent_active_classes,
+        country_buttons="\n".join(country_buttons_html),
     )
+
+    # Ülke klasörünü oluştur ve HTML dosyasını yaz
+    country_dir = os.path.join(os.getcwd(), sanitized_country_name_for_url) # Klasör ismi de tireli olacak
+    os.makedirs(country_dir, exist_ok=True)
 
     output_path = os.path.join(country_dir, "index.html")
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(html_content)
     print(f"{output_path} oluşturuldu.")
 
-# main fonksiyonunu yukarıdaki önerilere göre güncelleyin.
-# Özellikle JSON okuma hatalarını yakalayan try-except blokları önemli.
+
 def main():
     base_data_dir = "Country_data"
     videos_base_dir = os.path.join(base_data_dir, "videos")
     structured_data_base_dir = os.path.join(base_data_dir, "structured_data")
 
+    # Klasörlerin var olduğundan emin ol
     os.makedirs(videos_base_dir, exist_ok=True)
     os.makedirs(structured_data_base_dir, exist_ok=True)
 
-    for country_folder_name, info in COUNTRY_INFO.items():
-        videos_file = os.path.join(videos_base_dir, f"videos_{country_folder_name}.json")
-        structured_data_file = os.path.join(structured_data_base_dir, f"structured_data_{country_folder_name}.json")
+    for country_folder_name_raw, info in COUNTRY_INFO.items():
+        # Klasör ve dosya adlarında tire (-) kullanacağımız için dönüştürüyoruz
+        sanitized_country_name = country_folder_name_raw.replace('_', '-')
+
+        # JSON dosyalarının yollarını oluştururken tireli isim kullanıyoruz
+        videos_file = os.path.join(videos_base_dir, f"videos-{sanitized_country_name}.json")
+        structured_data_file = os.path.join(structured_data_base_dir, f"structured_data-{sanitized_country_name}.json")
 
         videos_data = []
         structured_data = {}
 
+        # Video verilerini oku
         if os.path.exists(videos_file):
             try:
                 with open(videos_file, "r", encoding="utf-8") as f:
                     videos_data = json.load(f)
             except json.JSONDecodeError as e:
                 print(f"HATA: {videos_file} dosyasını okurken JSON hatası: {e}")
-                videos_data = []
-            except FileNotFoundError: # Bu aslında os.path.exists kontrolü nedeniyle buraya düşmez ama yine de eklenebilir
+                videos_data = [] # Hata durumunda boş liste olarak ayarla
+            except FileNotFoundError:
                 print(f"UYARI: {videos_file} bulunamadı.")
                 videos_data = []
         else:
             print(f"UYARI: {videos_file} bulunamadı. Boş video verisi ile devam ediliyor.")
             
+        # Yapılandırılmış verileri oku
         if os.path.exists(structured_data_file):
             try:
                 with open(structured_data_file, "r", encoding="utf-8") as f:
@@ -721,8 +740,8 @@ def main():
         else:
             print(f"UYARI: {structured_data_file} bulunamadı. Boş yapılandırılmış veri ile devam ediliyor.")
 
-        # generate_html_file çağrısı burada olmalı
-        generate_html_file(country_folder_name, videos_data, structured_data)
+        # HTML dosyasını oluştur (sanitized_country_name'i kullanıyoruz)
+        generate_html_file(sanitized_country_name, videos_data, structured_data)
 
 if __name__ == "__main__":
     main()
