@@ -617,7 +617,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
     # Ülkeleri alfabetik sıraya göre sırala
     sorted_country_info = sorted(COUNTRY_INFO.items(), key=lambda item: item[1].get("display_name", item[0].replace('_', ' ')))
     
-    ountry_buttons_html = []
+    country_buttons_html = []
 
     sorted_country_info = sorted(
         COUNTRY_INFO.items(),
