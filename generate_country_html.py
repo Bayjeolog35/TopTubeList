@@ -25,9 +25,11 @@ CONTINENT_COUNTRIES = {
 def generate_html_file(country_folder_name, videos_data, structured_data):
     """Belirtilen ülke için HTML dosyasını oluşturur."""
 
-    display_country_name = COUNTRY_INFO.get(country_folder_name, {}).get("display_name", country_folder_name.replace('_', ' '))
-    
-    # Define structured_data_block BEFORE the html_template string
+    display_country_name = COUNTRY_INFO.get(
+        country_folder_name, {}
+    ).get("display_name", country_folder_name.replace('_', ' '))
+
+    # Structured data JSON-LD bloğunu oluştur
     structured_data_block = ""
     if structured_data:
         structured_json = json.dumps(structured_data, indent=2)
