@@ -202,7 +202,7 @@ COUNTRY_INFO = {
 # kıta bazlı ülke listeleri (apı'dan veri çekiminde kıta yerine ülke kodu kullanılacak)
 # bu sadece navbarda veya listelemede kıta isimlerini kullanmak için bir mantıksal gruplama.
 # apı isteği her zaman ülke kodu üzerinden yapılacaktır.
-contınent_countrıes = {
+CONTINENT_COUNTRIES = {
     "asia": [
         "afghanistan", "armenia", "azerbaijan", "bahrain", "bangladesh", "bhutan", "brunei", "cambodia", "china", "cyprus", "east_timor", "georgia", "ındia", "ındonesia", "ıran", "ıraq", "ısrael", "japan", "jordan", "kazakhstan", "kiribati", "korea_north", "korea_south", "kuwait", "kyrgyzstan", "laos", "lebanon", "malaysia", "maldives", "mongolia", "myanmar", "nepal", "oman", "pakistan", "palestine", "philippines", "qatar", "saudi_arabia", "singapore", "sri_lanka", "syria", "taiwan", "tajikistan", "thailand", "turkey", "turkmenistan", "united_arab_emirates", "uzbekistan", "vietnam", "yemen"
     ],
