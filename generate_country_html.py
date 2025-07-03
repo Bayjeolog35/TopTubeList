@@ -383,7 +383,7 @@ else:
         north_america_active=north_america_active,
         south_america_active=south_america_active,
         oceania_active=oceania_active,
-        country_buttons=country_buttons_html
+        country_buttons=country_buttons_html,
         video_list_html=video_list_html
     )
 
