@@ -31,7 +31,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
     <meta name="description" content="Watch the most popular YouTube videos trending across {display_country_name}. Stay current with viral content.">
     <meta name="keywords" content="YouTube trends {display_country_name}, popular videos {display_country_name}, trending YouTube, viral content">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://toptubelist.com/{country_folder_name.lower()}/" />
+    <link rel="canonical" href="https://toptubelist.com/{country_folder_name}/" />
     <link rel="stylesheet" href="../style.css" />
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103"
