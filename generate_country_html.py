@@ -28,11 +28,15 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
         crossorigin="anonymous"></script>
 
 if structured_data:
-    structured_data_block = f"""<script type="application/ld+json">
-{json.dumps(structured_data, indent=2)}
-</script>"""
+    structured_json = json.dumps(structured_data, indent=2)
+    structured_data_block = (
+        '<script type="application/ld+json">\n' +
+        structured_json +
+        '\n</script>'
+    )
 else:
     structured_data_block = ""
+    
 </head>
 <body>
 <header>
