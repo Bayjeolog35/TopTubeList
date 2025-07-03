@@ -363,157 +363,39 @@
     </footer>
 
     <script>
-        // --- FadeOut animation style block ---
-        const style = document.createElement("style");
-        style.textContent = `
-            @keyframes fadeOut {
-                0% { opacity: 1; }
-                80% { opacity: 1; }
-                100% { opacity: 0; transform: translateY(10px); }
-            }
-        `;
-        document.head.appendChild(style);
+       /*hamburger menü*/
+  
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const panel = document.querySelector(".country-panel");
 
-
-            // --- Hamburger Panel State (Keep Open Across Pages) ---
-    document.addEventListener("DOMContentLoaded", () => {
-        const hamburger = document.querySelector(".hamburger");
-        const panel = document.querySelector(".country-panel");
-
-        // Önceki durumu geri yükle
-        const savedState = localStorage.getItem("countryPanelOpen");
-        if (savedState === "true" && panel) {
-            panel.classList.add("active");
-        }
-
-        if (hamburger && panel) {
-            hamburger.addEventListener("click", () => {
-                panel.classList.toggle("active");
-
-                // Durumu kaydet
-                const isOpen = panel.classList.contains("active");
-                localStorage.setItem("countryPanelOpen", isOpen);
-            });
-        }
+  if (hamburger && panel) {
+    hamburger.addEventListener("click", () => {
+      panel.classList.toggle("active");
     });
+  }
+});
 
 
-        // --- Dark Mode Toggle ---
-        document.addEventListener("DOMContentLoaded", () => {
-            const darkModeToggle = document.getElementById("darkModeToggle");
-            const savedMode = localStorage.getItem("darkMode");
-            if (savedMode === "true") {
-                document.body.classList.add("dark-mode");
-            }
-            if (darkModeToggle) {
-                darkModeToggle.addEventListener("click", () => {
-                    const isDarkNow = document.body.classList.toggle("dark-mode");
-                    localStorage.setItem("darkMode", isDarkNow);
-                });
-            }
-        });
+/*hamburger menü son*/
+  // --- Dark Mode Toggle ---
+document.addEventListener("DOMContentLoaded", () => {
+  const darkModeToggle = document.getElementById("darkModeToggle");
 
-        // --- Harf filtreleme ---
-        document.querySelectorAll(".alphabet-letter").forEach(letter => {
-            letter.addEventListener("click", function (e) {
-                e.preventDefault();
-                const selectedLetter = this.getAttribute("data-letter");
-                const allButtons = document.querySelectorAll(".country-column button");
+  // Sayfa yüklendiğinde dark mode'u uygula
+  const savedMode = localStorage.getItem("darkMode");
+  if (savedMode === "true") {
+    document.body.classList.add("dark-mode");
+  }
 
-                allButtons.forEach(btn => {
-                    if (selectedLetter === "all" || btn.getAttribute("data-letter") === selectedLetter) {
-                        btn.style.display = "block";
-                    } else {
-                        btn.style.display = "none";
-                    }
-                });
-
-                document.querySelectorAll(".alphabet-letter").forEach(a => a.classList.remove("active"));
-                this.classList.add("active");
-            });
-        });
-
-        // --- Contact Us Scroll + Toggle ---
-        const contactToggle = document.getElementById("contactToggle");
-        const contactContent = document.getElementById("contactContent");
-
-        if (contactToggle && contactContent) {
-            contactToggle.addEventListener("click", () => {
-                if (contactContent.classList.contains("show")) {
-                    contactContent.classList.remove("show");
-                    setTimeout(() => {
-                        contactContent.style.display = "none";
-                    }, 400);
-                } else {
-                    contactContent.style.display = "block";
-                    setTimeout(() => {
-                        contactContent.classList.add("show");
-                        contactContent.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start"
-                        });
-                    }, 10);
-                }
-            });
-        }
-
-        // --- About Us Scroll + Toggle ---
-        const aboutToggle = document.getElementById("aboutToggle");
-        const aboutContent = document.getElementById("aboutContent");
-
-        if (aboutToggle && aboutContent) {
-            aboutToggle.addEventListener("click", () => {
-                if (aboutContent.classList.contains("show")) {
-                    aboutContent.classList.remove("show");
-                    setTimeout(() => {
-                        aboutContent.style.display = "none";
-                    }, 400);
-                } else {
-                    aboutContent.style.display = "block";
-                    setTimeout(() => {
-                        aboutContent.classList.add("show");
-                        aboutContent.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start"
-                        });
-                    }, 10);
-                }
-            });
-        }
-
-        // --- Contact Form Submission ---
-        const form = document.querySelector("form[name='contact']");
-        const statusDiv = document.getElementById("formStatus");
-
-        if (form && statusDiv) {
-            form.addEventListener("submit", function (e) {
-                e.preventDefault();
-                const formData = new FormData(form);
-
-                fetch("/", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: new URLSearchParams(formData).toString()
-                })
-                .then(() => {
-                    form.reset();
-                    statusDiv.innerText = "✅ ✅ Message sent successfully!";
-                    statusDiv.style.display = "block";
-                    statusDiv.style.cssText = `
-                        position: fixed; bottom: 20px; right: 20px;
-                        background: #28a745; color: white; padding: 12px 24px;
-                        border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-                        font-family: sans-serif; z-index: 9999;
-                        animation: fadeOut 5s forwards;
-                    `;
-                    setTimeout(() => statusDiv.remove(), 5000);
-                })
-                .catch(() => {
-                    alert("❌ Mesaj gönderilemedi. Lütfen tekrar deneyin.");
-                });
-            });
-        }
-        
+  // Tıklanınca dark mode'u toggle et
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", () => {
+      const isDarkNow = document.body.classList.toggle("dark-mode");
+      localStorage.setItem("darkMode", isDarkNow);
+    });
+  }
+});
         /* Video Render */
         document.addEventListener("DOMContentLoaded", () => {
             const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
