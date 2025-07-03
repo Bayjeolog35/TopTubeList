@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 675187
+            "userInteractionCount": 732949
           },
           "url": "https://www.youtube.com/watch?v=gKKT2Ai4LIY"
         }
@@ -32,24 +32,6 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Как мы потеряли идеальный банан",
-          "description": "Trending video from i11ushenka in Russia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/yh5syR6depU/hqdefault.jpg",
-          "uploadDate": "2025-07-02T09:00:53Z",
-          "embedUrl": "https://www.youtube.com/embed/yh5syR6depU",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2094124
-          },
-          "url": "https://www.youtube.com/watch?v=yh5syR6depU"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
         "item": {
           "@type": "VideoObject",
           "name": "Китайка и Русалка 23 серия😂😆",
@@ -60,9 +42,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 528618
+            "userInteractionCount": 555773
           },
           "url": "https://www.youtube.com/watch?v=w7GW6vQrrls"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Как мы потеряли идеальный банан",
+          "description": "Trending video from i11ushenka in Russia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/yh5syR6depU/hqdefault.jpg",
+          "uploadDate": "2025-07-02T09:00:53Z",
+          "embedUrl": "https://www.youtube.com/embed/yh5syR6depU",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2186121
+          },
+          "url": "https://www.youtube.com/watch?v=yh5syR6depU"
         }
       },
       {
@@ -70,17 +70,17 @@
         "position": 4,
         "item": {
           "@type": "VideoObject",
-          "name": "МЕДНЫЙ ГООООООЛем",
-          "description": "Trending video from Dragon Docx in Russia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/b2zgMO63rQ0/hqdefault.jpg",
-          "uploadDate": "2025-07-01T19:22:05Z",
-          "embedUrl": "https://www.youtube.com/embed/b2zgMO63rQ0",
+          "name": "Поставил на место дикого бармалея!",
+          "description": "Trending video from МИНУС БАЛЛ in Russia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/87gpu7unG4M/hqdefault.jpg",
+          "uploadDate": "2025-07-02T17:40:52Z",
+          "embedUrl": "https://www.youtube.com/embed/87gpu7unG4M",
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 673830
+            "userInteractionCount": 167359
           },
-          "url": "https://www.youtube.com/watch?v=b2zgMO63rQ0"
+          "url": "https://www.youtube.com/watch?v=87gpu7unG4M"
         }
       },
       {
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4480900
+            "userInteractionCount": 4976689
           },
           "url": "https://www.youtube.com/watch?v=am_Rb1QZzxs"
         }

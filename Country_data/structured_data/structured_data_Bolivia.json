@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4026566
+            "userInteractionCount": 4194752
           },
           "url": "https://www.youtube.com/watch?v=W91CXLxz-iY"
         }
@@ -32,24 +32,6 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Robé un BRAINROT BUG (SECRETO) a un ESTAFADOR en STEAL a BRAINROT",
-          "description": "Trending video from SoyNeto in Bolivia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Ti7tEA-PeJY/hqdefault.jpg",
-          "uploadDate": "2025-07-01T23:31:15Z",
-          "embedUrl": "https://www.youtube.com/embed/Ti7tEA-PeJY",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1108059
-          },
-          "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
         "item": {
           "@type": "VideoObject",
           "name": "¡#ALHILAL HISTÓRICO! DEJÓ AFUERA al #MANCHESTERCITY | Manchester City 3–4 Al Hilal | Resumen",
@@ -60,9 +42,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2791619
+            "userInteractionCount": 2823351
           },
           "url": "https://www.youtube.com/watch?v=-PR00YxNuao"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Robé un BRAINROT BUG (SECRETO) a un ESTAFADOR en STEAL a BRAINROT",
+          "description": "Trending video from SoyNeto in Bolivia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Ti7tEA-PeJY/hqdefault.jpg",
+          "uploadDate": "2025-07-01T23:31:15Z",
+          "embedUrl": "https://www.youtube.com/embed/Ti7tEA-PeJY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1150606
+          },
+          "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
         }
       },
       {
@@ -78,7 +78,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1486509
+            "userInteractionCount": 1508471
           },
           "url": "https://www.youtube.com/watch?v=pZ_4GMBo3Zk"
         }
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 322306
+            "userInteractionCount": 352172
           },
           "url": "https://www.youtube.com/watch?v=oTyslElj8YA"
         }

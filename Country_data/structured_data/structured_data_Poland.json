@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1667147
+            "userInteractionCount": 1670801
           },
           "url": "https://www.youtube.com/watch?v=VoczEAteGkw"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 918547
+            "userInteractionCount": 920147
           },
           "url": "https://www.youtube.com/watch?v=valTlZCLRPE"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "JESTEM W CIĄŻY!♥️ | Andziaks",
-          "description": "Trending video from Andziaks in Poland",
-          "thumbnailUrl": "https://i.ytimg.com/vi/1TZKxBa-hTE/hqdefault.jpg",
-          "uploadDate": "2025-06-30T14:11:51Z",
-          "embedUrl": "https://www.youtube.com/embed/1TZKxBa-hTE",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1469955
-          },
-          "url": "https://www.youtube.com/watch?v=1TZKxBa-hTE"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "NIE ZGADNIESZ PRAWDZIWEJ HISTORII - KARA!!!",
@@ -78,9 +60,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 618350
+            "userInteractionCount": 628081
           },
           "url": "https://www.youtube.com/watch?v=1GS8jrHY3uI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "JESTEM W CIĄŻY!♥️ | Andziaks",
+          "description": "Trending video from Andziaks in Poland",
+          "thumbnailUrl": "https://i.ytimg.com/vi/1TZKxBa-hTE/hqdefault.jpg",
+          "uploadDate": "2025-06-30T14:11:51Z",
+          "embedUrl": "https://www.youtube.com/embed/1TZKxBa-hTE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1471273
+          },
+          "url": "https://www.youtube.com/watch?v=1TZKxBa-hTE"
         }
       },
       {
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 5221461
+            "userInteractionCount": 6134876
           },
           "url": "https://www.youtube.com/watch?v=g0Ygas1Nj9U"
         }

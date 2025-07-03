@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 381686
+            "userInteractionCount": 391851
           },
           "url": "https://www.youtube.com/watch?v=roeXmijaI9A"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4026566
+            "userInteractionCount": 4194752
           },
           "url": "https://www.youtube.com/watch?v=W91CXLxz-iY"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 271216
+            "userInteractionCount": 295408
           },
           "url": "https://www.youtube.com/watch?v=dPu54GXiwSU"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Robé un BRAINROT BUG (SECRETO) a un ESTAFADOR en STEAL a BRAINROT",
-          "description": "Trending video from SoyNeto in Argentina",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Ti7tEA-PeJY/hqdefault.jpg",
-          "uploadDate": "2025-07-01T23:31:15Z",
-          "embedUrl": "https://www.youtube.com/embed/Ti7tEA-PeJY",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1108059
-          },
-          "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Alan Lez - \"Prisionero\" - Audiciones a ciegas - La Voz Argentina 2025",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 447348
+            "userInteractionCount": 467305
           },
           "url": "https://www.youtube.com/watch?v=Z6x4ZKkaQPU"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Robé un BRAINROT BUG (SECRETO) a un ESTAFADOR en STEAL a BRAINROT",
+          "description": "Trending video from SoyNeto in Argentina",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Ti7tEA-PeJY/hqdefault.jpg",
+          "uploadDate": "2025-07-01T23:31:15Z",
+          "embedUrl": "https://www.youtube.com/embed/Ti7tEA-PeJY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1150606
+          },
+          "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
         }
       }
     ]

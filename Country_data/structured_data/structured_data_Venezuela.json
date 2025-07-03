@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4026566
+            "userInteractionCount": 4194752
           },
           "url": "https://www.youtube.com/watch?v=W91CXLxz-iY"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1067185
+            "userInteractionCount": 1100072
           },
           "url": "https://www.youtube.com/watch?v=wmDouI8cf6Y"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1108059
+            "userInteractionCount": 1150606
           },
           "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "REUNIÓN 24 | HIPÓDROMO LA RINCONADA | EN VIVO | CLUB HÍPICO POR TVES | HD",
-          "description": "Trending video from TVES in Venezuela",
-          "thumbnailUrl": "https://i.ytimg.com/vi/kG5ZwMNjh2Y/hqdefault.jpg",
-          "uploadDate": "2025-06-29T22:28:47Z",
-          "embedUrl": "https://www.youtube.com/embed/kG5ZwMNjh2Y",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 630831
-          },
-          "url": "https://www.youtube.com/watch?v=kG5ZwMNjh2Y"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Manchester City vs Al Hilal (3-4) | Resumen | Highlights Mundial de Clubes FIFA 2025™",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1486509
+            "userInteractionCount": 1508471
           },
           "url": "https://www.youtube.com/watch?v=pZ_4GMBo3Zk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "REUNIÓN 24 | HIPÓDROMO LA RINCONADA | EN VIVO | CLUB HÍPICO POR TVES | HD",
+          "description": "Trending video from TVES in Venezuela",
+          "thumbnailUrl": "https://i.ytimg.com/vi/kG5ZwMNjh2Y/hqdefault.jpg",
+          "uploadDate": "2025-06-29T22:28:47Z",
+          "embedUrl": "https://www.youtube.com/embed/kG5ZwMNjh2Y",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 630198
+          },
+          "url": "https://www.youtube.com/watch?v=kG5ZwMNjh2Y"
         }
       }
     ]

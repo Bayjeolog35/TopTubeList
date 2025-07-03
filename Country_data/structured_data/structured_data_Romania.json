@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 107754957
+            "userInteractionCount": 110597488
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 44200773
+            "userInteractionCount": 45728901
           },
           "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "I Stole His Brainrots… 😋🦈 (Steal a Brainrot Roblox ASMR)",
-          "description": "Trending video from Spizee in Romania",
-          "thumbnailUrl": "https://i.ytimg.com/vi/u8hQ_nBD8eg/hqdefault.jpg",
-          "uploadDate": "2025-06-28T17:42:38Z",
-          "embedUrl": "https://www.youtube.com/embed/u8hQ_nBD8eg",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 34155247
-          },
-          "url": "https://www.youtube.com/watch?v=u8hQ_nBD8eg"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Tag prietenului care are datorie la tine 🫣 Velea",
@@ -78,9 +60,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 276536
+            "userInteractionCount": 280041
           },
           "url": "https://www.youtube.com/watch?v=RRhWIr2SlFc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "I Stole His Brainrots… 😋🦈 (Steal a Brainrot Roblox ASMR)",
+          "description": "Trending video from Spizee in Romania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/u8hQ_nBD8eg/hqdefault.jpg",
+          "uploadDate": "2025-06-28T17:42:38Z",
+          "embedUrl": "https://www.youtube.com/embed/u8hQ_nBD8eg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 35154982
+          },
+          "url": "https://www.youtube.com/watch?v=u8hQ_nBD8eg"
         }
       },
       {
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 929789
+            "userInteractionCount": 936800
           },
           "url": "https://www.youtube.com/watch?v=xou63Z1gavo"
         }

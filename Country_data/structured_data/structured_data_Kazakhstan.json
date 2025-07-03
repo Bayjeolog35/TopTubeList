@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 107754957
+            "userInteractionCount": 110597488
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 44200773
+            "userInteractionCount": 45728901
           },
           "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 129167667
+            "userInteractionCount": 129177961
           },
           "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "НЕУДАЧНЫЙ ПРАНК #shorts",
-          "description": "Trending video from Паша Осадчий in Kazakhstan",
-          "thumbnailUrl": "https://i.ytimg.com/vi/_OLYfUS2J0E/hqdefault.jpg",
-          "uploadDate": "2025-06-29T11:21:58Z",
-          "embedUrl": "https://www.youtube.com/embed/_OLYfUS2J0E",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2598303
-          },
-          "url": "https://www.youtube.com/watch?v=_OLYfUS2J0E"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "ҚЫЗЫҚ КОНЦЕРТ 2025 – Арнайы жоба | Толық шығарылым | Қызық Times",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1352103
+            "userInteractionCount": 1360130
           },
           "url": "https://www.youtube.com/watch?v=o0DisSJQGpM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "НЕУДАЧНЫЙ ПРАНК #shorts",
+          "description": "Trending video from Паша Осадчий in Kazakhstan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/_OLYfUS2J0E/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:21:58Z",
+          "embedUrl": "https://www.youtube.com/embed/_OLYfUS2J0E",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2611468
+          },
+          "url": "https://www.youtube.com/watch?v=_OLYfUS2J0E"
         }
       }
     ]

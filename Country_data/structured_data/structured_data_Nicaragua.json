@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4026566
+            "userInteractionCount": 4194752
           },
           "url": "https://www.youtube.com/watch?v=W91CXLxz-iY"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1486509
+            "userInteractionCount": 1508471
           },
           "url": "https://www.youtube.com/watch?v=pZ_4GMBo3Zk"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1108059
+            "userInteractionCount": 1150606
           },
           "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "✅ ARMADURA y GOLEM de COBRE 👉 Preview 1.21.100.23 Minecraft",
-          "description": "Trending video from Bobicraft in Nicaragua",
-          "thumbnailUrl": "https://i.ytimg.com/vi/wmDouI8cf6Y/hqdefault.jpg",
-          "uploadDate": "2025-07-01T21:55:47Z",
-          "embedUrl": "https://www.youtube.com/embed/wmDouI8cf6Y",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1067185
-          },
-          "url": "https://www.youtube.com/watch?v=wmDouI8cf6Y"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Los trucos sucios de los hoteles de lujo para sacar más dinero 💵🏨",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3774937
+            "userInteractionCount": 3927120
           },
           "url": "https://www.youtube.com/watch?v=vTgzntPTAyo"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "✅ ARMADURA y GOLEM de COBRE 👉 Preview 1.21.100.23 Minecraft",
+          "description": "Trending video from Bobicraft in Nicaragua",
+          "thumbnailUrl": "https://i.ytimg.com/vi/wmDouI8cf6Y/hqdefault.jpg",
+          "uploadDate": "2025-07-01T21:55:47Z",
+          "embedUrl": "https://www.youtube.com/embed/wmDouI8cf6Y",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1100072
+          },
+          "url": "https://www.youtube.com/watch?v=wmDouI8cf6Y"
         }
       }
     ]

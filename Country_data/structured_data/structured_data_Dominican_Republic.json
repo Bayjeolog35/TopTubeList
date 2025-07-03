@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4026566
+            "userInteractionCount": 4194752
           },
           "url": "https://www.youtube.com/watch?v=W91CXLxz-iY"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 215269
+            "userInteractionCount": 220529
           },
           "url": "https://www.youtube.com/watch?v=Ge3kaG7wFDs"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1108059
+            "userInteractionCount": 1150606
           },
           "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Chespirito: Sin Querer Queriendo | Episodio 5 Avance | Max",
-          "description": "Trending video from Max Latinoamérica in Dominican Republic",
-          "thumbnailUrl": "https://i.ytimg.com/vi/GJMQtw1bn4M/hqdefault.jpg",
-          "uploadDate": "2025-06-30T18:00:24Z",
-          "embedUrl": "https://www.youtube.com/embed/GJMQtw1bn4M",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 406809
-          },
-          "url": "https://www.youtube.com/watch?v=GJMQtw1bn4M"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "¿Comprarlo VS Hacerlo? Chipotle",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 356637
+            "userInteractionCount": 386719
           },
           "url": "https://www.youtube.com/watch?v=Mra6EYtHPhE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Cheddy cara a cara con Yarlenys en la bienvenida a Brea Frank | MAS ROBERTO",
+          "description": "Trending video from Roberto Ángel Salcedo in Dominican Republic",
+          "thumbnailUrl": "https://i.ytimg.com/vi/lrUi1U35TLQ/hqdefault.jpg",
+          "uploadDate": "2025-06-29T19:15:07Z",
+          "embedUrl": "https://www.youtube.com/embed/lrUi1U35TLQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 228890
+          },
+          "url": "https://www.youtube.com/watch?v=lrUi1U35TLQ"
         }
       }
     ]

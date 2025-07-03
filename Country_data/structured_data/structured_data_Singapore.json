@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2165102
+            "userInteractionCount": 2190925
           },
           "url": "https://www.youtube.com/watch?v=OrPvHsv3iTE"
         }
@@ -32,24 +32,6 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "They didn't expected this art😂💕",
-          "description": "Trending video from Eternal Love in Singapore",
-          "thumbnailUrl": "https://i.ytimg.com/vi/D_zzbW_8GmQ/hqdefault.jpg",
-          "uploadDate": "2025-06-24T16:00:21Z",
-          "embedUrl": "https://www.youtube.com/embed/D_zzbW_8GmQ",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 37288962
-          },
-          "url": "https://www.youtube.com/watch?v=D_zzbW_8GmQ"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
         "item": {
           "@type": "VideoObject",
           "name": "Who was faster? 😳😱 @isabellaafro",
@@ -60,9 +42,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 107754957
+            "userInteractionCount": 110597488
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "They didn't expected this art😂💕",
+          "description": "Trending video from Eternal Love in Singapore",
+          "thumbnailUrl": "https://i.ytimg.com/vi/D_zzbW_8GmQ/hqdefault.jpg",
+          "uploadDate": "2025-06-24T16:00:21Z",
+          "embedUrl": "https://www.youtube.com/embed/D_zzbW_8GmQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 37440235
+          },
+          "url": "https://www.youtube.com/watch?v=D_zzbW_8GmQ"
         }
       },
       {
@@ -78,7 +78,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 11538034
+            "userInteractionCount": 11890238
           },
           "url": "https://www.youtube.com/watch?v=aBeRw1KwyyE"
         }
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 27960168
+            "userInteractionCount": 28199351
           },
           "url": "https://www.youtube.com/watch?v=M2WTUoy4y6E"
         }

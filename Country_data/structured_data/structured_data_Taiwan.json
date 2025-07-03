@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 911133
+            "userInteractionCount": 939627
           },
           "url": "https://www.youtube.com/watch?v=6coNPWLq0Fg"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1144582
+            "userInteractionCount": 1154292
           },
           "url": "https://www.youtube.com/watch?v=kFR0Uvmj_q4"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 615942
+            "userInteractionCount": 620214
           },
           "url": "https://www.youtube.com/watch?v=FHA3FppLIZY"
         }
@@ -68,6 +68,24 @@
       {
         "@type": "ListItem",
         "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "台語歌后李竺芯「法式台語」許效舜是推手　曝雙方私約「喝茶聊整晚」｜TVBS娛樂頭條 #shorts",
+          "description": "Trending video from TVBS娛樂頭條 in Taiwan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/354C7sHU1LE/hqdefault.jpg",
+          "uploadDate": "2025-07-01T08:17:07Z",
+          "embedUrl": "https://www.youtube.com/embed/354C7sHU1LE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 325818
+          },
+          "url": "https://www.youtube.com/watch?v=354C7sHU1LE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "#風田 #懲罰 #禾羽 #一粒 吃醋了【#女孩好野】EP11︱#shorts #沈玉琳 #張立東 #三峽老街 #林襄 #Yuri #一粒 #李雅英",
@@ -78,27 +96,9 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 356549
+            "userInteractionCount": 369422
           },
           "url": "https://www.youtube.com/watch?v=5PQcVEPPgxs"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "全自動耳垢清潔機？抽吸技術洗出超多噁心黃水！🤮｜志祺七七 Shorts #shasha",
-          "description": "Trending video from 志祺七七 in Taiwan",
-          "thumbnailUrl": "https://i.ytimg.com/vi/xZaTDZE5bj8/hqdefault.jpg",
-          "uploadDate": "2025-06-29T08:30:27Z",
-          "embedUrl": "https://www.youtube.com/embed/xZaTDZE5bj8",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 748828
-          },
-          "url": "https://www.youtube.com/watch?v=xZaTDZE5bj8"
         }
       }
     ]

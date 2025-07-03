@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 893364
+            "userInteractionCount": 1033208
           },
           "url": "https://www.youtube.com/watch?v=zsWg4h7Eiss"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 8475655
+            "userInteractionCount": 8569566
           },
           "url": "https://www.youtube.com/watch?v=KD18ddeFuyM"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Sean ‘Diddy’ Combs Legal Team Asks for His Release After Verdict",
-          "description": "Trending video from TODAY in Canada",
-          "thumbnailUrl": "https://i.ytimg.com/vi/c411Borjmng/hqdefault.jpg",
-          "uploadDate": "2025-07-02T15:10:55Z",
-          "embedUrl": "https://www.youtube.com/embed/c411Borjmng",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 616762
-          },
-          "url": "https://www.youtube.com/watch?v=c411Borjmng"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Yankees vs. Blue Jays Game Highlights (7/1/25) | MLB Highlights",
@@ -78,14 +60,14 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 382070
+            "userInteractionCount": 387782
           },
           "url": "https://www.youtube.com/watch?v=ajsk7ZJ1NLs"
         }
       },
       {
         "@type": "ListItem",
-        "position": 5,
+        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Al-Hilal STUNS Manchester City 4-3! | 2025 FIFA Club World Cup Highlights",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 7905538
+            "userInteractionCount": 7932950
           },
           "url": "https://www.youtube.com/watch?v=c_I6CJkS4aQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Sean ‘Diddy’ Combs Legal Team Asks for His Release After Verdict",
+          "description": "Trending video from TODAY in Canada",
+          "thumbnailUrl": "https://i.ytimg.com/vi/c411Borjmng/hqdefault.jpg",
+          "uploadDate": "2025-07-02T15:10:55Z",
+          "embedUrl": "https://www.youtube.com/embed/c411Borjmng",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 654969
+          },
+          "url": "https://www.youtube.com/watch?v=c411Borjmng"
         }
       }
     ]
