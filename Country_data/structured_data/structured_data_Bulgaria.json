@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3496130
+            "userInteractionCount": 3529300
           },
           "url": "https://www.youtube.com/watch?v=DUTeq397N2E"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 110597487
+            "userInteractionCount": 112282214
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "РОЗОВАТА МЕЧТА",
-          "description": "Trending video from Светът на Ванката in Bulgaria",
-          "thumbnailUrl": "https://i.ytimg.com/vi/hH2av7-rT94/hqdefault.jpg",
-          "uploadDate": "2025-06-27T16:49:16Z",
-          "embedUrl": "https://www.youtube.com/embed/hH2av7-rT94",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 505475
-          },
-          "url": "https://www.youtube.com/watch?v=hH2av7-rT94"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "这也太厉害了 #火影忍者 #joker#cosplay",
@@ -78,9 +60,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 45728901
+            "userInteractionCount": 46752189
           },
           "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "РОЗОВАТА МЕЧТА",
+          "description": "Trending video from Светът на Ванката in Bulgaria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/hH2av7-rT94/hqdefault.jpg",
+          "uploadDate": "2025-06-27T16:49:16Z",
+          "embedUrl": "https://www.youtube.com/embed/hH2av7-rT94",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 506955
+          },
+          "url": "https://www.youtube.com/watch?v=hH2av7-rT94"
         }
       },
       {
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 148674
+            "userInteractionCount": 149864
           },
           "url": "https://www.youtube.com/watch?v=pIrwbEa50Ao"
         }

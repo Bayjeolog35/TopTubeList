@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4194752
+            "userInteractionCount": 4227093
           },
           "url": "https://www.youtube.com/watch?v=W91CXLxz-iY"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 235687
+            "userInteractionCount": 241546
           },
           "url": "https://www.youtube.com/watch?v=EsHG3KIwCQM"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2823351
+            "userInteractionCount": 2827269
           },
           "url": "https://www.youtube.com/watch?v=-PR00YxNuao"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Robé un BRAINROT BUG (SECRETO) a un ESTAFADOR en STEAL a BRAINROT",
-          "description": "Trending video from SoyNeto in Chile",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Ti7tEA-PeJY/hqdefault.jpg",
-          "uploadDate": "2025-07-01T23:31:15Z",
-          "embedUrl": "https://www.youtube.com/embed/Ti7tEA-PeJY",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1150606
-          },
-          "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "FLORINDA MEZA: Amor con factura AJENA - Mal De Amores",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 352172
+            "userInteractionCount": 363839
           },
           "url": "https://www.youtube.com/watch?v=oTyslElj8YA"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Manchester City vs Al Hilal (3-4) | Resumen | Highlights Mundial de Clubes FIFA 2025™",
+          "description": "Trending video from DAZN Fútbol in Chile",
+          "thumbnailUrl": "https://i.ytimg.com/vi/pZ_4GMBo3Zk/hqdefault.jpg",
+          "uploadDate": "2025-07-01T07:40:24Z",
+          "embedUrl": "https://www.youtube.com/embed/pZ_4GMBo3Zk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1515700
+          },
+          "url": "https://www.youtube.com/watch?v=pZ_4GMBo3Zk"
         }
       }
     ]

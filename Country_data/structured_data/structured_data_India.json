@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 6761792
+            "userInteractionCount": 7526259
           },
           "url": "https://www.youtube.com/watch?v=vRPPsw-sXR4"
         }
@@ -32,42 +32,6 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Parwarish Episode 25 | Aina Asif | Samar Jafri | 1st JULY 2025 (Eng Sub) | ARY Digital Drama",
-          "description": "Trending video from ARY Digital HD in India",
-          "thumbnailUrl": "https://i.ytimg.com/vi/WIvL6oyoKEA/hqdefault.jpg",
-          "uploadDate": "2025-07-01T16:00:07Z",
-          "embedUrl": "https://www.youtube.com/embed/WIvL6oyoKEA",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 6554873
-          },
-          "url": "https://www.youtube.com/watch?v=WIvL6oyoKEA"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Maalik Trailer | Rajkummar Rao, Manushi Chhillar, Prosenjit |Pulkit, Kumar Taurani & Jay S|11th July",
-          "description": "Trending video from Tips Films in India",
-          "thumbnailUrl": "https://i.ytimg.com/vi/0itY1Fhvnnk/hqdefault.jpg",
-          "uploadDate": "2025-07-01T08:14:13Z",
-          "embedUrl": "https://www.youtube.com/embed/0itY1Fhvnnk",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 20357813
-          },
-          "url": "https://www.youtube.com/watch?v=0itY1Fhvnnk"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Dhee 20 | Mega Grand Launch | 25th June 2025 | Regena Cassandrra , Vijay Binni | ETV Telugu",
@@ -78,9 +42,45 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 522953
+            "userInteractionCount": 666380
           },
           "url": "https://www.youtube.com/watch?v=TlUpxv3PJTE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Parwarish Episode 25 | Aina Asif | Samar Jafri | 1st JULY 2025 (Eng Sub) | ARY Digital Drama",
+          "description": "Trending video from ARY Digital HD in India",
+          "thumbnailUrl": "https://i.ytimg.com/vi/WIvL6oyoKEA/hqdefault.jpg",
+          "uploadDate": "2025-07-01T16:00:07Z",
+          "embedUrl": "https://www.youtube.com/embed/WIvL6oyoKEA",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 6660767
+          },
+          "url": "https://www.youtube.com/watch?v=WIvL6oyoKEA"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Maalik Trailer | Rajkummar Rao, Manushi Chhillar, Prosenjit |Pulkit, Kumar Taurani & Jay S|11th July",
+          "description": "Trending video from Tips Films in India",
+          "thumbnailUrl": "https://i.ytimg.com/vi/0itY1Fhvnnk/hqdefault.jpg",
+          "uploadDate": "2025-07-01T08:14:13Z",
+          "embedUrl": "https://www.youtube.com/embed/0itY1Fhvnnk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 20517411
+          },
+          "url": "https://www.youtube.com/watch?v=0itY1Fhvnnk"
         }
       },
       {
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 848325
+            "userInteractionCount": 864152
           },
           "url": "https://www.youtube.com/watch?v=_t7g-R4Nf4I"
         }

@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 110597488
+            "userInteractionCount": 112282214
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -32,24 +32,6 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "这也太厉害了 #火影忍者 #joker#cosplay",
-          "description": "Trending video from 佐助与鸣人 in Greece",
-          "thumbnailUrl": "https://i.ytimg.com/vi/YFXS0F2IxmM/hqdefault.jpg",
-          "uploadDate": "2025-06-29T04:00:41Z",
-          "embedUrl": "https://www.youtube.com/embed/YFXS0F2IxmM",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 45728901
-          },
-          "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
         "item": {
           "@type": "VideoObject",
           "name": "Όλο το ΤΡΙΜΠΟΥΡΔΕΛΟ με τους διαλόγους ΟΠΕΚΕΠΕ σε ένα βίντεο | Luben TV",
@@ -60,9 +42,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 169339
+            "userInteractionCount": 179709
           },
           "url": "https://www.youtube.com/watch?v=neVw1t8q0sk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "这也太厉害了 #火影忍者 #joker#cosplay",
+          "description": "Trending video from 佐助与鸣人 in Greece",
+          "thumbnailUrl": "https://i.ytimg.com/vi/YFXS0F2IxmM/hqdefault.jpg",
+          "uploadDate": "2025-06-29T04:00:41Z",
+          "embedUrl": "https://www.youtube.com/embed/YFXS0F2IxmM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 46752189
+          },
+          "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
         }
       },
       {
@@ -78,7 +78,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 35154982
+            "userInteractionCount": 35690654
           },
           "url": "https://www.youtube.com/watch?v=u8hQ_nBD8eg"
         }
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 102390137
+            "userInteractionCount": 102517104
           },
           "url": "https://www.youtube.com/watch?v=gGcaGdHlt60"
         }

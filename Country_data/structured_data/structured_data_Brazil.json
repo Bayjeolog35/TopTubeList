@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2285797
+            "userInteractionCount": 2294417
           },
           "url": "https://www.youtube.com/watch?v=Dcv71FA46I4"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 162191
+            "userInteractionCount": 162655
           },
           "url": "https://www.youtube.com/watch?v=Y_54qSd_IwI"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 210673
+            "userInteractionCount": 211164
           },
           "url": "https://www.youtube.com/watch?v=ZPmX8k-x6nM"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "EU FUI PRESO, MAS EU FIZ UM BURACO GIGANTE NA MINHA CELA PARA FUGIR DA PRISÃO!",
-          "description": "Trending video from Jazzghost in Brazil",
-          "thumbnailUrl": "https://i.ytimg.com/vi/bPsNm70lK0w/hqdefault.jpg",
-          "uploadDate": "2025-07-02T15:01:06Z",
-          "embedUrl": "https://www.youtube.com/embed/bPsNm70lK0w",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1045281
-          },
-          "url": "https://www.youtube.com/watch?v=bPsNm70lK0w"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "MELHORES MOMENTOS: MANCHESTER CITY 3 X 4 AL HILAL | COPA DO MUNDO DE CLUBES DA FIFA | OITAVAS",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4924262
+            "userInteractionCount": 4926367
           },
           "url": "https://www.youtube.com/watch?v=McSB27c3CLs"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "HEITOR, VOCÊ ACEITA SER MEU…",
+          "description": "Trending video from Teté  in Brazil",
+          "thumbnailUrl": "https://i.ytimg.com/vi/2GnGm54kdmk/hqdefault.jpg",
+          "uploadDate": "2025-07-01T22:30:10Z",
+          "embedUrl": "https://www.youtube.com/embed/2GnGm54kdmk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 401136
+          },
+          "url": "https://www.youtube.com/watch?v=2GnGm54kdmk"
         }
       }
     ]

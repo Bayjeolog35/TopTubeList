@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 110597488
+            "userInteractionCount": 112282214
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3560052
+            "userInteractionCount": 3784941
           },
           "url": "https://www.youtube.com/watch?v=83vmIX4fyCQ"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Cách tóm được Tung Sahur #2catv #freefire #squidgame #brainrot",
-          "description": "Trending video from 2Cá TV in Vietnam",
-          "thumbnailUrl": "https://i.ytimg.com/vi/gXRW91Ug2c4/hqdefault.jpg",
-          "uploadDate": "2025-06-30T10:01:09Z",
-          "embedUrl": "https://www.youtube.com/embed/gXRW91Ug2c4",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2959804
-          },
-          "url": "https://www.youtube.com/watch?v=gXRW91Ug2c4"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "这也太厉害了 #火影忍者 #joker#cosplay",
@@ -78,9 +60,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 45728901
+            "userInteractionCount": 46752189
           },
           "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Cách tóm được Tung Sahur #2catv #freefire #squidgame #brainrot",
+          "description": "Trending video from 2Cá TV in Vietnam",
+          "thumbnailUrl": "https://i.ytimg.com/vi/gXRW91Ug2c4/hqdefault.jpg",
+          "uploadDate": "2025-06-30T10:01:09Z",
+          "embedUrl": "https://www.youtube.com/embed/gXRW91Ug2c4",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 3013759
+          },
+          "url": "https://www.youtube.com/watch?v=gXRW91Ug2c4"
         }
       },
       {
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 6597241
+            "userInteractionCount": 6663125
           },
           "url": "https://www.youtube.com/watch?v=BmrdGQ0LRRo"
         }

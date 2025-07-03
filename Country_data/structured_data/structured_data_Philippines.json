@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 110597488
+            "userInteractionCount": 112282214
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 45728901
+            "userInteractionCount": 46752189
           },
           "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 14277242
+            "userInteractionCount": 14809799
           },
           "url": "https://www.youtube.com/watch?v=f2QnEza9dVk"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "ITALIAN BRAINROT GETTING ON THE SCHOOL BUS!",
-          "description": "Trending video from The Noob Family in Philippines",
-          "thumbnailUrl": "https://i.ytimg.com/vi/LWxeJkepuEQ/hqdefault.jpg",
-          "uploadDate": "2025-06-28T17:32:21Z",
-          "embedUrl": "https://www.youtube.com/embed/LWxeJkepuEQ",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 21069913
-          },
-          "url": "https://www.youtube.com/watch?v=LWxeJkepuEQ"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Don't Forget To Pay For Your Good Deeds.#cutebaby#funny#vlog#parenting",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 6719758
+            "userInteractionCount": 7156883
           },
           "url": "https://www.youtube.com/watch?v=c-ip-R2N55U"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "ITALIAN BRAINROT GETTING ON THE SCHOOL BUS!",
+          "description": "Trending video from The Noob Family in Philippines",
+          "thumbnailUrl": "https://i.ytimg.com/vi/LWxeJkepuEQ/hqdefault.jpg",
+          "uploadDate": "2025-06-28T17:32:21Z",
+          "embedUrl": "https://www.youtube.com/embed/LWxeJkepuEQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 21208990
+          },
+          "url": "https://www.youtube.com/watch?v=LWxeJkepuEQ"
         }
       }
     ]

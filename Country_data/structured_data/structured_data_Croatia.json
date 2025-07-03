@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 110597487
+            "userInteractionCount": 112282214
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -32,24 +32,6 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "$500 Water vs $1 Water – Blind Taste Test!",
-          "description": "Trending video from The Richey Family in Croatia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/IjCJ3P7SL9M/hqdefault.jpg",
-          "uploadDate": "2025-06-27T15:02:00Z",
-          "embedUrl": "https://www.youtube.com/embed/IjCJ3P7SL9M",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 71604660
-          },
-          "url": "https://www.youtube.com/watch?v=IjCJ3P7SL9M"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
         "item": {
           "@type": "VideoObject",
           "name": "Teodora - 101 ZMIJA feat. Jala Brat (Official Video)",
@@ -60,9 +42,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2680993
+            "userInteractionCount": 2692551
           },
           "url": "https://www.youtube.com/watch?v=8pjgzO-4STw"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "$500 Water vs $1 Water – Blind Taste Test!",
+          "description": "Trending video from The Richey Family in Croatia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/IjCJ3P7SL9M/hqdefault.jpg",
+          "uploadDate": "2025-06-27T15:02:00Z",
+          "embedUrl": "https://www.youtube.com/embed/IjCJ3P7SL9M",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 71879146
+          },
+          "url": "https://www.youtube.com/watch?v=IjCJ3P7SL9M"
         }
       },
       {
@@ -78,7 +78,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 45728901
+            "userInteractionCount": 46752189
           },
           "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
         }
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 140053
+            "userInteractionCount": 140587
           },
           "url": "https://www.youtube.com/watch?v=P0YCrLEnUlc"
         }

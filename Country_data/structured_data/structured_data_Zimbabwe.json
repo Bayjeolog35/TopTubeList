@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 693280
+            "userInteractionCount": 695167
           },
           "url": "https://www.youtube.com/watch?v=n9tba1KRr1Q"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 236711
+            "userInteractionCount": 237319
           },
           "url": "https://www.youtube.com/watch?v=qf9SBXU8CwU"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2414393
+            "userInteractionCount": 2421969
           },
           "url": "https://www.youtube.com/watch?v=MHcp9rRPIWQ"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Master H ft Oriyano & Nyasha David - Tatari ( Official Video)",
-          "description": "Trending video from Zimcelebs Tv in Zimbabwe",
-          "thumbnailUrl": "https://i.ytimg.com/vi/UKYFRRfFtu8/hqdefault.jpg",
-          "uploadDate": "2025-06-04T08:00:06Z",
-          "embedUrl": "https://www.youtube.com/embed/UKYFRRfFtu8",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 699843
-          },
-          "url": "https://www.youtube.com/watch?v=UKYFRRfFtu8"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Killer T - Ngirozi (feat. Michael Magz) (Official Video)",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 130694
+            "userInteractionCount": 131990
           },
           "url": "https://www.youtube.com/watch?v=y2zZwHvEgeE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Master H ft Oriyano & Nyasha David - Tatari ( Official Video)",
+          "description": "Trending video from Zimcelebs Tv in Zimbabwe",
+          "thumbnailUrl": "https://i.ytimg.com/vi/UKYFRRfFtu8/hqdefault.jpg",
+          "uploadDate": "2025-06-04T08:00:06Z",
+          "embedUrl": "https://www.youtube.com/embed/UKYFRRfFtu8",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 700827
+          },
+          "url": "https://www.youtube.com/watch?v=UKYFRRfFtu8"
         }
       }
     ]

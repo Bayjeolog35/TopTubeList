@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 110597488
+            "userInteractionCount": 112282214
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 11395295
+            "userInteractionCount": 11575736
           },
           "url": "https://www.youtube.com/watch?v=K56O5RdE3KM"
         }
@@ -50,6 +50,42 @@
       {
         "@type": "ListItem",
         "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "The Next Generation of Heroes? 😂 | Superpower Tryouts at Zoom Academy! #movie #shorts #edit",
+          "description": "Trending video from Aaliyah Skit in Norway",
+          "thumbnailUrl": "https://i.ytimg.com/vi/q3OueDwIXeg/hqdefault.jpg",
+          "uploadDate": "2025-07-01T15:59:46Z",
+          "embedUrl": "https://www.youtube.com/embed/q3OueDwIXeg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 5632809
+          },
+          "url": "https://www.youtube.com/watch?v=q3OueDwIXeg"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who's clever now?😳😂 @isabellaafro",
+          "description": "Trending video from Jaymondy in Norway",
+          "thumbnailUrl": "https://i.ytimg.com/vi/-Wli1tM-EPw/hqdefault.jpg",
+          "uploadDate": "2025-06-30T14:15:01Z",
+          "embedUrl": "https://www.youtube.com/embed/-Wli1tM-EPw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 27147166
+          },
+          "url": "https://www.youtube.com/watch?v=-Wli1tM-EPw"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Snag, you're it 😜 #afv #fail #funny #shorts",
@@ -60,45 +96,9 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 9120564
+            "userInteractionCount": 9155935
           },
           "url": "https://www.youtube.com/watch?v=Ehc68ClCuFE"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Where is the money going 💸 #VictoriaPfeifer",
-          "description": "Trending video from Victoria Pfeifer in Norway",
-          "thumbnailUrl": "https://i.ytimg.com/vi/OZ5t7OxZTWA/hqdefault.jpg",
-          "uploadDate": "2025-06-28T17:51:01Z",
-          "embedUrl": "https://www.youtube.com/embed/OZ5t7OxZTWA",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 10783812
-          },
-          "url": "https://www.youtube.com/watch?v=OZ5t7OxZTWA"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Lose 100 LBs, Win $250,000!",
-          "description": "Trending video from MrBeast in Norway",
-          "thumbnailUrl": "https://i.ytimg.com/vi/pe_ejTiIcSs/hqdefault.jpg",
-          "uploadDate": "2025-06-21T16:00:01Z",
-          "embedUrl": "https://www.youtube.com/embed/pe_ejTiIcSs",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 153870638
-          },
-          "url": "https://www.youtube.com/watch?v=pe_ejTiIcSs"
         }
       }
     ]

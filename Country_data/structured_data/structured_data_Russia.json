@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 732949
+            "userInteractionCount": 786881
           },
           "url": "https://www.youtube.com/watch?v=gKKT2Ai4LIY"
         }
@@ -32,42 +32,6 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Китайка и Русалка 23 серия😂😆",
-          "description": "Trending video from KITAYKA in Russia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/w7GW6vQrrls/hqdefault.jpg",
-          "uploadDate": "2025-07-02T11:30:55Z",
-          "embedUrl": "https://www.youtube.com/embed/w7GW6vQrrls",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 555773
-          },
-          "url": "https://www.youtube.com/watch?v=w7GW6vQrrls"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Как мы потеряли идеальный банан",
-          "description": "Trending video from i11ushenka in Russia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/yh5syR6depU/hqdefault.jpg",
-          "uploadDate": "2025-07-02T09:00:53Z",
-          "embedUrl": "https://www.youtube.com/embed/yh5syR6depU",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2186121
-          },
-          "url": "https://www.youtube.com/watch?v=yh5syR6depU"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Поставил на место дикого бармалея!",
@@ -78,9 +42,45 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 167359
+            "userInteractionCount": 238509
           },
           "url": "https://www.youtube.com/watch?v=87gpu7unG4M"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Китайка и Русалка 23 серия😂😆",
+          "description": "Trending video from KITAYKA in Russia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/w7GW6vQrrls/hqdefault.jpg",
+          "uploadDate": "2025-07-02T11:30:55Z",
+          "embedUrl": "https://www.youtube.com/embed/w7GW6vQrrls",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 589821
+          },
+          "url": "https://www.youtube.com/watch?v=w7GW6vQrrls"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Как мы потеряли идеальный банан",
+          "description": "Trending video from i11ushenka in Russia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/yh5syR6depU/hqdefault.jpg",
+          "uploadDate": "2025-07-02T09:00:53Z",
+          "embedUrl": "https://www.youtube.com/embed/yh5syR6depU",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2272650
+          },
+          "url": "https://www.youtube.com/watch?v=yh5syR6depU"
         }
       },
       {
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4976689
+            "userInteractionCount": 5374399
           },
           "url": "https://www.youtube.com/watch?v=am_Rb1QZzxs"
         }

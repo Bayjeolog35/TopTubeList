@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 939627
+            "userInteractionCount": 952963
           },
           "url": "https://www.youtube.com/watch?v=6coNPWLq0Fg"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1154292
+            "userInteractionCount": 1162679
           },
           "url": "https://www.youtube.com/watch?v=kFR0Uvmj_q4"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "【金曲36】桑布伊爆笑發言台下全嗨翻！沒得獎就開戰「請評審改進」#金曲36 #金曲獎 @chinatimesent",
-          "description": "Trending video from 中時新聞網娛樂 in Taiwan",
-          "thumbnailUrl": "https://i.ytimg.com/vi/FHA3FppLIZY/hqdefault.jpg",
-          "uploadDate": "2025-06-28T14:35:25Z",
-          "embedUrl": "https://www.youtube.com/embed/FHA3FppLIZY",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 620214
-          },
-          "url": "https://www.youtube.com/watch?v=FHA3FppLIZY"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "台語歌后李竺芯「法式台語」許效舜是推手　曝雙方私約「喝茶聊整晚」｜TVBS娛樂頭條 #shorts",
@@ -78,9 +60,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 325818
+            "userInteractionCount": 340781
           },
           "url": "https://www.youtube.com/watch?v=354C7sHU1LE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "【金曲36】桑布伊爆笑發言台下全嗨翻！沒得獎就開戰「請評審改進」#金曲36 #金曲獎 @chinatimesent",
+          "description": "Trending video from 中時新聞網娛樂 in Taiwan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/FHA3FppLIZY/hqdefault.jpg",
+          "uploadDate": "2025-06-28T14:35:25Z",
+          "embedUrl": "https://www.youtube.com/embed/FHA3FppLIZY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 622795
+          },
+          "url": "https://www.youtube.com/watch?v=FHA3FppLIZY"
         }
       },
       {
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 369422
+            "userInteractionCount": 376109
           },
           "url": "https://www.youtube.com/watch?v=5PQcVEPPgxs"
         }

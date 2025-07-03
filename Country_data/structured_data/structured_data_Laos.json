@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 110597488
+            "userInteractionCount": 112282214
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 45728901
+            "userInteractionCount": 46752189
           },
           "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "ถ้าเป็นสี้ขียวคือแปลว่ากินได้",
-          "description": "Trending video from iSEN in Laos",
-          "thumbnailUrl": "https://i.ytimg.com/vi/eGZKV2P9sAg/hqdefault.jpg",
-          "uploadDate": "2025-06-28T09:45:04Z",
-          "embedUrl": "https://www.youtube.com/embed/eGZKV2P9sAg",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1069861
-          },
-          "url": "https://www.youtube.com/watch?v=eGZKV2P9sAg"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Big problem for the hungry Hulk...😁 #shorts",
@@ -78,9 +60,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 14277242
+            "userInteractionCount": 14809799
           },
           "url": "https://www.youtube.com/watch?v=f2QnEza9dVk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "ถ้าเป็นสี้ขียวคือแปลว่ากินได้",
+          "description": "Trending video from iSEN in Laos",
+          "thumbnailUrl": "https://i.ytimg.com/vi/eGZKV2P9sAg/hqdefault.jpg",
+          "uploadDate": "2025-06-28T09:45:04Z",
+          "embedUrl": "https://www.youtube.com/embed/eGZKV2P9sAg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1073561
+          },
+          "url": "https://www.youtube.com/watch?v=eGZKV2P9sAg"
         }
       },
       {
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 975792
+            "userInteractionCount": 979882
           },
           "url": "https://www.youtube.com/watch?v=5tOALzWd2AA"
         }

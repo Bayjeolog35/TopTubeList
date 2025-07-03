@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 110597488
+            "userInteractionCount": 112282214
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 11395295
+            "userInteractionCount": 11575736
           },
           "url": "https://www.youtube.com/watch?v=K56O5RdE3KM"
         }
@@ -50,42 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "INSTASAMKA x MONEYKEN x Александр Волков | ЧТО БЫЛО ДАЛЬШЕ?",
-          "description": "Trending video from Что было дальше? in Estonia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/aEHsTVqphrY/hqdefault.jpg",
-          "uploadDate": "2025-06-26T07:00:24Z",
-          "embedUrl": "https://www.youtube.com/embed/aEHsTVqphrY",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 9131746
-          },
-          "url": "https://www.youtube.com/watch?v=aEHsTVqphrY"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Как мы потеряли идеальный банан",
-          "description": "Trending video from i11ushenka in Estonia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/yh5syR6depU/hqdefault.jpg",
-          "uploadDate": "2025-07-02T09:00:53Z",
-          "embedUrl": "https://www.youtube.com/embed/yh5syR6depU",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2186121
-          },
-          "url": "https://www.youtube.com/watch?v=yh5syR6depU"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Who's clever now?😳😂 @isabellaafro",
@@ -96,9 +60,45 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 26361937
+            "userInteractionCount": 27147166
           },
           "url": "https://www.youtube.com/watch?v=-Wli1tM-EPw"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "INSTASAMKA x MONEYKEN x Александр Волков | ЧТО БЫЛО ДАЛЬШЕ?",
+          "description": "Trending video from Что было дальше? in Estonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/aEHsTVqphrY/hqdefault.jpg",
+          "uploadDate": "2025-06-26T07:00:24Z",
+          "embedUrl": "https://www.youtube.com/embed/aEHsTVqphrY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 9154514
+          },
+          "url": "https://www.youtube.com/watch?v=aEHsTVqphrY"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Как мы потеряли идеальный банан",
+          "description": "Trending video from i11ushenka in Estonia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/yh5syR6depU/hqdefault.jpg",
+          "uploadDate": "2025-07-02T09:00:53Z",
+          "embedUrl": "https://www.youtube.com/embed/yh5syR6depU",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2272650
+          },
+          "url": "https://www.youtube.com/watch?v=yh5syR6depU"
         }
       }
     ]

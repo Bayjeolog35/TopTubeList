@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4194752
+            "userInteractionCount": 4227093
           },
           "url": "https://www.youtube.com/watch?v=W91CXLxz-iY"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 352172
+            "userInteractionCount": 363839
           },
           "url": "https://www.youtube.com/watch?v=oTyslElj8YA"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Robé un BRAINROT BUG (SECRETO) a un ESTAFADOR en STEAL a BRAINROT",
-          "description": "Trending video from SoyNeto in Ecuador",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Ti7tEA-PeJY/hqdefault.jpg",
-          "uploadDate": "2025-07-01T23:31:15Z",
-          "embedUrl": "https://www.youtube.com/embed/Ti7tEA-PeJY",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1150606
-          },
-          "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Los trucos sucios de los hoteles de lujo para sacar más dinero 💵🏨",
@@ -78,9 +60,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3927120
+            "userInteractionCount": 3975171
           },
           "url": "https://www.youtube.com/watch?v=vTgzntPTAyo"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Chespirito: Sin Querer Queriendo | Episodio 5 Avance | Max",
+          "description": "Trending video from Max Latinoamérica in Ecuador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/GJMQtw1bn4M/hqdefault.jpg",
+          "uploadDate": "2025-06-30T18:00:24Z",
+          "embedUrl": "https://www.youtube.com/embed/GJMQtw1bn4M",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 431878
+          },
+          "url": "https://www.youtube.com/watch?v=GJMQtw1bn4M"
         }
       },
       {
@@ -88,17 +88,17 @@
         "position": 5,
         "item": {
           "@type": "VideoObject",
-          "name": "33 HORAS SIENDO TÍOS | LOS POLINESIOS",
-          "description": "Trending video from LosPolinesios in Ecuador",
-          "thumbnailUrl": "https://i.ytimg.com/vi/qettI0QbptE/hqdefault.jpg",
-          "uploadDate": "2025-07-01T22:17:15Z",
-          "embedUrl": "https://www.youtube.com/embed/qettI0QbptE",
+          "name": "Robé un BRAINROT BUG (SECRETO) a un ESTAFADOR en STEAL a BRAINROT",
+          "description": "Trending video from SoyNeto in Ecuador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Ti7tEA-PeJY/hqdefault.jpg",
+          "uploadDate": "2025-07-01T23:31:15Z",
+          "embedUrl": "https://www.youtube.com/embed/Ti7tEA-PeJY",
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 867972
+            "userInteractionCount": 1158774
           },
-          "url": "https://www.youtube.com/watch?v=qettI0QbptE"
+          "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
         }
       }
     ]

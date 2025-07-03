@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 933813
+            "userInteractionCount": 945425
           },
           "url": "https://www.youtube.com/watch?v=taWwwPo8PaY"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 110597488
+            "userInteractionCount": 112282214
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 479735
+            "userInteractionCount": 483131
           },
           "url": "https://www.youtube.com/watch?v=n51CqtJX8cY"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Al-Hilal STUNS Manchester City 4-3! | 2025 FIFA Club World Cup Highlights",
-          "description": "Trending video from DAZN Football in Nigeria",
-          "thumbnailUrl": "https://i.ytimg.com/vi/c_I6CJkS4aQ/hqdefault.jpg",
-          "uploadDate": "2025-07-01T04:12:43Z",
-          "embedUrl": "https://www.youtube.com/embed/c_I6CJkS4aQ",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 7932950
-          },
-          "url": "https://www.youtube.com/watch?v=c_I6CJkS4aQ"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Man is a top Chinese cuisine chef. #action #viralvideo",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 11890238
+            "userInteractionCount": 12122603
           },
           "url": "https://www.youtube.com/watch?v=aBeRw1KwyyE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Al-Hilal STUNS Manchester City 4-3! | 2025 FIFA Club World Cup Highlights",
+          "description": "Trending video from DAZN Football in Nigeria",
+          "thumbnailUrl": "https://i.ytimg.com/vi/c_I6CJkS4aQ/hqdefault.jpg",
+          "uploadDate": "2025-07-01T04:12:43Z",
+          "embedUrl": "https://www.youtube.com/embed/c_I6CJkS4aQ",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 7953159
+          },
+          "url": "https://www.youtube.com/watch?v=c_I6CJkS4aQ"
         }
       }
     ]
