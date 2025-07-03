@@ -1,7 +1,7 @@
 name: Update Country YouTube Data
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Her 6 saatte bir çalıştır
+    - cron: '0 */3 * * *'  # Her 3 saatte bir çalıştır
   workflow_dispatch:  # Manuel çalıştırma için
 
 jobs:
