@@ -35,6 +35,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
 </script>
 </head>
 <body>
+{video_list_html}
 <header>
     <div class="container header-flex">
         <a href="../index.html" id="logoLink"> <img src="../TopTubeListLogo.webp" alt="TopTubeList Logo" width="100" style="margin-right: 12px; vertical-align: middle;">
@@ -360,6 +361,18 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
         country_buttons_html.append(f'<button onclick="location.href=\'../{c_folder_name}/index.html\'" data-letter="{first_letter}">{c_display_name}</button>')
     country_buttons_html = "\n".join(country_buttons_html)
 
+if not videos_data:
+    video_list_html = """
+    <div style="padding: 40px; text-align: center;">
+        <h2>📡 Sorry!</h2>
+        <p>We couldn’t fetch trending YouTube videos for this country at the moment.</p>
+        <p><em>(YouTube API might not be returning data for this region right now.)</em></p>
+    </div>
+    """
+else:
+    video_list_html = '<div id="videoList" class="video-list"></div>\n<button id="loadMoreBtn" class="site-button">Load More</button>'
+
+    
     html_content = html_template.format(
         display_country_name=display_country_name,
         country_folder_name=country_folder_name,
@@ -371,6 +384,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
         south_america_active=south_america_active,
         oceania_active=oceania_active,
         country_buttons=country_buttons_html
+        video_list_html=video_list_html
     )
 
     output_path = os.path.join(country_dir, "index.html")
