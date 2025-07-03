@@ -654,7 +654,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
     </div>
     <button id="loadMoreBtn" class="site-button" style="display: none;">Load More</button>
     """
-else:
+ else:
     video_list_html_placeholder = f'''
     <div id="videoList" class="video-list"></div>
     <button id="loadMoreBtn" class="site-button">Load More</button>
