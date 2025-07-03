@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 220764
+            "userInteractionCount": 227716
           },
           "url": "https://www.youtube.com/watch?v=lRnFD4-Ndeo"
         }
@@ -32,24 +32,6 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Warum ich den Kampf verloren habe...",
-          "description": "Trending video from Christian Eckerlin in Germany",
-          "thumbnailUrl": "https://i.ytimg.com/vi/x2ScHkdwbVg/hqdefault.jpg",
-          "uploadDate": "2025-07-02T16:01:49Z",
-          "embedUrl": "https://www.youtube.com/embed/x2ScHkdwbVg",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 268241
-          },
-          "url": "https://www.youtube.com/watch?v=x2ScHkdwbVg"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
         "item": {
           "@type": "VideoObject",
           "name": "Amo x Aymen - Love all night (prod. by SVRN BEATS) [official video]",
@@ -60,9 +42,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 77273
+            "userInteractionCount": 79978
           },
           "url": "https://www.youtube.com/watch?v=6eYhNr53k4o"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Warum ich den Kampf verloren habe...",
+          "description": "Trending video from Christian Eckerlin in Germany",
+          "thumbnailUrl": "https://i.ytimg.com/vi/x2ScHkdwbVg/hqdefault.jpg",
+          "uploadDate": "2025-07-02T16:01:49Z",
+          "embedUrl": "https://www.youtube.com/embed/x2ScHkdwbVg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 272195
+          },
+          "url": "https://www.youtube.com/watch?v=x2ScHkdwbVg"
         }
       },
       {
@@ -78,7 +78,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 364548
+            "userInteractionCount": 364933
           },
           "url": "https://www.youtube.com/watch?v=La6KbUhHObk"
         }
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 143368
+            "userInteractionCount": 143585
           },
           "url": "https://www.youtube.com/watch?v=bEnJUBZRPkE"
         }

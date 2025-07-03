@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 115934016
+            "userInteractionCount": 116644609
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -32,24 +32,6 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Who's clever now?😳😂 @isabellaafro",
-          "description": "Trending video from Jaymondy in Norway",
-          "thumbnailUrl": "https://i.ytimg.com/vi/-Wli1tM-EPw/hqdefault.jpg",
-          "uploadDate": "2025-06-30T14:15:01Z",
-          "embedUrl": "https://www.youtube.com/embed/-Wli1tM-EPw",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 28945611
-          },
-          "url": "https://www.youtube.com/watch?v=-Wli1tM-EPw"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
         "item": {
           "@type": "VideoObject",
           "name": "The Next Generation of Heroes? 😂 | Superpower Tryouts at Zoom Academy! #movie #shorts #edit",
@@ -60,14 +42,14 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 6498664
+            "userInteractionCount": 6652560
           },
           "url": "https://www.youtube.com/watch?v=q3OueDwIXeg"
         }
       },
       {
         "@type": "ListItem",
-        "position": 4,
+        "position": 3,
         "item": {
           "@type": "VideoObject",
           "name": "How Dalgona Candy Is Made",
@@ -78,9 +60,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 11855541
+            "userInteractionCount": 11897614
           },
           "url": "https://www.youtube.com/watch?v=K56O5RdE3KM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who's clever now?😳😂 @isabellaafro",
+          "description": "Trending video from Jaymondy in Norway",
+          "thumbnailUrl": "https://i.ytimg.com/vi/-Wli1tM-EPw/hqdefault.jpg",
+          "uploadDate": "2025-06-30T14:15:01Z",
+          "embedUrl": "https://www.youtube.com/embed/-Wli1tM-EPw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 29323841
+          },
+          "url": "https://www.youtube.com/watch?v=-Wli1tM-EPw"
         }
       },
       {
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 9214648
+            "userInteractionCount": 9224385
           },
           "url": "https://www.youtube.com/watch?v=Ehc68ClCuFE"
         }

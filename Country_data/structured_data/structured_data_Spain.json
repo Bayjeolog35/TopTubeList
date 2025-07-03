@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1003841
+            "userInteractionCount": 1011967
           },
           "url": "https://www.youtube.com/watch?v=1eSc-zUq_vU"
         }
@@ -32,24 +32,6 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Repeat The Trick or Swim 🥶💦",
-          "description": "Trending video from Celine Dept in Spain",
-          "thumbnailUrl": "https://i.ytimg.com/vi/aHrK586PVeI/hqdefault.jpg",
-          "uploadDate": "2025-07-01T15:00:02Z",
-          "embedUrl": "https://www.youtube.com/embed/aHrK586PVeI",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 26598531
-          },
-          "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
         "item": {
           "@type": "VideoObject",
           "name": "La Primera Prueba De El Juego Del Calamar 🦑",
@@ -60,32 +42,32 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 477524
+            "userInteractionCount": 488076
           },
           "url": "https://www.youtube.com/watch?v=zmeWrVMtlWI"
         }
       },
       {
         "@type": "ListItem",
-        "position": 4,
+        "position": 3,
         "item": {
           "@type": "VideoObject",
-          "name": "He Sacado Mi Propio Menú En McDonalds!",
-          "description": "Trending video from YoSoyPlex in Spain",
-          "thumbnailUrl": "https://i.ytimg.com/vi/O1h1BCii6vM/hqdefault.jpg",
-          "uploadDate": "2025-07-02T20:16:09Z",
-          "embedUrl": "https://www.youtube.com/embed/O1h1BCii6vM",
+          "name": "Repeat The Trick or Swim 🥶💦",
+          "description": "Trending video from Celine Dept in Spain",
+          "thumbnailUrl": "https://i.ytimg.com/vi/aHrK586PVeI/hqdefault.jpg",
+          "uploadDate": "2025-07-01T15:00:02Z",
+          "embedUrl": "https://www.youtube.com/embed/aHrK586PVeI",
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 648288
+            "userInteractionCount": 26927894
           },
-          "url": "https://www.youtube.com/watch?v=O1h1BCii6vM"
+          "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
         }
       },
       {
         "@type": "ListItem",
-        "position": 5,
+        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Who was faster? 😳😱 @isabellaafro",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 115934016
+            "userInteractionCount": 116644609
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "He Sacado Mi Propio Menú En McDonalds!",
+          "description": "Trending video from YoSoyPlex in Spain",
+          "thumbnailUrl": "https://i.ytimg.com/vi/O1h1BCii6vM/hqdefault.jpg",
+          "uploadDate": "2025-07-02T20:16:09Z",
+          "embedUrl": "https://www.youtube.com/embed/O1h1BCii6vM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 664861
+          },
+          "url": "https://www.youtube.com/watch?v=O1h1BCii6vM"
         }
       }
     ]

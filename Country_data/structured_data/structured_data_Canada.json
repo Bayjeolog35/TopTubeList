@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4314724
+            "userInteractionCount": 4373925
           },
           "url": "https://www.youtube.com/watch?v=U5W4LALZ47A"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1104718
+            "userInteractionCount": 1110321
           },
           "url": "https://www.youtube.com/watch?v=zsWg4h7Eiss"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 494361
+            "userInteractionCount": 500667
           },
           "url": "https://www.youtube.com/watch?v=UcPuZEiSMQw"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "The Running Man | Official Trailer (2025 Movie) - Edgar Wright, Glen Powell",
-          "description": "Trending video from Paramount Pictures in Canada",
-          "thumbnailUrl": "https://i.ytimg.com/vi/KD18ddeFuyM/hqdefault.jpg",
-          "uploadDate": "2025-07-01T13:00:03Z",
-          "embedUrl": "https://www.youtube.com/embed/KD18ddeFuyM",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 8708889
-          },
-          "url": "https://www.youtube.com/watch?v=KD18ddeFuyM"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Starting Our High School Career! CFB 26 Road to Glory Ep. #1",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 422458
+            "userInteractionCount": 427905
           },
           "url": "https://www.youtube.com/watch?v=md_mpjy6mj8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "The Running Man | Official Trailer (2025 Movie) - Edgar Wright, Glen Powell",
+          "description": "Trending video from Paramount Pictures in Canada",
+          "thumbnailUrl": "https://i.ytimg.com/vi/KD18ddeFuyM/hqdefault.jpg",
+          "uploadDate": "2025-07-01T13:00:03Z",
+          "embedUrl": "https://www.youtube.com/embed/KD18ddeFuyM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 8723108
+          },
+          "url": "https://www.youtube.com/watch?v=KD18ddeFuyM"
         }
       }
     ]

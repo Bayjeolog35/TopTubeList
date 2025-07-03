@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 115934016
+            "userInteractionCount": 116644609
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -32,24 +32,6 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Perfect composure 👏",
-          "description": "Trending video from UEFA in Uganda",
-          "thumbnailUrl": "https://i.ytimg.com/vi/p_s9zpxbd0I/hqdefault.jpg",
-          "uploadDate": "2025-06-18T11:01:24Z",
-          "embedUrl": "https://www.youtube.com/embed/p_s9zpxbd0I",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 11594334
-          },
-          "url": "https://www.youtube.com/watch?v=p_s9zpxbd0I"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
         "item": {
           "@type": "VideoObject",
           "name": "Winnie Nwagi - Control It (Visualizer)",
@@ -60,9 +42,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 137343
+            "userInteractionCount": 137760
           },
           "url": "https://www.youtube.com/watch?v=TReupvO_mnE"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Perfect composure 👏",
+          "description": "Trending video from UEFA in Uganda",
+          "thumbnailUrl": "https://i.ytimg.com/vi/p_s9zpxbd0I/hqdefault.jpg",
+          "uploadDate": "2025-06-18T11:01:24Z",
+          "embedUrl": "https://www.youtube.com/embed/p_s9zpxbd0I",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 11595708
+          },
+          "url": "https://www.youtube.com/watch?v=p_s9zpxbd0I"
         }
       },
       {
@@ -78,7 +78,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 7986334
+            "userInteractionCount": 7992928
           },
           "url": "https://www.youtube.com/watch?v=c_I6CJkS4aQ"
         }
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 37814846
+            "userInteractionCount": 37853106
           },
           "url": "https://www.youtube.com/watch?v=D_zzbW_8GmQ"
         }
