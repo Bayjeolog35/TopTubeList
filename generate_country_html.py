@@ -643,18 +643,18 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
 
     # JavaScript ile video listesini doldurmak yerine, doğrudan HTML şablonuna dahil edilecek bir placeholder belirle
     # Eğer video verisi boşsa, doğrudan bir mesaj göster
-    if not videos_data:
-        video_list_html_placeholder = """
-        <div id="videoList" class="video-list">
-            <div style="padding: 40px; text-align: center; grid-column: 1 / -1;">
-                <h2>📡 Sorry!</h2>
-                <p>We couldn’t fetch trending YouTube videos for this country at the moment.</p>
-                <p><em>(YouTube API might not be returning data for this region right now.)</em></p>
-            </div>
+ if not videos_data:
+    video_list_html_placeholder = """
+    <div id="videoList" class="video-list">
+        <div style="padding: 40px; text-align: center; grid-column: 1 / -1;">
+            <h2>📡 Sorry!</h2>
+            <p>We couldn’t fetch trending YouTube videos for this country at the moment.</p>
+            <p><em>(YouTube API might not be returning data for this region right now.)</em></p>
         </div>
-        <button id="loadMoreBtn" class="site-button" style="display: none;">Load More</button>
-        """
-    else:
+    </div>
+    <button id="loadMoreBtn" class="site-button" style="display: none;">Load More</button>
+    """
+else:
     video_list_html_placeholder = f'''
     <div id="videoList" class="video-list"></div>
     <button id="loadMoreBtn" class="site-button">Load More</button>
@@ -675,6 +675,8 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
             }});
     </script>
     '''
+
+
 
 
     html_content = html_template.format(
