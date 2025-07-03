@@ -195,8 +195,7 @@ def main():
     os.makedirs("Country_data/videos", exist_ok=True)
     
     # Define a list of country codes to process
-    # You can expand this list as needed
-    country_codes_to_process =  {
+    country_codes_to_process = {
     
     "afghanistan": {"code": "af"},
     "albania": {"code": "al"},
@@ -394,9 +393,9 @@ def main():
     "yemen": {"code": "ye"},
     "zambia": {"code": "zm"},
     "zimbabwe": {"code": "zw"}
-}
+  }
 
-   for country_folder, country_info in country_codes_to_process.items():
+  for country_folder, country_info in country_codes_to_process.items():
         country_code = country_info["code"]
         print(f"\nİşleniyor: {country_folder} ({country_code})")
         
