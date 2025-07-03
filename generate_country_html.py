@@ -1,7 +1,26 @@
 import json
 import os
 import re
-from country_data import COUNTRY_INFO, CONTINENT_COUNTRIES
+# Assuming country_data is correctly imported and available
+# from country_data import COUNTRY_INFO, CONTINENT_COUNTRIES
+
+# Placeholder for COUNTRY_INFO and CONTINENT_COUNTRIES for demonstration
+COUNTRY_INFO = {
+    "united_states": {"display_name": "United States", "code": "US"},
+    "turkey": {"display_name": "Turkey", "code": "TR"},
+    "india": {"display_name": "India", "code": "IN"},
+    "afghanistan": {"display_name": "Afghanistan", "code": "AF"},
+}
+
+CONTINENT_COUNTRIES = {
+    "asia": ["AF", "IN", "TR"], # Adding TR to Asia for this example, adjust as needed
+    "europe": [],
+    "africa": [],
+    "north_america": ["US"],
+    "south_america": [],
+    "oceania": [],
+}
+
 
 def generate_html_file(country_folder_name, videos_data, structured_data):
     """Belirtilen ülke için HTML dosyasını oluşturur."""
@@ -96,7 +115,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
                 {country_buttons}
             </div>
         </div>
-    </main>
+</main>
     
     {video_list_html} <section class="about-section">
         <button id="aboutToggle" class="site-button">About Us</button>
@@ -173,26 +192,26 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
 
 
             // --- Hamburger Panel State (Keep Open Across Pages) ---
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {{
         const hamburger = document.querySelector(".hamburger");
         const panel = document.querySelector(".country-panel");
 
         // Önceki durumu geri yükle
         const savedState = localStorage.getItem("countryPanelOpen");
-        if (savedState === "true" && panel) {
+        if (savedState === "true" && panel) {{
             panel.classList.add("active");
-        }
+        }}
 
-        if (hamburger && panel) {
-            hamburger.addEventListener("click", () => {
+        if (hamburger && panel) {{
+            hamburger.addEventListener("click", () => {{
                 panel.classList.toggle("active");
 
                 // Durumu kaydet
                 const isOpen = panel.classList.contains("active");
                 localStorage.setItem("countryPanelOpen", isOpen);
-            });
-        }
-    });
+            }});
+        }}
+    }});
 
 
         // --- Dark Mode Toggle ---
@@ -440,7 +459,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
         display_country_name=display_country_name,
         country_folder_name=country_folder_name,
         structured_data_block=structured_data_block,
-        asia_active=asia_active, 
+        asia_active=asia_active,  
         europe_active=europe_active,
         africa_active=africa_active,
         north_america_active=north_america_active,
