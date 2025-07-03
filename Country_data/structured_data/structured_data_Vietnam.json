@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 112521818
+            "userInteractionCount": 115870465
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3816777
+            "userInteractionCount": 4309626
           },
           "url": "https://www.youtube.com/watch?v=83vmIX4fyCQ"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "这也太厉害了 #火影忍者 #joker#cosplay",
-          "description": "Trending video from 佐助与鸣人 in Vietnam",
-          "thumbnailUrl": "https://i.ytimg.com/vi/YFXS0F2IxmM/hqdefault.jpg",
-          "uploadDate": "2025-06-29T04:00:41Z",
-          "embedUrl": "https://www.youtube.com/embed/YFXS0F2IxmM",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 46960315
-          },
-          "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Cách tóm được Tung Sahur #2catv #freefire #squidgame #brainrot",
@@ -78,9 +60,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3018655
+            "userInteractionCount": 3129900
           },
           "url": "https://www.youtube.com/watch?v=gXRW91Ug2c4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "这也太厉害了 #火影忍者 #joker#cosplay",
+          "description": "Trending video from 佐助与鸣人 in Vietnam",
+          "thumbnailUrl": "https://i.ytimg.com/vi/YFXS0F2IxmM/hqdefault.jpg",
+          "uploadDate": "2025-06-29T04:00:41Z",
+          "embedUrl": "https://www.youtube.com/embed/YFXS0F2IxmM",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 48883181
+          },
+          "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
         }
       },
       {
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 6675551
+            "userInteractionCount": 6785574
           },
           "url": "https://www.youtube.com/watch?v=BmrdGQ0LRRo"
         }

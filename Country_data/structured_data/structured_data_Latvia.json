@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 112521818
+            "userInteractionCount": 115870465
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 9157557
+            "userInteractionCount": 9206024
           },
           "url": "https://www.youtube.com/watch?v=aEHsTVqphrY"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 27312650
+            "userInteractionCount": 28936974
           },
           "url": "https://www.youtube.com/watch?v=-Wli1tM-EPw"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Which Shoes Will Protect Your Feet?",
-          "description": "Trending video from Ben Azelart in Latvia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
-          "uploadDate": "2025-06-24T21:50:02Z",
-          "embedUrl": "https://www.youtube.com/embed/nj6W9v6yjFk",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 129186902
-          },
-          "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "6 комнат! Пройди Испытания, Чтобы Выйти ! (Marlow, DK, ФрамеТамер, Кореш, Горилла, Nowkie)",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3263298
+            "userInteractionCount": 3333175
           },
           "url": "https://www.youtube.com/watch?v=kJoPssfEnO8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Which Shoes Will Protect Your Feet?",
+          "description": "Trending video from Ben Azelart in Latvia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
+          "uploadDate": "2025-06-24T21:50:02Z",
+          "embedUrl": "https://www.youtube.com/embed/nj6W9v6yjFk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 129198182
+          },
+          "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
         }
       }
     ]

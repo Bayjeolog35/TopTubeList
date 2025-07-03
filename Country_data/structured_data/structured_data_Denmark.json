@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 112521818
+            "userInteractionCount": 115870465
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 129186902
+            "userInteractionCount": 129198182
           },
           "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Lose 100 LBs, Win $250,000!",
-          "description": "Trending video from MrBeast in Denmark",
-          "thumbnailUrl": "https://i.ytimg.com/vi/pe_ejTiIcSs/hqdefault.jpg",
-          "uploadDate": "2025-06-21T16:00:01Z",
-          "embedUrl": "https://www.youtube.com/embed/pe_ejTiIcSs",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 154031538
-          },
-          "url": "https://www.youtube.com/watch?v=pe_ejTiIcSs"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "How To Fool Your Brain!",
@@ -78,9 +60,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 21569715
+            "userInteractionCount": 21881791
           },
           "url": "https://www.youtube.com/watch?v=eW8ZNkuLhZw"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Lose 100 LBs, Win $250,000!",
+          "description": "Trending video from MrBeast in Denmark",
+          "thumbnailUrl": "https://i.ytimg.com/vi/pe_ejTiIcSs/hqdefault.jpg",
+          "uploadDate": "2025-06-21T16:00:01Z",
+          "embedUrl": "https://www.youtube.com/embed/pe_ejTiIcSs",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 154285919
+          },
+          "url": "https://www.youtube.com/watch?v=pe_ejTiIcSs"
         }
       },
       {
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 24517
+            "userInteractionCount": 28691
           },
           "url": "https://www.youtube.com/watch?v=ZJKJZgkt3y8"
         }

@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 384384
+            "userInteractionCount": 422170
           },
           "url": "https://www.youtube.com/watch?v=t2UKvttEfnY"
         }
@@ -32,24 +32,6 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "[SUB] 윈터가 들려주는 꼬리에 꼬리를 무는 무서운 이야기... | EP. 97 윈터 | 살롱드립2",
-          "description": "Trending video from TEO 테오 in Korea (South)",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Z1wIq4X2Ko0/hqdefault.jpg",
-          "uploadDate": "2025-07-01T09:00:06Z",
-          "embedUrl": "https://www.youtube.com/embed/Z1wIq4X2Ko0",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 954815
-          },
-          "url": "https://www.youtube.com/watch?v=Z1wIq4X2Ko0"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
         "item": {
           "@type": "VideoObject",
           "name": "시골에서",
@@ -60,9 +42,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 667866
+            "userInteractionCount": 722791
           },
           "url": "https://www.youtube.com/watch?v=xQ1Ixq1MV9o"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "[SUB] 윈터가 들려주는 꼬리에 꼬리를 무는 무서운 이야기... | EP. 97 윈터 | 살롱드립2",
+          "description": "Trending video from TEO 테오 in Korea (South)",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Z1wIq4X2Ko0/hqdefault.jpg",
+          "uploadDate": "2025-07-01T09:00:06Z",
+          "embedUrl": "https://www.youtube.com/embed/Z1wIq4X2Ko0",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 990807
+          },
+          "url": "https://www.youtube.com/watch?v=Z1wIq4X2Ko0"
         }
       },
       {
@@ -78,7 +78,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 466326
+            "userInteractionCount": 494839
           },
           "url": "https://www.youtube.com/watch?v=FEOmPfulP0k"
         }
@@ -88,17 +88,17 @@
         "position": 5,
         "item": {
           "@type": "VideoObject",
-          "name": "💚애호박 무조건 많이 사와서 이렇게 만드세요! 한통 가득 만들어도 남아나질 않습니다/애호박요리",
-          "description": "Trending video from 함께해요 맛나요리 in Korea (South)",
-          "thumbnailUrl": "https://i.ytimg.com/vi/RqEacZsLZY8/hqdefault.jpg",
-          "uploadDate": "2025-06-30T22:00:35Z",
-          "embedUrl": "https://www.youtube.com/embed/RqEacZsLZY8",
+          "name": "[대탈출 : 더 스토리] 대탈출 사전 모임의 디폴트는 의심이야ㅣ0화 풀버전ㅣTVINGㅣThe Great Escape : The Story",
+          "description": "Trending video from TVING in Korea (South)",
+          "thumbnailUrl": "https://i.ytimg.com/vi/NDYpoWIwmFc/hqdefault.jpg",
+          "uploadDate": "2025-07-02T09:00:41Z",
+          "embedUrl": "https://www.youtube.com/embed/NDYpoWIwmFc",
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 553491
+            "userInteractionCount": 480134
           },
-          "url": "https://www.youtube.com/watch?v=RqEacZsLZY8"
+          "url": "https://www.youtube.com/watch?v=NDYpoWIwmFc"
         }
       }
     ]

@@ -16,6 +16,60 @@
         "position": 1,
         "item": {
           "@type": "VideoObject",
+          "name": "Ich suche TRAUMFRAU für @inscope21  | 3 Frauen 3 Dates | Tom Supreme",
+          "description": "Trending video from Tom Supreme in Germany",
+          "thumbnailUrl": "https://i.ytimg.com/vi/lRnFD4-Ndeo/hqdefault.jpg",
+          "uploadDate": "2025-07-02T16:00:32Z",
+          "embedUrl": "https://www.youtube.com/embed/lRnFD4-Ndeo",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 219811
+          },
+          "url": "https://www.youtube.com/watch?v=lRnFD4-Ndeo"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Warum ich den Kampf verloren habe...",
+          "description": "Trending video from Christian Eckerlin in Germany",
+          "thumbnailUrl": "https://i.ytimg.com/vi/x2ScHkdwbVg/hqdefault.jpg",
+          "uploadDate": "2025-07-02T16:01:49Z",
+          "embedUrl": "https://www.youtube.com/embed/x2ScHkdwbVg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 267440
+          },
+          "url": "https://www.youtube.com/watch?v=x2ScHkdwbVg"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Amo x Aymen - Love all night (prod. by SVRN BEATS) [official video]",
+          "description": "Trending video from 385idéal in Germany",
+          "thumbnailUrl": "https://i.ytimg.com/vi/6eYhNr53k4o/hqdefault.jpg",
+          "uploadDate": "2025-07-02T15:59:08Z",
+          "embedUrl": "https://www.youtube.com/embed/6eYhNr53k4o",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 76889
+          },
+          "url": "https://www.youtube.com/watch?v=6eYhNr53k4o"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
           "name": "02.07.2025 Unwetterinformation - Deutscher Wetterdienst (DWD)",
           "description": "Trending video from DWDderWetterdienst in Germany",
           "thumbnailUrl": "https://i.ytimg.com/vi/La6KbUhHObk/hqdefault.jpg",
@@ -24,63 +78,9 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 361727
+            "userInteractionCount": 364539
           },
           "url": "https://www.youtube.com/watch?v=La6KbUhHObk"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Extremwetter in Baden-Württemberg: Hagelsturm verwandelt Sipplingen in Eislandschaft",
-          "description": "Trending video from wettercom in Germany",
-          "thumbnailUrl": "https://i.ytimg.com/vi/153ItJ5DN1A/hqdefault.jpg",
-          "uploadDate": "2025-07-02T09:46:48Z",
-          "embedUrl": "https://www.youtube.com/embed/153ItJ5DN1A",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 140420
-          },
-          "url": "https://www.youtube.com/watch?v=153ItJ5DN1A"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Al-Hilal STUNS Manchester City 4-3! | 2025 FIFA Club World Cup Highlights",
-          "description": "Trending video from DAZN Football in Germany",
-          "thumbnailUrl": "https://i.ytimg.com/vi/c_I6CJkS4aQ/hqdefault.jpg",
-          "uploadDate": "2025-07-01T04:12:43Z",
-          "embedUrl": "https://www.youtube.com/embed/c_I6CJkS4aQ",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 7955623
-          },
-          "url": "https://www.youtube.com/watch?v=c_I6CJkS4aQ"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Mehr Begrüßungsgeld für den Osten – Olaf Schubert | Nuhr im Ersten",
-          "description": "Trending video from ARD Stand-Up in Germany",
-          "thumbnailUrl": "https://i.ytimg.com/vi/FsuPKtR1deY/hqdefault.jpg",
-          "uploadDate": "2025-07-01T16:00:33Z",
-          "embedUrl": "https://www.youtube.com/embed/FsuPKtR1deY",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 252939
-          },
-          "url": "https://www.youtube.com/watch?v=FsuPKtR1deY"
         }
       },
       {
@@ -88,17 +88,17 @@
         "position": 5,
         "item": {
           "@type": "VideoObject",
-          "name": "Heute mit Hitzepeak regional schwere Gewitter - Lokale Unwettergefahr vor allem durch heftigen Sturm",
-          "description": "Trending video from Kachelmannwetter in Germany",
-          "thumbnailUrl": "https://i.ytimg.com/vi/DOJZVq2neR4/hqdefault.jpg",
-          "uploadDate": "2025-07-02T06:39:06Z",
-          "embedUrl": "https://www.youtube.com/embed/DOJZVq2neR4",
+          "name": "UNWETTER: Orkanböen, Hagel bis 5 cm, Starkregen! Diese Regionen bekommen bald eine Abkühlung!",
+          "description": "Trending video from wetternet in Germany",
+          "thumbnailUrl": "https://i.ytimg.com/vi/bEnJUBZRPkE/hqdefault.jpg",
+          "uploadDate": "2025-07-02T14:01:07Z",
+          "embedUrl": "https://www.youtube.com/embed/bEnJUBZRPkE",
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 106215
+            "userInteractionCount": 143344
           },
-          "url": "https://www.youtube.com/watch?v=DOJZVq2neR4"
+          "url": "https://www.youtube.com/watch?v=bEnJUBZRPkE"
         }
       }
     ]

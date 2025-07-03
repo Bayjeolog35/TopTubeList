@@ -16,6 +16,42 @@
         "position": 1,
         "item": {
           "@type": "VideoObject",
+          "name": "LES CHATS ET L'EAU 2",
+          "description": "Trending video from Parole de chat in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/bKOuqt8C-mI/hqdefault.jpg",
+          "uploadDate": "2025-07-02T11:02:04Z",
+          "embedUrl": "https://www.youtube.com/embed/bKOuqt8C-mI",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 189192
+          },
+          "url": "https://www.youtube.com/watch?v=bKOuqt8C-mI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Une nuit dans le meilleur train d'Europe VS Le pire train d'Europe",
+          "description": "Trending video from Pierre Croce in France",
+          "thumbnailUrl": "https://i.ytimg.com/vi/yo4d8swaqMc/hqdefault.jpg",
+          "uploadDate": "2025-07-02T15:30:46Z",
+          "embedUrl": "https://www.youtube.com/embed/yo4d8swaqMc",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 232857
+          },
+          "url": "https://www.youtube.com/watch?v=yo4d8swaqMc"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
           "name": "On doit improviser sur scène avec Anyme, Nico et Elian (c'était grave drôle)",
           "description": "Trending video from ByIlhan in France",
           "thumbnailUrl": "https://i.ytimg.com/vi/fnZoezV5EcI/hqdefault.jpg",
@@ -24,14 +60,14 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1457381
+            "userInteractionCount": 1479791
           },
           "url": "https://www.youtube.com/watch?v=fnZoezV5EcI"
         }
       },
       {
         "@type": "ListItem",
-        "position": 2,
+        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "DANS UN AIRBNB HANTÉ",
@@ -42,14 +78,14 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 954538
+            "userInteractionCount": 972546
           },
           "url": "https://www.youtube.com/watch?v=6WhO9K6PzjQ"
         }
       },
       {
         "@type": "ListItem",
-        "position": 3,
+        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "1000€ dans la ville la MOINS CHÈRE d'Afrique",
@@ -60,45 +96,9 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 425671
+            "userInteractionCount": 434723
           },
           "url": "https://www.youtube.com/watch?v=hMVYkYy0rzE"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Il organisait des jeux macabres avec ses victimes...",
-          "description": "Trending video from SQUEEZIE in France",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Fb1Z3cMAlrc/hqdefault.jpg",
-          "uploadDate": "2025-06-29T17:11:34Z",
-          "embedUrl": "https://www.youtube.com/embed/Fb1Z3cMAlrc",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3573272
-          },
-          "url": "https://www.youtube.com/watch?v=Fb1Z3cMAlrc"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Un Québécois teste les chaînes de restaurants en France avec Elian",
-          "description": "Trending video from Gurky in France",
-          "thumbnailUrl": "https://i.ytimg.com/vi/4TD9PZFUN2o/hqdefault.jpg",
-          "uploadDate": "2025-07-01T15:02:16Z",
-          "embedUrl": "https://www.youtube.com/embed/4TD9PZFUN2o",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 592737
-          },
-          "url": "https://www.youtube.com/watch?v=4TD9PZFUN2o"
         }
       }
     ]

@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2695119
+            "userInteractionCount": 2726221
           },
           "url": "https://www.youtube.com/watch?v=8pjgzO-4STw"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 245280
+            "userInteractionCount": 250779
           },
           "url": "https://www.youtube.com/watch?v=ApsH0bIsdAc"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 112521818
+            "userInteractionCount": 115870465
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "UŽIVO | VIDIMO SE NA VIDOVDAN! | Beograd",
-          "description": "Trending video from Bez Cenzure - Zvanični kanal in Serbia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/3EHHhV_Kfmw/hqdefault.jpg",
-          "uploadDate": "2025-06-28T22:11:47Z",
-          "embedUrl": "https://www.youtube.com/embed/3EHHhV_Kfmw",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 812327
-          },
-          "url": "https://www.youtube.com/watch?v=3EHHhV_Kfmw"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "DESINGERICA - DEVEDESETICCE (OFFICIAL VIDEO)",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1311212
+            "userInteractionCount": 1321507
           },
           "url": "https://www.youtube.com/watch?v=k2SrIlNwR58"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "UŽIVO | VIDIMO SE NA VIDOVDAN! | Beograd",
+          "description": "Trending video from Bez Cenzure - Zvanični kanal in Serbia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/3EHHhV_Kfmw/hqdefault.jpg",
+          "uploadDate": "2025-06-28T22:11:47Z",
+          "embedUrl": "https://www.youtube.com/embed/3EHHhV_Kfmw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 812454
+          },
+          "url": "https://www.youtube.com/watch?v=3EHHhV_Kfmw"
         }
       }
     ]

@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 112521818
+            "userInteractionCount": 115870465
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -32,24 +32,6 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Teodora - 101 ZMIJA feat. Jala Brat (Official Video)",
-          "description": "Trending video from SevenSky in Croatia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/8pjgzO-4STw/hqdefault.jpg",
-          "uploadDate": "2025-06-24T12:00:02Z",
-          "embedUrl": "https://www.youtube.com/embed/8pjgzO-4STw",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2692551
-          },
-          "url": "https://www.youtube.com/watch?v=8pjgzO-4STw"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
         "item": {
           "@type": "VideoObject",
           "name": "$500 Water vs $1 Water – Blind Taste Test!",
@@ -60,9 +42,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 71907866
+            "userInteractionCount": 72428170
           },
           "url": "https://www.youtube.com/watch?v=IjCJ3P7SL9M"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Teodora - 101 ZMIJA feat. Jala Brat (Official Video)",
+          "description": "Trending video from SevenSky in Croatia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/8pjgzO-4STw/hqdefault.jpg",
+          "uploadDate": "2025-06-24T12:00:02Z",
+          "embedUrl": "https://www.youtube.com/embed/8pjgzO-4STw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2726221
+          },
+          "url": "https://www.youtube.com/watch?v=8pjgzO-4STw"
         }
       },
       {
@@ -78,7 +78,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 46960315
+            "userInteractionCount": 48883181
           },
           "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
         }
@@ -88,17 +88,17 @@
         "position": 5,
         "item": {
           "@type": "VideoObject",
-          "name": "POGODI BOJU NOVOG DRESA 🔥",
-          "description": "Trending video from KingsOfFailsShow in Croatia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/P0YCrLEnUlc/hqdefault.jpg",
-          "uploadDate": "2025-06-29T14:09:34Z",
-          "embedUrl": "https://www.youtube.com/embed/P0YCrLEnUlc",
+          "name": "How Much Money Can You Make Collecting Trolleys in the Airport?",
+          "description": "Trending video from The Richey Family in Croatia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/g0Ygas1Nj9U/hqdefault.jpg",
+          "uploadDate": "2025-07-02T15:02:00Z",
+          "embedUrl": "https://www.youtube.com/embed/g0Ygas1Nj9U",
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 140781
+            "userInteractionCount": 7762236
           },
-          "url": "https://www.youtube.com/watch?v=P0YCrLEnUlc"
+          "url": "https://www.youtube.com/watch?v=g0Ygas1Nj9U"
         }
       }
     ]

@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 141872
+            "userInteractionCount": 142540
           },
           "url": "https://www.youtube.com/watch?v=duc5jdlQWK8"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 112521818
+            "userInteractionCount": 115870465
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 108273
+            "userInteractionCount": 110013
           },
           "url": "https://www.youtube.com/watch?v=NlhS9ZxN2hs"
         }
@@ -68,6 +68,24 @@
       {
         "@type": "ListItem",
         "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who's clever now?😳😂 @isabellaafro",
+          "description": "Trending video from Jaymondy in Lithuania",
+          "thumbnailUrl": "https://i.ytimg.com/vi/-Wli1tM-EPw/hqdefault.jpg",
+          "uploadDate": "2025-06-30T14:15:01Z",
+          "embedUrl": "https://www.youtube.com/embed/-Wli1tM-EPw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 28936974
+          },
+          "url": "https://www.youtube.com/watch?v=-Wli1tM-EPw"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Jovani x Ieva Veri - Laikyk Arčiau (feat. Jurijus)",
@@ -78,27 +96,9 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 224230
+            "userInteractionCount": 226237
           },
           "url": "https://www.youtube.com/watch?v=4oLOgzsa0mo"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "I Stole His Brainrots… 😋🦈 (Steal a Brainrot Roblox ASMR)",
-          "description": "Trending video from Spizee in Lithuania",
-          "thumbnailUrl": "https://i.ytimg.com/vi/u8hQ_nBD8eg/hqdefault.jpg",
-          "uploadDate": "2025-06-28T17:42:38Z",
-          "embedUrl": "https://www.youtube.com/embed/u8hQ_nBD8eg",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 35746184
-          },
-          "url": "https://www.youtube.com/watch?v=u8hQ_nBD8eg"
         }
       }
     ]
