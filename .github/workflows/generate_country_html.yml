@@ -1,3 +1,5 @@
+name: Generate Country Data and HTML
+
 on:
   push:
     branches:
