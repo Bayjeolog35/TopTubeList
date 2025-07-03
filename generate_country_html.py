@@ -90,7 +90,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
         </div>
     </main>
     
-    {video_list_html} {/* videoList div'i video_list_html ile dinamik olarak doldurulacak */}
+    {video_list_html} <!-- videoList div'i video_list_html ile dinamik olarak doldurulacak -->
     
     <section class="about-section">
         <button id="aboutToggle" class="site-button">About Us</button>
