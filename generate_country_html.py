@@ -625,7 +625,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
     )
 
     for c_folder_name, c_info in sorted_country_info:
-        c_display_name = c_info.get("display_name", c_folder_name.replace('_', ' '))
+        c_display_name = c_info.get("display_name", c_folder_name.replace('_', ' ')).title()
         first_letter = c_display_name[0].upper()
 
         # Alt çizgi yerine tireli klasör ismi
