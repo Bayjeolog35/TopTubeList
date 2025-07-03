@@ -388,7 +388,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
         is_current_country_active = " active" if c_folder_name == country_folder_name else ""
         
         # Class attribute'ine hem genel 'country-button' sınıfını hem de 'active' sınıfını ekliyoruz.
-        country_buttons_html.append(f'<button onclick="location.href=\'../{c_folder_name.lower()}/\'" data-letter="{first_letter}" class="country-button{is_current_country_active}">{c_display_name}</button>')
+        country_buttons_html.append(f'<button onclick="location.href=\'../{c_folder_name.lower().replace("_", "")}/\'" data-letter="{first_letter}" class="country-button{is_current_country_active}">{c_display_name}</button>')
 
 
     country_dir = os.path.join(os.getcwd(), country_folder_name)
