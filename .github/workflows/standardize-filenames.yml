@@ -1,0 +1,61 @@
+name: Standardize JSON Filenames
+
+on:
+  # Manuel olarak çalıştırmaya izin verir (Actions sekmesinde "Run workflow" butonu ile)
+  workflow_dispatch:
+  # Her gün UTC gece yarısı çalıştırır
+  schedule:
+    - cron: '0 0 * * *' # UTC 00:00 (Türkiye saatiyle 03:00'e denk gelir)
+
+jobs:
+  rename_json_files:
+    runs-on: ubuntu-latest # Linux tabanlı bir ortamda çalışır (büyük/küçük harf duyarlı dosya sistemi)
+
+    steps:
+    - name: Depoyu Dışarı Çek
+      uses: actions/checkout@v4 # Depo içeriğini sanal makineye kopyalar
+
+    - name: Python Ortamını Kur
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x' # En son Python 3 sürümünü kullanır (örn: 3.10, 3.11)
+        # Örn: python-version: '3.11' belirli bir sürüm için
+
+    # - name: Bağımlılıkları Yükle (Eğer varsa)
+    #   # Eğer rename_script.py dışında projenizin başka bağımlılıkları varsa (örn: requests, bs4),
+    #   # bunları requirements.txt dosyasına ekleyip bu adımı etkinleştirmelisiniz.
+    #   # run: pip install -r requirements.txt
+
+    - name: Dosya Adı Standardizasyon Betiğini Çalıştır
+      # Betiğin deponuzun kök dizininde olduğunu varsayar.
+      # Eğer betik bir alt dizinde (örn: scripts/rename_script.py) ise yolu güncelleyin.
+      run: python rename_script.py
+
+    - name: Değişiklikleri Kontrol Et
+      id: git_status # Bu adımın çıktısını almak için bir ID atıyoruz
+      run: |
+        # Git kullanıcı adını ve e-postasını ayarlar (otomatik commit için gereklidir)
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        
+        # Değişiklik yapılan klasörü sahneye ekle. Eğer başka klasörler de değişiyorsa burayı güncelleyin.
+        git add Country_data/videos/
+        
+        # Sahnelenmiş değişiklikler olup olmadığını kontrol eder.
+        # Değişiklik yoksa 'true' olarak ayarlar, varsa 'false'.
+        if git diff --staged --quiet; then
+          echo "no_changes=true" >> "$GITHUB_OUTPUT"
+        else
+          echo "no_changes=false" >> "$GITHUB_OUTPUT"
+        fi
+
+    - name: Değişiklikleri Kaydet ve İt (Push)
+      # Yalnızca 'no_changes' çıktısı 'false' ise bu adımı çalıştır
+      if: steps.git_status.outputs.no_changes == 'false'
+      run: |
+        git commit -m "Refactor: Standart JSON dosya adları (otomatik)"
+        git push
+      env:
+        # GITHUB_TOKEN, depoya yazma iznine sahip otomatik bir tokendir.
+        # Kendi SECRET eklemenize gerek yoktur.
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
