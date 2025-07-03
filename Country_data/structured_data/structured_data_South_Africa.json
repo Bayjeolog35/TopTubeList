@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 116644609
+            "userInteractionCount": 117400422
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 26927894
+            "userInteractionCount": 27151387
           },
           "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 129200722
+            "userInteractionCount": 129203211
           },
           "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
         }
@@ -68,6 +68,24 @@
       {
         "@type": "ListItem",
         "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "I Stole His Brainrots… 😋🦈 (Steal a Brainrot Roblox ASMR)",
+          "description": "Trending video from Spizee in South Africa",
+          "thumbnailUrl": "https://i.ytimg.com/vi/u8hQ_nBD8eg/hqdefault.jpg",
+          "uploadDate": "2025-06-28T17:42:38Z",
+          "embedUrl": "https://www.youtube.com/embed/u8hQ_nBD8eg",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 36893617
+          },
+          "url": "https://www.youtube.com/watch?v=u8hQ_nBD8eg"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Can An EXTREMELY  STRONG Pressure Washer Slice a Human Hand?",
@@ -78,27 +96,9 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 16775637
+            "userInteractionCount": 16785773
           },
           "url": "https://www.youtube.com/watch?v=p6APdJSEUok"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "How Dalgona Candy Is Made",
-          "description": "Trending video from Nick DiGiovanni in South Africa",
-          "thumbnailUrl": "https://i.ytimg.com/vi/K56O5RdE3KM/hqdefault.jpg",
-          "uploadDate": "2025-07-01T16:00:36Z",
-          "embedUrl": "https://www.youtube.com/embed/K56O5RdE3KM",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 11897614
-          },
-          "url": "https://www.youtube.com/watch?v=K56O5RdE3KM"
         }
       }
     ]

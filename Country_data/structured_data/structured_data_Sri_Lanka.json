@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3138897
+            "userInteractionCount": 3139481
           },
           "url": "https://www.youtube.com/watch?v=e3gnaUfKpMk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 116644609
+            "userInteractionCount": 117400422
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 961752
+            "userInteractionCount": 962954
           },
           "url": "https://www.youtube.com/watch?v=yY1ex61NEC8"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Janai Priyai - Tikiri | ජනයි ප්‍රියයි -ටිකිරි 😉😀",
-          "description": "Trending video from Janai Priyai in Sri Lanka",
-          "thumbnailUrl": "https://i.ytimg.com/vi/UC4RpLG6AYk/hqdefault.jpg",
-          "uploadDate": "2025-06-28T04:30:30Z",
-          "embedUrl": "https://www.youtube.com/embed/UC4RpLG6AYk",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 813216
-          },
-          "url": "https://www.youtube.com/watch?v=UC4RpLG6AYk"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Perfect cropped shirt hack 💛 What do you think? Comment below 🤭",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 5120915
+            "userInteractionCount": 5552263
           },
           "url": "https://www.youtube.com/watch?v=nq8aKBH8lQ0"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Janai Priyai - Tikiri | ජනයි ප්‍රියයි -ටිකිරි 😉😀",
+          "description": "Trending video from Janai Priyai in Sri Lanka",
+          "thumbnailUrl": "https://i.ytimg.com/vi/UC4RpLG6AYk/hqdefault.jpg",
+          "uploadDate": "2025-06-28T04:30:30Z",
+          "embedUrl": "https://www.youtube.com/embed/UC4RpLG6AYk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 814304
+          },
+          "url": "https://www.youtube.com/watch?v=UC4RpLG6AYk"
         }
       }
     ]

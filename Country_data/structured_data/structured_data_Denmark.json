@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 116644587
+            "userInteractionCount": 117400422
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 129200722
+            "userInteractionCount": 129203211
           },
           "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
         }
@@ -50,42 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "How To Fool Your Brain!",
-          "description": "Trending video from Mark Rober in Denmark",
-          "thumbnailUrl": "https://i.ytimg.com/vi/eW8ZNkuLhZw/hqdefault.jpg",
-          "uploadDate": "2025-06-27T15:30:20Z",
-          "embedUrl": "https://www.youtube.com/embed/eW8ZNkuLhZw",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 21970366
-          },
-          "url": "https://www.youtube.com/watch?v=eW8ZNkuLhZw"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Lose 100 LBs, Win $250,000!",
-          "description": "Trending video from MrBeast in Denmark",
-          "thumbnailUrl": "https://i.ytimg.com/vi/pe_ejTiIcSs/hqdefault.jpg",
-          "uploadDate": "2025-06-21T16:00:01Z",
-          "embedUrl": "https://www.youtube.com/embed/pe_ejTiIcSs",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 154342196
-          },
-          "url": "https://www.youtube.com/watch?v=pe_ejTiIcSs"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "FYLDER MIT ISBAD MED EN SKE",
@@ -96,9 +60,45 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 29313
+            "userInteractionCount": 29940
           },
           "url": "https://www.youtube.com/watch?v=ZJKJZgkt3y8"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "How To Fool Your Brain!",
+          "description": "Trending video from Mark Rober in Denmark",
+          "thumbnailUrl": "https://i.ytimg.com/vi/eW8ZNkuLhZw/hqdefault.jpg",
+          "uploadDate": "2025-06-27T15:30:20Z",
+          "embedUrl": "https://www.youtube.com/embed/eW8ZNkuLhZw",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 22023831
+          },
+          "url": "https://www.youtube.com/watch?v=eW8ZNkuLhZw"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Lose 100 LBs, Win $250,000!",
+          "description": "Trending video from MrBeast in Denmark",
+          "thumbnailUrl": "https://i.ytimg.com/vi/pe_ejTiIcSs/hqdefault.jpg",
+          "uploadDate": "2025-06-21T16:00:01Z",
+          "embedUrl": "https://www.youtube.com/embed/pe_ejTiIcSs",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 154390825
+          },
+          "url": "https://www.youtube.com/watch?v=pe_ejTiIcSs"
         }
       }
     ]

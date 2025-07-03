@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1011967
+            "userInteractionCount": 1021375
           },
           "url": "https://www.youtube.com/watch?v=1eSc-zUq_vU"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 488076
+            "userInteractionCount": 500211
           },
           "url": "https://www.youtube.com/watch?v=zmeWrVMtlWI"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 26927894
+            "userInteractionCount": 27151387
           },
           "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Who was faster? 😳😱 @isabellaafro",
-          "description": "Trending video from Jaymondy in Spain",
-          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
-          "uploadDate": "2025-06-29T11:30:33Z",
-          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 116644609
-          },
-          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "He Sacado Mi Propio Menú En McDonalds!",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 664861
+            "userInteractionCount": 682991
           },
           "url": "https://www.youtube.com/watch?v=O1h1BCii6vM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who was faster? 😳😱 @isabellaafro",
+          "description": "Trending video from Jaymondy in Spain",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:30:33Z",
+          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 117400422
+          },
+          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
       }
     ]

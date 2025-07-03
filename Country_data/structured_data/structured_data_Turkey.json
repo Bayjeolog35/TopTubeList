@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1196920
+            "userInteractionCount": 1242755
           },
           "url": "https://www.youtube.com/watch?v=depyhsQZXLM"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1565761
+            "userInteractionCount": 1607854
           },
           "url": "https://www.youtube.com/watch?v=0T-168yilZ8"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Who was faster? 😳😱 @isabellaafro",
-          "description": "Trending video from Jaymondy in Turkey",
-          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
-          "uploadDate": "2025-06-29T11:30:33Z",
-          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 116644609
-          },
-          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "How Much Money Can You Make Collecting Trolleys in the Airport?",
@@ -78,9 +60,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 8021904
+            "userInteractionCount": 8214881
           },
           "url": "https://www.youtube.com/watch?v=g0Ygas1Nj9U"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Who was faster? 😳😱 @isabellaafro",
+          "description": "Trending video from Jaymondy in Turkey",
+          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:30:33Z",
+          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 117400422
+          },
+          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
       },
       {
@@ -96,7 +96,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 26927894
+            "userInteractionCount": 27151387
           },
           "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
         }

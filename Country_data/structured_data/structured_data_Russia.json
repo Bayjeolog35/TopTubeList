@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 885084
+            "userInteractionCount": 896565
           },
           "url": "https://www.youtube.com/watch?v=gKKT2Ai4LIY"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 446908
+            "userInteractionCount": 469342
           },
           "url": "https://www.youtube.com/watch?v=87gpu7unG4M"
         }
@@ -50,6 +50,24 @@
       {
         "@type": "ListItem",
         "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "#стинт #стинтик #stint #stintik #твич #стрим #стример",
+          "description": "Trending video from Stintik  in Russia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Q0hDW9Ddm_M/hqdefault.jpg",
+          "uploadDate": "2025-07-03T07:15:11Z",
+          "embedUrl": "https://www.youtube.com/embed/Q0hDW9Ddm_M",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 96457
+          },
+          "url": "https://www.youtube.com/watch?v=Q0hDW9Ddm_M"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Китайка и Русалка 23 серия😂😆",
@@ -60,14 +78,14 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 691994
+            "userInteractionCount": 707962
           },
           "url": "https://www.youtube.com/watch?v=w7GW6vQrrls"
         }
       },
       {
         "@type": "ListItem",
-        "position": 4,
+        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Как мы потеряли идеальный банан",
@@ -78,27 +96,9 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2449255
+            "userInteractionCount": 2466180
           },
           "url": "https://www.youtube.com/watch?v=yh5syR6depU"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "ОСТАВИЛИ ДРУЗЕЙ НАЕДИНЕ С 4 ДЕТЬМИ! Под скрытыми камерами / ОНИ СБЕЖАЛИ!",
-          "description": "Trending video from Димасблог in Russia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/VVI1nBOLRIc/hqdefault.jpg",
-          "uploadDate": "2025-07-02T14:00:06Z",
-          "embedUrl": "https://www.youtube.com/embed/VVI1nBOLRIc",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 338463
-          },
-          "url": "https://www.youtube.com/watch?v=VVI1nBOLRIc"
         }
       }
     ]
