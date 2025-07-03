@@ -416,7 +416,7 @@ else:
     html_content = html_template.format(
         display_country_name=display_country_name,
         country_folder_name=country_folder_name,
-        {structured_data_block}
+        structured_data_block=structured_data_block,
         asia_active=asia_active, 
         europe_active=europe_active,
         africa_active=africa_active,
