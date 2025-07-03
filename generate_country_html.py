@@ -171,6 +171,30 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
         `;
         document.head.appendChild(style);
 
+
+            // --- Hamburger Panel State (Keep Open Across Pages) ---
+    document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.querySelector(".hamburger");
+        const panel = document.querySelector(".country-panel");
+
+        // Önceki durumu geri yükle
+        const savedState = localStorage.getItem("countryPanelOpen");
+        if (savedState === "true" && panel) {
+            panel.classList.add("active");
+        }
+
+        if (hamburger && panel) {
+            hamburger.addEventListener("click", () => {
+                panel.classList.toggle("active");
+
+                // Durumu kaydet
+                const isOpen = panel.classList.contains("active");
+                localStorage.setItem("countryPanelOpen", isOpen);
+            });
+        }
+    });
+
+
         // --- Dark Mode Toggle ---
         document.addEventListener("DOMContentLoaded", () => {{
             const darkModeToggle = document.getElementById("darkModeToggle");
