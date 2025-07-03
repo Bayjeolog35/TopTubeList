@@ -408,20 +408,17 @@ def main():
                 
             videos = [process_video_data(item) for item in data['items']]
             
-            # JSON olarak kaydet
-            # Ensure the directory for JSON files exists
-            json_output_dir = "Country_data/videos"
-            os.makedirs(json_output_dir, exist_ok=True)
-            with open(os.path.join(json_output_dir, f"videos_{country_folder}.json"), 'w', encoding='utf-8') as f:
-                json.dump(videos, f, ensure_ascii=False, indent=2)
+                    # JSON olarak kaydet
+        json_output_dir = "Country_data/videos"
+        os.makedirs(json_output_dir, exist_ok=True)
+        with open(os.path.join(json_output_dir, f"videos-{country_folder}.json"), 'w', encoding='utf-8') as f:
+            json.dump(videos, f, ensure_ascii=False, indent=2)
 
-            #structered data here
+        # STRUCTURED DATA JSON-LD ÜRET ve KAYDET
+        structured_data_output_dir = "Country_data/structured_data"
+        os.makedirs(structured_data_output_dir, exist_ok=True)
 
-# STRUCTURED DATA JSON-LD ÜRET ve KAYDET
-structured_data_output_dir = "Country_data/structured_data"
-os.makedirs(structured_data_output_dir, exist_ok=True)
-
-structured_data = []
+        structured_data = []
         for video in videos:
             structured_data.append({
                 "@context": "https://schema.org",
@@ -439,10 +436,9 @@ structured_data = []
                 }
             })
 
-
-structured_file_path = os.path.join(structured_data_output_dir, f"structured-data-{country_folder}.json")
-with open(structured_file_path, 'w', encoding='utf-8') as f:
-    json.dump(structured_data, f, ensure_ascii=False, indent=2)
+        structured_file_path = os.path.join(structured_data_output_dir, f"structured-data-{country_folder}.json")
+        with open(structured_file_path, 'w', encoding='utf-8') as f:
+            json.dump(structured_data, f, ensure_ascii=False, indent=2)
 
             
             # HTML'yi güncelle
