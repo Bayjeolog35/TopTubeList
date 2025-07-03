@@ -2,6 +2,7 @@ import os
 import json
 import requests
 from bs4 import BeautifulSoup
+from datetime import datetime # Import datetime for date formatting
 
 # GitHub Actions için özel ayar
 if os.getenv('CI'):
@@ -19,9 +20,14 @@ YOUTUBE_API_BASE_URL = "https://www.googleapis.com/youtube/v3/"
 
 def format_number(num):
     """Sayı formatlama: 1.5M, 150K gibi"""
+    num = float(num) # Ensure num is a float for division
     for unit in ['', 'K', 'M', 'B']:
         if abs(num) < 1000:
-            return f"{num:.1f}{unit}"
+            # Check if it's an integer or has decimal part for formatting
+            if num == int(num):
+                return f"{int(num)}{unit}"
+            else:
+                return f"{num:.1f}{unit}"
         num /= 1000
     return f"{num:.1f}B"
 
@@ -47,6 +53,17 @@ def process_video_data(item):
     snippet = item.get("snippet", {})
     stats = item.get("statistics", {})
     
+    # Format published_at
+    published_at_str = snippet.get("publishedAt", "")
+    formatted_date = ""
+    if published_at_str:
+        try:
+            # Parse ISO 8601 string
+            dt_object = datetime.fromisoformat(published_at_str.replace('Z', '+00:00'))
+            formatted_date = dt_object.strftime("%d.%m.%Y")
+        except ValueError:
+            formatted_date = "Tarih Yok"
+
     return {
         "id": item["id"],
         "title": snippet.get("title", "Başlık Yok"),
@@ -55,34 +72,44 @@ def process_video_data(item):
         "url": f"https://youtube.com/watch?v={item['id']}",
         "embed_url": f"https://youtube.com/embed/{item['id']}",
         "views": int(stats.get("viewCount", 0)),
+        "views_formatted": format_number(int(stats.get("viewCount", 0))), # Add formatted views
         "likes": int(stats.get("likeCount", 0)),
         "comments": int(stats.get("commentCount", 0)),
-        "published_at": snippet.get("publishedAt", "")
+        "published_at": published_at_str,
+        "published_date_formatted": formatted_date # Add formatted date
     }
 
 def update_html_file(country_folder, videos):
     """GitHub Pages için HTML güncelleme"""
     html_path = os.path.join(country_folder, "index.html")
     
+    # Ensure the directory exists
+    os.makedirs(country_folder, exist_ok=True)
+
+    # Check if the HTML file exists, if not, create a base one
     if not os.path.exists(html_path):
         print(f"{country_folder} için HTML bulunamadı, yeni oluşturuluyor...")
-        # GitHub Pages için temel HTML şablonu
         base_html = f"""
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trend Videos - {country_folder.replace('_', ' ')}</title>
+    <title>Trend Videos - {country_folder.replace('_', ' ').title()}</title>
     <style>
         body {{ font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }}
         .video-container {{ margin: 20px 0; }}
         iframe {{ max-width: 100%; }}
         .video-list {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }}
+        .video-card {{ border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }}
+        .video-card img {{ width: 100%; height: auto; display: block; }}
+        .video-card-info {{ padding: 10px; }}
+        .video-card-info h3 {{ margin-top: 0; font-size: 1.1em; }}
+        .video-card-info p {{ margin: 5px 0; font-size: 0.9em; color: #555; }}
     </style>
 </head>
 <body>
-    <h1>{country_folder.replace('_', ' ')} Trend Videolar</h1>
+    <h1>{country_folder.replace('_', ' ').title()} Trend Videolar</h1>
     <div id="top-video" class="video-container"></div>
     <div class="video-list"></div>
 </body>
@@ -99,11 +126,11 @@ def update_html_file(country_folder, videos):
         if top_div and videos:
             top_video = max(videos, key=lambda x: x["views"])
             new_iframe = soup.new_tag('iframe',
-                                    src=top_video["embed_url"],
-                                    width="560",
-                                    height="315",
-                                    frameborder="0",
-                                    allowfullscreen="")
+                                       src=top_video["embed_url"],
+                                       width="560",
+                                       height="315",
+                                       frameborder="0",
+                                       allowfullscreen="")
             top_div.clear()
             top_div.append(new_iframe)
             
@@ -113,10 +140,16 @@ def update_html_file(country_folder, videos):
             title.string = top_video["title"]
             channel = soup.new_tag('p')
             channel.string = f"Kanal: {top_video['channel']}"
-            views = soup.new_tag('p')
-            views.string = f"İzlenme: {format_number(top_video['views'])}"
             
-            info_div.extend([title, channel, views])
+            # Add Uploaded Date
+            uploaded_date = soup.new_tag('p')
+            uploaded_date.string = f"Yüklenme: {top_video['published_date_formatted']}"
+            
+            # Add Formatted Views
+            views = soup.new_tag('p')
+            views.string = f"İzlenme: {top_video['views_formatted']}"
+            
+            info_div.extend([title, channel, uploaded_date, views])
             top_div.append(info_div)
         
         # Video listesi
@@ -132,15 +165,24 @@ def update_html_file(country_folder, videos):
                 img['style'] = "width:100%; border-radius:8px;"
                 link.append(img)
                 
+                # Bilgi div'i
+                info_div_card = soup.new_tag('div', **{'class': 'video-card-info'})
+
                 # Başlık
-                title = soup.new_tag('h3')
-                title.string = video["title"]
+                title_card = soup.new_tag('h3')
+                title_card.string = video["title"]
                 
-                # Bilgiler
-                info = soup.new_tag('p')
-                info.string = f"{video['channel']} • {format_number(video['views'])} izlenme"
+                # Yüklenme Tarihi
+                uploaded_date_card = soup.new_tag('p')
+                uploaded_date_card.string = f"Yüklenme: {video['published_date_formatted']}"
                 
-                video_card.extend([link, title, info])
+                # İzlenme Sayısı
+                views_card = soup.new_tag('p')
+                views_card.string = f"İzlenme: {video['views_formatted']}"
+                
+                info_div_card.extend([title_card, uploaded_date_card, views_card])
+                
+                video_card.extend([link, info_div_card])
                 video_list.append(video_card)
         
         # Değişiklikleri kaydet
@@ -152,8 +194,17 @@ def main():
     # GitHub için gerekli klasörleri oluştur
     os.makedirs("Country_data/videos", exist_ok=True)
     
-    for country_folder, info in COUNTRY_INFO.items():
-        country_code = info["code"]
+    # Define a list of country codes to process
+    # You can expand this list as needed
+    country_codes_to_process = {
+        "united_states": "US",
+        "turkey": "TR",
+        "india": "IN",
+        "japan": "JP",
+        "brazil": "BR"
+    }
+
+    for country_folder, country_code in country_codes_to_process.items():
         print(f"\nİşleniyor: {country_folder} ({country_code})")
         
         try:
@@ -166,7 +217,10 @@ def main():
             videos = [process_video_data(item) for item in data['items']]
             
             # JSON olarak kaydet
-            with open(f"Country_data/videos/videos_{country_folder}.json", 'w', encoding='utf-8') as f:
+            # Ensure the directory for JSON files exists
+            json_output_dir = "Country_data/videos"
+            os.makedirs(json_output_dir, exist_ok=True)
+            with open(os.path.join(json_output_dir, f"videos_{country_folder}.json"), 'w', encoding='utf-8') as f:
                 json.dump(videos, f, ensure_ascii=False, indent=2)
             
             # HTML'yi güncelle
