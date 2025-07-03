@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>Trending YouTube Videos in Turkey - Updated Every 3 Hours | TopTubeList</title>
-    <meta name="description" content="Watch the most popular YouTube videos trending across Turkey. Stay current with viral content.">
-    <meta name="keywords" content="YouTube trends Turkey, popular videos Turkey, trending YouTube, viral content">
+    <title>Trending YouTube Videos in United States - Updated Every 3 Hours | TopTubeList</title>
+    <meta name="description" content="Watch the most popular YouTube videos trending across United States. Stay current with viral content.">
+    <meta name="keywords" content="YouTube trends United States, popular videos United States, trending YouTube, viral content">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://toptubelist.com/turkey/" />
+    <link rel="canonical" href="https://toptubelist.com/united_states/" />
     <link rel="stylesheet" href="../style.css" />
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103"
@@ -21,16 +21,16 @@
     <div class="container header-flex">
         <a href="../index.html" id="logoLink"> <img src="../TopTubeListLogo.webp" alt="TopTubeList Logo" width="100" style="margin-right: 12px; vertical-align: middle;">
         </a>
-        <h1>Most Viewed in Turkey</h1>
+        <h1>Most Viewed in United States</h1>
         <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
     </div>
 
     <nav id="continentNav">
         <a href="../index.html">Worldwide</a>
-        <a href="../asia.html" class="active">Asia</a>
+        <a href="../asia.html" class="">Asia</a>
         <a href="../europe.html" class="">Europe</a>
         <a href="../africa.html" class="">Africa</a>
-        <a href="../north_america.html" class="">North America</a>
+        <a href="../north_america.html" class="active">North America</a>
         <a href="../south_america.html" class="">South America</a>
         <a href="../oceania.html" class="">Oceania</a>
     </nav>
@@ -72,8 +72,8 @@
             <div class="country-column">
                 <button onclick="location.href='../afghanistan/'" data-letter="A" class="country-button">Afghanistan</button>
 <button onclick="location.href='../india/'" data-letter="I" class="country-button">India</button>
-<button onclick="location.href='../turkey/'" data-letter="T" class="country-button active">Turkey</button>
-<button onclick="location.href='../unitedstates/'" data-letter="U" class="country-button">United States</button>
+<button onclick="location.href='../turkey/'" data-letter="T" class="country-button">Turkey</button>
+<button onclick="location.href='../unitedstates/'" data-letter="U" class="country-button active">United States</button>
             </div>
         </div>
 </main>
@@ -338,7 +338,7 @@
             }
 
             // JSON dosyasının yolu dinamik olarak Python'dan geliyor
-            fetch("../Country_data/videos/videos_turkey.json")
+            fetch("../Country_data/videos/videos_united_states.json")
                 .then(res => {
                     if (!res.ok) {
                         throw new Error(`HTTP error! status: ${res.status}`);
