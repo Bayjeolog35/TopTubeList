@@ -655,8 +655,26 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
         <button id="loadMoreBtn" class="site-button" style="display: none;">Load More</button>
         """
     else:
-        # Video varsa, JavaScript'in dolduracağı boş div ve Load More butonu
-        video_list_html_placeholder = '<div id="videoList" class="video-list"></div>\n<button id="loadMoreBtn" class="site-button">Load More</button>'
+    video_list_html_placeholder = f'''
+    <div id="videoList" class="video-list"></div>
+    <button id="loadMoreBtn" class="site-button">Load More</button>
+    <script>
+        fetch("../Country_data/videos/videos-{country_folder_name}.json")
+            .then(res => {{
+                if (!res.ok) throw new Error(`HTTP error! status: ${{res.status}}`);
+                return res.json();
+            }})
+            .then(videos => {{
+                allVideos = videos;
+                renderVideos();
+            }})
+            .catch(error => {{
+                console.error('Error fetching videos:', error);
+                allVideos = [];
+                renderVideos();
+            }});
+    </script>
+    '''
 
 
     html_content = html_template.format(
