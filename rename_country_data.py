@@ -76,13 +76,19 @@ def rename_files_to_standard_format(directory):
     print(f"\nİşlem tamamlandı. Yeniden adlandırılan dosya sayısı: {renamed_count}, Atlanan dosya sayısı: {skipped_count}")
 
 if __name__ == "__main__":
-    # Hedef dizini burada belirtin.
-    # Eğer bu betik, 'Country_data' ile aynı seviyede çalışıyorsa, yol doğru olacaktır.
-    target_directory = "Country_data/structured_data"
+    # İşlenecek dizinlerin listesi
+    target_directories = [
+        "Country_data/videos",
+        "Country_data/structured_data"
+    ]
 
-    # Dizin mevcut değilse kullanıcıyı bilgilendir
-    if not os.path.isdir(target_directory):
-        print(f"Hata: '{target_directory}' dizini bulunamadı.")
-        print("Lütfen script'i çalıştırmadan önce bu dizini oluşturduğunuzdan veya doğru yolu ayarladığınızdan emin olun.")
-    else:
-        rename_files_to_standard_format(target_directory)
+    for directory_path in target_directories:
+        print(f"\n--- '{directory_path}' dizini işleniyor ---")
+        # Dizin mevcut değilse kullanıcıyı bilgilendir
+        if not os.path.isdir(directory_path):
+            print(f"Hata: '{directory_path}' dizini bulunamadı.")
+            print("Lütfen script'i çalıştırmadan önce bu dizini oluşturduğunuzdan veya doğru yolu ayarladığınızdan emin olun.")
+        else:
+            rename_files_to_standard_format(directory_path)
+
+    print("\n--- Tüm dizinlerdeki dosya adı standardizasyon işlemi tamamlandı ---")
