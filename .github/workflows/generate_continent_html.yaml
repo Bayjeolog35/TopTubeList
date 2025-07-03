@@ -1,4 +1,6 @@
-name: Generate continenton:
+name: Generate and Deploy Website
+
+on:
   push:
     branches:
       - main # main branch'ine her push yapıldığında bu workflow çalışacak
