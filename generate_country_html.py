@@ -423,17 +423,24 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
     # Ülkeleri alfabetik sıraya göre sırala
     sorted_country_info = sorted(COUNTRY_INFO.items(), key=lambda item: item[1].get("display_name", item[0].replace('_', ' ')))
     
+        country_buttons_html = []
+
+    sorted_country_info = sorted(
+        COUNTRY_INFO.items(),
+        key=lambda item: item[1].get("display_name", item[0].replace('_', ' '))
+    )
+
     for c_folder_name, c_info in sorted_country_info:
         c_display_name = c_info.get("display_name", c_folder_name.replace('_', ' '))
         first_letter = c_display_name[0].upper()
-        
-        # Eğer bu döngüdeki ülke (c_folder_name) şu anda HTML'ini oluşturduğumuz ülke (country_folder_name) ise 'active' sınıfını ekle
+
+        # Alt çizgi yerine tireli klasör ismi
+        sanitized_folder_name = c_folder_name.replace("_", "-")
+
         is_current_country_active = " active" if c_folder_name == country_folder_name else ""
-        
-        # Class attribute'ine hem genel 'country-button' sınıfını hem de 'active' sınıfını ekliyoruz.
- 
+
         country_buttons_html.append(
-        f'''<button onclick="location.href='../{sanitized_folder_name}/'" data-letter="{first_letter}" class="country-button{is_current_country_active}">{c_display_name}</button>'''
+            f'''<button onclick="location.href='../{sanitized_folder_name}/'" data-letter="{first_letter}" class="country-button{is_current_country_active}">{c_display_name}</button>'''
         )
 
 
