@@ -1,20 +1,11 @@
 name: Generate Continent HTMLs
 
 on:
-  workflow_dispatch:  # Manuel çalıştırma için eklendi
-    inputs:
-      environment:
-        description: 'Çalıştırma Ortamı'
-        required: true
-        default: 'production'
-        type: choice
-        options:
-          - production
-          - staging
+  workflow_dispatch:
   push:
     branches: [ "main" ]
   schedule:
-    - cron: '0 3 * * *'  # Opsiyonel: Otomatik çalıştırma
+    - cron: '0 3 * * *'
 
 jobs:
   generate_html:
@@ -40,5 +31,10 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add *.html
-          git commit -m "Auto-generated HTML files [skip ci]"
-          git push
+          # Değişiklik varsa commit yap
+          if [[ $(git status --porcelain) ]]; then
+            git commit -m "Auto-generated HTML files [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
