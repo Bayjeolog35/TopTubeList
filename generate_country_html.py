@@ -219,7 +219,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
 
     display_country_name = COUNTRY_INFO.get(
         country_folder_name, {}
-    ).get("display_name", country_folder_name.replace('_', ' '))
+    ).get("display_name", country_folder_name.replace('_', ' ')).title() # .title() ekledim, daha düzgün görünür
 
     # Structured data JSON-LD bloğunu oluştur
     structured_data_block = ""
@@ -231,9 +231,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
             '\n</script>'
         )
 
-    # HTML şablonu (Yollar ülke klasöründen ana dizine göre ayarlandı)
-    # NOT: JavaScript içindeki süslü parantezlerin (örn: { opacity: 1; }) Python formatlama tarafından yanlış algılanmaması için '{{' ve '}}' kullanıldı.
-    # HTML etiketleri içinde dinamik olarak dolacak yerler için tek '{' ve '}' kullanılmaya devam edildi.
+    # HTML şablonu
     html_template = r"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -530,10 +528,12 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
             document.body.classList.toggle('dark-mode', darkModeEnabled);
 
             let allVideos = [];
-            let displayCount = 10;
+            let displayCount = 20; // Başlangıçta 20 video göster
 
             function renderVideos() {{
                 const container = document.getElementById("videoList");
+                if (!container) return; // container yoksa çık
+
                 container.innerHTML = ""; // İçeriği temizle
 
                 if (allVideos.length === 0) {{
@@ -545,7 +545,8 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
                             <p><em>(YouTube API might not be returning data for this region right now.)</em></p>
                         </div>
                     `;
-                    document.getElementById("loadMoreBtn").style.display = "none";
+                    const loadMoreBtn = document.getElementById("loadMoreBtn");
+                    if (loadMoreBtn) loadMoreBtn.style.display = "none";
                     return; // Fonksiyondan çık
                 }}
 
@@ -555,7 +556,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
                     card.innerHTML = `
                         <img src="${{video.thumbnail}}" alt="${{video.title}}" />
                         <div class="video-info">
-                            <h2>${{video.title}}</h2>
+                            <h3>${{video.title}}</h3>
                             <p><strong>Uploaded:</strong> ${{new Date(video.uploadDate).toLocaleDateString()}}</p>
                             <p><strong>Views:</strong> ${{video.views_str}}</p>
                             <a href="${{video.url}}" target="_blank">Watch on YouTube</a>
@@ -565,14 +566,20 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
                     setTimeout(() => card.classList.add("show"), 50);
                 }});
 
-                document.getElementById("loadMoreBtn").style.display =
-                    displayCount >= allVideos.length ? "none" : "block";
+                const loadMoreBtn = document.getElementById("loadMoreBtn");
+                if (loadMoreBtn) {{
+                    loadMoreBtn.style.display =
+                        displayCount >= allVideos.length ? "none" : "block";
+                }}
             }}
 
             // JSON dosyasının yolu dinamik olarak Python'dan geliyor
-            fetch("../Country_data/videos/videos_{country_folder_name}.json")
+            // DİKKAT: Burada yolu mutlak yapıyoruz!
+            fetch("/Country_data/videos/videos-{country_folder_name}.json") 
                 .then(res => {{
                     if (!res.ok) {{
+                        // Eğer dosya bulunamazsa (404) veya başka bir HTTP hatası olursa
+                        console.error(`HTTP error fetching videos: ${{res.status}} for /Country_data/videos/videos-{country_folder_name}.json`);
                         throw new Error(`HTTP error! status: ${{res.status}}`);
                     }}
                     return res.json();
@@ -587,10 +594,13 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
                     renderVideos(); // Boş liste ile tekrar render et (hata mesajını gösterir)
                 }});
             
-            document.getElementById("loadMoreBtn").addEventListener("click", () => {{
-                displayCount += 10;
-                renderVideos();
-            }});
+            const loadMoreBtn = document.getElementById("loadMoreBtn");
+            if (loadMoreBtn) {{
+                loadMoreBtn.addEventListener("click", () => {{
+                    displayCount += 10;
+                    renderVideos();
+                }});
+            }}
         }});
     </script>
 </body>
@@ -599,36 +609,34 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
     
     continent_of_country = ""
     country_code_for_folder = COUNTRY_INFO.get(country_folder_name, {}).get("code")
-    if country_code_for_folder: # Eğer ülke kodu varsa kıtayı bulmaya çalış
+    if country_code_for_folder:
         for continent, countries_in_continent in CONTINENT_COUNTRIES.items():
-            if country_code_for_folder in countries_in_continent:
+            if country_code_for_folder.upper() in [c.upper() for c in countries_in_continent]: # Kodları büyük harfe çevirerek karşılaştır
                 continent_of_country = continent
                 break
 
     # Kıtalar için active sınıfı, şu anki ülkenin kıtasına göre belirlenir
-    asia_active = 'active' if continent_of_country == 'asia' else ''
-    europe_active = 'active' if continent_of_country == 'europe' else ''
-    africa_active = 'active' if continent_of_country == 'africa' else ''
-    north_america_active = 'active' if continent_of_country == 'north_america' else ''
-    south_america_active = 'active' if continent_of_country == 'south_america' else ''
-    oceania_active = 'active' if continent_of_country == 'oceania' else ''
+    # Bu kısmı Python tarafında düzgünce formatlamamız gerekiyor
+    continent_active_classes = {
+        'asia_active': 'active' if continent_of_country == 'asia' else '',
+        'europe_active': 'active' if continent_of_country == 'europe' else '',
+        'africa_active': 'active' if continent_of_country == 'africa' else '',
+        'north_america_active': 'active' if continent_of_country == 'north_america' else '',
+        'south_america_active': 'active' if continent_of_country == 'south_america' else '',
+        'oceania_active': 'active' if continent_of_country == 'oceania' else '',
+    }
+
 
     country_buttons_html = []
-    # Ülkeleri alfabetik sıraya göre sırala
-    sorted_country_info = sorted(COUNTRY_INFO.items(), key=lambda item: item[1].get("display_name", item[0].replace('_', ' ')))
-    
-    country_buttons_html = []
-
     sorted_country_info = sorted(
         COUNTRY_INFO.items(),
-        key=lambda item: item[1].get("display_name", item[0].replace('_', ' '))
+        key=lambda item: item[1].get("display_name", item[0].replace('_', ' ')).title() # Sorting key'i de title() ile güncelledim
     )
 
     for c_folder_name, c_info in sorted_country_info:
         c_display_name = c_info.get("display_name", c_folder_name.replace('_', ' ')).title()
         first_letter = c_display_name[0].upper()
 
-        # Alt çizgi yerine tireli klasör ismi
         sanitized_folder_name = c_folder_name.replace("_", "-")
 
         is_current_country_active = " active" if c_folder_name == country_folder_name else ""
@@ -637,59 +645,32 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
             f'''<button onclick="location.href='../{sanitized_folder_name}/'" data-letter="{first_letter}" class="country-button{is_current_country_active}">{c_display_name}</button>'''
         )
     
-    
     country_dir = os.path.join(os.getcwd(), country_folder_name)
     os.makedirs(country_dir, exist_ok=True)
 
     # JavaScript ile video listesini doldurmak yerine, doğrudan HTML şablonuna dahil edilecek bir placeholder belirle
     # Eğer video verisi boşsa, doğrudan bir mesaj göster
 
-    if not videos_data:
-        video_list_html_placeholder = """
-    <div id="videoList" class="video-list">
-        <div style="padding: 40px; text-align: center; grid-column: 1 / -1;">
-            <h2>📡 Sorry!</h2>
-            <p>We couldn't fetch trending YouTube videos for this country at the moment.</p>
-            <p><em>(YouTube API might not be returning data for this region right now.)</em></p>
-        </div>
+    # Video listesini direkt HTML'e değil, JavaScript'in dolduracağı boş bir div olarak bırakıyoruz.
+    # Hata mesajı JavaScript tarafından kontrol edilecek.
+    video_list_html_placeholder = """
+    <div class="video-list-wrapper">
+        <div id="videoList" class="video-list"></div>
+        <button id="loadMoreBtn" class="site-button">Load More</button>
     </div>
-    <button id="loadMoreBtn" class="site-button" style="display: none;">Load More</button>
     """
-    else:
-        video_list_html_placeholder = f"""
-    <div id="videoList" class="video-list"></div>
-    <button id="loadMoreBtn" class="site-button">Load More</button>
-    <script>
-        fetch("../Country_data/videos/videos-{country_folder_name}.json")
-            .then(res => {{
-                if (!res.ok) throw new Error(`HTTP error! status: ${{res.status}}`);
-                return res.json();
-            }})
-            .then(videos => {{
-                allVideos = videos;
-                renderVideos();
-            }})
-            .catch(error => {{
-                console.error('Error fetching videos:', error);
-                allVideos = [];
-                renderVideos();
-            }});
-    </script>
-    """
+    # Note: `video_list_html` adı, HTML şablonunda doğrudan doldurulacak bir yer gibi duruyor.
+    # Ancak JavaScript ile dinamik olarak doldurulacağı için, burada sadece container'ı koymak yeterli.
+    # JavaScript'in içindeki fetch çağrısı, doğru `country_folder_name` ile otomatik olarak güncellenecek.
 
 
     html_content = html_template.format(
         display_country_name=display_country_name,
-        country_folder_name=country_folder_name,
+        country_folder_name=country_folder_name.replace('_', '-'), # URL'lerde tire kullanmak daha iyidir
         structured_data_block=structured_data_block,
-        asia_active=asia_active,  
-        europe_active=europe_active,
-        africa_active=africa_active,
-        north_america_active=north_america_active,
-        south_america_active=south_america_active,
-        oceania_active=oceania_active,
+        **continent_active_classes, # Kıtaların aktif sınıflarını doğrudan geç
         country_buttons="\n".join(country_buttons_html), # Join the list into a single string
-        video_list_html=video_list_html_placeholder
+        video_list_html=video_list_html_placeholder # Bu placeholder zaten JS tarafından doldurulacak bir alan
     )
 
     output_path = os.path.join(country_dir, "index.html")
@@ -697,18 +678,17 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
         f.write(html_content)
     print(f"{output_path} oluşturuldu.")
 
-    
+# main fonksiyonunu yukarıdaki önerilere göre güncelleyin.
+# Özellikle JSON okuma hatalarını yakalayan try-except blokları önemli.
 def main():
-    # JSON dosyalarını yeni yoldan oku
     base_data_dir = "Country_data"
     videos_base_dir = os.path.join(base_data_dir, "videos")
     structured_data_base_dir = os.path.join(base_data_dir, "structured_data")
 
-    # Kontrol için, Country_data klasörünün ve alt klasörlerinin var olduğundan emin ol
     os.makedirs(videos_base_dir, exist_ok=True)
     os.makedirs(structured_data_base_dir, exist_ok=True)
 
-    for country_folder_name, info in COUNTRY_INFO.items(): # Sadece ülkeleri döngüye al
+    for country_folder_name, info in COUNTRY_INFO.items():
         videos_file = os.path.join(videos_base_dir, f"videos_{country_folder_name}.json")
         structured_data_file = os.path.join(structured_data_base_dir, f"structured_data_{country_folder_name}.json")
 
@@ -719,22 +699,29 @@ def main():
             try:
                 with open(videos_file, "r", encoding="utf-8") as f:
                     videos_data = json.load(f)
-            except json.JSONDecodeError:
-                print(f"Hata: {videos_file} dosyası bozuk veya geçersiz JSON içeriyor. Boş veri ile devam ediliyor.")
+            except json.JSONDecodeError as e:
+                print(f"HATA: {videos_file} dosyasını okurken JSON hatası: {e}")
+                videos_data = []
+            except FileNotFoundError: # Bu aslında os.path.exists kontrolü nedeniyle buraya düşmez ama yine de eklenebilir
+                print(f"UYARI: {videos_file} bulunamadı.")
                 videos_data = []
         else:
-            print(f"Uyarı: {videos_file} bulunamadı. Bu ülke için video verisi olmayacak.")
-
+            print(f"UYARI: {videos_file} bulunamadı. Boş video verisi ile devam ediliyor.")
+            
         if os.path.exists(structured_data_file):
             try:
                 with open(structured_data_file, "r", encoding="utf-8") as f:
                     structured_data = json.load(f)
-            except json.JSONDecodeError:
-                print(f"Hata: {structured_data_file} dosyası bozuk veya geçersiz JSON içeriyor. Boş veri ile devam ediliyor.")
+            except json.JSONDecodeError as e:
+                print(f"HATA: {structured_data_file} dosyasını okurken JSON hatası: {e}")
+                structured_data = {}
+            except FileNotFoundError:
+                print(f"UYARI: {structured_data_file} bulunamadı.")
                 structured_data = {}
         else:
-            print(f"Uyarı: {structured_data_file} bulunamadı. Bu ülke için yapılandırılmış veri olmayacak.")
+            print(f"UYARI: {structured_data_file} bulunamadı. Boş yapılandırılmış veri ile devam ediliyor.")
 
+        # generate_html_file çağrısı burada olmalı
         generate_html_file(country_folder_name, videos_data, structured_data)
 
 if __name__ == "__main__":
