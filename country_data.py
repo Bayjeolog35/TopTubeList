@@ -1,6 +1,6 @@
-# country_data.py
+# country-data.py
 
-COUNTRY_INFO = {
+COUNTRY-INFO = {
     "afghanistan": {"code": "af"},
     "albania": {"code": "al"},
     "algeria": {"code": "dz"},
@@ -21,40 +21,40 @@ COUNTRY_INFO = {
     "benin": {"code": "bj"},
     "bhutan": {"code": "bt"},
     "bolivia": {"code": "bo"},
-    "bosnia_and_herzegovina": {"code": "ba", "display_name": "bosnia and herzegovina"},
+    "bosnia-and-herzegovina": {"code": "ba", "display-name": "bosnia and herzegovina"},
     "botswana": {"code": "bw"},
     "brazil": {"code": "br"},
     "brunei": {"code": "bn"},
     "bulgaria": {"code": "bg"},
-    "burkina_faso": {"code": "bf", "display_name": "burkina faso"},
+    "burkina-faso": {"code": "bf", "display-name": "burkina faso"},
     "burundi": {"code": "bı"},
-    "cabo_verde": {"code": "cv", "display_name": "cabo verde"},
+    "cabo-verde": {"code": "cv", "display-name": "cabo verde"},
     "cambodia": {"code": "kh"},
     "cameroon": {"code": "cm"},
     "canada": {"code": "ca"},
-    "central_african_republic": {"code": "cf", "display_name": "central african republic"},
+    "central-african-republic": {"code": "cf", "display-name": "central african republic"},
     "chad": {"code": "td"},
     "chile": {"code": "cl"},
     "china": {"code": "cn"}, # youtube'da çin için doğrudan trend verisi kısıtlı olabilir
     "colombia": {"code": "co"},
     "comoros": {"code": "km"},
-    "congo_democratic_republicofthe": {"code": "cd", "display_name": "congo (democratic republic of the)"},
-    "congo_republic_of_the": {"code": "cg", "display_name": "congo (republic of the)"},
-    "costa_rica": {"code": "cr", "display_name": "costa rica"},
-    "cote_dıvoire": {"code": "cı", "display_name": "cote d'ıvoire"},
+    "congo-democratic-republicofthe": {"code": "cd", "display-name": "congo (democratic republic of the)"},
+    "congo-republic-of-the": {"code": "cg", "display-name": "congo (republic of the)"},
+    "costa-rica": {"code": "cr", "display-name": "costa rica"},
+    "cote-dıvoire": {"code": "cı", "display-name": "cote d'ıvoire"},
     "croatia": {"code": "hr"},
     "cuba": {"code": "cu"}, # youtube'da küba için doğrudan trend verisi kısıtlı olabilir
     "cyprus": {"code": "cy"},
-    "czech_republic": {"code": "cz", "display_name": "czech republic"},
+    "czech-republic": {"code": "cz", "display-name": "czech republic"},
     "denmark": {"code": "dk"},
     "djibouti": {"code": "dj"},
     "dominica": {"code": "dm"},
-    "dominican_republic": {"code": "do", "display_name": "dominican republic"},
-    "east_timor": {"code": "tl", "display_name": "east timor"},
+    "dominican-republic": {"code": "do", "display-name": "dominican republic"},
+    "east-timor": {"code": "tl", "display-name": "east timor"},
     "ecuador": {"code": "ec"},
     "egypt": {"code": "eg"},
-    "elsalvador": {"code": "sv", "display_name": "el salvador"},
-    "equatorial_guinea": {"code": "gq", "display_name": "equatorial guinea"},
+    "elsalvador": {"code": "sv", "display-name": "el salvador"},
+    "equatorial-guinea": {"code": "gq", "display-name": "equatorial guinea"},
     "eritrea": {"code": "er"},
     "estonia": {"code": "ee"},
     "eswatini": {"code": "sz"},
@@ -71,7 +71,7 @@ COUNTRY_INFO = {
     "grenada": {"code": "gd"},
     "guatemala": {"code": "gt"},
     "guinea": {"code": "gn"},
-    "guinea_bissau": {"code": "gw", "display_name": "guinea-bissau"},
+    "guinea-bissau": {"code": "gw", "display-name": "guinea-bissau"},
     "guyana": {"code": "gy"},
     "haiti": {"code": "ht"},
     "honduras": {"code": "hn"},
@@ -90,9 +90,9 @@ COUNTRY_INFO = {
     "kazakhstan": {"code": "kz"},
     "kenya": {"code": "ke"},
     "kiribati": {"code": "kı"},
-    "korea_north": {"code": "kp", "display_name": "korea (north)"}, # youtube'da kuzey kore için doğrudan trend verisi kısıtlı olabilir
-    "korea_south": {"code": "kr", "display_name": "korea (south)"},
-    "kosovo": {"code": "xk", "display_name": "kosovo"}, # ıso 3166-1 alpha-2 standardına dahil değil, dikkat
+    "korea-north": {"code": "kp", "display-name": "korea (north)"}, # youtube'da kuzey kore için doğrudan trend verisi kısıtlı olabilir
+    "korea-south": {"code": "kr", "display-name": "korea (south)"},
+    "kosovo": {"code": "xk", "display-name": "kosovo"}, # ıso 3166-1 alpha-2 standardına dahil değil, dikkat
     "kuwait": {"code": "kw"},
     "kyrgyzstan": {"code": "kg"},
     "laos": {"code": "la"},
@@ -110,7 +110,7 @@ COUNTRY_INFO = {
     "maldives": {"code": "mv"},
     "mali": {"code": "ml"},
     "malta": {"code": "mt"},
-    "marshall_ıslands": {"code": "mh", "display_name": "marshall ıslands"},
+    "marshall-ıslands": {"code": "mh", "display-name": "marshall ıslands"},
     "mauritania": {"code": "mr"},
     "mauritius": {"code": "mu"},
     "mexico": {"code": "mx"},
@@ -126,18 +126,18 @@ COUNTRY_INFO = {
     "nauru": {"code": "nr"},
     "nepal": {"code": "np"},
     "netherlands": {"code": "nl"},
-    "new_zealand": {"code": "nz", "display_name": "new zealand"},
+    "new-zealand": {"code": "nz", "display-name": "new zealand"},
     "nicaragua": {"code": "nı"},
     "niger": {"code": "ne"},
     "nigeria": {"code": "ng"},
-    "north_macedonia": {"code": "mk", "display_name": "north macedonia"},
+    "north-macedonia": {"code": "mk", "display-name": "north macedonia"},
     "norway": {"code": "no"},
     "oman": {"code": "om"},
     "pakistan": {"code": "pk"},
     "palau": {"code": "pw"},
     "palestine": {"code": "ps"},
     "panama": {"code": "pa"},
-    "papua_new_guinea": {"code": "pg", "display_name": "papua new guinea"},
+    "papua-new-guinea": {"code": "pg", "display-name": "papua new guinea"},
     "paraguay": {"code": "py"},
     "peru": {"code": "pe"},
     "philippines": {"code": "ph"},
@@ -147,26 +147,26 @@ COUNTRY_INFO = {
     "romania": {"code": "ro"},
     "russia": {"code": "ru"},
     "rwanda": {"code": "rw"},
-    "saint_kitts_and_nevis": {"code": "kn", "display_name": "saint kitts and nevis"},
-    "saint_lucia": {"code": "lc", "display_name": "saint lucia"},
-    "saint_vincent_and_the_grenadines": {"code": "vc", "display_name": "saint vincent and the grenadines"},
+    "saint-kitts-and-nevis": {"code": "kn", "display-name": "saint kitts and nevis"},
+    "saint-lucia": {"code": "lc", "display-name": "saint lucia"},
+    "saint-vincent-and-the-grenadines": {"code": "vc", "display-name": "saint vincent and the grenadines"},
     "samoa": {"code": "ws"},
-    "san_marino": {"code": "sm", "display_name": "san marino"},
-    "sao_tome_and_principe": {"code": "st", "display_name": "sao tome and principe"},
-    "saudi_arabia": {"code": "sa", "display_name": "saudi arabia"},
+    "san-marino": {"code": "sm", "display-name": "san marino"},
+    "sao-tome-and-principe": {"code": "st", "display-name": "sao tome and principe"},
+    "saudi-arabia": {"code": "sa", "display-name": "saudi arabia"},
     "senegal": {"code": "sn"},
     "serbia": {"code": "rs"},
     "seychelles": {"code": "sc"},
-    "sierra_leone": {"code": "sl", "display_name": "sierra leone"},
+    "sierra-leone": {"code": "sl", "display-name": "sierra leone"},
     "singapore": {"code": "sg"},
     "slovakia": {"code": "sk"},
     "slovenia": {"code": "sı"},
-    "solomon_ıslands": {"code": "sb", "display_name": "solomon ıslands"},
+    "solomon-ıslands": {"code": "sb", "display-name": "solomon ıslands"},
     "somalia": {"code": "so"},
-    "south_africa": {"code": "za", "display_name": "south africa"},
-    "south_sudan": {"code": "ss", "display_name": "south sudan"},
+    "south-africa": {"code": "za", "display-name": "south africa"},
+    "south-sudan": {"code": "ss", "display-name": "south sudan"},
     "spain": {"code": "es"},
-    "sri_lanka": {"code": "lk", "display_name": "sri lanka"},
+    "sri-lanka": {"code": "lk", "display-name": "sri lanka"},
     "sudan": {"code": "sd"},
     "suriname": {"code": "sr"},
     "sweden": {"code": "se"},
@@ -178,20 +178,20 @@ COUNTRY_INFO = {
     "thailand": {"code": "th"},
     "togo": {"code": "tg"},
     "tonga": {"code": "to"},
-    "trinidad_and_tobago": {"code": "tt", "display_name": "trinidad and tobago"},
+    "trinidad-and-tobago": {"code": "tt", "display-name": "trinidad and tobago"},
     "tunisia": {"code": "tn"},
     "turkey": {"code": "tr"},
     "turkmenistan": {"code": "tm"},
     "tuvalu": {"code": "tv"},
     "uganda": {"code": "ug"},
     "ukraine": {"code": "ua"},
-    "united_arab_emirates": {"code": "ae", "display_name": "united arab emirates"},
-    "united_kingdom": {"code": "gb", "display_name": "united kingdom"},
-    "united_states": {"code": "us", "display_name": "united states"},
+    "united-arab-emirates": {"code": "ae", "display-name": "united arab emirates"},
+    "united-kingdom": {"code": "gb", "display-name": "united kingdom"},
+    "united-states": {"code": "us", "display-name": "united states"},
     "uruguay": {"code": "uy"},
     "uzbekistan": {"code": "uz"},
     "vanuatu": {"code": "vu"},
-    "vatican_city": {"code": "va", "display_name": "vatican city"},
+    "vatican-city": {"code": "va", "display-name": "vatican city"},
     "venezuela": {"code": "ve"},
     "vietnam": {"code": "vn"},
     "yemen": {"code": "ye"},
@@ -202,23 +202,23 @@ COUNTRY_INFO = {
 # kıta bazlı ülke listeleri (apı'dan veri çekiminde kıta yerine ülke kodu kullanılacak)
 # bu sadece navbarda veya listelemede kıta isimlerini kullanmak için bir mantıksal gruplama.
 # apı isteği her zaman ülke kodu üzerinden yapılacaktır.
-CONTINENT_COUNTRIES = {
+CONTINENT-COUNTRIES = {
     "asia": [
-        "afghanistan", "armenia", "azerbaijan", "bahrain", "bangladesh", "bhutan", "brunei", "cambodia", "china", "cyprus", "east_timor", "georgia", "ındia", "ındonesia", "ıran", "ıraq", "ısrael", "japan", "jordan", "kazakhstan", "kiribati", "korea_north", "korea_south", "kuwait", "kyrgyzstan", "laos", "lebanon", "malaysia", "maldives", "mongolia", "myanmar", "nepal", "oman", "pakistan", "palestine", "philippines", "qatar", "saudi_arabia", "singapore", "sri_lanka", "syria", "taiwan", "tajikistan", "thailand", "turkey", "turkmenistan", "united_arab_emirates", "uzbekistan", "vietnam", "yemen"
+        "afghanistan", "armenia", "azerbaijan", "bahrain", "bangladesh", "bhutan", "brunei", "cambodia", "china", "cyprus", "east-timor", "georgia", "ındia", "ındonesia", "ıran", "ıraq", "ısrael", "japan", "jordan", "kazakhstan", "kiribati", "korea-north", "korea-south", "kuwait", "kyrgyzstan", "laos", "lebanon", "malaysia", "maldives", "mongolia", "myanmar", "nepal", "oman", "pakistan", "palestine", "philippines", "qatar", "saudi-arabia", "singapore", "sri-lanka", "syria", "taiwan", "tajikistan", "thailand", "turkey", "turkmenistan", "united-arab-emirates", "uzbekistan", "vietnam", "yemen"
     ],
     "europe": [
-        "albania", "andorra", "austria", "belarus", "belgium", "bosnia_and_herzegovina", "bulgaria", "croatia", "czech_republic", "denmark", "estonia", "finland", "france", "germany", "greece", "hungary", "ıceland", "ıreland", "ıtaly", "kosovo", "latvia", "liechtenstein", "lithuania", "luxembourg", "malta", "moldova", "monaco", "montenegro", "netherlands", "north_macedonia", "norway", "poland", "portugal", "romania", "russia", "san_marino", "serbia", "slovakia", "slovenia", "spain", "sweden", "switzerland", "ukraine", "united_kingdom", "vatican_city"
+        "albania", "andorra", "austria", "belarus", "belgium", "bosnia-and-herzegovina", "bulgaria", "croatia", "czech-republic", "denmark", "estonia", "finland", "france", "germany", "greece", "hungary", "ıceland", "ıreland", "ıtaly", "kosovo", "latvia", "liechtenstein", "lithuania", "luxembourg", "malta", "moldova", "monaco", "montenegro", "netherlands", "north-macedonia", "norway", "poland", "portugal", "romania", "russia", "san-marino", "serbia", "slovakia", "slovenia", "spain", "sweden", "switzerland", "ukraine", "united-kingdom", "vatican-city"
     ],
     "africa": [
-        "algeria", "angola", "benin", "botswana", "burkina_faso", "burundi", "cabo_verde", "cameroon", "central_african_republic", "chad", "comoros", "congo_democratic_republicofthe", "congo_republic_of_the", "cote_dıvoire", "djibouti", "egypt", "equatorial_guinea", "eritrea", "eswatini", "ethiopia", "gabon", "gambia", "ghana", "guinea", "guinea_bissau", "kenya", "lesotho", "liberia", "libya", "madagascar", "malawi", "mali", "mauritania", "mauritius", "morocco", "mozambique", "namibia", "niger", "nigeria", "rwanda", "sao_tome_and_principe", "senegal", "seychelles", "sierra_leone", "somalia", "south_africa", "south_sudan", "sudan", "tanzania", "togo", "tunisia", "uganda", "zambia", "zimbabwe"
+        "algeria", "angola", "benin", "botswana", "burkina-faso", "burundi", "cabo-verde", "cameroon", "central-african-republic", "chad", "comoros", "congo-democratic-republicofthe", "congo-republic-of-the", "cote-dıvoire", "djibouti", "egypt", "equatorial-guinea", "eritrea", "eswatini", "ethiopia", "gabon", "gambia", "ghana", "guinea", "guinea-bissau", "kenya", "lesotho", "liberia", "libya", "madagascar", "malawi", "mali", "mauritania", "mauritius", "morocco", "mozambique", "namibia", "niger", "nigeria", "rwanda", "sao-tome-and-principe", "senegal", "seychelles", "sierra-leone", "somalia", "south-africa", "south-sudan", "sudan", "tanzania", "togo", "tunisia", "uganda", "zambia", "zimbabwe"
     ],
-    "north_america": [
-        "antigua_and_barbuda", "bahamas", "barbados", "belize", "canada", "costa_rica", "cuba", "dominica", "dominican_republic", "elsalvador", "grenada", "guatemala", "haiti", "honduras", "jamaica", "mexico", "nicaragua", "panama", "saint_kitts_and_nevis", "saint_lucia", "saint_vincent_and_the_grenadines", "trinidad_and_tobago", "united_states"
+    "north-america": [
+        "antigua-and-barbuda", "bahamas", "barbados", "belize", "canada", "costa-rica", "cuba", "dominica", "dominican-republic", "elsalvador", "grenada", "guatemala", "haiti", "honduras", "jamaica", "mexico", "nicaragua", "panama", "saint-kitts-and-nevis", "saint-lucia", "saint-vincent-and-the-grenadines", "trinidad-and-tobago", "united-states"
     ],
-    "south_america": [
+    "south-america": [
         "argentina", "bolivia", "brazil", "chile", "colombia", "ecuador", "guyana", "paraguay", "peru", "suriname", "uruguay", "venezuela"
     ],
     "oceania": [
-        "australia", "fiji", "kiribati", "marshall_ıslands", "micronesia", "nauru", "new_zealand", "palau", "papua_new_guinea", "samoa", "solomon_ıslands", "tonga", "tuvalu", "vanuatu"
+        "australia", "fiji", "kiribati", "marshall-ıslands", "micronesia", "nauru", "new-zealand", "palau", "papua-new-guinea", "samoa", "solomon-ıslands", "tonga", "tuvalu", "vanuatu"
     ]
 }
