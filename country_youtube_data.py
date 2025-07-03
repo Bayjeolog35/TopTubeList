@@ -1,183 +1,135 @@
 import os
 import json
 import requests
-from datetime import datetime
+from bs4 import BeautifulSoup
 from country_data import COUNTRY_INFO
 
-# YouTube Data API Key'inizi ortam değişkeninden alın
+# YouTube Data API Key
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
-
 if not YOUTUBE_API_KEY:
-    raise ValueError("YOUTUBE_API_KEY ortam değişkeni ayarlanmamış. Lütfen API anahtarınızı ayarlayın.")
+    raise ValueError("YouTube API key bulunamadı!")
 
-# **DÜZELTME:** YouTube Data API'nin doğru base URL'si
 YOUTUBE_API_BASE_URL = "https://www.googleapis.com/youtube/v3/"
 
 def format_number(num):
-    """Sayıyı okunabilir formatta döndürür (örn: 1.2M, 50K)."""
+    """Sayıları daha okunabilir hale getirir (1.5M, 150K gibi)"""
     if num >= 1_000_000:
-        return f"{num / 1_000_000:.1f}M"
+        return f"{num/1_000_000:.1f}M"
     elif num >= 1_000:
-        return f"{num / 1_000:.1f}K"
-    else:
-        return str(num)
+        return f"{num/1_000:.1f}K"
+    return str(num)
 
-def get_trending_videos(region_code, max_results=20):
-    """Belirtilen bölge kodu için trend videoları çeker."""
+def get_trending_videos(region_code, max_results=50):
+    """YouTube'dan trend videoları çeker"""
     url = f"{YOUTUBE_API_BASE_URL}videos"
     params = {
-        "part": "snippet,statistics",
+        "part": "snippet,statistics,contentDetails",
         "chart": "mostPopular",
         "regionCode": region_code,
         "maxResults": max_results,
         "key": YOUTUBE_API_KEY
     }
     response = requests.get(url, params=params)
-    response.raise_for_status() # Hata durumunda HTTPError yükselt
+    response.raise_for_status()
     return response.json()
 
 def process_video_data(item):
-    """API yanıtından gerekli video bilgilerini çıkarır."""
+    """Ham video verisini işler"""
     snippet = item["snippet"]
-    statistics = item.get("statistics", {})
+    stats = item.get("statistics", {})
     
-    title = snippet.get("title", "No Title")
-    channel_title = snippet.get("channelTitle", "Unknown Channel")
-    video_id = item["id"]
-    thumbnail = snippet["thumbnails"]["high"]["url"] if "thumbnails" in snippet and "high" in snippet["thumbnails"] else ""
-    upload_date = snippet.get("publishedAt", "")
-    
-    views = int(statistics.get("viewCount", 0))
-    likes = int(statistics.get("likeCount", 0))
-    comments = int(statistics.get("commentCount", 0))
-
     return {
-        "id": video_id,
-        "title": title,
-        "channelTitle": channel_title,
-        "thumbnail": thumbnail,
-        "url": f"https://www.youtube.com/watch?v={video_id}", # YouTube video URL'si
-        "uploadDate": upload_date,
-        "views": views,
-        "views_str": format_number(views),
-        "likes": likes,
-        "comments": comments
+        "id": item["id"],
+        "title": snippet.get("title", "Başlık Yok"),
+        "channel": snippet.get("channelTitle", "Kanal Yok"),
+        "thumbnail": snippet["thumbnails"]["high"]["url"] if "thumbnails" in snippet else "",
+        "url": f"https://youtube.com/watch?v={item['id']}",
+        "embed_url": f"https://youtube.com/embed/{item['id']}",
+        "views": int(stats.get("viewCount", 0)),
+        "likes": int(stats.get("likeCount", 0)),
+        "comments": int(stats.get("commentCount", 0)),
+        "views_str": format_number(int(stats.get("viewCount", 0))),
+        "likes_str": format_number(int(stats.get("likeCount", 0)))
     }
 
-def generate_structured_data(videos, country_name, country_code):
-    """Yapılandırılmış veri (Schema.org) oluşturur."""
-    if not videos:
-        return {}
+def update_html_file(country_folder, videos):
+    """HTML dosyasını günceller"""
+    html_path = os.path.join(country_folder, "index.html")
+    
+    if not os.path.exists(html_path):
+        print(f"⚠️ {country_folder} için HTML dosyası bulunamadı!")
+        return
+    
+    try:
+        with open(html_path, 'r', encoding='utf-8') as f:
+            soup = BeautifulSoup(f, 'html.parser')
+        
+        # En çok izlenen video için iframe ekle
+        if videos:
+            top_video = max(videos, key=lambda x: x["views"])
+            
+            # Eski iframe'i temizle
+            for iframe in soup.find_all('iframe'):
+                iframe.decompose()
+            
+            # Yeni iframe ekle
+            iframe = soup.new_tag('iframe',
+                                src=top_video["embed_url"],
+                                width="560",
+                                height="315",
+                                frameborder="0",
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                                allowfullscreen="")
+            
+            # Uygun bir yere ekle (örneğin <div id="top-video">)
+            container = soup.find('div', id='top-video') or soup.new_tag('div', id='top-video')
+            container.append(iframe)
+            if not soup.find('div', id='top-video'):
+                soup.body.insert(0, container)
+        
+        # Değişiklikleri kaydet
+        with open(html_path, 'w', encoding='utf-8') as f:
+            f.write(str(soup))
+        
+        print(f"✅ {country_folder} HTML'si güncellendi")
+    
+    except Exception as e:
+        print(f"❌ {country_folder} HTML güncelleme hatası: {str(e)}")
 
-    top_videos = videos[:5] # İlk 5 videoyu al
-
-    structured_data = {
-        "@context": "http://schema.org",
-        "@type": "WebPage",
-        "name": f"Trending YouTube Videos in {country_name}",
-        "description": f"Most popular YouTube videos currently trending in {country_name}.",
-        "publisher": {
-            "@type": "Organization",
-            "name": "TopTubeList",
-            "url": "https://toptubelist.com/"
-        },
-        "mainEntity": {
-            "@type": "ItemList",
-            "itemListElement": []
-        }
-    }
-
-    for i, video in enumerate(top_videos):
-        structured_data["mainEntity"]["itemListElement"].append({
-            "@type": "ListItem",
-            "position": i + 1,
-            "item": {
-                "@type": "VideoObject",
-                "name": video["title"],
-                "description": f"Trending video from {video['channelTitle']} in {country_name}",
-                "thumbnailUrl": video["thumbnail"],
-                "uploadDate": video["uploadDate"],
-                "embedUrl": f"https://www.youtube.com/embed/{video['id']}", # Embed URL'si
-                "interactionStatistic": {
-                    "@type": "InteractionCounter",
-                    "interactionType": "http://schema.org/WatchAction",
-                    "userInteractionCount": video["views"]
-                },
-                "url": video["url"]
-            }
-        })
-    return structured_data
+def save_video_data(country_name, videos):
+    """Video verilerini JSON olarak kaydeder"""
+    os.makedirs("Country_data/videos", exist_ok=True)
+    file_path = f"Country_data/videos/videos_{country_name}.json"
+    
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(videos, f, ensure_ascii=False, indent=2)
+    
+    print(f"📁 {country_name} video verileri kaydedildi")
 
 def main():
-    # Çıkış klasörü: Country_data altına videos ve structured_data klasörleri
-    base_output_dir = "Country_data"
-    output_dir_videos = os.path.join(base_output_dir, "videos")
-    output_dir_structured_data = os.path.join(base_output_dir, "structured_data")
-
-    # Klasörleri oluştur, zaten varsa sorun değil
-    os.makedirs(output_dir_videos, exist_ok=True)
-    os.makedirs(output_dir_structured_data, exist_ok=True)
-
-    for country_folder_name, info in COUNTRY_INFO.items():
+    for country_folder, info in COUNTRY_INFO.items():
         country_code = info["code"]
-        display_name = info.get("display_name", country_folder_name.replace('_', ' '))
-
-        print(f"Fetching trending videos for {display_name} ({country_code})...")
+        print(f"\n🔍 {country_folder} işleniyor...")
+        
         try:
-            youtube_response = get_trending_videos(region_code=country_code)
+            # YouTube'dan veri çek
+            data = get_trending_videos(country_code)
+            videos = [process_video_data(item) for item in data.get("items", [])]
             
-            videos_data = [process_video_data(item) for item in youtube_response.get("items", [])]
+            if not videos:
+                print("⚠️ Hiç video bulunamadı!")
+                continue
             
-            if not videos_data: # Eğer video verisi boşsa uyarı ver
-                print(f"  --> Warning: No trending video data found for {display_name} ({country_code}) via YouTube API. Creating empty JSONs.")
+            # Verileri kaydet
+            save_video_data(country_folder, videos)
             
-            # JSON dosyalarını kaydet (Country_data/videos altına)
-            videos_output_path = os.path.join(output_dir_videos, f"videos_{country_folder_name}.json")
-            with open(videos_output_path, "w", encoding="utf-8") as f:
-                json.dump(videos_data, f, ensure_ascii=False, indent=2)
-            print(f"Saved {len(videos_data)} videos to {videos_output_path}")
-
-            # Yapılandırılmış veriyi oluştur ve kaydet (Country_data/structured_data altına)
-            structured_data = generate_structured_data(videos_data, display_name, country_code)
-            structured_data_output_path = os.path.join(output_dir_structured_data, f"structured_data_{country_folder_name}.json")
-            with open(structured_data_output_path, "w", encoding="utf-8") as f:
-                json.dump(structured_data, f, ensure_ascii=False, indent=2)
-            print(f"Generated structured data to {structured_data_output_path}")
-
+            # HTML'yi güncelle
+            update_html_file(country_folder, videos)
+            
         except requests.exceptions.RequestException as e:
-            # API ile ilgili bir hata (403 Forbidden, 400 Bad Request vb.)
-            print(f"  --> Error fetching data for {display_name} ({country_code}): {e}")
-            # Hata durumunda da boş JSON dosyaları oluşturmak, generate_country_html.py'nin çökmesini engeller
-            empty_videos_data = []
-            empty_structured_data = {}
-            
-            videos_output_path = os.path.join(output_dir_videos, f"videos_{country_folder_name}.json")
-            with open(videos_output_path, "w", encoding="utf-8") as f:
-                json.dump(empty_videos_data, f, ensure_ascii=False, indent=2)
-            print(f"  --> Created empty videos JSON for {display_name} due to API error.")
-
-            structured_data_output_path = os.path.join(output_dir_structured_data, f"structured_data_{country_folder_name}.json")
-            with open(structured_data_output_path, "w", encoding="utf-8") as f:
-                json.dump(empty_structured_data, f, ensure_ascii=False, indent=2)
-            print(f"  --> Created empty structured data JSON for {display_name} due to API error.")
-
+            print(f"❌ YouTube API hatası: {str(e)}")
         except Exception as e:
-            # Diğer beklenmeyen hatalar
-            print(f"  --> An unexpected error occurred for {display_name} ({country_code}): {e}")
-            # Beklenmeyen hata durumunda da boş JSON dosyaları oluştur
-            empty_videos_data = []
-            empty_structured_data = {}
-            
-            videos_output_path = os.path.join(output_dir_videos, f"videos_{country_folder_name}.json")
-            with open(videos_output_path, "w", encoding="utf-8") as f:
-                json.dump(empty_videos_data, f, ensure_ascii=False, indent=2)
-            print(f"  --> Created empty videos JSON for {display_name} due to unexpected error.")
-
-            structured_data_output_path = os.path.join(output_dir_structured_data, f"structured_data_{country_folder_name}.json")
-            with open(structured_data_output_path, "w", encoding="utf-8") as f:
-                json.dump(empty_structured_data, f, ensure_ascii=False, indent=2)
-            print(f"  --> Created empty structured data JSON for {display_name} due to unexpected error.")
-
+            print(f"❌ Beklenmeyen hata: {str(e)}")
 
 if __name__ == "__main__":
     main()
