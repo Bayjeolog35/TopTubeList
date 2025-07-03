@@ -198,27 +198,3 @@ COUNTRY-INFO = {
     "zambia": {"code": "zm"},
     "zimbabwe": {"code": "zw"}
 }
-
-# kıta bazlı ülke listeleri (apı'dan veri çekiminde kıta yerine ülke kodu kullanılacak)
-# bu sadece navbarda veya listelemede kıta isimlerini kullanmak için bir mantıksal gruplama.
-# apı isteği her zaman ülke kodu üzerinden yapılacaktır.
-CONTINENT-COUNTRIES = {
-    "asia": [
-        "afghanistan", "armenia", "azerbaijan", "bahrain", "bangladesh", "bhutan", "brunei", "cambodia", "china", "cyprus", "east-timor", "georgia", "ındia", "ındonesia", "ıran", "ıraq", "ısrael", "japan", "jordan", "kazakhstan", "kiribati", "korea-north", "korea-south", "kuwait", "kyrgyzstan", "laos", "lebanon", "malaysia", "maldives", "mongolia", "myanmar", "nepal", "oman", "pakistan", "palestine", "philippines", "qatar", "saudi-arabia", "singapore", "sri-lanka", "syria", "taiwan", "tajikistan", "thailand", "turkey", "turkmenistan", "united-arab-emirates", "uzbekistan", "vietnam", "yemen"
-    ],
-    "europe": [
-        "albania", "andorra", "austria", "belarus", "belgium", "bosnia-and-herzegovina", "bulgaria", "croatia", "czech-republic", "denmark", "estonia", "finland", "france", "germany", "greece", "hungary", "ıceland", "ıreland", "ıtaly", "kosovo", "latvia", "liechtenstein", "lithuania", "luxembourg", "malta", "moldova", "monaco", "montenegro", "netherlands", "north-macedonia", "norway", "poland", "portugal", "romania", "russia", "san-marino", "serbia", "slovakia", "slovenia", "spain", "sweden", "switzerland", "ukraine", "united-kingdom", "vatican-city"
-    ],
-    "africa": [
-        "algeria", "angola", "benin", "botswana", "burkina-faso", "burundi", "cabo-verde", "cameroon", "central-african-republic", "chad", "comoros", "congo-democratic-republicofthe", "congo-republic-of-the", "cote-dıvoire", "djibouti", "egypt", "equatorial-guinea", "eritrea", "eswatini", "ethiopia", "gabon", "gambia", "ghana", "guinea", "guinea-bissau", "kenya", "lesotho", "liberia", "libya", "madagascar", "malawi", "mali", "mauritania", "mauritius", "morocco", "mozambique", "namibia", "niger", "nigeria", "rwanda", "sao-tome-and-principe", "senegal", "seychelles", "sierra-leone", "somalia", "south-africa", "south-sudan", "sudan", "tanzania", "togo", "tunisia", "uganda", "zambia", "zimbabwe"
-    ],
-    "north-america": [
-        "antigua-and-barbuda", "bahamas", "barbados", "belize", "canada", "costa-rica", "cuba", "dominica", "dominican-republic", "elsalvador", "grenada", "guatemala", "haiti", "honduras", "jamaica", "mexico", "nicaragua", "panama", "saint-kitts-and-nevis", "saint-lucia", "saint-vincent-and-the-grenadines", "trinidad-and-tobago", "united-states"
-    ],
-    "south-america": [
-        "argentina", "bolivia", "brazil", "chile", "colombia", "ecuador", "guyana", "paraguay", "peru", "suriname", "uruguay", "venezuela"
-    ],
-    "oceania": [
-        "australia", "fiji", "kiribati", "marshall-ıslands", "micronesia", "nauru", "new-zealand", "palau", "papua-new-guinea", "samoa", "solomon-ıslands", "tonga", "tuvalu", "vanuatu"
-    ]
-}
