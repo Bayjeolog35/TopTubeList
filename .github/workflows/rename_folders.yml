@@ -1,28 +1,23 @@
-name: Rename Country Folders Once
+import os
+import shutil
+from country_data import COUNTRY_INFO
 
-on:
-  workflow_dispatch:  # Manuel çalıştırma
+def rename_folders():
+    for country_folder, info in COUNTRY_INFO.items():
+        display_name = info.get("display_name", country_folder.replace('_', ' '))
+        
+        # Eski ve yeni klasör yolları (küçük harf ve boşlukları tireye çevirme)
+        old_path = os.path.join(os.getcwd(), country_folder)
+        new_folder_name = display_name.lower().replace(' ', '-')
+        new_path = os.path.join(os.getcwd(), new_folder_name)
+        
+        if os.path.exists(old_path):
+            # Klasörü yeniden adlandır
+            shutil.move(old_path, new_path)
+            print(f"Renamed: {country_folder} → {new_folder_name}")
+        else:
+            print(f"Folder not found: {country_folder}, creating new...")
+            os.makedirs(new_path, exist_ok=True)
 
-jobs:
-  run-script:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-
-      - name: Run Python script
-        run: python rename_folders_to_country_names.py
-
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "🗂 Rename country folders to full names"
-          git push
+if __name__ == "__main__":
+    rename_folders()
