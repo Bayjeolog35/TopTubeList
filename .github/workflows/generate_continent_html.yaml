@@ -1,0 +1,56 @@
+name: Generate continent
+on:
+  push:
+    branches:
+      - main # main branch'ine her push yapıldığında bu workflow çalışacak
+  workflow_dispatch: # GitHub Actions arayüzünden manuel olarak da tetiklenebilir
+  schedule:
+    - cron: '0 */3 * * *' # Her 3 saatte bir çalıştır (örn: 00:00, 03:00, 06:00 UTC)
+                           # Not: Minimum zamanlama genellikle 5 dakikadır.
+                           # Bu 3 saatlik aralık, YouTube API çekim sıklığınıza uygun olabilir.
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # İş akışını çalıştıracak işletim sistemi
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4 # Deponuzu sunucuya çeker
+
+    - name: Set up Python
+      uses: actions/setup-python@v5 # Python ortamını kurar
+      with:
+        python-version: '3.x' # Kullandığınız Python sürümünü buraya yazın (örn: '3.9', '3.10', '3.11')
+
+    - name: Install Python dependencies (if any)
+      run: |
+        python -m pip install --upgrade pip
+        # Eğer varsa, bağımlılıklarınızı buraya yükleyin.
+        # Örneğin: pip install requests beautifulsoup4
+        # Eğer bir requirements.txt dosyanız varsa:
+        # pip install -r requirements.txt
+
+    - name: Run Python script to generate HTML
+      run: |
+        # Python betiğinizin adını buraya yazın.
+        # Örneğin: python generate_site.py
+        # Veya doğrudan ana fonksiyonu çağıran komutu:
+        python -c "from your_script_name import main; main()" 
+        # (your_script_name.py dosyanızın adı)
+        # Eğer betiğiniz zaten çalıştırıldığında gerekli her şeyi yapıyorsa:
+        # python your_script_name.py
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'github-actions[bot]' # Otomatik commit yapan botun adı
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com' # Botun email'i
+
+        git add . # Tüm değişen dosyaları (yeni HTML'ler, JSON'lar vb.) stage'e ekle
+        
+        # Sadece değişiklikler varsa commit yap
+        git diff-index --quiet HEAD || git commit -m "Automated build: Generate and update site files"
+
+        # Değişiklikleri ana branch'e geri push et
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub tarafından otomatik sağlanan token
