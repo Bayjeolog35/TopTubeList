@@ -1,23 +1,37 @@
-import os
-import shutil
-from country_data import COUNTRY_INFO
+name: Standardize Country Folders
 
-def rename_folders():
-    for country_folder, info in COUNTRY_INFO.items():
-        display_name = info.get("display_name", country_folder.replace('_', ' '))
-        
-        # Eski ve yeni klasör yolları (küçük harf ve boşlukları tireye çevirme)
-        old_path = os.path.join(os.getcwd(), country_folder)
-        new_folder_name = display_name.lower().replace(' ', '-')
-        new_path = os.path.join(os.getcwd(), new_folder_name)
-        
-        if os.path.exists(old_path):
-            # Klasörü yeniden adlandır
-            shutil.move(old_path, new_path)
-            print(f"Renamed: {country_folder} → {new_folder_name}")
-        else:
-            print(f"Folder not found: {country_folder}, creating new...")
-            os.makedirs(new_path, exist_ok=True)
+on:
+  workflow_dispatch:  # Manuel çalıştırma için
+  push:
+    branches: [ main ]
+    paths: [ 'country_data.py' ]  # Ülke verileri değişirse tetikle
 
-if __name__ == "__main__":
-    rename_folders()
+jobs:
+  standardize-folders:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Rename folders to lowercase
+        run: python rename_folders_to_country_names.py
+
+      - name: Commit changes
+        if: success()
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "🗂 Standardize country folders to lowercase"
+          git push
