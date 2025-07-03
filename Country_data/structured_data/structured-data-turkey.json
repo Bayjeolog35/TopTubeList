@@ -1,106 +1,852 @@
-{
-  "@context": "http://schema.org",
-  "@type": "WebPage",
-  "name": "Trending YouTube Videos in Turkey",
-  "description": "Most popular YouTube videos currently trending in Turkey.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "TopTubeList",
-    "url": "https://toptubelist.com/"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Abi Terörümsü",
+    "description": "Abi Terörümsü",
+    "thumbnailUrl": "https://i.ytimg.com/vi/depyhsQZXLM/hqdefault.jpg",
+    "uploadDate": "2025-07-02T17:06:15Z",
+    "embedUrl": "https://youtube.com/embed/depyhsQZXLM",
+    "url": "https://youtube.com/watch?v=depyhsQZXLM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1605197
+    }
   },
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Abi Terörümsü",
-          "description": "Trending video from uberkuloz in Turkey",
-          "thumbnailUrl": "https://i.ytimg.com/vi/depyhsQZXLM/hqdefault.jpg",
-          "uploadDate": "2025-07-02T17:06:15Z",
-          "embedUrl": "https://www.youtube.com/embed/depyhsQZXLM",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1243519
-          },
-          "url": "https://www.youtube.com/watch?v=depyhsQZXLM"
-        }
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "DERİN TALU ile SEMT TURU",
+    "description": "DERİN TALU ile SEMT TURU",
+    "thumbnailUrl": "https://i.ytimg.com/vi/0T-168yilZ8/hqdefault.jpg",
+    "uploadDate": "2025-07-02T15:02:05Z",
+    "embedUrl": "https://youtube.com/embed/0T-168yilZ8",
+    "url": "https://youtube.com/watch?v=0T-168yilZ8",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "DERİN TALU ile SEMT TURU",
-          "description": "Trending video from İbrahim Tilaver in Turkey",
-          "thumbnailUrl": "https://i.ytimg.com/vi/0T-168yilZ8/hqdefault.jpg",
-          "uploadDate": "2025-07-02T15:02:05Z",
-          "embedUrl": "https://www.youtube.com/embed/0T-168yilZ8",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1609304
-          },
-          "url": "https://www.youtube.com/watch?v=0T-168yilZ8"
-        }
+      "userInteractionCount": 2037782
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "How Much Money Can You Make Collecting Trolleys in the Airport?",
+    "description": "How Much Money Can You Make Collecting Trolleys in the Airport?",
+    "thumbnailUrl": "https://i.ytimg.com/vi/g0Ygas1Nj9U/hqdefault.jpg",
+    "uploadDate": "2025-07-02T15:02:00Z",
+    "embedUrl": "https://youtube.com/embed/g0Ygas1Nj9U",
+    "url": "https://youtube.com/watch?v=g0Ygas1Nj9U",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "How Much Money Can You Make Collecting Trolleys in the Airport?",
-          "description": "Trending video from The Richey Family in Turkey",
-          "thumbnailUrl": "https://i.ytimg.com/vi/g0Ygas1Nj9U/hqdefault.jpg",
-          "uploadDate": "2025-07-02T15:02:00Z",
-          "embedUrl": "https://www.youtube.com/embed/g0Ygas1Nj9U",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 8219594
-          },
-          "url": "https://www.youtube.com/watch?v=g0Ygas1Nj9U"
-        }
+      "userInteractionCount": 12593518
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Who was faster? 😳😱 @isabellaafro",
+    "description": "Who was faster? 😳😱 @isabellaafro",
+    "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
+    "uploadDate": "2025-06-29T11:30:33Z",
+    "embedUrl": "https://youtube.com/embed/SOATZrBeGEk",
+    "url": "https://youtube.com/watch?v=SOATZrBeGEk",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Who was faster? 😳😱 @isabellaafro",
-          "description": "Trending video from Jaymondy in Turkey",
-          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
-          "uploadDate": "2025-06-29T11:30:33Z",
-          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 117410640
-          },
-          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
-        }
+      "userInteractionCount": 125928393
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Repeat The Trick or Swim 🥶💦",
+    "description": "Repeat The Trick or Swim 🥶💦",
+    "thumbnailUrl": "https://i.ytimg.com/vi/aHrK586PVeI/hqdefault.jpg",
+    "uploadDate": "2025-07-01T15:00:02Z",
+    "embedUrl": "https://youtube.com/embed/aHrK586PVeI",
+    "url": "https://youtube.com/watch?v=aHrK586PVeI",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Repeat The Trick or Swim 🥶💦",
-          "description": "Trending video from Celine Dept in Turkey",
-          "thumbnailUrl": "https://i.ytimg.com/vi/aHrK586PVeI/hqdefault.jpg",
-          "uploadDate": "2025-07-01T15:00:02Z",
-          "embedUrl": "https://www.youtube.com/embed/aHrK586PVeI",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 27161342
-          },
-          "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
-        }
-      }
-    ]
+      "userInteractionCount": 30471151
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Ablamın Düğünü Hazırlık Vlog!!",
+    "description": "Ablamın Düğünü Hazırlık Vlog!!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/pWkW3lxPSuY/hqdefault.jpg",
+    "uploadDate": "2025-07-03T07:24:12Z",
+    "embedUrl": "https://youtube.com/embed/pWkW3lxPSuY",
+    "url": "https://youtube.com/watch?v=pWkW3lxPSuY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 423465
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "$1 vs $1000 Nerf Gun!",
+    "description": "$1 vs $1000 Nerf Gun!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/am_Rb1QZzxs/hqdefault.jpg",
+    "uploadDate": "2025-07-01T20:00:03Z",
+    "embedUrl": "https://youtube.com/embed/am_Rb1QZzxs",
+    "url": "https://youtube.com/watch?v=am_Rb1QZzxs",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 7764318
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Taşınabilir Traş Makinesi Denedim",
+    "description": "Taşınabilir Traş Makinesi Denedim",
+    "thumbnailUrl": "https://i.ytimg.com/vi/yggnDM0FtaU/hqdefault.jpg",
+    "uploadDate": "2025-07-02T15:19:06Z",
+    "embedUrl": "https://youtube.com/embed/yggnDM0FtaU",
+    "url": "https://youtube.com/watch?v=yggnDM0FtaU",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 900232
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Perfect cropped shirt hack 💛 What do you think? Comment below 🤭",
+    "description": "Perfect cropped shirt hack 💛 What do you think? Comment below 🤭",
+    "thumbnailUrl": "https://i.ytimg.com/vi/nq8aKBH8lQ0/hqdefault.jpg",
+    "uploadDate": "2025-07-02T16:02:13Z",
+    "embedUrl": "https://youtube.com/embed/nq8aKBH8lQ0",
+    "url": "https://youtube.com/watch?v=nq8aKBH8lQ0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 9760118
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Ablamın Düğününe Kombinlerimiz🤭",
+    "description": "Ablamın Düğününe Kombinlerimiz🤭",
+    "thumbnailUrl": "https://i.ytimg.com/vi/D7AIBDbzumI/hqdefault.jpg",
+    "uploadDate": "2025-06-30T08:34:56Z",
+    "embedUrl": "https://youtube.com/embed/D7AIBDbzumI",
+    "url": "https://youtube.com/watch?v=D7AIBDbzumI",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1711241
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "How Dalgona Candy Is Made",
+    "description": "How Dalgona Candy Is Made",
+    "thumbnailUrl": "https://i.ytimg.com/vi/K56O5RdE3KM/hqdefault.jpg",
+    "uploadDate": "2025-07-01T16:00:36Z",
+    "embedUrl": "https://youtube.com/embed/K56O5RdE3KM",
+    "url": "https://youtube.com/watch?v=K56O5RdE3KM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 12728745
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Pelin Karahan, ‘Ölsem Yapmam’ Dediği Alışkanlığını İtiraf Etti! #shorts #bambaşkasohbetler",
+    "description": "Pelin Karahan, ‘Ölsem Yapmam’ Dediği Alışkanlığını İtiraf Etti! #shorts #bambaşkasohbetler",
+    "thumbnailUrl": "https://i.ytimg.com/vi/7pVbnjx_fDA/hqdefault.jpg",
+    "uploadDate": "2025-07-01T18:00:08Z",
+    "embedUrl": "https://youtube.com/embed/7pVbnjx_fDA",
+    "url": "https://youtube.com/watch?v=7pVbnjx_fDA",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 514983
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "骗娃吃药的n种套路 ，和我想象的有点不一样啊 #宝爸带娃#人类幼崽",
+    "description": "骗娃吃药的n种套路 ，和我想象的有点不一样啊 #宝爸带娃#人类幼崽",
+    "thumbnailUrl": "https://i.ytimg.com/vi/CTEnk_4PjlI/hqdefault.jpg",
+    "uploadDate": "2025-07-01T10:00:31Z",
+    "embedUrl": "https://youtube.com/embed/CTEnk_4PjlI",
+    "url": "https://youtube.com/watch?v=CTEnk_4PjlI",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 8929775
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Ramiz Dayı Yerine Ezel'e Devrediyor #ezel #ramizkaraeski #shorts #short",
+    "description": "Ramiz Dayı Yerine Ezel'e Devrediyor #ezel #ramizkaraeski #shorts #short",
+    "thumbnailUrl": "https://i.ytimg.com/vi/JbMIL5pPr28/hqdefault.jpg",
+    "uploadDate": "2025-07-02T15:30:09Z",
+    "embedUrl": "https://youtube.com/embed/JbMIL5pPr28",
+    "url": "https://youtube.com/watch?v=JbMIL5pPr28",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 182913
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "这也太厉害了 #火影忍者 #joker#cosplay",
+    "description": "这也太厉害了 #火影忍者 #joker#cosplay",
+    "thumbnailUrl": "https://i.ytimg.com/vi/YFXS0F2IxmM/hqdefault.jpg",
+    "uploadDate": "2025-06-29T04:00:41Z",
+    "embedUrl": "https://youtube.com/embed/YFXS0F2IxmM",
+    "url": "https://youtube.com/watch?v=YFXS0F2IxmM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 54505137
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Who's clever now?😳😂 @isabellaafro",
+    "description": "Who's clever now?😳😂 @isabellaafro",
+    "thumbnailUrl": "https://i.ytimg.com/vi/-Wli1tM-EPw/hqdefault.jpg",
+    "uploadDate": "2025-06-30T14:15:01Z",
+    "embedUrl": "https://youtube.com/embed/-Wli1tM-EPw",
+    "url": "https://youtube.com/watch?v=-Wli1tM-EPw",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 33625373
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "İNTERNET SAYESİNDE GEÇİNEN ÜLKE..?",
+    "description": "İNTERNET SAYESİNDE GEÇİNEN ÜLKE..?",
+    "thumbnailUrl": "https://i.ytimg.com/vi/wsoMGEwyF8M/hqdefault.jpg",
+    "uploadDate": "2025-06-30T15:05:11Z",
+    "embedUrl": "https://youtube.com/embed/wsoMGEwyF8M",
+    "url": "https://youtube.com/watch?v=wsoMGEwyF8M",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1116604
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "MAÇ İZLERKEN KADINLAR",
+    "description": "MAÇ İZLERKEN KADINLAR",
+    "thumbnailUrl": "https://i.ytimg.com/vi/UWvaty7IKsI/hqdefault.jpg",
+    "uploadDate": "2025-06-29T13:15:16Z",
+    "embedUrl": "https://youtube.com/embed/UWvaty7IKsI",
+    "url": "https://youtube.com/watch?v=UWvaty7IKsI",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1648520
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "The Coldest Village on Earth (10 minutes outside = Death) -71°C, -96°F",
+    "description": "The Coldest Village on Earth (10 minutes outside = Death) -71°C, -96°F",
+    "thumbnailUrl": "https://i.ytimg.com/vi/2C8zYFArnKY/hqdefault.jpg",
+    "uploadDate": "2025-06-29T19:44:29Z",
+    "embedUrl": "https://youtube.com/embed/2C8zYFArnKY",
+    "url": "https://youtube.com/watch?v=2C8zYFArnKY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 17799327
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Popcorn Cappuccino Assassino #shorts #YuliaBely",
+    "description": "Popcorn Cappuccino Assassino #shorts #YuliaBely",
+    "thumbnailUrl": "https://i.ytimg.com/vi/0sVulnx4RLs/hqdefault.jpg",
+    "uploadDate": "2025-06-30T23:15:01Z",
+    "embedUrl": "https://youtube.com/embed/0sVulnx4RLs",
+    "url": "https://youtube.com/watch?v=0sVulnx4RLs",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 6200334
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "JAPON TURBU TURŞUSUNU BU KEZ JAPONYA'DA DENEDİM! ucretsiz reklam #shorts #summeronshorts",
+    "description": "JAPON TURBU TURŞUSUNU BU KEZ JAPONYA'DA DENEDİM! ucretsiz reklam #shorts #summeronshorts",
+    "thumbnailUrl": "https://i.ytimg.com/vi/my8iWQce5Fs/hqdefault.jpg",
+    "uploadDate": "2025-06-29T13:41:24Z",
+    "embedUrl": "https://youtube.com/embed/my8iWQce5Fs",
+    "url": "https://youtube.com/watch?v=my8iWQce5Fs",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1048916
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Fenerbahçe'mizin Yeni Sezon Forma Lansmanı",
+    "description": "Fenerbahçe'mizin Yeni Sezon Forma Lansmanı",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Dk3Bky7LBjY/hqdefault.jpg",
+    "uploadDate": "2025-07-01T20:30:42Z",
+    "embedUrl": "https://youtube.com/embed/Dk3Bky7LBjY",
+    "url": "https://youtube.com/watch?v=Dk3Bky7LBjY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 513113
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "$500 Water vs $1 Water – Blind Taste Test!",
+    "description": "$500 Water vs $1 Water – Blind Taste Test!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/IjCJ3P7SL9M/hqdefault.jpg",
+    "uploadDate": "2025-06-27T15:02:00Z",
+    "embedUrl": "https://youtube.com/embed/IjCJ3P7SL9M",
+    "url": "https://youtube.com/watch?v=IjCJ3P7SL9M",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 73690793
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "\"Zengin keli diye bir şey var.\"  🤯“Yardımcı Oyuncu”, bu hafta içi her gün 20.00’de @trt1'de! 💚",
+    "description": "\"Zengin keli diye bir şey var.\"  🤯“Yardımcı Oyuncu”, bu hafta içi her gün 20.00’de @trt1'de! 💚",
+    "thumbnailUrl": "https://i.ytimg.com/vi/k_LgGg9oMWA/hqdefault.jpg",
+    "uploadDate": "2025-07-01T15:20:00Z",
+    "embedUrl": "https://youtube.com/embed/k_LgGg9oMWA",
+    "url": "https://youtube.com/watch?v=k_LgGg9oMWA",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 353656
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Women VS Men 👩🏻👨🏻 wrapping presents #elsarca #tiktok",
+    "description": "Women VS Men 👩🏻👨🏻 wrapping presents #elsarca #tiktok",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Ifqt-6mTvl8/hqdefault.jpg",
+    "uploadDate": "2025-06-28T08:09:49Z",
+    "embedUrl": "https://youtube.com/embed/Ifqt-6mTvl8",
+    "url": "https://youtube.com/watch?v=Ifqt-6mTvl8",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 19861770
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "BÖYLE VLOG OLMAZ DAYI MISIN? - Hamza 1 aydır uğraşıyor",
+    "description": "BÖYLE VLOG OLMAZ DAYI MISIN? - Hamza 1 aydır uğraşıyor",
+    "thumbnailUrl": "https://i.ytimg.com/vi/_IxaqHno75w/hqdefault.jpg",
+    "uploadDate": "2025-06-30T13:00:59Z",
+    "embedUrl": "https://youtube.com/embed/_IxaqHno75w",
+    "url": "https://youtube.com/watch?v=_IxaqHno75w",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 945475
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "KENDİMİN FİGÜRÜNÜ YAPTIRDIM!! 🤯 #emreuzunboy #figure #unboxing #shorts",
+    "description": "KENDİMİN FİGÜRÜNÜ YAPTIRDIM!! 🤯 #emreuzunboy #figure #unboxing #shorts",
+    "thumbnailUrl": "https://i.ytimg.com/vi/a2GeX6SODc8/hqdefault.jpg",
+    "uploadDate": "2025-06-27T15:30:00Z",
+    "embedUrl": "https://youtube.com/embed/a2GeX6SODc8",
+    "url": "https://youtube.com/watch?v=a2GeX6SODc8",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 2539631
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "CALENDARIO DE JUEGOS RETRO !!",
+    "description": "CALENDARIO DE JUEGOS RETRO !!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/a8fBye4BgMM/hqdefault.jpg",
+    "uploadDate": "2025-06-23T19:00:00Z",
+    "embedUrl": "https://youtube.com/embed/a8fBye4BgMM",
+    "url": "https://youtube.com/watch?v=a8fBye4BgMM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 4575178
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "kendi kendine şüphe",
+    "description": "kendi kendine şüphe",
+    "thumbnailUrl": "https://i.ytimg.com/vi/MNWjEElB2Qo/hqdefault.jpg",
+    "uploadDate": "2025-06-30T15:28:00Z",
+    "embedUrl": "https://youtube.com/embed/MNWjEElB2Qo",
+    "url": "https://youtube.com/watch?v=MNWjEElB2Qo",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 399977
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Cool Items!🥰 New Gadgets, Smart Appliances, Kitchen Tools Utensils, Home Cleaning, Beauty #shorts",
+    "description": "Cool Items!🥰 New Gadgets, Smart Appliances, Kitchen Tools Utensils, Home Cleaning, Beauty #shorts",
+    "thumbnailUrl": "https://i.ytimg.com/vi/94u9RkfU1Ac/hqdefault.jpg",
+    "uploadDate": "2025-06-27T11:00:14Z",
+    "embedUrl": "https://youtube.com/embed/94u9RkfU1Ac",
+    "url": "https://youtube.com/watch?v=94u9RkfU1Ac",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 56350734
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "CALENDARIO MISTERIOSO GRAVITY FALLS !!",
+    "description": "CALENDARIO MISTERIOSO GRAVITY FALLS !!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/nRbQdrkjNJ0/hqdefault.jpg",
+    "uploadDate": "2025-06-11T21:39:58Z",
+    "embedUrl": "https://youtube.com/embed/nRbQdrkjNJ0",
+    "url": "https://youtube.com/watch?v=nRbQdrkjNJ0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 10832963
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Tammy Abraham ve Jhon Duran Özel Yayını | Duble Canlı Uçak Takip",
+    "description": "Tammy Abraham ve Jhon Duran Özel Yayını | Duble Canlı Uçak Takip",
+    "thumbnailUrl": "https://i.ytimg.com/vi/GeWvCFSEz0k/hqdefault.jpg",
+    "uploadDate": "2025-07-01T16:23:19Z",
+    "embedUrl": "https://youtube.com/embed/GeWvCFSEz0k",
+    "url": "https://youtube.com/watch?v=GeWvCFSEz0k",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 613771
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "BODRUM VLOG w/ @blok3real.",
+    "description": "BODRUM VLOG w/ @blok3real.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/8bnPIrN-NWk/hqdefault.jpg",
+    "uploadDate": "2025-06-28T15:00:22Z",
+    "embedUrl": "https://youtube.com/embed/8bnPIrN-NWk",
+    "url": "https://youtube.com/watch?v=8bnPIrN-NWk",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 2556410
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "SQUID GAME 3 - ELEŞTİREL PARODİ",
+    "description": "SQUID GAME 3 - ELEŞTİREL PARODİ",
+    "thumbnailUrl": "https://i.ytimg.com/vi/pt0h-Y_1PKY/hqdefault.jpg",
+    "uploadDate": "2025-06-30T13:01:38Z",
+    "embedUrl": "https://youtube.com/embed/pt0h-Y_1PKY",
+    "url": "https://youtube.com/watch?v=pt0h-Y_1PKY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 879629
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Yetim çocuğu tehdit etti!😤 - Eve Dönüş #shorts #evedönüş",
+    "description": "Yetim çocuğu tehdit etti!😤 - Eve Dönüş #shorts #evedönüş",
+    "thumbnailUrl": "https://i.ytimg.com/vi/OpWiUYxCCx0/hqdefault.jpg",
+    "uploadDate": "2025-06-29T12:00:44Z",
+    "embedUrl": "https://youtube.com/embed/OpWiUYxCCx0",
+    "url": "https://youtube.com/watch?v=OpWiUYxCCx0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1020498
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Sezen Aksu - Ey Aşk [Official Audio]",
+    "description": "Sezen Aksu - Ey Aşk [Official Audio]",
+    "thumbnailUrl": "https://i.ytimg.com/vi/rYJjgfCfBOU/hqdefault.jpg",
+    "uploadDate": "2025-06-26T21:01:03Z",
+    "embedUrl": "https://youtube.com/embed/rYJjgfCfBOU",
+    "url": "https://youtube.com/watch?v=rYJjgfCfBOU",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 3014757
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Norm Ender X Ebru Gündeş - Bir Çift Göz",
+    "description": "Norm Ender X Ebru Gündeş - Bir Çift Göz",
+    "thumbnailUrl": "https://i.ytimg.com/vi/qDxfNmR95dM/hqdefault.jpg",
+    "uploadDate": "2025-06-26T22:15:07Z",
+    "embedUrl": "https://youtube.com/embed/qDxfNmR95dM",
+    "url": "https://youtube.com/watch?v=qDxfNmR95dM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 6540454
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Which Shoes Will Protect Your Feet?",
+    "description": "Which Shoes Will Protect Your Feet?",
+    "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
+    "uploadDate": "2025-06-24T21:50:02Z",
+    "embedUrl": "https://youtube.com/embed/nj6W9v6yjFk",
+    "url": "https://youtube.com/watch?v=nj6W9v6yjFk",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 129239928
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "How to make your ex jealous 🫢 #elsarca #tiktok",
+    "description": "How to make your ex jealous 🫢 #elsarca #tiktok",
+    "thumbnailUrl": "https://i.ytimg.com/vi/C3vWz_VCtVI/hqdefault.jpg",
+    "uploadDate": "2025-06-29T03:56:52Z",
+    "embedUrl": "https://youtube.com/embed/C3vWz_VCtVI",
+    "url": "https://youtube.com/watch?v=C3vWz_VCtVI",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 17435748
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Benden Sonra - (Akustik) Zeynep Bastık & Rıza Tamer",
+    "description": "Benden Sonra - (Akustik) Zeynep Bastık & Rıza Tamer",
+    "thumbnailUrl": "https://i.ytimg.com/vi/yFHDtmWl-Bc/hqdefault.jpg",
+    "uploadDate": "2025-06-24T15:00:52Z",
+    "embedUrl": "https://youtube.com/embed/yFHDtmWl-Bc",
+    "url": "https://youtube.com/watch?v=yFHDtmWl-Bc",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 10211692
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "ITALIAN BRAINROT GETTING ON THE SCHOOL BUS!",
+    "description": "ITALIAN BRAINROT GETTING ON THE SCHOOL BUS!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/LWxeJkepuEQ/hqdefault.jpg",
+    "uploadDate": "2025-06-28T17:32:21Z",
+    "embedUrl": "https://youtube.com/embed/LWxeJkepuEQ",
+    "url": "https://youtube.com/watch?v=LWxeJkepuEQ",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 22028910
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Ilia Topuria Knocks Out Charles Oliveira 👊 | UFC 317",
+    "description": "Ilia Topuria Knocks Out Charles Oliveira 👊 | UFC 317",
+    "thumbnailUrl": "https://i.ytimg.com/vi/kpnoibF4eNg/hqdefault.jpg",
+    "uploadDate": "2025-06-29T05:14:05Z",
+    "embedUrl": "https://youtube.com/embed/kpnoibF4eNg",
+    "url": "https://youtube.com/watch?v=kpnoibF4eNg",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 13255448
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Ben Bir Garip Keloğlanım... #çgh2 #bkm #komedi #çokgüzelhareketler2",
+    "description": "Ben Bir Garip Keloğlanım... #çgh2 #bkm #komedi #çokgüzelhareketler2",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Dt-LfWqUtuA/hqdefault.jpg",
+    "uploadDate": "2025-06-27T16:30:05Z",
+    "embedUrl": "https://youtube.com/embed/Dt-LfWqUtuA",
+    "url": "https://youtube.com/watch?v=Dt-LfWqUtuA",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 2109259
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "If You Spill, You Lose!",
+    "description": "If You Spill, You Lose!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/gGcaGdHlt60/hqdefault.jpg",
+    "uploadDate": "2025-06-25T17:00:08Z",
+    "embedUrl": "https://youtube.com/embed/gGcaGdHlt60",
+    "url": "https://youtube.com/watch?v=gGcaGdHlt60",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 103315259
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Gamze Karta & Uzunmakarna - Geçmişe Dair",
+    "description": "Gamze Karta & Uzunmakarna - Geçmişe Dair",
+    "thumbnailUrl": "https://i.ytimg.com/vi/_NFoWt9Gusg/hqdefault.jpg",
+    "uploadDate": "2025-06-28T12:00:07Z",
+    "embedUrl": "https://youtube.com/embed/_NFoWt9Gusg",
+    "url": "https://youtube.com/watch?v=_NFoWt9Gusg",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1152536
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "How Far Can You Fall?",
+    "description": "How Far Can You Fall?",
+    "thumbnailUrl": "https://i.ytimg.com/vi/bg4gBgU7rmI/hqdefault.jpg",
+    "uploadDate": "2025-06-26T19:04:34Z",
+    "embedUrl": "https://youtube.com/embed/bg4gBgU7rmI",
+    "url": "https://youtube.com/watch?v=bg4gBgU7rmI",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 19267425
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "iPhone battery 🔋🪫#elsarca #tiktok",
+    "description": "iPhone battery 🔋🪫#elsarca #tiktok",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Zwv6ye9bLqA/hqdefault.jpg",
+    "uploadDate": "2025-06-27T02:12:51Z",
+    "embedUrl": "https://youtube.com/embed/Zwv6ye9bLqA",
+    "url": "https://youtube.com/watch?v=Zwv6ye9bLqA",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 18232141
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Sizden daha iyi bir futbolcu?",
+    "description": "Sizden daha iyi bir futbolcu?",
+    "thumbnailUrl": "https://i.ytimg.com/vi/qPF8mGAjAtU/hqdefault.jpg",
+    "uploadDate": "2025-06-24T16:26:01Z",
+    "embedUrl": "https://youtube.com/embed/qPF8mGAjAtU",
+    "url": "https://youtube.com/watch?v=qPF8mGAjAtU",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 3924013
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Ablamın Düğününe Elbise Buluyoruz!!",
+    "description": "Ablamın Düğününe Elbise Buluyoruz!!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/s0BXHQVYVc0/hqdefault.jpg",
+    "uploadDate": "2025-06-26T07:53:19Z",
+    "embedUrl": "https://youtube.com/embed/s0BXHQVYVc0",
+    "url": "https://youtube.com/watch?v=s0BXHQVYVc0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1495494
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Bizim Yirmi Senelik Maaş Alır mı Bundan Bir Tane!  #EzelBayraktar #Kenanİmirzalıoğlu #Ezel #shorts",
+    "description": "Bizim Yirmi Senelik Maaş Alır mı Bundan Bir Tane!  #EzelBayraktar #Kenanİmirzalıoğlu #Ezel #shorts",
+    "thumbnailUrl": "https://i.ytimg.com/vi/MeI9PtrBIRU/hqdefault.jpg",
+    "uploadDate": "2025-06-25T17:00:24Z",
+    "embedUrl": "https://youtube.com/embed/MeI9PtrBIRU",
+    "url": "https://youtube.com/watch?v=MeI9PtrBIRU",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1610506
+    }
   }
-}
+]

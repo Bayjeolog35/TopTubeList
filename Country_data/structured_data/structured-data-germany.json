@@ -1,106 +1,852 @@
-{
-  "@context": "http://schema.org",
-  "@type": "WebPage",
-  "name": "Trending YouTube Videos in Germany",
-  "description": "Most popular YouTube videos currently trending in Germany.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "TopTubeList",
-    "url": "https://toptubelist.com/"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Brennpunkt Duisburg: Abgehängt und vergessen | SPIEGEL TV",
+    "description": "Brennpunkt Duisburg: Abgehängt und vergessen | SPIEGEL TV",
+    "thumbnailUrl": "https://i.ytimg.com/vi/FKJJWf5m-G8/hqdefault.jpg",
+    "uploadDate": "2025-07-03T06:00:12Z",
+    "embedUrl": "https://youtube.com/embed/FKJJWf5m-G8",
+    "url": "https://youtube.com/watch?v=FKJJWf5m-G8",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 674207
+    }
   },
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Ich suche TRAUMFRAU für @inscope21  | 3 Frauen 3 Dates | Tom Supreme",
-          "description": "Trending video from Tom Supreme in Germany",
-          "thumbnailUrl": "https://i.ytimg.com/vi/lRnFD4-Ndeo/hqdefault.jpg",
-          "uploadDate": "2025-07-02T16:00:32Z",
-          "embedUrl": "https://www.youtube.com/embed/lRnFD4-Ndeo",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 235811
-          },
-          "url": "https://www.youtube.com/watch?v=lRnFD4-Ndeo"
-        }
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "JP Performance - 1500PS  aus China! Der Xiaomi SU7 ULTRA haut uns komplett aus den Latschen!",
+    "description": "JP Performance - 1500PS  aus China! Der Xiaomi SU7 ULTRA haut uns komplett aus den Latschen!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/craXr4aWa30/hqdefault.jpg",
+    "uploadDate": "2025-07-03T09:30:22Z",
+    "embedUrl": "https://youtube.com/embed/craXr4aWa30",
+    "url": "https://youtube.com/watch?v=craXr4aWa30",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Amo x Aymen - Love all night (prod. by SVRN BEATS) [official video]",
-          "description": "Trending video from 385idéal in Germany",
-          "thumbnailUrl": "https://i.ytimg.com/vi/6eYhNr53k4o/hqdefault.jpg",
-          "uploadDate": "2025-07-02T15:59:08Z",
-          "embedUrl": "https://www.youtube.com/embed/6eYhNr53k4o",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 82229
-          },
-          "url": "https://www.youtube.com/watch?v=6eYhNr53k4o"
-        }
+      "userInteractionCount": 372342
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Ich suche TRAUMFRAU für @inscope21  | 3 Frauen 3 Dates | Tom Supreme",
+    "description": "Ich suche TRAUMFRAU für @inscope21  | 3 Frauen 3 Dates | Tom Supreme",
+    "thumbnailUrl": "https://i.ytimg.com/vi/lRnFD4-Ndeo/hqdefault.jpg",
+    "uploadDate": "2025-07-02T16:00:32Z",
+    "embedUrl": "https://youtube.com/embed/lRnFD4-Ndeo",
+    "url": "https://youtube.com/watch?v=lRnFD4-Ndeo",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Warum ich den Kampf verloren habe...",
-          "description": "Trending video from Christian Eckerlin in Germany",
-          "thumbnailUrl": "https://i.ytimg.com/vi/x2ScHkdwbVg/hqdefault.jpg",
-          "uploadDate": "2025-07-02T16:01:49Z",
-          "embedUrl": "https://www.youtube.com/embed/x2ScHkdwbVg",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 276235
-          },
-          "url": "https://www.youtube.com/watch?v=x2ScHkdwbVg"
-        }
+      "userInteractionCount": 320266
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Amo x Aymen - Love all night (prod. by SVRN BEATS) [official video]",
+    "description": "Amo x Aymen - Love all night (prod. by SVRN BEATS) [official video]",
+    "thumbnailUrl": "https://i.ytimg.com/vi/6eYhNr53k4o/hqdefault.jpg",
+    "uploadDate": "2025-07-02T15:59:08Z",
+    "embedUrl": "https://youtube.com/embed/6eYhNr53k4o",
+    "url": "https://youtube.com/watch?v=6eYhNr53k4o",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "02.07.2025 Unwetterinformation - Deutscher Wetterdienst (DWD)",
-          "description": "Trending video from DWDderWetterdienst in Germany",
-          "thumbnailUrl": "https://i.ytimg.com/vi/La6KbUhHObk/hqdefault.jpg",
-          "uploadDate": "2025-07-02T09:47:05Z",
-          "embedUrl": "https://www.youtube.com/embed/La6KbUhHObk",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 365252
-          },
-          "url": "https://www.youtube.com/watch?v=La6KbUhHObk"
-        }
+      "userInteractionCount": 114724
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "SCHWERER ABSCHIED! - Werkstattalltag Halle77 - Marco nimmt EUCH mit!",
+    "description": "SCHWERER ABSCHIED! - Werkstattalltag Halle77 - Marco nimmt EUCH mit!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Q4yRvTgXYFo/hqdefault.jpg",
+    "uploadDate": "2025-07-03T10:00:48Z",
+    "embedUrl": "https://youtube.com/embed/Q4yRvTgXYFo",
+    "url": "https://youtube.com/watch?v=Q4yRvTgXYFo",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "UNWETTER: Orkanböen, Hagel bis 5 cm, Starkregen! Diese Regionen bekommen bald eine Abkühlung!",
-          "description": "Trending video from wetternet in Germany",
-          "thumbnailUrl": "https://i.ytimg.com/vi/bEnJUBZRPkE/hqdefault.jpg",
-          "uploadDate": "2025-07-02T14:01:07Z",
-          "embedUrl": "https://www.youtube.com/embed/bEnJUBZRPkE",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 143891
-          },
-          "url": "https://www.youtube.com/watch?v=bEnJUBZRPkE"
-        }
-      }
-    ]
+      "userInteractionCount": 122817
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Warum ich den Kampf verloren habe...",
+    "description": "Warum ich den Kampf verloren habe...",
+    "thumbnailUrl": "https://i.ytimg.com/vi/x2ScHkdwbVg/hqdefault.jpg",
+    "uploadDate": "2025-07-02T16:01:49Z",
+    "embedUrl": "https://youtube.com/embed/x2ScHkdwbVg",
+    "url": "https://youtube.com/watch?v=x2ScHkdwbVg",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 314758
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "\"Papa, wo bist du?\"💔 Vanessa mit 2 Jahren verlassen | Unvergessene Suchen | Julia Leischik",
+    "description": "\"Papa, wo bist du?\"💔 Vanessa mit 2 Jahren verlassen | Unvergessene Suchen | Julia Leischik",
+    "thumbnailUrl": "https://i.ytimg.com/vi/eZgaFy9IYFs/hqdefault.jpg",
+    "uploadDate": "2025-07-02T15:01:17Z",
+    "embedUrl": "https://youtube.com/embed/eZgaFy9IYFs",
+    "url": "https://youtube.com/watch?v=eZgaFy9IYFs",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 118771
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "02.07.2025 Unwetterinformation - Deutscher Wetterdienst (DWD)",
+    "description": "02.07.2025 Unwetterinformation - Deutscher Wetterdienst (DWD)",
+    "thumbnailUrl": "https://i.ytimg.com/vi/La6KbUhHObk/hqdefault.jpg",
+    "uploadDate": "2025-07-02T09:47:05Z",
+    "embedUrl": "https://youtube.com/embed/La6KbUhHObk",
+    "url": "https://youtube.com/watch?v=La6KbUhHObk",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 368845
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Drama! Liverpool-Star Diogo Jota (28) ist tot | krone.tv NEWS",
+    "description": "Drama! Liverpool-Star Diogo Jota (28) ist tot | krone.tv NEWS",
+    "thumbnailUrl": "https://i.ytimg.com/vi/ExdYgUHP18M/hqdefault.jpg",
+    "uploadDate": "2025-07-03T10:12:20Z",
+    "embedUrl": "https://youtube.com/embed/ExdYgUHP18M",
+    "url": "https://youtube.com/watch?v=ExdYgUHP18M",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 84484
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "MORTIS vs THE WHOLE COMMUNITY!",
+    "description": "MORTIS vs THE WHOLE COMMUNITY!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/FzDCMVr4_lM/hqdefault.jpg",
+    "uploadDate": "2025-07-03T09:05:25Z",
+    "embedUrl": "https://youtube.com/embed/FzDCMVr4_lM",
+    "url": "https://youtube.com/watch?v=FzDCMVr4_lM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 2500007
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "UNWETTER: Orkanböen, Hagel bis 5 cm, Starkregen! Diese Regionen bekommen bald eine Abkühlung!",
+    "description": "UNWETTER: Orkanböen, Hagel bis 5 cm, Starkregen! Diese Regionen bekommen bald eine Abkühlung!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/bEnJUBZRPkE/hqdefault.jpg",
+    "uploadDate": "2025-07-02T14:01:07Z",
+    "embedUrl": "https://youtube.com/embed/bEnJUBZRPkE",
+    "url": "https://youtube.com/watch?v=bEnJUBZRPkE",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 145339
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Extremwetter in Baden-Württemberg: Hagelsturm verwandelt Sipplingen in Eislandschaft",
+    "description": "Extremwetter in Baden-Württemberg: Hagelsturm verwandelt Sipplingen in Eislandschaft",
+    "thumbnailUrl": "https://i.ytimg.com/vi/153ItJ5DN1A/hqdefault.jpg",
+    "uploadDate": "2025-07-02T09:46:48Z",
+    "embedUrl": "https://youtube.com/embed/153ItJ5DN1A",
+    "url": "https://youtube.com/watch?v=153ItJ5DN1A",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 162424
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Liverpool star Diogo Jota has tragically passed away at the age of 28.",
+    "description": "Liverpool star Diogo Jota has tragically passed away at the age of 28.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/-3_JlP-ntl4/hqdefault.jpg",
+    "uploadDate": "2025-07-03T09:15:38Z",
+    "embedUrl": "https://youtube.com/embed/-3_JlP-ntl4",
+    "url": "https://youtube.com/watch?v=-3_JlP-ntl4",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 744249
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Amr Diab - Khatfoony (feat. Jana Diab & Orange) (Official Lyric Video) | (كلمات) عمرو دياب - خطفوني",
+    "description": "Amr Diab - Khatfoony (feat. Jana Diab & Orange) (Official Lyric Video) | (كلمات) عمرو دياب - خطفوني",
+    "thumbnailUrl": "https://i.ytimg.com/vi/QvDb3YGYfcs/hqdefault.jpg",
+    "uploadDate": "2025-07-03T10:00:21Z",
+    "embedUrl": "https://youtube.com/embed/QvDb3YGYfcs",
+    "url": "https://youtube.com/watch?v=QvDb3YGYfcs",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 451134
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Squid Game: The Puppy Interview",
+    "description": "Squid Game: The Puppy Interview",
+    "thumbnailUrl": "https://i.ytimg.com/vi/b9B-5ejmds0/hqdefault.jpg",
+    "uploadDate": "2025-07-03T03:25:00Z",
+    "embedUrl": "https://youtube.com/embed/b9B-5ejmds0",
+    "url": "https://youtube.com/watch?v=b9B-5ejmds0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1123970
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Al-Hilal STUNS Manchester City 4-3! | 2025 FIFA Club World Cup Highlights",
+    "description": "Al-Hilal STUNS Manchester City 4-3! | 2025 FIFA Club World Cup Highlights",
+    "thumbnailUrl": "https://i.ytimg.com/vi/c_I6CJkS4aQ/hqdefault.jpg",
+    "uploadDate": "2025-07-01T04:12:43Z",
+    "embedUrl": "https://youtube.com/embed/c_I6CJkS4aQ",
+    "url": "https://youtube.com/watch?v=c_I6CJkS4aQ",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 8059665
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Mehr Begrüßungsgeld für den Osten – Olaf Schubert | Nuhr im Ersten",
+    "description": "Mehr Begrüßungsgeld für den Osten – Olaf Schubert | Nuhr im Ersten",
+    "thumbnailUrl": "https://i.ytimg.com/vi/FsuPKtR1deY/hqdefault.jpg",
+    "uploadDate": "2025-07-01T16:00:33Z",
+    "embedUrl": "https://youtube.com/embed/FsuPKtR1deY",
+    "url": "https://youtube.com/watch?v=FsuPKtR1deY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 279572
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Unangenehme Fragen an diese Influencer..",
+    "description": "Unangenehme Fragen an diese Influencer..",
+    "thumbnailUrl": "https://i.ytimg.com/vi/iPQ3-LNLxC0/hqdefault.jpg",
+    "uploadDate": "2025-07-01T18:04:26Z",
+    "embedUrl": "https://youtube.com/embed/iPQ3-LNLxC0",
+    "url": "https://youtube.com/watch?v=iPQ3-LNLxC0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 139557
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Starting Over in Grow a Garden with Only STEALING PETS",
+    "description": "Starting Over in Grow a Garden with Only STEALING PETS",
+    "thumbnailUrl": "https://i.ytimg.com/vi/4e3THoHLWAU/hqdefault.jpg",
+    "uploadDate": "2025-07-02T17:35:08Z",
+    "embedUrl": "https://youtube.com/embed/4e3THoHLWAU",
+    "url": "https://youtube.com/watch?v=4e3THoHLWAU",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 734298
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Gill Leads The Charge | Highlights - England v India Day 1 | Rothesay Test 2025",
+    "description": "Gill Leads The Charge | Highlights - England v India Day 1 | Rothesay Test 2025",
+    "thumbnailUrl": "https://i.ytimg.com/vi/U5W4LALZ47A/hqdefault.jpg",
+    "uploadDate": "2025-07-02T18:31:40Z",
+    "embedUrl": "https://youtube.com/embed/U5W4LALZ47A",
+    "url": "https://youtube.com/watch?v=U5W4LALZ47A",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 5188169
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "🏆😍Mit KRASSESTEM Meta DECK 10.000 TROPHÄEN hitten?! - Clash Royale Pay2Win Account!",
+    "description": "🏆😍Mit KRASSESTEM Meta DECK 10.000 TROPHÄEN hitten?! - Clash Royale Pay2Win Account!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/PAZOJF9sgRc/hqdefault.jpg",
+    "uploadDate": "2025-07-02T10:15:03Z",
+    "embedUrl": "https://youtube.com/embed/PAZOJF9sgRc",
+    "url": "https://youtube.com/watch?v=PAZOJF9sgRc",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 188636
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Heute mit Hitzepeak regional schwere Gewitter - Lokale Unwettergefahr vor allem durch heftigen Sturm",
+    "description": "Heute mit Hitzepeak regional schwere Gewitter - Lokale Unwettergefahr vor allem durch heftigen Sturm",
+    "thumbnailUrl": "https://i.ytimg.com/vi/DOJZVq2neR4/hqdefault.jpg",
+    "uploadDate": "2025-07-02T06:39:06Z",
+    "embedUrl": "https://youtube.com/embed/DOJZVq2neR4",
+    "url": "https://youtube.com/watch?v=DOJZVq2neR4",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 107107
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Wie ich Elden Ring Shadow of the Erdtree bezwungen habe",
+    "description": "Wie ich Elden Ring Shadow of the Erdtree bezwungen habe",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Q4RVvT8hIeo/hqdefault.jpg",
+    "uploadDate": "2025-07-01T15:03:01Z",
+    "embedUrl": "https://youtube.com/embed/Q4RVvT8hIeo",
+    "url": "https://youtube.com/watch?v=Q4RVvT8hIeo",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 122072
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "AfD-Politiker aus dem Görlitzer Park eskortiert – lautstarker Protest stoppt Begehung",
+    "description": "AfD-Politiker aus dem Görlitzer Park eskortiert – lautstarker Protest stoppt Begehung",
+    "thumbnailUrl": "https://i.ytimg.com/vi/yLsnJ8kOpOU/hqdefault.jpg",
+    "uploadDate": "2025-07-01T13:48:43Z",
+    "embedUrl": "https://youtube.com/embed/yLsnJ8kOpOU",
+    "url": "https://youtube.com/watch?v=yLsnJ8kOpOU",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 68918
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Amr Diab - Ebtadena (Official Lyric Video) | (كلمات) عمرو دياب - ابتدینا",
+    "description": "Amr Diab - Ebtadena (Official Lyric Video) | (كلمات) عمرو دياب - ابتدینا",
+    "thumbnailUrl": "https://i.ytimg.com/vi/tJWeC-ueKfE/hqdefault.jpg",
+    "uploadDate": "2025-07-03T10:05:26Z",
+    "embedUrl": "https://youtube.com/embed/tJWeC-ueKfE",
+    "url": "https://youtube.com/watch?v=tJWeC-ueKfE",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 321458
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Der große Neustart an der \"DiNo\"! 📚🎉 #496 | Krass Schule",
+    "description": "Der große Neustart an der \"DiNo\"! 📚🎉 #496 | Krass Schule",
+    "thumbnailUrl": "https://i.ytimg.com/vi/2MJe37ovrfA/hqdefault.jpg",
+    "uploadDate": "2025-07-01T15:00:06Z",
+    "embedUrl": "https://youtube.com/embed/2MJe37ovrfA",
+    "url": "https://youtube.com/watch?v=2MJe37ovrfA",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 80493
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Ich habe ALLE Herzen verloren...",
+    "description": "Ich habe ALLE Herzen verloren...",
+    "thumbnailUrl": "https://i.ytimg.com/vi/JXtiuADWVPI/hqdefault.jpg",
+    "uploadDate": "2025-07-02T10:00:28Z",
+    "embedUrl": "https://youtube.com/embed/JXtiuADWVPI",
+    "url": "https://youtube.com/watch?v=JXtiuADWVPI",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 91170
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Borussia Dortmund - CF Monterrey | FIFA Club World Cup 2025 | DAZN Highlights",
+    "description": "Borussia Dortmund - CF Monterrey | FIFA Club World Cup 2025 | DAZN Highlights",
+    "thumbnailUrl": "https://i.ytimg.com/vi/L2DEHKqTZ2M/hqdefault.jpg",
+    "uploadDate": "2025-07-02T04:58:39Z",
+    "embedUrl": "https://youtube.com/embed/L2DEHKqTZ2M",
+    "url": "https://youtube.com/watch?v=L2DEHKqTZ2M",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 980383
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Phoenix: Fire and Life Incarnate | Character Reveal | Marvel Rivals",
+    "description": "Phoenix: Fire and Life Incarnate | Character Reveal | Marvel Rivals",
+    "thumbnailUrl": "https://i.ytimg.com/vi/zsWg4h7Eiss/hqdefault.jpg",
+    "uploadDate": "2025-07-02T15:01:59Z",
+    "embedUrl": "https://youtube.com/embed/zsWg4h7Eiss",
+    "url": "https://youtube.com/watch?v=zsWg4h7Eiss",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1190205
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "BABYMONSTER - ‘HOT SAUCE’ M/V",
+    "description": "BABYMONSTER - ‘HOT SAUCE’ M/V",
+    "thumbnailUrl": "https://i.ytimg.com/vi/xn8mQqz2xmM/hqdefault.jpg",
+    "uploadDate": "2025-07-01T09:00:07Z",
+    "embedUrl": "https://youtube.com/embed/xn8mQqz2xmM",
+    "url": "https://youtube.com/watch?v=xn8mQqz2xmM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 19450704
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Darum gibt es keine XXL-Solarparks in der Sahara",
+    "description": "Darum gibt es keine XXL-Solarparks in der Sahara",
+    "thumbnailUrl": "https://i.ytimg.com/vi/t1zVPYrwPS8/hqdefault.jpg",
+    "uploadDate": "2025-07-01T15:01:41Z",
+    "embedUrl": "https://youtube.com/embed/t1zVPYrwPS8",
+    "url": "https://youtube.com/watch?v=t1zVPYrwPS8",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 187275
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "NEW MOB AND GEAR IN THE NEXT GAME DROP!",
+    "description": "NEW MOB AND GEAR IN THE NEXT GAME DROP!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/542rY0DQHIM/hqdefault.jpg",
+    "uploadDate": "2025-07-01T16:06:23Z",
+    "embedUrl": "https://youtube.com/embed/542rY0DQHIM",
+    "url": "https://youtube.com/watch?v=542rY0DQHIM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 3069570
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Begging Admin Until $0 Becomes $10 Trillion",
+    "description": "Begging Admin Until $0 Becomes $10 Trillion",
+    "thumbnailUrl": "https://i.ytimg.com/vi/qyUfSHMehXo/hqdefault.jpg",
+    "uploadDate": "2025-07-01T15:01:42Z",
+    "embedUrl": "https://youtube.com/embed/qyUfSHMehXo",
+    "url": "https://youtube.com/watch?v=qyUfSHMehXo",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 2173240
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "The CyberClash Is On! Clash of Clans New Season",
+    "description": "The CyberClash Is On! Clash of Clans New Season",
+    "thumbnailUrl": "https://i.ytimg.com/vi/3by41z1dt6I/hqdefault.jpg",
+    "uploadDate": "2025-07-01T08:00:03Z",
+    "embedUrl": "https://youtube.com/embed/3by41z1dt6I",
+    "url": "https://youtube.com/watch?v=3by41z1dt6I",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1696916
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Max & Mo im SHAOLIN-KLOSTER 🤣",
+    "description": "Max & Mo im SHAOLIN-KLOSTER 🤣",
+    "thumbnailUrl": "https://i.ytimg.com/vi/TPKwyQ1-1tY/hqdefault.jpg",
+    "uploadDate": "2025-06-30T18:36:16Z",
+    "embedUrl": "https://youtube.com/embed/TPKwyQ1-1tY",
+    "url": "https://youtube.com/watch?v=TPKwyQ1-1tY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 182802
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "When Your Body Attacks Itself – Autoimmune",
+    "description": "When Your Body Attacks Itself – Autoimmune",
+    "thumbnailUrl": "https://i.ytimg.com/vi/efOW5NUTYB8/hqdefault.jpg",
+    "uploadDate": "2025-07-01T14:00:01Z",
+    "embedUrl": "https://youtube.com/embed/efOW5NUTYB8",
+    "url": "https://youtube.com/watch?v=efOW5NUTYB8",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1284024
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Staat gegen Reichsbürger –wie Fitzeks „Königreich Deutschland“ zerschlagen wurde | Doku | exactly",
+    "description": "Staat gegen Reichsbürger –wie Fitzeks „Königreich Deutschland“ zerschlagen wurde | Doku | exactly",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Th8fphlwlxA/hqdefault.jpg",
+    "uploadDate": "2025-06-30T15:01:01Z",
+    "embedUrl": "https://youtube.com/embed/Th8fphlwlxA",
+    "url": "https://youtube.com/watch?v=Th8fphlwlxA",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 253776
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "This mechanism shrinks when pulled",
+    "description": "This mechanism shrinks when pulled",
+    "thumbnailUrl": "https://i.ytimg.com/vi/-QTkPfq7w1A/hqdefault.jpg",
+    "uploadDate": "2025-06-30T18:02:42Z",
+    "embedUrl": "https://youtube.com/embed/-QTkPfq7w1A",
+    "url": "https://youtube.com/watch?v=-QTkPfq7w1A",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 4865599
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "The Running Man | Official Trailer (2025 Movie) - Edgar Wright, Glen Powell",
+    "description": "The Running Man | Official Trailer (2025 Movie) - Edgar Wright, Glen Powell",
+    "thumbnailUrl": "https://i.ytimg.com/vi/KD18ddeFuyM/hqdefault.jpg",
+    "uploadDate": "2025-07-01T13:00:03Z",
+    "embedUrl": "https://youtube.com/embed/KD18ddeFuyM",
+    "url": "https://youtube.com/watch?v=KD18ddeFuyM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 8989936
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Abnehmen bei Stoffwechselstörung: So helfen Hafertage  I Ernährungs-Docs I ARD Gesund",
+    "description": "Abnehmen bei Stoffwechselstörung: So helfen Hafertage  I Ernährungs-Docs I ARD Gesund",
+    "thumbnailUrl": "https://i.ytimg.com/vi/f8OtcUZ43BI/hqdefault.jpg",
+    "uploadDate": "2025-06-30T14:01:09Z",
+    "embedUrl": "https://youtube.com/embed/f8OtcUZ43BI",
+    "url": "https://youtube.com/watch?v=f8OtcUZ43BI",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 338178
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Was passiert direkt in der ERSTEN FOLGE?! | Beauty & The Nerd Staffel 6 Folge 1",
+    "description": "Was passiert direkt in der ERSTEN FOLGE?! | Beauty & The Nerd Staffel 6 Folge 1",
+    "thumbnailUrl": "https://i.ytimg.com/vi/M_ZuwXsMjI4/hqdefault.jpg",
+    "uploadDate": "2025-06-30T14:00:41Z",
+    "embedUrl": "https://youtube.com/embed/M_ZuwXsMjI4",
+    "url": "https://youtube.com/watch?v=M_ZuwXsMjI4",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 217801
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Ich surfe auf dem überfülltesten Zug der Welt",
+    "description": "Ich surfe auf dem überfülltesten Zug der Welt",
+    "thumbnailUrl": "https://i.ytimg.com/vi/JvA0rBpl1zk/hqdefault.jpg",
+    "uploadDate": "2025-06-30T19:21:02Z",
+    "embedUrl": "https://youtube.com/embed/JvA0rBpl1zk",
+    "url": "https://youtube.com/watch?v=JvA0rBpl1zk",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 138925
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Verfolgungsjagd in Berlin: Schüsse auf Polizei nach Geldtransporter-Überfall",
+    "description": "Verfolgungsjagd in Berlin: Schüsse auf Polizei nach Geldtransporter-Überfall",
+    "thumbnailUrl": "https://i.ytimg.com/vi/azwT1JBA2s8/hqdefault.jpg",
+    "uploadDate": "2025-07-01T11:49:26Z",
+    "embedUrl": "https://youtube.com/embed/azwT1JBA2s8",
+    "url": "https://youtube.com/watch?v=azwT1JBA2s8",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 122467
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "NADERS 1. PROFI VERTRAG ⚽️ | Nader Louisa",
+    "description": "NADERS 1. PROFI VERTRAG ⚽️ | Nader Louisa",
+    "thumbnailUrl": "https://i.ytimg.com/vi/dH1ZazQcGoM/hqdefault.jpg",
+    "uploadDate": "2025-06-29T18:40:03Z",
+    "embedUrl": "https://youtube.com/embed/dH1ZazQcGoM",
+    "url": "https://youtube.com/watch?v=dH1ZazQcGoM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 945883
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "❗⚡ Hier drohen ab Mittwoch Unwetter",
+    "description": "❗⚡ Hier drohen ab Mittwoch Unwetter",
+    "thumbnailUrl": "https://i.ytimg.com/vi/FtwnXAg9KSI/hqdefault.jpg",
+    "uploadDate": "2025-07-01T15:39:20Z",
+    "embedUrl": "https://youtube.com/embed/FtwnXAg9KSI",
+    "url": "https://youtube.com/watch?v=FtwnXAg9KSI",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 66111
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Bin hässlich aber fahre Porsche",
+    "description": "Bin hässlich aber fahre Porsche",
+    "thumbnailUrl": "https://i.ytimg.com/vi/uv-IKNhOAVk/hqdefault.jpg",
+    "uploadDate": "2025-06-30T15:59:16Z",
+    "embedUrl": "https://youtube.com/embed/uv-IKNhOAVk",
+    "url": "https://youtube.com/watch?v=uv-IKNhOAVk",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 208609
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Malle ist so ein Fiebertraum",
+    "description": "Malle ist so ein Fiebertraum",
+    "thumbnailUrl": "https://i.ytimg.com/vi/UJYW2yLJUkg/hqdefault.jpg",
+    "uploadDate": "2025-06-29T11:00:48Z",
+    "embedUrl": "https://youtube.com/embed/UJYW2yLJUkg",
+    "url": "https://youtube.com/watch?v=UJYW2yLJUkg",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 943019
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Dortmund Hold Off Monterrey RALLY | FIFA Club World Cup Highlights",
+    "description": "Dortmund Hold Off Monterrey RALLY | FIFA Club World Cup Highlights",
+    "thumbnailUrl": "https://i.ytimg.com/vi/vzQPbu5aA6U/hqdefault.jpg",
+    "uploadDate": "2025-07-02T03:10:08Z",
+    "embedUrl": "https://youtube.com/embed/vzQPbu5aA6U",
+    "url": "https://youtube.com/watch?v=vzQPbu5aA6U",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1289416
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "30 Tage Minimalismus: Leben und Arbeiten 🧘‍♀️ Selbstexperiment",
+    "description": "30 Tage Minimalismus: Leben und Arbeiten 🧘‍♀️ Selbstexperiment",
+    "thumbnailUrl": "https://i.ytimg.com/vi/X7ar8PV5Yew/hqdefault.jpg",
+    "uploadDate": "2025-06-30T14:01:01Z",
+    "embedUrl": "https://youtube.com/embed/X7ar8PV5Yew",
+    "url": "https://youtube.com/watch?v=X7ar8PV5Yew",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 123228
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Verarscht, verschuldet, verlassen: Willkommen in der Bauhölle Deutschland",
+    "description": "Verarscht, verschuldet, verlassen: Willkommen in der Bauhölle Deutschland",
+    "thumbnailUrl": "https://i.ytimg.com/vi/fku2WXEXHO0/hqdefault.jpg",
+    "uploadDate": "2025-06-29T16:03:00Z",
+    "embedUrl": "https://youtube.com/embed/fku2WXEXHO0",
+    "url": "https://youtube.com/watch?v=fku2WXEXHO0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 598648
+    }
   }
-}
+]

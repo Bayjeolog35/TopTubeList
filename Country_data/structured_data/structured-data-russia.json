@@ -1,106 +1,852 @@
-{
-  "@context": "http://schema.org",
-  "@type": "WebPage",
-  "name": "Trending YouTube Videos in Russia",
-  "description": "Most popular YouTube videos currently trending in Russia.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "TopTubeList",
-    "url": "https://toptubelist.com/"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Делаю Маникюр Как у предыдущей клиентки",
+    "description": "Делаю Маникюр Как у предыдущей клиентки",
+    "thumbnailUrl": "https://i.ytimg.com/vi/CmwT3pqAuA8/hqdefault.jpg",
+    "uploadDate": "2025-07-03T11:24:32Z",
+    "embedUrl": "https://youtube.com/embed/CmwT3pqAuA8",
+    "url": "https://youtube.com/watch?v=CmwT3pqAuA8",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 495690
+    }
   },
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Арбуз наехал на деда! 😈",
-          "description": "Trending video from Edward Bil in Russia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/gKKT2Ai4LIY/hqdefault.jpg",
-          "uploadDate": "2025-07-02T08:11:26Z",
-          "embedUrl": "https://www.youtube.com/embed/gKKT2Ai4LIY",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 897312
-          },
-          "url": "https://www.youtube.com/watch?v=gKKT2Ai4LIY"
-        }
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Что можно получить за тысячи пивных крышек?",
+    "description": "Что можно получить за тысячи пивных крышек?",
+    "thumbnailUrl": "https://i.ytimg.com/vi/TwjBrDhu-Ps/hqdefault.jpg",
+    "uploadDate": "2025-07-03T08:30:16Z",
+    "embedUrl": "https://youtube.com/embed/TwjBrDhu-Ps",
+    "url": "https://youtube.com/watch?v=TwjBrDhu-Ps",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Поставил на место дикого бармалея!",
-          "description": "Trending video from МИНУС БАЛЛ in Russia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/87gpu7unG4M/hqdefault.jpg",
-          "uploadDate": "2025-07-02T17:40:52Z",
-          "embedUrl": "https://www.youtube.com/embed/87gpu7unG4M",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 469813
-          },
-          "url": "https://www.youtube.com/watch?v=87gpu7unG4M"
-        }
+      "userInteractionCount": 753488
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Поставил на место дикого бармалея!",
+    "description": "Поставил на место дикого бармалея!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/87gpu7unG4M/hqdefault.jpg",
+    "uploadDate": "2025-07-02T17:40:52Z",
+    "embedUrl": "https://youtube.com/embed/87gpu7unG4M",
+    "url": "https://youtube.com/watch?v=87gpu7unG4M",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "#стинт #стинтик #stint #stintik #твич #стрим #стример",
-          "description": "Trending video from Stintik  in Russia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Q0hDW9Ddm_M/hqdefault.jpg",
-          "uploadDate": "2025-07-03T07:15:11Z",
-          "embedUrl": "https://www.youtube.com/embed/Q0hDW9Ddm_M",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 96676
-          },
-          "url": "https://www.youtube.com/watch?v=Q0hDW9Ddm_M"
-        }
+      "userInteractionCount": 832542
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "#стинт #стинтик #stint #stintik #твич #стрим #стример",
+    "description": "#стинт #стинтик #stint #stintik #твич #стрим #стример",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Q0hDW9Ddm_M/hqdefault.jpg",
+    "uploadDate": "2025-07-03T07:15:11Z",
+    "embedUrl": "https://youtube.com/embed/Q0hDW9Ddm_M",
+    "url": "https://youtube.com/watch?v=Q0hDW9Ddm_M",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Китайка и Русалка 23 серия😂😆",
-          "description": "Trending video from KITAYKA in Russia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/w7GW6vQrrls/hqdefault.jpg",
-          "uploadDate": "2025-07-02T11:30:55Z",
-          "embedUrl": "https://www.youtube.com/embed/w7GW6vQrrls",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 708243
-          },
-          "url": "https://www.youtube.com/watch?v=w7GW6vQrrls"
-        }
+      "userInteractionCount": 209931
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Арбуз наехал на деда! 😈",
+    "description": "Арбуз наехал на деда! 😈",
+    "thumbnailUrl": "https://i.ytimg.com/vi/gKKT2Ai4LIY/hqdefault.jpg",
+    "uploadDate": "2025-07-02T08:11:26Z",
+    "embedUrl": "https://youtube.com/embed/gKKT2Ai4LIY",
+    "url": "https://youtube.com/watch?v=gKKT2Ai4LIY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Как мы потеряли идеальный банан",
-          "description": "Trending video from i11ushenka in Russia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/yh5syR6depU/hqdefault.jpg",
-          "uploadDate": "2025-07-02T09:00:53Z",
-          "embedUrl": "https://www.youtube.com/embed/yh5syR6depU",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2466493
-          },
-          "url": "https://www.youtube.com/watch?v=yh5syR6depU"
-        }
-      }
-    ]
+      "userInteractionCount": 1131386
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Чёртово Кладбище - Что Скрывает Самое Страшное и Аномальное Место в Мире",
+    "description": "Чёртово Кладбище - Что Скрывает Самое Страшное и Аномальное Место в Мире",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Va3GjvP_aUY/hqdefault.jpg",
+    "uploadDate": "2025-07-03T11:00:05Z",
+    "embedUrl": "https://youtube.com/embed/Va3GjvP_aUY",
+    "url": "https://youtube.com/watch?v=Va3GjvP_aUY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 171870
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Японец по цене ВАЗа! Оживляем пацанскую мечту :)",
+    "description": "Японец по цене ВАЗа! Оживляем пацанскую мечту :)",
+    "thumbnailUrl": "https://i.ytimg.com/vi/naMsTOdT4Fg/hqdefault.jpg",
+    "uploadDate": "2025-07-03T13:01:35Z",
+    "embedUrl": "https://youtube.com/embed/naMsTOdT4Fg",
+    "url": "https://youtube.com/watch?v=naMsTOdT4Fg",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 537325
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Китайка и Русалка 23 серия😂😆",
+    "description": "Китайка и Русалка 23 серия😂😆",
+    "thumbnailUrl": "https://i.ytimg.com/vi/w7GW6vQrrls/hqdefault.jpg",
+    "uploadDate": "2025-07-02T11:30:55Z",
+    "embedUrl": "https://youtube.com/embed/w7GW6vQrrls",
+    "url": "https://youtube.com/watch?v=w7GW6vQrrls",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 930678
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Lp. Точка Невозврата #84 ЖИВОЙ ПОКОЙНИК [Трудный Выбор] • Майнкрафт",
+    "description": "Lp. Точка Невозврата #84 ЖИВОЙ ПОКОЙНИК [Трудный Выбор] • Майнкрафт",
+    "thumbnailUrl": "https://i.ytimg.com/vi/szjP2kW-jJM/hqdefault.jpg",
+    "uploadDate": "2025-07-03T12:01:45Z",
+    "embedUrl": "https://youtube.com/embed/szjP2kW-jJM",
+    "url": "https://youtube.com/watch?v=szjP2kW-jJM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 496399
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Нюша и Маша Шурочкины - победа в «Сокровищах Императора» и история двух сестер",
+    "description": "Нюша и Маша Шурочкины - победа в «Сокровищах Императора» и история двух сестер",
+    "thumbnailUrl": "https://i.ytimg.com/vi/jhHcWZ-6EmQ/hqdefault.jpg",
+    "uploadDate": "2025-07-03T08:55:01Z",
+    "embedUrl": "https://youtube.com/embed/jhHcWZ-6EmQ",
+    "url": "https://youtube.com/watch?v=jhHcWZ-6EmQ",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 94012
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Я ошибся в Porsche. Моя новая машина",
+    "description": "Я ошибся в Porsche. Моя новая машина",
+    "thumbnailUrl": "https://i.ytimg.com/vi/kuq3bdbmlN4/hqdefault.jpg",
+    "uploadDate": "2025-07-03T07:23:09Z",
+    "embedUrl": "https://youtube.com/embed/kuq3bdbmlN4",
+    "url": "https://youtube.com/watch?v=kuq3bdbmlN4",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 254906
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "КОРОЧЕ ГОВОРЯ, Я ЖЕНИЛСЯ",
+    "description": "КОРОЧЕ ГОВОРЯ, Я ЖЕНИЛСЯ",
+    "thumbnailUrl": "https://i.ytimg.com/vi/OC5ekuuxK1Y/hqdefault.jpg",
+    "uploadDate": "2025-07-03T10:30:15Z",
+    "embedUrl": "https://youtube.com/embed/OC5ekuuxK1Y",
+    "url": "https://youtube.com/watch?v=OC5ekuuxK1Y",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 161055
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "NEW Color Mix Challenge Italian Brainrot Animation",
+    "description": "NEW Color Mix Challenge Italian Brainrot Animation",
+    "thumbnailUrl": "https://i.ytimg.com/vi/wNNLmwprxd0/hqdefault.jpg",
+    "uploadDate": "2025-07-03T11:01:52Z",
+    "embedUrl": "https://youtube.com/embed/wNNLmwprxd0",
+    "url": "https://youtube.com/watch?v=wNNLmwprxd0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 820181
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Когда закон против пробок создает ещё больше пробок",
+    "description": "Когда закон против пробок создает ещё больше пробок",
+    "thumbnailUrl": "https://i.ytimg.com/vi/nEiEAWf8Ack/hqdefault.jpg",
+    "uploadDate": "2025-07-03T09:20:17Z",
+    "embedUrl": "https://youtube.com/embed/nEiEAWf8Ack",
+    "url": "https://youtube.com/watch?v=nEiEAWf8Ack",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 700776
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "МЫ ЗАБЫЛИ ПРО ДР ДЖОНИ 😰",
+    "description": "МЫ ЗАБЫЛИ ПРО ДР ДЖОНИ 😰",
+    "thumbnailUrl": "https://i.ytimg.com/vi/wK7ZYcdiwsc/hqdefault.jpg",
+    "uploadDate": "2025-07-02T15:30:39Z",
+    "embedUrl": "https://youtube.com/embed/wK7ZYcdiwsc",
+    "url": "https://youtube.com/watch?v=wK7ZYcdiwsc",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 526956
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "He won but at what cost 😭 (via @alxxwilson/TT)",
+    "description": "He won but at what cost 😭 (via @alxxwilson/TT)",
+    "thumbnailUrl": "https://i.ytimg.com/vi/5_np_P4oyX8/hqdefault.jpg",
+    "uploadDate": "2025-07-02T16:36:07Z",
+    "embedUrl": "https://youtube.com/embed/5_np_P4oyX8",
+    "url": "https://youtube.com/watch?v=5_np_P4oyX8",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1836249
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "The Next Generation of Heroes? 😂 | Superpower Tryouts at Zoom Academy! #movie #shorts #edit",
+    "description": "The Next Generation of Heroes? 😂 | Superpower Tryouts at Zoom Academy! #movie #shorts #edit",
+    "thumbnailUrl": "https://i.ytimg.com/vi/q3OueDwIXeg/hqdefault.jpg",
+    "uploadDate": "2025-07-01T15:59:46Z",
+    "embedUrl": "https://youtube.com/embed/q3OueDwIXeg",
+    "url": "https://youtube.com/watch?v=q3OueDwIXeg",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 9787849
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Пейнтбол для продвинутых",
+    "description": "Пейнтбол для продвинутых",
+    "thumbnailUrl": "https://i.ytimg.com/vi/v8_FSKNsy0k/hqdefault.jpg",
+    "uploadDate": "2025-07-03T10:01:38Z",
+    "embedUrl": "https://youtube.com/embed/v8_FSKNsy0k",
+    "url": "https://youtube.com/watch?v=v8_FSKNsy0k",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 561672
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "А на какой урожай надеетесь вы?",
+    "description": "А на какой урожай надеетесь вы?",
+    "thumbnailUrl": "https://i.ytimg.com/vi/mo_BJQyDGIE/hqdefault.jpg",
+    "uploadDate": "2025-07-02T10:23:37Z",
+    "embedUrl": "https://youtube.com/embed/mo_BJQyDGIE",
+    "url": "https://youtube.com/watch?v=mo_BJQyDGIE",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 179013
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "$1 vs $1000 Nerf Gun!",
+    "description": "$1 vs $1000 Nerf Gun!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/am_Rb1QZzxs/hqdefault.jpg",
+    "uploadDate": "2025-07-01T20:00:03Z",
+    "embedUrl": "https://youtube.com/embed/am_Rb1QZzxs",
+    "url": "https://youtube.com/watch?v=am_Rb1QZzxs",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 7764318
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "НИЧЬЯ В РЕАЛЬНОЙ КАТКЕ ДОТЫ! #dota #dota2 #klos #shorts",
+    "description": "НИЧЬЯ В РЕАЛЬНОЙ КАТКЕ ДОТЫ! #dota #dota2 #klos #shorts",
+    "thumbnailUrl": "https://i.ytimg.com/vi/dtlVrecZf2s/hqdefault.jpg",
+    "uploadDate": "2025-07-02T15:28:21Z",
+    "embedUrl": "https://youtube.com/embed/dtlVrecZf2s",
+    "url": "https://youtube.com/watch?v=dtlVrecZf2s",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 243450
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "07.07.2025 зеркальная дата, как может повлиять на события",
+    "description": "07.07.2025 зеркальная дата, как может повлиять на события",
+    "thumbnailUrl": "https://i.ytimg.com/vi/7ULfoJ68h30/hqdefault.jpg",
+    "uploadDate": "2025-07-02T18:13:43Z",
+    "embedUrl": "https://youtube.com/embed/7ULfoJ68h30",
+    "url": "https://youtube.com/watch?v=7ULfoJ68h30",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 114856
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Идеальная подвеска давно придумана 🚙",
+    "description": "Идеальная подвеска давно придумана 🚙",
+    "thumbnailUrl": "https://i.ytimg.com/vi/9qBRa5OGW6I/hqdefault.jpg",
+    "uploadDate": "2025-07-02T13:15:33Z",
+    "embedUrl": "https://youtube.com/embed/9qBRa5OGW6I",
+    "url": "https://youtube.com/watch?v=9qBRa5OGW6I",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 167416
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Басня про Николая Соболева #соболев #юмор #токсики",
+    "description": "Басня про Николая Соболева #соболев #юмор #токсики",
+    "thumbnailUrl": "https://i.ytimg.com/vi/kPEBimoSjG0/hqdefault.jpg",
+    "uploadDate": "2025-07-01T17:30:11Z",
+    "embedUrl": "https://youtube.com/embed/kPEBimoSjG0",
+    "url": "https://youtube.com/watch?v=kPEBimoSjG0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 308185
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "И ТАКИЕ ЛАБУБУ ТОЖЕ БЫВАЮТ СКАЗАЛ МЕДВЕДЬ ВАЛЕРА",
+    "description": "И ТАКИЕ ЛАБУБУ ТОЖЕ БЫВАЮТ СКАЗАЛ МЕДВЕДЬ ВАЛЕРА",
+    "thumbnailUrl": "https://i.ytimg.com/vi/A8or7Qbnf4I/hqdefault.jpg",
+    "uploadDate": "2025-07-02T15:07:06Z",
+    "embedUrl": "https://youtube.com/embed/A8or7Qbnf4I",
+    "url": "https://youtube.com/watch?v=A8or7Qbnf4I",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 467220
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Юлия Ахмедова в \"Самый Умный Комик\"",
+    "description": "Юлия Ахмедова в \"Самый Умный Комик\"",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Tb3h__9EuZQ/hqdefault.jpg",
+    "uploadDate": "2025-07-02T09:30:18Z",
+    "embedUrl": "https://youtube.com/embed/Tb3h__9EuZQ",
+    "url": "https://youtube.com/watch?v=Tb3h__9EuZQ",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 97827
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Американцы Слушают Русскую Музыку kizaru, ICEGERGERT, Miyagi, Heronwater, Платина, Каспийский Груз",
+    "description": "Американцы Слушают Русскую Музыку kizaru, ICEGERGERT, Miyagi, Heronwater, Платина, Каспийский Груз",
+    "thumbnailUrl": "https://i.ytimg.com/vi/ejm6_16SCkg/hqdefault.jpg",
+    "uploadDate": "2025-07-03T07:00:38Z",
+    "embedUrl": "https://youtube.com/embed/ejm6_16SCkg",
+    "url": "https://youtube.com/watch?v=ejm6_16SCkg",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 75236
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Турецкий кот пранкер",
+    "description": "Турецкий кот пранкер",
+    "thumbnailUrl": "https://i.ytimg.com/vi/5reyPJQT038/hqdefault.jpg",
+    "uploadDate": "2025-07-03T08:00:16Z",
+    "embedUrl": "https://youtube.com/embed/5reyPJQT038",
+    "url": "https://youtube.com/watch?v=5reyPJQT038",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 679436
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Эрик Найтли - Про съемки 18+, точку G и размер аппарата / Опять не Гальцев",
+    "description": "Эрик Найтли - Про съемки 18+, точку G и размер аппарата / Опять не Гальцев",
+    "thumbnailUrl": "https://i.ytimg.com/vi/sDQ5PJeeP68/hqdefault.jpg",
+    "uploadDate": "2025-07-02T08:01:09Z",
+    "embedUrl": "https://youtube.com/embed/sDQ5PJeeP68",
+    "url": "https://youtube.com/watch?v=sDQ5PJeeP68",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 508795
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Glee’s Magic Salon #7 - MINECRAFT ANIMATION | EMOTIA",
+    "description": "Glee’s Magic Salon #7 - MINECRAFT ANIMATION | EMOTIA",
+    "thumbnailUrl": "https://i.ytimg.com/vi/1L8cZyi9Ack/hqdefault.jpg",
+    "uploadDate": "2025-07-03T07:49:02Z",
+    "embedUrl": "https://youtube.com/embed/1L8cZyi9Ack",
+    "url": "https://youtube.com/watch?v=1L8cZyi9Ack",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1293578
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "ОСТАВИЛИ ДРУЗЕЙ НАЕДИНЕ С 4 ДЕТЬМИ! Под скрытыми камерами / ОНИ СБЕЖАЛИ!",
+    "description": "ОСТАВИЛИ ДРУЗЕЙ НАЕДИНЕ С 4 ДЕТЬМИ! Под скрытыми камерами / ОНИ СБЕЖАЛИ!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/VVI1nBOLRIc/hqdefault.jpg",
+    "uploadDate": "2025-07-02T14:00:06Z",
+    "embedUrl": "https://youtube.com/embed/VVI1nBOLRIc",
+    "url": "https://youtube.com/watch?v=VVI1nBOLRIc",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 416673
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Как мы потеряли идеальный банан",
+    "description": "Как мы потеряли идеальный банан",
+    "thumbnailUrl": "https://i.ytimg.com/vi/yh5syR6depU/hqdefault.jpg",
+    "uploadDate": "2025-07-02T09:00:53Z",
+    "embedUrl": "https://youtube.com/embed/yh5syR6depU",
+    "url": "https://youtube.com/watch?v=yh5syR6depU",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 2733732
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "МЕДНЫЙ ГООООООЛем",
+    "description": "МЕДНЫЙ ГООООООЛем",
+    "thumbnailUrl": "https://i.ytimg.com/vi/b2zgMO63rQ0/hqdefault.jpg",
+    "uploadDate": "2025-07-01T19:22:05Z",
+    "embedUrl": "https://youtube.com/embed/b2zgMO63rQ0",
+    "url": "https://youtube.com/watch?v=b2zgMO63rQ0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 757472
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Cyclists! This Trick with a Cap and Bike Grips Will Come in Handy #bike #tips #tricks",
+    "description": "Cyclists! This Trick with a Cap and Bike Grips Will Come in Handy #bike #tips #tricks",
+    "thumbnailUrl": "https://i.ytimg.com/vi/w1z_Lt13VEc/hqdefault.jpg",
+    "uploadDate": "2025-07-02T05:01:07Z",
+    "embedUrl": "https://youtube.com/embed/w1z_Lt13VEc",
+    "url": "https://youtube.com/watch?v=w1z_Lt13VEc",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1797718
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Баку показал: гуськом могут идти и россияне.",
+    "description": "Баку показал: гуськом могут идти и россияне.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/J7RsxoYYRSg/hqdefault.jpg",
+    "uploadDate": "2025-07-02T10:38:01Z",
+    "embedUrl": "https://youtube.com/embed/J7RsxoYYRSg",
+    "url": "https://youtube.com/watch?v=J7RsxoYYRSg",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 235749
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "ПАРАЗИТЫ 5 (ФИНАЛ)! Самый БОЛЬШОЙ клан АЗИИ и РЕЙД на 1000 РАКЕТ в РАСТ RUST",
+    "description": "ПАРАЗИТЫ 5 (ФИНАЛ)! Самый БОЛЬШОЙ клан АЗИИ и РЕЙД на 1000 РАКЕТ в РАСТ RUST",
+    "thumbnailUrl": "https://i.ytimg.com/vi/wFSGrouk_yQ/hqdefault.jpg",
+    "uploadDate": "2025-07-01T15:58:46Z",
+    "embedUrl": "https://youtube.com/embed/wFSGrouk_yQ",
+    "url": "https://youtube.com/watch?v=wFSGrouk_yQ",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 972890
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Отжала у Мамы Квартиру - Неравный Брак",
+    "description": "Отжала у Мамы Квартиру - Неравный Брак",
+    "thumbnailUrl": "https://i.ytimg.com/vi/y0f-FfNDCL0/hqdefault.jpg",
+    "uploadDate": "2025-07-02T11:39:07Z",
+    "embedUrl": "https://youtube.com/embed/y0f-FfNDCL0",
+    "url": "https://youtube.com/watch?v=y0f-FfNDCL0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 159455
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "ПРАНК МАМЫ В МАШИНЕ (она нам это не простит) / Вики Шоу",
+    "description": "ПРАНК МАМЫ В МАШИНЕ (она нам это не простит) / Вики Шоу",
+    "thumbnailUrl": "https://i.ytimg.com/vi/So8Qy2EWppQ/hqdefault.jpg",
+    "uploadDate": "2025-07-03T08:45:06Z",
+    "embedUrl": "https://youtube.com/embed/So8Qy2EWppQ",
+    "url": "https://youtube.com/watch?v=So8Qy2EWppQ",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 263227
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "«Моя игра» в Лужниках!",
+    "description": "«Моя игра» в Лужниках!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/1K8J-RaDuHs/hqdefault.jpg",
+    "uploadDate": "2025-07-01T10:25:09Z",
+    "embedUrl": "https://youtube.com/embed/1K8J-RaDuHs",
+    "url": "https://youtube.com/watch?v=1K8J-RaDuHs",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 377853
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Our Plush is available at @GameStop ! Bring your Puffs home today! #thatlittlepuff #puffplush",
+    "description": "Our Plush is available at @GameStop ! Bring your Puffs home today! #thatlittlepuff #puffplush",
+    "thumbnailUrl": "https://i.ytimg.com/vi/keAKilHOonw/hqdefault.jpg",
+    "uploadDate": "2025-06-30T02:01:19Z",
+    "embedUrl": "https://youtube.com/embed/keAKilHOonw",
+    "url": "https://youtube.com/watch?v=keAKilHOonw",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 4906190
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Обращение к Федерации бокса и тренеру девушки давшей покурить вейп орангутану!",
+    "description": "Обращение к Федерации бокса и тренеру девушки давшей покурить вейп орангутану!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/3hv5DX3klvY/hqdefault.jpg",
+    "uploadDate": "2025-07-02T12:12:30Z",
+    "embedUrl": "https://youtube.com/embed/3hv5DX3klvY",
+    "url": "https://youtube.com/watch?v=3hv5DX3klvY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 146530
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "😈ОНА ОБИЖАЛА НЮШУ 😂 И МЫ ЕЁ ПОДЖАРИЛИ! #roblox #роблокс #brookhaven",
+    "description": "😈ОНА ОБИЖАЛА НЮШУ 😂 И МЫ ЕЁ ПОДЖАРИЛИ! #roblox #роблокс #brookhaven",
+    "thumbnailUrl": "https://i.ytimg.com/vi/YRFaYAGj16A/hqdefault.jpg",
+    "uploadDate": "2025-07-02T11:01:07Z",
+    "embedUrl": "https://youtube.com/embed/YRFaYAGj16A",
+    "url": "https://youtube.com/watch?v=YRFaYAGj16A",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 179737
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Лысый бандит напал на деда!😱",
+    "description": "Лысый бандит напал на деда!😱",
+    "thumbnailUrl": "https://i.ytimg.com/vi/hjrbCkrl6mQ/hqdefault.jpg",
+    "uploadDate": "2025-07-01T08:48:06Z",
+    "embedUrl": "https://youtube.com/embed/hjrbCkrl6mQ",
+    "url": "https://youtube.com/watch?v=hjrbCkrl6mQ",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 484846
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Жириновский про пятую колонну в Думе! #жириновский #ввж #жириновскийпророк",
+    "description": "Жириновский про пятую колонну в Думе! #жириновский #ввж #жириновскийпророк",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Uk-OoCRCl7c/hqdefault.jpg",
+    "uploadDate": "2025-07-01T11:36:20Z",
+    "embedUrl": "https://youtube.com/embed/Uk-OoCRCl7c",
+    "url": "https://youtube.com/watch?v=Uk-OoCRCl7c",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 528174
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "опять Вау Вероника жжет ‼️ @wowveronica  мои концерты на MARYANALOKEL.RU",
+    "description": "опять Вау Вероника жжет ‼️ @wowveronica  мои концерты на MARYANALOKEL.RU",
+    "thumbnailUrl": "https://i.ytimg.com/vi/ZAQ_Mw_UdW0/hqdefault.jpg",
+    "uploadDate": "2025-07-02T12:01:12Z",
+    "embedUrl": "https://youtube.com/embed/ZAQ_Mw_UdW0",
+    "url": "https://youtube.com/watch?v=ZAQ_Mw_UdW0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 2143727
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "☝️ Назови КАРЬЕРУ ЗЛАТАНА ИБРАГИМОВИЧА #мячlab #футбол #карьера #ибрагимович",
+    "description": "☝️ Назови КАРЬЕРУ ЗЛАТАНА ИБРАГИМОВИЧА #мячlab #футбол #карьера #ибрагимович",
+    "thumbnailUrl": "https://i.ytimg.com/vi/ZTRjfyqurz0/hqdefault.jpg",
+    "uploadDate": "2025-07-01T13:03:51Z",
+    "embedUrl": "https://youtube.com/embed/ZTRjfyqurz0",
+    "url": "https://youtube.com/watch?v=ZTRjfyqurz0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 385670
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Баку бьет по российским криминальным сетям",
+    "description": "Баку бьет по российским криминальным сетям",
+    "thumbnailUrl": "https://i.ytimg.com/vi/zNH6F1YYUzU/hqdefault.jpg",
+    "uploadDate": "2025-07-01T13:38:14Z",
+    "embedUrl": "https://youtube.com/embed/zNH6F1YYUzU",
+    "url": "https://youtube.com/watch?v=zNH6F1YYUzU",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 448953
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Repeat The Trick or Swim 🥶💦",
+    "description": "Repeat The Trick or Swim 🥶💦",
+    "thumbnailUrl": "https://i.ytimg.com/vi/aHrK586PVeI/hqdefault.jpg",
+    "uploadDate": "2025-07-01T15:00:02Z",
+    "embedUrl": "https://youtube.com/embed/aHrK586PVeI",
+    "url": "https://youtube.com/watch?v=aHrK586PVeI",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 30471151
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Oven baked tauok $ rice 🍚 #abirzkitchen",
+    "description": "Oven baked tauok $ rice 🍚 #abirzkitchen",
+    "thumbnailUrl": "https://i.ytimg.com/vi/z_X4hncZDgc/hqdefault.jpg",
+    "uploadDate": "2025-07-02T17:19:27Z",
+    "embedUrl": "https://youtube.com/embed/z_X4hncZDgc",
+    "url": "https://youtube.com/watch?v=z_X4hncZDgc",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 2455853
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Азербайджан обнародовал шокирующую правду о деле братьев Сафаровых",
+    "description": "Азербайджан обнародовал шокирующую правду о деле братьев Сафаровых",
+    "thumbnailUrl": "https://i.ytimg.com/vi/_dRcZf2O2Ek/hqdefault.jpg",
+    "uploadDate": "2025-07-01T11:43:52Z",
+    "embedUrl": "https://youtube.com/embed/_dRcZf2O2Ek",
+    "url": "https://youtube.com/watch?v=_dRcZf2O2Ek",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 407628
+    }
   }
-}
+]

@@ -1,106 +1,852 @@
-{
-  "@context": "http://schema.org",
-  "@type": "WebPage",
-  "name": "Trending YouTube Videos in Ghana",
-  "description": "Most popular YouTube videos currently trending in Ghana.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "TopTubeList",
-    "url": "https://toptubelist.com/"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "NASTY FEELINGS - DESTINY ETIKO, CHIKE DANIELS, EBERE OKARO, BIBI SONYE, LATEST 2025 NIGERIAN MOVIE",
+    "description": "NASTY FEELINGS - DESTINY ETIKO, CHIKE DANIELS, EBERE OKARO, BIBI SONYE, LATEST 2025 NIGERIAN MOVIE",
+    "thumbnailUrl": "https://i.ytimg.com/vi/taWwwPo8PaY/hqdefault.jpg",
+    "uploadDate": "2025-06-30T16:00:54Z",
+    "embedUrl": "https://youtube.com/embed/taWwwPo8PaY",
+    "url": "https://youtube.com/watch?v=taWwwPo8PaY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1113654
+    }
   },
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Who was faster? 😳😱 @isabellaafro",
-          "description": "Trending video from Jaymondy in Ghana",
-          "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
-          "uploadDate": "2025-06-29T11:30:33Z",
-          "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 117410640
-          },
-          "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
-        }
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Who was faster? 😳😱 @isabellaafro",
+    "description": "Who was faster? 😳😱 @isabellaafro",
+    "thumbnailUrl": "https://i.ytimg.com/vi/SOATZrBeGEk/hqdefault.jpg",
+    "uploadDate": "2025-06-29T11:30:33Z",
+    "embedUrl": "https://youtube.com/embed/SOATZrBeGEk",
+    "url": "https://youtube.com/watch?v=SOATZrBeGEk",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "NASTY FEELINGS - DESTINY ETIKO, CHIKE DANIELS, EBERE OKARO, BIBI SONYE, LATEST 2025 NIGERIAN MOVIE",
-          "description": "Trending video from Chinemelu's Channel in Ghana",
-          "thumbnailUrl": "https://i.ytimg.com/vi/taWwwPo8PaY/hqdefault.jpg",
-          "uploadDate": "2025-06-30T16:00:54Z",
-          "embedUrl": "https://www.youtube.com/embed/taWwwPo8PaY",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1004658
-          },
-          "url": "https://www.youtube.com/watch?v=taWwwPo8PaY"
-        }
+      "userInteractionCount": 125928393
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Man is a top Chinese cuisine chef. #action #viralvideo",
+    "description": "Man is a top Chinese cuisine chef. #action #viralvideo",
+    "thumbnailUrl": "https://i.ytimg.com/vi/aBeRw1KwyyE/hqdefault.jpg",
+    "uploadDate": "2025-06-27T13:00:01Z",
+    "embedUrl": "https://youtube.com/embed/aBeRw1KwyyE",
+    "url": "https://youtube.com/watch?v=aBeRw1KwyyE",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Man is a top Chinese cuisine chef. #action #viralvideo",
-          "description": "Trending video from CineSpotlight in Ghana",
-          "thumbnailUrl": "https://i.ytimg.com/vi/aBeRw1KwyyE/hqdefault.jpg",
-          "uploadDate": "2025-06-27T13:00:01Z",
-          "embedUrl": "https://www.youtube.com/embed/aBeRw1KwyyE",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 12736728
-          },
-          "url": "https://www.youtube.com/watch?v=aBeRw1KwyyE"
-        }
+      "userInteractionCount": 13607520
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Al-Hilal STUNS Manchester City 4-3! | 2025 FIFA Club World Cup Highlights",
+    "description": "Al-Hilal STUNS Manchester City 4-3! | 2025 FIFA Club World Cup Highlights",
+    "thumbnailUrl": "https://i.ytimg.com/vi/c_I6CJkS4aQ/hqdefault.jpg",
+    "uploadDate": "2025-07-01T04:12:43Z",
+    "embedUrl": "https://youtube.com/embed/c_I6CJkS4aQ",
+    "url": "https://youtube.com/watch?v=c_I6CJkS4aQ",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Al-Hilal STUNS Manchester City 4-3! | 2025 FIFA Club World Cup Highlights",
-          "description": "Trending video from DAZN Football in Ghana",
-          "thumbnailUrl": "https://i.ytimg.com/vi/c_I6CJkS4aQ/hqdefault.jpg",
-          "uploadDate": "2025-07-01T04:12:43Z",
-          "embedUrl": "https://www.youtube.com/embed/c_I6CJkS4aQ",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 7997911
-          },
-          "url": "https://www.youtube.com/watch?v=c_I6CJkS4aQ"
-        }
+      "userInteractionCount": 8059665
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "LIVE | Real Madrid vs Juventus | Round of 16 | FIFA CLUB WORLD CUP | SportyTV",
+    "description": "LIVE | Real Madrid vs Juventus | Round of 16 | FIFA CLUB WORLD CUP | SportyTV",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Vr0uSr6093g/hqdefault.jpg",
+    "uploadDate": "2025-07-01T21:39:43Z",
+    "embedUrl": "https://youtube.com/embed/Vr0uSr6093g",
+    "url": "https://youtube.com/watch?v=Vr0uSr6093g",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "LIVE | Real Madrid vs Juventus | Round of 16 | FIFA CLUB WORLD CUP | SportyTV",
-          "description": "Trending video from SportyTV in Ghana",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Vr0uSr6093g/hqdefault.jpg",
-          "uploadDate": "2025-07-01T21:39:43Z",
-          "embedUrl": "https://www.youtube.com/embed/Vr0uSr6093g",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 818325
-          },
-          "url": "https://www.youtube.com/watch?v=Vr0uSr6093g"
-        }
-      }
-    ]
+      "userInteractionCount": 819996
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Uncle close your eyes. #strangeman #shorts #shortmovie #lovemovies",
+    "description": "Uncle close your eyes. #strangeman #shorts #shortmovie #lovemovies",
+    "thumbnailUrl": "https://i.ytimg.com/vi/PdHJ7j13zcw/hqdefault.jpg",
+    "uploadDate": "2025-06-28T08:40:31Z",
+    "embedUrl": "https://youtube.com/embed/PdHJ7j13zcw",
+    "url": "https://youtube.com/watch?v=PdHJ7j13zcw",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 258348
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "They didn't expected this art😂💕",
+    "description": "They didn't expected this art😂💕",
+    "thumbnailUrl": "https://i.ytimg.com/vi/D_zzbW_8GmQ/hqdefault.jpg",
+    "uploadDate": "2025-06-24T16:00:21Z",
+    "embedUrl": "https://youtube.com/embed/D_zzbW_8GmQ",
+    "url": "https://youtube.com/watch?v=D_zzbW_8GmQ",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 38333751
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Praise Reloaded 2025 - FESTIVAL OF GRATITUDE",
+    "description": "Praise Reloaded 2025 - FESTIVAL OF GRATITUDE",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Sj6H4TiUJfc/hqdefault.jpg",
+    "uploadDate": "2025-06-29T23:40:32Z",
+    "embedUrl": "https://youtube.com/embed/Sj6H4TiUJfc",
+    "url": "https://youtube.com/watch?v=Sj6H4TiUJfc",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 99348
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Which Shoes Will Protect Your Feet?",
+    "description": "Which Shoes Will Protect Your Feet?",
+    "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
+    "uploadDate": "2025-06-24T21:50:02Z",
+    "embedUrl": "https://youtube.com/embed/nj6W9v6yjFk",
+    "url": "https://youtube.com/watch?v=nj6W9v6yjFk",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 129239927
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "AFRICAN HOME: THE GOOD, THE BAD AND THE UGLY",
+    "description": "AFRICAN HOME: THE GOOD, THE BAD AND THE UGLY",
+    "thumbnailUrl": "https://i.ytimg.com/vi/DYePIt01etc/hqdefault.jpg",
+    "uploadDate": "2025-06-30T17:02:11Z",
+    "embedUrl": "https://youtube.com/embed/DYePIt01etc",
+    "url": "https://youtube.com/watch?v=DYePIt01etc",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1503348
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "McBrown's Kitchen with Oheneni Adazoa | SE22 EP06",
+    "description": "McBrown's Kitchen with Oheneni Adazoa | SE22 EP06",
+    "thumbnailUrl": "https://i.ytimg.com/vi/6S98ul3LEfM/hqdefault.jpg",
+    "uploadDate": "2025-06-28T16:09:50Z",
+    "embedUrl": "https://youtube.com/embed/6S98ul3LEfM",
+    "url": "https://youtube.com/watch?v=6S98ul3LEfM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 134739
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Repeat The Trick or Swim 🥶💦",
+    "description": "Repeat The Trick or Swim 🥶💦",
+    "thumbnailUrl": "https://i.ytimg.com/vi/aHrK586PVeI/hqdefault.jpg",
+    "uploadDate": "2025-07-01T15:00:02Z",
+    "embedUrl": "https://youtube.com/embed/aHrK586PVeI",
+    "url": "https://youtube.com/watch?v=aHrK586PVeI",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 30471151
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "HOW A BROKE CHEF DISGUISED TO WIN THE HEART OF A BILLIONAIRE BOSS LADY 2025 NIGERIAN FULL MOVIE",
+    "description": "HOW A BROKE CHEF DISGUISED TO WIN THE HEART OF A BILLIONAIRE BOSS LADY 2025 NIGERIAN FULL MOVIE",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Z-ABIHVb3SU/hqdefault.jpg",
+    "uploadDate": "2025-06-29T16:00:56Z",
+    "embedUrl": "https://youtube.com/embed/Z-ABIHVb3SU",
+    "url": "https://youtube.com/watch?v=Z-ABIHVb3SU",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 224077
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "WHAT REMAINS OF US - Nigerian Movies 2025 Latest Full Movies",
+    "description": "WHAT REMAINS OF US - Nigerian Movies 2025 Latest Full Movies",
+    "thumbnailUrl": "https://i.ytimg.com/vi/YJKcMAXwb-s/hqdefault.jpg",
+    "uploadDate": "2025-06-24T15:00:52Z",
+    "embedUrl": "https://youtube.com/embed/YJKcMAXwb-s",
+    "url": "https://youtube.com/watch?v=YJKcMAXwb-s",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 740498
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "PEACE OR PIECES  - LIZZY GOLD ONUWAJE, OBI OKOLI  - 2025 Latest Movies",
+    "description": "PEACE OR PIECES  - LIZZY GOLD ONUWAJE, OBI OKOLI  - 2025 Latest Movies",
+    "thumbnailUrl": "https://i.ytimg.com/vi/WdGD9-DGq_o/hqdefault.jpg",
+    "uploadDate": "2025-06-30T15:01:04Z",
+    "embedUrl": "https://youtube.com/embed/WdGD9-DGq_o",
+    "url": "https://youtube.com/watch?v=WdGD9-DGq_o",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 399949
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Break: Nana Agradaa Convicted Over Defrauding; Taken To Hospital For Pregnancy Test Before Sentence",
+    "description": "Break: Nana Agradaa Convicted Over Defrauding; Taken To Hospital For Pregnancy Test Before Sentence",
+    "thumbnailUrl": "https://i.ytimg.com/vi/rcTrfknZiyw/hqdefault.jpg",
+    "uploadDate": "2025-07-03T12:55:15Z",
+    "embedUrl": "https://youtube.com/embed/rcTrfknZiyw",
+    "url": "https://youtube.com/watch?v=rcTrfknZiyw",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 44726
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Perfect composure 👏",
+    "description": "Perfect composure 👏",
+    "thumbnailUrl": "https://i.ytimg.com/vi/p_s9zpxbd0I/hqdefault.jpg",
+    "uploadDate": "2025-06-18T11:01:24Z",
+    "embedUrl": "https://youtube.com/embed/p_s9zpxbd0I",
+    "url": "https://youtube.com/watch?v=p_s9zpxbd0I",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 11617671
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "WATCH: SERWAA TV SERIES EPISODE 1 | WILL SERWAA SURVIVE HER FIRST NIGHT IN THE CITY?",
+    "description": "WATCH: SERWAA TV SERIES EPISODE 1 | WILL SERWAA SURVIVE HER FIRST NIGHT IN THE CITY?",
+    "thumbnailUrl": "https://i.ytimg.com/vi/71mLptpSuP8/hqdefault.jpg",
+    "uploadDate": "2025-06-27T15:00:08Z",
+    "embedUrl": "https://youtube.com/embed/71mLptpSuP8",
+    "url": "https://youtube.com/watch?v=71mLptpSuP8",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 98460
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "How did this not go in? 🤣",
+    "description": "How did this not go in? 🤣",
+    "thumbnailUrl": "https://i.ytimg.com/vi/1VeG0FqkLR4/hqdefault.jpg",
+    "uploadDate": "2025-06-23T15:30:00Z",
+    "embedUrl": "https://youtube.com/embed/1VeG0FqkLR4",
+    "url": "https://youtube.com/watch?v=1VeG0FqkLR4",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 20215437
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "LIVE | PSG vs Inter Miami | Round of 16 | FIFA CLUB WORLD CUP | SportyTV",
+    "description": "LIVE | PSG vs Inter Miami | Round of 16 | FIFA CLUB WORLD CUP | SportyTV",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Xaiqs_6JOx4/hqdefault.jpg",
+    "uploadDate": "2025-06-29T18:56:30Z",
+    "embedUrl": "https://youtube.com/embed/Xaiqs_6JOx4",
+    "url": "https://youtube.com/watch?v=Xaiqs_6JOx4",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 770439
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Wasn't my fault tho!😳 @isabellaafro",
+    "description": "Wasn't my fault tho!😳 @isabellaafro",
+    "thumbnailUrl": "https://i.ytimg.com/vi/cllwgGfFwKg/hqdefault.jpg",
+    "uploadDate": "2025-06-28T13:35:01Z",
+    "embedUrl": "https://youtube.com/embed/cllwgGfFwKg",
+    "url": "https://youtube.com/watch?v=cllwgGfFwKg",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 45445105
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "LOVE IN A FIX - Chike Daniels, Jenniffer Ephraim 2025 latestnigerian full movies",
+    "description": "LOVE IN A FIX - Chike Daniels, Jenniffer Ephraim 2025 latestnigerian full movies",
+    "thumbnailUrl": "https://i.ytimg.com/vi/XRlN8KJKj3U/hqdefault.jpg",
+    "uploadDate": "2025-06-30T13:29:31Z",
+    "embedUrl": "https://youtube.com/embed/XRlN8KJKj3U",
+    "url": "https://youtube.com/watch?v=XRlN8KJKj3U",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 191351
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Can An EXTREMELY  STRONG Pressure Washer Slice a Human Hand?",
+    "description": "Can An EXTREMELY  STRONG Pressure Washer Slice a Human Hand?",
+    "thumbnailUrl": "https://i.ytimg.com/vi/p6APdJSEUok/hqdefault.jpg",
+    "uploadDate": "2025-06-27T01:01:00Z",
+    "embedUrl": "https://youtube.com/embed/p6APdJSEUok",
+    "url": "https://youtube.com/watch?v=p6APdJSEUok",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 17008561
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "For five million,she married an old man—only to find out he was a young, handsome CEO＆her first love",
+    "description": "For five million,she married an old man—only to find out he was a young, handsome CEO＆her first love",
+    "thumbnailUrl": "https://i.ytimg.com/vi/AqJjK-4Mb04/hqdefault.jpg",
+    "uploadDate": "2025-06-26T10:30:13Z",
+    "embedUrl": "https://youtube.com/embed/AqJjK-4Mb04",
+    "url": "https://youtube.com/watch?v=AqJjK-4Mb04",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 919720
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Davido - With You (Official Video) ft. Omah Lay",
+    "description": "Davido - With You (Official Video) ft. Omah Lay",
+    "thumbnailUrl": "https://i.ytimg.com/vi/XCjU9qbfv1U/hqdefault.jpg",
+    "uploadDate": "2025-06-16T16:00:06Z",
+    "embedUrl": "https://youtube.com/embed/XCjU9qbfv1U",
+    "url": "https://youtube.com/watch?v=XCjU9qbfv1U",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 10000836
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Sarkodie - Violence ft. Kweku Smoke (Official Video)",
+    "description": "Sarkodie - Violence ft. Kweku Smoke (Official Video)",
+    "thumbnailUrl": "https://i.ytimg.com/vi/QZItbPCRez0/hqdefault.jpg",
+    "uploadDate": "2025-06-12T23:31:42Z",
+    "embedUrl": "https://youtube.com/embed/QZItbPCRez0",
+    "url": "https://youtube.com/watch?v=QZItbPCRez0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 677838
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "he saved her #movie #film #movieclips",
+    "description": "he saved her #movie #film #movieclips",
+    "thumbnailUrl": "https://i.ytimg.com/vi/es7PnEaqHZw/hqdefault.jpg",
+    "uploadDate": "2025-06-24T12:41:53Z",
+    "embedUrl": "https://youtube.com/embed/es7PnEaqHZw",
+    "url": "https://youtube.com/watch?v=es7PnEaqHZw",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 695386
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Mother used her brain 😂🔥",
+    "description": "Mother used her brain 😂🔥",
+    "thumbnailUrl": "https://i.ytimg.com/vi/JV9FHXdLLI8/hqdefault.jpg",
+    "uploadDate": "2025-06-17T14:55:00Z",
+    "embedUrl": "https://youtube.com/embed/JV9FHXdLLI8",
+    "url": "https://youtube.com/watch?v=JV9FHXdLLI8",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 97871363
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "LOVE IS ALL IT TAKES - Nigerian Movies 2025 Latest Full Movies",
+    "description": "LOVE IS ALL IT TAKES - Nigerian Movies 2025 Latest Full Movies",
+    "thumbnailUrl": "https://i.ytimg.com/vi/5DH8gqydjNE/hqdefault.jpg",
+    "uploadDate": "2025-06-27T17:01:36Z",
+    "embedUrl": "https://youtube.com/embed/5DH8gqydjNE",
+    "url": "https://youtube.com/watch?v=5DH8gqydjNE",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 336646
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "LOCAL BEAUTY - Sandra Okunzuwa, Ray Emodi, Ik Ogbonna 2025 Latest Nollywood Full Movie",
+    "description": "LOCAL BEAUTY - Sandra Okunzuwa, Ray Emodi, Ik Ogbonna 2025 Latest Nollywood Full Movie",
+    "thumbnailUrl": "https://i.ytimg.com/vi/87MQG5-9SoU/hqdefault.jpg",
+    "uploadDate": "2025-06-21T17:00:17Z",
+    "embedUrl": "https://youtube.com/embed/87MQG5-9SoU",
+    "url": "https://youtube.com/watch?v=87MQG5-9SoU",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 980794
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Longest-Shot Ever?!? 🤯😧🤩",
+    "description": "Longest-Shot Ever?!? 🤯😧🤩",
+    "thumbnailUrl": "https://i.ytimg.com/vi/JY3oLIF01bk/hqdefault.jpg",
+    "uploadDate": "2025-06-24T10:10:18Z",
+    "embedUrl": "https://youtube.com/embed/JY3oLIF01bk",
+    "url": "https://youtube.com/watch?v=JY3oLIF01bk",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 4684889
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "If only there was a page dedicated to babies being funny... 😂 #funny #cutebaby",
+    "description": "If only there was a page dedicated to babies being funny... 😂 #funny #cutebaby",
+    "thumbnailUrl": "https://i.ytimg.com/vi/BBwqUb1unUY/hqdefault.jpg",
+    "uploadDate": "2025-06-17T06:00:07Z",
+    "embedUrl": "https://youtube.com/embed/BBwqUb1unUY",
+    "url": "https://youtube.com/watch?v=BBwqUb1unUY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 15490358
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Resumo | Benfica 1-4 Chelsea | FIFA Mundial de Clubes",
+    "description": "Resumo | Benfica 1-4 Chelsea | FIFA Mundial de Clubes",
+    "thumbnailUrl": "https://i.ytimg.com/vi/0Xejg18s0CM/hqdefault.jpg",
+    "uploadDate": "2025-06-29T01:10:25Z",
+    "embedUrl": "https://youtube.com/embed/0Xejg18s0CM",
+    "url": "https://youtube.com/watch?v=0Xejg18s0CM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 2529584
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "LIVE | Juventus vs Manchester City | FIFA CLUB WORLD CUP | SportyTV",
+    "description": "LIVE | Juventus vs Manchester City | FIFA CLUB WORLD CUP | SportyTV",
+    "thumbnailUrl": "https://i.ytimg.com/vi/ZAG3Cs8Jb80/hqdefault.jpg",
+    "uploadDate": "2025-06-26T21:49:48Z",
+    "embedUrl": "https://youtube.com/embed/ZAG3Cs8Jb80",
+    "url": "https://youtube.com/watch?v=ZAG3Cs8Jb80",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 605090
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "THE CHECKLIST - Nigerian Movies 2025 Latest Full Movies",
+    "description": "THE CHECKLIST - Nigerian Movies 2025 Latest Full Movies",
+    "thumbnailUrl": "https://i.ytimg.com/vi/NCuP28hB9vs/hqdefault.jpg",
+    "uploadDate": "2025-06-13T16:00:38Z",
+    "embedUrl": "https://youtube.com/embed/NCuP28hB9vs",
+    "url": "https://youtube.com/watch?v=NCuP28hB9vs",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 2000927
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Getting Roasted By Dave Ramsey",
+    "description": "Getting Roasted By Dave Ramsey",
+    "thumbnailUrl": "https://i.ytimg.com/vi/hNlye3kaALg/hqdefault.jpg",
+    "uploadDate": "2025-06-19T13:15:07Z",
+    "embedUrl": "https://youtube.com/embed/hNlye3kaALg",
+    "url": "https://youtube.com/watch?v=hNlye3kaALg",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 8899944
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "NOT MY WISH - Omeche Oko, Christian Ochiagha, Victory Michael Latest 2025 Nollywood Full Movie",
+    "description": "NOT MY WISH - Omeche Oko, Christian Ochiagha, Victory Michael Latest 2025 Nollywood Full Movie",
+    "thumbnailUrl": "https://i.ytimg.com/vi/FMeePOUVauc/hqdefault.jpg",
+    "uploadDate": "2025-06-15T16:00:14Z",
+    "embedUrl": "https://youtube.com/embed/FMeePOUVauc",
+    "url": "https://youtube.com/watch?v=FMeePOUVauc",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1137111
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "聰明的自救辦法！ #短剧 #正能量 #缅北",
+    "description": "聰明的自救辦法！ #短剧 #正能量 #缅北",
+    "thumbnailUrl": "https://i.ytimg.com/vi/GF-42bOkx-I/hqdefault.jpg",
+    "uploadDate": "2025-06-18T11:00:21Z",
+    "embedUrl": "https://youtube.com/embed/GF-42bOkx-I",
+    "url": "https://youtube.com/watch?v=GF-42bOkx-I",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 18583230
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "The REAL Military Phone Case",
+    "description": "The REAL Military Phone Case",
+    "thumbnailUrl": "https://i.ytimg.com/vi/XZ8Y5O_pg2E/hqdefault.jpg",
+    "uploadDate": "2025-06-20T19:08:09Z",
+    "embedUrl": "https://youtube.com/embed/XZ8Y5O_pg2E",
+    "url": "https://youtube.com/watch?v=XZ8Y5O_pg2E",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 14168766
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "BLOOD AND HUSTLE - Nigerian movies 2025 Latest full movies",
+    "description": "BLOOD AND HUSTLE - Nigerian movies 2025 Latest full movies",
+    "thumbnailUrl": "https://i.ytimg.com/vi/4aKTeICUPQs/hqdefault.jpg",
+    "uploadDate": "2025-06-21T16:00:08Z",
+    "embedUrl": "https://youtube.com/embed/4aKTeICUPQs",
+    "url": "https://youtube.com/watch?v=4aKTeICUPQs",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 512760
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "TILL THE DUST SETTLES - Nigerian Movies 2025 Latest Full Movies",
+    "description": "TILL THE DUST SETTLES - Nigerian Movies 2025 Latest Full Movies",
+    "thumbnailUrl": "https://i.ytimg.com/vi/_-fLEAt93x4/hqdefault.jpg",
+    "uploadDate": "2025-06-06T17:00:50Z",
+    "embedUrl": "https://youtube.com/embed/_-fLEAt93x4",
+    "url": "https://youtube.com/watch?v=_-fLEAt93x4",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 4475760
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Incredible escape #moive #filmcommentary #shorts #usa",
+    "description": "Incredible escape #moive #filmcommentary #shorts #usa",
+    "thumbnailUrl": "https://i.ytimg.com/vi/B_khBREHbBY/hqdefault.jpg",
+    "uploadDate": "2025-06-10T20:30:03Z",
+    "embedUrl": "https://youtube.com/embed/B_khBREHbBY",
+    "url": "https://youtube.com/watch?v=B_khBREHbBY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 7454810
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Who’s Next? 🏃🏿💨 #ishowspeed",
+    "description": "Who’s Next? 🏃🏿💨 #ishowspeed",
+    "thumbnailUrl": "https://i.ytimg.com/vi/O62xINa5O_w/hqdefault.jpg",
+    "uploadDate": "2025-06-23T18:39:37Z",
+    "embedUrl": "https://youtube.com/embed/O62xINa5O_w",
+    "url": "https://youtube.com/watch?v=O62xINa5O_w",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 18510631
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Lose 100 LBs, Win $250,000!",
+    "description": "Lose 100 LBs, Win $250,000!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/pe_ejTiIcSs/hqdefault.jpg",
+    "uploadDate": "2025-06-21T16:00:01Z",
+    "embedUrl": "https://youtube.com/embed/pe_ejTiIcSs",
+    "url": "https://youtube.com/watch?v=pe_ejTiIcSs",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 155064720
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Dad with boy's vs girls",
+    "description": "Dad with boy's vs girls",
+    "thumbnailUrl": "https://i.ytimg.com/vi/lfUGBc0LT88/hqdefault.jpg",
+    "uploadDate": "2025-06-12T14:55:02Z",
+    "embedUrl": "https://youtube.com/embed/lfUGBc0LT88",
+    "url": "https://youtube.com/watch?v=lfUGBc0LT88",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 14389129
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Benfica 1-4 Chelsea (AET) | HIGHLIGHTS | FIFA Club World Cup 2025",
+    "description": "Benfica 1-4 Chelsea (AET) | HIGHLIGHTS | FIFA Club World Cup 2025",
+    "thumbnailUrl": "https://i.ytimg.com/vi/_aqiS5FyFXE/hqdefault.jpg",
+    "uploadDate": "2025-06-29T08:00:42Z",
+    "embedUrl": "https://youtube.com/embed/_aqiS5FyFXE",
+    "url": "https://youtube.com/watch?v=_aqiS5FyFXE",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 858363
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "THE CAT WAS BEATEN TO DEATH SAVING A PREGNANT WOMAN… BUT JESUS SAVED ITS SOUL #jesus",
+    "description": "THE CAT WAS BEATEN TO DEATH SAVING A PREGNANT WOMAN… BUT JESUS SAVED ITS SOUL #jesus",
+    "thumbnailUrl": "https://i.ytimg.com/vi/zoLY5lmnvw4/hqdefault.jpg",
+    "uploadDate": "2025-06-08T14:13:29Z",
+    "embedUrl": "https://youtube.com/embed/zoLY5lmnvw4",
+    "url": "https://youtube.com/watch?v=zoLY5lmnvw4",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 17516325
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "LOVE ON A CROSS FIRE - REGINA DANIELS, RAY EMODI,  - 2025 EXCLUSIVE NOLLYWOOD MOVIE",
+    "description": "LOVE ON A CROSS FIRE - REGINA DANIELS, RAY EMODI,  - 2025 EXCLUSIVE NOLLYWOOD MOVIE",
+    "thumbnailUrl": "https://i.ytimg.com/vi/XhAI0-VT-0k/hqdefault.jpg",
+    "uploadDate": "2025-06-16T16:00:53Z",
+    "embedUrl": "https://youtube.com/embed/XhAI0-VT-0k",
+    "url": "https://youtube.com/watch?v=XhAI0-VT-0k",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 850306
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "🐍👦🌺GIANT SNAKE SAVE boy from MAN-EATING FLOWER! Enemy become friend! | Snake 3 | YOUKU MONSTER MOVIE",
+    "description": "🐍👦🌺GIANT SNAKE SAVE boy from MAN-EATING FLOWER! Enemy become friend! | Snake 3 | YOUKU MONSTER MOVIE",
+    "thumbnailUrl": "https://i.ytimg.com/vi/uKqRA5fuLEs/hqdefault.jpg",
+    "uploadDate": "2025-06-15T12:01:30Z",
+    "embedUrl": "https://youtube.com/embed/uKqRA5fuLEs",
+    "url": "https://youtube.com/watch?v=uKqRA5fuLEs",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 8546245
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "This is impressive 😂 (via @powerrickshaw/TT)",
+    "description": "This is impressive 😂 (via @powerrickshaw/TT)",
+    "thumbnailUrl": "https://i.ytimg.com/vi/vgD7eIMQ9N0/hqdefault.jpg",
+    "uploadDate": "2025-06-14T16:33:58Z",
+    "embedUrl": "https://youtube.com/embed/vgD7eIMQ9N0",
+    "url": "https://youtube.com/watch?v=vgD7eIMQ9N0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 37412597
+    }
   }
-}
+]

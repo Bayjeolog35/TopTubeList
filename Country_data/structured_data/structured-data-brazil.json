@@ -1,106 +1,852 @@
-{
-  "@context": "http://schema.org",
-  "@type": "WebPage",
-  "name": "Trending YouTube Videos in Brazil",
-  "description": "Most popular YouTube videos currently trending in Brazil.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "TopTubeList",
-    "url": "https://toptubelist.com/"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "JOGAMOS OS NOVOS JOGOS DE ROUND 6 *Quem foi melhor ?",
+    "description": "JOGAMOS OS NOVOS JOGOS DE ROUND 6 *Quem foi melhor ?",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Dcv71FA46I4/hqdefault.jpg",
+    "uploadDate": "2025-07-02T15:00:21Z",
+    "embedUrl": "https://youtube.com/embed/Dcv71FA46I4",
+    "url": "https://youtube.com/watch?v=Dcv71FA46I4",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 2855022
+    }
   },
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "VideoObject",
-          "name": "JOGAMOS OS NOVOS JOGOS DE ROUND 6 *Quem foi melhor ?",
-          "description": "Trending video from Emilly Vick in Brazil",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Dcv71FA46I4/hqdefault.jpg",
-          "uploadDate": "2025-07-02T15:00:21Z",
-          "embedUrl": "https://www.youtube.com/embed/Dcv71FA46I4",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2378866
-          },
-          "url": "https://www.youtube.com/watch?v=Dcv71FA46I4"
-        }
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "QUEM É O JOGADOR PROFISSIONAL? Feat. Amaral",
+    "description": "QUEM É O JOGADOR PROFISSIONAL? Feat. Amaral",
+    "thumbnailUrl": "https://i.ytimg.com/vi/ZYik1mb85YA/hqdefault.jpg",
+    "uploadDate": "2025-07-02T22:00:07Z",
+    "embedUrl": "https://youtube.com/embed/ZYik1mb85YA",
+    "url": "https://youtube.com/watch?v=ZYik1mb85YA",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Podemos Reviver o LABUBU no Minecraft?",
-          "description": "Trending video from L3VI in Brazil",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Y_54qSd_IwI/hqdefault.jpg",
-          "uploadDate": "2025-07-02T14:01:02Z",
-          "embedUrl": "https://www.youtube.com/embed/Y_54qSd_IwI",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 169742
-          },
-          "url": "https://www.youtube.com/watch?v=Y_54qSd_IwI"
-        }
+      "userInteractionCount": 378562
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Sobrevivemos 99 NOITES no Roblox com MINHA NAMORADA e MEU CUNHADO!",
+    "description": "Sobrevivemos 99 NOITES no Roblox com MINHA NAMORADA e MEU CUNHADO!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/0bei085E_eQ/hqdefault.jpg",
+    "uploadDate": "2025-07-02T22:30:00Z",
+    "embedUrl": "https://youtube.com/embed/0bei085E_eQ",
+    "url": "https://youtube.com/watch?v=0bei085E_eQ",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "MELHORES MOMENTOS: MANCHESTER CITY 3 X 4 AL HILAL | COPA DO MUNDO DE CLUBES DA FIFA | OITAVAS",
-          "description": "Trending video from CazéTV in Brazil",
-          "thumbnailUrl": "https://i.ytimg.com/vi/McSB27c3CLs/hqdefault.jpg",
-          "uploadDate": "2025-07-01T03:54:55Z",
-          "embedUrl": "https://www.youtube.com/embed/McSB27c3CLs",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4934481
-          },
-          "url": "https://www.youtube.com/watch?v=McSB27c3CLs"
-        }
+      "userInteractionCount": 137794
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "BASTIDORES | INTER 0 X 2 FLUMINENSE | COPA DO MUNDO DE CLUBES DA FIFA 2025 | OITAVAS DE FINAIS",
+    "description": "BASTIDORES | INTER 0 X 2 FLUMINENSE | COPA DO MUNDO DE CLUBES DA FIFA 2025 | OITAVAS DE FINAIS",
+    "thumbnailUrl": "https://i.ytimg.com/vi/3gbkwKRljN0/hqdefault.jpg",
+    "uploadDate": "2025-07-02T17:30:06Z",
+    "embedUrl": "https://youtube.com/embed/3gbkwKRljN0",
+    "url": "https://youtube.com/watch?v=3gbkwKRljN0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "EP. 06 - 2/5: CAIXA MISTERIOSA E REPRODUÇÃO DO CHEF FOGAÇA (01/07/25) | TEMP. 12 | MASTERCHEF BRASIL",
-          "description": "Trending video from MasterChef Brasil in Brazil",
-          "thumbnailUrl": "https://i.ytimg.com/vi/UT1s-N4RBD4/hqdefault.jpg",
-          "uploadDate": "2025-07-02T08:01:20Z",
-          "embedUrl": "https://www.youtube.com/embed/UT1s-N4RBD4",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 803199
-          },
-          "url": "https://www.youtube.com/watch?v=UT1s-N4RBD4"
-        }
+      "userInteractionCount": 143029
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Quem era Diogo Jota, jogador do Liverpool que morreu em acidente na Espanha | CNN NOVO DIA",
+    "description": "Quem era Diogo Jota, jogador do Liverpool que morreu em acidente na Espanha | CNN NOVO DIA",
+    "thumbnailUrl": "https://i.ytimg.com/vi/hOkyNDooCkU/hqdefault.jpg",
+    "uploadDate": "2025-07-03T09:54:35Z",
+    "embedUrl": "https://youtube.com/embed/hOkyNDooCkU",
+    "url": "https://youtube.com/watch?v=hOkyNDooCkU",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
       },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "EP. 06 - 3/5: CAIXA MISTERIOSA E REPRODUÇÃO DO CHEF FOGAÇA (01/07/25) | TEMP. 12 | MASTERCHEF BRASIL",
-          "description": "Trending video from MasterChef Brasil in Brazil",
-          "thumbnailUrl": "https://i.ytimg.com/vi/JAvyy4xtFDw/hqdefault.jpg",
-          "uploadDate": "2025-07-02T08:02:00Z",
-          "embedUrl": "https://www.youtube.com/embed/JAvyy4xtFDw",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 814388
-          },
-          "url": "https://www.youtube.com/watch?v=JAvyy4xtFDw"
-        }
-      }
-    ]
+      "userInteractionCount": 32859
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "ENSINEI A MINHA CRUSH A DAR GRAU DE BIKE!!!",
+    "description": "ENSINEI A MINHA CRUSH A DAR GRAU DE BIKE!!!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/veQhZ9ix0zs/hqdefault.jpg",
+    "uploadDate": "2025-07-02T21:01:12Z",
+    "embedUrl": "https://youtube.com/embed/veQhZ9ix0zs",
+    "url": "https://youtube.com/watch?v=veQhZ9ix0zs",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 120048
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Podemos Reviver o LABUBU no Minecraft?",
+    "description": "Podemos Reviver o LABUBU no Minecraft?",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Y_54qSd_IwI/hqdefault.jpg",
+    "uploadDate": "2025-07-02T14:01:02Z",
+    "embedUrl": "https://youtube.com/embed/Y_54qSd_IwI",
+    "url": "https://youtube.com/watch?v=Y_54qSd_IwI",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 221666
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Chefin, Caio Luccas - NÓS DOIS (prod. LB Único, Rocco)",
+    "description": "Chefin, Caio Luccas - NÓS DOIS (prod. LB Único, Rocco)",
+    "thumbnailUrl": "https://i.ytimg.com/vi/UduM1cOvp7s/hqdefault.jpg",
+    "uploadDate": "2025-07-03T00:15:06Z",
+    "embedUrl": "https://youtube.com/embed/UduM1cOvp7s",
+    "url": "https://youtube.com/watch?v=UduM1cOvp7s",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 60421
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Fui vender roupas para um brechó",
+    "description": "Fui vender roupas para um brechó",
+    "thumbnailUrl": "https://i.ytimg.com/vi/g49L2Y5FNP4/hqdefault.jpg",
+    "uploadDate": "2025-07-02T17:45:49Z",
+    "embedUrl": "https://youtube.com/embed/g49L2Y5FNP4",
+    "url": "https://youtube.com/watch?v=g49L2Y5FNP4",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 56026
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Sandy e Liniker fazem dueto de 'Quando a Chuva Passar' | Nesse Canto Eu Conto | Música Multishow",
+    "description": "Sandy e Liniker fazem dueto de 'Quando a Chuva Passar' | Nesse Canto Eu Conto | Música Multishow",
+    "thumbnailUrl": "https://i.ytimg.com/vi/oSbJ1hAZDLk/hqdefault.jpg",
+    "uploadDate": "2025-07-02T21:01:05Z",
+    "embedUrl": "https://youtube.com/embed/oSbJ1hAZDLk",
+    "url": "https://youtube.com/watch?v=oSbJ1hAZDLk",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 35044
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "MELHORES MOMENTOS: MANCHESTER CITY 3 X 4 AL HILAL | COPA DO MUNDO DE CLUBES DA FIFA | OITAVAS",
+    "description": "MELHORES MOMENTOS: MANCHESTER CITY 3 X 4 AL HILAL | COPA DO MUNDO DE CLUBES DA FIFA | OITAVAS",
+    "thumbnailUrl": "https://i.ytimg.com/vi/McSB27c3CLs/hqdefault.jpg",
+    "uploadDate": "2025-07-01T03:54:55Z",
+    "embedUrl": "https://youtube.com/embed/McSB27c3CLs",
+    "url": "https://youtube.com/watch?v=McSB27c3CLs",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 4969823
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "EP. 06 - 3/5: CAIXA MISTERIOSA E REPRODUÇÃO DO CHEF FOGAÇA (01/07/25) | TEMP. 12 | MASTERCHEF BRASIL",
+    "description": "EP. 06 - 3/5: CAIXA MISTERIOSA E REPRODUÇÃO DO CHEF FOGAÇA (01/07/25) | TEMP. 12 | MASTERCHEF BRASIL",
+    "thumbnailUrl": "https://i.ytimg.com/vi/JAvyy4xtFDw/hqdefault.jpg",
+    "uploadDate": "2025-07-02T08:02:00Z",
+    "embedUrl": "https://youtube.com/embed/JAvyy4xtFDw",
+    "url": "https://youtube.com/watch?v=JAvyy4xtFDw",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 907628
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "EP. 06 - 2/5: CAIXA MISTERIOSA E REPRODUÇÃO DO CHEF FOGAÇA (01/07/25) | TEMP. 12 | MASTERCHEF BRASIL",
+    "description": "EP. 06 - 2/5: CAIXA MISTERIOSA E REPRODUÇÃO DO CHEF FOGAÇA (01/07/25) | TEMP. 12 | MASTERCHEF BRASIL",
+    "thumbnailUrl": "https://i.ytimg.com/vi/UT1s-N4RBD4/hqdefault.jpg",
+    "uploadDate": "2025-07-02T08:01:20Z",
+    "embedUrl": "https://youtube.com/embed/UT1s-N4RBD4",
+    "url": "https://youtube.com/watch?v=UT1s-N4RBD4",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 882211
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "MORTIS vs THE WHOLE COMMUNITY!",
+    "description": "MORTIS vs THE WHOLE COMMUNITY!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/FzDCMVr4_lM/hqdefault.jpg",
+    "uploadDate": "2025-07-03T09:05:25Z",
+    "embedUrl": "https://youtube.com/embed/FzDCMVr4_lM",
+    "url": "https://youtube.com/watch?v=FzDCMVr4_lM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 2500007
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "HEITOR, VOCÊ ACEITA SER MEU…",
+    "description": "HEITOR, VOCÊ ACEITA SER MEU…",
+    "thumbnailUrl": "https://i.ytimg.com/vi/2GnGm54kdmk/hqdefault.jpg",
+    "uploadDate": "2025-07-01T22:30:10Z",
+    "embedUrl": "https://youtube.com/embed/2GnGm54kdmk",
+    "url": "https://youtube.com/watch?v=2GnGm54kdmk",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 443709
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "EU FUI PRESO, MAS EU FIZ UM BURACO GIGANTE NA MINHA CELA PARA FUGIR DA PRISÃO!",
+    "description": "EU FUI PRESO, MAS EU FIZ UM BURACO GIGANTE NA MINHA CELA PARA FUGIR DA PRISÃO!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/bPsNm70lK0w/hqdefault.jpg",
+    "uploadDate": "2025-07-02T15:01:06Z",
+    "embedUrl": "https://youtube.com/embed/bPsNm70lK0w",
+    "url": "https://youtube.com/watch?v=bPsNm70lK0w",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1264635
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "EP. 06 - 4/5: CAIXA MISTERIOSA E REPRODUÇÃO DO CHEF FOGAÇA (01/07/25) | TEMP. 12 | MASTERCHEF BRASIL",
+    "description": "EP. 06 - 4/5: CAIXA MISTERIOSA E REPRODUÇÃO DO CHEF FOGAÇA (01/07/25) | TEMP. 12 | MASTERCHEF BRASIL",
+    "thumbnailUrl": "https://i.ytimg.com/vi/9FwHFVt9TYE/hqdefault.jpg",
+    "uploadDate": "2025-07-02T08:03:00Z",
+    "embedUrl": "https://youtube.com/embed/9FwHFVt9TYE",
+    "url": "https://youtube.com/watch?v=9FwHFVt9TYE",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 758163
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Consegui CORAÇÕES do VENOM no Minecraft!",
+    "description": "Consegui CORAÇÕES do VENOM no Minecraft!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/ZPmX8k-x6nM/hqdefault.jpg",
+    "uploadDate": "2025-07-02T14:49:55Z",
+    "embedUrl": "https://youtube.com/embed/ZPmX8k-x6nM",
+    "url": "https://youtube.com/watch?v=ZPmX8k-x6nM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 272159
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Phoenix: Fire and Life Incarnate | Character Reveal | Marvel Rivals",
+    "description": "Phoenix: Fire and Life Incarnate | Character Reveal | Marvel Rivals",
+    "thumbnailUrl": "https://i.ytimg.com/vi/zsWg4h7Eiss/hqdefault.jpg",
+    "uploadDate": "2025-07-02T15:01:59Z",
+    "embedUrl": "https://youtube.com/embed/zsWg4h7Eiss",
+    "url": "https://youtube.com/watch?v=zsWg4h7Eiss",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1190205
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "MINECRAFT 1.22 - O GLARE e NOVA BAGA AZUL VAI CHEGAR NA ATUALIZAÇÃO!",
+    "description": "MINECRAFT 1.22 - O GLARE e NOVA BAGA AZUL VAI CHEGAR NA ATUALIZAÇÃO!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/zkyfc6iqRLA/hqdefault.jpg",
+    "uploadDate": "2025-07-02T10:19:41Z",
+    "embedUrl": "https://youtube.com/embed/zkyfc6iqRLA",
+    "url": "https://youtube.com/watch?v=zkyfc6iqRLA",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 102665
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "EU ADICIONEI 75 CREEPYPASTAS NO MINECRAFT!",
+    "description": "EU ADICIONEI 75 CREEPYPASTAS NO MINECRAFT!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/8Uv5-EeQ--8/hqdefault.jpg",
+    "uploadDate": "2025-07-01T15:00:19Z",
+    "embedUrl": "https://youtube.com/embed/8Uv5-EeQ--8",
+    "url": "https://youtube.com/watch?v=8Uv5-EeQ--8",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1924738
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "RESGATAMOS A BAILARINA DO ESCONDERIJO DO PALHAÇO CORINGA!!!",
+    "description": "RESGATAMOS A BAILARINA DO ESCONDERIJO DO PALHAÇO CORINGA!!!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/SiKLteGa92E/hqdefault.jpg",
+    "uploadDate": "2025-07-01T12:01:04Z",
+    "embedUrl": "https://youtube.com/embed/SiKLteGa92E",
+    "url": "https://youtube.com/watch?v=SiKLteGa92E",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 182309
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Deixei MINHA FILHA montar meu TIME no FC 25",
+    "description": "Deixei MINHA FILHA montar meu TIME no FC 25",
+    "thumbnailUrl": "https://i.ytimg.com/vi/_jH7D7zXFII/hqdefault.jpg",
+    "uploadDate": "2025-07-01T21:45:05Z",
+    "embedUrl": "https://youtube.com/embed/_jH7D7zXFII",
+    "url": "https://youtube.com/watch?v=_jH7D7zXFII",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 114469
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Virei ORCALERO ORCALA pra AJUDAR meu AMIGO!",
+    "description": "Virei ORCALERO ORCALA pra AJUDAR meu AMIGO!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/lTrcV1IlKgw/hqdefault.jpg",
+    "uploadDate": "2025-07-01T14:01:23Z",
+    "embedUrl": "https://youtube.com/embed/lTrcV1IlKgw",
+    "url": "https://youtube.com/watch?v=lTrcV1IlKgw",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 178481
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "VISITAMOS ANTIGA MANSÃO DA EMILLY VICK *Ela se emocionou ?",
+    "description": "VISITAMOS ANTIGA MANSÃO DA EMILLY VICK *Ela se emocionou ?",
+    "thumbnailUrl": "https://i.ytimg.com/vi/lmGkopssc08/hqdefault.jpg",
+    "uploadDate": "2025-07-01T15:01:33Z",
+    "embedUrl": "https://youtube.com/embed/lmGkopssc08",
+    "url": "https://youtube.com/watch?v=lmGkopssc08",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 2920935
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "O BRUNO FOI ENCURRALADO PELO XIS!!! (EP 3 TEMP 9)",
+    "description": "O BRUNO FOI ENCURRALADO PELO XIS!!! (EP 3 TEMP 9)",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Dux_qwJcAAE/hqdefault.jpg",
+    "uploadDate": "2025-07-01T22:00:24Z",
+    "embedUrl": "https://youtube.com/embed/Dux_qwJcAAE",
+    "url": "https://youtube.com/watch?v=Dux_qwJcAAE",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 593852
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "BABYMONSTER - ‘HOT SAUCE’ M/V",
+    "description": "BABYMONSTER - ‘HOT SAUCE’ M/V",
+    "thumbnailUrl": "https://i.ytimg.com/vi/xn8mQqz2xmM/hqdefault.jpg",
+    "uploadDate": "2025-07-01T09:00:07Z",
+    "embedUrl": "https://youtube.com/embed/xn8mQqz2xmM",
+    "url": "https://youtube.com/watch?v=xn8mQqz2xmM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 19450704
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "MELHORES MOMENTOS: BORUSSIA DORTMUND 2 X 1 MONTERREY | COPA DO MUNDO DE CLUBES DA FIFA | OITAVAS",
+    "description": "MELHORES MOMENTOS: BORUSSIA DORTMUND 2 X 1 MONTERREY | COPA DO MUNDO DE CLUBES DA FIFA | OITAVAS",
+    "thumbnailUrl": "https://i.ytimg.com/vi/wt2cdF99dKQ/hqdefault.jpg",
+    "uploadDate": "2025-07-02T03:00:24Z",
+    "embedUrl": "https://youtube.com/embed/wt2cdF99dKQ",
+    "url": "https://youtube.com/watch?v=wt2cdF99dKQ",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1011394
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "MELHORES MOMENTOS: REAL MADRID 1 X 0 JUVENTUS | COPA DO MUNDO DE CLUBES DA FIFA | OITAVAS DE FINAL",
+    "description": "MELHORES MOMENTOS: REAL MADRID 1 X 0 JUVENTUS | COPA DO MUNDO DE CLUBES DA FIFA | OITAVAS DE FINAL",
+    "thumbnailUrl": "https://i.ytimg.com/vi/drl1srv-frc/hqdefault.jpg",
+    "uploadDate": "2025-07-01T20:58:21Z",
+    "embedUrl": "https://youtube.com/embed/drl1srv-frc",
+    "url": "https://youtube.com/watch?v=drl1srv-frc",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1406423
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "PLAYSTATION 6",
+    "description": "PLAYSTATION 6",
+    "thumbnailUrl": "https://i.ytimg.com/vi/UEvxjJHs6Ro/hqdefault.jpg",
+    "uploadDate": "2025-07-02T14:14:20Z",
+    "embedUrl": "https://youtube.com/embed/UEvxjJHs6Ro",
+    "url": "https://youtube.com/watch?v=UEvxjJHs6Ro",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 162655
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Minecraft: GANHEI PODERES - POWER RANGERS FORÇA ANIMAL Ep.01 ‹‹ P3DRU ››",
+    "description": "Minecraft: GANHEI PODERES - POWER RANGERS FORÇA ANIMAL Ep.01 ‹‹ P3DRU ››",
+    "thumbnailUrl": "https://i.ytimg.com/vi/khLGsQnW66Y/hqdefault.jpg",
+    "uploadDate": "2025-07-01T17:30:26Z",
+    "embedUrl": "https://youtube.com/embed/khLGsQnW66Y",
+    "url": "https://youtube.com/watch?v=khLGsQnW66Y",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 135079
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Picanha de R$200,00 X R$60,00 | Netão Bom Beef",
+    "description": "Picanha de R$200,00 X R$60,00 | Netão Bom Beef",
+    "thumbnailUrl": "https://i.ytimg.com/vi/bJHfJ1N07Ng/hqdefault.jpg",
+    "uploadDate": "2025-07-01T14:45:06Z",
+    "embedUrl": "https://youtube.com/embed/bJHfJ1N07Ng",
+    "url": "https://youtube.com/watch?v=bJHfJ1N07Ng",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 218733
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Ninguém te ama como Eu (Cover) - Lembranças de Deus - Irmã Kelly Patrícia | Instituto Hesed",
+    "description": "Ninguém te ama como Eu (Cover) - Lembranças de Deus - Irmã Kelly Patrícia | Instituto Hesed",
+    "thumbnailUrl": "https://i.ytimg.com/vi/av8ErlPmLb4/hqdefault.jpg",
+    "uploadDate": "2025-07-02T09:25:21Z",
+    "embedUrl": "https://youtube.com/embed/av8ErlPmLb4",
+    "url": "https://youtube.com/watch?v=av8ErlPmLb4",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 150616
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "APURAÇÃO DO FESTIVAL DE PARINTINS 2025 AO VIVO | A CRÍTICA | 30/06/2025",
+    "description": "APURAÇÃO DO FESTIVAL DE PARINTINS 2025 AO VIVO | A CRÍTICA | 30/06/2025",
+    "thumbnailUrl": "https://i.ytimg.com/vi/P8nRWlK_J_0/hqdefault.jpg",
+    "uploadDate": "2025-06-30T19:59:50Z",
+    "embedUrl": "https://youtube.com/embed/P8nRWlK_J_0",
+    "url": "https://youtube.com/watch?v=P8nRWlK_J_0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 804330
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "NOVA PROMOÇÃO GIGANTE NA PS STORE e LANÇAMENTOS DE JULHO 2025 !!!",
+    "description": "NOVA PROMOÇÃO GIGANTE NA PS STORE e LANÇAMENTOS DE JULHO 2025 !!!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/KGvNdJhVE_M/hqdefault.jpg",
+    "uploadDate": "2025-07-02T15:10:58Z",
+    "embedUrl": "https://youtube.com/embed/KGvNdJhVE_M",
+    "url": "https://youtube.com/watch?v=KGvNdJhVE_M",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 80783
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "PRIMEIRA VEZ no  FESTIVEL DE PIPA DA MINHA CIDADE!🤩🪁Roblox Rp",
+    "description": "PRIMEIRA VEZ no  FESTIVEL DE PIPA DA MINHA CIDADE!🤩🪁Roblox Rp",
+    "thumbnailUrl": "https://i.ytimg.com/vi/78UyOeKt8EU/hqdefault.jpg",
+    "uploadDate": "2025-06-30T22:31:46Z",
+    "embedUrl": "https://youtube.com/embed/78UyOeKt8EU",
+    "url": "https://youtube.com/watch?v=78UyOeKt8EU",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 329335
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Galvão e Amigos elogiam Renato Gaúcho após classificação do Fluminense",
+    "description": "Galvão e Amigos elogiam Renato Gaúcho após classificação do Fluminense",
+    "thumbnailUrl": "https://i.ytimg.com/vi/wxfosc-t0Rg/hqdefault.jpg",
+    "uploadDate": "2025-07-01T02:46:41Z",
+    "embedUrl": "https://youtube.com/embed/wxfosc-t0Rg",
+    "url": "https://youtube.com/watch?v=wxfosc-t0Rg",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 249648
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "ENCONTRAMOS UMA PASSAGEM SECRETA NA FLORESTA *Se entrar não volta mais...",
+    "description": "ENCONTRAMOS UMA PASSAGEM SECRETA NA FLORESTA *Se entrar não volta mais...",
+    "thumbnailUrl": "https://i.ytimg.com/vi/OkvXBfURCYE/hqdefault.jpg",
+    "uploadDate": "2025-06-30T15:00:45Z",
+    "embedUrl": "https://youtube.com/embed/OkvXBfURCYE",
+    "url": "https://youtube.com/watch?v=OkvXBfURCYE",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 3724758
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "NEW MOB AND GEAR IN THE NEXT GAME DROP!",
+    "description": "NEW MOB AND GEAR IN THE NEXT GAME DROP!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/542rY0DQHIM/hqdefault.jpg",
+    "uploadDate": "2025-07-01T16:06:23Z",
+    "embedUrl": "https://youtube.com/embed/542rY0DQHIM",
+    "url": "https://youtube.com/watch?v=542rY0DQHIM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 3069570
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Pesadelo na Cozinha: Dona Acarajé - Episódio Completo | Bloco 1",
+    "description": "Pesadelo na Cozinha: Dona Acarajé - Episódio Completo | Bloco 1",
+    "thumbnailUrl": "https://i.ytimg.com/vi/4vyTSKev9SU/hqdefault.jpg",
+    "uploadDate": "2025-06-30T22:19:06Z",
+    "embedUrl": "https://youtube.com/embed/4vyTSKev9SU",
+    "url": "https://youtube.com/watch?v=4vyTSKev9SU",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 614262
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "ENCONTREI CANETINHAS RARAS DE BOBBIE GOODS NO MEIO DO MATO * originais?",
+    "description": "ENCONTREI CANETINHAS RARAS DE BOBBIE GOODS NO MEIO DO MATO * originais?",
+    "thumbnailUrl": "https://i.ytimg.com/vi/rnTWrBmYNyY/hqdefault.jpg",
+    "uploadDate": "2025-07-01T14:25:23Z",
+    "embedUrl": "https://youtube.com/embed/rnTWrBmYNyY",
+    "url": "https://youtube.com/watch?v=rnTWrBmYNyY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 925743
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "ENCONTREI O BOBBIE GOODS DOS ROSA NO MEIO DO LIXO *originais ?",
+    "description": "ENCONTREI O BOBBIE GOODS DOS ROSA NO MEIO DO LIXO *originais ?",
+    "thumbnailUrl": "https://i.ytimg.com/vi/fs0O-hQBUBo/hqdefault.jpg",
+    "uploadDate": "2025-06-30T14:05:03Z",
+    "embedUrl": "https://youtube.com/embed/fs0O-hQBUBo",
+    "url": "https://youtube.com/watch?v=fs0O-hQBUBo",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1506972
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "FUI NO JOGO DO REAL MADRID! *VINI JR & MBAPPÉ",
+    "description": "FUI NO JOGO DO REAL MADRID! *VINI JR & MBAPPÉ",
+    "thumbnailUrl": "https://i.ytimg.com/vi/_rlfuRRtQcg/hqdefault.jpg",
+    "uploadDate": "2025-07-01T15:00:06Z",
+    "embedUrl": "https://youtube.com/embed/_rlfuRRtQcg",
+    "url": "https://youtube.com/watch?v=_rlfuRRtQcg",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1206893
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "TENHO QUE SOBREVIVER 99 DIAS NESSA FLORESTA... MAS EU NÃO TÔ SOZINHA...",
+    "description": "TENHO QUE SOBREVIVER 99 DIAS NESSA FLORESTA... MAS EU NÃO TÔ SOZINHA...",
+    "thumbnailUrl": "https://i.ytimg.com/vi/XJn9pACTnu0/hqdefault.jpg",
+    "uploadDate": "2025-06-30T22:15:02Z",
+    "embedUrl": "https://youtube.com/embed/XJn9pACTnu0",
+    "url": "https://youtube.com/watch?v=XJn9pACTnu0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 505133
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Tá Feito com Fernanda Torres | S01 Ep.04: Adênia",
+    "description": "Tá Feito com Fernanda Torres | S01 Ep.04: Adênia",
+    "thumbnailUrl": "https://i.ytimg.com/vi/-uC0de8meSM/hqdefault.jpg",
+    "uploadDate": "2025-07-01T20:57:26Z",
+    "embedUrl": "https://youtube.com/embed/-uC0de8meSM",
+    "url": "https://youtube.com/watch?v=-uC0de8meSM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 439574
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "A Cada Dinossauro, Evoluo na Cadeia Alimentar!",
+    "description": "A Cada Dinossauro, Evoluo na Cadeia Alimentar!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/-cKLLMcfnZ4/hqdefault.jpg",
+    "uploadDate": "2025-07-01T13:00:01Z",
+    "embedUrl": "https://youtube.com/embed/-cKLLMcfnZ4",
+    "url": "https://youtube.com/watch?v=-cKLLMcfnZ4",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 948777
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Tropa do Chapelão 🤠 - Ana Castela, @Diplo (Oficial)",
+    "description": "Tropa do Chapelão 🤠 - Ana Castela, @Diplo (Oficial)",
+    "thumbnailUrl": "https://i.ytimg.com/vi/R_BeWWDLAsg/hqdefault.jpg",
+    "uploadDate": "2025-07-01T00:00:11Z",
+    "embedUrl": "https://youtube.com/embed/R_BeWWDLAsg",
+    "url": "https://youtube.com/watch?v=R_BeWWDLAsg",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 3626788
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "FESTA DA PISCINA DAS IRMÃS PINA *x1, verdade ou desafio, gêmeos e muito mais",
+    "description": "FESTA DA PISCINA DAS IRMÃS PINA *x1, verdade ou desafio, gêmeos e muito mais",
+    "thumbnailUrl": "https://i.ytimg.com/vi/uw79qDVSgYM/hqdefault.jpg",
+    "uploadDate": "2025-06-30T20:55:01Z",
+    "embedUrl": "https://youtube.com/embed/uw79qDVSgYM",
+    "url": "https://youtube.com/watch?v=uw79qDVSgYM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 272975
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "COMPREI UMA RAM TRX DE 712CV",
+    "description": "COMPREI UMA RAM TRX DE 712CV",
+    "thumbnailUrl": "https://i.ytimg.com/vi/wbXdhuTGd3E/hqdefault.jpg",
+    "uploadDate": "2025-07-01T15:01:46Z",
+    "embedUrl": "https://youtube.com/embed/wbXdhuTGd3E",
+    "url": "https://youtube.com/watch?v=wbXdhuTGd3E",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 166233
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Season 3: The Abyss Awakens Official Trailer | Fire and Shadow Collide on July 11th! | Marvel Rivals",
+    "description": "Season 3: The Abyss Awakens Official Trailer | Fire and Shadow Collide on July 11th! | Marvel Rivals",
+    "thumbnailUrl": "https://i.ytimg.com/vi/kIhLPAWKKsg/hqdefault.jpg",
+    "uploadDate": "2025-07-01T14:33:15Z",
+    "embedUrl": "https://youtube.com/embed/kIhLPAWKKsg",
+    "url": "https://youtube.com/watch?v=kIhLPAWKKsg",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1040522
+    }
   }
-}
+]
