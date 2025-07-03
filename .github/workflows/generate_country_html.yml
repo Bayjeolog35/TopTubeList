@@ -33,12 +33,12 @@ jobs:
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }} # GitHub Secret'tan API anahtarını ortam değişkeni olarak ayarla
       run: |
         python country_youtube_data.py
-      working-directory: ./ # Betiğin proje kök dizininde çalıştığından emin olun
+      # working-directory: ./ # Betiğin proje kök dizininde çalıştığından emin olun (Zaten varsayılan olarak kökte çalışır, gereksiz olabilir)
 
     - name: Generate Country HTML Pages
       run: |
         python generate_country_html.py
-      working-directory: ./ # Betiğin proje kök dizininde çalıştığından emin olun
+      # working-directory: ./ # Betiğin proje kök dizininde çalıştığından emin olun (Zaten varsayılan olarak kökte çalışır, gereksiz olabilir)
 
     - name: Commit and Push generated files
       run: |
@@ -46,6 +46,10 @@ jobs:
         git config user.email "github-actions-bot@example.com" # Git e-posta adresini ayarla
         git add Country_data/ # Ülke verisi JSON dosyalarını ekle
         git add */index.html # Tüm ülke klasörlerindeki index.html dosyalarını ekle (örn: Turkey/index.html)
-        # Not: Kök dizindeki index.html burada eklenmiyor/güncellenmiyor
-        git diff --quiet || git commit -m "feat: Automate country data and HTML generation [skip ci]" # Değişiklik varsa commit yap
-        git push # Değiğişiklikleri push yap
+        git status # Hata ayıklama için git status çıktısını görmek faydalı olabilir
+        if ! git diff --quiet --cached; then # --cached sadece stage edilmiş dosyaları kontrol eder
+          git commit -m "feat: Automate country data and HTML generation [skip ci]" # Değişiklik varsa commit yap
+          git push # Değişiklikleri push yap
+        else
+          echo "No changes to commit."
+        fi
