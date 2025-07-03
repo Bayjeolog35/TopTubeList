@@ -1,10 +1,20 @@
 name: Generate Continent HTMLs
 
 on:
+  workflow_dispatch:  # Manuel çalıştırma için eklendi
+    inputs:
+      environment:
+        description: 'Çalıştırma Ortamı'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - staging
   push:
     branches: [ "main" ]
   schedule:
-    - cron: '0 3 * * *'  # Her gün 03:00'te çalıştır
+    - cron: '0 3 * * *'  # Opsiyonel: Otomatik çalıştırma
 
 jobs:
   generate_html:
