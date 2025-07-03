@@ -8,6 +8,16 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
 
     display_country_name = COUNTRY_INFO.get(country_folder_name, {}).get("display_name", country_folder_name.replace('_', ' '))
     
+    # Define structured_data_block BEFORE the html_template string
+    structured_data_block = ""
+    if structured_data:
+        structured_json = json.dumps(structured_data, indent=2)
+        structured_data_block = (
+            '<script type="application/ld+json">\n' +
+            structured_json +
+            '\n</script>'
+        )
+
     # HTML şablonu (Yollar ülke klasöründen ana dizine göre ayarlandı)
     # NOT: JavaScript içindeki süslü parantezlerin (örn: { opacity: 1; }) Python formatlama tarafından yanlış algılanmaması için '{{' ve '}}' kullanıldı.
     # HTML etiketleri içinde dinamik olarak dolacak yerler için tek '{' ve '}' kullanılmaya devam edildi.
@@ -27,16 +37,7 @@ def generate_html_file(country_folder_name, videos_data, structured_data):
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103"
         crossorigin="anonymous"></script>
 
-if structured_data:
-    structured_json = json.dumps(structured_data, indent=2)
-    structured_data_block = (
-        '<script type="application/ld+json">\n' +
-        structured_json +
-        '\n</script>'
-    )
-else:
-    structured_data_block = ""
-    
+{structured_data_block}
 </head>
 <body>
 <header>
@@ -97,9 +98,7 @@ else:
         </div>
     </main>
     
-    {video_list_html} <!-- videoList div'i video_list_html ile dinamik olarak doldurulacak -->
-    
-    <section class="about-section">
+    {video_list_html} <section class="about-section">
         <button id="aboutToggle" class="site-button">About Us</button>
         <div id="aboutContent">
             <p><strong>What is TopTubeList?</strong><br>
@@ -423,7 +422,7 @@ else:
         north_america_active=north_america_active,
         south_america_active=south_america_active,
         oceania_active=oceania_active,
-        country_buttons=country_buttons_html,
+        country_buttons="\n".join(country_buttons_html), # Join the list into a single string
         video_list_html=video_list_html_placeholder
     )
 
@@ -432,7 +431,7 @@ else:
         f.write(html_content)
     print(f"{output_path} oluşturuldu.")
 
-      
+    
 def main():
     # JSON dosyalarını yeni yoldan oku
     base_data_dir = "Country_data"
