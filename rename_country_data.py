@@ -3,43 +3,26 @@ import re
 
 def standardize_filename(filename):
     """
-    Verilen dosya adını 'videos_Ulke_Adi.json' veya 'structured_data_Ulke_Adi.json' gibi bir formatdan,
-    'videos-ulke-adi.json' veya 'structured-data-ulke-adi.json' formatına dönüştürür.
+    'structured_data_Ulke_Adi.json' formatındaki dosya adını
+    'structured-data-ulke-adi.json' formatına dönüştürür.
     """
-    # Bilinen önekleri ve ardından ülke adını (veya dosyanın geri kalanını) ve .json uzantısını yakalayan regex.
-    # Büyük/küçük harf duyarlılığı için re.IGNORECASE kullanılır.
-    # Örn: "videos_United_States.json" -> "videos", "United_States.json"
-    # Örn: "structured_data_Afghanistan.json" -> "structured_data", "Afghanistan.json"
-    match = re.match(r"(videos|structured_data)_(.*\.json)$", filename, re.IGNORECASE)
+    match = re.match(r"(structured_data)_(.*\.json)$", filename, re.IGNORECASE)
 
     if not match:
-        # Eğer dosya adı beklenen desenle eşleşmiyorsa, yeniden adlandırmayız.
         return None
 
-    prefix_base = match.group(1).lower() # "videos" veya "structured_data" (küçük harfe çevrildi)
-    # İlk alt çizgiden sonraki tüm kısmı yakalar, .json uzantısı dahil.
-    rest_of_filename = match.group(2) # Örn: "United_States.json" veya "Afghanistan.json"
+    prefix_base = match.group(1).lower()  # "structured_data"
+    rest_of_filename = match.group(2)     # "Afghanistan.json" gibi
 
-    # Dosya adının geri kalanını küçük harfe çevir ve alt çizgileri tireye dönüştür.
     sanitized_rest = rest_of_filename.lower().replace("_", "-")
+    new_prefix = "structured-data"
 
-    # "structured_data" öneki için özel durum: "structured-data" olmalı.
-    if prefix_base == "structured_data":
-        new_prefix = "structured-data"
-    else: # Bu, "videos" önekini kapsar
-        new_prefix = prefix_base
-
-    # Yeni dosya adını oluştur
     new_filename = f"{new_prefix}-{sanitized_rest}"
-
     return new_filename
 
 def rename_files_to_standard_format(directory):
     """
-    Belirtilen dizindeki JSON dosyalarını standartlaştırılmış formata yeniden adlandırır:
-    'videos_UlkeAdi.json' -> 'videos-ulkeadi.json'
-    'structured_data_UlkeAdi.json' -> 'structured-data-ulkeadi.json'
-    Dosya adındaki ülke kısmındaki büyük harfleri küçük harfe çevirir ve alt çizgileri tireye dönüştürür.
+    Belirtilen dizindeki structured_data_*.json dosyalarını yeniden adlandırır.
     """
     print(f"'{directory}' dizini taranıyor ve dosyalar yeniden adlandırılıyor...")
     renamed_count = 0
@@ -48,15 +31,12 @@ def rename_files_to_standard_format(directory):
     for filename in os.listdir(directory):
         old_filepath = os.path.join(directory, filename)
 
-        # Sadece dosyaları işle, dizinleri atla
         if not os.path.isfile(old_filepath):
             continue
 
-        # Yeni dosya adını al
         new_filename = standardize_filename(filename)
 
         if new_filename and new_filename != filename:
-            # Eğer yeni bir isim varsa ve eski isimden farklıysa yeniden adlandır
             new_filepath = os.path.join(directory, new_filename)
             try:
                 os.rename(old_filepath, new_filepath)
@@ -64,31 +44,19 @@ def rename_files_to_standard_format(directory):
                 renamed_count += 1
             except OSError as e:
                 print(f"Hata: '{filename}' yeniden adlandırılamadı -> '{new_filename}'. Hata: {e}")
-        elif new_filename is None:
-            # Desenle eşleşmeyen dosyaları atla
-            skipped_count += 1
-            # print(f"Atlandı (beklenen desenle eşleşmedi): '{filename}'") # Hata ayıklama için açılabilir
         else:
-            # Dosya zaten doğru formatta ise atla
             skipped_count += 1
-            # print(f"Atlandı (zaten doğru formatta): '{filename}'") # Hata ayıklama için açılabilir
 
     print(f"\nİşlem tamamlandı. Yeniden adlandırılan dosya sayısı: {renamed_count}, Atlanan dosya sayısı: {skipped_count}")
 
 if __name__ == "__main__":
-    # İşlenecek dizinlerin listesi
-    target_directories = [
-        "Country_data/videos",
-        "Country_data/structured_data"
-    ]
+    target_directory = "Country_data/structured_data"
 
-    for directory_path in target_directories:
-        print(f"\n--- '{directory_path}' dizini işleniyor ---")
-        # Dizin mevcut değilse kullanıcıyı bilgilendir
-        if not os.path.isdir(directory_path):
-            print(f"Hata: '{directory_path}' dizini bulunamadı.")
-            print("Lütfen script'i çalıştırmadan önce bu dizini oluşturduğunuzdan veya doğru yolu ayarladığınızdan emin olun.")
-        else:
-            rename_files_to_standard_format(directory_path)
+    print(f"\n--- '{target_directory}' dizini işleniyor ---")
+    if not os.path.isdir(target_directory):
+        print(f"Hata: '{target_directory}' dizini bulunamadı.")
+        print("Lütfen script'i çalıştırmadan önce bu dizini oluşturduğunuzdan emin olun.")
+    else:
+        rename_files_to_standard_format(target_directory)
 
-    print("\n--- Tüm dizinlerdeki dosya adı standardizasyon işlemi tamamlandı ---")
+    print("\n--- structured_data dizinindeki dosya adı standardizasyonu tamamlandı ---")
