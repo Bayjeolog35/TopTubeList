@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 356331
+            "userInteractionCount": 357464
           },
           "url": "https://www.youtube.com/watch?v=La6KbUhHObk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 123033
+            "userInteractionCount": 124594
           },
           "url": "https://www.youtube.com/watch?v=153ItJ5DN1A"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 7879972
+            "userInteractionCount": 7905538
           },
           "url": "https://www.youtube.com/watch?v=c_I6CJkS4aQ"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Ich habe ALLE Herzen verloren...",
-          "description": "Trending video from Platin in Germany",
-          "thumbnailUrl": "https://i.ytimg.com/vi/JXtiuADWVPI/hqdefault.jpg",
-          "uploadDate": "2025-07-02T10:00:28Z",
-          "embedUrl": "https://www.youtube.com/embed/JXtiuADWVPI",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 76688
-          },
-          "url": "https://www.youtube.com/watch?v=JXtiuADWVPI"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Heute mit Hitzepeak regional schwere Gewitter - Lokale Unwettergefahr vor allem durch heftigen Sturm",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 104852
+            "userInteractionCount": 105111
           },
           "url": "https://www.youtube.com/watch?v=DOJZVq2neR4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Mehr Begrüßungsgeld für den Osten – Olaf Schubert | Nuhr im Ersten",
+          "description": "Trending video from ARD Stand-Up in Germany",
+          "thumbnailUrl": "https://i.ytimg.com/vi/FsuPKtR1deY/hqdefault.jpg",
+          "uploadDate": "2025-07-01T16:00:33Z",
+          "embedUrl": "https://www.youtube.com/embed/FsuPKtR1deY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 240121
+          },
+          "url": "https://www.youtube.com/watch?v=FsuPKtR1deY"
         }
       }
     ]

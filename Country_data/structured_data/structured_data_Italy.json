@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 105446660
+            "userInteractionCount": 107754957
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 665512
+            "userInteractionCount": 681704
           },
           "url": "https://www.youtube.com/watch?v=HTAltapqZSo"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1180490
+            "userInteractionCount": 1339785
           },
           "url": "https://www.youtube.com/watch?v=1GxkHi76LpI"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "How Much Money Can You Make Collecting Trolleys in the Airport?",
-          "description": "Trending video from The Richey Family in Italy",
-          "thumbnailUrl": "https://i.ytimg.com/vi/g0Ygas1Nj9U/hqdefault.jpg",
-          "uploadDate": "2025-07-02T15:02:00Z",
-          "embedUrl": "https://www.youtube.com/embed/g0Ygas1Nj9U",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4413109
-          },
-          "url": "https://www.youtube.com/watch?v=g0Ygas1Nj9U"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Repeat The Trick or Swim 🥶💦",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 22316515
+            "userInteractionCount": 23401037
           },
           "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "$1 vs $1000 Nerf Gun!",
+          "description": "Trending video from Jesser in Italy",
+          "thumbnailUrl": "https://i.ytimg.com/vi/am_Rb1QZzxs/hqdefault.jpg",
+          "uploadDate": "2025-07-01T20:00:03Z",
+          "embedUrl": "https://www.youtube.com/embed/am_Rb1QZzxs",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 4480900
+          },
+          "url": "https://www.youtube.com/watch?v=am_Rb1QZzxs"
         }
       }
     ]

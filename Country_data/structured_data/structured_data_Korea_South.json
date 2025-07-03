@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 866126
+            "userInteractionCount": 892472
           },
           "url": "https://www.youtube.com/watch?v=Z1wIq4X2Ko0"
         }
@@ -32,6 +32,42 @@
       {
         "@type": "ListItem",
         "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "(SUB) 👵🏻\"조수가 좀 허술허요~\" 👩🏻\"반박을 못 하겠네...\" | 박보검이 먹은 갑오징어무침, 서장훈도 반한 병어찜, 나래 최애 미역줄기 [나래식] EP.41",
+          "description": "Trending video from 나래식 in Korea (South)",
+          "thumbnailUrl": "https://i.ytimg.com/vi/FEOmPfulP0k/hqdefault.jpg",
+          "uploadDate": "2025-07-02T09:30:02Z",
+          "embedUrl": "https://www.youtube.com/embed/FEOmPfulP0k",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 380358
+          },
+          "url": "https://www.youtube.com/watch?v=FEOmPfulP0k"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "나도 여기서 살래(살구 입양일기)",
+          "description": "Trending video from 터틀이주미 in Korea (South)",
+          "thumbnailUrl": "https://i.ytimg.com/vi/-vdsHsCkTJ4/hqdefault.jpg",
+          "uploadDate": "2025-07-02T10:04:51Z",
+          "embedUrl": "https://www.youtube.com/embed/-vdsHsCkTJ4",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 188196
+          },
+          "url": "https://www.youtube.com/watch?v=-vdsHsCkTJ4"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "[SUB] 사회의 쓴맛을 본 사랑이의 눈물💦 오열하는 딸의 모습에 같이 울컥한 야노 시호 #내아이의사생활 EP.27",
@@ -42,14 +78,14 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3695861
+            "userInteractionCount": 3719878
           },
           "url": "https://www.youtube.com/watch?v=80qpfeBklWc"
         }
       },
       {
         "@type": "ListItem",
-        "position": 3,
+        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "BABYMONSTER - ‘HOT SAUCE’ M/V",
@@ -60,45 +96,9 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 13827878
+            "userInteractionCount": 14502609
           },
           "url": "https://www.youtube.com/watch?v=xn8mQqz2xmM"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "강문경(カンムンギョン) - 끈(紐)｜한일톱텐쇼 55회",
-          "description": "Trending video from MBN MUSIC in Korea (South)",
-          "thumbnailUrl": "https://i.ytimg.com/vi/gREizcLA6oM/hqdefault.jpg",
-          "uploadDate": "2025-07-01T15:00:00Z",
-          "embedUrl": "https://www.youtube.com/embed/gREizcLA6oM",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 204441
-          },
-          "url": "https://www.youtube.com/watch?v=gREizcLA6oM"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "[#WSWF] 〈글로벌 아티스트 퍼포먼스 미션〉| BUMSUP(범접)",
-          "description": "Trending video from The CHOOM (더 춤) in Korea (South)",
-          "thumbnailUrl": "https://i.ytimg.com/vi/8ZpL_uXnYGQ/hqdefault.jpg",
-          "uploadDate": "2025-07-01T16:18:27Z",
-          "embedUrl": "https://www.youtube.com/embed/8ZpL_uXnYGQ",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2063845
-          },
-          "url": "https://www.youtube.com/watch?v=8ZpL_uXnYGQ"
         }
       }
     ]

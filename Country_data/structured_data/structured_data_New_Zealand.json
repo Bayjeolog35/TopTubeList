@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 105446660
+            "userInteractionCount": 107754957
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 10889514
+            "userInteractionCount": 11171456
           },
           "url": "https://www.youtube.com/watch?v=K56O5RdE3KM"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 33341015
+            "userInteractionCount": 34155247
           },
           "url": "https://www.youtube.com/watch?v=u8hQ_nBD8eg"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Snag, you're it 😜 #afv #fail #funny #shorts",
-          "description": "Trending video from America's Funniest Home Videos in New Zealand",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Ehc68ClCuFE/hqdefault.jpg",
-          "uploadDate": "2025-06-25T01:00:15Z",
-          "embedUrl": "https://www.youtube.com/embed/Ehc68ClCuFE",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 9003541
-          },
-          "url": "https://www.youtube.com/watch?v=Ehc68ClCuFE"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Repeat The Trick or Swim 🥶💦",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 22322997
+            "userInteractionCount": 23401037
           },
           "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "The OWNER Stole My RARE Brainrot..",
+          "description": "Trending video from CaylusBlox in New Zealand",
+          "thumbnailUrl": "https://i.ytimg.com/vi/iXmFVIqMkSE/hqdefault.jpg",
+          "uploadDate": "2025-07-01T23:17:30Z",
+          "embedUrl": "https://www.youtube.com/embed/iXmFVIqMkSE",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 3374465
+          },
+          "url": "https://www.youtube.com/watch?v=iXmFVIqMkSE"
         }
       }
     ]

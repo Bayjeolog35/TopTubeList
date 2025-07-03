@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 105446660
+            "userInteractionCount": 107754957
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 20249540
+            "userInteractionCount": 20386012
           },
           "url": "https://www.youtube.com/watch?v=KSyEfuZcMCM"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 17780236
+            "userInteractionCount": 17985817
           },
           "url": "https://www.youtube.com/watch?v=W2KEWRPddN4"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Which Shoes Will Protect Your Feet?",
-          "description": "Trending video from Ben Azelart in Nepal",
-          "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
-          "uploadDate": "2025-06-24T21:50:02Z",
-          "embedUrl": "https://www.youtube.com/embed/nj6W9v6yjFk",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 129154644
-          },
-          "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "JHIM JHIM - Neha Kakkar & Ekdev Limbu | Ritvik Sahore & Priya P Varrier | Rajat Nagpal | Anshul Garg",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 14186089
+            "userInteractionCount": 14311903
           },
           "url": "https://www.youtube.com/watch?v=ZLU4rx24024"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Which Shoes Will Protect Your Feet?",
+          "description": "Trending video from Ben Azelart in Nepal",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nj6W9v6yjFk/hqdefault.jpg",
+          "uploadDate": "2025-06-24T21:50:02Z",
+          "embedUrl": "https://www.youtube.com/embed/nj6W9v6yjFk",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 129167667
+          },
+          "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
         }
       }
     ]

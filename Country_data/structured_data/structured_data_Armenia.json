@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 105446660
+            "userInteractionCount": 107754957
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 42981491
+            "userInteractionCount": 44200773
           },
           "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "НЕУДАЧНЫЙ ПРАНК #shorts",
-          "description": "Trending video from Паша Осадчий in Armenia",
-          "thumbnailUrl": "https://i.ytimg.com/vi/_OLYfUS2J0E/hqdefault.jpg",
-          "uploadDate": "2025-06-29T11:21:58Z",
-          "embedUrl": "https://www.youtube.com/embed/_OLYfUS2J0E",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2595597
-          },
-          "url": "https://www.youtube.com/watch?v=_OLYfUS2J0E"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Քանի՞ շիշ է պետք ինձ ջրի վրա պահելու համար 🤔",
@@ -78,14 +60,14 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 115282
+            "userInteractionCount": 115330
           },
           "url": "https://www.youtube.com/watch?v=Wa0o_Yrw8wI"
         }
       },
       {
         "@type": "ListItem",
-        "position": 5,
+        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "If You Spill, You Lose!",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 102068808
+            "userInteractionCount": 102207635
           },
           "url": "https://www.youtube.com/watch?v=gGcaGdHlt60"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "НЕУДАЧНЫЙ ПРАНК #shorts",
+          "description": "Trending video from Паша Осадчий in Armenia",
+          "thumbnailUrl": "https://i.ytimg.com/vi/_OLYfUS2J0E/hqdefault.jpg",
+          "uploadDate": "2025-06-29T11:21:58Z",
+          "embedUrl": "https://www.youtube.com/embed/_OLYfUS2J0E",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 2598303
+          },
+          "url": "https://www.youtube.com/watch?v=_OLYfUS2J0E"
         }
       }
     ]

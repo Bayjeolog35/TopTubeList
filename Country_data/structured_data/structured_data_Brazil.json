@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1882248
+            "userInteractionCount": 2198914
           },
           "url": "https://www.youtube.com/watch?v=Dcv71FA46I4"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 133814
+            "userInteractionCount": 157330
           },
           "url": "https://www.youtube.com/watch?v=Y_54qSd_IwI"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 169545
+            "userInteractionCount": 204271
           },
           "url": "https://www.youtube.com/watch?v=ZPmX8k-x6nM"
         }
@@ -68,6 +68,24 @@
       {
         "@type": "ListItem",
         "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "EU FUI PRESO, MAS EU FIZ UM BURACO GIGANTE NA MINHA CELA PARA FUGIR DA PRISÃO!",
+          "description": "Trending video from Jazzghost in Brazil",
+          "thumbnailUrl": "https://i.ytimg.com/vi/bPsNm70lK0w/hqdefault.jpg",
+          "uploadDate": "2025-07-02T15:01:06Z",
+          "embedUrl": "https://www.youtube.com/embed/bPsNm70lK0w",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 984239
+          },
+          "url": "https://www.youtube.com/watch?v=bPsNm70lK0w"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "HEITOR, VOCÊ ACEITA SER MEU…",
@@ -78,27 +96,9 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 378848
+            "userInteractionCount": 393830
           },
           "url": "https://www.youtube.com/watch?v=2GnGm54kdmk"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "VideoObject",
-          "name": "MELHORES MOMENTOS: MANCHESTER CITY 3 X 4 AL HILAL | COPA DO MUNDO DE CLUBES DA FIFA | OITAVAS",
-          "description": "Trending video from CazéTV in Brazil",
-          "thumbnailUrl": "https://i.ytimg.com/vi/McSB27c3CLs/hqdefault.jpg",
-          "uploadDate": "2025-07-01T03:54:55Z",
-          "embedUrl": "https://www.youtube.com/embed/McSB27c3CLs",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4835245
-          },
-          "url": "https://www.youtube.com/watch?v=McSB27c3CLs"
         }
       }
     ]

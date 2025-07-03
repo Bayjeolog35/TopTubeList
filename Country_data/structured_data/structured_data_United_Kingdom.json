@@ -16,6 +16,24 @@
         "position": 1,
         "item": {
           "@type": "VideoObject",
+          "name": "Lions run RIOT against Reds! | Lions vs Queensland Reds | Highlights",
+          "description": "Trending video from Sky Sports in United Kingdom",
+          "thumbnailUrl": "https://i.ytimg.com/vi/KAHRotUc2M0/hqdefault.jpg",
+          "uploadDate": "2025-07-02T12:29:07Z",
+          "embedUrl": "https://www.youtube.com/embed/KAHRotUc2M0",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 306001
+          },
+          "url": "https://www.youtube.com/watch?v=KAHRotUc2M0"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
           "name": "Al-Hilal STUNS Manchester City 4-3! | 2025 FIFA Club World Cup Highlights",
           "description": "Trending video from DAZN Football in United Kingdom",
           "thumbnailUrl": "https://i.ytimg.com/vi/c_I6CJkS4aQ/hqdefault.jpg",
@@ -24,14 +42,32 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 7879972
+            "userInteractionCount": 7905538
           },
           "url": "https://www.youtube.com/watch?v=c_I6CJkS4aQ"
         }
       },
       {
         "@type": "ListItem",
-        "position": 2,
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Phoenix: Fire and Life Incarnate | Character Reveal | Marvel Rivals",
+          "description": "Trending video from Marvel Rivals in United Kingdom",
+          "thumbnailUrl": "https://i.ytimg.com/vi/zsWg4h7Eiss/hqdefault.jpg",
+          "uploadDate": "2025-07-02T15:01:59Z",
+          "embedUrl": "https://www.youtube.com/embed/zsWg4h7Eiss",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 893364
+          },
+          "url": "https://www.youtube.com/watch?v=zsWg4h7Eiss"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "The Running Man | Official Trailer (2025 Movie) - Edgar Wright, Glen Powell",
@@ -42,45 +78,9 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 8400082
+            "userInteractionCount": 8475655
           },
           "url": "https://www.youtube.com/watch?v=KD18ddeFuyM"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "The greatest songwriting theft of all time",
-          "description": "Trending video from David Hartley in United Kingdom",
-          "thumbnailUrl": "https://i.ytimg.com/vi/SsjlmLgzrBY/hqdefault.jpg",
-          "uploadDate": "2025-07-01T20:12:45Z",
-          "embedUrl": "https://www.youtube.com/embed/SsjlmLgzrBY",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 616492
-          },
-          "url": "https://www.youtube.com/watch?v=SsjlmLgzrBY"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Begging Admin Until $0 Becomes $10 Trillion",
-          "description": "Trending video from jetski in United Kingdom",
-          "thumbnailUrl": "https://i.ytimg.com/vi/qyUfSHMehXo/hqdefault.jpg",
-          "uploadDate": "2025-07-01T15:01:42Z",
-          "embedUrl": "https://www.youtube.com/embed/qyUfSHMehXo",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1708088
-          },
-          "url": "https://www.youtube.com/watch?v=qyUfSHMehXo"
         }
       },
       {
@@ -88,17 +88,17 @@
         "position": 5,
         "item": {
           "@type": "VideoObject",
-          "name": "NEW MOB AND GEAR IN THE NEXT GAME DROP!",
-          "description": "Trending video from Minecraft in United Kingdom",
-          "thumbnailUrl": "https://i.ytimg.com/vi/542rY0DQHIM/hqdefault.jpg",
-          "uploadDate": "2025-07-01T16:06:23Z",
-          "embedUrl": "https://www.youtube.com/embed/542rY0DQHIM",
+          "name": "Foo Fighters - Today's Song",
+          "description": "Trending video from foofightersVEVO in United Kingdom",
+          "thumbnailUrl": "https://i.ytimg.com/vi/3R-zrySoHNk/hqdefault.jpg",
+          "uploadDate": "2025-07-02T14:00:05Z",
+          "embedUrl": "https://www.youtube.com/embed/3R-zrySoHNk",
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2840038
+            "userInteractionCount": 179088
           },
-          "url": "https://www.youtube.com/watch?v=542rY0DQHIM"
+          "url": "https://www.youtube.com/watch?v=3R-zrySoHNk"
         }
       }
     ]

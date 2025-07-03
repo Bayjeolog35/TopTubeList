@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3781967
+            "userInteractionCount": 4026566
           },
           "url": "https://www.youtube.com/watch?v=W91CXLxz-iY"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1457347
+            "userInteractionCount": 1486509
           },
           "url": "https://www.youtube.com/watch?v=pZ_4GMBo3Zk"
         }
@@ -50,42 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "✅ ARMADURA y GOLEM de COBRE 👉 Preview 1.21.100.23 Minecraft",
-          "description": "Trending video from Bobicraft in Panama",
-          "thumbnailUrl": "https://i.ytimg.com/vi/wmDouI8cf6Y/hqdefault.jpg",
-          "uploadDate": "2025-07-01T21:55:47Z",
-          "embedUrl": "https://www.youtube.com/embed/wmDouI8cf6Y",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1016871
-          },
-          "url": "https://www.youtube.com/watch?v=wmDouI8cf6Y"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Robé un BRAINROT BUG (SECRETO) a un ESTAFADOR en STEAL a BRAINROT",
-          "description": "Trending video from SoyNeto in Panama",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Ti7tEA-PeJY/hqdefault.jpg",
-          "uploadDate": "2025-07-01T23:31:15Z",
-          "embedUrl": "https://www.youtube.com/embed/Ti7tEA-PeJY",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1044842
-          },
-          "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Kybba, Ryan Castro, Sean Paul & Busy Signal - BA BA BAD REMIX (Video Oficial)",
@@ -96,9 +60,45 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1738580
+            "userInteractionCount": 1802742
           },
           "url": "https://www.youtube.com/watch?v=dn3d8awSA0c"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VideoObject",
+          "name": "✅ ARMADURA y GOLEM de COBRE 👉 Preview 1.21.100.23 Minecraft",
+          "description": "Trending video from Bobicraft in Panama",
+          "thumbnailUrl": "https://i.ytimg.com/vi/wmDouI8cf6Y/hqdefault.jpg",
+          "uploadDate": "2025-07-01T21:55:47Z",
+          "embedUrl": "https://www.youtube.com/embed/wmDouI8cf6Y",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 1067185
+          },
+          "url": "https://www.youtube.com/watch?v=wmDouI8cf6Y"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Los trucos sucios de los hoteles de lujo para sacar más dinero 💵🏨",
+          "description": "Trending video from Luisito Comunica in Panama",
+          "thumbnailUrl": "https://i.ytimg.com/vi/vTgzntPTAyo/hqdefault.jpg",
+          "uploadDate": "2025-06-30T17:28:00Z",
+          "embedUrl": "https://www.youtube.com/embed/vTgzntPTAyo",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 3774937
+          },
+          "url": "https://www.youtube.com/watch?v=vTgzntPTAyo"
         }
       }
     ]

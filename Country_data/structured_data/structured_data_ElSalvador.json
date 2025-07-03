@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 105446660
+            "userInteractionCount": 107754957
           },
           "url": "https://www.youtube.com/watch?v=SOATZrBeGEk"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 129154644
+            "userInteractionCount": 129167667
           },
           "url": "https://www.youtube.com/watch?v=nj6W9v6yjFk"
         }
@@ -60,7 +60,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 42981491
+            "userInteractionCount": 44200773
           },
           "url": "https://www.youtube.com/watch?v=YFXS0F2IxmM"
         }
@@ -68,24 +68,6 @@
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "VideoObject",
-          "name": "SQUID GAME HOUSE vs GUARDS 🏠🦑🥷",
-          "description": "Trending video from A4 in El Salvador",
-          "thumbnailUrl": "https://i.ytimg.com/vi/KdXQIYc6xWY/hqdefault.jpg",
-          "uploadDate": "2025-06-21T14:05:16Z",
-          "embedUrl": "https://www.youtube.com/embed/KdXQIYc6xWY",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 89383926
-          },
-          "url": "https://www.youtube.com/watch?v=KdXQIYc6xWY"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "item": {
           "@type": "VideoObject",
           "name": "Repeat The Trick or Swim 🥶💦",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 22316515
+            "userInteractionCount": 23401037
           },
           "url": "https://www.youtube.com/watch?v=aHrK586PVeI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "SQUID GAME HOUSE vs GUARDS 🏠🦑🥷",
+          "description": "Trending video from A4 in El Salvador",
+          "thumbnailUrl": "https://i.ytimg.com/vi/KdXQIYc6xWY/hqdefault.jpg",
+          "uploadDate": "2025-06-21T14:05:16Z",
+          "embedUrl": "https://www.youtube.com/embed/KdXQIYc6xWY",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 89649154
+          },
+          "url": "https://www.youtube.com/watch?v=KdXQIYc6xWY"
         }
       }
     ]

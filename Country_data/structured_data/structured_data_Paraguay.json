@@ -24,7 +24,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 3781967
+            "userInteractionCount": 4026566
           },
           "url": "https://www.youtube.com/watch?v=W91CXLxz-iY"
         }
@@ -42,7 +42,7 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 2748949
+            "userInteractionCount": 2791619
           },
           "url": "https://www.youtube.com/watch?v=-PR00YxNuao"
         }
@@ -50,24 +50,6 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Robé un BRAINROT BUG (SECRETO) a un ESTAFADOR en STEAL a BRAINROT",
-          "description": "Trending video from SoyNeto in Paraguay",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Ti7tEA-PeJY/hqdefault.jpg",
-          "uploadDate": "2025-07-01T23:31:15Z",
-          "embedUrl": "https://www.youtube.com/embed/Ti7tEA-PeJY",
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1044842
-          },
-          "url": "https://www.youtube.com/watch?v=Ti7tEA-PeJY"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Manchester City vs Al Hilal (3-4) | Resumen | Highlights Mundial de Clubes FIFA 2025™",
@@ -78,14 +60,14 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 1457347
+            "userInteractionCount": 1486509
           },
           "url": "https://www.youtube.com/watch?v=pZ_4GMBo3Zk"
         }
       },
       {
         "@type": "ListItem",
-        "position": 5,
+        "position": 4,
         "item": {
           "@type": "VideoObject",
           "name": "Cris MJ - Vamo a Bailotear (Visualizer) | Apocalipsis",
@@ -96,9 +78,27 @@
           "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/WatchAction",
-            "userInteractionCount": 4235648
+            "userInteractionCount": 4393994
           },
           "url": "https://www.youtube.com/watch?v=6tUJjxczi4E"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Los trucos sucios de los hoteles de lujo para sacar más dinero 💵🏨",
+          "description": "Trending video from Luisito Comunica in Paraguay",
+          "thumbnailUrl": "https://i.ytimg.com/vi/vTgzntPTAyo/hqdefault.jpg",
+          "uploadDate": "2025-06-30T17:28:00Z",
+          "embedUrl": "https://www.youtube.com/embed/vTgzntPTAyo",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/WatchAction",
+            "userInteractionCount": 3774937
+          },
+          "url": "https://www.youtube.com/watch?v=vTgzntPTAyo"
         }
       }
     ]
