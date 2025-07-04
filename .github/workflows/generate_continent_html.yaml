@@ -1,60 +1,33 @@
-name: Generate Continent Html
+name: Generate Continent HTML Pages
+
 on:
-  push:
-    branches:
-      - main # main dalına yapılan her push'ta bu iş akışı tetiklenir
-  workflow_dispatch: # Manuel olarak çalıştırmaya izin verir (GitHub Actions UI'dan)
+  workflow_dispatch: # elle çalıştırmak için
+  schedule:
+    - cron: "0 */3 * * *"  # Her 3 saatte bir çalışır
 
 jobs:
-  build_and_deploy:
-    runs-on: ubuntu-latest # İş akışı için sanal makine ortamı
+  build:
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4 # Depo içeriğini sanal makineye klonla
+      - name: Repo'yu klonla
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.9' # Kullanmak istediğiniz Python sürümü
+      - name: Python kurulumu
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pyyaml # config.yml okumak için gerekli
-        # Eğer başka Python bağımlılıklarınız varsa buraya ekleyin
-        # pip install requests beautifulsoup4 # Örnek: Eğer web scraping yapıyorsanız
+      - name: Gerekli paketleri yükle
+        run: pip install pyyaml
 
-    - name: Generate Continent HTML files
-      run: |
-        python generate_continent_html_file.py
+      - name: Kıta HTML dosyalarını oluştur
+        run: python generate_continent_html.py
 
-    - name: Generate Country HTML files
-      # Not: Eğer generate_country_html_file.py ayrı bir dosya ise
-      # ve tüm ülke HTML'lerini de oluşturuyorsa bu adımı ekleyin.
-      # Eğer generate_continent_html_file.py zaten tüm HTML'leri oluşturuyorsa bu adımı atlayın.
-      run: |
-        python generate_country_html_file.py
-
-    - name: Upload Artifacts (Optional - For debugging)
-      # Bu adım, oluşturulan dosyaları GitHub Actions'ta bir 'artifact' olarak kaydeder.
-      # İş akışı bittikten sonra sonuçları indirip kontrol edebilirsiniz.
-      uses: actions/upload-artifact@v4
-      with:
-        name: generated-site
-        path: |
-          ./ # Kök dizindeki tüm dosyaları ve klasörleri al
-          !./.git/ # .git klasörünü hariç tut
-          !./.github/ # .github klasörünü hariç tut
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main' # Sadece main dalından deploy et
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }} # GitHub tarafından otomatik sağlanan token
-        publish_dir: ./ # Oluşturulan tüm HTML dosyalarını içeren kök dizini yayınla
-        # Eğer statik dosyalarınız `public` veya `build` gibi bir klasörde ise:
-        # publish_dir: ./public
-        cname: toptubelist.com # Eğer özel alan adınız varsa (isteğe bağlı)
-        # Eğer toptubelist.com'u kullanıyorsanız CNAME dosyasını da bu klasöre kopyalamanız gerekebilir.
-        # copy_cname: true # CNAME dosyasını kopyalamayı sağlar (sadece publish_dir farklıysa)
+      - name: Değişiklikleri Git'e ekle
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "🌍 Kıta HTML sayfaları otomatik güncellendi" || echo "No changes to commit"
+          git push
