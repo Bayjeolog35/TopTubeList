@@ -1,33 +1,33 @@
-name: Generate Continent HTML Pages
+name: Generate Continent HTML
 
 on:
-  workflow_dispatch: # elle çalıştırmak için
-  schedule:
-    - cron: "0 */3 * * *"  # Her 3 saatte bir çalışır
+  push:
+    branches:
+      - main  # ya da kullandığın branch adı
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Repo'yu klonla
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Python kurulumu
-        uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Gerekli paketleri yükle
-        run: pip install pyyaml
+      - name: Install dependencies (if needed)
+        run: pip install --upgrade pip
 
-      - name: Kıta HTML dosyalarını oluştur
-        run: python generate_continent_html_file.py
+      - name: Run continent HTML generator
+        run: python generate_continent_html.py
 
-      - name: Değişiklikleri Git'e ekle
+      - name: Commit and push generated HTML
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "🌍 Kıta HTML sayfaları otomatik güncellendi" || echo "No changes to commit"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add continents/
+          git commit -m "🔄 Auto-generate continent HTML files" || echo "No changes to commit"
           git push
