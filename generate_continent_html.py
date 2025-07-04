@@ -7,6 +7,23 @@ def generate_html_file(continent_name, videos_data, structured_data):
     sanitized_continent_name = continent_name.replace("_", "-")
     display_continent_name = continent_name.replace("-", " ").replace("_", " ").title()
 
+    # Aktif kıta linkini vurgulamak için class ayarları
+    def is_active(name): return "active" if name == continent_name else ""
+
+    # Navigasyon menüsü
+    continent_nav_html = f"""
+    <nav id="continentNav">
+        <a href="/index.html">Worldwide</a>
+        <a href="/asia/" class="{is_active('asia')}">Asia</a>
+        <a href="/europe/" class="{is_active('europe')}">Europe</a>
+        <a href="/africa/" class="{is_active('africa')}">Africa</a>
+        <a href="/north_america/" class="{is_active('north_america')}">North America</a>
+        <a href="/south_america/" class="{is_active('south_america')}">South America</a>
+        <a href="/oceania/" class="{is_active('oceania')}">Oceania</a>
+    </nav>
+    """
+
+    # Structured Data bloğu
     structured_data_block = ""
     if structured_data:
         structured_json = json.dumps(structured_data, indent=2)
@@ -16,6 +33,7 @@ def generate_html_file(continent_name, videos_data, structured_data):
             '\n</script>'
         )
 
+    # HTML template
     html_template = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +45,7 @@ def generate_html_file(continent_name, videos_data, structured_data):
   {structured_data_block}
 </head>
 <body>
+  {continent_nav_html}
   <h1>Trending in {display_continent_name}</h1>
   <div id="videoList"></div>
   <script>
@@ -45,7 +64,7 @@ def generate_html_file(continent_name, videos_data, structured_data):
 </html>
 """
 
-    # 🌍 Yeni hedef klasör: /continents/{kıta}
+    # Klasöre yaz
     output_dir = os.path.join("continents", sanitized_continent_name)
     os.makedirs(output_dir, exist_ok=True)
 
