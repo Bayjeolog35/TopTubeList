@@ -1,0 +1,29 @@
+name: Rename Files and Folders
+
+on:
+  workflow_dispatch:  # Manuel tetikleme
+
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run rename script
+        run: |
+          python rename_all_files_and_dirs.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Auto rename: lowercased and replaced _ with -"
+          git push
