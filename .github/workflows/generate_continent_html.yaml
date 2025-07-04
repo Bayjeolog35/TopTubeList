@@ -1,33 +1,29 @@
 name: Generate Continent HTML
 
 on:
-  push:
-    branches:
-      - main  # ya da kullandığın branch adı
+  workflow_dispatch:  # Manuel tetikleme
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: 📥 Repo'yu Klonla
         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: 🐍 Python Kurulumu
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: '3.10'
 
-      - name: Install dependencies (if needed)
-        run: pip install --upgrade pip
-
-      - name: Run continent HTML generator
-        run: python generate_continent_html.py
-
-      - name: Commit and push generated HTML
+      - name: 📦 Gerekli Kütüphaneleri Kur (opsiyonel)
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add continents/
-          git commit -m "🔄 Auto-generate continent HTML files" || echo "No changes to commit"
-          git push
+          python -m pip install --upgrade pip
+
+      - name: ⚙️ generate_continent_html.py dosyasını çalıştır
+        run: |
+          python generate_continent_html.py
+
+      - name: ✅ Oluşturulan Dosyaları Göster
+        run: |
+          ls -R continents/
