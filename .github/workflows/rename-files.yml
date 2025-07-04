@@ -1,37 +1,53 @@
-name: Standardize Country Folders
+name: Dosya ve Klasör Adlarındaki Alt Çizgileri Düzelt (Manuel)
 
 on:
-  workflow_dispatch:  # Manuel çalıştırma için
-  push:
-    branches: [ main ]
-    paths: [ 'country_data.py' ]  # Ülke verileri değişirse tetikle
+  workflow_dispatch:
+    inputs:
+      root_directory_for_processing: # Yeni input adı, karışıklığı önlemek için
+        description: 'İşlemin başlayacağı kök dizin. Genellikle boş bırakılmalıdır (toptubelist klasörü için).'
+        required: false
+        default: 'toptubelist' # Varsayılan olarak 'toptubelist' klasörünü hedefle
 
 jobs:
-  standardize-folders:
+  fix-underscores:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Depoyu Çıkart
+      uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-          cache: 'pip'
+    - name: Python Ortamını Kur
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
 
-      - name: Install dependencies
-        run: pip install pyyaml
+    - name: Alt Çizgi Düzeltme Betiğini Çalıştır
+      run: |
+        # Kullanıcının verdiği kök dizin girdisini al.
+        # Eğer boşsa veya varsayılan değerdeyse, betiği toptubelist klasörünü hedefleyecek şekilde çağır.
+        TARGET_DIR="${{ github.event.inputs.root_directory_for_processing }}"
+        
+        # GitHub Actions, depoyu /home/runner/work/YOUR_REPO_NAME/YOUR_REPO_NAME/ altına klonlar.
+        # Bizim Python betiğimiz (rename-files.py), toptubelist klasörünün içinde olduğu için,
+        # betiği çağırırken doğru yolu vermemiz gerekir.
+        # Python betiğinin içindeki mantık, o anki çalışma dizinini (toptubelist) kendiliğinden bulacaktır.
+        
+        # Eğer kullanıcı "toptubelist" dışında bir dizin belirtirse, ona göre betiği çağırmalıyız.
+        # Varsayalım ki 'rename-files.py' her zaman 'toptubelist' klasörünün içinde.
+        # Bu durumda, betiği her zaman 'toptubelist/rename-files.py' olarak çağırmalıyız.
+        # Ve betiğin kendisi, 'toptubelist'i kök dizin olarak işleyecektir.
+        
+        echo "İşlem '{TARGET_DIR}' klasöründe başlatılıyor."
+        python "toptubelist/rename-files.py"
 
-      - name: Rename folders to lowercase
-        run: python rename_folders_to_country_names.py
-
-      - name: Commit changes
-        if: success()
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add .
-          git diff --quiet && git diff --staged --quiet || git commit -m "🗂 Standardize country folders to lowercase"
-          git push
+    - name: Değişiklikleri Taahhüt Et ve İt
+      env:
+        GIT_COMMITTER_NAME: GitHub Actions Bot
+        GIT_COMMITTER_EMAIL: actions@github.com
+      run: |
+        git config user.name "${{ env.GIT_COMMITTER_NAME }}"
+        git config user.email "${{ env.GIT_COMMITTER_EMAIL }}"
+        git add .
+        # Değişiklik yoksa commit yapma
+        git diff-index --quiet HEAD || git commit -m "Dosya ve klasör adlarında alt çizgiler kısa çizgilere dönüştürüldü [Otomatik]"
+        git push
