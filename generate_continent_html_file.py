@@ -30,7 +30,7 @@ def generate_html_file(continent_name, videos_data, structured_data):
   <h1>Trending in {display_continent_name}</h1>
   <div id="videoList"></div>
   <script>
-    fetch("/Country_data/videos/videos_{continent_name}.json")
+    fetch("/videos_{continent_name}.json")
       .then(res => res.json())
       .then(videos => {{
         const container = document.getElementById("videoList");
@@ -55,11 +55,10 @@ def generate_html_file(continent_name, videos_data, structured_data):
 
     print(f"✅ {output_path} oluşturuldu.")
 
-def main():
-    base_data_dir = "Country_data"
-    videos_base_dir = os.path.join(base_data_dir, "videos")
-    structured_data_base_dir = os.path.join(base_data_dir, "structured_data")
 
+def main():
+    videos_base_dir = "."
+    structured_data_base_dir = "."
     continents = ["asia", "africa", "europe", "north_america", "south_america", "oceania"]
 
     for continent_name in continents:
@@ -69,18 +68,29 @@ def main():
         videos_data = []
         structured_data = {}
 
+        # Video JSON dosyasını oku
         if os.path.exists(videos_file):
-            with open(videos_file, "r", encoding="utf-8") as f:
-                videos_data = json.load(f)
+            try:
+                with open(videos_file, "r", encoding="utf-8") as f:
+                    videos_data = json.load(f)
+            except Exception as e:
+                print(f"HATA: {videos_file} okunurken hata: {e}")
         else:
-            print(f"❌ {videos_file} bulunamadı, atlanıyor.")
-            continue
+            print(f"UYARI: {videos_file} bulunamadı.")
 
+        # Structured data JSON dosyasını oku
         if os.path.exists(structured_data_file):
-            with open(structured_data_file, "r", encoding="utf-8") as f:
-                structured_data = json.load(f)
+            try:
+                with open(structured_data_file, "r", encoding="utf-8") as f:
+                    structured_data = json.load(f)
+            except Exception as e:
+                print(f"HATA: {structured_data_file} okunurken hata: {e}")
+        else:
+            print(f"UYARI: {structured_data_file} bulunamadı.")
 
+        # HTML dosyasını oluştur
         generate_html_file(continent_name, videos_data, structured_data)
+
 
 if __name__ == "__main__":
     main()
