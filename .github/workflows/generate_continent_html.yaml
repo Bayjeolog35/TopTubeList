@@ -22,7 +22,7 @@ jobs:
         run: pip install pyyaml
 
       - name: Kıta HTML dosyalarını oluştur
-        run: python generate_continent_html.py
+        run: python generate_continent_html_file.py
 
       - name: Değişiklikleri Git'e ekle
         run: |
