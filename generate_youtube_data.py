@@ -90,7 +90,14 @@ def save_json(name, videos):
         json.dump(generate_structured_data(videos), f, ensure_ascii=False, indent=2)
 
 def main():
-    from country_info import COUNTRY_INFO, CONTINENT_GROUPS  # ayrı bir dosyadan çağıracağız
+    from country_info import COUNTRY_INFO
+
+from collections import defaultdict
+CONTINENT_GROUPS = defaultdict(list)
+for country_name, info in COUNTRY_INFO.items():
+    continent = info.get("continent")
+    if continent:
+        CONTINENT_GROUPS[continent].append(country_name)  # ayrı bir dosyadan çağıracağız
     videos_by_country = {}
 
     # Ülke verilerini çek
