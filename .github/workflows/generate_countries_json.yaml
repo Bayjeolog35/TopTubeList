@@ -1,0 +1,49 @@
+# .github/workflows/generate_countries_json.yaml
+name: Generate Countries JSON
+
+on:
+  push:
+    paths:
+      - 'country_data.py' # Sadece country_data.py değiştiğinde tetikle
+  workflow_dispatch: # Manüel çalıştırma seçeneği ekler
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x' # Python 3'ün herhangi bir sürümünü kullan
+
+   - name: Run generate-country-continent-data.py
+      run: python generate-country-continent-data.py # Yeni dosya adı buraya geldi
+
+    - name: Configure Git
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GITHUB_TOKEN ile commit için yetkilendirme
+
+    - name: Check for changes in countries.json
+      id: git_status
+      run: |
+        git add countries.json
+        if git diff --staged --quiet; then
+          echo "no_changes=true" >> $GITHUB_OUTPUT
+        else
+          echo "no_changes=false" >> $GITHUB_OUTPUT
+        fi
+      
+    - name: Commit and push if changes exist
+      if: steps.git_status.outputs.no_changes == 'false'
+      run: |
+        git commit -m "chore(data): Update countries.json from country_data.py [skip ci]"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GITHUB_TOKEN ile push için yetkilendirme
