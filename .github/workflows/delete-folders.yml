@@ -1,7 +1,7 @@
 name: Delete Only Folders in TopTubeList
 
 on:
-  workflow_dispatch:  # Elle tetiklenebilir
+  workflow_dispatch:  # Elle çalıştırmak için
 
 jobs:
   delete-folders:
@@ -23,6 +23,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add -u TopTubeList/
-          git commit -m "Sadece klasörler silindi: TopTubeList temizlendi"
-          git push
+          git rm -r --cached TopTubeList/* || true
+          git add TopTubeList/*
+          git commit -am "Sadece klasörler silindi: TopTubeList temiz
