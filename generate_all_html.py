@@ -25,6 +25,16 @@ def load_structured_data(name):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
+def deduplicate_videos(video_list):
+    seen_ids = set()
+    unique = []
+    for video in video_list:
+        vid = video.get("videoId")
+        if vid and vid not in seen_ids:
+            seen_ids.add(vid)
+            unique.append(video)
+    return unique
+
 def update_html(template_html, videos, name):
     soup = BeautifulSoup(template_html, "html.parser")
 
@@ -99,15 +109,16 @@ def main():
     for file in json_files:
         name = file.replace(".vid.data.json", "")
         videos = load_video_data(name)
+        videos = deduplicate_videos(videos)
         html_output = update_html(template_html, videos, name)
 
-        # 👇 Kök dizine direkt yaz
+        # HTML çıktısını kaydet
         output_path = f"{name}.html"
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(html_output)
         print(f"✅ {name}.html üretildi.")
 
-        # 🌍 Worldwide için index.html olarak da yaz
+        # Worldwide için index.html'e de yaz
         if name == "worldwide":
             with open("index.html", "w", encoding="utf-8") as f:
                 f.write(html_output)
