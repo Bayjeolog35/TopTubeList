@@ -81,10 +81,12 @@ def process_video_data(item):
 
 def update_html_file(country_folder, videos):
     """GitHub Pages için HTML güncelleme"""
-    html_path = os.path.join(country_folder, "index.html")
+    # HTML dosyaları için yeni klasör yapısı
+    html_output_dir = os.path.join("toptubelist", "countries_html", country_folder)
+    html_path = os.path.join(html_output_dir, "index.html")
     
     # Ensure the directory exists
-    os.makedirs(country_folder, exist_ok=True)
+    os.makedirs(html_output_dir, exist_ok=True)
 
     # Check if the HTML file exists, if not, create a base one
     if not os.path.exists(html_path):
@@ -191,8 +193,9 @@ def update_html_file(country_folder, videos):
         f.truncate()
 
 def main():
-    # GitHub için gerekli klasörleri oluştur
-    os.makedirs("Country_data/videos", exist_ok=True)
+    # Ana çıkış klasörü
+    base_output_dir = os.path.join("toptubelist", "countries_html")
+    os.makedirs(base_output_dir, exist_ok=True)
     
     # Define a list of country codes to process
     country_codes_to_process = {
@@ -409,13 +412,13 @@ def main():
             videos = [process_video_data(item) for item in data['items']]
             
             # JSON olarak kaydet
-            json_output_dir = "Country_data/videos"
+            json_output_dir = base_output_dir # Tüm JSON'lar toptubelist/countries_html altına
             os.makedirs(json_output_dir, exist_ok=True)
-            with open(os.path.join(json_output_dir, f"videos-{country_folder}.json"), 'w', encoding='utf-8') as f:
+            with open(os.path.join(json_output_dir, f"{country_folder}.vid.data.json"), 'w', encoding='utf-8') as f:
                 json.dump(videos, f, ensure_ascii=False, indent=2)
 
             # STRUCTURED DATA JSON-LD ÜRET ve KAYDET
-            structured_data_output_dir = "Country_data/structured_data"
+            structured_data_output_dir = base_output_dir # Tüm JSON-LD'ler toptubelist/countries_html altına
             os.makedirs(structured_data_output_dir, exist_ok=True)
 
             structured_data = []
@@ -436,7 +439,7 @@ def main():
                     }
                 })
 
-            structured_file_path = os.path.join(structured_data_output_dir, f"structured-data-{country_folder}.json")
+            structured_file_path = os.path.join(structured_data_output_dir, f"{country_folder}.str.data.json")
             with open(structured_file_path, 'w', encoding='utf-8') as f:
                 json.dump(structured_data, f, ensure_ascii=False, indent=2)
 
