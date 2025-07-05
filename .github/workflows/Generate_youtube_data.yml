@@ -1,0 +1,28 @@
+name: Scheduled Country + Continent Video Update
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"  # Her 3 saatte bir (UTC)
+  workflow_dispatch:  # İstenirse elle de tetiklenebilir
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repo'yu klonla
+        uses: actions/checkout@v3
+
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Gerekli paketleri kur
+        run: pip install -r requirements.txt
+
+      - name: Ortam değişkenlerini yükle (API key)
+        run: echo "YOUTUBE_API_KEY=${{ secrets.YOUTUBE_API_KEY }}" >> $GITHUB_ENV
+
+      - name: Script'i çalıştır
+        run: python generate_youtube_data.py
