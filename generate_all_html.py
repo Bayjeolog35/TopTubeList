@@ -2,9 +2,9 @@ import os
 import json
 from bs4 import BeautifulSoup
 
-TEMPLATE_FILE = "index.html"  # Şablon dosya
-VIDEO_DATA_DIR = "countries_html"
-OUTPUT_DIR = "countries_html"
+TEMPLATE_FILE = "index.html"
+VIDEO_DATA_DIR = "."
+OUTPUT_DIR = "."
 
 def load_template():
     with open(TEMPLATE_FILE, 'r', encoding='utf-8') as f:
