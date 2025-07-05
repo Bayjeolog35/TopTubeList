@@ -1,4 +1,4 @@
-from country_data import COUNTRY_INFO
+from country-continent-data import COUNTRY_INFO
 from collections import defaultdict
 import json
 import os
