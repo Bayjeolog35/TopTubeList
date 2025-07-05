@@ -1,0 +1,34 @@
+name: Generate Countries JSON
+
+on:
+  workflow_dispatch:  # Elle tetiklemek için
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Repo'yu klonla
+      uses: actions/checkout@v3
+
+    - name: Python 3.x kur
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Gerekli bağımlılıkları kur (yoksa geç)
+      run: |
+        pip install --upgrade pip
+
+    - name: Buton JSON dosyasını üret
+      run: python generate_country_buttons_json.py
+
+    - name: Oluşan JSON dosyasını kontrol et
+      run: cat output/countries.json
+
+    # Artefact olarak kaydetmek istersen:
+    - name: countries.json dosyasını artefact olarak yükle
+      uses: actions/upload-artifact@v3
+      with:
+        name: countries-json
+        path: output/countries.json
