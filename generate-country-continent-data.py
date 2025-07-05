@@ -1,26 +1,24 @@
-# generate_json.py
+from country_data import COUNTRY_INFO
+from collections import defaultdict
 import json
-from country_continent_data import COUNTRY_INFO # country_data.py dosyasından COUNTRY_INFO'yu içe aktar
+import os
 
-# JSON için formatı dönüştürelim
-# Display name varsa onu, yoksa anahtarı (country_slug) kullanacağız
-# Link için country_slug.html formatını kullanacağız
-# Harf için display name veya country_slug'ın ilk harfini kullanacağız
+buttons = []
 
-formatted_countries_for_js = []
-for country_slug, data in COUNTRY_INFO.items():
-    display_name = data.get("display-name", country_slug.replace("-", " ")).title() # Baş harfleri büyük yap
-    formatted_countries_for_js.append({
-        "name": display_name,
-        "link": f"{country_slug}.html", # Link formatı: country-slug.html
-        "letter": display_name[0].upper(), # Görünen adın ilk harfi
-        "code": data["code"],
-        "continent": data["continent"]
-    })
+for country, info in COUNTRY_INFO.items():
+    entry = {
+        "continent": info["continent"].lower(),
+        "country": country.lower(),
+        "label": country.replace("_", " ").title(),
+        "url": f"/{country.lower()}"
+    }
+    buttons.append(entry)
 
-# JSON dosyasını yazma
-output_filename = "countries.json"
-with open(output_filename, "w", encoding="utf-8") as f:
-    json.dump(formatted_countries_for_js, f, indent=2, ensure_ascii=False)
+# Çıktı klasörü
+os.makedirs("output", exist_ok=True)
 
-print(f"{output_filename} dosyası başarıyla oluşturuldu.")
+# JSON olarak yaz
+with open("output/buttons.json", "w", encoding="utf-8") as f:
+    json.dump(buttons, f, indent=2)
+
+print("✔ 'buttons.json' başarıyla oluşturuldu.")
