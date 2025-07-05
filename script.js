@@ -1,5 +1,3 @@
-<script>
-
  /*hamburger menü*/
   
 document.addEventListener("DOMContentLoaded", () => {
@@ -207,4 +205,4 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     document.head.appendChild(style);
 });
-</script>
+
