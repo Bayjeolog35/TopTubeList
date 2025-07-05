@@ -36,17 +36,35 @@ def deduplicate_videos(video_list):
     return unique
 
 def update_html(template_html, videos, name):
+    from pathlib import Path
     soup = BeautifulSoup(template_html, "html.parser")
+
+    readable_name = name.replace("-", " ").title()
 
     # <title>
     title_tag = soup.find("title")
     if title_tag:
-        title_tag.string = f"Trending YouTube Videos in {name.replace('-', ' ').title()} | TopTubeList"
+        title_tag.string = f"Trending YouTube Videos in {readable_name} | TopTubeList"
+
+    # <meta description>
+    meta_desc = soup.find("meta", attrs={"name": "description"})
+    if meta_desc:
+        meta_desc["content"] = f"Watch the most popular YouTube videos trending across {readable_name}. Stay current with viral content from this region."
+
+    # <meta keywords>
+    meta_keywords = soup.find("meta", attrs={"name": "keywords"})
+    if meta_keywords:
+        meta_keywords["content"] = f"YouTube trends {readable_name}, popular videos {readable_name}, trending YouTube {readable_name}, viral content"
+
+    # Canonical link
+    link_tag = soup.find("link", rel="canonical")
+    if link_tag:
+        link_tag["href"] = f"https://toptubelist.com/{name}"
 
     # <h1>
     h1_tag = soup.find("h1")
     if h1_tag:
-        h1_tag.string = f"Top Videos in {name.replace('-', ' ').title()}"
+        h1_tag.string = f"Top Videos in {readable_name}"
 
     # Video Listesi
     video_list_div = soup.find("div", id="videoList")
@@ -96,33 +114,15 @@ def update_html(template_html, videos, name):
         iframe_tag["allowfullscreen"] = True
         soup.body.append(iframe_tag)
 
+    # === JavaScript inline olarak ekleniyor ===
+    script_path = Path("script.js")
+    if script_path.exists():
+        with open(script_path, encoding="utf-8") as f:
+            script_code = f.read()
+        inline_script = soup.new_tag("script")
+        inline_script.string = script_code
+        soup.body.append(inline_script)
+    else:
+        print("⚠️ Uyarı: script.js dosyası bulunamadı, inline script eklenemedi.")
+
     return str(soup)
-
-def main():
-    template_html = load_template()
-
-    json_files = [
-        f for f in os.listdir(VIDEO_DATA_DIR)
-        if f.endswith(".vid.data.json")
-    ]
-
-    for file in json_files:
-        name = file.replace(".vid.data.json", "")
-        videos = load_video_data(name)
-        videos = deduplicate_videos(videos)
-        html_output = update_html(template_html, videos, name)
-
-        # HTML çıktısını kaydet
-        output_path = f"{name}.html"
-        with open(output_path, "w", encoding="utf-8") as f:
-            f.write(html_output)
-        print(f"✅ {name}.html üretildi.")
-
-        # Worldwide için index.html'e de yaz
-        if name == "worldwide":
-            with open("index.html", "w", encoding="utf-8") as f:
-                f.write(html_output)
-            print("🌍 index.html (worldwide) olarak güncellendi.")
-
-if __name__ == "__main__":
-    main()
