@@ -1,5 +1,0 @@
-mkdir reports
-touch reports/.gitkeep
-git add reports/.gitkeep
-git commit -m "create reports folder with .gitkeep"
-git push
