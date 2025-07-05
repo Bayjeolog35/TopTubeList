@@ -1,0 +1,28 @@
+name: Delete Only Folders in TopTubeList
+
+on:
+  workflow_dispatch:  # Elle tetiklenebilir
+
+jobs:
+  delete-folders:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Delete only folders inside TopTubeList (keep files)
+        run: |
+          for item in TopTubeList/*; do
+            if [ -d "$item" ]; then
+              echo "Deleting folder: $item"
+              rm -rf "$item"
+            fi
+          done
+
+      - name: Commit and push folder deletions
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add -u TopTubeList/
+          git commit -m "Sadece klasörler silindi: TopTubeList temizlendi"
+          git push
