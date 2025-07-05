@@ -1,6 +1,6 @@
 # generate_json.py
 import json
-from country_data import COUNTRY_INFO # country_data.py dosyasından COUNTRY_INFO'yu içe aktar
+from country_continent_data import COUNTRY_INFO # country_data.py dosyasından COUNTRY_INFO'yu içe aktar
 
 # JSON için formatı dönüştürelim
 # Display name varsa onu, yoksa anahtarı (country_slug) kullanacağız
