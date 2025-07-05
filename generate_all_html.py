@@ -1,6 +1,7 @@
 import os
 import json
 from bs4 import BeautifulSoup
+from pathlib import Path
 
 TEMPLATE_FILE = "index.html"
 VIDEO_DATA_DIR = "."
@@ -36,9 +37,7 @@ def deduplicate_videos(video_list):
     return unique
 
 def update_html(template_html, videos, name):
-    from pathlib import Path
     soup = BeautifulSoup(template_html, "html.parser")
-
     readable_name = name.replace("-", " ").title()
 
     # <title>
@@ -70,7 +69,6 @@ def update_html(template_html, videos, name):
     video_list_div = soup.find("div", id="videoList")
     if video_list_div:
         video_list_div.clear()
-
         if not videos:
             empty_div = soup.new_tag("div", **{"class": "no-data"})
             empty_div.string = "❌ Sorry, no video data available for this region."
@@ -78,7 +76,6 @@ def update_html(template_html, videos, name):
         else:
             for video in videos[:20]:
                 card = soup.new_tag("div", **{"class": "video-card"})
-
                 link = soup.new_tag("a", href=video["url"], target="_blank")
                 thumbnail = soup.new_tag("img", src=video["thumbnail"], alt=video["title"])
                 link.append(thumbnail)
@@ -104,7 +101,7 @@ def update_html(template_html, videos, name):
         script_tag.string = json.dumps(structured, ensure_ascii=False, indent=2)
         soup.head.append(script_tag)
 
-    # En çok izlenen videoyu iframe olarak ekle (gizli)
+    # Top video iframe (hidden)
     if videos:
         top_video = videos[0]
         video_id = top_video["url"].split("v=")[-1].split("&")[0]
@@ -114,7 +111,7 @@ def update_html(template_html, videos, name):
         iframe_tag["allowfullscreen"] = True
         soup.body.append(iframe_tag)
 
-    # === JavaScript inline olarak ekleniyor ===
+    # Inline script.js
     script_path = Path("script.js")
     if script_path.exists():
         with open(script_path, encoding="utf-8") as f:
@@ -126,3 +123,24 @@ def update_html(template_html, videos, name):
         print("⚠️ Uyarı: script.js dosyası bulunamadı, inline script eklenemedi.")
 
     return str(soup)
+
+# === Ana çalışma bloğu ===
+def main():
+    template_html = load_template()
+
+    for filename in os.listdir(VIDEO_DATA_DIR):
+        if filename.endswith(".vid.data.json"):
+            name = filename.replace(".vid.data.json", "")
+            videos = load_video_data(name)
+            html_content = update_html(template_html, videos, name)
+
+            output_folder = os.path.join(OUTPUT_DIR, name)
+            os.makedirs(output_folder, exist_ok=True)
+
+            with open(os.path.join(output_folder, "index.html"), "w", encoding="utf-8") as f:
+                f.write(html_content)
+
+            print(f"✅ {name}/index.html oluşturuldu.")
+
+if __name__ == "__main__":
+    main()
