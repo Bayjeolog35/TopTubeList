@@ -1,7 +1,5 @@
 // script.js
 
-// Tek bir DOMContentLoaded dinleyicisi kullanmak daha iyidir.
-// Tüm sayfa elemanları yüklendiğinde çalışacak ana blok.
 document.addEventListener("DOMContentLoaded", () => {
 
     /* --- Hamburger Menü --- */
@@ -14,16 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* --- Dark Mode Toggle --- */
+    /* --- Dark Mode --- */
     const darkModeToggle = document.getElementById("darkModeToggle");
-
-    // Sayfa yüklendiğinde dark mode'u uygula
     const savedMode = localStorage.getItem("darkMode");
+
     if (savedMode === "true") {
         document.body.classList.add("dark-mode");
     }
 
-    // Tıklanınca dark mode'u toggle et
     if (darkModeToggle) {
         darkModeToggle.addEventListener("click", () => {
             const isDarkNow = document.body.classList.toggle("dark-mode");
@@ -31,8 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-
-    /* --- Video Yükleme ve Daha Fazla Butonu --- */
+    /* --- Video Kartları --- */
     let allVideos = [];
     let displayCount = 0;
     const videoList = document.getElementById("videoList");
@@ -40,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderVideos(startIndex = 0) {
         const videosToAdd = allVideos.slice(startIndex, displayCount);
+
         videosToAdd.forEach((video, index) => {
             const card = document.createElement("div");
             card.classList.add("video-card");
@@ -52,10 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `;
             videoList.appendChild(card);
-
-            setTimeout(() => {
-                card.classList.add("show");
-            }, 50 * index);
+            setTimeout(() => card.classList.add("show"), 50 * index);
         });
 
         if (loadMoreBtn) {
@@ -64,116 +57,85 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     fetch("videos.json")
-        .then(response => response.json())
+        .then(res => res.json())
         .then(videos => {
             allVideos = videos;
             displayCount = 10;
             renderVideos(0);
         })
-        .catch(error => {
-            console.error("❌ Error fetching videos.json:", error);
-        });
+        .catch(err => console.error("❌ Error fetching videos.json:", err));
 
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener("click", () => {
-            const previousDisplayCount = displayCount;
+            const previous = displayCount;
             displayCount += 10;
-            renderVideos(previousDisplayCount);
+            renderVideos(previous);
         });
     }
 
+    /* --- Dinamik Ülke Butonları --- */
+    let allCountries = [];
+    const countryColumn = document.querySelector(".country-column");
 
-    /* --- Ülke ve Kıta Butonları Dinamik Yükleme --- */
-    let allCountries = []; // Ülke verisini tutacak dizi
-    const countryColumn = document.querySelector(".country-column"); // country-column div'i buraya taşıdık
+    function generateCountryButtons(countries) {
+        if (!countryColumn) return;
+        countryColumn.innerHTML = '';
 
-    // Ülke butonlarını dinamik olarak oluşturan fonksiyon
-    function generateCountryButtons(countriesToDisplay) {
-        if (!countryColumn) {
-            console.error("country-column div bulunamadı!");
-            return;
-        }
-
-        countryColumn.innerHTML = ''; // Her çağrıldığında mevcut içeriği temizle
-
-        countriesToDisplay.forEach(country => {
-            const button = document.createElement("button");
-            button.textContent = country.name;
-            button.setAttribute("data-letter", country.letter);
-            // Ülke butonlarına kıta bilgisini de ekleyebiliriz (filtreleme için)
-            if (country.continent) {
-                 button.setAttribute("data-continent", country.continent);
-            }
-            button.onclick = function() {
-                location.href = country.link;
-            };
-            countryColumn.appendChild(button);
+        countries.forEach(country => {
+            const btn = document.createElement("button");
+            btn.textContent = country.name;
+            btn.setAttribute("data-letter", country.letter);
+            if (country.continent) btn.setAttribute("data-continent", country.continent);
+            btn.onclick = () => location.href = country.link;
+            countryColumn.appendChild(btn);
         });
     }
 
-    // Ülke verisini JSON dosyasından çek
-    fetch("countries.json") // Oluşturduğumuz JSON dosyasının yolu
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
+    fetch("countries.json")
+        .then(res => {
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return res.json();
         })
         .then(data => {
-            allCountries = data; // Çekilen veriyi global değişkene ata
+            allCountries = data;
 
-            // Mevcut sayfanın URL'sini al ve kıta ismini çıkar (örn: "asia.html" -> "asia")
-            const currentPagePath = window.location.pathname.split('/').pop();
-            const currentContinentSlug = currentPagePath.replace(".html", "").replace(".htm", ""); // .html veya .htm uzantısını kaldır
+            const path = window.location.pathname.split('/').pop();
+            const slug = path.replace(/\.html?$/, "");
 
-            let countriesToDisplayInitial = allCountries;
+            let initial = allCountries;
+            const validContinents = new Set(allCountries.map(c => c.continent));
 
-            // Eğer şu anki sayfa bir kıta sayfasıysa (örn: asia.html), sadece o kıtanın ülkelerini filtrele
-            // "index.html" veya boş string (ana sayfa) değilse filtrele
-            if (currentContinentSlug && currentContinentSlug !== "index") {
-                // Kıta sluglarını kontrol edelim (örneğin "north_america", "south_america" vb.)
-                const validContinents = new Set(allCountries.map(c => c.continent));
-                if (validContinents.has(currentContinentSlug)) {
-                    countriesToDisplayInitial = allCountries.filter(country => country.continent === currentContinentSlug);
-                } else {
-                    console.warn(`"${currentContinentSlug}" bir kıta slug'ı değil veya veride bulunmuyor.`);
-                }
+            if (slug && slug !== "index" && validContinents.has(slug)) {
+                initial = allCountries.filter(c => c.continent === slug);
             }
 
-            generateCountryButtons(countriesToDisplayInitial); // Başlangıçta ilgili ülkeleri göster
+            generateCountryButtons(initial);
         })
-        .catch(error => {
-            console.error("❌ Ülke verisi çekilemedi:", error);
-            // Kullanıcıya bir mesaj gösterebilirsiniz
+        .catch(err => {
+            console.error("❌ Ülke verisi alınamadı:", err);
             if (countryColumn) {
-                countryColumn.innerHTML = "<p>Ülke listesi yüklenirken bir hata oluştu.</p>";
+                countryColumn.innerHTML = "<p>Ülke listesi yüklenirken hata oluştu.</p>";
             }
         });
 
-
-    /* --- Harf Filtreleme (ülke butonları artık dinamik) --- */
+    /* --- Harf Filtreleme --- */
     document.querySelectorAll(".alphabet-letter").forEach(letter => {
         letter.addEventListener("click", function (e) {
             e.preventDefault();
-            const selectedLetter = this.getAttribute("data-letter");
-            let filteredCountries = [];
+            const selected = this.getAttribute("data-letter");
 
-            if (selectedLetter === "all") {
-                filteredCountries = allCountries;
-            } else {
-                // Sadece JSON'dan gelen veriyi filtreliyoruz, DOM'daki butonları değil
-                filteredCountries = allCountries.filter(country => country.letter === selectedLetter);
-            }
-            generateCountryButtons(filteredCountries); // Filtrelenmiş ülkeleri yeniden oluştur
+            const filtered = selected === "all"
+                ? allCountries
+                : allCountries.filter(c => c.letter === selected);
 
-            // Aktif harfi vurgula
-            document.querySelectorAll(".alphabet-letter").forEach(a => a.classList.remove("active"));
+            generateCountryButtons(filtered);
+
+            document.querySelectorAll(".alphabet-letter").forEach(el => el.classList.remove("active"));
             this.classList.add("active");
         });
     });
 
-
-    /* --- About Us Scroll + Toggle --- */
+    /* --- About Toggle --- */
     const aboutToggle = document.getElementById("aboutToggle");
     const aboutContent = document.getElementById("aboutContent");
 
@@ -181,23 +143,18 @@ document.addEventListener("DOMContentLoaded", () => {
         aboutToggle.addEventListener("click", () => {
             if (aboutContent.classList.contains("show")) {
                 aboutContent.classList.remove("show");
-                setTimeout(() => {
-                    aboutContent.style.display = "none";
-                }, 400);
+                setTimeout(() => aboutContent.style.display = "none", 400);
             } else {
                 aboutContent.style.display = "block";
                 setTimeout(() => {
                     aboutContent.classList.add("show");
-                    aboutContent.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
+                    aboutContent.scrollIntoView({ behavior: "smooth", block: "start" });
                 }, 10);
             }
         });
     }
 
-    /* --- Contact Us Scroll + Toggle --- */
+    /* --- Contact Toggle --- */
     const contactToggle = document.getElementById("contactToggle");
     const contactContent = document.getElementById("contactContent");
 
@@ -205,28 +162,23 @@ document.addEventListener("DOMContentLoaded", () => {
         contactToggle.addEventListener("click", () => {
             if (contactContent.classList.contains("show")) {
                 contactContent.classList.remove("show");
-                setTimeout(() => {
-                    contactContent.style.display = "none";
-                }, 400);
+                setTimeout(() => contactContent.style.display = "none", 400);
             } else {
                 contactContent.style.display = "block";
                 setTimeout(() => {
                     contactContent.classList.add("show");
-                    contactContent.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
+                    contactContent.scrollIntoView({ behavior: "smooth", block: "start" });
                 }, 10);
             }
         });
     }
 
-    /* --- Contact Form Submission --- */
+    /* --- Contact Form --- */
     const form = document.getElementById("contactForm");
     const statusDiv = document.getElementById("formStatus");
 
     if (form && statusDiv) {
-        form.addEventListener("submit", function (e) {
+        form.addEventListener("submit", e => {
             e.preventDefault();
             const formData = new FormData(form);
 
@@ -237,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .then(() => {
                 form.reset();
-                statusDiv.innerText = "✅ ✅ Message sent successfully!";
+                statusDiv.innerText = "✅ Message sent successfully!";
                 statusDiv.style.display = "block";
                 statusDiv.style.cssText = `
                     position: fixed; bottom: 20px; right: 20px;
@@ -249,21 +201,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(() => statusDiv.remove(), 5000);
             })
             .catch(() => {
-                alert("❌ Mesaj gönderilemedi. Lütfen tekrar deneyin.");
+                alert("❌ Message could not be sent. Please try again.");
             });
         });
     }
 
-    /* --- Logo scroll to top --- */
+    /* --- Scroll to top --- */
     const logoLink = document.getElementById("logoLink");
     if (logoLink) {
-        logoLink.addEventListener("click", function (e) {
+        logoLink.addEventListener("click", e => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
 
-    /* --- FadeOut animation style block (CSS dosyasına taşımanız tavsiye edilir) --- */
+    /* --- FadeOut animasyonu (tercihen CSS'e taşınmalı) --- */
     const style = document.createElement("style");
     style.textContent = `
         @keyframes fadeOut {
@@ -274,4 +226,4 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     document.head.appendChild(style);
 
-}); // DOMContentLoaded bitişi
+}); // DOMContentLoaded
