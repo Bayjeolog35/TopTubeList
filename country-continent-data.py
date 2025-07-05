@@ -1,4 +1,4 @@
-# country_data.py
+# country-continent-data.py
 
 COUNTRY_INFO = {
     "afghanistan": {"code": "af", "continent": "asia"},
