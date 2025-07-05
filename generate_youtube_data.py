@@ -15,8 +15,7 @@ if not YOUTUBE_API_KEY:
     raise ValueError("API key bulunamadı!")
 
 YOUTUBE_API_BASE_URL = "https://www.googleapis.com/youtube/v3/"
-OUTPUT_DIR = "countries_html"
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+OUTPUT_DIR = "."  # Artık kök klasör
 
 def format_number(num):
     num = float(num)

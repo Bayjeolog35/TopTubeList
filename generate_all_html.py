@@ -101,13 +101,13 @@ def main():
         videos = load_video_data(name)
         html_output = update_html(template_html, videos, name)
 
-        # countries_html/{name}.html olarak yaz
-        output_path = os.path.join(OUTPUT_DIR, f"{name}.html")
+        # 👇 Kök dizine direkt yaz
+        output_path = f"{name}.html"
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(html_output)
         print(f"✅ {name}.html üretildi.")
 
-        # Eğer worldwide ise ayrıca index.html'e de yaz
+        # 🌍 Worldwide için index.html olarak da yaz
         if name == "worldwide":
             with open("index.html", "w", encoding="utf-8") as f:
                 f.write(html_output)
