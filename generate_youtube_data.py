@@ -91,13 +91,14 @@ def save_json(name, videos):
 
 def main():
     from country_info import COUNTRY_INFO
+    from collections import defaultdict
 
-from collections import defaultdict
-CONTINENT_GROUPS = defaultdict(list)
-for country_name, info in COUNTRY_INFO.items():
-    continent = info.get("continent")
-    if continent:
-        CONTINENT_GROUPS[continent].append(country_name)  # ayrı bir dosyadan çağıracağız
+    CONTINENT_GROUPS = defaultdict(list)
+    for country_name, info in COUNTRY_INFO.items():
+        continent = info.get("continent")
+        if continent:
+            CONTINENT_GROUPS[continent].append(country_name)
+
     videos_by_country = {}
 
     # Ülke verilerini çek
@@ -112,20 +113,21 @@ for country_name, info in COUNTRY_INFO.items():
         videos_by_country[country] = videos
         save_json(country, videos)
 
-    # Kıta verilerini oluştur
-    for continent, countries in CONTINENT_GROUPS.items():
+    # Kıtasal veriler
+    for continent, country_list in CONTINENT_GROUPS.items():
         continent_videos = []
-        for c in countries:
-            continent_videos.extend(videos_by_country.get(c, []))
+        for country in country_list:
+            continent_videos.extend(videos_by_country.get(country, []))
         continent_videos.sort(key=lambda x: x["views"], reverse=True)
         save_json(continent, continent_videos[:50])
 
-    # Dünya geneli verisi (tüm ülkelerin birleşimi)
+    # Dünya geneli
     all_videos = []
     for vids in videos_by_country.values():
         all_videos.extend(vids)
     all_videos.sort(key=lambda x: x["views"], reverse=True)
     save_json("worldwide", all_videos[:50])
+
 
 if __name__ == "__main__":
     main()
