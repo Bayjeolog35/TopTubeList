@@ -1,38 +1,38 @@
- /*hamburger menü*/
-  
+// script.js
+
+// Tek bir DOMContentLoaded dinleyicisi kullanmak daha iyidir.
+// Tüm sayfa elemanları yüklendiğinde çalışacak ana blok.
 document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.querySelector(".hamburger");
-  const panel = document.querySelector(".country-panel");
 
-  if (hamburger && panel) {
-    hamburger.addEventListener("click", () => {
-      panel.classList.toggle("active");
-    });
-  }
-});
+    /* --- Hamburger Menü --- */
+    const hamburger = document.querySelector(".hamburger");
+    const panel = document.querySelector(".country-panel");
+
+    if (hamburger && panel) {
+        hamburger.addEventListener("click", () => {
+            panel.classList.toggle("active");
+        });
+    }
+
+    /* --- Dark Mode Toggle --- */
+    const darkModeToggle = document.getElementById("darkModeToggle");
+
+    // Sayfa yüklendiğinde dark mode'u uygula
+    const savedMode = localStorage.getItem("darkMode");
+    if (savedMode === "true") {
+        document.body.classList.add("dark-mode");
+    }
+
+    // Tıklanınca dark mode'u toggle et
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener("click", () => {
+            const isDarkNow = document.body.classList.toggle("dark-mode");
+            localStorage.setItem("darkMode", isDarkNow);
+        });
+    }
 
 
-/*hamburger menü son*/
-  // --- Dark Mode Toggle ---
-document.addEventListener("DOMContentLoaded", () => {
-  const darkModeToggle = document.getElementById("darkModeToggle");
-
-  // Sayfa yüklendiğinde dark mode'u uygula
-  const savedMode = localStorage.getItem("darkMode");
-  if (savedMode === "true") {
-    document.body.classList.add("dark-mode");
-  }
-
-  // Tıklanınca dark mode'u toggle et
-  if (darkModeToggle) {
-    darkModeToggle.addEventListener("click", () => {
-      const isDarkNow = document.body.classList.toggle("dark-mode");
-      localStorage.setItem("darkMode", isDarkNow);
-    });
-  }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
+    /* --- Video Yükleme ve Daha Fazla Butonu --- */
     let allVideos = [];
     let displayCount = 0;
     const videoList = document.getElementById("videoList");
@@ -63,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-  
     fetch("videos.json")
         .then(response => response.json())
         .then(videos => {
@@ -84,7 +83,97 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // --- About Us Scroll + Toggle ---
+    /* --- Ülke ve Kıta Butonları Dinamik Yükleme --- */
+    let allCountries = []; // Ülke verisini tutacak dizi
+    const countryColumn = document.querySelector(".country-column"); // country-column div'i buraya taşıdık
+
+    // Ülke butonlarını dinamik olarak oluşturan fonksiyon
+    function generateCountryButtons(countriesToDisplay) {
+        if (!countryColumn) {
+            console.error("country-column div bulunamadı!");
+            return;
+        }
+
+        countryColumn.innerHTML = ''; // Her çağrıldığında mevcut içeriği temizle
+
+        countriesToDisplay.forEach(country => {
+            const button = document.createElement("button");
+            button.textContent = country.name;
+            button.setAttribute("data-letter", country.letter);
+            // Ülke butonlarına kıta bilgisini de ekleyebiliriz (filtreleme için)
+            if (country.continent) {
+                 button.setAttribute("data-continent", country.continent);
+            }
+            button.onclick = function() {
+                location.href = country.link;
+            };
+            countryColumn.appendChild(button);
+        });
+    }
+
+    // Ülke verisini JSON dosyasından çek
+    fetch("countries.json") // Oluşturduğumuz JSON dosyasının yolu
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            allCountries = data; // Çekilen veriyi global değişkene ata
+
+            // Mevcut sayfanın URL'sini al ve kıta ismini çıkar (örn: "asia.html" -> "asia")
+            const currentPagePath = window.location.pathname.split('/').pop();
+            const currentContinentSlug = currentPagePath.replace(".html", "").replace(".htm", ""); // .html veya .htm uzantısını kaldır
+
+            let countriesToDisplayInitial = allCountries;
+
+            // Eğer şu anki sayfa bir kıta sayfasıysa (örn: asia.html), sadece o kıtanın ülkelerini filtrele
+            // "index.html" veya boş string (ana sayfa) değilse filtrele
+            if (currentContinentSlug && currentContinentSlug !== "index") {
+                // Kıta sluglarını kontrol edelim (örneğin "north_america", "south_america" vb.)
+                const validContinents = new Set(allCountries.map(c => c.continent));
+                if (validContinents.has(currentContinentSlug)) {
+                    countriesToDisplayInitial = allCountries.filter(country => country.continent === currentContinentSlug);
+                } else {
+                    console.warn(`"${currentContinentSlug}" bir kıta slug'ı değil veya veride bulunmuyor.`);
+                }
+            }
+
+            generateCountryButtons(countriesToDisplayInitial); // Başlangıçta ilgili ülkeleri göster
+        })
+        .catch(error => {
+            console.error("❌ Ülke verisi çekilemedi:", error);
+            // Kullanıcıya bir mesaj gösterebilirsiniz
+            if (countryColumn) {
+                countryColumn.innerHTML = "<p>Ülke listesi yüklenirken bir hata oluştu.</p>";
+            }
+        });
+
+
+    /* --- Harf Filtreleme (ülke butonları artık dinamik) --- */
+    document.querySelectorAll(".alphabet-letter").forEach(letter => {
+        letter.addEventListener("click", function (e) {
+            e.preventDefault();
+            const selectedLetter = this.getAttribute("data-letter");
+            let filteredCountries = [];
+
+            if (selectedLetter === "all") {
+                filteredCountries = allCountries;
+            } else {
+                // Sadece JSON'dan gelen veriyi filtreliyoruz, DOM'daki butonları değil
+                filteredCountries = allCountries.filter(country => country.letter === selectedLetter);
+            }
+            generateCountryButtons(filteredCountries); // Filtrelenmiş ülkeleri yeniden oluştur
+
+            // Aktif harfi vurgula
+            document.querySelectorAll(".alphabet-letter").forEach(a => a.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+
+
+    /* --- About Us Scroll + Toggle --- */
     const aboutToggle = document.getElementById("aboutToggle");
     const aboutContent = document.getElementById("aboutContent");
 
@@ -108,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // --- Contact Us Scroll + Toggle ---
+    /* --- Contact Us Scroll + Toggle --- */
     const contactToggle = document.getElementById("contactToggle");
     const contactContent = document.getElementById("contactContent");
 
@@ -132,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // --- Contact Form Submission ---
+    /* --- Contact Form Submission --- */
     const form = document.getElementById("contactForm");
     const statusDiv = document.getElementById("formStatus");
 
@@ -165,27 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // --- Harf filtreleme ---
-    document.querySelectorAll(".alphabet-letter").forEach(letter => {
-        letter.addEventListener("click", function (e) {
-            e.preventDefault();
-            const selectedLetter = this.getAttribute("data-letter");
-            const allButtons = document.querySelectorAll(".country-column button");
-
-            allButtons.forEach(btn => {
-                if (selectedLetter === "all" || btn.getAttribute("data-letter") === selectedLetter) {
-                    btn.style.display = "block";
-                } else {
-                    btn.style.display = "none";
-                }
-            });
-
-            document.querySelectorAll(".alphabet-letter").forEach(a => a.classList.remove("active"));
-            this.classList.add("active");
-        });
-    });
-
-    // --- Logo scroll to top ---
+    /* --- Logo scroll to top --- */
     const logoLink = document.getElementById("logoLink");
     if (logoLink) {
         logoLink.addEventListener("click", function (e) {
@@ -194,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // --- FadeOut animation style block ---
+    /* --- FadeOut animation style block (CSS dosyasına taşımanız tavsiye edilir) --- */
     const style = document.createElement("style");
     style.textContent = `
         @keyframes fadeOut {
@@ -204,5 +273,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     `;
     document.head.appendChild(style);
-});
 
+}); // DOMContentLoaded bitişi
