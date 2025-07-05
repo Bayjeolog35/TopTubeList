@@ -1,0 +1,33 @@
+name: Delete All Pattern-Matching Folders
+
+on:
+  workflow_dispatch: # Manuel tetikleme için. Gerekirse silebilirsiniz.
+    inputs:
+      target_directory:
+        description: "Klasörlerin silineceği ana dizin (repo köküne göre, boş bırakırsanız kök silinir)"
+        required: false
+        default: '' # Varsayılan olarak repo kökü
+
+jobs:
+  delete-folders:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Tüm commit geçmişini al (önemli)
+          # GITHUB_TOKEN ile kimlik doğrulama otomatik olarak yapılır
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Run folder deletion script
+        run: |
+          python github_all_folders_remover.py \
+            --repo "${{ github.workspace }}" \
+            --target_dir "${{ github.event.inputs.target_directory }}" \
+            --message "GitHub Action: Cleaned up folders in ${{ github.event.inputs.target_directory || 'root' }} directory"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Commit ve push için token
