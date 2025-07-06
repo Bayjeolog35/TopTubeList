@@ -643,11 +643,11 @@ html = f"""<!DOCTYPE html>
 def build_html(name, videos, structured_data):
     readable_name = name.replace("-", " ").title()
 
-      # 🔹 Structured Data (JSON-LD Script Bloğu)
+    # 🔹 Structured Data (JSON-LD Script Bloğu)
     structured_data_block = ""
-if structured_data:
-    structured_json = json.dumps(structured_data, indent=2, ensure_ascii=False)
-    structured_data_block = f"""
+    if structured_data:
+        structured_json = json.dumps(structured_data, indent=2, ensure_ascii=False)
+        structured_data_block = f"""
 <script type="application/ld+json">
 {structured_json}
 </script>
