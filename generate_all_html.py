@@ -675,19 +675,18 @@ if structured_data:
 </iframe>
 """
 
-    # 🔹 Video Kartları
-    video_cards_html = ""
-    for video in videos[:20]:
-        video_cards_html += f"""
-      <div class="video-card">
-        <img class="thumbnail" src="{video.get("thumbnail")}" alt="{video.get("title", "")}">
-        <h3><a href="https://www.youtube.com/watch?v={video.get("videoId")}" target="_blank" rel="noopener">{video.get("title", "Untitled")}</a></h3>
-        <p class="channel-name">{video.get("channelTitle", "")}</p>
-        <p class="views">{video.get("viewCount", "")} views</p>
-        <p class="upload-date">{video.get("publishedAt", "")[:10]}</p>
-      </div>
-      """
-
+  video_cards_html = ""
+for video in videos[:20]:
+    video_cards_html += f"""
+    <div class="video-card">
+      <img class="thumbnail" src="{video.get("thumbnail")}" alt="{video.get("title", "")}">
+      <h3><a href="https://www.youtube.com/watch?v={video.get("videoId")}" target="_blank" rel="noopener">{video.get("title", "Untitled")}</a></h3>
+      <p class="channel-name">{video.get("channelTitle", "")}</p>
+      <p class="views">{video.get("viewCount", "")} views</p>
+      <p class="upload-date">{video.get("publishedAt", "")[:10]}</p>
+    </div>
+    """  # Bu satır en sola yaslanmalı, "video_cards_html +=" ile aynı hizaya
+    
     return html
 
 
