@@ -84,7 +84,7 @@ html = f"""<!DOCTYPE html>
 </header>
 
 <main class="main-content">
-  <button id="hamburgerBtn" class="hamburger">☰</button>
+  <button id="hamburgerBtn" class="hamburger">&#9776;</button>
   <div class="layout-wrapper">
 <div class="country-panel">
   <div class="alphabet-column"> <a href="#" class="alphabet-letter" data-letter="all">All</a>
@@ -460,7 +460,7 @@ if structured_data:
 </header>
 
 <main class="main-content">
-  <button id="hamburgerBtn" class="hamburger">☰</button>
+  <button id="hamburgerBtn" class="hamburger">&#9776;</button>
   <div class="layout-wrapper">
     <!-- A-Z harf butonları ve ülke butonları burada dinamik olarak gömülmeli -->
     <!-- Örn: {country_panel_html} şeklinde eklenecekse ayrı fonksiyonla döndürülür -->
