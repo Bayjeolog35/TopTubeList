@@ -36,6 +36,7 @@ def deduplicate_videos(video_list):
     return unique
 
 def update_html(template_html, videos, name):
+    print(f"🔍 {name} için {len(videos)} video yüklendi.")
     soup = BeautifulSoup(template_html, "html.parser")
     readable_name = name.replace("-", " ").title()
 
