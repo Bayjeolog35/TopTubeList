@@ -302,7 +302,7 @@ def build_html(name, videos, structured_data, page_type="country"):
         description_prefix = "Watch the most popular YouTube videos trending worldwide. Stay current with viral content."
         canonical_link = "https://toptubelist.com/index.html"
         body_class = "worldwide-page"
-	"""
+	
  script_block = """
 <script>
   // --- Hamburger Menü ---
