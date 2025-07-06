@@ -663,6 +663,8 @@ if structured_data:
         video_title = first_video.get("name", "")
         if embed_url:
             iframe_block = f"""
+# YouTube video iframe embed kodu
+iframe_html = """
 <iframe 
   width="560" 
   height="315" 
@@ -675,30 +677,28 @@ if structured_data:
 </iframe>
 """
 
+# Video kartları HTML oluşturma
 video_cards_html = ""
-for video in videos[:20]:
+for video in videos[:20]:  # Sadece ilk 20 videoyu al
     video_cards_html += f"""
     <div class="video-card">
-      <img class="thumbnail" src="{video.get("thumbnail")}" alt="{video.get("title", "")}">
-      <h3><a href="https://www.youtube.com/watch?v={video.get("videoId")}" target="_blank" rel="noopener">{video.get("title", "Untitled")}</a></h3>
-      <p class="channel-name">{video.get("channelTitle", "")}</p>
-      <p class="views">{video.get("viewCount", "")} views</p>
-      <p class="upload-date">{video.get("publishedAt", "")[:10]}</p>
+      <img class="thumbnail" src="{video.get('thumbnail', '')}" alt="{video.get('title', '')}">
+      <h3><a href="https://www.youtube.com/watch?v={video.get('videoId', '')}" target="_blank" rel="noopener">{video.get('title', 'Untitled')}</a></h3>
+      <p class="channel-name">{video.get('channelTitle', '')}</p>
+      <p class="views">{video.get('viewCount', '')} views</p>
+      <p class="upload-date">{video.get('publishedAt', '')[:10]}</p>
     </div>
     """
 
-return html
-
-
-
+# HTML dosyasını oluşturan ana döngü
 for filename in os.listdir(VIDEO_DATA_DIR):
     if filename.endswith(".vid.data.json"):
         name = filename.replace(".vid.data.json", "")
-        videos = load_video_data(name)
-        structured = load_structured_data(name)
-        html = build_html(name, videos, structured)
+        videos = load_video_data(name)  # Video verilerini yükle
+        structured = load_structured_data(name)  # Yapılandırılmış verileri yükle
+        html = build_html(name, videos, structured)  # HTML'i oluştur
 
         output_path = os.path.join(OUTPUT_DIR, f"{name}.html")
         with open(output_path, "w", encoding="utf-8") as f:
-            f.write(html)
-        print(f"✅ HTML oluşturuldu: {output_path}")
+            f.write(html)  # HTML dosyasını kaydet
+        print(f"✅ HTML başarıyla oluşturuldu: {output_path}")
