@@ -1,65 +1,37 @@
-# -*- coding: utf-8 -*-
 import os
 import json
 
-VIDEO_DATA_DIR = "."              # Video JSON'larının bulunduğu dizin
-OUTPUT_DIR = "."                  # Çıktı dizini (kök dizin)
+VIDEO_DATA_DIR = "."
+OUTPUT_DIR = "."
 
 def load_video_data(name):
     path = os.path.join(VIDEO_DATA_DIR, f"{name}.vid.data.json")
     if not os.path.exists(path):
-        print(f"⛔ Video verisi yok: {name}")
         return []
-    with open(path, 'r', encoding='utf-8') as f:
+    with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 def load_structured_data(name):
     path = os.path.join(VIDEO_DATA_DIR, f"{name}.str.data.json")
     if not os.path.exists(path):
-        print(f"⚠️ Structured data bulunamadı: {name}")
         return None
-    with open(path, 'r', encoding='utf-8') as f:
+    with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 def build_html(name, videos, structured_data):
     readable_name = name.replace("-", " ").title()
 
-    # Structured Data Script
+    # Structured Data (JSON-LD)
     structured_data_block = ""
-    if structured_data:  # <-- Bu satır bu şekilde girintili olmalı
+    if structured_data:
         structured_json = json.dumps(structured_data, indent=2, ensure_ascii=False)
-        structured_data_block = f'<script type="application/ld+json">\n{structured_json}\n</script>'
-
-
-    # Video kartları
-    video_cards_html = ""
-    for video in videos[:20]:
-        video_cards_html += f"""
-      <div class="video-card">
-        <img class="thumbnail" src="{video.get("thumbnail")}" alt="{video.get("title", "")}">
-        <h3><a href="https://www.youtube.com/watch?v={video.get("videoId")}" target="_blank" rel="noopener">{video.get("title", "Untitled")}</a></h3>
-        <p class="channel-name">{video.get("channelTitle", "")}</p>
-        <p class="views">{video.get("viewCount", "")} views</p>
-        <p class="upload-date">{video.get("publishedAt", "")[:10]}</p>
-</div>
-"""
-
-def build_html(name, videos, structured_data):
-    readable_name = name.replace("-", " ").title()
-
-      # 🔹 Structured Data (JSON-LD Script Bloğu)
-    structured_data_block = ""
-if structured_data:
-    structured_json = json.dumps(structured_data, indent=2, ensure_ascii=False)
-    structured_data_block = f"""
-<script type="application/ld+json">
+        structured_data_block = f"""
+  <script type="application/ld+json">
 {structured_json}
-</script>
+  </script>
 """
 
-
-
-    # 🔹 iframe: İlk videodan embedUrl ve title çek
+    # Hidden iframe (SEO için)
     iframe_block = ""
     if structured_data and isinstance(structured_data, list) and len(structured_data) > 0:
         first_video = structured_data[0]
@@ -79,7 +51,7 @@ if structured_data:
 </iframe>
 """
 
-    # 🔹 Video Kartları
+    # Video Kartları
     video_cards_html = ""
     for video in videos[:20]:
         video_cards_html += f"""
@@ -91,6 +63,7 @@ if structured_data:
         <p class="upload-date">{video.get("publishedAt", "")[:10]}</p>
       </div>
 """
+
 
 html = f"""<!DOCTYPE html>
 <html lang="en">
