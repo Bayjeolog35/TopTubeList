@@ -653,22 +653,22 @@ def build_html(name, videos, structured_data):
 
 
 
-   # İlk videonun embed kodunu oluştur
-    iframe_html = ""
-    if videos:
-        first_video = videos[0]
-        embed_url = f"https://www.youtube.com/embed/{first_video.get('videoId', '')}"
-        video_title = first_video.get('title', '')
-        iframe_html = f"""<iframe 
-    width="560" 
-    height="315" 
-    src="{embed_url}" 
-    title="{video_title}" 
-    frameborder="0" 
-    allowfullscreen>
+# 🔹 İlk videonun embed kodunu oluştur
+iframe_html = ""
+if videos:
+    first_video = videos[0]
+    embed_url = f"https://www.youtube.com/embed/{first_video.get('videoId', '')}"
+    video_title = first_video.get('title', '')
+    iframe_html = f"""<iframe 
+  width="560" 
+  height="315" 
+  src="{embed_url}" 
+  title="{video_title}" 
+  frameborder="0" 
+  allowfullscreen>
 </iframe>"""
 
-# Video kartları HTML oluşturma
+# 🔹 Video kartları HTML oluşturma
 video_cards_html = ""
 for video in videos[:20]:  # Sadece ilk 20 videoyu al
     video_cards_html += f"""
@@ -680,6 +680,7 @@ for video in videos[:20]:  # Sadece ilk 20 videoyu al
       <p class="upload-date">{video.get('publishedAt', '')[:10]}</p>
     </div>
     """
+
 
 # HTML dosyasını oluşturan ana döngü
 for filename in os.listdir(VIDEO_DATA_DIR):
