@@ -1,45 +1,40 @@
-name: Generate HTML Pages
+name: Generate HTML Files
 
 on:
-  workflow_dispatch:  # Manuel tetikleme
-  schedule:           # 3 saatte bir otomatik çalışır
-    - cron: '0 */3 * * *'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Why are you triggering this workflow?'
+        required: false
+        default: 'Manual trigger to regenerate HTML files.'
 
 jobs:
-  build:
+  generate_html:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x' # Python sürümünüzü burada belirtebilirsiniz (örn: '3.9', '3.10', '3.11')
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install beautifulsoup4
+    - name: Run HTML Generation Script
+      run: python generate_all_html.py
 
-      - name: Run generate_all_html.py
-        run: python generate_all_html.py
-
-      - name: Show generated files (debug)
-        run: |
-          echo "📁 Klasördeki HTML dosyaları:"
-          ls -lh *.html
-          echo "📁 Klasördeki JSON dosyaları:"
-          ls -lh *.json
-
-      - name: Git status kontrolü (debug)
-        run: git status
-
-      - name: Commit and push generated HTML & JSON files
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@users.noreply.github.com"
-          git add *.html *.json
-          git commit -m "🚀 Auto-generate HTML and JSON files" || echo "No changes to commit"
-          git push
+    - name: Commit and Push Changes (Optional)
+      # Bu adım, oluşturulan HTML dosyalarını otomatik olarak GitHub deposuna geri yükler.
+      # Eğer HTML dosyalarını manuel olarak kontrol etmek isterseniz bu adımı kaldırabilirsiniz.
+      # Dikkat: Bu adım, repository'de değişiklik yapma izni olan bir token gerektirir.
+      # Genellikle GITHUB_TOKEN yeterlidir.
+      env:
+        GIT_COMMITTER_NAME: "GitHub Actions"
+        GIT_COMMITTER_EMAIL: "actions@github.com"
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add *.html *.json # Oluşturulan HTML ve JSON dosyalarını ekle
+        git diff-index --quiet HEAD || git commit -m "Generated HTML files via workflow_dispatch"
+        git push origin HEAD
