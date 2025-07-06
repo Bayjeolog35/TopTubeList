@@ -50,31 +50,7 @@ def update_html(template_html, videos, name):
         meta_desc["content"] = f"Watch the most popular YouTube videos trending across {readable_name}."
 
     # Video listesi oluşturma
-    video_list_div = soup.find("div", id="videoList")
-    if video_list_div:
-        video_list_div.clear()
-        for video in videos[:20]:  # İlk 20 video
-            card = soup.new_tag("div", **{"class": "video-card"})
-            # Kart içeriği (thumbnail, başlık, kanal adı vb.)
-            # ... (Önceki koddaki gibi devam eder)
-    
-    return str(soup)
-
-def update_html(template_html, videos, name):
-    soup = BeautifulSoup(template_html, "html.parser")
-    readable_name = name.replace("-", " ").title()
-
-    # SEO başlık ve açıklama
-    title_tag = soup.find("title")
-    if title_tag:
-        title_tag.string = f"Trending YouTube Videos in {readable_name} | TopTubeList"
-
-    meta_desc = soup.find("meta", attrs={"name": "description"})
-    if meta_desc:
-        meta_desc["content"] = f"Watch the most popular YouTube videos trending across {readable_name}."
-
-    # Video listesi
-    video_list_div = soup.find("div", id="videoList")
+      video_list_div = soup.find("div", id="videoList")
     if video_list_div:
         video_list_div.clear()
         for video in videos[:20]:
@@ -86,6 +62,7 @@ def update_html(template_html, videos, name):
 
             # Title with link
             title = soup.new_tag("h3")
+            # BURADAKİ SATIRI DEĞİŞTİRİN:
             link = soup.new_tag("a", href=f"https://www.youtube.com/watch?v={video.get('videoId')}", target="_blank", rel="noopener")
             link.string = video.get("title", "Untitled")
             title.append(link)
