@@ -643,39 +643,30 @@ html = f"""<!DOCTYPE html>
 def build_html(name, videos, structured_data):
     readable_name = name.replace("-", " ").title()
 
-    # 🔹 Structured Data (JSON-LD Script Bloğu)
+    # JSON-LD verisini oluştur
     structured_data_block = ""
     if structured_data:
         structured_json = json.dumps(structured_data, indent=2, ensure_ascii=False)
-        structured_data_block = f"""
-<script type="application/ld+json">
+        structured_data_block = f"""<script type="application/ld+json">
 {structured_json}
-</script>
-"""
+</script>"""
 
 
 
-    # 🔹 iframe: İlk videodan embedUrl ve title çek
-    iframe_block = ""
-    if structured_data and isinstance(structured_data, list) and len(structured_data) > 0:
-        first_video = structured_data[0]
-        embed_url = first_video.get("embedUrl", "")
-        video_title = first_video.get("name", "")
-        if embed_url:
-            iframe_block = f"""
-# YouTube video iframe embed kodu
-iframe_html = """
-<iframe 
-  width="560" 
-  height="315" 
-  src="{embed_url}" 
-  title="{video_title}" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowfullscreen 
-  style="position:absolute; width:1px; height:1px; left:-9999px;">
-</iframe>
-"""
+   # İlk videonun embed kodunu oluştur
+    iframe_html = ""
+    if videos:
+        first_video = videos[0]
+        embed_url = f"https://www.youtube.com/embed/{first_video.get('videoId', '')}"
+        video_title = first_video.get('title', '')
+        iframe_html = f"""<iframe 
+    width="560" 
+    height="315" 
+    src="{embed_url}" 
+    title="{video_title}" 
+    frameborder="0" 
+    allowfullscreen>
+</iframe>"""
 
 # Video kartları HTML oluşturma
 video_cards_html = ""
