@@ -969,52 +969,106 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
                       
-  /* Video Render*/
-  
-  document.addEventListener("DOMContentLoaded", () => {
+  /* Video Render - Güncellenmiş Sürüm */
+document.addEventListener("DOMContentLoaded", () => {
+    // Dark Mode Kontrolü
     const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
     document.body.classList.toggle('dark-mode', darkModeEnabled);
 
+    // Değişkenler
     let allVideos = [];
     let displayCount = 10;
+    const container = document.getElementById("videoList");
+    const loadMoreBtn = document.getElementById("loadMoreBtn");
 
-   function renderVideos() {
-  const container = document.getElementById("videoList");
-  container.innerHTML = "";
+    // URL'den Ülke Adını Çıkart (örnek: "afghanistan.html" -> "afghanistan")
+    function getCountryFromURL() {
+        const path = window.location.pathname;
+        return path.split('/').pop().replace('.html', '').toLowerCase();
+    }
 
-  allVideos.slice(0, displayCount).forEach(video => {
-    const card = document.createElement("div");
-    card.className = "video-card";
-    card.innerHTML = `
-      <img src="${video.thumbnail}" alt="${video.title}" />
-      <div class="video-info">
-        <h2>${video.title}</h2>
-        <p><strong>Uploaded:</strong> ${new Date(video.uploadDate).toLocaleDateString()}</p>
-        <p><strong>Views:</strong> ${video.views_str}</p>
-        <a href="${video.url}" target="_blank">Watch on YouTube</a>
-      </div>
-    `;
-    container.appendChild(card);
-    setTimeout(() => card.classList.add("show"), 50);
-  });
+    // Video Kartı Oluşturma
+    function createVideoCard(video) {
+        const card = document.createElement("div");
+        card.className = "video-card";
+        card.innerHTML = `
+            <a href="${video.url}" target="_blank" class="video-thumbnail">
+                <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
+                <span class="duration">${video.duration || ''}</span>
+            </a>
+            <div class="video-info">
+                <h2>${video.title}</h2>
+                <div class="meta">
+                    <span class="channel">${video.channel}</span>
+                    <span class="views">${video.views_str} views</span>
+                    <span class="date">${new Date(video.uploadDate).toLocaleDateString()}</span>
+                </div>
+            </div>
+        `;
+        return card;
+    }
 
-  document.getElementById("loadMoreBtn").style.display =
-    displayCount >= allVideos.length ? "none" : "block";
-}
+    // "Veri Yok" Mesajı Göster
+    function showNoDataMessage() {
+        container.innerHTML = `
+            <div class="no-data-message">
+                <img src="no-data.svg" alt="No data" width="100">
+                <h3>📊 Üzgünüz, YouTube bu ülke için istatistik sağlamıyor</h3>
+                <p>Diğer ülkeleri keşfetmeye ne dersiniz?</p>
+                <a href="index.html" class="site-button">Ana Sayfaya Dön</a>
+            </div>
+        `;
+        loadMoreBtn.style.display = "none";
+    }
 
+    // Videoları Render Et
+    function renderVideos() {
+        container.innerHTML = "";
+        
+        if (allVideos.length === 0) {
+            showNoDataMessage();
+            return;
+        }
 
+        const fragment = document.createDocumentFragment();
+        allVideos.slice(0, displayCount).forEach(video => {
+            const card = createVideoCard(video);
+            fragment.appendChild(card);
+            setTimeout(() => card.classList.add("show"), 50);
+        });
 
-    fetch("videos_asia.json") 
-      .then(res => res.json())
-      .then(videos => {
-        allVideos = videos;
+        container.appendChild(fragment);
+        loadMoreBtn.style.display = displayCount >= allVideos.length ? "none" : "block";
+    }
+
+    // Veri Yükleme
+    async function loadVideos() {
+        const country = getCountryFromURL();
+        const dataFile = `videos_${country}.json`;
+
+        try {
+            const response = await fetch(dataFile);
+            if (!response.ok) throw new Error('Data not found');
+            
+            allVideos = await response.json();
+            document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
+            renderVideos();
+        } catch (error) {
+            console.error("Veri yükleme hatası:", error);
+            showNoDataMessage();
+        }
+    }
+
+    // Load More Butonu
+    loadMoreBtn.addEventListener("click", () => {
+        displayCount += 10;
         renderVideos();
-      });
- 
-    document.getElementById("loadMoreBtn").addEventListener("click", () => {
-      displayCount += 10;
-      renderVideos();
+        window.scrollBy({ top: 300, behavior: 'smooth' });
     });
+
+    // Başlangıç
+    loadVideos();
+});
 
   });
 </script>
