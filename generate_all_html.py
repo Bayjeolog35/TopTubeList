@@ -675,7 +675,7 @@ if structured_data:
 </iframe>
 """
 
-  video_cards_html = ""
+video_cards_html = ""
 for video in videos[:20]:
     video_cards_html += f"""
     <div class="video-card">
@@ -685,9 +685,10 @@ for video in videos[:20]:
       <p class="views">{video.get("viewCount", "")} views</p>
       <p class="upload-date">{video.get("publishedAt", "")[:10]}</p>
     </div>
-    """  # Bu satır en sola yaslanmalı, "video_cards_html +=" ile aynı hizaya
-    
-    return html
+    """
+
+return html
+
 
 
 for filename in os.listdir(VIDEO_DATA_DIR):
