@@ -1,9 +1,8 @@
 import os
 import json
 from bs4 import BeautifulSoup
-from pathlib import Path
 
-TEMPLATE_FILE = "index.html"
+TEMPLATE_FILE = "base_index.html"  # Yeni template adı
 VIDEO_DATA_DIR = "."
 OUTPUT_DIR = "."
 
@@ -111,20 +110,8 @@ def update_html(template_html, videos, name):
         iframe_tag["allowfullscreen"] = True
         soup.body.append(iframe_tag)
 
-    # Inline script.js
-    script_path = Path("script.js")
-    if script_path.exists():
-        with open(script_path, encoding="utf-8") as f:
-            script_code = f.read()
-        inline_script = soup.new_tag("script")
-        inline_script.string = script_code
-        soup.body.append(inline_script)
-    else:
-        print("⚠️ Uyarı: script.js dosyası bulunamadı, inline script eklenemedi.")
+    return str(soup)  # Artık inline script EKLENMİYOR!
 
-    return str(soup)
-
-# === Ana çalışma bloğu ===
 def main():
     template_html = load_template()
 
