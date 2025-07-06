@@ -686,7 +686,7 @@ if structured_data:
         <p class="views">{video.get("viewCount", "")} views</p>
         <p class="upload-date">{video.get("publishedAt", "")[:10]}</p>
       </div>
-"""
+      """
 
     return html
 
