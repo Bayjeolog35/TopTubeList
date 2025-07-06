@@ -5,8 +5,9 @@ on:
     branches:
       - main # Or your default branch, e.g., master
     paths:
-      - '**.py' # Run if any Python file changes
-      - 'data/*.json' # Run if any data JSON changes
+      - 'generate_continent_html.py' # Run if this specific Python file changes
+      - 'videos_*.json' # Run if any continent video data changes
+      - 'structured_data_*.json' # Run if any structured data changes
   workflow_dispatch: # Allows you to manually trigger the workflow from GitHub UI
 
 jobs:
@@ -29,7 +30,7 @@ jobs:
         # pip install -r requirements.txt
         echo "No specific Python dependencies to install."
 
-    - name: Create necessary directories (if they don't exist)
+    - name: Create necessary output directories
       run: |
         mkdir -p continents/asia
         mkdir -p continents/europe
@@ -37,10 +38,12 @@ jobs:
         mkdir -p continents/north-america
         mkdir -p continents/south-america
         mkdir -p continents/oceania
-        mkdir -p data # Ensure data directory exists for JSON files
+        # Assuming your JSON data files (videos_*.json, structured_data_*.json) are at the root
+        # If they are in a 'data/' subfolder, you might need 'mkdir -p data' and adjust paths in the Python script.
 
     - name: Run Python script to generate HTML
-      run: python your_script_name.py # Replace 'your_script_name.py' with the actual name of your Python file
+      # This is the line corrected to use your specified script name
+      run: python generate_continent_html.py
 
     - name: Upload generated pages as an artifact
       uses: actions/upload-artifact@v4
@@ -50,20 +53,11 @@ jobs:
         retention-days: 5 # How long to keep the artifact
 
     - name: Deploy to GitHub Pages (optional, if you're hosting this way)
-      # This step assumes you want to deploy the generated 'continents' folder
-      # and potentially other HTML files (like index.html) to GitHub Pages.
-      # You'll need to adjust 'build_directory' if your Python script outputs
-      # directly to the root or another specific folder that GitHub Pages serves.
       uses: peaceiris/actions-gh-pages@v3
       if: ${{ github.ref == 'refs/heads/main' }} # Deploy only from the main branch
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./ # This will publish everything in the root of the repo.
-                        # If you only want to publish the 'continents' directory,
-                        # you might need to structure your repo differently or
-                        # adjust this to 'continents'.
-                        # For your current structure, you might want to move
-                        # 'assets' and 'index.html' into a 'build' folder,
-                        # and then publish that 'build' folder.
-                        # For simplicity, if your whole site is generated,
-                        # 'build_directory: .' works if everything is at the root.
+                        # Make sure your assets (CSS, JS, images) are correctly
+                        # linked relative to the 'continents' folder, or also
+                        # present in the root for this 'publish_dir' setting.
