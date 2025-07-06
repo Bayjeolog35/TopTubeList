@@ -69,7 +69,7 @@ html = f"""<!DOCTYPE html>
       <img src="TopTubeListLogo.webp" alt="TopTubeList Logo" width="100" style="margin-right: 12px; vertical-align: middle;">
     </a>
     <h1>Most Viewed in {readable_name}</h1>
-    <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
+    <button id="darkModeToggle" title="Toggle Dark Mode">&#127769;</button>
   </div>
 
   <nav id="continentNav">
