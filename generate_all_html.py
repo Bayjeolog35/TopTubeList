@@ -375,15 +375,19 @@ html = f"""<!DOCTYPE html>
 </body>
 </html>
 
-def build_html(name, videos, structured_data, country_panel_html):
+def build_html(name, videos, structured_data):
     readable_name = name.replace("-", " ").title()
 
       # 🔹 Structured Data (JSON-LD Script Bloğu)
+    structured_data_block = ""
+if structured_data:
+    structured_json = json.dumps(structured_data, indent=2, ensure_ascii=False)
     structured_data_block = f"""
 <script type="application/ld+json">
 {structured_json}
 </script>
 """
+
 
 
     # 🔹 iframe: İlk videodan embedUrl ve title çek
@@ -545,13 +549,13 @@ def build_html(name, videos, structured_data, country_panel_html):
 
     // --- FadeOut Animation ---
     const style = document.createElement("style");
-    style.textContent = 
-      @keyframes fadeOut {
-        0% { opacity: 1; }
-        80% { opacity: 1; }
-        100% { opacity: 0; transform: translateY(10px); }
-      }
-    ;
+    style.textContent = `
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(10px); }
+}`;
+
     document.head.appendChild(style);
 
     // --- Contact Toggle ---
@@ -640,32 +644,32 @@ def build_html(name, videos, structured_data, country_panel_html):
     function createVideoCard(video) {
       const card = document.createElement("div");
       card.className = "video-card";
-      card.innerHTML = 
-        <a href="${video.url}" target="_blank" class="video-thumbnail">
-          <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
-          <span class="duration">${video.duration || ''}</span>
-        </a>
-        <div class="video-info">
-          <h2>${video.title}</h2>
-          <div class="meta">
-            <span class="channel">${video.channel}</span>
-            <span class="views">${video.views_str} views</span>
-            <span class="date">${new Date(video.uploadDate).toLocaleDateString()}</span>
-          </div>
-        </div>
-      ;
+      card.innerHTML = `
+  <a href="${video.url}" target="_blank" class="video-thumbnail">
+    <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
+    <span class="duration">${video.duration || ''}</span>
+  </a>
+  <div class="video-info">
+    <h2>${video.title}</h2>
+    <div class="meta">
+      <span class="channel">${video.channel}</span>
+      <span class="views">${video.views_str} views</span>
+      <span class="date">${new Date(video.uploadDate).toLocaleDateString()}</span>
+    </div>
+  </div>
+`;
       return card;
     }
 
     function showNoDataMessage() {
-  container.innerHTML = 
-    <div class="no-data-message">
+  container.innerHTML = `
+    <div class="no-data-message">    
       <img src="no-data.svg" alt="No data" width="100">
       <h3>📊 Sorry, YouTube does not provide statistics for this country</h3>
       <p>Would you like to explore other countries instead?</p>
       <a href="index.html" class="site-button">Go Back to Homepage</a>
     </div>
-  ;
+  `;
   loadMoreBtn.style.display = "none";
 }
 
@@ -690,14 +694,14 @@ def build_html(name, videos, structured_data, country_panel_html):
 
     async function loadVideos() {
       const country = getCountryFromURL();
-      const dataFile = videos_${country}.json;
+      const dataFile = `videos_${country}.json`;
 
       try {
         const response = await fetch(dataFile);
         if (!response.ok) throw new Error('Data not found');
 
         allVideos = await response.json();
-        document.title = Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList;
+        document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
         renderVideos();
       } catch (error) {
         console.error("Veri yükleme hatası:", error);
