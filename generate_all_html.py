@@ -41,10 +41,50 @@ def build_html(name, videos, structured_data):
         <p class="views">{video.get("viewCount", "")} views</p>
         <p class="upload-date">{video.get("publishedAt", "")[:10]}</p>
 </div>
+"""
 
+html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-# Ülke panelini burada tanımla
-country_panel_html = """
+  <title>Trending YouTube Videos in {readable_name} - Updated Every 3 Hours | TopTubeList</title>
+  <meta name="description" content="Watch the most popular YouTube videos trending across {readable_name}. Stay current with viral content.">
+  <meta name="keywords" content="YouTube trends {readable_name}, popular videos {readable_name}, trending YouTube, viral content">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://toptubelist.com/{name}.html" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103"
+    crossorigin="anonymous"></script>
+
+  {structured_data_block}
+</head>
+<body>
+<header>
+  <div class="container header-flex">
+    <a href="index.html" id="logoLink">
+      <img src="TopTubeListLogo.webp" alt="TopTubeList Logo" width="100" style="margin-right: 12px; vertical-align: middle;">
+    </a>
+    <h1>Most Viewed in {readable_name}</h1>
+    <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
+  </div>
+
+  <nav id="continentNav">
+    <a href="index.html">Worldwide</a>
+    <a href="asia.html" class="{ 'active' if name == 'asia' else '' }">Asia</a>
+    <a href="europe.html" class="{ 'active' if name == 'europe' else '' }">Europe</a>
+    <a href="africa.html" class="{ 'active' if name == 'africa' else '' }">Africa</a>
+    <a href="north_america.html" class="{ 'active' if name == 'north_america' else '' }">North America</a>
+    <a href="south_america.html" class="{ 'active' if name == 'south_america' else '' }">South America</a>
+    <a href="oceania.html" class="{ 'active' if name == 'oceania' else '' }">Oceania</a>
+  </nav>
+</header>
+
+<main class="main-content">
+  <button id="hamburgerBtn" class="hamburger">☰</button>
+  <div class="layout-wrapper">
 <div class="country-panel">
   <div class="alphabet-column"> <a href="#" class="alphabet-letter" data-letter="all">All</a>
     <a href="#" class="alphabet-letter" data-letter="A">A</a>
@@ -298,53 +338,6 @@ country_panel_html = """
   <button onclick="location.href='zambia.html'" data-letter="Z">Zambia</button>
   <button onclick="location.href='zimbabwe.html'" data-letter="Z">Zimbabwe</button>
   </div> 
-</div>
-"""
-
-html = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Trending YouTube Videos in {readable_name} - Updated Every 3 Hours | TopTubeList</title>
-  <meta name="description" content="Watch the most popular YouTube videos trending across {readable_name}. Stay current with viral content.">
-  <meta name="keywords" content="YouTube trends {readable_name}, popular videos {readable_name}, trending YouTube, viral content">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://toptubelist.com/{name}.html" />
-  <link rel="stylesheet" href="style.css" />
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103"
-    crossorigin="anonymous"></script>
-
-  {structured_data_block}
-</head>
-<body>
-<header>
-  <div class="container header-flex">
-    <a href="index.html" id="logoLink">
-      <img src="TopTubeListLogo.webp" alt="TopTubeList Logo" width="100" style="margin-right: 12px; vertical-align: middle;">
-    </a>
-    <h1>Most Viewed in {readable_name}</h1>
-    <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
-  </div>
-
-  <nav id="continentNav">
-    <a href="index.html">Worldwide</a>
-    <a href="asia.html" class="{ 'active' if name == 'asia' else '' }">Asia</a>
-    <a href="europe.html" class="{ 'active' if name == 'europe' else '' }">Europe</a>
-    <a href="africa.html" class="{ 'active' if name == 'africa' else '' }">Africa</a>
-    <a href="north_america.html" class="{ 'active' if name == 'north_america' else '' }">North America</a>
-    <a href="south_america.html" class="{ 'active' if name == 'south_america' else '' }">South America</a>
-    <a href="oceania.html" class="{ 'active' if name == 'oceania' else '' }">Oceania</a>
-  </nav>
-</header>
-
-<main class="main-content">
-  <button id="hamburgerBtn" class="hamburger">☰</button>
-  <div class="layout-wrapper">
-    {country_panel_html}
-
   <div id="videoList" class="video-list"></div>
   <button id="loadMoreBtn" class="site-button">Load More</button>
  </div>
