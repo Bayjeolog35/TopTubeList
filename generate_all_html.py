@@ -44,6 +44,54 @@ def build_html(name, videos, structured_data):
 </div>
 """
 
+def build_html(name, videos, structured_data):
+    readable_name = name.replace("-", " ").title()
+
+      # 🔹 Structured Data (JSON-LD Script Bloğu)
+    structured_data_block = ""
+if structured_data:
+    structured_json = json.dumps(structured_data, indent=2, ensure_ascii=False)
+    structured_data_block = f"""
+<script type="application/ld+json">
+{structured_json}
+</script>
+"""
+
+
+
+    # 🔹 iframe: İlk videodan embedUrl ve title çek
+    iframe_block = ""
+    if structured_data and isinstance(structured_data, list) and len(structured_data) > 0:
+        first_video = structured_data[0]
+        embed_url = first_video.get("embedUrl", "")
+        video_title = first_video.get("name", "")
+        if embed_url:
+            iframe_block = f"""
+<iframe 
+  width="560" 
+  height="315" 
+  src="{embed_url}" 
+  title="{video_title}" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen 
+  style="position:absolute; width:1px; height:1px; left:-9999px;">
+</iframe>
+"""
+
+    # 🔹 Video Kartları
+    video_cards_html = ""
+    for video in videos[:20]:
+        video_cards_html += f"""
+      <div class="video-card">
+        <img class="thumbnail" src="{video.get("thumbnail")}" alt="{video.get("title", "")}">
+        <h3><a href="https://www.youtube.com/watch?v={video.get("videoId")}" target="_blank" rel="noopener">{video.get("title", "Untitled")}</a></h3>
+        <p class="channel-name">{video.get("channelTitle", "")}</p>
+        <p class="views">{video.get("viewCount", "")} views</p>
+        <p class="upload-date">{video.get("publishedAt", "")[:10]}</p>
+      </div>
+"""
+
 html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -348,137 +396,31 @@ html = f"""<!DOCTYPE html>
 <section class="about-section">
   <button id="aboutToggle" class="site-button">About Us</button>
   <div id="aboutContent" style="display: none;">
-    <p><strong>What is TopTubeList?</strong><br>
-    TopTubeList helps you quickly see what people are watching on YouTube...
-    ...
+<p><strong>Who are we?</strong><br>
+  Welcome to <strong>TopTubeList</strong> — the home of global <strong>YouTube video rankings</strong>. We're a data-driven platform created for trend-seekers, content creators, marketers, and everyday fans who want to know exactly what’s trending on YouTube — country by country, continent by continent. Our mission is to provide open and accurate access to the <strong>most viewed YouTube videos</strong> from every corner of the world.</p>
+
+  <p><strong>Why does this matter?</strong><br>
+  In the digital age, YouTube is more than entertainment — it’s culture. It shapes opinions, sparks conversations, and launches careers. Whether it's a viral short, an explosive music video, or a game-changing documentary, millions turn to YouTube every day. By tracking the <strong>top trending YouTube videos</strong>, we give you a real-time pulse on what people are watching — not just locally, but globally.</p>
+
+  <p><strong>How does it work?</strong><br>
+  Using the official <strong>YouTube Data API</strong>, we monitor and update statistics for the most-watched videos in over 190 countries and across all continents. Every <strong>3 hours</strong>, our system fetches fresh data — no manual updates, no guesswork. This ensures that you're always seeing the most accurate and up-to-date information. We categorize and sort content so you can explore the most popular YouTube videos by region, discover regional trends, and see how global content performs across borders.</p>
+
+  <p><strong>Who is this for?</strong><br>
+  Whether you're a digital marketer analyzing trends, a creator seeking inspiration, or just a curious browser, TopTubeList gives you an easy way to discover what’s hot on YouTube <em>right now</em>. We provide a clean, ad-light experience with no paywalls, no accounts required, and no fluff — just pure insights.</p>
+
+  <p><strong>What makes us different?</strong><br>
+  Unlike generic trend charts, we focus on clarity, speed, and geographical accuracy. Our lists are updated frequently, and we don’t limit ourselves to just one country or genre. From <strong>North America</strong> to <strong>Asia</strong>, from viral <strong>YouTube Shorts</strong> to high-budget movie trailers, we showcase what the world is watching — all in one place.</p>
+
+  <p><strong>How can you help?</strong><br>
+  We’re not asking for donations. But if you find our platform valuable, consider sharing it with others. Every visit, link, and mention helps us grow — and keeps the platform free and open to everyone. Supporting TopTubeList means supporting transparency in digital culture.</p>
+
+  <p><strong>What’s next?</strong><br>
+  In the near future, we’ll be adding features like historical trend charts, creator spotlight pages, and region-based comparison tools. Our goal is to become the go-to archive for <strong>YouTube trends</strong> — from breakout hits to long-term legends.</p>
+
+  <p><strong>Trending. Refreshed. Tracked.</strong><br>
+  That’s TopTubeList. Stay curious. Stay informed.</p>
+
     </p>
-  </div>
-</section>
-
-<footer>
-  <div class="contact-section">
-    <button id="contactToggle" class="site-button">Contact Us</button>
-    <div id="contactContent" style="display: none;">
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact" />
-        <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
-        <p><label>Your Name<br /><input type="text" name="name" required /></label></p>
-        <p><label>Your Email<br /><input type="email" name="email" required /></label></p>
-        <p><label>Your Message<br /><textarea name="message" rows="5" required></textarea></label></p>
-        <p><button type="submit">Send Message</button></p>
-      </form>
-      <div id="formStatus" style="display: none;"></div>
-    </div>
-  </div>
-  <p>© 2025 TopTubeList.com</p>
-</footer>
-</body>
-</html>
-
-def build_html(name, videos, structured_data):
-    readable_name = name.replace("-", " ").title()
-
-      # 🔹 Structured Data (JSON-LD Script Bloğu)
-    structured_data_block = ""
-if structured_data:
-    structured_json = json.dumps(structured_data, indent=2, ensure_ascii=False)
-    structured_data_block = f"""
-<script type="application/ld+json">
-{structured_json}
-</script>
-"""
-
-
-
-    # 🔹 iframe: İlk videodan embedUrl ve title çek
-    iframe_block = ""
-    if structured_data and isinstance(structured_data, list) and len(structured_data) > 0:
-        first_video = structured_data[0]
-        embed_url = first_video.get("embedUrl", "")
-        video_title = first_video.get("name", "")
-        if embed_url:
-            iframe_block = f"""
-<iframe 
-  width="560" 
-  height="315" 
-  src="{embed_url}" 
-  title="{video_title}" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowfullscreen 
-  style="position:absolute; width:1px; height:1px; left:-9999px;">
-</iframe>
-"""
-
-    # 🔹 Video Kartları
-    video_cards_html = ""
-    for video in videos[:20]:
-        video_cards_html += f"""
-      <div class="video-card">
-        <img class="thumbnail" src="{video.get("thumbnail")}" alt="{video.get("title", "")}">
-        <h3><a href="https://www.youtube.com/watch?v={video.get("videoId")}" target="_blank" rel="noopener">{video.get("title", "Untitled")}</a></h3>
-        <p class="channel-name">{video.get("channelTitle", "")}</p>
-        <p class="views">{video.get("viewCount", "")} views</p>
-        <p class="upload-date">{video.get("publishedAt", "")[:10]}</p>
-      </div>
-"""
-
-    # 🔹 Tam HTML
-    html = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Trending YouTube Videos in {readable_name} | TopTubeList</title>
-  <meta name="description" content="Most viewed YouTube videos in {readable_name}. Updated every 3 hours.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://toptubelist.com/{name}.html" />
-  <link rel="stylesheet" href="style.css" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103" crossorigin="anonymous"></script>
-{structured_data_block}
-</head>
-<body>
-
-<header>
-  <div class="container header-flex">
-    <a href="index.html" id="logoLink">
-      <img src="TopTubeListLogo.webp" alt="TopTubeList Logo" width="100" style="margin-right: 12px; vertical-align: middle;">
-    </a>
-    <h1>Most Viewed in {readable_name}</h1>
-    <button id="darkModeToggle" title="Toggle Dark Mode">&#127769;</button>
-  </div>
-
-  <nav id="continentNav">
-    <a href="index.html">Worldwide</a>
-    <a href="asia.html" class="">Asia</a>
-    <a href="europe.html" class="">Europe</a>
-    <a href="africa.html" class="">Africa</a>
-    <a href="north_america.html" class="">North America</a>
-    <a href="south_america.html" class="">South America</a>
-    <a href="oceania.html" class="">Oceania</a>
-  </nav>
-</header>
-
-<main class="main-content">
-  <button id="hamburgerBtn" class="hamburger">&#9776;</button>
-  <div class="layout-wrapper">
-    <!-- A-Z harf butonları ve ülke butonları burada dinamik olarak gömülmeli -->
-    <!-- Örn: {country_panel_html} şeklinde eklenecekse ayrı fonksiyonla döndürülür -->
-  </div>
-</main>
-
-<div id="videoList" class="video-list">
-  {video_cards_html}
-</div>
-<button id="loadMoreBtn" class="site-button">Load More</button>
-
-<section class="about-section">
-  <button id="aboutToggle" class="site-button">About Us</button>
-  <div id="aboutContent" style="display: none;">
-    <p><strong>What is TopTubeList?</strong><br>
-    TopTubeList helps you quickly see what people are watching on YouTube. You can explore videos by continent or country...</p>
-    <p><strong>This is TopTubeList.</strong><br>
-    If it’s trending, chances are… we’ve already listed it. 😉</p>
   </div>
 </section>
 
@@ -721,6 +663,53 @@ if structured_data:
 
 </body>
 </html>
+
+def build_html(name, videos, structured_data):
+    readable_name = name.replace("-", " ").title()
+
+      # 🔹 Structured Data (JSON-LD Script Bloğu)
+    structured_data_block = ""
+if structured_data:
+    structured_json = json.dumps(structured_data, indent=2, ensure_ascii=False)
+    structured_data_block = f"""
+<script type="application/ld+json">
+{structured_json}
+</script>
+"""
+
+
+
+    # 🔹 iframe: İlk videodan embedUrl ve title çek
+    iframe_block = ""
+    if structured_data and isinstance(structured_data, list) and len(structured_data) > 0:
+        first_video = structured_data[0]
+        embed_url = first_video.get("embedUrl", "")
+        video_title = first_video.get("name", "")
+        if embed_url:
+            iframe_block = f"""
+<iframe 
+  width="560" 
+  height="315" 
+  src="{embed_url}" 
+  title="{video_title}" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen 
+  style="position:absolute; width:1px; height:1px; left:-9999px;">
+</iframe>
+"""
+
+    # 🔹 Video Kartları
+    video_cards_html = ""
+    for video in videos[:20]:
+        video_cards_html += f"""
+      <div class="video-card">
+        <img class="thumbnail" src="{video.get("thumbnail")}" alt="{video.get("title", "")}">
+        <h3><a href="https://www.youtube.com/watch?v={video.get("videoId")}" target="_blank" rel="noopener">{video.get("title", "Untitled")}</a></h3>
+        <p class="channel-name">{video.get("channelTitle", "")}</p>
+        <p class="views">{video.get("viewCount", "")} views</p>
+        <p class="upload-date">{video.get("publishedAt", "")[:10]}</p>
+      </div>
 """
 
     return html
