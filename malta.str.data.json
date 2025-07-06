@@ -13,7 +13,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 163333356
+      "userInteractionCount": 165412818
     }
   },
   {
@@ -30,7 +30,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 159582450
+      "userInteractionCount": 159795705
     }
   },
   {
@@ -47,7 +47,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 49149873
+      "userInteractionCount": 51170545
     }
   },
   {
@@ -64,7 +64,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 129422718
+      "userInteractionCount": 129432199
     }
   },
   {
@@ -81,7 +81,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 41880257
+      "userInteractionCount": 42291766
     }
   },
   {
@@ -98,7 +98,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 8303116
+      "userInteractionCount": 8308951
     }
   },
   {
@@ -115,7 +115,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 45540941
+      "userInteractionCount": 45646928
     }
   },
   {
@@ -132,7 +132,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 14911355
+      "userInteractionCount": 14963864
     }
   },
   {
@@ -149,7 +149,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 27560635
+      "userInteractionCount": 31961790
     }
   },
   {
@@ -166,7 +166,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 18608473
+      "userInteractionCount": 18612555
     }
   },
   {
@@ -183,7 +183,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 76976237
+      "userInteractionCount": 77137063
     }
   },
   {
@@ -200,7 +200,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 16163207
+      "userInteractionCount": 17124682
     }
   },
   {
@@ -217,7 +217,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 50093783
+      "userInteractionCount": 50736411
     }
   },
   {
@@ -234,7 +234,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 5514497
+      "userInteractionCount": 5583810
     }
   },
   {
@@ -251,7 +251,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 13675637
+      "userInteractionCount": 13690389
     }
   },
   {
@@ -268,7 +268,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 17943352
+      "userInteractionCount": 17992425
     }
   },
   {
@@ -285,7 +285,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 20505760
+      "userInteractionCount": 20563270
     }
   },
   {
@@ -302,7 +302,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 13899321
+      "userInteractionCount": 13924101
     }
   },
   {
@@ -319,7 +319,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 6230255
+      "userInteractionCount": 6242738
     }
   },
   {
@@ -336,24 +336,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 8547014
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Pull The Sword From The Slime!",
-    "description": "Pull The Sword From The Slime!",
-    "thumbnailUrl": "https://i.ytimg.com/vi/gy-dCq8x07Y/hqdefault.jpg",
-    "uploadDate": "2025-07-02T19:52:20Z",
-    "embedUrl": "https://youtube.com/embed/gy-dCq8x07Y",
-    "url": "https://youtube.com/watch?v=gy-dCq8x07Y",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 17525351
+      "userInteractionCount": 8576290
     }
   },
   {
@@ -370,7 +353,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4689336
+      "userInteractionCount": 4702132
     }
   },
   {
@@ -387,7 +370,24 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 106895737
+      "userInteractionCount": 107132479
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Pull The Sword From The Slime!",
+    "description": "Pull The Sword From The Slime!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/gy-dCq8x07Y/hqdefault.jpg",
+    "uploadDate": "2025-07-02T19:52:20Z",
+    "embedUrl": "https://youtube.com/embed/gy-dCq8x07Y",
+    "url": "https://youtube.com/watch?v=gy-dCq8x07Y",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 18145793
     }
   },
   {
@@ -404,7 +404,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 30770392
+      "userInteractionCount": 30809790
     }
   },
   {
@@ -421,7 +421,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 11945430
+      "userInteractionCount": 11959660
     }
   },
   {
@@ -438,7 +438,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2772818
+      "userInteractionCount": 3061826
     }
   },
   {
@@ -455,7 +455,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3789704
+      "userInteractionCount": 3882976
     }
   },
   {
@@ -472,7 +472,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3370182
+      "userInteractionCount": 3404503
     }
   },
   {
@@ -489,7 +489,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4299428
+      "userInteractionCount": 4361277
     }
   },
   {
@@ -506,7 +506,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 26503459
+      "userInteractionCount": 28374837
     }
   },
   {
@@ -523,7 +523,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4806277
+      "userInteractionCount": 4807453
     }
   },
   {
@@ -540,7 +540,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 7381848
+      "userInteractionCount": 7412608
     }
   },
   {
@@ -557,7 +557,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 32570202
+      "userInteractionCount": 32631633
     }
   },
   {
@@ -574,7 +574,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 30965365
+      "userInteractionCount": 31040572
     }
   },
   {
@@ -591,7 +591,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 57657988
+      "userInteractionCount": 57768869
     }
   },
   {
@@ -608,7 +608,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4755661
+      "userInteractionCount": 4798971
     }
   },
   {
@@ -625,7 +625,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3283880
+      "userInteractionCount": 3289923
     }
   },
   {
@@ -642,7 +642,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 7567008
+      "userInteractionCount": 7574060
     }
   },
   {
@@ -659,7 +659,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 30968149
+      "userInteractionCount": 31020436
     }
   },
   {
@@ -676,7 +676,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 9902275
+      "userInteractionCount": 9914108
     }
   },
   {
@@ -693,7 +693,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 5365172
+      "userInteractionCount": 5428635
     }
   },
   {
@@ -710,7 +710,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1422619
+      "userInteractionCount": 1422653
     }
   },
   {
@@ -727,7 +727,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 6236851
+      "userInteractionCount": 6310042
     }
   },
   {
@@ -744,7 +744,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 237897070
+      "userInteractionCount": 238434822
     }
   },
   {
@@ -761,7 +761,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 5024323
+      "userInteractionCount": 5039038
     }
   },
   {
@@ -778,7 +778,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4634072
+      "userInteractionCount": 4669371
     }
   },
   {
@@ -795,7 +795,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 10852605
+      "userInteractionCount": 10876445
     }
   },
   {
@@ -812,7 +812,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 17641509
+      "userInteractionCount": 17664562
     }
   },
   {
@@ -829,7 +829,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 6803302
+      "userInteractionCount": 6806308
     }
   },
   {
@@ -846,7 +846,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 7511140
+      "userInteractionCount": 7513166
     }
   }
 ]

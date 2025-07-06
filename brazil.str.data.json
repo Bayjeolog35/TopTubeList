@@ -13,7 +13,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 778332
+      "userInteractionCount": 807589
     }
   },
   {
@@ -30,7 +30,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 178433
+      "userInteractionCount": 182768
     }
   },
   {
@@ -47,7 +47,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 168252
+      "userInteractionCount": 172400
     }
   },
   {
@@ -64,7 +64,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 534126
+      "userInteractionCount": 544306
     }
   },
   {
@@ -81,7 +81,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2839154
+      "userInteractionCount": 2914839
     }
   },
   {
@@ -98,7 +98,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2641074
+      "userInteractionCount": 2647702
     }
   },
   {
@@ -115,7 +115,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 543303
+      "userInteractionCount": 545664
     }
   },
   {
@@ -132,7 +132,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 383596
+      "userInteractionCount": 387387
     }
   },
   {
@@ -149,7 +149,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 91999
+      "userInteractionCount": 95259
     }
   },
   {
@@ -166,7 +166,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 710867
+      "userInteractionCount": 720004
     }
   },
   {
@@ -183,7 +183,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4277287
+      "userInteractionCount": 4396840
     }
   },
   {
@@ -200,7 +200,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1155213
+      "userInteractionCount": 1159301
     }
   },
   {
@@ -217,7 +217,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3180661
+      "userInteractionCount": 3250556
     }
   },
   {
@@ -234,24 +234,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1237569
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "ROUND 6...MAS JOGUEI OS NOVOS JOGOS...",
-    "description": "ROUND 6...MAS JOGUEI OS NOVOS JOGOS...",
-    "thumbnailUrl": "https://i.ytimg.com/vi/oNKLNByCV_0/hqdefault.jpg",
-    "uploadDate": "2025-07-04T22:15:02Z",
-    "embedUrl": "https://youtube.com/embed/oNKLNByCV_0",
-    "url": "https://youtube.com/watch?v=oNKLNByCV_0",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 281859
+      "userInteractionCount": 1255900
     }
   },
   {
@@ -268,7 +251,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2913268
+      "userInteractionCount": 2944252
     }
   },
   {
@@ -285,7 +268,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 433049
+      "userInteractionCount": 438954
     }
   },
   {
@@ -302,7 +285,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 278266
+      "userInteractionCount": 279960
     }
   },
   {
@@ -319,7 +302,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 60684
+      "userInteractionCount": 61945
     }
   },
   {
@@ -336,7 +319,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 59437
+      "userInteractionCount": 60891
     }
   },
   {
@@ -353,7 +336,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1081002
+      "userInteractionCount": 1095956
     }
   },
   {
@@ -370,7 +353,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2676363
+      "userInteractionCount": 2683668
     }
   },
   {
@@ -387,7 +370,24 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 398523
+      "userInteractionCount": 401135
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "ROUND 6...MAS JOGUEI OS NOVOS JOGOS...",
+    "description": "ROUND 6...MAS JOGUEI OS NOVOS JOGOS...",
+    "thumbnailUrl": "https://i.ytimg.com/vi/oNKLNByCV_0/hqdefault.jpg",
+    "uploadDate": "2025-07-04T22:15:02Z",
+    "embedUrl": "https://youtube.com/embed/oNKLNByCV_0",
+    "url": "https://youtube.com/watch?v=oNKLNByCV_0",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 283995
     }
   },
   {
@@ -404,7 +404,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 689475
+      "userInteractionCount": 694377
     }
   },
   {
@@ -421,7 +421,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 959085
+      "userInteractionCount": 961380
     }
   },
   {
@@ -438,7 +438,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 636019
+      "userInteractionCount": 638664
     }
   },
   {
@@ -455,7 +455,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 576748
+      "userInteractionCount": 576763
     }
   },
   {
@@ -472,41 +472,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2464622
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "O Fluminense está nas semifinais!!!!!!!!!!!!!!",
-    "description": "O Fluminense está nas semifinais!!!!!!!!!!!!!!",
-    "thumbnailUrl": "https://i.ytimg.com/vi/D0kGlQzOoOc/hqdefault.jpg",
-    "uploadDate": "2025-07-04T22:00:03Z",
-    "embedUrl": "https://youtube.com/embed/D0kGlQzOoOc",
-    "url": "https://youtube.com/watch?v=D0kGlQzOoOc",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 126232
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Natanzinho Lima -  A Noite - EM BH",
-    "description": "Natanzinho Lima -  A Noite - EM BH",
-    "thumbnailUrl": "https://i.ytimg.com/vi/d5_42xL2bZg/hqdefault.jpg",
-    "uploadDate": "2025-07-04T14:40:01Z",
-    "embedUrl": "https://youtube.com/embed/d5_42xL2bZg",
-    "url": "https://youtube.com/watch?v=d5_42xL2bZg",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 364300
+      "userInteractionCount": 2469826
     }
   },
   {
@@ -523,7 +489,24 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 879751
+      "userInteractionCount": 882565
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Natanzinho Lima -  A Noite - EM BH",
+    "description": "Natanzinho Lima -  A Noite - EM BH",
+    "thumbnailUrl": "https://i.ytimg.com/vi/d5_42xL2bZg/hqdefault.jpg",
+    "uploadDate": "2025-07-04T14:40:01Z",
+    "embedUrl": "https://youtube.com/embed/d5_42xL2bZg",
+    "url": "https://youtube.com/watch?v=d5_42xL2bZg",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 370407
     }
   },
   {
@@ -540,7 +523,24 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 200511
+      "userInteractionCount": 202368
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "O Fluminense está nas semifinais!!!!!!!!!!!!!!",
+    "description": "O Fluminense está nas semifinais!!!!!!!!!!!!!!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/D0kGlQzOoOc/hqdefault.jpg",
+    "uploadDate": "2025-07-04T22:00:03Z",
+    "embedUrl": "https://youtube.com/embed/D0kGlQzOoOc",
+    "url": "https://youtube.com/watch?v=D0kGlQzOoOc",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 126768
     }
   },
   {
@@ -557,7 +557,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 681396
+      "userInteractionCount": 683502
     }
   },
   {
@@ -574,7 +574,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 258311
+      "userInteractionCount": 260064
     }
   },
   {
@@ -591,7 +591,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1573103
+      "userInteractionCount": 1611936
     }
   },
   {
@@ -608,24 +608,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 129724
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "ACHEI UM BOOBIE GOODS RARO NO LIXO DOS EUA",
-    "description": "ACHEI UM BOOBIE GOODS RARO NO LIXO DOS EUA",
-    "thumbnailUrl": "https://i.ytimg.com/vi/NkJd_aQEPPY/hqdefault.jpg",
-    "uploadDate": "2025-07-03T15:00:06Z",
-    "embedUrl": "https://youtube.com/embed/NkJd_aQEPPY",
-    "url": "https://youtube.com/watch?v=NkJd_aQEPPY",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 2247306
+      "userInteractionCount": 130279
     }
   },
   {
@@ -642,7 +625,24 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 128295
+      "userInteractionCount": 128794
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "ACHEI UM BOOBIE GOODS RARO NO LIXO DOS EUA",
+    "description": "ACHEI UM BOOBIE GOODS RARO NO LIXO DOS EUA",
+    "thumbnailUrl": "https://i.ytimg.com/vi/NkJd_aQEPPY/hqdefault.jpg",
+    "uploadDate": "2025-07-03T15:00:06Z",
+    "embedUrl": "https://youtube.com/embed/NkJd_aQEPPY",
+    "url": "https://youtube.com/watch?v=NkJd_aQEPPY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 2253522
     }
   },
   {
@@ -659,7 +659,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3351408
+      "userInteractionCount": 3356117
     }
   },
   {
@@ -676,7 +676,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 696665
+      "userInteractionCount": 701162
     }
   },
   {
@@ -693,7 +693,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 113742
+      "userInteractionCount": 114149
     }
   },
   {
@@ -710,7 +710,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4591514
+      "userInteractionCount": 4599981
     }
   },
   {
@@ -727,7 +727,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2659345
+      "userInteractionCount": 2711089
     }
   },
   {
@@ -744,7 +744,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 328095
+      "userInteractionCount": 328274
     }
   },
   {
@@ -761,7 +761,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1570970
+      "userInteractionCount": 1574172
     }
   },
   {
@@ -778,41 +778,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 8576823
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "TUDO SOBRE A OBRA DA CASA GIALLA l ANA HICKMANN",
-    "description": "TUDO SOBRE A OBRA DA CASA GIALLA l ANA HICKMANN",
-    "thumbnailUrl": "https://i.ytimg.com/vi/yRkKqJKNILY/hqdefault.jpg",
-    "uploadDate": "2025-07-03T23:01:10Z",
-    "embedUrl": "https://youtube.com/embed/yRkKqJKNILY",
-    "url": "https://youtube.com/watch?v=yRkKqJKNILY",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 153170
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "1 BLOCO DO VENOM",
-    "description": "1 BLOCO DO VENOM",
-    "thumbnailUrl": "https://i.ytimg.com/vi/4L63Fw7zfCU/hqdefault.jpg",
-    "uploadDate": "2025-07-03T14:15:00Z",
-    "embedUrl": "https://youtube.com/embed/4L63Fw7zfCU",
-    "url": "https://youtube.com/watch?v=4L63Fw7zfCU",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 158656
+      "userInteractionCount": 8922329
     }
   },
   {
@@ -829,7 +795,24 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 264489
+      "userInteractionCount": 264967
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "1 BLOCO DO VENOM",
+    "description": "1 BLOCO DO VENOM",
+    "thumbnailUrl": "https://i.ytimg.com/vi/4L63Fw7zfCU/hqdefault.jpg",
+    "uploadDate": "2025-07-03T14:15:00Z",
+    "embedUrl": "https://youtube.com/embed/4L63Fw7zfCU",
+    "url": "https://youtube.com/watch?v=4L63Fw7zfCU",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 159100
     }
   },
   {
@@ -846,7 +829,24 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 77376
+      "userInteractionCount": 78055
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "TUDO SOBRE A OBRA DA CASA GIALLA l ANA HICKMANN",
+    "description": "TUDO SOBRE A OBRA DA CASA GIALLA l ANA HICKMANN",
+    "thumbnailUrl": "https://i.ytimg.com/vi/yRkKqJKNILY/hqdefault.jpg",
+    "uploadDate": "2025-07-03T23:01:10Z",
+    "embedUrl": "https://youtube.com/embed/yRkKqJKNILY",
+    "url": "https://youtube.com/watch?v=yRkKqJKNILY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 153608
     }
   }
 ]
