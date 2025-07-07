@@ -1297,13 +1297,12 @@ script_block = f"""
     });
 
     // --- FadeOut Animation ---
-    const style = document.createElement("style");
-    style.textContent = 
+  style.textContent = `
 @keyframes fadeOut {
   0% { opacity: 1; }
   80% { opacity: 1; }
   100% { opacity: 0; transform: translateY(10px); }
-};
+}`;
 
     document.head.appendChild(style);
 
@@ -1467,11 +1466,9 @@ script_block = f"""
     loadVideos();
   });
 </script>
-
 </body>
 </html>
 """
-
 return html_start + script_block
 
 def generate_html_page(name, is_country=True, output_folder="."):
