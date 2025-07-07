@@ -1492,7 +1492,8 @@ def generate_html_page(name, is_country=True, output_folder="."):
     except IOError as e:
         print(f"❌ Yazma hatası: {str(e)}")
         return False
-        def main():
+
+def main():
     print("""
     #######################################
     # TopTubeList - Sayfa Oluşturucu
