@@ -975,7 +975,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
 
 
 </div>
-      <div class="country-panel">
+      <div class="country-column">
 <button onclick="location.href='afghanistan.html'" data-letter="A">Afghanistan</button>
   <button onclick="location.href='albania.html'" data-letter="A">Albania</button>
   <button onclick="location.href='algeria.html'" data-letter="A">Algeria</button>
