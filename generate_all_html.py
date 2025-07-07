@@ -853,11 +853,21 @@ def get_html_output_path(name):
     return os.path.join(script_dir, file_name)
 
 def generate_top_video_iframe(videos_data):
-    """En çok izlenen video için iframe kodu oluşturur."""
+    """En çok izlenen video için iframe kodu oluşturur. Eksik verilerde kırılmaz."""
     if not videos_data or len(videos_data) == 0:
-        return ""
-    
+        return "<!-- No video data available -->"
+
     top_video = videos_data[0]
+
+    # Güvenli veri çekimi
+    video_id = top_video.get("videoId")
+    title = top_video.get("title", "Untitled")
+    views_str = top_video.get("views_str", "N/A")
+    duration = top_video.get("duration", "N/A")
+
+    if not video_id:
+        return "<!-- videoId missing for top video -->"
+
     return f"""
     <div class="featured-video">
         <h2>🔥 Most Viewed Video</h2>
@@ -865,19 +875,20 @@ def generate_top_video_iframe(videos_data):
             <iframe 
                 width="560" 
                 height="315" 
-                src="https://www.youtube.com/embed/{top_video['videoId']}" 
-                title="{top_video['title']}" 
+                src="https://www.youtube.com/embed/{video_id}" 
+                title="{title}" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
         </div>
         <div class="video-info">
-            <h3>{top_video['title']}</h3>
-            <p>👀 {top_video['views_str']} views | ⏱️ {top_video['duration']}</p>
+            <h3>{title}</h3>
+            <p>👀 {views_str} views | ⏱️ {duration}</p>
         </div>
     </div>
     """
+
 
 def generate_html_content(name, videos_data, structured_data, is_country=True):
     info_dict = COUNTRY_INFO if is_country else CONTINENT_INFO
