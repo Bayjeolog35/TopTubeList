@@ -247,7 +247,7 @@ body.dark-mode .video-info a {
 }
 
 
-.country-column {
+.country-panel-column {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -257,7 +257,7 @@ body.dark-mode .video-info a {
 }
 
 
-.country-column button {
+.country-panel button {
   padding: 6px 10px;
   font-size: 14px;
   border: none;
@@ -273,7 +273,7 @@ body.dark-mode .video-info a {
   overflow-x: clip;
 }
 
-.country-column button:hover {
+.country-panel button:hover {
   background-color: #0d6efd;
   color: white;
 }
