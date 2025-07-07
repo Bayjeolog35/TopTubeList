@@ -10,7 +10,7 @@ on:
       - '*.str.data.json'
       - 'COUNTRY_INFO.py'
       - 'CONTINENT_INFO.py'
-  workflow_dispatch:  # Manuel çalıştırmak için
+  workflow_dispatch:
 
 jobs:
   build-all-html:
@@ -30,9 +30,6 @@ jobs:
 
     - name: Run HTML Generator Script
       run: python generate_all_html.py
-
-    - name: Pull latest changes before pushing
-      run: git pull --rebase origin main
 
     - name: Configure Git
       run: |
