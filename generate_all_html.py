@@ -8,7 +8,7 @@ Bu script ülke-adi.html dosyalarını oluşturur.
 
 import os
 import json
-from datetime import datetime
+from datetime import datetime, UTC
 
 #ülke ve kıta bilgileri
 
@@ -901,7 +901,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
     if structured_data:
         structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data, indent=2)}\n</script>'
 
-    current_date = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+    current_date = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
