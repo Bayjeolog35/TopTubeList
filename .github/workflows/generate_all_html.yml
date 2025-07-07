@@ -1,4 +1,4 @@
-name: Generate All HTML Pages
+name: Generate and Deploy HTML Pages
 
 on:
   push:
@@ -8,39 +8,35 @@ on:
       - 'generate_all_html.py'
       - 'videos_*.json'
       - 'structured_data_*.json'
-  workflow_dispatch:  # Manuel çalıştırmak için
+      - 'dynamic.js'
+  workflow_dispatch:
 
 jobs:
-  build-all-html:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
-    - name: Install dependencies (if any)
-      run: |
-        echo "No specific dependencies required."
+      - name: Run HTML Generator
+        run: python generate_all_html.py
 
-    - name: Run HTML Generator Script
-      run: python generate_all_html.py
+      - name: Commit generated HTML files and dynamic.js
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add *.html dynamic.js
+          git commit -m "🔄 Update generated HTML and dynamic.js" || echo "No changes to commit"
+          git push
 
-    - name: Upload all generated HTML files
-      uses: actions/upload-artifact@v4
-      with:
-        name: all-html-pages
-        path: |
-          *.html
-        retention-days: 5
-
-    - name: Deploy to GitHub Pages (optional)
-      if: ${{ github.ref == 'refs/heads/main' }}
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
