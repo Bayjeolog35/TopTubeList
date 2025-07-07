@@ -1258,10 +1258,6 @@ return html_start + script_block
 """
 
 def generate_html_page(name, is_country=True, output_folder="."):
-    """
-    Tek bir ülke veya kıta için HTML sayfası üretir.
-    is_country=True ise ülke sayfası, False ise kıta sayfasıdır.
-    """
     print(f"\n🔨 {name} sayfası oluşturuluyor...")
 
     videos_file = f"{name}.vid.data.json"
@@ -1277,9 +1273,24 @@ def generate_html_page(name, is_country=True, output_folder="."):
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(html_content)
         print(f"✅ Oluşturuldu: {output_path}")
+        return True
     except IOError as e:
         print(f"❌ Yazma hatası: {str(e)}")
         return False
+
+
+def generate_index_from_worldwide():
+    src = "worldwide.html"
+    dst = "index.html"
+    if os.path.exists(src):
+        with open(src, "r", encoding="utf-8") as f:
+            content = f.read()
+        with open(dst, "w", encoding="utf-8") as f:
+            f.write(content)
+        print("✅ index.html, worldwide.html'den üretildi.")
+    else:
+        print("❌ worldwide.html bulunamadı, index.html üretilemedi.")
+
 
 def main():
     print("""
@@ -1306,6 +1317,10 @@ def main():
 
     if success_count < total_items:
         print("⚠️ Bazı sayfalar oluşturulamadı. Lütfen hata mesajlarını kontrol edin.")
+
+    # ✅ En son index.html üretilsin
+    generate_index_from_worldwide()
+
 
 if __name__ == "__main__":
     try:
