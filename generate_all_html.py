@@ -1235,7 +1235,8 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
   </div>
   <p>© 2025 TopTubeList.com</p>
 </footer>
-
+"""
+script_block = f"""
  <script>
         // Video verilerini yükle
         const pageName = "{name}";
@@ -1470,6 +1471,8 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
 </body>
 </html>
 """
+
+return html_start + script_block
 
 def generate_html_page(name, is_country=True, output_folder="."):
     """
