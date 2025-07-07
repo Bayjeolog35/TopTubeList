@@ -1235,7 +1235,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
   </div>
   <p>© 2025 TopTubeList.com</p>
 </footer>
-script src="dynamic.js"></script>
+<script src="dynamic.js"></script>
 </body>
 </html>
 return html_start + script_block
