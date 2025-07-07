@@ -14,818 +14,818 @@ from datetime import datetime, UTC
 
 CONTINENT_INFO = {
     "asia": {
-        "display_name": "Asia",
+        "{readable_name}": "Asia",
         "meta_description": "Trending YouTube videos in Asia - Most viewed content across Asian countries"
     },
     "europe": {
-        "display_name": "Europe", 
+        "{readable_name}": "Europe", 
         "meta_description": "Popular YouTube videos trending in European countries - Updated hourly"
     },
     "africa": {
-        "display_name": "Africa",
+        "{readable_name}": "Africa",
         "meta_description": "Top viewed YouTube videos across African nations - Daily updated charts"
     },
     "north_america": {
-        "display_name": "North America",
+        "{readable_name}": "North America",
         "meta_description": "Viral YouTube content in USA, Canada and Mexico - Real-time trending videos"
     },
     "south_america": {
-        "display_name": "South America",
+        "{readable_name}": "South America",
         "meta_description": "Most watched YouTube videos in South American countries - Updated constantly"
     },
     "oceania": {
-        "display_name": "Oceania",
+        "{readable_name}": "Oceania",
         "meta_description": "Trending YouTube videos from Australia, New Zealand and Pacific Islands"
     }
 }
 
 COUNTRY_INFO = {
     "afghanistan": {
-        "display_name": "Afghanistan",
+        "{readable_name}": "Afghanistan",
         "meta_description": "Trending YouTube videos in Afghanistan - Most viewed content"
     },
     "albania": {
-        "display_name": "Albania",
+        "{readable_name}": "Albania",
         "meta_description": "Trending YouTube videos in Albania - Most viewed content"
     },
     "algeria": {
-        "display_name": "Algeria",
+        "{readable_name}": "Algeria",
         "meta_description": "Trending YouTube videos in Algeria - Most viewed content"
     },
     "andorra": {
-        "display_name": "Andorra",
+        "{readable_name}": "Andorra",
         "meta_description": "Trending YouTube videos in Andorra - Most viewed content"
     },
     "angola": {
-        "display_name": "Angola",
+        "{readable_name}": "Angola",
         "meta_description": "Trending YouTube videos in Angola - Most viewed content"
     },
     "antigua-and-barbuda": {
-        "display_name": "Antigua and Barbuda",
+        "{readable_name}": "Antigua and Barbuda",
         "meta_description": "Trending YouTube videos in Antigua and Barbuda - Most viewed content"
     },
     "argentina": {
-        "display_name": "Argentina",
+        "{readable_name}": "Argentina",
         "meta_description": "Trending YouTube videos in Argentina - Most viewed content"
     },
     "armenia": {
-        "display_name": "Armenia",
+        "{readable_name}": "Armenia",
         "meta_description": "Trending YouTube videos in Armenia - Most viewed content"
     },
     "australia": {
-        "display_name": "Australia",
+        "{readable_name}": "Australia",
         "meta_description": "Trending YouTube videos in Australia - Most viewed content"
     },
     "austria": {
-        "display_name": "Austria",
+        "{readable_name}": "Austria",
         "meta_description": "Trending YouTube videos in Austria - Most viewed content"
     },
     "azerbaijan": {
-        "display_name": "Azerbaijan",
+        "{readable_name}": "Azerbaijan",
         "meta_description": "Trending YouTube videos in Azerbaijan - Most viewed content"
     },
     "bahamas": {
-        "display_name": "Bahamas",
+        "{readable_name}": "Bahamas",
         "meta_description": "Trending YouTube videos in Bahamas - Most viewed content"
     },
     "bahrain": {
-        "display_name": "Bahrain",
+        "{readable_name}": "Bahrain",
         "meta_description": "Trending YouTube videos in Bahrain - Most viewed content"
     },
     "bangladesh": {
-        "display_name": "Bangladesh",
+        "{readable_name}": "Bangladesh",
         "meta_description": "Trending YouTube videos in Bangladesh - Most viewed content"
     },
     "barbados": {
-        "display_name": "Barbados",
+        "{readable_name}": "Barbados",
         "meta_description": "Trending YouTube videos in Barbados - Most viewed content"
     },
     "belarus": {
-        "display_name": "Belarus",
+        "{readable_name}": "Belarus",
         "meta_description": "Trending YouTube videos in Belarus - Most viewed content"
     },
     "belgium": {
-        "display_name": "Belgium",
+        "{readable_name}": "Belgium",
         "meta_description": "Trending YouTube videos in Belgium - Most viewed content"
     },
     "belize": {
-        "display_name": "Belize",
+        "{readable_name}": "Belize",
         "meta_description": "Trending YouTube videos in Belize - Most viewed content"
     },
     "benin": {
-        "display_name": "Benin",
+        "{readable_name}": "Benin",
         "meta_description": "Trending YouTube videos in Benin - Most viewed content"
     },
     "bhutan": {
-        "display_name": "Bhutan",
+        "{readable_name}": "Bhutan",
         "meta_description": "Trending YouTube videos in Bhutan - Most viewed content"
     },
     "bolivia": {
-        "display_name": "Bolivia",
+        "{readable_name}": "Bolivia",
         "meta_description": "Trending YouTube videos in Bolivia - Most viewed content"
     },
     "bosnia-and-herzegovina": {
-        "display_name": "Bosnia and Herzegovina",
+        "{readable_name}": "Bosnia and Herzegovina",
         "meta_description": "Trending YouTube videos in Bosnia and Herzegovina - Most viewed content"
     },
     "botswana": {
-        "display_name": "Botswana",
+        "{readable_name}": "Botswana",
         "meta_description": "Trending YouTube videos in Botswana - Most viewed content"
     },
     "brazil": {
-        "display_name": "Brazil",
+        "{readable_name}": "Brazil",
         "meta_description": "Trending YouTube videos in Brazil - Most viewed content"
     },
     "brunei": {
-        "display_name": "Brunei",
+        "{readable_name}": "Brunei",
         "meta_description": "Trending YouTube videos in Brunei - Most viewed content"
     },
     "bulgaria": {
-        "display_name": "Bulgaria",
+        "{readable_name}": "Bulgaria",
         "meta_description": "Trending YouTube videos in Bulgaria - Most viewed content"
     },
     "burkina-faso": {
-        "display_name": "Burkina Faso",
+        "{readable_name}": "Burkina Faso",
         "meta_description": "Trending YouTube videos in Burkina Faso - Most viewed content"
     },
     "burundi": {
-        "display_name": "Burundi",
+        "{readable_name}": "Burundi",
         "meta_description": "Trending YouTube videos in Burundi - Most viewed content"
     },
     "cabo-verde": {
-        "display_name": "Cabo Verde",
+        "{readable_name}": "Cabo Verde",
         "meta_description": "Trending YouTube videos in Cabo Verde - Most viewed content"
     },
     "cambodia": {
-        "display_name": "Cambodia",
+        "{readable_name}": "Cambodia",
         "meta_description": "Trending YouTube videos in Cambodia - Most viewed content"
     },
     "cameroon": {
-        "display_name": "Cameroon",
+        "{readable_name}": "Cameroon",
         "meta_description": "Trending YouTube videos in Cameroon - Most viewed content"
     },
     "canada": {
-        "display_name": "Canada",
+        "{readable_name}": "Canada",
         "meta_description": "Trending YouTube videos in Canada - Most viewed content"
     },
     "central-african-republic": {
-        "display_name": "Central African Republic",
+        "{readable_name}": "Central African Republic",
         "meta_description": "Trending YouTube videos in Central African Republic - Most viewed content"
     },
     "chad": {
-        "display_name": "Chad",
+        "{readable_name}": "Chad",
         "meta_description": "Trending YouTube videos in Chad - Most viewed content"
     },
     "chile": {
-        "display_name": "Chile",
+        "{readable_name}": "Chile",
         "meta_description": "Trending YouTube videos in Chile - Most viewed content"
     },
     "china": {
-        "display_name": "China",
+        "{readable_name}": "China",
         "meta_description": "Trending YouTube videos in China - Most viewed content"
     },
     "colombia": {
-        "display_name": "Colombia",
+        "{readable_name}": "Colombia",
         "meta_description": "Trending YouTube videos in Colombia - Most viewed content"
     },
     "comoros": {
-        "display_name": "Comoros",
+        "{readable_name}": "Comoros",
         "meta_description": "Trending YouTube videos in Comoros - Most viewed content"
     },
     "congo-democratic-republic-of-the": {
-        "display_name": "Congo (Democratic Republic of the)",
+        "{readable_name}": "Congo (Democratic Republic of the)",
         "meta_description": "Trending YouTube videos in Congo (Democratic Republic of the) - Most viewed content"
     },
     "congo-republic-of-the": {
-        "display_name": "Congo (Republic of the)",
+        "{readable_name}": "Congo (Republic of the)",
         "meta_description": "Trending YouTube videos in Congo (Republic of the) - Most viewed content"
     },
     "costa-rica": {
-        "display_name": "Costa Rica",
+        "{readable_name}": "Costa Rica",
         "meta_description": "Trending YouTube videos in Costa Rica - Most viewed content"
     },
     "cote-d-ivoire": {
-        "display_name": "Cote d'Ivoire",
+        "{readable_name}": "Cote d'Ivoire",
         "meta_description": "Trending YouTube videos in Cote d'Ivoire - Most viewed content"
     },
     "croatia": {
-        "display_name": "Croatia",
+        "{readable_name}": "Croatia",
         "meta_description": "Trending YouTube videos in Croatia - Most viewed content"
     },
     "cuba": {
-        "display_name": "Cuba",
+        "{readable_name}": "Cuba",
         "meta_description": "Trending YouTube videos in Cuba - Most viewed content"
     },
     "cyprus": {
-        "display_name": "Cyprus",
+        "{readable_name}": "Cyprus",
         "meta_description": "Trending YouTube videos in Cyprus - Most viewed content"
     },
     "czech-republic": {
-        "display_name": "Czech Republic",
+        "{readable_name}": "Czech Republic",
         "meta_description": "Trending YouTube videos in Czech Republic - Most viewed content"
     },
     "denmark": {
-        "display_name": "Denmark",
+        "{readable_name}": "Denmark",
         "meta_description": "Trending YouTube videos in Denmark - Most viewed content"
     },
     "djibouti": {
-        "display_name": "Djibouti",
+        "{readable_name}": "Djibouti",
         "meta_description": "Trending YouTube videos in Djibouti - Most viewed content"
     },
     "dominica": {
-        "display_name": "Dominica",
+        "{readable_name}": "Dominica",
         "meta_description": "Trending YouTube videos in Dominica - Most viewed content"
     },
     "dominican-republic": {
-        "display_name": "Dominican Republic",
+        "{readable_name}": "Dominican Republic",
         "meta_description": "Trending YouTube videos in Dominican Republic - Most viewed content"
     },
     "east-timor": {
-        "display_name": "East Timor",
+        "{readable_name}": "East Timor",
         "meta_description": "Trending YouTube videos in East Timor - Most viewed content"
     },
     "ecuador": {
-        "display_name": "Ecuador",
+        "{readable_name}": "Ecuador",
         "meta_description": "Trending YouTube videos in Ecuador - Most viewed content"
     },
     "egypt": {
-        "display_name": "Egypt",
+        "{readable_name}": "Egypt",
         "meta_description": "Trending YouTube videos in Egypt - Most viewed content"
     },
     "el-salvador": {
-        "display_name": "El Salvador",
+        "{readable_name}": "El Salvador",
         "meta_description": "Trending YouTube videos in El Salvador - Most viewed content"
     },
     "equatorial-guinea": {
-        "display_name": "Equatorial Guinea",
+        "{readable_name}": "Equatorial Guinea",
         "meta_description": "Trending YouTube videos in Equatorial Guinea - Most viewed content"
     },
     "eritrea": {
-        "display_name": "Eritrea",
+        "{readable_name}": "Eritrea",
         "meta_description": "Trending YouTube videos in Eritrea - Most viewed content"
     },
     "estonia": {
-        "display_name": "Estonia",
+        "{readable_name}": "Estonia",
         "meta_description": "Trending YouTube videos in Estonia - Most viewed content"
     },
     "eswatini": {
-        "display_name": "Eswatini",
+        "{readable_name}": "Eswatini",
         "meta_description": "Trending YouTube videos in Eswatini - Most viewed content"
     },
     "ethiopia": {
-        "display_name": "Ethiopia",
+        "{readable_name}": "Ethiopia",
         "meta_description": "Trending YouTube videos in Ethiopia - Most viewed content"
     },
     "fiji": {
-        "display_name": "Fiji",
+        "{readable_name}": "Fiji",
         "meta_description": "Trending YouTube videos in Fiji - Most viewed content"
     },
     "finland": {
-        "display_name": "Finland",
+        "{readable_name}": "Finland",
         "meta_description": "Trending YouTube videos in Finland - Most viewed content"
     },
     "france": {
-        "display_name": "France",
+        "{readable_name}": "France",
         "meta_description": "Trending YouTube videos in France - Most viewed content"
     },
     "gabon": {
-        "display_name": "Gabon",
+        "{readable_name}": "Gabon",
         "meta_description": "Trending YouTube videos in Gabon - Most viewed content"
     },
     "gambia": {
-        "display_name": "Gambia",
+        "{readable_name}": "Gambia",
         "meta_description": "Trending YouTube videos in Gambia - Most viewed content"
     },
     "georgia": {
-        "display_name": "Georgia",
+        "{readable_name}": "Georgia",
         "meta_description": "Trending YouTube videos in Georgia - Most viewed content"
     },
     "germany": {
-        "display_name": "Germany",
+        "{readable_name}": "Germany",
         "meta_description": "Trending YouTube videos in Germany - Most viewed content"
     },
     "ghana": {
-        "display_name": "Ghana",
+        "{readable_name}": "Ghana",
         "meta_description": "Trending YouTube videos in Ghana - Most viewed content"
     },
     "greece": {
-        "display_name": "Greece",
+        "{readable_name}": "Greece",
         "meta_description": "Trending YouTube videos in Greece - Most viewed content"
     },
     "grenada": {
-        "display_name": "Grenada",
+        "{readable_name}": "Grenada",
         "meta_description": "Trending YouTube videos in Grenada - Most viewed content"
     },
     "guatemala": {
-        "display_name": "Guatemala",
+        "{readable_name}": "Guatemala",
         "meta_description": "Trending YouTube videos in Guatemala - Most viewed content"
     },
     "guinea": {
-        "display_name": "Guinea",
+        "{readable_name}": "Guinea",
         "meta_description": "Trending YouTube videos in Guinea - Most viewed content"
     },
     "guinea-bissau": {
-        "display_name": "Guinea-Bissau",
+        "{readable_name}": "Guinea-Bissau",
         "meta_description": "Trending YouTube videos in Guinea-Bissau - Most viewed content"
     },
     "guyana": {
-        "display_name": "Guyana",
+        "{readable_name}": "Guyana",
         "meta_description": "Trending YouTube videos in Guyana - Most viewed content"
     },
     "haiti": {
-        "display_name": "Haiti",
+        "{readable_name}": "Haiti",
         "meta_description": "Trending YouTube videos in Haiti - Most viewed content"
     },
     "honduras": {
-        "display_name": "Honduras",
+        "{readable_name}": "Honduras",
         "meta_description": "Trending YouTube videos in Honduras - Most viewed content"
     },
     "hungary": {
-        "display_name": "Hungary",
+        "{readable_name}": "Hungary",
         "meta_description": "Trending YouTube videos in Hungary - Most viewed content"
     },
     "iceland": {
-        "display_name": "Iceland",
+        "{readable_name}": "Iceland",
         "meta_description": "Trending YouTube videos in Iceland - Most viewed content"
     },
     "india": {
-        "display_name": "India",
+        "{readable_name}": "India",
         "meta_description": "Trending YouTube videos in India - Most viewed content"
     },
     "indonesia": {
-        "display_name": "Indonesia",
+        "{readable_name}": "Indonesia",
         "meta_description": "Trending YouTube videos in Indonesia - Most viewed content"
     },
     "iran": {
-        "display_name": "Iran",
+        "{readable_name}": "Iran",
         "meta_description": "Trending YouTube videos in Iran - Most viewed content"
     },
     "iraq": {
-        "display_name": "Iraq",
+        "{readable_name}": "Iraq",
         "meta_description": "Trending YouTube videos in Iraq - Most viewed content"
     },
     "ireland": {
-        "display_name": "Ireland",
+        "{readable_name}": "Ireland",
         "meta_description": "Trending YouTube videos in Ireland - Most viewed content"
     },
     "israel": {
-        "display_name": "Israel",
+        "{readable_name}": "Israel",
         "meta_description": "Trending YouTube videos in Israel - Most viewed content"
     },
     "italy": {
-        "display_name": "Italy",
+        "{readable_name}": "Italy",
         "meta_description": "Trending YouTube videos in Italy - Most viewed content"
     },
     "jamaica": {
-        "display_name": "Jamaica",
+        "{readable_name}": "Jamaica",
         "meta_description": "Trending YouTube videos in Jamaica - Most viewed content"
     },
     "japan": {
-        "display_name": "Japan",
+        "{readable_name}": "Japan",
         "meta_description": "Trending YouTube videos in Japan - Most viewed content"
     },
     "jordan": {
-        "display_name": "Jordan",
+        "{readable_name}": "Jordan",
         "meta_description": "Trending YouTube videos in Jordan - Most viewed content"
     },
     "kazakhstan": {
-        "display_name": "Kazakhstan",
+        "{readable_name}": "Kazakhstan",
         "meta_description": "Trending YouTube videos in Kazakhstan - Most viewed content"
     },
     "kenya": {
-        "display_name": "Kenya",
+        "{readable_name}": "Kenya",
         "meta_description": "Trending YouTube videos in Kenya - Most viewed content"
     },
     "kiribati": {
-        "display_name": "Kiribati",
+        "{readable_name}": "Kiribati",
         "meta_description": "Trending YouTube videos in Kiribati - Most viewed content"
     },
     "korea-north": {
-        "display_name": "Korea (North)",
+        "{readable_name}": "Korea (North)",
         "meta_description": "Trending YouTube videos in North Korea - Most viewed content"
     },
     "korea-south": {
-        "display_name": "Korea (South)",
+        "{readable_name}": "Korea (South)",
         "meta_description": "Trending YouTube videos in South Korea - Most viewed content"
     },
     "kosovo": {
-        "display_name": "Kosovo",
+        "{readable_name}": "Kosovo",
         "meta_description": "Trending YouTube videos in Kosovo - Most viewed content"
     },
     "kuwait": {
-        "display_name": "Kuwait",
+        "{readable_name}": "Kuwait",
         "meta_description": "Trending YouTube videos in Kuwait - Most viewed content"
     },
     "kyrgyzstan": {
-        "display_name": "Kyrgyzstan",
+        "{readable_name}": "Kyrgyzstan",
         "meta_description": "Trending YouTube videos in Kyrgyzstan - Most viewed content"
     },
     "laos": {
-        "display_name": "Laos",
+        "{readable_name}": "Laos",
         "meta_description": "Trending YouTube videos in Laos - Most viewed content"
     },
     "latvia": {
-        "display_name": "Latvia",
+        "{readable_name}": "Latvia",
         "meta_description": "Trending YouTube videos in Latvia - Most viewed content"
     },
     "lebanon": {
-        "display_name": "Lebanon",
+        "{readable_name}": "Lebanon",
         "meta_description": "Trending YouTube videos in Lebanon - Most viewed content"
     },
     "lesotho": {
-        "display_name": "Lesotho",
+        "{readable_name}": "Lesotho",
         "meta_description": "Trending YouTube videos in Lesotho - Most viewed content"
     },
     "liberia": {
-        "display_name": "Liberia",
+        "{readable_name}": "Liberia",
         "meta_description": "Trending YouTube videos in Liberia - Most viewed content"
     },
     "libya": {
-        "display_name": "Libya",
+        "{readable_name}": "Libya",
         "meta_description": "Trending YouTube videos in Libya - Most viewed content"
     },
     "liechtenstein": {
-        "display_name": "Liechtenstein",
+        "{readable_name}": "Liechtenstein",
         "meta_description": "Trending YouTube videos in Liechtenstein - Most viewed content"
     },
     "lithuania": {
-        "display_name": "Lithuania",
+        "{readable_name}": "Lithuania",
         "meta_description": "Trending YouTube videos in Lithuania - Most viewed content"
     },
     "luxembourg": {
-        "display_name": "Luxembourg",
+        "{readable_name}": "Luxembourg",
         "meta_description": "Trending YouTube videos in Luxembourg - Most viewed content"
     },
     "madagascar": {
-        "display_name": "Madagascar",
+        "{readable_name}": "Madagascar",
         "meta_description": "Trending YouTube videos in Madagascar - Most viewed content"
     },
     "malawi": {
-        "display_name": "Malawi",
+        "{readable_name}": "Malawi",
         "meta_description": "Trending YouTube videos in Malawi - Most viewed content"
     },
     "malaysia": {
-        "display_name": "Malaysia",
+        "{readable_name}": "Malaysia",
         "meta_description": "Trending YouTube videos in Malaysia - Most viewed content"
     },
     "maldives": {
-        "display_name": "Maldives",
+        "{readable_name}": "Maldives",
         "meta_description": "Trending YouTube videos in Maldives - Most viewed content"
     },
     "mali": {
-        "display_name": "Mali",
+        "{readable_name}": "Mali",
         "meta_description": "Trending YouTube videos in Mali - Most viewed content"
     },
     "malta": {
-        "display_name": "Malta",
+        "{readable_name}": "Malta",
         "meta_description": "Trending YouTube videos in Malta - Most viewed content"
     },
     "marshall-islands": {
-        "display_name": "Marshall Islands",
+        "{readable_name}": "Marshall Islands",
         "meta_description": "Trending YouTube videos in Marshall Islands - Most viewed content"
     },
     "mauritania": {
-        "display_name": "Mauritania",
+        "{readable_name}": "Mauritania",
         "meta_description": "Trending YouTube videos in Mauritania - Most viewed content"
     },
     "mauritius": {
-        "display_name": "Mauritius",
+        "{readable_name}": "Mauritius",
         "meta_description": "Trending YouTube videos in Mauritius - Most viewed content"
     },
     "mexico": {
-        "display_name": "Mexico",
+        "{readable_name}": "Mexico",
         "meta_description": "Trending YouTube videos in Mexico - Most viewed content"
     },
     "micronesia": {
-        "display_name": "Micronesia",
+        "{readable_name}": "Micronesia",
         "meta_description": "Trending YouTube videos in Micronesia - Most viewed content"
     },
     "moldova": {
-        "display_name": "Moldova",
+        "{readable_name}": "Moldova",
         "meta_description": "Trending YouTube videos in Moldova - Most viewed content"
     },
     "monaco": {
-        "display_name": "Monaco",
+        "{readable_name}": "Monaco",
         "meta_description": "Trending YouTube videos in Monaco - Most viewed content"
     },
     "mongolia": {
-        "display_name": "Mongolia",
+        "{readable_name}": "Mongolia",
         "meta_description": "Trending YouTube videos in Mongolia - Most viewed content"
     },
     "montenegro": {
-        "display_name": "Montenegro",
+        "{readable_name}": "Montenegro",
         "meta_description": "Trending YouTube videos in Montenegro - Most viewed content"
     },
     "morocco": {
-        "display_name": "Morocco",
+        "{readable_name}": "Morocco",
         "meta_description": "Trending YouTube videos in Morocco - Most viewed content"
     },
     "mozambique": {
-        "display_name": "Mozambique",
+        "{readable_name}": "Mozambique",
         "meta_description": "Trending YouTube videos in Mozambique - Most viewed content"
     },
     "myanmar": {
-        "display_name": "Myanmar",
+        "{readable_name}": "Myanmar",
         "meta_description": "Trending YouTube videos in Myanmar - Most viewed content"
     },
     "namibia": {
-        "display_name": "Namibia",
+        "{readable_name}": "Namibia",
         "meta_description": "Trending YouTube videos in Namibia - Most viewed content"
     },
     "nauru": {
-        "display_name": "Nauru",
+        "{readable_name}": "Nauru",
         "meta_description": "Trending YouTube videos in Nauru - Most viewed content"
     },
     "nepal": {
-        "display_name": "Nepal",
+        "{readable_name}": "Nepal",
         "meta_description": "Trending YouTube videos in Nepal - Most viewed content"
     },
     "netherlands": {
-        "display_name": "Netherlands",
+        "{readable_name}": "Netherlands",
         "meta_description": "Trending YouTube videos in Netherlands - Most viewed content"
     },
     "new-zealand": {
-        "display_name": "New Zealand",
+        "{readable_name}": "New Zealand",
         "meta_description": "Trending YouTube videos in New Zealand - Most viewed content"
     },
     "nicaragua": {
-        "display_name": "Nicaragua",
+        "{readable_name}": "Nicaragua",
         "meta_description": "Trending YouTube videos in Nicaragua - Most viewed content"
     },
     "niger": {
-        "display_name": "Niger",
+        "{readable_name}": "Niger",
         "meta_description": "Trending YouTube videos in Niger - Most viewed content"
     },
     "nigeria": {
-        "display_name": "Nigeria",
+        "{readable_name}": "Nigeria",
         "meta_description": "Trending YouTube videos in Nigeria - Most viewed content"
     },
     "north-macedonia": {
-        "display_name": "North Macedonia",
+        "{readable_name}": "North Macedonia",
         "meta_description": "Trending YouTube videos in North Macedonia - Most viewed content"
     },
     "norway": {
-        "display_name": "Norway",
+        "{readable_name}": "Norway",
         "meta_description": "Trending YouTube videos in Norway - Most viewed content"
     },
     "oman": {
-        "display_name": "Oman",
+        "{readable_name}": "Oman",
         "meta_description": "Trending YouTube videos in Oman - Most viewed content"
     },
     "pakistan": {
-        "display_name": "Pakistan",
+        "{readable_name}": "Pakistan",
         "meta_description": "Trending YouTube videos in Pakistan - Most viewed content"
     },
     "palau": {
-        "display_name": "Palau",
+        "{readable_name}": "Palau",
         "meta_description": "Trending YouTube videos in Palau - Most viewed content"
     },
     "palestine": {
-        "display_name": "Palestine",
+        "{readable_name}": "Palestine",
         "meta_description": "Trending YouTube videos in Palestine - Most viewed content"
     },
     "panama": {
-        "display_name": "Panama",
+        "{readable_name}": "Panama",
         "meta_description": "Trending YouTube videos in Panama - Most viewed content"
     },
     "papua-new-guinea": {
-        "display_name": "Papua New Guinea",
+        "{readable_name}": "Papua New Guinea",
         "meta_description": "Trending YouTube videos in Papua New Guinea - Most viewed content"
     },
     "paraguay": {
-        "display_name": "Paraguay",
+        "{readable_name}": "Paraguay",
         "meta_description": "Trending YouTube videos in Paraguay - Most viewed content"
     },
     "peru": {
-        "display_name": "Peru",
+        "{readable_name}": "Peru",
         "meta_description": "Trending YouTube videos in Peru - Most viewed content"
     },
     "philippines": {
-        "display_name": "Philippines",
+        "{readable_name}": "Philippines",
         "meta_description": "Trending YouTube videos in Philippines - Most viewed content"
     },
     "poland": {
-        "display_name": "Poland",
+        "{readable_name}": "Poland",
         "meta_description": "Trending YouTube videos in Poland - Most viewed content"
     },
     "portugal": {
-        "display_name": "Portugal",
+        "{readable_name}": "Portugal",
         "meta_description": "Trending YouTube videos in Portugal - Most viewed content"
     },
     "qatar": {
-        "display_name": "Qatar",
+        "{readable_name}": "Qatar",
         "meta_description": "Trending YouTube videos in Qatar - Most viewed content"
     },
     "romania": {
-        "display_name": "Romania",
+        "{readable_name}": "Romania",
         "meta_description": "Trending YouTube videos in Romania - Most viewed content"
     },
     "russia": {
-        "display_name": "Russia",
+        "{readable_name}": "Russia",
         "meta_description": "Trending YouTube videos in Russia - Most viewed content"
     },
     "rwanda": {
-        "display_name": "Rwanda",
+        "{readable_name}": "Rwanda",
         "meta_description": "Trending YouTube videos in Rwanda - Most viewed content"
     },
     "saint-kitts-and-nevis": {
-        "display_name": "Saint Kitts and Nevis",
+        "{readable_name}": "Saint Kitts and Nevis",
         "meta_description": "Trending YouTube videos in Saint Kitts and Nevis - Most viewed content"
     },
     "saint-lucia": {
-        "display_name": "Saint Lucia",
+        "{readable_name}": "Saint Lucia",
         "meta_description": "Trending YouTube videos in Saint Lucia - Most viewed content"
     },
     "saint-vincent-and-the-grenadines": {
-        "display_name": "Saint Vincent and the Grenadines",
+        "{readable_name}": "Saint Vincent and the Grenadines",
         "meta_description": "Trending YouTube videos in Saint Vincent and the Grenadines - Most viewed content"
     },
     "samoa": {
-        "display_name": "Samoa",
+        "{readable_name}": "Samoa",
         "meta_description": "Trending YouTube videos in Samoa - Most viewed content"
     },
     "san-marino": {
-        "display_name": "San Marino",
+        "{readable_name}": "San Marino",
         "meta_description": "Trending YouTube videos in San Marino - Most viewed content"
     },
     "sao-tome-and-principe": {
-        "display_name": "Sao Tome and Principe",
+        "{readable_name}": "Sao Tome and Principe",
         "meta_description": "Trending YouTube videos in Sao Tome and Principe - Most viewed content"
     },
     "saudi-arabia": {
-        "display_name": "Saudi Arabia",
+        "{readable_name}": "Saudi Arabia",
         "meta_description": "Trending YouTube videos in Saudi Arabia - Most viewed content"
     },
     "senegal": {
-        "display_name": "Senegal",
+        "{readable_name}": "Senegal",
         "meta_description": "Trending YouTube videos in Senegal - Most viewed content"
     },
     "serbia": {
-        "display_name": "Serbia",
+        "{readable_name}": "Serbia",
         "meta_description": "Trending YouTube videos in Serbia - Most viewed content"
     },
     "seychelles": {
-        "display_name": "Seychelles",
+        "{readable_name}": "Seychelles",
         "meta_description": "Trending YouTube videos in Seychelles - Most viewed content"
     },
     "sierra-leone": {
-        "display_name": "Sierra Leone",
+        "{readable_name}": "Sierra Leone",
         "meta_description": "Trending YouTube videos in Sierra Leone - Most viewed content"
     },
     "singapore": {
-        "display_name": "Singapore",
+        "{readable_name}": "Singapore",
         "meta_description": "Trending YouTube videos in Singapore - Most viewed content"
     },
     "slovakia": {
-        "display_name": "Slovakia",
+        "{readable_name}": "Slovakia",
         "meta_description": "Trending YouTube videos in Slovakia - Most viewed content"
     },
     "slovenia": {
-        "display_name": "Slovenia",
+        "{readable_name}": "Slovenia",
         "meta_description": "Trending YouTube videos in Slovenia - Most viewed content"
     },
     "solomon-islands": {
-        "display_name": "Solomon Islands",
+        "{readable_name}": "Solomon Islands",
         "meta_description": "Trending YouTube videos in Solomon Islands - Most viewed content"
     },
     "somalia": {
-        "display_name": "Somalia",
+        "{readable_name}": "Somalia",
         "meta_description": "Trending YouTube videos in Somalia - Most viewed content"
     },
     "south-africa": {
-        "display_name": "South Africa",
+        "{readable_name}": "South Africa",
         "meta_description": "Trending YouTube videos in South Africa - Most viewed content"
     },
     "south-sudan": {
-        "display_name": "South Sudan",
+        "{readable_name}": "South Sudan",
         "meta_description": "Trending YouTube videos in South Sudan - Most viewed content"
     },
     "spain": {
-        "display_name": "Spain",
+        "{readable_name}": "Spain",
         "meta_description": "Trending YouTube videos in Spain - Most viewed content"
     },
     "sri-lanka": {
-        "display_name": "Sri Lanka",
+        "{readable_name}": "Sri Lanka",
         "meta_description": "Trending YouTube videos in Sri Lanka - Most viewed content"
     },
     "sudano": {
-        "display_name": "Sudan",
+        "{readable_name}": "Sudan",
         "meta_description": "Trending YouTube videos in Sudan - Most viewed content"
     },
     "suriname": {
-        "display_name": "Suriname",
+        "{readable_name}": "Suriname",
         "meta_description": "Trending YouTube videos in Suriname - Most viewed content"
     },
     "sweden": {
-        "display_name": "Sweden",
+        "{readable_name}": "Sweden",
         "meta_description": "Trending YouTube videos in Sweden - Most viewed content"
     },
     "switzerland": {
-        "display_name": "Switzerland",
+        "{readable_name}": "Switzerland",
         "meta_description": "Trending YouTube videos in Switzerland - Most viewed content"
     },
     "syria": {
-        "display_name": "Syria",
+        "{readable_name}": "Syria",
         "meta_description": "Trending YouTube videos in Syria - Most viewed content"
     },
     "taiwan": {
-        "display_name": "Taiwan",
+        "{readable_name}": "Taiwan",
         "meta_description": "Trending YouTube videos in Taiwan - Most viewed content"
     },
     "tajikistan": {
-        "display_name": "Tajikistan",
+        "{readable_name}": "Tajikistan",
         "meta_description": "Trending YouTube videos in Tajikistan - Most viewed content"
     },
     "tanzania": {
-        "display_name": "Tanzania",
+        "{readable_name}": "Tanzania",
         "meta_description": "Trending YouTube videos in Tanzania - Most viewed content"
     },
     "thailand": {
-        "display_name": "Thailand",
+        "{readable_name}": "Thailand",
         "meta_description": "Trending YouTube videos in Thailand - Most viewed content"
     },
     "togo": {
-        "display_name": "Togo",
+        "{readable_name}": "Togo",
         "meta_description": "Trending YouTube videos in Togo - Most viewed content"
     },
     "tonga": {
-        "display_name": "Tonga",
+        "{readable_name}": "Tonga",
         "meta_description": "Trending YouTube videos in Tonga - Most viewed content"
     },
     "trinidad-and-tobago": {
-        "display_name": "Trinidad and Tobago",
+        "{readable_name}": "Trinidad and Tobago",
         "meta_description": "Trending YouTube videos in Trinidad and Tobago - Most viewed content"
     },
     "tunisia": {
-        "display_name": "Tunisia",
+        "{readable_name}": "Tunisia",
         "meta_description": "Trending YouTube videos in Tunisia - Most viewed content"
     },
     "turkey": {
-        "display_name": "Turkey",
+        "{readable_name}": "Turkey",
         "meta_description": "Trending YouTube videos in Turkey - Most viewed content"
     },
     "turkmenistan": {
-        "display_name": "Turkmenistan",
+        "{readable_name}": "Turkmenistan",
         "meta_description": "Trending YouTube videos in Turkmenistan - Most viewed content"
     },
     "tuvalu": {
-        "display_name": "Tuvalu",
+        "{readable_name}": "Tuvalu",
         "meta_description": "Trending YouTube videos in Tuvalu - Most viewed content"
     },
     "uganda": {
-        "display_name": "Uganda",
+        "{readable_name}": "Uganda",
         "meta_description": "Trending YouTube videos in Uganda - Most viewed content"
     },
     "ukraine": {
-        "display_name": "Ukraine",
+        "{readable_name}": "Ukraine",
         "meta_description": "Trending YouTube videos in Ukraine - Most viewed content"
     },
     "united-arab-emirates": {
-        "display_name": "United Arab Emirates",
+        "{readable_name}": "United Arab Emirates",
         "meta_description": "Trending YouTube videos in United Arab Emirates - Most viewed content"
     },
     "united-kingdom": {
-        "display_name": "United Kingdom",
+        "{readable_name}": "United Kingdom",
         "meta_description": "Trending YouTube videos in United Kingdom - Most viewed content"
     },
     "united-states": {
-        "display_name": "United States",
+        "{readable_name}": "United States",
         "meta_description": "Trending YouTube videos in United States - Most viewed content"
     },
     "uruguay": {
-        "display_name": "Uruguay",
+        "{readable_name}": "Uruguay",
         "meta_description": "Trending YouTube videos in Uruguay - Most viewed content"
     },
     "uzbekistan": {
-        "display_name": "Uzbekistan",
+        "{readable_name}": "Uzbekistan",
         "meta_description": "Trending YouTube videos in Uzbekistan - Most viewed content"
     },
     "vanuatu": {
-        "display_name": "Vanuatu",
+        "{readable_name}": "Vanuatu",
         "meta_description": "Trending YouTube videos in Vanuatu - Most viewed content"
     },
     "vatican-city": {
-        "display_name": "Vatican City",
+        "{readable_name}": "Vatican City",
         "meta_description": "Trending YouTube videos in Vatican City - Most viewed content"
     },
     "venezuela": {
-        "display_name": "Venezuela",
+        "{readable_name}": "Venezuela",
         "meta_description": "Trending YouTube videos in Venezuela - Most viewed content"
     },
     "vietnam": {
-        "display_name": "Vietnam",
+        "{readable_name}": "Vietnam",
         "meta_description": "Trending YouTube videos in Vietnam - Most viewed content"
     },
     "yemen": {
-        "display_name": "Yemen",
+        "{readable_name}": "Yemen",
         "meta_description": "Trending YouTube videos in Yemen - Most viewed content"
     },
     "zambia": {
-        "display_name": "Zambia",
+        "{readable_name}": "Zambia",
         "meta_description": "Trending YouTube videos in Zambia - Most viewed content"
     },
     "zimbabwe": {
-        "display_name": "Zimbabwe",
+        "{readable_name}": "Zimbabwe",
         "meta_description": "Trending YouTube videos in Zimbabwe - Most viewed content"
     }
 }
@@ -892,7 +892,7 @@ def generate_top_video_iframe(videos_data):
 
 def generate_html_content(name, videos_data, structured_data, is_country=True):
     info_dict = COUNTRY_INFO if is_country else CONTINENT_INFO
-    readable_name = info_dict.get(name, {}).get("display_name", name.replace("_", " ").title())
+    readable_name = info_dict.get(name, {}).get("{readable_name}", name.replace("_", " ").title())
     meta_description = info_dict.get(name, {}).get("meta_description", f"Trending YouTube videos in {readable_name} - Updated every 3 hours")
 
     top_video_iframe = generate_top_video_iframe(videos_data)
@@ -920,7 +920,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
             <a href="../../index.html" class="logo">
                 <img src="../../assets/images/logo.webp" alt="TopTubeList" width="120">
             </a>
-            <h1>Trending in {display_name}</h1>
+            <h1>Trending in {{readable_name}}</h1>
         </div>
         
 
