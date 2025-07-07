@@ -214,3 +214,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loadVideos(); // Sayfa yüklendiğinde videoları yüklemeyi başlat
 });
+
+const pageName = window.location.pathname.split("/").pop().replace(".html", "") || "index";
+
+const videoDataFile = pageName === "index" ? "worldwide.vid.data.json" : `${pageName}.vid.data.json`;
+
+fetch('worldwide.vid.data.json')
+  .then(response => response.json())
+  .then(data => renderVideos(data))
+  .catch(error => console.error("veri yükleme hatası:", error));
