@@ -1,0 +1,46 @@
+name: Generate All HTML Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'generate_all_html.py'
+      - 'videos_*.json'
+      - 'structured_data_*.json'
+  workflow_dispatch:  # Manuel çalıştırmak için
+
+jobs:
+  build-all-html:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies (if any)
+      run: |
+        echo "No specific dependencies required."
+
+    - name: Run HTML Generator Script
+      run: python generate_all_html.py
+
+    - name: Upload all generated HTML files
+      uses: actions/upload-artifact@v4
+      with:
+        name: all-html-pages
+        path: |
+          *.html
+        retention-days: 5
+
+    - name: Deploy to GitHub Pages (optional)
+      if: ${{ github.ref == 'refs/heads/main' }}
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
