@@ -1252,16 +1252,17 @@ script_block = f"""
             }}
         }}
         
-  // --- Hamburger Menü ---
-  document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".hamburger");
-    const panel = document.querySelector(".country-panel");
+ // --- Hamburger Menü ---
+document.addEventListener("DOMContentLoaded", () => {{
+  const hamburger = document.querySelector(".hamburger");
+  const panel = document.querySelector(".country-panel");
 
-    if (hamburger && panel) {
-      hamburger.addEventListener("click", () => {
-        panel.classList.toggle("active");
-      });
-    }
+  if (hamburger && panel) {{
+    hamburger.addEventListener("click", () => {{
+      panel.classList.toggle("active");
+    }});
+  }}
+}});
 
     // --- Dark Mode Toggle ---
     const darkModeToggle = document.getElementById("darkModeToggle");
