@@ -1248,8 +1248,8 @@ def generate_html_page(name, is_country=True, output_folder="."):
     """
     print(f"\n🔨 {name} sayfası oluşturuluyor...")
 
-    videos_file = f"videos_{name}.json"
-    structured_file = f"structured_data_{name}.json"
+    videos_file = f"{name}.vid.data.json"
+    structured_file = f"{name}.str.data.json"
 
     videos_data = load_json_data(videos_file)
     structured_data = load_json_data(structured_file)
