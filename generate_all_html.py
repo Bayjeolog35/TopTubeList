@@ -1379,97 +1379,95 @@ if (form && statusDiv) {{
 }}
 
     // --- Video Render ---
-    let allVideos = [];
-    let displayCount = 10;
-    const container = document.getElementById("videoList");
-    const loadMoreBtn = document.getElementById("loadMoreBtn");
+let allVideos = [];
+let displayCount = 10;
+const container = document.getElementById("videoList");
+const loadMoreBtn = document.getElementById("loadMoreBtn");
 
-    function getCountryFromURL() {
-      const path = window.location.pathname;
-      return path.split('/').pop().replace('.html', '').toLowerCase();
-    }
+function getCountryFromURL() {{
+  const path = window.location.pathname;
+  return path.split('/').pop().replace('.html', '').toLowerCase();
+}}
 
-    function createVideoCard(video) {
-      const card = document.createElement("div");
-      card.className = "video-card";
-      card.innerHTML = 
-  <a href="${video.url}" target="_blank" class="video-thumbnail">
-    <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
-    <span class="duration">${video.duration || ''}</span>
-  </a>
-  <div class="video-info">
-    <h2>${video.title}</h2>
-    <div class="meta">
-      <span class="channel">${video.channel}</span>
-      <span class="views">${video.views_str} views</span>
-      <span class="date">${new Date(video.uploadDate).toLocaleDateString()}</span>
+function createVideoCard(video) {{
+  const card = document.createElement("div");
+  card.className = "video-card";
+  card.innerHTML = `
+    <a href="${{video.url}}" target="_blank" class="video-thumbnail">
+      <img src="${{video.thumbnail}}" alt="${{video.title}}" loading="lazy" />
+      <span class="duration">${{video.duration || ''}}</span>
+    </a>
+    <div class="video-info">
+      <h2>${{video.title}}</h2>
+      <div class="meta">
+        <span class="channel">${{video.channel}}</span>
+        <span class="views">${{video.views_str}} views</span>
+        <span class="date">${{new Date(video.uploadDate).toLocaleDateString()}}</span>
+      </div>
     </div>
-  </div>
-;
-      return card;
-    }
+  `;
+  return card;
+}}
 
-    function showNoDataMessage() {
-  container.innerHTML = 
+function showNoDataMessage() {{
+  container.innerHTML = `
     <div class="no-data-message">    
       <img src="no-data.svg" alt="No data" width="100">
       <h3>📊 Sorry, YouTube does not provide statistics for this country</h3>
       <p>Would you like to explore other countries instead?</p>
       <a href="index.html" class="site-button">Go Back to Homepage</a>
     </div>
-  ;
+  `;
   loadMoreBtn.style.display = "none";
-}
+}}
 
-    function renderVideos() {
-      container.innerHTML = "";
+function renderVideos() {{
+  container.innerHTML = "";
 
-      if (allVideos.length === 0) {
-        showNoDataMessage();
-        return;
-      }
+  if (allVideos.length === 0) {{
+    showNoDataMessage();
+    return;
+  }}
 
-      const fragment = document.createDocumentFragment();
-      allVideos.slice(0, displayCount).forEach(video => {
-        const card = createVideoCard(video);
-        fragment.appendChild(card);
-        setTimeout(() => card.classList.add("show"), 50);
-      });
+  const fragment = document.createDocumentFragment();
+  allVideos.slice(0, displayCount).forEach(video => {{
+    const card = createVideoCard(video);
+    fragment.appendChild(card);
+    setTimeout(() => card.classList.add("show"), 50);
+  }});
 
-      container.appendChild(fragment);
-      loadMoreBtn.style.display = displayCount >= allVideos.length ? "none" : "block";
-    }
+  container.appendChild(fragment);
+  loadMoreBtn.style.display = displayCount >= allVideos.length ? "none" : "block";
+}}
 
-    async function loadVideos() {
-      const country = getCountryFromURL();
-      const dataFile = `videos_${country}.json`;
+async function loadVideos() {{
+  const country = getCountryFromURL();
+  const dataFile = `videos_${{country}}.json`;
 
-      try {
-        const response = await fetch(dataFile);
-        if (!response.ok) throw new Error('Data not found');
+  try {{
+    const response = await fetch(dataFile);
+    if (!response.ok) throw new Error('Data not found');
 
-        allVideos = await response.json();
-        document.title = Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList;
-        renderVideos();
-      } catch (error) {
-        console.error("Veri yükleme hatası:", error);
-        showNoDataMessage();
-      }
-    }
+    allVideos = await response.json();
+    document.title = `Trending in ${{country.charAt(0).toUpperCase() + country.slice(1)}} | TopTubeList`;
+    renderVideos();
+  }} catch (error) {{
+    console.error("Veri yükleme hatası:", error);
+    showNoDataMessage();
+  }}
+}}
 
-    loadMoreBtn.addEventListener("click", () => {
-      displayCount += 10;
-      renderVideos();
-      window.scrollBy({ top: 300, behavior: 'smooth' });
-    });
+loadMoreBtn.addEventListener("click", () => {{
+  displayCount += 10;
+  renderVideos();
+  window.scrollBy({{ top: 300, behavior: 'smooth' }});
+}});
 
-    loadVideos();
-  });
-</script>
-</body>
-</html>
+loadVideos();
 """
-return html_start + script_block
+
+return html_start + script_block + "\n</body>\n</html>"
+
 
 def generate_html_page(name, is_country=True, output_folder="."):
     """
