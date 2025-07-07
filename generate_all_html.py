@@ -1463,10 +1463,14 @@ loadMoreBtn.addEventListener("click", () => {{
   window.scrollBy({{ top: 300, behavior: 'smooth' }});
 }});
 
-loadVideos();
+ loadVideos();
+  });
+</script>
+</body>
+</html>
 """
 
-return html_start + script_block + "\n</body>\n</html>"
+return html_start + script_block
 
 
 def generate_html_page(name, is_country=True, output_folder="."):
