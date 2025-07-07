@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Video verilerini yükle
-    const pageName = "{name}"; // Bu, Python tarafından doldurulmalı veya JS içinde URL'den alınmalı.
-                              // Aşağıdaki 'getCountryFromURL()' fonksiyonu zaten bunu yaptığı için bu satır gereksiz.
+  
 
     // --- Hamburger Menü ---
     const hamburger = document.querySelector(".hamburger");
