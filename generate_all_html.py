@@ -899,7 +899,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trending YouTube Videos in {display_name} | TopTubeList</title>
-    <meta name="description" content="{continent_info.get('meta_description', '')}">
+    <meta name="description" content="{meta_description}">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://toptubelist.com/continents/{sanitized_name}/">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -1240,11 +1240,11 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
 
  <script>
         // Video verilerini yükle
-        const continentName = "{continent_name}";
+        const pageName = "{name}";
         
         async function loadVideos() {{
             try {{
-                const response = await fetch(`../../data/videos_${{continentName}}.json`);
+               const response = await fetch(`videos_${pageName}.json`);
                 if (!response.ok) throw new Error('Network response was not ok');
                 return await response.json();
             }} catch (error) {{
@@ -1444,7 +1444,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
 
     async function loadVideos() {
       const country = getCountryFromURL();
-      const dataFile = videos_${country}.json;
+      const dataFile = `videos_${country}.json`;
 
       try {
         const response = await fetch(dataFile);
@@ -1495,7 +1495,7 @@ def generate_html_page(name, is_country=True, output_folder="."):
         print(f"✅ Oluşturuldu: {output_path}")
     except IOError as e:
         print(f"❌ Yazma hatası: {str(e)}")
-
+        return False
         def main():
     print("""
     #######################################
