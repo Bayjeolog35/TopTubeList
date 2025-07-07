@@ -486,6 +486,11 @@ background-color: #000;
   text-align: left;
 }
 
+#contactContent.show {
+  display: block;
+}
+
+
 #contactContent form {
   display: flex;
   flex-direction: column;
