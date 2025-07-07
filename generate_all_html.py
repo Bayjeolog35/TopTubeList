@@ -1457,13 +1457,13 @@ async function loadVideos() {{
   }}
 }}
 
-loadMoreBtn.addEventListener("click", () => {{
-  displayCount += 10;
-  renderVideos();
-  window.scrollBy({{ top: 300, behavior: 'smooth' }});
-}});
+loadMoreBtn.addEventListener("click", () => {
+    displayCount += 10;
+    renderVideos();
+    window.scrollBy({ top: 300, behavior: 'smooth' });
+  });
 
- loadVideos();
+  loadVideos();
   });
 </script>
 </body>
