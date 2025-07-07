@@ -891,19 +891,18 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
         structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data, indent=2)}\n</script>'
 
     current_date = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
-    """"
 
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trending YouTube Videos in {display_name} | TopTubeList</title>
-    <meta name="description" content="{meta_description}">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://toptubelist.com/continents/{sanitized_name}/">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    {structured_block}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trending YouTube Videos in {readable_name} | TopTubeList</title>
+  <meta name="description" content="{meta_description}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://toptubelist.com/{name}.html">
+  <link rel="stylesheet" href="style.css">
+  {structured_block}
 </head>
 <body>
     <header>
