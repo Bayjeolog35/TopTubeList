@@ -1,4 +1,4 @@
-name: Generate and Deploy HTML Pages
+name: Generate All HTML Pages
 
 on:
   push:
@@ -6,37 +6,41 @@ on:
       - main
     paths:
       - 'generate_all_html.py'
-      - 'videos_*.json'
-      - 'structured_data_*.json'
-      - 'dynamic.js'
-  workflow_dispatch:
+      - '*.vid.data.json'
+      - '*.str.data.json'
+      - 'COUNTRY_INFO.py'
+      - 'CONTINENT_INFO.py'
+  workflow_dispatch:  # Manuel çalıştırmak için
 
 jobs:
-  build-deploy:
+  build-all-html:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
 
-      - name: Run HTML Generator
-        run: python generate_all_html.py
+    - name: Install dependencies (if needed)
+      run: echo "No external dependencies needed"
 
-      - name: Commit generated HTML files and dynamic.js
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add *.html dynamic.js
-          git commit -m "🔄 Update generated HTML and dynamic.js" || echo "No changes to commit"
-          git push
+    - name: Run HTML Generator Script
+      run: python generate_all_html.py
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+    - name: Pull latest changes before pushing
+      run: git pull --rebase origin main
+
+    - name: Configure Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Commit and Push HTML files
+      run: |
+        git add *.html
+        git commit -m "🔄 Update generated HTML pages" || echo "No changes to commit"
+        git push origin main
