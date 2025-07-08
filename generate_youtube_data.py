@@ -4,7 +4,26 @@ import requests
 from datetime import datetime
 from dotenv import load_dotenv
 from collections import defaultdict
-from country_info import COUNTRY_INFO
+import re # Yeni: Düzenli ifadeler için eklendi
+
+# country_info.py dosyasından COUNTRY_INFO ve CONTINENT_INFO'yu içe aktardığınızı varsayıyorum
+# Eğer ayrı bir dosya değillerse, bu değişkenlerin tanımlarını buraya eklemelisiniz.
+try:
+    from country_info import COUNTRY_INFO, CONTINENT_INFO
+except ImportError:
+    print("country_info.py dosyası bulunamadı veya COUNTRY_INFO/CONTINENT_INFO tanımlı değil.")
+    print("Lütfen COUNTRY_INFO ve CONTINENT_INFO değişkenlerini bu betiğe ekleyin veya doğru yoldan import edin.")
+    # Örnek boş tanımlar (kendi gerçek verilerinizle doldurun)
+    # Bu kısmı kendi gerçek COUNTRY_INFO ve CONTINENT_INFO verinizle doldurmanız GEREKMEKTEDİR.
+    COUNTRY_INFO = {
+        "turkey": {"code": "TR", "name": "Turkey", "continent": "europe", "meta_description": "Trending YouTube videos in Turkey"},
+        "united_states": {"code": "US", "name": "United States", "continent": "north_america", "meta_description": "Trending YouTube videos in United States"}
+    }
+    CONTINENT_INFO = {
+        "europe": {"name": "Europe", "display_name": "Europe", "meta_description": "Trending YouTube videos in Europe"},
+        "worldwide": {"display_name": "Worldwide", "meta_description": "Trending YouTube videos globally"}
+    }
+
 
 # API Key ayarı
 if os.getenv("CI"):
@@ -17,7 +36,7 @@ if not YOUTUBE_API_KEY:
     raise ValueError("API key bulunamadı!")
 
 YOUTUBE_API_BASE_URL = "https://www.googleapis.com/youtube/v3/"
-OUTPUT_DIR = "."  # Artık kök klasör
+OUTPUT_DIR = "."  # HTML ve JSON'ların bulunduğu kök klasör
 
 def format_number(num):
     num = float(num)
@@ -84,11 +103,13 @@ def generate_structured_data(videos):
         }
     } for v in videos]
 
-def save_json(name, videos):
-    with open(os.path.join(OUTPUT_DIR, f"{name}.vid.data.json"), 'w', encoding='utf-8') as f:
-        json.dump(videos, f, ensure_ascii=False, indent=2)
-    with open(os.path.join(OUTPUT_DIR, f"{name}.str.data.json"), 'w', encoding='utf-8') as f:
-        json.dump(generate_structured_data(videos), f, ensure_ascii=False, indent=2)
+# Bu fonksiyon artık JSON dosyalarını kaydetmeyecek.
+# Eğer yine de JSON olarak kaydetmek isterseniz, bu fonksiyonu kaldırılan yerlere ekleyebilirsiniz.
+# def save_json(name, videos):
+#     with open(os.path.join(OUTPUT_DIR, f"{name}.vid.data.json"), 'w', encoding='utf-8') as f:
+#         json.dump(videos, f, ensure_ascii=False, indent=2)
+#     with open(os.path.join(OUTPUT_DIR, f"{name}.str.data.json"), 'w', encoding='utf-8') as f:
+#         json.dump(generate_structured_data(videos), f, ensure_ascii=False, indent=2)
 
 def deduplicate(videos):
     seen = set()
@@ -100,7 +121,65 @@ def deduplicate(videos):
             unique.append(v)
     return unique
 
+def get_html_filename(name):
+    """Ülke veya kıta adına göre HTML dosya adını döndürür."""
+    # Eğer index.html dosyanız doğrudan "worldwide" verisini kullanıyorsa
+    # ve worldwide.html ile aynı içeriğe sahipse, bu şekilde yönlendirebiliriz.
+    if name == "worldwide":
+        return "index.html"
+    return f"{name.lower().replace(' ', '_')}.html"
+
+def update_html_with_embedded_data(name, videos_data):
+    """
+    Belirtilen HTML dosyasındaki gömülü video verilerini günceller.
+    `generate_all_html.py` tarafından oluşturulan HTML'deki
+    `window.embeddedVideoData = [...];` veya `{...};` yapısını bulur ve içeriğini değiştirir.
+    """
+    html_filename = get_html_filename(name)
+    html_file_path = os.path.join(OUTPUT_DIR, html_filename)
+    
+    if not os.path.exists(html_file_path):
+        print(f"Uyarı: '{html_file_path}' HTML dosyası bulunamadı. Lütfen önce generate_all_html.py'yi bir kez çalıştırın.")
+        return
+
+    try:
+        with open(html_file_path, "r", encoding="utf-8") as f:
+            html_content = f.read()
+
+        # Yeni JSON verisini string'e dönüştür (okunabilirlik için indent kullanıldı)
+        new_json_string = json.dumps(videos_data, ensure_ascii=False, indent=4)
+        
+        # Regex deseni:
+        # (window\.embeddedVideoData\s*=\s*) : "window.embeddedVideoData =" kısmını yakalar (Grup 1)
+        # ([\{\[].*?[\}\]]) : JSON objesini ({...}) veya dizisini ([...]) yakalar (Grup 2 - VERİ KISMI)
+        # (\s*;\s*</script>) : JSON'dan sonraki noktalı virgül ve </script> etiketini yakalar (Grup 3)
+        # re.DOTALL: '.' karakterinin yeni satırları da eşleştirmesini sağlar.
+        pattern = re.compile(r"(window\.embeddedVideoData\s*=\s*)([\{\[].*?[\}\]])(\s*;\s*</script>)", re.DOTALL)
+
+        if pattern.search(html_content):
+            # Bulunan deseni, yakalanan grupları ve yeni JSON stringini kullanarak değiştir
+            html_content = pattern.sub(r"\g<1>" + new_json_string + r"\g<3>", html_content)
+            print(f"✅ HTML dosyası güncellendi: {html_file_path}")
+        else:
+            print(f"⚠️ '{html_file_path}' içinde 'window.embeddedVideoData = [veri];' bloğu bulunamadı. HTML yapısını kontrol edin.")
+            # Eğer blok bulunamazsa, dosyanın üzerine yazmamak için buradan çıkarız.
+            return 
+
+        with open(html_file_path, "w", encoding="utf-8") as f:
+            f.write(html_content)
+
+    except Exception as e:
+        print(f"❌ Hata: HTML dosyası güncellenirken sorun oluştu '{html_file_path}': {e}")
+
+
 def main():
+    print("#######################################")
+    print("# TopTubeList - Veri Güncelleyici")
+    print("# YouTube trend verileri çekiliyor ve HTML'lere gömülüyor...")
+    print("#######################################\n")
+
+    # Kıta gruplarını oluştur
+    # COUNTRY_INFO'nun import edildiğinden veya tanımlandığından emin olun.
     CONTINENT_GROUPS = defaultdict(list)
     for country_name, info in COUNTRY_INFO.items():
         continent = info.get("continent")
@@ -109,19 +188,22 @@ def main():
 
     videos_by_country = {}
 
-    # Ülke verilerini çek
+    # Ülke verilerini çek ve HTML'lere göm
     for country, info in COUNTRY_INFO.items():
         code = info["code"]
-        print(f"İşleniyor: {country} ({code})")
+        print(f"➡️ İşleniyor: {country} ({code})")
         data = get_trending_videos(code)
         if not data or 'items' not in data:
-            print(f"Veri yok: {country}")
-            continue
-        videos = [process_video_data(item) for item in data["items"]]
-        videos = deduplicate(videos)
+            print(f"⚠️ Veri yok veya API hatası: {country}. Boş veri ile devam ediliyor.")
+            videos = []
+        else:
+            videos = [process_video_data(item) for item in data["items"]]
+            videos = deduplicate(videos)
+        
         videos_by_country[country] = videos
-        save_json(country, videos)
+        update_html_with_embedded_data(country, videos) # HTML'e göm
 
+    print("\n--- Kıta Verileri Güncelleniyor ---")
     # Kıtasal veriler
     for continent, country_list in CONTINENT_GROUPS.items():
         continent_videos = []
@@ -129,15 +211,21 @@ def main():
             continent_videos.extend(videos_by_country.get(country, []))
         continent_videos = deduplicate(continent_videos)
         continent_videos.sort(key=lambda x: x["views"], reverse=True)
-        save_json(continent, continent_videos[:50])
+        update_html_with_embedded_data(continent, continent_videos[:50]) # HTML'e göm
+        print(f"✅ Kıtasal veri güncellendi: {continent}")
 
+
+    print("\n--- Dünya Geneli Verileri Güncelleniyor ---")
     # Dünya geneli
     all_videos = []
     for vids in videos_by_country.values():
         all_videos.extend(vids)
     all_videos = deduplicate(all_videos)
     all_videos.sort(key=lambda x: x["views"], reverse=True)
-    save_json("worldwide", all_videos[:50])
+    update_html_with_embedded_data("worldwide", all_videos[:50]) # HTML'e göm (index.html'i de etkileyecek)
+    print("✅ Dünya geneli veri güncellendi.")
+
+    print("\n🏁 Tüm veri güncelleme işlemleri tamamlandı.")
 
 if __name__ == "__main__":
     main()
