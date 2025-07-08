@@ -25,11 +25,11 @@ CONTINENT_INFO = {
         "name": "Africa",
         "meta_description": "Top viewed YouTube videos across African nations - Daily updated charts"
     },
-    "north_america": {
+    "north-america": {
         "name": "North America",
         "meta_description": "Viral YouTube content in USA, Canada and Mexico - Real-time trending videos"
     },
-    "south_america": {
+    "south-america": {
         "name": "South America",
         "meta_description": "Most watched YouTube videos in South American countries - Updated constantly"
     },
@@ -1198,11 +1198,12 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
   <button onclick="location.href='zambia.html'" data-letter="Z">Zambia</button>
   <button onclick="location.href='zimbabwe.html'" data-letter="Z">Zimbabwe</button>
   </div> 
+</main>
+
   <div id="videoList" class="video-list"></div>
   <button id="loadMoreBtn" class="site-button">Load More</button>
  </div>
 
-</main>
 {top_video_iframe}
 <section class="about-section">
   <button id="aboutToggle" class="site-button">About Us</button>
@@ -1255,7 +1256,6 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
 <script src="dynamic.js"></script>
 </body>
 </html>
-return html_start + script_block
 """
 
 def generate_html_page(name, is_country=True, output_folder="."):

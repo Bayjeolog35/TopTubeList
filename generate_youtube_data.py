@@ -127,7 +127,7 @@ def get_html_filename(name):
     # ve worldwide.html ile aynı içeriğe sahipse, bu şekilde yönlendirebiliriz.
     if name == "worldwide":
         return "index.html"
-    return f"{name.lower().replace(' ', '_')}.html"
+        return f"{name.lower().replace(' ', '_')}.html"
 
 def update_html_with_embedded_data(name, videos_data):
     """
