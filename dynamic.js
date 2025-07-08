@@ -68,28 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return card;
     }
 
-    /**
-     * Displays a message when no video data is available for a country.
-     */
-    function showNoDataMessage() {
-        if (!videoListContainer) {
-            console.warn("videoListContainer bulunamadı. 'No Data' mesajı gösterilemiyor.");
-            return;
-        }
-
-        videoListContainer.innerHTML = `
-            <div class="no-data-message">
-                <img src="no-data.svg" alt="No data" width="100">
-                <h3>📊 Sorry, YouTube does not provide statistics for this country</h3>
-                <p>Would you like to explore other countries instead?</p>
-                <a href="index.html" class="site-button">Go Back to Homepage</a>
-            </div>
-        `;
-        // Load More butonunu gizle, eğer mevcutsa
-        if (loadMoreButton) {
-            loadMoreButton.style.display = "none";
-        }
-    }
+    
 
     /**
      * Renders the current subset of videos to the DOM.
