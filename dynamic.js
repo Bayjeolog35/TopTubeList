@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector(".hamburger");
     const countryPanel = document.querySelector(".country-panel"); // "panel" yerine "countryPanel" daha açıklayıcı
     const darkModeToggle = document.getElementById("darkModeToggle");
+    // === DÜZENLEME BAŞLANGICI: savedMode değişkeni buraya taşındı ===
+    const savedMode = localStorage.getItem("darkMode"); 
+    // === DÜZENLEME SONU ===
     const contactToggle = document.getElementById("contactToggle");
     const contactContent = document.getElementById("contactContent");
     const aboutToggle = document.getElementById("aboutToggle");
@@ -36,9 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Eğer ana sayfa URL'sindeysek ve özel bir JSON adı istiyorsak, burada ayarlanır.
         // Örneğin, index.html için 'worldwide.vid.data.json' gibi bir dosya arıyorsak.
-        // Şu anki mantık, dosya adı neyse onu ülke olarak alıyor.
-        // Eğer index.html için farklı bir logic isteniyorsa (örn. genel videolar), burada ele alınmalı.
-        return countryName === "index" ? "worldwide" : countryName; // 'index' ise 'worldwide' döndür
+        // Bu örnekte 'index' ise 'worldwide' döndürülecek.
+        return countryName === "index" ? "worldwide" : countryName;
     }
 
     /**
@@ -235,7 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Dark Mode Toggle
-    if (savedMode === "true") {
+    if (savedMode === "true") { // savedMode artık global scope'ta tanımlı, sorun yok
         document.body.classList.add("dark-mode");
     }
     if (darkModeToggle) {
@@ -268,9 +270,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // FadeOut Animation (CSS ekleme) - Zaten eklenmiş, tekrar etmeye gerek yok
-    // const style = document.createElement('style'); // Bu satır artık burada tanımlanmalıydı
-    // style.textContent = ` ... `;
-    // document.head.appendChild(style); // Bu kısım zaten var olduğu için yukarıdan taşındı
+    // Bu kısım DOMContentLoaded içinde olması sorun değil, ancak tek seferlik bir işlem olduğu için
+    // fonksiyonların veya olay dinleyicilerinin dışında, hemen DOMContentLoaded'ın altında olabilir.
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(10px); }
+        }`;
+    document.head.appendChild(style);
+
 
     // Contact Toggle
     if (contactToggle && contactContent) {
