@@ -1,5 +1,3 @@
-# country-continent-data.py
-
 COUNTRY_INFO = {
     "afghanistan": {"code": "af", "continent": "asia"},
     "albania": {"code": "al", "continent": "europe"},
@@ -27,7 +25,7 @@ COUNTRY_INFO = {
     "brunei": {"code": "bn", "continent": "asia"},
     "bulgaria": {"code": "bg", "continent": "europe"},
     "burkina-faso": {"code": "bf", "display-name": "burkina faso", "continent": "africa"},
-    "burundi": {"code": "bi", "continent": "africa"}, # 'bı' yerine 'bi' düzeltildi
+    "burundi": {"code": "bi", "continent": "africa"},
     "cabo-verde": {"code": "cv", "display-name": "cabo verde", "continent": "africa"},
     "cambodia": {"code": "kh", "continent": "asia"},
     "cameroon": {"code": "cm", "continent": "africa"},
@@ -41,7 +39,7 @@ COUNTRY_INFO = {
     "congo-democratic-republicofthe": {"code": "cd", "display-name": "congo (democratic republic of the)", "continent": "africa"},
     "congo-republic-of-the": {"code": "cg", "display-name": "congo (republic of the)", "continent": "africa"},
     "costa-rica": {"code": "cr", "display-name": "costa rica", "continent": "north_america"},
-    "cote-divoire": {"code": "ci", "display-name": "cote d'ivoire", "continent": "africa"}, # 'ı' yerine 'i' düzeltildi
+    "cote-divoire": {"code": "ci", "display-name": "cote d'ivoire", "continent": "africa"},
     "croatia": {"code": "hr", "continent": "europe"},
     "cuba": {"code": "cu", "continent": "north_america"},
     "cyprus": {"code": "cy", "continent": "asia"},
@@ -53,14 +51,14 @@ COUNTRY_INFO = {
     "east-timor": {"code": "tl", "display-name": "east timor", "continent": "asia"},
     "ecuador": {"code": "ec", "continent": "south_america"},
     "egypt": {"code": "eg", "continent": "africa"},
-    "el-salvador": {"code": "sv", "display-name": "el salvador", "continent": "north_america"}, # "elsalvador" -> "el-salvador"
+    "el-salvador": {"code": "sv", "display-name": "el salvador", "continent": "north_america"},
     "equatorial-guinea": {"code": "gq", "display-name": "equatorial guinea", "continent": "africa"},
     "eritrea": {"code": "er", "continent": "africa"},
     "estonia": {"code": "ee", "continent": "europe"},
     "eswatini": {"code": "sz", "continent": "africa"},
     "ethiopia": {"code": "et", "continent": "africa"},
     "fiji": {"code": "fj", "continent": "oceania"},
-    "finland": {"code": "fi", "continent": "europe"}, # 'fı' yerine 'fi' düzeltildi
+    "finland": {"code": "fi", "continent": "europe"},
     "france": {"code": "fr", "continent": "europe"},
     "gabon": {"code": "ga", "continent": "africa"},
     "gambia": {"code": "gm", "continent": "africa"},
@@ -76,20 +74,20 @@ COUNTRY_INFO = {
     "haiti": {"code": "ht", "continent": "north_america"},
     "honduras": {"code": "hn", "continent": "north_america"},
     "hungary": {"code": "hu", "continent": "europe"},
-    "iceland": {"code": "is", "continent": "europe"}, # 'ıceland' -> 'iceland', 'ıs' -> 'is' düzeltildi
-    "india": {"code": "in", "continent": "asia"}, # 'ındia' -> 'india', 'ın' -> 'in' düzeltildi
-    "indonesia": {"code": "id", "continent": "asia"}, # 'ındonesia' -> 'indonesia', 'ıd' -> 'id' düzeltildi
-    "iran": {"code": "ir", "continent": "asia"}, # 'ıran' -> 'iran', 'ır' -> 'ir' düzeltildi
-    "iraq": {"code": "iq", "continent": "asia"}, # 'ıraq' -> 'iraq', 'ıq' -> 'iq' düzeltildi
-    "ireland": {"code": "ie", "continent": "europe"}, # 'ıreland' -> 'ireland', 'ıe' -> 'ie' düzeltildi
-    "israel": {"code": "il", "continent": "asia"}, # 'ısrael' -> 'israel', 'ıl' -> 'il' düzeltildi
-    "italy": {"code": "it", "continent": "europe"}, # 'ıtaly' -> 'italy', 'ıt' -> 'it' düzeltildi
+    "iceland": {"code": "is", "continent": "europe"},
+    "india": {"code": "in", "continent": "asia"},
+    "indonesia": {"code": "id", "continent": "asia"},
+    "iran": {"code": "ir", "continent": "asia"},
+    "iraq": {"code": "iq", "continent": "asia"},
+    "ireland": {"code": "ie", "continent": "europe"},
+    "israel": {"code": "il", "continent": "asia"},
+    "italy": {"code": "it", "continent": "europe"},
     "jamaica": {"code": "jm", "continent": "north_america"},
     "japan": {"code": "jp", "continent": "asia"},
     "jordan": {"code": "jo", "continent": "asia"},
     "kazakhstan": {"code": "kz", "continent": "asia"},
     "kenya": {"code": "ke", "continent": "africa"},
-    "kiribati": {"code": "ki", "continent": "oceania"}, # 'kı' yerine 'ki' düzeltildi
+    "kiribati": {"code": "ki", "continent": "oceania"},
     "korea-north": {"code": "kp", "display-name": "korea (north)", "continent": "asia"},
     "korea-south": {"code": "kr", "display-name": "korea (south)", "continent": "asia"},
     "kosovo": {"code": "xk", "display-name": "kosovo", "continent": "europe"},
@@ -101,7 +99,7 @@ COUNTRY_INFO = {
     "lesotho": {"code": "ls", "continent": "africa"},
     "liberia": {"code": "lr", "continent": "africa"},
     "libya": {"code": "ly", "continent": "africa"},
-    "liechtenstein": {"code": "li", "continent": "europe"}, # 'lı' yerine 'li' düzeltildi
+    "liechtenstein": {"code": "li", "continent": "europe"},
     "lithuania": {"code": "lt", "continent": "europe"},
     "luxembourg": {"code": "lu", "continent": "europe"},
     "madagascar": {"code": "mg", "continent": "africa"},
@@ -110,7 +108,7 @@ COUNTRY_INFO = {
     "maldives": {"code": "mv", "continent": "asia"},
     "mali": {"code": "ml", "continent": "africa"},
     "malta": {"code": "mt", "continent": "europe"},
-    "marshall-islands": {"code": "mh", "display-name": "marshall islands", "continent": "oceania"}, # 'ıslands' -> 'islands' düzeltildi
+    "marshall-islands": {"code": "mh", "display-name": "marshall islands", "continent": "oceania"},
     "mauritania": {"code": "mr", "continent": "africa"},
     "mauritius": {"code": "mu", "continent": "africa"},
     "mexico": {"code": "mx", "continent": "north_america"},
@@ -127,7 +125,7 @@ COUNTRY_INFO = {
     "nepal": {"code": "np", "continent": "asia"},
     "netherlands": {"code": "nl", "continent": "europe"},
     "new-zealand": {"code": "nz", "display-name": "new zealand", "continent": "oceania"},
-    "nicaragua": {"code": "ni", "continent": "north_america"}, # 'nı' yerine 'ni' düzeltildi
+    "nicaragua": {"code": "ni", "continent": "north_america"},
     "niger": {"code": "ne", "continent": "africa"},
     "nigeria": {"code": "ng", "continent": "africa"},
     "north-macedonia": {"code": "mk", "display-name": "north macedonia", "continent": "europe"},
@@ -145,7 +143,7 @@ COUNTRY_INFO = {
     "portugal": {"code": "pt", "continent": "europe"},
     "qatar": {"code": "qa", "continent": "asia"},
     "romania": {"code": "ro", "continent": "europe"},
-    "russia": {"code": "ru", "continent": "europe"}, # Genellikle Avrupa olarak kabul edilir, ama hem Avrupa hem Asya'da toprakları var.
+    "russia": {"code": "ru", "continent": "europe"},
     "rwanda": {"code": "rw", "continent": "africa"},
     "saint-kitts-and-nevis": {"code": "kn", "display-name": "saint kitts and nevis", "continent": "north_america"},
     "saint-lucia": {"code": "lc", "display-name": "saint lucia", "continent": "north_america"},
@@ -160,8 +158,8 @@ COUNTRY_INFO = {
     "sierra-leone": {"code": "sl", "display-name": "sierra leone", "continent": "africa"},
     "singapore": {"code": "sg", "continent": "asia"},
     "slovakia": {"code": "sk", "continent": "europe"},
-    "slovenia": {"code": "si", "continent": "europe"}, # 'sı' yerine 'si' düzeltildi
-    "solomon-islands": {"code": "sb", "display-name": "solomon islands", "continent": "oceania"}, # 'ıslands' -> 'islands' düzeltildi
+    "slovenia": {"code": "si", "continent": "europe"},
+    "solomon-islands": {"code": "sb", "display-name": "solomon islands", "continent": "oceania"},
     "somalia": {"code": "so", "continent": "africa"},
     "south-africa": {"code": "za", "display-name": "south africa", "continent": "africa"},
     "south-sudan": {"code": "ss", "display-name": "south sudan", "continent": "africa"},
@@ -180,7 +178,7 @@ COUNTRY_INFO = {
     "tonga": {"code": "to", "continent": "oceania"},
     "trinidad-and-tobago": {"code": "tt", "display-name": "trinidad and tobago", "continent": "north_america"},
     "tunisia": {"code": "tn", "continent": "africa"},
-    "turkey": {"code": "tr", "continent": "europe"}, # Genellikle Avrupa olarak kabul edilir, ama hem Avrupa hem Asya'da toprakları var.
+    "turkey": {"code": "tr", "continent": "europe"},
     "turkmenistan": {"code": "tm", "continent": "asia"},
     "tuvalu": {"code": "tv", "continent": "oceania"},
     "uganda": {"code": "ug", "continent": "africa"},
@@ -197,4 +195,35 @@ COUNTRY_INFO = {
     "yemen": {"code": "ye", "continent": "asia"},
     "zambia": {"code": "zm", "continent": "africa"},
     "zimbabwe": {"code": "zw", "continent": "africa"}
+}
+
+CONTINENT_INFO = {
+    "asia": {
+        "name": "Asia",
+        "meta_description": "Trending YouTube videos in Asia - Most viewed content across Asian countries"
+    },
+    "europe": {
+        "name": "Europe",
+        "meta_description": "Popular YouTube videos trending in European countries - Updated hourly"
+    },
+    "africa": {
+        "name": "Africa",
+        "meta_description": "Top viewed YouTube videos across African nations - Daily updated charts"
+    },
+    "north_america": {
+        "name": "North America",
+        "meta_description": "Viral YouTube content in USA, Canada and Mexico - Real-time trending videos"
+    },
+    "south_america": {
+        "name": "South America",
+        "meta_description": "Most watched YouTube videos in South American countries - Updated constantly"
+    },
+    "oceania": {
+        "name": "Oceania",
+        "meta_description": "Trending YouTube videos from Australia, New Zealand and Pacific Islands"
+    },
+    "worldwide": {
+        "display_name": "Worldwide",
+        "meta_description": "Trending YouTube videos globally - All countries combined"
+    }
 }
