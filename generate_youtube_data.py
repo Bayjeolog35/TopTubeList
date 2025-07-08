@@ -123,11 +123,10 @@ def deduplicate(videos):
 
 def get_html_filename(name):
     """Ülke veya kıta adına göre HTML dosya adını döndürür."""
-    # Eğer index.html dosyanız doğrudan "worldwide" verisini kullanıyorsa
-    # ve worldwide.html ile aynı içeriğe sahipse, bu şekilde yönlendirebiliriz.
     if name == "worldwide":
         return "index.html"
-        return f"{name.lower().replace(' ', '_')}.html"
+    # Bu satırın kesinlikle bu şekilde olduğundan emin olun:
+    return f"{name.lower().replace(' ', '-')}.html"
 
 def update_html_with_embedded_data(name, videos_data):
     """
