@@ -118,27 +118,28 @@ def generate_html_content(continent_name, videos_data, structured_data):
     <title>Trending YouTube Videos in {display_name} | TopTubeList</title>
     <meta name="description" content="{continent_info.get('meta_description', '')}">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://toptubelist.com/continents/{sanitized_name}/">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="canonical" href="https://toptubelist.com/{sanitized_name}/">
+    <link rel="stylesheet" href="style.css">
+
     {structured_block}
 </head>
 <body>
     <header>
         <div class="container">
             <a href="../../index.html" class="logo">
-                <img src="../../assets/images/logo.webp" alt="TopTubeList" width="120">
+                <img src="TopTubeListLogo.webp" alt="TopTubeList" width="120">
             </a>
             <h1>Trending in {display_name}</h1>
         </div>
         
         <nav class="continent-nav">
-            <a href="../../index.html">Worldwide</a>
-            <a href="../../continents/asia/" class="{nav_active['asia_active']}">Asia</a>
-            <a href="../../continents/europe/" class="{nav_active['europe_active']}">Europe</a>
-            <a href="../../continents/africa/" class="{nav_active['africa_active']}">Africa</a>
-            <a href="../../continents/north-america/" class="{nav_active['north_america_active']}">North America</a>
-            <a href="../../continents/south-america/" class="{nav_active['south_america_active']}">South America</a>
-            <a href="../../continents/oceania/" class="{nav_active['oceania_active']}">Oceania</a>
+		<a href="index.html">Worldwide</a>
+		<a href="asia.html" class="{nav_active['asia_active']}">Asia</a>
+		<a href="europe.html" class="{nav_active['europe_active']}">Europe</a>
+		<a href="africa.html" class="{nav_active['africa_active']}">Africa</a>
+		<a href="north-america.html" class="{nav_active['north_america_active']}">North America</a>
+		<a href="south-america.html" class="{nav_active['south_america_active']}">South America</a>
+		<a href="oceania.html" class="{nav_active['oceania_active']}">Oceania</a>
         </nav>
     </header>
 
@@ -157,7 +158,7 @@ def generate_html_content(continent_name, videos_data, structured_data):
         <p>© {datetime.now().year} TopTubeList.com - All rights reserved</p>
     </footer>
 
-    <script src="../../assets/js/main.js"></script>
+    <script src="dynamic.js"></script>
     <script>
         // Video verilerini yükle
         const continentName = "{continent_name}";

@@ -1,16 +1,32 @@
+'use strict';
+// dynamic.js - Interactive UI scripts for TopTubeList
+// Handles: menu, dark mode, filters, video loading, and contact form
+
+
 document.addEventListener("DOMContentLoaded", () => {
     // Video verilerini yükle
   
 
-    // --- Hamburger Menü ---
-    const hamburger = document.querySelector(".hamburger");
-    const panel = document.querySelector(".country-panel");
+    // Hamburger menüyü sadece mobilde göster
+const hamburger = document.querySelector(".hamburger");
+if (hamburger) {
+  hamburger.style.display = window.innerWidth <= 768 ? "block" : "none";
+  
+  // Masaüstünde paneli varsayılan olarak açık tut
+  const panel = document.querySelector(".country-panel");
+  if (panel && window.innerWidth > 768) {
+    panel.style.display = "flex";
 
-    if (hamburger && panel) {
-        hamburger.addEventListener("click", () => {
-            panel.classList.toggle("active");
-        });
-    }
+// Pencere boyutu değiştiğinde kontrol et
+window.addEventListener("resize", () => {
+  const hamburger = document.querySelector(".hamburger");
+  if (hamburger) {
+    hamburger.style.display = window.innerWidth <= 768 ? "block" : "none";
+  }
+});
+
+  }
+}
 
     // --- Dark Mode Toggle ---
     const darkModeToggle = document.getElementById("darkModeToggle");
@@ -138,25 +154,25 @@ document.addEventListener("DOMContentLoaded", () => {
         return path.split('/').pop().replace('.html', '').toLowerCase();
     }
 
-    function createVideoCard(video) {
-        const card = document.createElement("div");
-        card.className = "video-card";
-        card.innerHTML = `
-            <a href="${video.url}" target="_blank" class="video-thumbnail">
-                <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
-                <span class="duration">${video.duration || ''}</span>
-            </a>
-            <div class="video-info">
-                <h2>${video.title}</h2>
-                <div class="meta">
-                    <span class="channel">${video.channel}</span>
-                    <span class="views">${video.views_str} views</span>
-                    <span class="date">${new Date(video.uploadDate).toLocaleDateString()}</span>
-                </div>
+   function createVideoCard(video) {
+    const card = document.createElement("div");
+    card.className = "video-card";
+    card.innerHTML = `
+        <a href="${video.url}" target="_blank" class="video-thumbnail">
+            <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
+            ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
+        </a>
+        <div class="video-info">
+            <h2>${video.title}</h2>
+            <div class="meta">
+                <span class="channel">${video.channel}</span>
+                <span class="views">${video.views_formatted} views</span>
+                <span class="date">${new Date(video.published_at).toLocaleDateString()}</span>
             </div>
-        `;
-        return card;
-    }
+        </div>
+    `;
+    return card;
+}
 
     function showNoDataMessage() {
         container.innerHTML = `
@@ -189,22 +205,28 @@ document.addEventListener("DOMContentLoaded", () => {
         loadMoreBtn.style.display = displayCount >= allVideos.length ? "none" : "block";
     }
 
-    async function loadVideos() {
-        const country = getCountryFromURL();
-        const dataFile = `videos_${country}.json`;
+  async function loadVideos() {
+    const country = getCountryFromURL();
+    const dataFile = `${country}.vid.data.json`; // Yeni dosya adı formatı
 
-        try {
-            const response = await fetch(dataFile);
-            if (!response.ok) throw new Error('Data not found');
+    try {
+        const response = await fetch(dataFile);
+        if (!response.ok) throw new Error('Data not found');
 
-            allVideos = await response.json();
-            document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
-            renderVideos();
-        } catch (error) {
-            console.error("Veri yükleme hatası:", error);
-            showNoDataMessage();
+        allVideos = await response.json();
+        console.log("Yüklenen videolar:", allVideos); // Konsolda veriyi kontrol edin
+
+        if (!Array.isArray(allVideos) || allVideos.length === 0) {
+            throw new Error('Boş veri dizisi');
         }
+
+        document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
+        renderVideos();
+    } catch (error) {
+        console.error("Veri yükleme hatası:", error);
+        showNoDataMessage();
     }
+}
 
     loadMoreBtn.addEventListener("click", () => {
         displayCount += 10;
@@ -215,11 +237,4 @@ document.addEventListener("DOMContentLoaded", () => {
     loadVideos(); // Sayfa yüklendiğinde videoları yüklemeyi başlat
 });
 
-const pageName = window.location.pathname.split("/").pop().replace(".html", "") || "index";
 
-const videoDataFile = pageName === "index" ? "worldwide.vid.data.json" : `${pageName}.vid.data.json`;
-
-fetch('worldwide.vid.data.json')
-  .then(response => response.json())
-  .then(data => renderVideos(data))
-  .catch(error => console.error("veri yükleme hatası:", error));
