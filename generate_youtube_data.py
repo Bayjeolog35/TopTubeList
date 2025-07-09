@@ -103,13 +103,12 @@ def generate_structured_data(videos):
         }
     } for v in videos]
 
-# Bu fonksiyon artık JSON dosyalarını kaydetmeyecek.
-# Eğer yine de JSON olarak kaydetmek isterseniz, bu fonksiyonu kaldırılan yerlere ekleyebilirsiniz.
-# def save_json(name, videos):
-#     with open(os.path.join(OUTPUT_DIR, f"{name}.vid.data.json"), 'w', encoding='utf-8') as f:
-#         json.dump(videos, f, ensure_ascii=False, indent=2)
-#     with open(os.path.join(OUTPUT_DIR, f"{name}.str.data.json"), 'w', encoding='utf-8') as f:
-#         json.dump(generate_structured_data(videos), f, ensure_ascii=False, indent=2)
+
+def save_json(name, videos):
+    with open(os.path.join(OUTPUT_DIR, f"{name}.vid.data.json"), 'w', encoding='utf-8') as f:
+       json.dump(videos, f, ensure_ascii=False, indent=2)
+    with open(os.path.join(OUTPUT_DIR, f"{name}.str.data.json"), 'w', encoding='utf-8') as f:
+        json.dump(generate_structured_data(videos), f, ensure_ascii=False, indent=2)
 
 def deduplicate(videos):
     seen = set()
@@ -201,7 +200,8 @@ def main():
         
         videos_by_country[country] = videos
         update_html_with_embedded_data(country, videos) # HTML'e göm
-
+        save_json(country, videos)
+    
     print("\n--- Kıta Verileri Güncelleniyor ---")
     # Kıtasal veriler
     for continent, country_list in CONTINENT_GROUPS.items():
