@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
      * @param {Object} video - The video data object.
      * @returns {HTMLElement} The created video card div.
      */
-    function createVideoCard(video) {
+   function createVideoCard(video) {
     const card = document.createElement("div");
     card.className = "video-card";
     card.innerHTML = `
@@ -52,16 +52,16 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
             ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
         </a>
         <div class="video-info">
-            <h2>${video.title}</h2>
-            <div class="meta">
-                <span class="channel">${video.channel}</span>
-                <span class="views">${video.views_str || '0'} views</span>
-                <span class="date">${new Date(video.published_at).toLocaleDateString('tr-TR')}</span>
-            </div>
+            <p><strong>Title:</strong> ${video.title}</p>
+            <p><strong>Channel:</strong> ${video.channel}</p>
+            <p><strong>Views:</strong> ${video.views_str || '0'} views</p>
+            <p><strong>Date:</strong> ${new Date(video.published_at).toLocaleDateString('tr-TR')}</p>
+            ${video.duration ? `<p><strong>Duration:</strong> ${video.duration}</p>` : ''}
         </div>
     `;
     return card;
 }
+
 
     /**
      * Displays a message when no video data is available for a country.
