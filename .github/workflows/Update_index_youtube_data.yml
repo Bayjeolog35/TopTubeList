@@ -2,8 +2,8 @@ name: Update Index (YouTube Data)
 
 on:
   schedule:
-    - cron: '0 */3 * * *'  # ⏰ Her 3 saatte bir çalışır (UTC zamanı)
-  workflow_dispatch:        # ▶️ Manuel olarak çalıştırılabilir
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
 
 jobs:
   fetch-and-update:
@@ -21,9 +21,9 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: 📦 Bağımlılıkları yükle (dotenv gibi)
+      - name: 📦 Bağımlılıkları yükle
         run: |
-          pip install python-dotenv
+          pip install requests python-dotenv
 
       - name: ▶️ fetch_top_youtube.py dosyasını çalıştır
         run: |
