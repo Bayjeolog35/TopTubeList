@@ -34,8 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
      */
     function getCountryFromURL() {
     const path = window.location.pathname;
-    const filename = path.split('/').pop(); // "turkey.html" gibi
-    return filename.replace('.html', '').toLowerCase(); // "turkey" döndürür
+    const filename = path.split('/').pop(); // örnek: "turkey.html", "index.html", veya ""
+    if (!filename || filename === "" || filename === "index.html") return "index";
+    return filename.replace('.html', '').toLowerCase();
 }
     /**
      * Creates an HTML video card element from a video object.
