@@ -81,6 +81,9 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
                 <p>Why not explore what’s trending elsewhere? 🌍</p>
             </div>
         `;
+
+        document.querySelector("main").classList.add("centered-no-data");
+        
         // Load More butonunu gizle, eğer mevcutsa
         if (loadMoreButton) {
             loadMoreButton.style.display = "none";
