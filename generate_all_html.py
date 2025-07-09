@@ -1248,11 +1248,6 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
   </div>
   <p>© 2025 TopTubeList.com</p>
 </footer>
-<script>
-    // generate_youtube_data.py betiği bu satırı gerçek video verileriyle değiştirecek.
-    // Bu satırın HTML dosyasının içinde olması GEREKLİDİR.
-    window.embeddedVideoData = [veri];
-</script>
 <script src="dynamic.js"></script>
 </body>
 </html>
