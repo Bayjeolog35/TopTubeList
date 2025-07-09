@@ -396,7 +396,6 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
   flex: 1;
   padding: 0px;
   background-color: var(--bg);
-  min-height: 30vh;
 }
 
 /*LOAD MORE BUTTON*/
@@ -603,4 +602,11 @@ body.dark-mode #contactContent textarea::placeholder {
 .no-data-message p {
     margin: 8px 0;
     color: #333;
+}
+  
+main.centered-no-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
 }
