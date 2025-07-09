@@ -222,8 +222,3 @@ CONTINENT_INFO = {
         "name": "Oceania",
         "meta_description": "Trending YouTube videos from Australia, New Zealand and Pacific Islands"
     },
-    "worldwide": {
-        "display_name": "Worldwide",
-        "meta_description": "Trending YouTube videos globally - All countries combined"
-    }
-}
