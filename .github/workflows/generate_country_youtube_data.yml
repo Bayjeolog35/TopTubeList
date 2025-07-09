@@ -1,0 +1,27 @@
+name: Generate Country YouTube Data
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"  # Her 3 saatte bir çalışır (UTC saatine göre)
+  workflow_dispatch:        # Manuel tetikleme desteği
+
+jobs:
+  generate-country-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install python-dotenv requests
+
+      - name: Run generate_country_youtube_data.py
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python generate_country_youtube_data.py
