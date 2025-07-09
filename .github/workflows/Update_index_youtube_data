@@ -3,7 +3,7 @@ name: Update index youtube
 on:
   schedule:
     - cron: '0 */3 * * *'  # Her 3 saatte bir
-  workflow_dispatch:
+  workflow_dispatch:        # 👈 Bu satır manuel çalıştırmayı sağlar
 
 jobs:
   update-json:
