@@ -350,4 +350,3 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
     // Sayfa yüklendiğinde videoları yüklemeyi başlat
     loadVideos();
 }); 
-
