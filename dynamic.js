@@ -40,8 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Eğer ana sayfa URL'sindeysek ve özel bir JSON adı istiyorsak, burada ayarlanır.
         // Örneğin, index.html için 'worldwide.vid.data.json' gibi bir dosya arıyorsak.
         // Bu örnekte 'index' ise 'worldwide' döndürülecek.
+        /*
         return countryName === "index" ? "worldwide" : countryName;
-    }
+    }*/
 
     /**
      * Creates an HTML video card element from a video object.
