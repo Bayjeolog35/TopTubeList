@@ -97,50 +97,84 @@ function getCountryFromURL() {
 }
 
 /**
- * Fetches video data for the current country and renders it.
- */
-async function loadVideos() {
-    const country = getCountryFromURL();
-    const dataFile = (country === "index" || country === "") 
-        ? "index.videos.json" 
-        : `${country}.videos.json`;
+/**
+     * Fetches video data for the current country and renders it.
+     */
+    async function loadVideos() { // Bu zaten async
+        const country = getCountryFromURL();
+        const dataFile = (country === "index" || country === "")
+            ? "index.videos.json"
+            : `${country}.videos.json`;
 
-    console.log(`Veri yükleme denemesi: ${dataFile}`);
+        console.log(`Veri yükleme denemesi: ${dataFile}`);
 
-    try {
-        const response = await fetch(dataFile);
+        try {
+            const response = await fetch(dataFile);
 
-        if (!response.ok) {
-            if (response.status === 404) {
-                throw new Error(`'${dataFile}' dosyası bulunamadı. URL: ${response.url}`);
+            if (!response.ok) {
+                if (response.status === 404) {
+                    throw new Error(`'${dataFile}' dosyası bulunamadı. URL: ${response.url}`);
+                }
+                throw new Error(`Veri yüklenirken HTTP hatası oluştu: ${response.status} ${response.statusText}`);
             }
-            throw new Error(`Veri yüklenirken HTTP hatası oluştu: ${response.status} ${response.statusText}`);
+
+            const jsonData = await response.json();
+            console.log("Yüklenen JSON verisi (ilk 5 video):", jsonData.slice(0, 5));
+
+            if (!Array.isArray(jsonData)) {
+                throw new Error("Yüklenen veri bir dizi değil.");
+            }
+
+            allVideos = jsonData;
+
+            if (allVideos.length === 0) {
+                throw new Error("Video verisi boş.");
+            }
+
+            if (country !== "index" && country !== "") {
+                document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
+            }
+
+            renderVideos();
+
+        } catch (error) {
+            console.error("Veri yükleme hatası:", error);
+            showNoDataMessage();
         }
-
-        const jsonData = await response.json();
-        console.log("Yüklenen JSON verisi (ilk 5 video):", jsonData.slice(0, 5));
-
-        if (!Array.isArray(jsonData)) {
-            throw new Error("Yüklenen veri bir dizi değil.");
-        }
-
-        allVideos = jsonData;
-
-        if (allVideos.length === 0) {
-            throw new Error("Video verisi boş.");
-        }
-
-        if (country !== "index" && country !== "") {
-            document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
-        }
-
-        renderVideos();
-
-    } catch (error) {
-        console.error("Veri yükleme hatası:", error);
-        showNoDataMessage();
     }
-}
+
+     /**
+     * Renders videos into the videoListContainer based on displayCount.
+     */
+    function renderVideos() {
+        if (!videoListContainer) {
+            console.warn("videoListContainer bulunamadı, videolar render edilemiyor.");
+            return;
+        }
+
+        videoListContainer.innerHTML = ""; // Mevcut videoları temizle
+        const videosToDisplay = allVideos.slice(0, displayCount);
+
+        if (videosToDisplay.length === 0) {
+            showNoDataMessage();
+            return;
+        }
+
+        videosToDisplay.forEach(video => {
+            const card = createVideoCard(video);
+            videoListContainer.appendChild(card);
+        });
+
+        // Load More butonunun görünürlüğünü yönet
+        if (loadMoreButton) {
+            if (displayCount >= allVideos.length) {
+                loadMoreButton.style.display = "none"; // Tüm videolar gösterildiyse gizle
+            } else {
+                loadMoreButton.style.display = "block"; // Daha fazla video varsa göster
+            }
+        }
+    }
+
 
 
     /**
