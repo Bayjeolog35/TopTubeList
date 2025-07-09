@@ -44,24 +44,24 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
      * @returns {HTMLElement} The created video card div.
      */
     function createVideoCard(video) {
-        const card = document.createElement("div");
-        card.className = "video-card";
-        card.innerHTML = `
-            <a href="${video.url}" target="_blank" class="video-thumbnail">
-                <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
-                ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
-            </a>
-            <div class="video-info">
-                <h2>${video.title}</h2>
-                <div class="meta">
-                    <span class="channel">${video.channel}</span>
-                    <span class="views">${video.views_formatted} views</span>
-                    <span class="date">${new Date(video.published_at).toLocaleDateString('tr-TR')}</span>
-                </div>
+    const card = document.createElement("div");
+    card.className = "video-card";
+    card.innerHTML = `
+        <a href="${video.url}" target="_blank" class="video-thumbnail">
+            <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
+            ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
+        </a>
+        <div class="video-info">
+            <h2>${video.title}</h2>
+            <div class="meta">
+                <span class="channel">${video.channel}</span>
+                <span class="views">${video.views_str || '0'} views</span>
+                <span class="date">${new Date(video.published_at).toLocaleDateString('tr-TR')}</span>
             </div>
-        `;
-        return card;
-    }
+        </div>
+    `;
+    return card;
+}
 
     /**
      * Displays a message when no video data is available for a country.
@@ -74,10 +74,10 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
 
         videoListContainer.innerHTML = `
             <div class="no-data-message">
-                <img src="no-data.svg" alt="No data" width="100">
+                <img src="nodata.webp" alt="No data" width="100">
                 <h3>📊 Sorry, YouTube does not provide statistics for this country</h3>
                 <p>Would you like to explore other countries instead?</p>
-                <a href="index.html" class="site-button">Go Back to Homepage</a>
+                
             </div>
         `;
         // Load More butonunu gizle, eğer mevcutsa
