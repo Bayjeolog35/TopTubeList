@@ -1,34 +1,50 @@
-name: Generate Country YouTube Data
+name: Fetch and Update Countries YouTube Data
 
 on:
   schedule:
-    - cron: "0 */3 * * *"  # Her 3 saatte bir çalıştır
-  workflow_dispatch:        # Manuel çalıştırma seçeneği
+    # Her 3 saatte bir çalışır. UTC saat dilimine göre ayarlanır.
+    # Örneğin, 00:00, 03:00, 06:00, 09:00, 12:00, 15:00, 18:00, 21:00 UTC saatlerinde çalışır.
+    - cron: '0 */3 * * *'
+  
+  # Manuel olarak çalıştırma butonu ekler
+  workflow_dispatch:
 
 jobs:
-  generate-country-data:
+  update-youtube-data:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Check out repository
+      uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9' # Kullandığınız Python sürümünü buraya yazın (örn. 3.8, 3.9, 3.10, 3.11, 3.12)
 
-      - name: Install dependencies
-        run: |
-          pip install requests python-dotenv
+    - name: Install dependencies
+      run: |
+        # Bu kısma betiğinizin ihtiyaç duyduğu pip paketlerini ekleyin
+        # Örneğin: pip install requests
+        pip install requests
 
-      - name: Run Country Data Script
-        run: python generate_country_youtube_data.py
-
-      - name: Commit and Push generated JSON files
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add *.json
-          git commit -m "Update country YouTube data"
-          git push
+    - name: Run Python script
+      env:
+        # YouTube Data API anahtarınızı GitHub Secrets'tan alır.
+        # Bu anahtarı deponuzun ayarlarına (Settings -> Secrets and variables -> Actions) eklemelisiniz.
+        YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      run: |
+        python your_script_name.py
+        # NOT: your_script_name.py yerine Python betiğinizin adını yazın
+        # Örneğin: python fetch_youtube_data.py
+    
+    # Oluşturulan/güncellenen JSON ve HTML dosyalarını depoya geri gönder (commit ve push)
+    - name: Commit and push changes
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@github.com"
+        git add *.json *.html # Sadece .json ve .html dosyalarını ekle
+        git commit -m "Günlük YouTube verileri güncellemesi" || echo "Değişiklik yok, commit atlanıyor."
+        git push
+      # Bu adım sadece değişiklikler varsa commit yapacaktır.
+      # "|| echo "Değişiklik yok, commit atlanıyor."" kısmı, değişiklik olmadığında hata vermesini engeller.
