@@ -119,10 +119,11 @@ document.addEventListener("DOMContentLoaded", () => {
     /**
      * Fetches video data for the current country from a JSON file.
      */
-    async function loadVideos() {
-        const country = getCountryFromURL();
-        const dataFile = `${country}.videos.json`;
-
+    // 👇 Eğer ana sayfadaysak (index.html), dosya adı farklı
+    const dataFile = (country === "index")
+        ? "index.videos.json"
+        : `${country}.videos.json`;
+    
         console.log(`Veri yükleme denemesi: ${dataFile}`); // Debug için
 
         try {
