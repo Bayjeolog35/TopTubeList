@@ -248,27 +248,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Harf Filtreleme
-    document.querySelectorAll(".alphabet-letter").forEach(letter => {
-        letter.addEventListener("click", function (e) {
-            e.preventDefault();
-            const selectedLetter = this.getAttribute("data-letter");
-            const allButtons = document.querySelectorAll(".country-column button");
+   // Harf Filtreleme
+document.querySelectorAll(".alphabet-letter").forEach(letter => {
+    letter.addEventListener("click", function (e) {
+        e.preventDefault();
+        const selectedLetter = this.getAttribute("data-letter");
+        const allLinks = document.querySelectorAll(".country-column .country-link");
 
-            allButtons.forEach(btn => {
-                // 'data-letter' attribute'ünün olup olmadığını kontrol et
-                const btnLetter = btn.getAttribute("data-letter");
-                if (selectedLetter === "all" || (btnLetter && btnLetter.toLowerCase() === selectedLetter.toLowerCase())) {
-                    btn.style.display = "block";
-                } else {
-                    btn.style.display = "none";
-                }
-            });
-
-            document.querySelectorAll(".alphabet-letter").forEach(a => a.classList.remove("active"));
-            this.classList.add("active");
+        allLinks.forEach(link => {
+            const linkLetter = link.getAttribute("data-letter");
+            if (selectedLetter === "all" || (linkLetter && linkLetter.toLowerCase() === selectedLetter.toLowerCase())) {
+                link.style.display = "block";
+            } else {
+                link.style.display = "none";
+            }
         });
+
+        // Aktif harfi vurgula
+        document.querySelectorAll(".alphabet-letter").forEach(a => a.classList.remove("active"));
+        this.classList.add("active");
     });
+});
+
 
     // FadeOut Animation (CSS ekleme) - Zaten eklenmiş, tekrar etmeye gerek yok
     // Bu kısım DOMContentLoaded içinde olması sorun değil, ancak tek seferlik bir işlem olduğu için
