@@ -922,7 +922,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
             <a href="../../index.html" class="logo">
                 <img src="TopTubeListLogo.webp" alt="TopTubeList" width="120">
             </a>
-            <h1 id="pageTitle">Trending in {name}</h1>
+            <h1 id="pageTitle">Trending in {readable_name}</h1>
         </div>
         
 
