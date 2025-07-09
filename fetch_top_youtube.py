@@ -3,13 +3,17 @@ import json
 import os
 from datetime import datetime
 
-# 🔐 API key artık gizli bir çevre değişkeninden alınacak
+# 🔐 API key kontrolü
 API_KEY = os.getenv("YOUTUBE_API_KEY")
+if not API_KEY:
+    raise ValueError("❌ API anahtarı bulunamadı. Lütfen YOUTUBE_API_KEY ortam değişkenini tanımlayın.")
+
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
 OUTPUT_FILE = "index.videos.json"
 STRUCTURED_DATA_FILE = "index.structured_data.json"
 HTML_FILE = "index.html"
 IFRAME_PLACEHOLDER = "<!-- IFRAME_VIDEO_HERE -->"
+STRUCTURED_PLACEHOLDER = "<!-- STRUCTURED_DATA_HERE -->"
 
 params = {
     "part": "snippet,statistics",
@@ -41,44 +45,42 @@ if response.status_code == 200:
 
         video_url = f"https://www.youtube.com/watch?v={item['id']}"
         thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
+        published_at = item["snippet"].get("publishedAt", "")
 
-     published_at = item["snippet"].get("publishedAt", "")
-try:
-    formatted_date = datetime.fromisoformat(published_at.replace("Z", "+00:00")).strftime("%d.%m.%Y")
-except:
-    formatted_date = "Tarih Yok"
+        try:
+            formatted_date = datetime.fromisoformat(published_at.replace("Z", "+00:00")).strftime("%d.%m.%Y")
+        except:
+            formatted_date = "Tarih Yok"
 
-video = {
-    "id": item["id"],
-    "title": item["snippet"]["title"],
-    "channel": item["snippet"]["channelTitle"],
-    "views": views_int,
-    "views_str": views_str,
-    "url": video_url,
-    "embed_url": f"https://www.youtube.com/embed/{item['id']}",
-    "thumbnail": thumbnail,
-    "published_at": published_at,
-    "published_date_formatted": formatted_date
-}
-
+        video = {
+            "id": item["id"],
+            "title": item["snippet"]["title"],
+            "channel": item["snippet"]["channelTitle"],
+            "views": views_int,
+            "views_str": views_str,
+            "url": video_url,
+            "embed_url": f"https://www.youtube.com/embed/{item['id']}",
+            "thumbnail": thumbnail,
+            "published_at": published_at,
+            "published_date_formatted": formatted_date
+        }
         videos.append(video)
 
-   structured = {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": item["snippet"]["title"],
-    "description": item["snippet"].get("description", ""),
-    "thumbnailUrl": thumbnail,
-    "uploadDate": published_at,
-    "contentUrl": video_url,
-    "embedUrl": f"https://www.youtube.com/embed/{item['id']}",
-    "interactionStatistic": {
-        "@type": "InteractionCounter",
-        "interactionType": { "@type": "WatchAction" },
-        "userInteractionCount": views_int
-    }
-}
-
+        structured = {
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": item["snippet"]["title"],
+            "description": item["snippet"].get("description", ""),
+            "thumbnailUrl": thumbnail,
+            "uploadDate": published_at,
+            "contentUrl": video_url,
+            "embedUrl": f"https://www.youtube.com/embed/{item['id']}",
+            "interactionStatistic": {
+                "@type": "InteractionCounter",
+                "interactionType": {"@type": "WatchAction"},
+                "userInteractionCount": views_int
+            }
+        }
         structured_items.append(structured)
 
     videos = sorted(videos, key=lambda x: x["views"], reverse=True)
@@ -89,21 +91,22 @@ video = {
     with open(STRUCTURED_DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(structured_items, f, ensure_ascii=False, indent=2)
 
-    print("✅ videos.json ve structured_data.json güncellendi.")
+    print("✅ index.videos.json ve index.structured_data.json güncellendi.")
 
-    # HTML'e gömme işlemleri
+    # HTML güncelleme
     with open(STRUCTURED_DATA_FILE, "r", encoding="utf-8") as f:
         structured_json = f.read()
+
     structured_script = f'<script type="application/ld+json">\n{structured_json}\n</script>'
 
     with open(HTML_FILE, "r", encoding="utf-8") as f:
         html_content = f.read()
 
-    html_content = html_content.replace("<!-- STRUCTURED_DATA_HERE -->", structured_script)
+    html_content = html_content.replace(STRUCTURED_PLACEHOLDER, structured_script)
 
-    # ✅ En çok izlenen video için iframe oluştur ve göm
+    # En çok izlenen video iframe’i (gizli)
     top_video = videos[0]
-    video_id = top_video["url"].split("v=")[-1]
+    video_id = top_video["id"]
     iframe_html = f'''
 <iframe 
   width="560" 
@@ -125,9 +128,3 @@ video = {
 
 else:
     print("❌ API Hatası:", response.status_code)
-
-with open("index.videos.json", "w", encoding="utf-8") as f:
-    json.dump(videos, f, ensure_ascii=False, indent=2)
-
-with open("index.structured_data.json", "w", encoding="utf-8") as f:
-    json.dump(structured_items, f, ensure_ascii=False, indent=2)
