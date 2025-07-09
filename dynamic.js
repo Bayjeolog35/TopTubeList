@@ -252,15 +252,18 @@ document.addEventListener("DOMContentLoaded", () => {
 document.querySelectorAll(".alphabet-letter").forEach(letter => {
     letter.addEventListener("click", function (e) {
         e.preventDefault();
-        const selectedLetter = this.getAttribute("data-letter");
-        const allLinks = document.querySelectorAll(".country-column .country-link");
+        const selectedLetter = this.getAttribute("data-letter"); // 'all', 'A', 'B' vb. alır
+        const allLinks = document.querySelectorAll(".country-column .country-link"); // Tüm ülke bağlantılarını seçer
 
         allLinks.forEach(link => {
-            const linkLetter = link.getAttribute("data-letter");
-            if (selectedLetter === "all" || (linkLetter && linkLetter.toLowerCase() === selectedLetter.toLowerCase())) {
-                link.style.display = "block";
+            // DÜZELTME: Ülke adının ilk harfini al
+            const countryName = link.textContent.trim();
+            const linkFirstLetter = countryName.charAt(0).toUpperCase(); // Ülke adının ilk harfini büyük harfe çevir
+
+            if (selectedLetter === "all" || (linkFirstLetter && linkFirstLetter === selectedLetter.toUpperCase())) {
+                link.style.display = "block"; // Eşleşenleri göster
             } else {
-                link.style.display = "none";
+                link.style.display = "none"; // Eşleşmeyenleri gizle
             }
         });
 
