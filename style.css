@@ -604,3 +604,9 @@ body.dark-mode #contactContent textarea::placeholder {
     color: #333;
 }
 
+.no-data-message img {
+    display: block;
+    margin: 0 auto 16px auto; /* üst:0, sağ:auto, alt:16px, sol:auto */
+    max-width: 100px;
+    height: auto;
+}
