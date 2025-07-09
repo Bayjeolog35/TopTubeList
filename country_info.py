@@ -1,5 +1,5 @@
 COUNTRY_INFO = {
-    "afghanistan": {"code": "AF", "continent": "asia"},
+    "afghanistan": {"code": "af", "continent": "asia"},
     "albania": {"code": "al", "continent": "europe"},
     "algeria": {"code": "dz", "continent": "africa"},
     "andorra": {"code": "ad", "continent": "europe"},
