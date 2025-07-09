@@ -6,8 +6,8 @@ from datetime import datetime
 # 🔐 API key artık gizli bir çevre değişkeninden alınacak
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
-OUTPUT_FILE = "videos.json"
-STRUCTURED_DATA_FILE = "structured_data.json"
+OUTPUT_FILE = "index.videos.json"
+STRUCTURED_DATA_FILE = "index.structured_data.json"
 HTML_FILE = "index.html"
 IFRAME_PLACEHOLDER = "<!-- IFRAME_VIDEO_HERE -->"
 
@@ -42,35 +42,41 @@ if response.status_code == 200:
         video_url = f"https://www.youtube.com/watch?v={item['id']}"
         thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
 
-        video = {
-  "id": "abc123",
-  "title": "...",
-  "channel": "...",
-  "views": 123456,
-  "views_str": "123K",
-  "url": "...",
-  "embed_url": "...",
-  "thumbnail": "...",
-  "published_at": "2024-12-30T00:00:00Z",
-  "published_date_formatted": "30.12.2024"
+     published_at = item["snippet"].get("publishedAt", "")
+try:
+    formatted_date = datetime.fromisoformat(published_at.replace("Z", "+00:00")).strftime("%d.%m.%Y")
+except:
+    formatted_date = "Tarih Yok"
+
+video = {
+    "id": item["id"],
+    "title": item["snippet"]["title"],
+    "channel": item["snippet"]["channelTitle"],
+    "views": views_int,
+    "views_str": views_str,
+    "url": video_url,
+    "embed_url": f"https://www.youtube.com/embed/{item['id']}",
+    "thumbnail": thumbnail,
+    "published_at": published_at,
+    "published_date_formatted": formatted_date
 }
 
         videos.append(video)
 
-        structured = {
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "Video Title",
-  "description": "Video Description",
-  "thumbnailUrl": "...",
-  "uploadDate": "2024-12-30T00:00:00Z",
-  "contentUrl": "https://youtube.com/watch?v=...",
-  "embedUrl": "https://www.youtube.com/embed/...",
-  "interactionStatistic": {
-    "@type": "InteractionCounter",
-    "interactionType": { "@type": "WatchAction" },
-    "userInteractionCount": 123456
-  }
+   structured = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": item["snippet"]["title"],
+    "description": item["snippet"].get("description", ""),
+    "thumbnailUrl": thumbnail,
+    "uploadDate": published_at,
+    "contentUrl": video_url,
+    "embedUrl": f"https://www.youtube.com/embed/{item['id']}",
+    "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": { "@type": "WatchAction" },
+        "userInteractionCount": views_int
+    }
 }
 
         structured_items.append(structured)
@@ -119,3 +125,9 @@ if response.status_code == 200:
 
 else:
     print("❌ API Hatası:", response.status_code)
+
+with open("index.videos.json", "w", encoding="utf-8") as f:
+    json.dump(videos, f, ensure_ascii=False, indent=2)
+
+with open("index.structured_data.json", "w", encoding="utf-8") as f:
+    json.dump(structured_items, f, ensure_ascii=False, indent=2)
