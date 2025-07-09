@@ -337,6 +337,8 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
     }
 
     // Load More Button
+   document.addEventListener("DOMContentLoaded", () => {
+    // Load More Button
     if (loadMoreButton) {
         loadMoreButton.addEventListener("click", () => {
             displayCount += 10;
@@ -347,3 +349,5 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
 
     // Sayfa yüklendiğinde videoları yüklemeyi başlat
     loadVideos();
+}); 
+
