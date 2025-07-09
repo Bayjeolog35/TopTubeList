@@ -28,22 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- Helper Functions ---
 
-    /**
+     /**
      * Gets the country name from the current URL pathname.
      * Example: /path/to/country.html -> country
      */
     function getCountryFromURL() {
-        const path = window.location.pathname;
-        const filename = path.split('/').pop(); // "index.html"
-        const countryName = filename.replace('.html', '').toLowerCase(); // "index"
-
-        // Eğer ana sayfa URL'sindeysek ve özel bir JSON adı istiyorsak, burada ayarlanır.
-        // Örneğin, index.html için 'worldwide.vid.data.json' gibi bir dosya arıyorsak.
-        // Bu örnekte 'index' ise 'worldwide' döndürülecek.
-        /*
-        return countryName === "index" ? "worldwide" : countryName;
-    }*/
-
+    const path = window.location.pathname;
+    const filename = path.split('/').pop(); // "turkey.html" gibi
+    return filename.replace('.html', '').toLowerCase(); // "turkey" döndürür
+}
     /**
      * Creates an HTML video card element from a video object.
      * @param {Object} video - The video data object.
@@ -336,9 +329,7 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
         });
     }
 
-    // Load More Button
-   document.addEventListener("DOMContentLoaded", () => {
-    // Load More Button
+  // Load More Button
     if (loadMoreButton) {
         loadMoreButton.addEventListener("click", () => {
             displayCount += 10;
@@ -347,6 +338,9 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
         });
     }
 
+    // Sayfa yüklendiğinde videoları yüklemeyi başlat
+    loadVideos();
+}); // Bu, en dıştaki DOMContentLoaded'ın kapanışı
     // Sayfa yüklendiğinde videoları yüklemeyi başlat
     loadVideos();
 }); 
