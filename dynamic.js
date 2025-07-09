@@ -91,9 +91,9 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
      */
     async function loadVideos() { // Bu zaten async
         const country = getCountryFromURL();
-        const dataFile = (country === "index" || country === "")
-            ? "index.videos.json"
-            : `${country}.vid.data.json`;
+       const dataFile = (country === "index" || country === "")
+        ? "index.videos.json" // This one is still .videos.json
+        : `${country}.vid.data.json`; // This one is now .vid.data.json
 
         console.log(`Veri yükleme denemesi: ${dataFile}`);
 
