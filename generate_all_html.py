@@ -1279,20 +1279,6 @@ def generate_html_page(name, is_country=True, output_folder="."):
         print(f"❌ Yazma hatası: {str(e)}")
         return False
 
-
-def generate_index_from_worldwide():
-    src = "worldwide.html"
-    dst = "index.html"
-    if os.path.exists(src):
-        with open(src, "r", encoding="utf-8") as f:
-            content = f.read()
-        with open(dst, "w", encoding="utf-8") as f:
-            f.write(content)
-        print("✅ index.html, worldwide.html'den üretildi.")
-    else:
-        print("❌ worldwide.html bulunamadı, index.html üretilemedi.")
-
-
 def main():
     print("""
     #######################################
@@ -1318,9 +1304,6 @@ def main():
 
     if success_count < total_items:
         print("⚠️ Bazı sayfalar oluşturulamadı. Lütfen hata mesajlarını kontrol edin.")
-
-    # ✅ En son index.html üretilsin
-    generate_index_from_worldwide()
 
 
 if __name__ == "__main__":
