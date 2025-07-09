@@ -1,16 +1,16 @@
 'use strict';
-// dynamic.js - Interactive UI scripts for TopTubeList
-// Handles: menu, dark mode, filters, video loading, and contact form
+// dynamic.js - TopTubeList için Etkileşimli UI betikleri
+// Şunları yönetir: menü, karanlık mod, filtreler, video yükleme ve iletişim formu
 
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'async' OLARAK İŞARETLEDİK!
     // --- UI Element References ---
     // Tüm element referanslarını en başta tanımlamak daha düzenlidir.
     const hamburger = document.querySelector(".hamburger");
     const countryPanel = document.querySelector(".country-panel"); // "panel" yerine "countryPanel" daha açıklayıcı
     const darkModeToggle = document.getElementById("darkModeToggle");
     // === DÜZENLEME BAŞLANGICI: savedMode değişkeni buraya taşındı ===
-    const savedMode = localStorage.getItem("darkMode"); 
+    const savedMode = localStorage.getItem("darkMode");
     // === DÜZENLEME SONU ===
     const contactToggle = document.getElementById("contactToggle");
     const contactContent = document.getElementById("contactContent");
@@ -28,16 +28,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- Helper Functions ---
 
-     /**
+    /**
      * Gets the country name from the current URL pathname.
      * Example: /path/to/country.html -> country
      */
     function getCountryFromURL() {
-    const path = window.location.pathname;
-    const filename = path.split('/').pop(); // örnek: "turkey.html", "index.html", veya ""
-    if (!filename || filename === "" || filename === "index.html") return "index";
-    return filename.replace('.html', '').toLowerCase();
-}
+        const path = window.location.pathname;
+        const filename = path.split('/').pop(); // örnek: "turkey.html", "index.html", veya ""
+        if (!filename || filename === "" || filename === "index.html") return "index";
+        return filename.replace('.html', '').toLowerCase();
+    }
     /**
      * Creates an HTML video card element from a video object.
      * @param {Object} video - The video data object.
@@ -46,10 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function createVideoCard(video) {
         const card = document.createElement("div");
         card.className = "video-card";
-        card.innerHTML = 
+        card.innerHTML = `
             <a href="${video.url}" target="_blank" class="video-thumbnail">
                 <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
-                ${video.duration ? <span class="duration">${video.duration}</span> : ''}
+                ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
             </a>
             <div class="video-info">
                 <h2>${video.title}</h2>
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <span class="date">${new Date(video.published_at).toLocaleDateString('tr-TR')}</span>
                 </div>
             </div>
-        ;
+        `;
         return card;
     }
 
@@ -72,75 +72,97 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        videoListContainer.innerHTML = 
+        videoListContainer.innerHTML = `
             <div class="no-data-message">
                 <img src="no-data.svg" alt="No data" width="100">
                 <h3>📊 Sorry, YouTube does not provide statistics for this country</h3>
                 <p>Would you like to explore other countries instead?</p>
                 <a href="index.html" class="site-button">Go Back to Homepage</a>
             </div>
-        ;
+        `;
         // Load More butonunu gizle, eğer mevcutsa
         if (loadMoreButton) {
             loadMoreButton.style.display = "none";
         }
     }
 
-   /**
- * Gets the country name from the current URL pathname.
- * Example: /turkey.html → "turkey"
- */
-function getCountryFromURL() {
-    const path = window.location.pathname;
-    const filename = path.split('/').pop();
-    return filename.replace('.html', '').toLowerCase();
-}
+    /**
+     * Fetches video data for the current country and renders it.
+     */
+    async function loadVideos() { // Bu zaten async
+        const country = getCountryFromURL();
+        const dataFile = (country === "index" || country === "")
+            ? "index.videos.json"
+            : `${country}.videos.json`;
 
-/**
- * Fetches video data for the current country and renders it.
- */
-async function loadVideos() {
-    const country = getCountryFromURL();
-    const dataFile = (country === "index" || country === "") 
-        ? "index.videos.json" 
-        : ${country}.videos.json;
+        console.log(`Veri yükleme denemesi: ${dataFile}`);
 
-    console.log(Veri yükleme denemesi: ${dataFile});
+        try {
+            const response = await fetch(dataFile);
 
-    try {
-        const response = await fetch(dataFile);
-
-        if (!response.ok) {
-            if (response.status === 404) {
-                throw new Error('${dataFile}' dosyası bulunamadı. URL: ${response.url});
+            if (!response.ok) {
+                if (response.status === 404) {
+                    throw new Error(`'${dataFile}' dosyası bulunamadı. URL: ${response.url}`);
+                }
+                throw new Error(`Veri yüklenirken HTTP hatası oluştu: ${response.status} ${response.statusText}`);
             }
-            throw new Error(Veri yüklenirken HTTP hatası oluştu: ${response.status} ${response.statusText});
+
+            const jsonData = await response.json();
+            console.log("Yüklenen JSON verisi (ilk 5 video):", jsonData.slice(0, 5));
+
+            if (!Array.isArray(jsonData)) {
+                throw new Error("Yüklenen veri bir dizi değil.");
+            }
+
+            allVideos = jsonData;
+
+            if (allVideos.length === 0) {
+                throw new Error("Video verisi boş.");
+            }
+
+            if (country !== "index" && country !== "") {
+                document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
+            }
+
+            renderVideos();
+
+        } catch (error) {
+            console.error("Veri yükleme hatası:", error);
+            showNoDataMessage();
         }
-
-        const jsonData = await response.json();
-        console.log("Yüklenen JSON verisi (ilk 5 video):", jsonData.slice(0, 5));
-
-        if (!Array.isArray(jsonData)) {
-            throw new Error("Yüklenen veri bir dizi değil.");
-        }
-
-        allVideos = jsonData;
-
-        if (allVideos.length === 0) {
-            throw new Error("Video verisi boş.");
-        }
-
-        if (country !== "index" && country !== "") {
-            document.title = Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList;
-        }
-
-        renderVideos();
-
-    } catch (error) {
-        console.error("Veri yükleme hatası:", error);
-        showNoDataMessage();
     }
-}
+
+    /**
+     * Renders videos into the videoListContainer based on displayCount.
+     */
+    function renderVideos() {
+        if (!videoListContainer) {
+            console.warn("videoListContainer bulunamadı, videolar render edilemiyor.");
+            return;
+        }
+
+        videoListContainer.innerHTML = ""; // Mevcut videoları temizle
+        const videosToDisplay = allVideos.slice(0, displayCount);
+
+        if (videosToDisplay.length === 0) {
+            showNoDataMessage();
+            return;
+        }
+
+        videosToDisplay.forEach(video => {
+            const card = createVideoCard(video);
+            videoListContainer.appendChild(card);
+        });
+
+        // Load More butonunun görünürlüğünü yönet
+        if (loadMoreButton) {
+            if (displayCount >= allVideos.length) {
+                loadMoreButton.style.display = "none"; // Tüm videolar gösterildiyse gizle
+            } else {
+                loadMoreButton.style.display = "block"; // Daha fazla video varsa göster
+            }
+        }
+    }
 
 
     /**
@@ -186,8 +208,8 @@ async function loadVideos() {
                 countryPanel.style.display = "flex"; // Masaüstünde her zaman flex olarak göster
             }
         } else if (hamburger) {
-             // Eğer sadece hamburger varsa ve panel yoksa yine de hamburgeri kontrol et
-             hamburger.style.display = window.innerWidth <= 768 ? "block" : "none";
+            // Eğer sadece hamburger varsa ve panel yoksa yine de hamburgeri kontrol et
+            hamburger.style.display = window.innerWidth <= 768 ? "block" : "none";
         }
     };
 
@@ -201,9 +223,9 @@ async function loadVideos() {
             // CSS'te .country-panel.active için display: flex ve display: none kurallarını tanımlayın.
             // Bu JS satırları karmaşıklaşmaması için kaldırıldı.
             // if (countryPanel.classList.contains("active")) {
-            //     countryPanel.style.display = "flex";
+            //    countryPanel.style.display = "flex";
             // } else {
-            //     countryPanel.style.display = "none";
+            //    countryPanel.style.display = "none";
             // }
         });
     }
@@ -220,41 +242,41 @@ async function loadVideos() {
         });
     }
 
-// Harf Filtreleme
-document.querySelectorAll(".alphabet-letter").forEach(letter => {
-    letter.addEventListener("click", function (e) {
-        e.preventDefault();
-        const selectedLetter = this.getAttribute("data-letter"); // 'all', 'A', 'B' vb. alır
-        const allLinks = document.querySelectorAll(".country-column .country-link"); // Tüm ülke bağlantılarını seçer
+    // Harf Filtreleme
+    document.querySelectorAll(".alphabet-letter").forEach(letter => {
+        letter.addEventListener("click", function (e) {
+            e.preventDefault();
+            const selectedLetter = this.getAttribute("data-letter"); // 'all', 'A', 'B' vb. alır
+            const allLinks = document.querySelectorAll(".country-column .country-link"); // Tüm ülke bağlantılarını seçer
 
-        allLinks.forEach(link => {
-            // DÜZELTME: Ülke adının ilk harfini al
-            const countryName = link.textContent.trim();
-            const linkFirstLetter = countryName.charAt(0).toUpperCase(); // Ülke adının ilk harfini büyük harfe çevir
+            allLinks.forEach(link => {
+                // DÜZELTME: Ülke adının ilk harfini al
+                const countryName = link.textContent.trim();
+                const linkFirstLetter = countryName.charAt(0).toUpperCase(); // Ülke adının ilk harfini büyük harfe çevir
 
-            if (selectedLetter === "all" || (linkFirstLetter && linkFirstLetter === selectedLetter.toUpperCase())) {
-                link.style.display = "block"; // Eşleşenleri göster
-            } else {
-                link.style.display = "none"; // Eşleşmeyenleri gizle
-            }
+                if (selectedLetter === "all" || (linkFirstLetter && linkFirstLetter === selectedLetter.toUpperCase())) {
+                    link.style.display = "block"; // Eşleşenleri göster
+                } else {
+                    link.style.display = "none"; // Eşleşmeyenleri gizle
+                }
+            });
+
+            // Aktif harfi vurgula
+            document.querySelectorAll(".alphabet-letter").forEach(a => a.classList.remove("active"));
+            this.classList.add("active");
         });
-
-        // Aktif harfi vurgula
-        document.querySelectorAll(".alphabet-letter").forEach(a => a.classList.remove("active"));
-        this.classList.add("active");
     });
-});
-        
+
     // FadeOut Animation (CSS ekleme) - Zaten eklenmiş, tekrar etmeye gerek yok
     // Bu kısım DOMContentLoaded içinde olması sorun değil, ancak tek seferlik bir işlem olduğu için
     // fonksiyonların veya olay dinleyicilerinin dışında, hemen DOMContentLoaded'ın altında olabilir.
     const style = document.createElement('style');
-    style.textContent = 
+    style.textContent = `
         @keyframes fadeOut {
             0% { opacity: 1; }
             80% { opacity: 1; }
             100% { opacity: 0; transform: translateY(10px); }
-        };
+        }`;
     document.head.appendChild(style);
 
 
@@ -292,13 +314,13 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
                 contactForm.reset();
                 formStatusDiv.innerText = "✅ ✅ Message sent successfully!";
                 formStatusDiv.style.display = "block";
-                formStatusDiv.style.cssText = 
+                formStatusDiv.style.cssText = `
                     position: fixed; bottom: 20px; right: 20px;
                     background: #28a745; color: white; padding: 12px 24px;
                     border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
                     font-family: sans-serif; z-index: 9999;
                     animation: fadeOut 5s forwards;
-                ;
+                `;
                 // Elementi DOM'dan kaldır
                 setTimeout(() => formStatusDiv.remove(), 5000);
             } catch (error) {
@@ -308,7 +330,7 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
         });
     }
 
-        // Load More Button
+    // Load More Button
     if (loadMoreButton) {
         loadMoreButton.addEventListener("click", () => {
             displayCount += 10;
@@ -318,5 +340,5 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
     }
 
     // Sayfa yüklendiğinde videoları yüklemeyi başlat
-    loadVideos();
+    await loadVideos(); // <--- BURAYI 'await' OLARAK İŞARETLEDİK!
 }); // <-- BURASI KODUN SONU OLMALI, ALTINDA HİÇBİR ŞEY OLMAMALI
