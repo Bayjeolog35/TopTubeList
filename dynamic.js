@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
      */
     async function loadVideos() {
         const country = getCountryFromURL();
-        const dataFile = `${country}.vid.data.json`;
+        const dataFile = `${country}.videos.json`;
 
         console.log(`Veri yükleme denemesi: ${dataFile}`); // Debug için
 
