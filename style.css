@@ -396,6 +396,7 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
   flex: 1;
   padding: 0px;
   background-color: var(--bg);
+  min-height: 30vh;
 }
 
 /*LOAD MORE BUTTON*/
