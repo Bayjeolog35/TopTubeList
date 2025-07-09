@@ -211,7 +211,7 @@ def main():
         continent_videos = deduplicate(continent_videos)
         continent_videos.sort(key=lambda x: x["views"], reverse=True)
         update_html_with_embedded_data(continent, continent_videos[:50]) # HTML'e göm
-        save_json(f"videos_{continent}", continent_videos[:50])
+        save_json(continent, continent_videos[:50])
         print(f"✅ Kıtasal veri güncellendi: {continent}")
 
 
