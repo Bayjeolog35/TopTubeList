@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
         const country = getCountryFromURL();
         const dataFile = (country === "index" || country === "")
             ? "index.videos.json"
-            : `${country}.videos.json`;
+            : `${country}.vid.data.json`;
 
         console.log(`Veri yükleme denemesi: ${dataFile}`);
 
