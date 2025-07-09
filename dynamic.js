@@ -329,7 +329,7 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
         });
     }
 
-  // Load More Button
+      // Load More Button
     if (loadMoreButton) {
         loadMoreButton.addEventListener("click", () => {
             displayCount += 10;
@@ -340,7 +340,4 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
 
     // Sayfa yüklendiğinde videoları yüklemeyi başlat
     loadVideos();
-}); // Bu, en dıştaki DOMContentLoaded'ın kapanışı
-    // Sayfa yüklendiğinde videoları yüklemeyi başlat
-    loadVideos();
-}); 
+}); // Bu satır EN DIŞTAKI DOMContentLoaded'ı kapatıyor
