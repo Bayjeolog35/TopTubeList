@@ -92,6 +92,11 @@ if (mainElement) {
         }
     }
 
+// Footer yukarı yapışmasın diye main'e min-height ver
+const mainContent = document.querySelector("main.main-content");
+if (mainContent) {
+    mainContent.style.minHeight = "55vh";
+    
     /**
      * Fetches video data for the current country and renders it.
      */
