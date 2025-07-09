@@ -1,149 +1,170 @@
-import os
-import json
 import requests
+import json
+import os
 from datetime import datetime
-from dotenv import load_dotenv
-from collections import defaultdict
-import re
+from country_info import COUNTRY_INFO # country_info.py dosyasından COUNTRY_INFO'yu içe aktarıyoruz
 
-try:
-    from country_info import COUNTRY_INFO
-except ImportError:
-    raise ValueError("❌ country_info.py dosyası ya yok ya da COUNTRY_INFO tanımlı değil.")
+# 🔐 API key artık gizli bir çevre değişkeninden alınacak
+API_KEY = os.getenv("YOUTUBE_API_KEY")
+API_URL = "https://www.googleapis.com/youtube/v3/videos"
+IFRAME_PLACEHOLDER = ""
+STRUCTURED_DATA_PLACEHOLDER = ""
+# HTML_TEMPLATE_FILE artık kullanılmayacak, çünkü yeni dosya oluşturmayacağız.
+# HTML_TEMPLATE_FILE = "index.html" 
 
-# API Key
-if os.getenv("CI"):
-    YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
-else:
-    load_dotenv()
-    YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
+# COUNTRY_INFO'dan ülke kodlarını ve isimlerini alıyoruz
+country_data_for_processing = {}
+for country_slug, info in COUNTRY_INFO.items():
+    code = info["code"]
+    # HTML içinde ve konsolda gösterilecek, okunabilir ülke adı.
+    display_name_human_readable = info.get("display-name", country_slug.replace("-", " ")).title()
+    
+    country_data_for_processing[country_slug] = {
+        "code": code,
+        "display_name_human_readable": display_name_human_readable
+    }
 
-if not YOUTUBE_API_KEY:
-    raise ValueError("❌ YOUTUBE_API_KEY tanımlı değil!")
+for country_slug, info in country_data_for_processing.items():
+    code = info["code"]
+    display_name_human_readable = info["display_name_human_readable"]
+    
+    print(f"'{display_name_human_readable}' ({code}) için veri çekiliyor...")
 
-YOUTUBE_API_BASE_URL = "https://www.googleapis.com/youtube/v3/"
-OUTPUT_DIR = "."
+    # Dosya adları country_slug'a göre tireli olacak.
+    OUTPUT_VIDEO_FILE = f"{country_slug}.vid.data.json"
+    STRUCTURED_DATA_FILE = f"{country_slug}.str.data.json"
+    HTML_OUTPUT_FILE = f"{country_slug}.html"
 
-
-def format_number(num):
-    num = float(num)
-    for unit in ['', 'K', 'M', 'B']:
-        if abs(num) < 1000:
-            return f"{num:.1f}{unit}" if num % 1 else f"{int(num)}{unit}"
-        num /= 1000
-    return f"{num:.1f}B"
-
-
-def get_trending_videos(region_code, max_results=50):
     params = {
         "part": "snippet,statistics",
         "chart": "mostPopular",
-        "regionCode": region_code,
-        "maxResults": max_results,
-        "key": YOUTUBE_API_KEY
-    }
-    try:
-        response = requests.get(f"{YOUTUBE_API_BASE_URL}videos", params=params, timeout=10)
-        response.raise_for_status()
-        return response.json()
-    except requests.exceptions.RequestException as e:
-        print(f"❌ API Hatası: {e}")
-        return None
-
-
-def process_video_data(item):
-    snippet = item.get("snippet", {})
-    stats = item.get("statistics", {})
-    published_at = snippet.get("publishedAt", "")
-    try:
-        dt = datetime.fromisoformat(published_at.replace("Z", "+00:00"))
-        date_str = dt.strftime("%d.%m.%Y")
-    except:
-        date_str = "N/A"
-    return {
-        "id": item["id"],
-        "title": snippet.get("title", ""),
-        "channel": snippet.get("channelTitle", ""),
-        "thumbnail": snippet.get("thumbnails", {}).get("high", {}).get("url", ""),
-        "url": f"https://youtube.com/watch?v={item['id']}",
-        "embed_url": f"https://youtube.com/embed/{item['id']}",
-        "views": int(stats.get("viewCount", 0)),
-        "views_formatted": format_number(int(stats.get("viewCount", 0))),
-        "likes": int(stats.get("likeCount", 0)) if stats.get("likeCount") else 0,
-        "comments": int(stats.get("commentCount", 0)) if stats.get("commentCount") else 0,
-        "published_at": published_at,
-        "published_date_formatted": date_str
+        "maxResults": 50,
+        "regionCode": code,
+        "key": API_KEY
     }
 
+    response = requests.get(API_URL, params=params)
 
-def generate_structured_data(videos):
-    return [{
-        "@context": "https://schema.org",
-        "@type": "VideoObject",
-        "name": v["title"],
-        "description": v["title"],
-        "thumbnailUrl": v["thumbnail"],
-        "uploadDate": v["published_at"],
-        "embedUrl": v["embed_url"],
-        "url": v["url"],
-        "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": {"@type": "WatchAction"},
-            "userInteractionCount": v["views"]
-        }
-    } for v in videos]
+    if response.status_code == 200:
+        data = response.json()
+        videos = []
+        structured_items = []
+
+        for item in data["items"]:
+            try:
+                views_int = int(item["statistics"].get("viewCount", 0))
+            except (KeyError, ValueError):
+                views_int = 0
+
+            if views_int >= 1_000_000_000:
+                views_str = f"{views_int/1_000_000_000:.2f}B"
+            elif views_int >= 1_000_000:
+                views_str = f"{views_int/1_000_000:.2f}M"
+            elif views_int >= 1_000:
+                views_str = f"{views_int/1_000:.1f}K"
+            else:
+                views_str = str(views_int)
+
+            video_id = item["id"]
+            # Googleusercontent.com URL'lerini belirtildiği gibi güncelliyoruz
+            video_url = f"https://www.youtube.com/watch?v={video_id}"
+            embed_url = f"https://www.youtube.com/embed/{video_id}"
+            thumbnail_url = item["snippet"]["thumbnails"]["medium"]["url"]
+            published_at = item["snippet"]["publishedAt"]
+            
+            try:
+                published_date_formatted = datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ").strftime("%d.%m.%Y")
+            except ValueError:
+                published_date_formatted = ""
+
+            video = {
+                "id": video_id,
+                "title": item["snippet"]["title"],
+                "channel": item["snippet"]["channelTitle"],
+                "views": views_int,
+                "views_str": views_str,
+                "url": video_url,
+                "embed_url": embed_url,
+                "thumbnail": thumbnail_url,
+                "published_at": published_at,
+                "published_date_formatted": published_date_formatted
+            }
+            videos.append(video)
+
+            structured = {
+                "@context": "https://schema.org",
+                "@type": "VideoObject",
+                "name": item["snippet"]["title"],
+                "description": item["snippet"]["description"],
+                "thumbnailUrl": thumbnail_url,
+                "uploadDate": published_at,
+                "contentUrl": video_url,
+                "embedUrl": embed_url,
+                "interactionStatistic": {
+                    "@type": "InteractionCounter",
+                    "interactionType": { "@type": "WatchAction" },
+                    "userInteractionCount": views_int
+                }
+            }
+            structured_items.append(structured)
+
+        videos = sorted(videos, key=lambda x: x["views"], reverse=True)
+
+        with open(OUTPUT_VIDEO_FILE, "w", encoding="utf-8") as f:
+            json.dump(videos, f, ensure_ascii=False, indent=2)
+
+        with open(STRUCTURED_DATA_FILE, "w", encoding="utf-8") as f:
+            json.dump(structured_items, f, ensure_ascii=False, indent=2)
+
+        print(f"✅ {OUTPUT_VIDEO_FILE} ve {STRUCTURED_DATA_FILE} güncellendi.")
+
+        # HTML dosyasını güncelleme
+        if os.path.exists(HTML_OUTPUT_FILE):
+            print(f"'{HTML_OUTPUT_FILE}' dosyası mevcut. Güncelleniyor...")
+            with open(HTML_OUTPUT_FILE, "r", encoding="utf-8") as f:
+                current_html_content = f.read()
+
+            # Yer tutucuları güncelle
+            structured_script = f'<script type="application/ld+json">\n{json.dumps(structured_items, ensure_ascii=False, indent=2)}\n</script>'
+            current_html_content = current_html_content.replace(STRUCTURED_DATA_PLACEHOLDER, structured_script)
+
+            # En çok izlenen video için iframe oluştur ve göm
+            if videos: # En az bir video olduğundan emin ol
+                top_video = videos[0]
+                top_video_id = top_video["id"]
+                iframe_html = f'''
+<iframe 
+  width="560" 
+  height="315" 
+  src="https://www.youtube.com/embed/{top_video_id}" 
+  title="{top_video['title']}" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen 
+  style="position:absolute; width:1px; height:1px; left:-9999px;">
+</iframe>
+'''
+                current_html_content = current_html_content.replace(IFRAME_PLACEHOLDER, iframe_html)
+            else:
+                current_html_content = current_html_content.replace(IFRAME_PLACEHOLDER, "")
+            
+            # Eğer başlıklar veya h1 daha önce ayarlanmadıysa veya dinamik güncellenmek isteniyorsa burada da yapılabilir.
+            # Ancak "sadece mevcutları güncelle" prensibine göre, eğer bunlar zaten manuel ayarlandıysa dokunulmaz.
+            # current_html_content = current_html_content.replace("<title>...</title>", f"<title>Popüler YouTube Videoları - {display_name_human_readable}</title>")
+            # current_html_content = current_html_content.replace("<h1>...</h1>", f"<h1>{display_name_human_readable} İçin Popüler YouTube Videoları</h1>")
 
 
-def save_json(name, videos):
-    with open(os.path.join(OUTPUT_DIR, f"{name}.vid.data.json"), 'w', encoding='utf-8') as f:
-        json.dump(videos, f, ensure_ascii=False, indent=2)
-    with open(os.path.join(OUTPUT_DIR, f"{name}.str.data.json"), 'w', encoding='utf-8') as f:
-        json.dump(generate_structured_data(videos), f, ensure_ascii=False, indent=2)
+            with open(HTML_OUTPUT_FILE, "w", encoding="utf-8") as f:
+                f.write(current_html_content)
 
-
-def update_html_with_embedded_data(name, videos):
-    html_file = f"{name}.html" if name != "worldwide" else "index.html"
-    if not os.path.exists(html_file):
-        print(f"⚠️ HTML dosyası bulunamadı: {html_file}")
-        return
-    try:
-        with open(html_file, 'r', encoding='utf-8') as f:
-            html = f.read()
-
-        json_data = json.dumps(videos, ensure_ascii=False, indent=4)
-
-        pattern = re.compile(r"(window\.embeddedVideoData\s*=\s*)([\{\[].*?[\}\]])(\s*;\s*</script>)", re.DOTALL)
-
-        if pattern.search(html):
-            html = pattern.sub(r"\g<1>" + json_data + r"\g<3>", html)
-            with open(html_file, 'w', encoding='utf-8') as f:
-                f.write(html)
-            print(f"✅ HTML güncellendi: {html_file}")
+            print(f"✅ {HTML_OUTPUT_FILE} içine structured data ve iframe eklendi.")
         else:
-            print(f"⚠️ Gömülü veri bloğu bulunamadı: {html_file}")
-
-    except Exception as e:
-        print(f"❌ Hata oluştu ({html_file}): {e}")
-
-
-def main():
-    print("🎬 Ülke verileri güncelleniyor...\n")
-
-    for country, info in COUNTRY_INFO.items():
-        code = info["code"]
-        print(f"📥 {country.upper()} ({code})")
-        data = get_trending_videos(code)
-        if not data or 'items' not in data:
-            print(f"⚠️ Veri alınamadı: {country}")
-            videos = []
-        else:
-            videos = [process_video_data(item) for item in data["items"]]
+            print(f"⚠️ '{HTML_OUTPUT_FILE}' dosyası mevcut değil. HTML güncelleme atlanıyor.")
         
-        save_json(country, videos)
-        update_html_with_embedded_data(country, videos)
+        print("-" * 50)
 
-    print("\n🏁 Ülke verileri tamamlandı.")
-
-
-if __name__ == "__main__":
-    main()
+    else:
+        print(f"❌ API Hatası ({code}):", response.status_code)
+        if response.status_code == 403:
+            print("API anahtarınızda kota sorunu veya geçersiz anahtar olabilir. Lütfen kontrol edin.")
+        print("-" * 50)
