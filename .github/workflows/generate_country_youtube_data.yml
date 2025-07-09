@@ -1,4 +1,4 @@
-name: Fetch and Update Countries YouTube Data
+name: Generate and Update Country YouTube Data
 
 on:
   schedule:
@@ -21,11 +21,12 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.9' # Kullandığınız Python sürümünü buraya yazın (örn. 3.8, 3.9, 3.10, 3.11, 3.12)
+        cache: 'pip' # pip bağımlılıklarını önbelleğe al, sonraki çalıştırmaları hızlandırır
 
     - name: Install dependencies
       run: |
-        # Bu kısma betiğinizin ihtiyaç duyduğu pip paketlerini ekleyin
-        # Örneğin: pip install requests
+        # Python betiğinizin ihtiyaç duyduğu pip paketlerini buraya ekleyin
+        # 'requests' kütüphanesi mutlaka gerekli olacaktır.
         pip install requests
 
     - name: Run Python script
@@ -34,17 +35,15 @@ jobs:
         # Bu anahtarı deponuzun ayarlarına (Settings -> Secrets and variables -> Actions) eklemelisiniz.
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       run: |
-        python your_script_name.py
-        # NOT: your_script_name.py yerine Python betiğinizin adını yazın
-        # Örneğin: python fetch_youtube_data.py
+        python generate_country_youtube_data.py
     
     # Oluşturulan/güncellenen JSON ve HTML dosyalarını depoya geri gönder (commit ve push)
     - name: Commit and push changes
       run: |
         git config user.name "GitHub Actions Bot"
         git config user.email "actions@github.com"
-        git add *.json *.html # Sadece .json ve .html dosyalarını ekle
-        git commit -m "Günlük YouTube verileri güncellemesi" || echo "Değişiklik yok, commit atlanıyor."
+        git add *.json *.html # Sadece .json ve .html uzantılı dosyaları ekle
+        git commit -m "Otomatik YouTube verileri güncellemesi" || echo "Değişiklik yok, commit atlanıyor."
         git push
       # Bu adım sadece değişiklikler varsa commit yapacaktır.
       # "|| echo "Değişiklik yok, commit atlanıyor."" kısmı, değişiklik olmadığında hata vermesini engeller.
