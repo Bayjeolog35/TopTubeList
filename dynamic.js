@@ -46,10 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function createVideoCard(video) {
         const card = document.createElement("div");
         card.className = "video-card";
-        card.innerHTML = `
+        card.innerHTML = 
             <a href="${video.url}" target="_blank" class="video-thumbnail">
                 <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
-                ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
+                ${video.duration ? <span class="duration">${video.duration}</span> : ''}
             </a>
             <div class="video-info">
                 <h2>${video.title}</h2>
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <span class="date">${new Date(video.published_at).toLocaleDateString('tr-TR')}</span>
                 </div>
             </div>
-        `;
+        ;
         return card;
     }
 
@@ -72,14 +72,14 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        videoListContainer.innerHTML = `
+        videoListContainer.innerHTML = 
             <div class="no-data-message">
                 <img src="no-data.svg" alt="No data" width="100">
                 <h3>📊 Sorry, YouTube does not provide statistics for this country</h3>
                 <p>Would you like to explore other countries instead?</p>
                 <a href="index.html" class="site-button">Go Back to Homepage</a>
             </div>
-        `;
+        ;
         // Load More butonunu gizle, eğer mevcutsa
         if (loadMoreButton) {
             loadMoreButton.style.display = "none";
@@ -97,84 +97,50 @@ function getCountryFromURL() {
 }
 
 /**
-/**
-     * Fetches video data for the current country and renders it.
-     */
-    async function loadVideos() { // Bu zaten async
-        const country = getCountryFromURL();
-        const dataFile = (country === "index" || country === "")
-            ? "index.videos.json"
-            : `${country}.videos.json`;
+ * Fetches video data for the current country and renders it.
+ */
+async function loadVideos() {
+    const country = getCountryFromURL();
+    const dataFile = (country === "index" || country === "") 
+        ? "index.videos.json" 
+        : ${country}.videos.json;
 
-        console.log(`Veri yükleme denemesi: ${dataFile}`);
+    console.log(Veri yükleme denemesi: ${dataFile});
 
-        try {
-            const response = await fetch(dataFile);
+    try {
+        const response = await fetch(dataFile);
 
-            if (!response.ok) {
-                if (response.status === 404) {
-                    throw new Error(`'${dataFile}' dosyası bulunamadı. URL: ${response.url}`);
-                }
-                throw new Error(`Veri yüklenirken HTTP hatası oluştu: ${response.status} ${response.statusText}`);
+        if (!response.ok) {
+            if (response.status === 404) {
+                throw new Error('${dataFile}' dosyası bulunamadı. URL: ${response.url});
             }
-
-            const jsonData = await response.json();
-            console.log("Yüklenen JSON verisi (ilk 5 video):", jsonData.slice(0, 5));
-
-            if (!Array.isArray(jsonData)) {
-                throw new Error("Yüklenen veri bir dizi değil.");
-            }
-
-            allVideos = jsonData;
-
-            if (allVideos.length === 0) {
-                throw new Error("Video verisi boş.");
-            }
-
-            if (country !== "index" && country !== "") {
-                document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
-            }
-
-            renderVideos();
-
-        } catch (error) {
-            console.error("Veri yükleme hatası:", error);
-            showNoDataMessage();
+            throw new Error(Veri yüklenirken HTTP hatası oluştu: ${response.status} ${response.statusText});
         }
+
+        const jsonData = await response.json();
+        console.log("Yüklenen JSON verisi (ilk 5 video):", jsonData.slice(0, 5));
+
+        if (!Array.isArray(jsonData)) {
+            throw new Error("Yüklenen veri bir dizi değil.");
+        }
+
+        allVideos = jsonData;
+
+        if (allVideos.length === 0) {
+            throw new Error("Video verisi boş.");
+        }
+
+        if (country !== "index" && country !== "") {
+            document.title = Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList;
+        }
+
+        renderVideos();
+
+    } catch (error) {
+        console.error("Veri yükleme hatası:", error);
+        showNoDataMessage();
     }
-
-     /**
-     * Renders videos into the videoListContainer based on displayCount.
-     */
-    function renderVideos() {
-        if (!videoListContainer) {
-            console.warn("videoListContainer bulunamadı, videolar render edilemiyor.");
-            return;
-        }
-
-        videoListContainer.innerHTML = ""; // Mevcut videoları temizle
-        const videosToDisplay = allVideos.slice(0, displayCount);
-
-        if (videosToDisplay.length === 0) {
-            showNoDataMessage();
-            return;
-        }
-
-        videosToDisplay.forEach(video => {
-            const card = createVideoCard(video);
-            videoListContainer.appendChild(card);
-        });
-
-        // Load More butonunun görünürlüğünü yönet
-        if (loadMoreButton) {
-            if (displayCount >= allVideos.length) {
-                loadMoreButton.style.display = "none"; // Tüm videolar gösterildiyse gizle
-            } else {
-                loadMoreButton.style.display = "block"; // Daha fazla video varsa göster
-            }
-        }
-    }
-
+}
 
 
     /**
@@ -283,12 +249,12 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
     // Bu kısım DOMContentLoaded içinde olması sorun değil, ancak tek seferlik bir işlem olduğu için
     // fonksiyonların veya olay dinleyicilerinin dışında, hemen DOMContentLoaded'ın altında olabilir.
     const style = document.createElement('style');
-    style.textContent = `
+    style.textContent = 
         @keyframes fadeOut {
             0% { opacity: 1; }
             80% { opacity: 1; }
             100% { opacity: 0; transform: translateY(10px); }
-        }`;
+        };
     document.head.appendChild(style);
 
 
@@ -326,13 +292,13 @@ document.querySelectorAll(".alphabet-letter").forEach(letter => {
                 contactForm.reset();
                 formStatusDiv.innerText = "✅ ✅ Message sent successfully!";
                 formStatusDiv.style.display = "block";
-                formStatusDiv.style.cssText = `
+                formStatusDiv.style.cssText = 
                     position: fixed; bottom: 20px; right: 20px;
                     background: #28a745; color: white; padding: 12px 24px;
                     border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
                     font-family: sans-serif; z-index: 9999;
                     animation: fadeOut 5s forwards;
-                `;
+                ;
                 // Elementi DOM'dan kaldır
                 setTimeout(() => formStatusDiv.remove(), 5000);
             } catch (error) {
