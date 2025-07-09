@@ -46,13 +46,14 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
    function createVideoCard(video) {
     const card = document.createElement("div");
     card.className = "video-card";
+
     card.innerHTML = `
         <a href="${video.url}" target="_blank" class="video-thumbnail">
             <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
             ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
         </a>
         <div class="video-info">
-            <p><strong>Title:</strong> ${video.title}</p>
+            <h2>${video.title}</h2>
             <p><strong>Channel:</strong> ${video.channel}</p>
             <p><strong>Views:</strong> ${video.views_str || '0'} views</p>
             <p><strong>Date:</strong> ${new Date(video.published_at).toLocaleDateString('tr-TR')}</p>
