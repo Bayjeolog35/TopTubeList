@@ -74,10 +74,10 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
 
         videoListContainer.innerHTML = `
             <div class="no-data-message">
-                <img src="nodata.webp" alt="No data" width="100">
-                <h3>📊 Sorry, YouTube does not provide statistics for this country</h3>
-                <p>Would you like to explore other countries instead?</p>
-                
+                <h2>📹 Oops... No trending videos here 😔</h2>
+                <p><strong>YouTube doesn’t currently share data for this country.</strong></p>
+                <p>But don’t worry — the rest of the world is buzzing with viral content!</p>
+                <p>Why not explore what’s trending elsewhere? 🌍</p>
             </div>
         `;
         // Load More butonunu gizle, eğer mevcutsa
