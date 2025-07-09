@@ -86,21 +86,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    /**
-     * Renders the current subset of videos to the DOM.
-     */
-  function getCountryFromURL() {
+   /**
+ * Gets the country name from the current URL pathname.
+ * Example: /turkey.html → "turkey"
+ */
+function getCountryFromURL() {
     const path = window.location.pathname;
-    const filename = path.split('/').pop(); // "turkey.html" gibi
-    return filename.replace('.html', '').toLowerCase(); // "turkey" döndürür
+    const filename = path.split('/').pop();
+    return filename.replace('.html', '').toLowerCase();
 }
 
+/**
+ * Fetches video data for the current country and renders it.
+ */
 async function loadVideos() {
     const country = getCountryFromURL();
-
-    // 👇 Eğer ana sayfadaysak (index.html), dosya adı farklı
-    const dataFile = (country === "index")
-        ? "index.videos.json"
+    const dataFile = (country === "index" || country === "") 
+        ? "index.videos.json" 
         : `${country}.videos.json`;
 
     console.log(`Veri yükleme denemesi: ${dataFile}`);
@@ -116,6 +118,7 @@ async function loadVideos() {
         }
 
         const jsonData = await response.json();
+        console.log("Yüklenen JSON verisi (ilk 5 video):", jsonData.slice(0, 5));
 
         if (!Array.isArray(jsonData)) {
             throw new Error("Yüklenen veri bir dizi değil.");
@@ -127,8 +130,7 @@ async function loadVideos() {
             throw new Error("Video verisi boş.");
         }
 
-        // Sayfa başlığı sadece ülke sayfalarında güncellenebilir
-        if (country !== "index") {
+        if (country !== "index" && country !== "") {
             document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
         }
 
@@ -140,53 +142,6 @@ async function loadVideos() {
     }
 }
 
-    /**
-     * Fetches video data for the current country from a JSON file.
-     */
-    // 👇 Eğer ana sayfadaysak (index.html), dosya adı farklı
-    const dataFile = (country === "index")
-        ? "index.videos.json"
-        : `${country}.videos.json`;
-    
-        console.log(`Veri yükleme denemesi: ${dataFile}`); // Debug için
-
-        try {
-            const response = await fetch(dataFile);
-
-            // HTTP hata kodlarını (örn. 404, 500) kontrol et
-            if (!response.ok) {
-                // Spesifik hata mesajları için status kodlarını kontrol et
-                if (response.status === 404) {
-                    throw new Error(`'${dataFile}' dosyası bulunamadı. URL: ${response.url}`);
-                }
-                throw new Error(`Veri yüklenirken HTTP hatası oluştu: ${response.status} ${response.statusText}`);
-            }
-
-            const jsonData = await response.json(); // <-- JSON parse işlemi burada
-            console.log("Yüklenen JSON verisi (ilk 5 video):", jsonData.slice(0, 5)); // Debug için
-
-            // Gelen verinin beklenen formatta (dizi) olup olmadığını kontrol et
-            if (!Array.isArray(jsonData)) {
-                throw new Error('Yüklenen veri bir dizi değil. Beklenen JSON formatı geçersiz.');
-            }
-
-            allVideos = jsonData; // Veriyi global değişkene ata
-
-            if (allVideos.length === 0) {
-                throw new Error('Yüklenen video verisi boş bir dizi.');
-            }
-
-            // Sayfa başlığını ayarla
-            document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
-
-            // Videoları render et
-            renderVideos();
-
-        } catch (error) {
-            console.error("Veri yükleme hatası:", error);
-            showNoDataMessage(); // Hata durumunda "veri yok" mesajını göster
-        }
-    }
 
     /**
      * Toggles the display of a content section with fade/slide effect.
