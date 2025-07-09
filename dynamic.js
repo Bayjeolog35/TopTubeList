@@ -105,8 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
         allVideos.slice(0, displayCount).forEach(video => {
             const card = createVideoCard(video);
             fragment.appendChild(card);
-            // Kartların görünmesini geciktirmek yerine CSS geçişi (transition) ile yönetmek daha iyi
-            // setTimeout(() => card.classList.add("show"), 50); // Bu satır kaldırıldı
         });
 
         videoListContainer.appendChild(fragment);
