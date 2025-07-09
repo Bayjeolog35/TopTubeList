@@ -257,7 +257,7 @@ body.dark-mode .video-info a {
 }
 
 
-.country-panel button {
+.country-panel .country-link {
   padding: 6px 10px;
   font-size: 14px;
   border: none;
@@ -271,6 +271,8 @@ body.dark-mode .video-info a {
   text-overflow: ellipsis;
   display: inline-block;
   overflow-x: clip;
+  text-decoration: none; /* altı çizgiyi kaldırır */
+  cursor: pointer;
 }
 
 .country-panel button:hover {
