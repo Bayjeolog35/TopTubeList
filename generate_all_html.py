@@ -971,228 +971,228 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
 
 
 </div>
-      <div class="country-column">
-<button onclick="location.href='afghanistan.html'" data-letter="A">Afghanistan</button>
-  <button onclick="location.href='albania.html'" data-letter="A">Albania</button>
-  <button onclick="location.href='algeria.html'" data-letter="A">Algeria</button>
-  <button onclick="location.href='andorra.html'" data-letter="A">Andorra</button>
-  <button onclick="location.href='angola.html'" data-letter="A">Angola</button>
-  <button onclick="location.href='antigua-and-barbuda.html'" data-letter="A">Antigua and Barbuda</button>
-  <button onclick="location.href='argentina.html'" data-letter="A">Argentina</button>
-  <button onclick="location.href='armenia.html'" data-letter="A">Armenia</button>
-  <button onclick="location.href='australia.html'" data-letter="A">Australia</button>
-  <button onclick="location.href='austria.html'" data-letter="A">Austria</button>
-  <button onclick="location.href='azerbaijan.html'" data-letter="A">Azerbaijan</button>
+     <div class="country-column">
+  <a href="/afghanistan" class="country-link">Afghanistan</a>
+  <a href="/albania" class="country-link">Albania</a>
+  <a href="/algeria" class="country-link">Algeria</a>
+  <a href="/andorra" class="country-link">Andorra</a>
+  <a href="/angola" class="country-link">Angola</a>
+  <a href="/antigua-and-barbuda" class="country-link">Antigua and Barbuda</a>
+  <a href="/argentina" class="country-link">Argentina</a>
+  <a href="/armenia" class="country-link">Armenia</a>
+  <a href="/australia" class="country-link">Australia</a>
+  <a href="/austria" class="country-link">Austria</a>
+  <a href="/azerbaijan" class="country-link">Azerbaijan</a>
 
-  <button onclick="location.href='bahamas.html'" data-letter="B">Bahamas</button>
-  <button onclick="location.href='bahrain.html'" data-letter="B">Bahrain</button>
-  <button onclick="location.href='bangladesh.html'" data-letter="B">Bangladesh</button>
-  <button onclick="location.href='barbados.html'" data-letter="B">Barbados</button>
-  <button onclick="location.href='belarus.html'" data-letter="B">Belarus</button>
-  <button onclick="location.href='belgium.html'" data-letter="B">Belgium</button>
-  <button onclick="location.href='belize.html'" data-letter="B">Belize</button>
-  <button onclick="location.href='benin.html'" data-letter="B">Benin</button>
-  <button onclick="location.href='bhutan.html'" data-letter="B">Bhutan</button>
-  <button onclick="location.href='bolivia.html'" data-letter="B">Bolivia</button>
-  <button onclick="location.href='bosnia-and-herzegovina.html'" data-letter="B">Bosnia and Herzegovina</button>
-  <button onclick="location.href='botswana.html'" data-letter="B">Botswana</button>
-  <button onclick="location.href='brazil.html'" data-letter="B">Brazil</button>
-  <button onclick="location.href='brunei.html'" data-letter="B">Brunei</button>
-  <button onclick="location.href='bulgaria.html'" data-letter="B">Bulgaria</button>
-  <button onclick="location.href='burkina-faso.html'" data-letter="B">Burkina Faso</button>
-  <button onclick="location.href='burundi.html'" data-letter="B">Burundi</button>
+  <a href="/bahamas" class="country-link">Bahamas</a>
+  <a href="/bahrain" class="country-link">Bahrain</a>
+  <a href="/bangladesh" class="country-link">Bangladesh</a>
+  <a href="/barbados" class="country-link">Barbados</a>
+  <a href="/belarus" class="country-link">Belarus</a>
+  <a href="/belgium" class="country-link">Belgium</a>
+  <a href="/belize" class="country-link">Belize</a>
+  <a href="/benin" class="country-link">Benin</a>
+  <a href="/bhutan" class="country-link">Bhutan</a>
+  <a href="/bolivia" class="country-link">Bolivia</a>
+  <a href="/bosnia-and-herzegovina" class="country-link">Bosnia and Herzegovina</a>
+  <a href="/botswana" class="country-link">Botswana</a>
+  <a href="/brazil" class="country-link">Brazil</a>
+  <a href="/brunei" class="country-link">Brunei</a>
+  <a href="/bulgaria" class="country-link">Bulgaria</a>
+  <a href="/burkina-faso" class="country-link">Burkina Faso</a>
+  <a href="/burundi" class="country-link">Burundi</a>
 
-  <button onclick="location.href='cabo-verde.html'" data-letter="C">Cabo Verde</button>
-  <button onclick="location.href='cambodia.html'" data-letter="C">Cambodia</button>
-  <button onclick="location.href='cameroon.html'" data-letter="C">Cameroon</button>
-  <button onclick="location.href='canada.html'" data-letter="C">Canada</button>
-  <button onclick="location.href='central-african-republic.html'" data-letter="C">Central African Republic</button>
-  <button onclick="location.href='chad.html'" data-letter="C">Chad</button>
-  <button onclick="location.href='chile.html'" data-letter="C">Chile</button>
-  <button onclick="location.href='china.html'" data-letter="C">China</button>
-  <button onclick="location.href='colombia.html'" data-letter="C">Colombia</button>
-  <button onclick="location.href='comoros.html'" data-letter="C">Comoros</button>
-  <button onclick="location.href='congo-democratic-republic-of-the.html'" data-letter="C">Congo (Democratic Republic of the)</button>
-  <button onclick="location.href='congo-republic-of-the.html'" data-letter="C">Congo (Republic of the)</button>
-  <button onclick="location.href='costa-rica.html'" data-letter="C">Costa Rica</button>
-  <button onclick="location.href='cote-d-ivoire.html'" data-letter="C">Cote d'Ivoire</button>
-  <button onclick="location.href='croatia.html'" data-letter="C">Croatia</button>
-  <button onclick="location.href='cuba.html'" data-letter="C">Cuba</button>
-  <button onclick="location.href='cyprus.html'" data-letter="C">Cyprus</button>
-  <button onclick="location.href='czech-republic.html'" data-letter="C">Czech Republic</button>
+  <a href="/cabo-verde" class="country-link">Cabo Verde</a>
+  <a href="/cambodia" class="country-link">Cambodia</a>
+  <a href="/cameroon" class="country-link">Cameroon</a>
+  <a href="/canada" class="country-link">Canada</a>
+  <a href="/central-african-republic" class="country-link">Central African Republic</a>
+  <a href="/chad" class="country-link">Chad</a>
+  <a href="/chile" class="country-link">Chile</a>
+  <a href="/china" class="country-link">China</a>
+  <a href="/colombia" class="country-link">Colombia</a>
+  <a href="/comoros" class="country-link">Comoros</a>
+  <a href="/congo-democratic-republic-of-the" class="country-link">Congo (Democratic Republic of the)</a>
+  <a href="/congo-republic-of-the" class="country-link">Congo (Republic of the)</a>
+  <a href="/costa-rica" class="country-link">Costa Rica</a>
+  <a href="/cote-d-ivoire" class="country-link">Cote d'Ivoire</a>
+  <a href="/croatia" class="country-link">Croatia</a>
+  <a href="/cuba" class="country-link">Cuba</a>
+  <a href="/cyprus" class="country-link">Cyprus</a>
+  <a href="/czech-republic" class="country-link">Czech Republic</a>
 
-  <button onclick="location.href='denmark.html'" data-letter="D">Denmark</button>
-  <button onclick="location.href='djibouti.html'" data-letter="D">Djibouti</button>
-  <button onclick="location.href='dominica.html'" data-letter="D">Dominica</button>
-  <button onclick="location.href='dominican-republic.html'" data-letter="D">Dominican Republic</button>
+  <a href="/denmark" class="country-link">Denmark</a>
+  <a href="/djibouti" class="country-link">Djibouti</a>
+  <a href="/dominica" class="country-link">Dominica</a>
+  <a href="/dominican-republic" class="country-link">Dominican Republic</a>
 
-  <button onclick="location.href='east-timor.html'" data-letter="E">East Timor</button>
-  <button onclick="location.href='ecuador.html'" data-letter="E">Ecuador</button>
-  <button onclick="location.href='egypt.html'" data-letter="E">Egypt</button>
-  <button onclick="location.href='el-salvador.html'" data-letter="E">El Salvador</button>
-  <button onclick="location.href='equatorial-guinea.html'" data-letter="E">Equatorial Guinea</button>
-  <button onclick="location.href='eritrea.html'" data-letter="E">Eritrea</button>
-  <button onclick="location.href='estonia.html'" data-letter="E">Estonia</button>
-  <button onclick="location.href='eswatini.html'" data-letter="E">Eswatini</button>
-  <button onclick="location.href='ethiopia.html'" data-letter="E">Ethiopia</button>
+  <a href="/east-timor" class="country-link">East Timor</a>
+  <a href="/ecuador" class="country-link">Ecuador</a>
+  <a href="/egypt" class="country-link">Egypt</a>
+  <a href="/el-salvador" class="country-link">El Salvador</a>
+  <a href="/equatorial-guinea" class="country-link">Equatorial Guinea</a>
+  <a href="/eritrea" class="country-link">Eritrea</a>
+  <a href="/estonia" class="country-link">Estonia</a>
+  <a href="/eswatini" class="country-link">Eswatini</a>
+  <a href="/ethiopia" class="country-link">Ethiopia</a>
 
-  <button onclick="location.href='fiji.html'" data-letter="F">Fiji</button>
-  <button onclick="location.href='finland.html'" data-letter="F">Finland</button>
-  <button onclick="location.href='france.html'" data-letter="F">France</button>
+  <a href="/fiji" class="country-link">Fiji</a>
+  <a href="/finland" class="country-link">Finland</a>
+  <a href="/france" class="country-link">France</a>
 
-  <button onclick="location.href='gabon.html'" data-letter="G">Gabon</button>
-  <button onclick="location.href='gambia.html'" data-letter="G">Gambia</button>
-  <button onclick="location.href='georgia.html'" data-letter="G">Georgia</button>
-  <button onclick="location.href='germany.html'" data-letter="G">Germany</button>
-  <button onclick="location.href='ghana.html'" data-letter="G">Ghana</button>
-  <button onclick="location.href='greece.html'" data-letter="G">Greece</button>
-  <button onclick="location.href='grenada.html'" data-letter="G">Grenada</button>
-  <button onclick="location.href='guatemala.html'" data-letter="G">Guatemala</button>
-  <button onclick="location.href='guinea.html'" data-letter="G">Guinea</button>
-  <button onclick="location.href='guinea-bissau.html'" data-letter="G">Guinea-Bissau</button>
-  <button onclick="location.href='guyana.html'" data-letter="G">Guyana</button>
+  <a href="/gabon" class="country-link">Gabon</a>
+  <a href="/gambia" class="country-link">Gambia</a>
+  <a href="/georgia" class="country-link">Georgia</a>
+  <a href="/germany" class="country-link">Germany</a>
+  <a href="/ghana" class="country-link">Ghana</a>
+  <a href="/greece" class="country-link">Greece</a>
+  <a href="/grenada" class="country-link">Grenada</a>
+  <a href="/guatemala" class="country-link">Guatemala</a>
+  <a href="/guinea" class="country-link">Guinea</a>
+  <a href="/guinea-bissau" class="country-link">Guinea-Bissau</a>
+  <a href="/guyana" class="country-link">Guyana</a>
 
-  <button onclick="location.href='haiti.html'" data-letter="H">Haiti</button>
-  <button onclick="location.href='honduras.html'" data-letter="H">Honduras</button>
-  <button onclick="location.href='hungary.html'" data-letter="H">Hungary</button>
+  <a href="/haiti" class="country-link">Haiti</a>
+  <a href="/honduras" class="country-link">Honduras</a>
+  <a href="/hungary" class="country-link">Hungary</a>
 
-  <button onclick="location.href='iceland.html'" data-letter="I">Iceland</button>
-  <button onclick="location.href='india.html'" data-letter="I">India</button>
-  <button onclick="location.href='indonesia.html'" data-letter="I">Indonesia</button>
-  <button onclick="location.href='iran.html'" data-letter="I">Iran</button>
-  <button onclick="location.href='iraq.html'" data-letter="I">Iraq</button>
-  <button onclick="location.href='ireland.html'" data-letter="I">Ireland</button>
-  <button onclick="location.href='israel.html'" data-letter="I">Israel</button>
-  <button onclick="location.href='italy.html'" data-letter="I">Italy</button>
+  <a href="/iceland" class="country-link">Iceland</a>
+  <a href="/india" class="country-link">India</a>
+  <a href="/indonesia" class="country-link">Indonesia</a>
+  <a href="/iran" class="country-link">Iran</a>
+  <a href="/iraq" class="country-link">Iraq</a>
+  <a href="/ireland" class="country-link">Ireland</a>
+  <a href="/israel" class="country-link">Israel</a>
+  <a href="/italy" class="country-link">Italy</a>
 
-  <button onclick="location.href='jamaica.html'" data-letter="J">Jamaica</button>
-  <button onclick="location.href='japan.html'" data-letter="J">Japan</button>
-  <button onclick="location.href='jordan.html'" data-letter="J">Jordan</button>
+  <a href="/jamaica" class="country-link">Jamaica</a>
+  <a href="/japan" class="country-link">Japan</a>
+  <a href="/jordan" class="country-link">Jordan</a>
 
-  <button onclick="location.href='kazakhstan.html'" data-letter="K">Kazakhstan</button>
-  <button onclick="location.href='kenya.html'" data-letter="K">Kenya</button>
-  <button onclick="location.href='kiribati.html'" data-letter="K">Kiribati</button>
-  <button onclick="location.href='korea-north.html'" data-letter="K">Korea (North)</button>
-  <button onclick="location.href='korea-south.html'" data-letter="K">Korea (South)</button>
-  <button onclick="location.href='kosovo.html'" data-letter="K">Kosovo</button>
-  <button onclick="location.href='kuwait.html'" data-letter="K">Kuwait</button>
-  <button onclick="location.href='kyrgyzstan.html'" data-letter="K">Kyrgyzstan</button>
+  <a href="/kazakhstan" class="country-link">Kazakhstan</a>
+  <a href="/kenya" class="country-link">Kenya</a>
+  <a href="/kiribati" class="country-link">Kiribati</a>
+  <a href="/korea-north" class="country-link">Korea (North)</a>
+  <a href="/korea-south" class="country-link">Korea (South)</a>
+  <a href="/kosovo" class="country-link">Kosovo</a>
+  <a href="/kuwait" class="country-link">Kuwait</a>
+  <a href="/kyrgyzstan" class="country-link">Kyrgyzstan</a>
 
-  <button onclick="location.href='laos.html'" data-letter="L">Laos</button>
-  <button onclick="location.href='latvia.html'" data-letter="L">Latvia</button>
-  <button onclick="location.href='lebanon.html'" data-letter="L">Lebanon</button>
-  <button onclick="location.href='lesotho.html'" data-letter="L">Lesotho</button>
-  <button onclick="location.href='liberia.html'" data-letter="L">Liberia</button>
-  <button onclick="location.href='libya.html'" data-letter="L">Libya</button>
-  <button onclick="location.href='liechtenstein.html'" data-letter="L">Liechtenstein</button>
-  <button onclick="location.href='lithuania.html'" data-letter="L">Lithuania</button>
-  <button onclick="location.href='luxembourg.html'" data-letter="L">Luxembourg</button>
+  <a href="/laos" class="country-link">Laos</a>
+  <a href="/latvia" class="country-link">Latvia</a>
+  <a href="/lebanon" class="country-link">Lebanon</a>
+  <a href="/lesotho" class="country-link">Lesotho</a>
+  <a href="/liberia" class="country-link">Liberia</a>
+  <a href="/libya" class="country-link">Libya</a>
+  <a href="/liechtenstein" class="country-link">Liechtenstein</a>
+  <a href="/lithuania" class="country-link">Lithuania</a>
+  <a href="/luxembourg" class="country-link">Luxembourg</a>
 
-  <button onclick="location.href='madagascar.html'" data-letter="M">Madagascar</button>
-  <button onclick="location.href='malawi.html'" data-letter="M">Malawi</button>
-  <button onclick="location.href='malaysia.html'" data-letter="M">Malaysia</button>
-  <button onclick="location.href='maldives.html'" data-letter="M">Maldives</button>
-  <button onclick="location.href='mali.html'" data-letter="M">Mali</button>
-  <button onclick="location.href='malta.html'" data-letter="M">Malta</button>
-  <button onclick="location.href='marshall-islands.html'" data-letter="M">Marshall Islands</button>
-  <button onclick="location.href='mauritania.html'" data-letter="M">Mauritania</button>
-  <button onclick="location.href='mauritius.html'" data-letter="M">Mauritius</button>
-  <button onclick="location.href='mexico.html'" data-letter="M">Mexico</button>
-  <button onclick="location.href='micronesia.html'" data-letter="M">Micronesia</button>
-  <button onclick="location.href='moldova.html'" data-letter="M">Moldova</button>
-  <button onclick="location.href='monaco.html'" data-letter="M">Monaco</button>
-  <button onclick="location.href='mongolia.html'" data-letter="M">Mongolia</button>
-  <button onclick="location.href='montenegro.html'" data-letter="M">Montenegro</button>
-  <button onclick="location.href='morocco.html'" data-letter="M">Morocco</button>
-  <button onclick="location.href='mozambique.html'" data-letter="M">Mozambique</button>
-  <button onclick="location.href='myanmar.html'" data-letter="M">Myanmar</button>
+  <a href="/madagascar" class="country-link">Madagascar</a>
+  <a href="/malawi" class="country-link">Malawi</a>
+  <a href="/malaysia" class="country-link">Malaysia</a>
+  <a href="/maldives" class="country-link">Maldives</a>
+  <a href="/mali" class="country-link">Mali</a>
+  <a href="/malta" class="country-link">Malta</a>
+  <a href="/marshall-islands" class="country-link">Marshall Islands</a>
+  <a href="/mauritania" class="country-link">Mauritania</a>
+  <a href="/mauritius" class="country-link">Mauritius</a>
+  <a href="/mexico" class="country-link">Mexico</a>
+  <a href="/micronesia" class="country-link">Micronesia</a>
+  <a href="/moldova" class="country-link">Moldova</a>
+  <a href="/monaco" class="country-link">Monaco</a>
+  <a href="/mongolia" class="country-link">Mongolia</a>
+  <a href="/montenegro" class="country-link">Montenegro</a>
+  <a href="/morocco" class="country-link">Morocco</a>
+  <a href="/mozambique" class="country-link">Mozambique</a>
+  <a href="/myanmar" class="country-link">Myanmar</a>
 
-  <button onclick="location.href='namibia.html'" data-letter="N">Namibia</button>
-  <button onclick="location.href='nauru.html'" data-letter="N">Nauru</button>
-  <button onclick="location.href='nepal.html'" data-letter="N">Nepal</button>
-  <button onclick="location.href='netherlands.html'" data-letter="N">Netherlands</button>
-  <button onclick="location.href='new-zealand.html'" data-letter="N">New Zealand</button>
-  <button onclick="location.href='nicaragua.html'" data-letter="N">Nicaragua</button>
-  <button onclick="location.href='niger.html'" data-letter="N">Niger</button>
-  <button onclick="location.href='nigeria.html'" data-letter="N">Nigeria</button>
-  <button onclick="location.href='north-macedonia.html'" data-letter="N">North Macedonia</button>
-  <button onclick="location.href='norway.html'" data-letter="N">Norway</button>
+  <a href="/namibia" class="country-link">Namibia</a>
+  <a href="/nauru" class="country-link">Nauru</a>
+  <a href="/nepal" class="country-link">Nepal</a>
+  <a href="/netherlands" class="country-link">Netherlands</a>
+  <a href="/new-zealand" class="country-link">New Zealand</a>
+  <a href="/nicaragua" class="country-link">Nicaragua</a>
+  <a href="/niger" class="country-link">Niger</a>
+  <a href="/nigeria" class="country-link">Nigeria</a>
+  <a href="/north-macedonia" class="country-link">North Macedonia</a>
+  <a href="/norway" class="country-link">Norway</a>
 
-  <button onclick="location.href='oman.html'" data-letter="O">Oman</button>
+  <a href="/oman" class="country-link">Oman</a>
 
-  <button onclick="location.href='pakistan.html'" data-letter="P">Pakistan</button>
-  <button onclick="location.href='palau.html'" data-letter="P">Palau</button>
-  <button onclick="location.href='palestine.html'" data-letter="P">Palestine</button>
-  <button onclick="location.href='panama.html'" data-letter="P">Panama</button>
-  <button onclick="location.href='papua-new-guinea.html'" data-letter="P">Papua New Guinea</button>
-  <button onclick="location.href='paraguay.html'" data-letter="P">Paraguay</button>
-  <button onclick="location.href='peru.html'" data-letter="P">Peru</button>
-  <button onclick="location.href='philippines.html'" data-letter="P">Philippines</button>
-  <button onclick="location.href='poland.html'" data-letter="P">Poland</button>
-  <button onclick="location.href='portugal.html'" data-letter="P">Portugal</button>
+  <a href="/pakistan" class="country-link">Pakistan</a>
+  <a href="/palau" class="country-link">Palau</a>
+  <a href="/palestine" class="country-link">Palestine</a>
+  <a href="/panama" class="country-link">Panama</a>
+  <a href="/papua-new-guinea" class="country-link">Papua New Guinea</a>
+  <a href="/paraguay" class="country-link">Paraguay</a>
+  <a href="/peru" class="country-link">Peru</a>
+  <a href="/philippines" class="country-link">Philippines</a>
+  <a href="/poland" class="country-link">Poland</a>
+  <a href="/portugal" class="country-link">Portugal</a>
 
-  <button onclick="location.href='qatar.html'" data-letter="Q">Qatar</button>
+  <a href="/qatar" class="country-link">Qatar</a>
 
-  <button onclick="location.href='romania.html'" data-letter="R">Romania</button>
-  <button onclick="location.href='russia.html'" data-letter="R">Russia</button>
-  <button onclick="location.href='rwanda.html'" data-letter="R">Rwanda</button>
+  <a href="/romania" class="country-link">Romania</a>
+  <a href="/russia" class="country-link">Russia</a>
+  <a href="/rwanda" class="country-link">Rwanda</a>
 
-  <button onclick="location.href='saint-kitts-and-nevis.html'" data-letter="S">Saint Kitts and Nevis</button>
-  <button onclick="location.href='saint-lucia.html'" data-letter="S">Saint Lucia</button>
-  <button onclick="location.href='saint-vincent-and-the-grenadines.html'" data-letter="S">Saint Vincent and the Grenadines</button>
-  <button onclick="location.href='samoa.html'" data-letter="S">Samoa</button>
-  <button onclick="location.href='san-marino.html'" data-letter="S">San Marino</button>
-  <button onclick="location.href='sao-tome-and-principe.html'" data-letter="S">Sao Tome and Principe</button>
-  <button onclick="location.href='saudi-arabia.html'" data-letter="S">Saudi Arabia</button>
-  <button onclick="location.href='senegal.html'" data-letter="S">Senegal</button>
-  <button onclick="location.href='serbia.html'" data-letter="S">Serbia</button>
-  <button onclick="location.href='seychelles.html'" data-letter="S">Seychelles</button>
-  <button onclick="location.href='sierra-leone.html'" data-letter="S">Sierra Leone</button>
-  <button onclick="location.href='singapore.html'" data-letter="S">Singapore</button>
-  <button onclick="location.href='slovakia.html'" data-letter="S">Slovakia</button>
-  <button onclick="location.href='slovenia.html'" data-letter="S">Slovenia</button>
-  <button onclick="location.href='solomon-islands.html'" data-letter="S">Solomon Islands</button>
-  <button onclick="location.href='somalia.html'" data-letter="S">Somalia</button>
-  <button onclick="location.href='south-africa.html'" data-letter="S">South Africa</button>
-  <button onclick="location.href='south-sudan.html'" data-letter="S">South Sudan</button>
-  <button onclick="location.href='spain.html'" data-letter="S">Spain</button>
-  <button onclick="location.href='sri-lanka.html'" data-letter="S">Sri Lanka</button>
-  <button onclick="location.href='sudan.html'" data-letter="S">Sudan</button>
-  <button onclick="location.href='suriname.html'" data-letter="S">Suriname</button>
-  <button onclick="location.href='sweden.html'" data-letter="S">Sweden</button>
-  <button onclick="location.href='switzerland.html'" data-letter="S">Switzerland</button>
-  <button onclick="location.href='syria.html'" data-letter="S">Syria</button>
+  <a href="/saint-kitts-and-nevis" class="country-link">Saint Kitts and Nevis</a>
+  <a href="/saint-lucia" class="country-link">Saint Lucia</a>
+  <a href="/saint-vincent-and-the-grenadines" class="country-link">Saint Vincent and the Grenadines</a>
+  <a href="/samoa" class="country-link">Samoa</a>
+  <a href="/san-marino" class="country-link">San Marino</a>
+  <a href="/sao-tome-and-principe" class="country-link">Sao Tome and Principe</a>
+  <a href="/saudi-arabia" class="country-link">Saudi Arabia</a>
+  <a href="/senegal" class="country-link">Senegal</a>
+  <a href="/serbia" class="country-link">Serbia</a>
+  <a href="/seychelles" class="country-link">Seychelles</a>
+  <a href="/sierra-leone" class="country-link">Sierra Leone</a>
+  <a href="/singapore" class="country-link">Singapore</a>
+  <a href="/slovakia" class="country-link">Slovakia</a>
+  <a href="/slovenia" class="country-link">Slovenia</a>
+  <a href="/solomon-islands" class="country-link">Solomon Islands</a>
+  <a href="/somalia" class="country-link">Somalia</a>
+  <a href="/south-africa" class="country-link">South Africa</a>
+  <a href="/south-sudan" class="country-link">South Sudan</a>
+  <a href="/spain" class="country-link">Spain</a>
+  <a href="/sri-lanka" class="country-link">Sri Lanka</a>
+  <a href="/sudan" class="country-link">Sudan</a>
+  <a href="/suriname" class="country-link">Suriname</a>
+  <a href="/sweden" class="country-link">Sweden</a>
+  <a href="/switzerland" class="country-link">Switzerland</a>
+  <a href="/syria" class="country-link">Syria</a>
 
-  <button onclick="location.href='taiwan.html'" data-letter="T">Taiwan</button>
-  <button onclick="location.href='tajikistan.html'" data-letter="T">Tajikistan</button>
-  <button onclick="location.href='tanzania.html'" data-letter="T">Tanzania</button>
-  <button onclick="location.href='thailand.html'" data-letter="T">Thailand</button>
-  <button onclick="location.href='togo.html'" data-letter="T">Togo</button>
-  <button onclick="location.href='tonga.html'" data-letter="T">Tonga</button>
-  <button onclick="location.href='trinidad-and-tobago.html'" data-letter="T">Trinidad and Tobago</button>
-  <button onclick="location.href='tunisia.html'" data-letter="T">Tunisia</button>
-  <button onclick="location.href='turkey.html'" data-letter="T">Turkey</button>
-  <button onclick="location.href='turkmenistan.html'" data-letter="T">Turkmenistan</button>
-  <button onclick="location.href='tuvalu.html'" data-letter="T">Tuvalu</button>
+  <a href="/taiwan" class="country-link">Taiwan</a>
+  <a href="/tajikistan" class="country-link">Tajikistan</a>
+  <a href="/tanzania" class="country-link">Tanzania</a>
+  <a href="/thailand" class="country-link">Thailand</a>
+  <a href="/togo" class="country-link">Togo</a>
+  <a href="/tonga" class="country-link">Tonga</a>
+  <a href="/trinidad-and-tobago" class="country-link">Trinidad and Tobago</a>
+  <a href="/tunisia" class="country-link">Tunisia</a>
+  <a href="/turkey" class="country-link">Turkey</a>
+  <a href="/turkmenistan" class="country-link">Turkmenistan</a>
+  <a href="/tuvalu" class="country-link">Tuvalu</a>
 
-  <button onclick="location.href='uganda.html'" data-letter="U">Uganda</button>
-  <button onclick="location.href='ukraine.html'" data-letter="U">Ukraine</button>
-  <button onclick="location.href='united-arab-emirates.html'" data-letter="U">United Arab Emirates</button>
-  <button onclick="location.href='united-kingdom.html'" data-letter="U">United Kingdom</button>
-  <button onclick="location.href='united-states.html'" data-letter="U">United States</button>
-  <button onclick="location.href='uruguay.html'" data-letter="U">Uruguay</button>
-  <button onclick="location.href='uzbekistan.html'" data-letter="U">Uzbekistan</button>
+  <a href="/uganda" class="country-link">Uganda</a>
+  <a href="/ukraine" class="country-link">Ukraine</a>
+  <a href="/united-arab-emirates" class="country-link">United Arab Emirates</a>
+  <a href="/united-kingdom" class="country-link">United Kingdom</a>
+  <a href="/united-states" class="country-link">United States</a>
+  <a href="/uruguay" class="country-link">Uruguay</a>
+  <a href="/uzbekistan" class="country-link">Uzbekistan</a>
 
-  <button onclick="location.href='vanuatu.html'" data-letter="V">Vanuatu</button>
-  <button onclick="location.href='vatican-city.html'" data-letter="V">Vatican City</button>
-  <button onclick="location.href='venezuela.html'" data-letter="V">Venezuela</button>
-  <button onclick="location.href='vietnam.html'" data-letter="V">Vietnam</button>
+  <a href="/vanuatu" class="country-link">Vanuatu</a>
+  <a href="/vatican-city" class="country-link">Vatican City</a>
+  <a href="/venezuela" class="country-link">Venezuela</a>
+  <a href="/vietnam" class="country-link">Vietnam</a>
 
-  <button onclick="location.href='yemen.html'" data-letter="Y">Yemen</button>
+  <a href="/yemen" class="country-link">Yemen</a>
 
-  <button onclick="location.href='zambia.html'" data-letter="Z">Zambia</button>
-  <button onclick="location.href='zimbabwe.html'" data-letter="Z">Zimbabwe</button>
-  </div> 
+  <a href="/zambia" class="country-link">Zambia</a>
+  <a href="/zimbabwe" class="country-link">Zimbabwe</a>
+</div>
 </main>
 
   <div id="videoList" class="video-list"></div>
