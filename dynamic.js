@@ -82,16 +82,17 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
             </div>
         `;
 
+        // sadece veri yoksa main'e class ekle
+const mainElement = document.querySelector("main");
+if (mainElement) {
+  mainElement.classList.add("centered-no-data");
+}
+        
         // Load More butonunu gizle, eğer mevcutsa
         if (loadMoreButton) {
             loadMoreButton.style.display = "none";
         }
     }
-
-// Footer yukarı yapışmasın diye main'e min-height ver
-const mainContent = document.querySelector("main.main-content");
-if (mainContent) {
-    mainContent.style.minHeight = "55vh";
     
     /**
      * Fetches video data for the current country and renders it.
