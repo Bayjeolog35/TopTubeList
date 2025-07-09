@@ -932,7 +932,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
 
   <nav id="continentNav">
     <a href="index.html">Worldwide</a>
-    <a href="/asia" class="{ 'active' if name == 'asia' else '' }">Asia</a>
+    <a href="asia.html" class="{ 'active' if name == 'asia' else '' }">Asia</a>
     <a href="europe.html" class="{ 'active' if name == 'europe' else '' }">Europe</a>
     <a href="africa.html" class="{ 'active' if name == 'africa' else '' }">Africa</a>
     <a href="north-america.html" class="{ 'active' if name == 'north-america' else '' }">North America</a>
