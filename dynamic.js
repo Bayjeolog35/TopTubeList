@@ -89,32 +89,56 @@ document.addEventListener("DOMContentLoaded", () => {
     /**
      * Renders the current subset of videos to the DOM.
      */
-    function renderVideos() {
-        if (!videoListContainer) {
-            console.warn("videoListContainer bulunamadı. Videolar render edilemiyor.");
-            return;
+  function getCountryFromURL() {
+    const path = window.location.pathname;
+    const filename = path.split('/').pop(); // "turkey.html" gibi
+    return filename.replace('.html', '').toLowerCase(); // "turkey" döndürür
+}
+
+async function loadVideos() {
+    const country = getCountryFromURL();
+
+    // 👇 Eğer ana sayfadaysak (index.html), dosya adı farklı
+    const dataFile = (country === "index")
+        ? "index.videos.json"
+        : `${country}.videos.json`;
+
+    console.log(`Veri yükleme denemesi: ${dataFile}`);
+
+    try {
+        const response = await fetch(dataFile);
+
+        if (!response.ok) {
+            if (response.status === 404) {
+                throw new Error(`'${dataFile}' dosyası bulunamadı. URL: ${response.url}`);
+            }
+            throw new Error(`Veri yüklenirken HTTP hatası oluştu: ${response.status} ${response.statusText}`);
         }
 
-        videoListContainer.innerHTML = ""; // Önceki videoları temizle
+        const jsonData = await response.json();
 
-        if (!Array.isArray(allVideos) || allVideos.length === 0) {
-            showNoDataMessage();
-            return;
+        if (!Array.isArray(jsonData)) {
+            throw new Error("Yüklenen veri bir dizi değil.");
         }
 
-        const fragment = document.createDocumentFragment();
-        allVideos.slice(0, displayCount).forEach(video => {
-            const card = createVideoCard(video);
-            fragment.appendChild(card);
-        });
+        allVideos = jsonData;
 
-        videoListContainer.appendChild(fragment);
-
-        // Load More butonunun görünürlüğünü ayarla
-        if (loadMoreButton) {
-            loadMoreButton.style.display = displayCount >= allVideos.length ? "none" : "block";
+        if (allVideos.length === 0) {
+            throw new Error("Video verisi boş.");
         }
+
+        // Sayfa başlığı sadece ülke sayfalarında güncellenebilir
+        if (country !== "index") {
+            document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
+        }
+
+        renderVideos();
+
+    } catch (error) {
+        console.error("Veri yükleme hatası:", error);
+        showNoDataMessage();
     }
+}
 
     /**
      * Fetches video data for the current country from a JSON file.
