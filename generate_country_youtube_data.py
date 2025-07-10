@@ -153,17 +153,6 @@ for country_slug, info in country_data_for_processing.items():
                 </iframe>
                 """
                 
-                current_html_content = current_html_content.replace(
-                    IFRAME_PLACEHOLDER, iframe_html
-                )
-            else:
-                current_html_content = current_html_content.replace(
-                    IFRAME_PLACEHOLDER, ""
-                )
-
-            with open(HTML_OUTPUT_FILE, "w", encoding="utf-8") as f:
-                f.write(current_html_content)
-
             print(f"✅ {HTML_OUTPUT_FILE} içine structured data ve iframe eklendi.")
         else:
             print(
