@@ -1,16 +1,46 @@
 import os
 import json
 import requests
+from datetime import datetime
 
-YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")  # .env dosyasından veya CI ortamından gelir
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")  # API key ortam değişkeninden alınır
 
 CONTINENT_COUNTRIES = {
-    "asia": [{"slug": "india", "code": "IN"}, {"slug": "indonesia", "code": "ID"}, {"slug": "japan", "code": "JP"}, {"slug": "pakistan", "code": "PK"}, {"slug": "bangladesh", "code": "BD"}],
-    "europe": [{"slug": "united-kingdom", "code": "GB"}, {"slug": "germany", "code": "DE"}, {"slug": "france", "code": "FR"}, {"slug": "italy", "code": "IT"}, {"slug": "spain", "code": "ES"}],
-    "north-america": [{"slug": "united-states", "code": "US"}, {"slug": "canada", "code": "CA"}, {"slug": "mexico", "code": "MX"}],
-    "south-america": [{"slug": "brazil", "code": "BR"}, {"slug": "argentina", "code": "AR"}, {"slug": "colombia", "code": "CO"}, {"slug": "chile", "code": "CL"}],
-    "africa": [{"slug": "nigeria", "code": "NG"}, {"slug": "egypt", "code": "EG"}, {"slug": "south-africa", "code": "ZA"}, {"slug": "kenya", "code": "KE"}],
-    "oceania": [{"slug": "australia", "code": "AU"}, {"slug": "new-zealand", "code": "NZ"}]
+    "asia": [
+        {"slug": "india", "code": "IN"},
+        {"slug": "indonesia", "code": "ID"},
+        {"slug": "japan", "code": "JP"},
+        {"slug": "pakistan", "code": "PK"},
+        {"slug": "bangladesh", "code": "BD"}
+    ],
+    "europe": [
+        {"slug": "united-kingdom", "code": "GB"},
+        {"slug": "germany", "code": "DE"},
+        {"slug": "france", "code": "FR"},
+        {"slug": "italy", "code": "IT"},
+        {"slug": "spain", "code": "ES"}
+    ],
+    "north-america": [
+        {"slug": "united-states", "code": "US"},
+        {"slug": "canada", "code": "CA"},
+        {"slug": "mexico", "code": "MX"}
+    ],
+    "south-america": [
+        {"slug": "brazil", "code": "BR"},
+        {"slug": "argentina", "code": "AR"},
+        {"slug": "colombia", "code": "CO"},
+        {"slug": "chile", "code": "CL"}
+    ],
+    "africa": [
+        {"slug": "nigeria", "code": "NG"},
+        {"slug": "egypt", "code": "EG"},
+        {"slug": "south-africa", "code": "ZA"},
+        {"slug": "kenya", "code": "KE"}
+    ],
+    "oceania": [
+        {"slug": "australia", "code": "AU"},
+        {"slug": "new-zealand", "code": "NZ"}
+    ]
 }
 
 STRUCTURED_DATA_PLACEHOLDER = "<!-- STRUCTURED_DATA_HERE -->"
@@ -22,10 +52,9 @@ def fetch_videos_for_country(code):
         "part": "snippet,statistics,contentDetails",
         "chart": "mostPopular",
         "regionCode": code,
-        "maxResults": 50,  # <-- burada 10'dan 50'ye yükselttik
+        "maxResults": 50,
         "key": YOUTUBE_API_KEY
     }
-
     response = requests.get(url, params=params)
     if response.status_code != 200:
         print(f"❌ API hatası [{code}]: {response.status_code}")
@@ -33,26 +62,22 @@ def fetch_videos_for_country(code):
 
     items = response.json().get("items", [])
     videos = []
-
     for item in items:
-        video_id = item.get("id")
+        vid_id = item.get("id")
         snippet = item.get("snippet", {})
         statistics = item.get("statistics", {})
-
         video = {
-                "id": video_id,
-                "title": item["snippet"]["title"],
-                "channel": item["snippet"]["channelTitle"],
-                "views": views_int,
-                "views_str": views_str,
-                "url": video_url,
-                "embed_url": embed_url,
-                "thumbnail": thumbnail_url,
-                "published_at": published_at,
-                "published_date_formatted": published_date_formatted
-            }
-            videos.append(video)
-
+            "id": vid_id,
+            "title": snippet.get("title", ""),
+            "description": snippet.get("description", ""),
+            "channel": snippet.get("channelTitle", ""),
+            "views": int(statistics.get("viewCount", 0)),
+            "url": f"https://www.youtube.com/watch?v={vid_id}",
+            "embed_url": f"https://www.youtube.com/embed/{vid_id}",
+            "thumbnail_url": snippet.get("thumbnails", {}).get("medium", {}).get("url", ""),
+            "published_at": snippet.get("publishedAt", "")
+        }
+        videos.append(video)
     return videos
 
 def generate_structured_data(videos):
@@ -75,6 +100,14 @@ def generate_structured_data(videos):
         structured.append(obj)
     return structured
 
+def deduplicate_by_title(videos):
+    seen = {}
+    for v in videos:
+        title = v["title"].strip().lower()
+        if title not in seen or v["views"] > seen[title]["views"]:
+            seen[title] = v
+    return list(seen.values())
+
 def update_html(continent, top_videos, structured_data):
     html_file = f"{continent}.html"
     if not os.path.exists(html_file):
@@ -89,44 +122,24 @@ def update_html(continent, top_videos, structured_data):
 
     if top_videos:
         first = top_videos[0]
-        iframe = f'''
-<iframe 
-  width="560" 
-  height="315" 
-  src="{first['embed_url']}" 
-  title="{first['title']}" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowfullscreen 
-  style="position:absolute; width:1px; height:1px; left:-9999px;">
-</iframe>'''
+        iframe = f'''\n<iframe \n  width="560" \n  height="315" \n  src="{first['embed_url']}" \n  title="{first['title']}" \n  frameborder="0" \n  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" \n  allowfullscreen \n  style="position:absolute; width:1px; height:1px; left:-9999px;">\n</iframe>'''
         html = html.replace(IFRAME_PLACEHOLDER, iframe)
     else:
         html = html.replace(IFRAME_PLACEHOLDER, "")
 
     with open(html_file, "w", encoding="utf-8") as f:
         f.write(html)
-
     print(f"✅ {html_file} güncellendi.")
-
-def deduplicate_videos(videos):
-    unique = {}
-    for video in videos:
-        vid = video["id"]
-        if vid not in unique or video["views"] > unique[vid]["views"]:
-            unique[vid] = video
-    return list(unique.values())
 
 def process_all():
     for continent, countries in CONTINENT_COUNTRIES.items():
         print(f"\n🌍 {continent.upper()} işleniyor...")
         all_videos = []
         for country in countries:
-            country_videos = fetch_videos_for_country(country["code"])
-            all_videos.extend(country_videos)
+            all_videos.extend(fetch_videos_for_country(country["code"]))
 
-        deduped_videos = deduplicate_videos(all_videos)
-        sorted_videos = sorted(deduped_videos, key=lambda x: x["views"], reverse=True)[:50]
+        deduped = deduplicate_by_title(all_videos)
+        sorted_videos = sorted(deduped, key=lambda v: v["views"], reverse=True)[:50]
 
         with open(f"{continent}.vid.data.json", "w", encoding="utf-8") as f:
             json.dump(sorted_videos, f, ensure_ascii=False, indent=2)
