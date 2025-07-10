@@ -6,8 +6,8 @@ from datetime import datetime
 
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
-IFRAME_PLACEHOLDER = "<!-- IFRAME_PLACEHOLDER -->"
 STRUCTURED_DATA_PLACEHOLDER = "<!-- STRUCTURED_DATA_HERE -->"
+IFRAME_PLACEHOLDER = "<!-- IFRAME_PLACEHOLDER -->"
 
 COUNTRY_INFO = {
     "afghanistan": {"code": "AF", "continent": "asia"},
