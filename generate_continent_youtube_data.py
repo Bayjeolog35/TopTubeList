@@ -183,7 +183,7 @@ def process_all():
             json.dump(sorted_videos, f, ensure_ascii=False, indent=2)
         print(f"📦 {continent}.vid.data.json kaydedildi ({len(sorted_videos)} video).")
 
-            structured = generate_structured_data(sorted_videos)
+        structured = generate_structured_data(sorted_videos)
         with open(f"{continent}.str.data.json", "w", encoding="utf-8") as f:
             json.dump(structured, f, ensure_ascii=False, indent=2)
         print(f"📦 {continent}.str.data.json kaydedildi.")
