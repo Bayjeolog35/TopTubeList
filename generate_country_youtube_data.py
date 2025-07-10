@@ -21,7 +21,7 @@ for country_slug, info in COUNTRY_INFO.items():
 for country_slug, info in country_data_for_processing.items():
     code = info["code"]
     display_name_human_readable = info["display_name_human_readable"]
-
+    print(f"Slug: {country_slug} | Code: {code} | Name: {display_name_human_readable}")
     print(f"'{display_name_human_readable}' ({code}) için veri çekiliyor...")
 
     OUTPUT_VIDEO_FILE = f"{country_slug}.vid.data.json"
