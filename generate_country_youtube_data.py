@@ -15,7 +15,7 @@ STRUCTURED_DATA_PLACEHOLDER = ""
 # COUNTRY_INFO'dan ülke kodlarını ve isimlerini alıyoruz
 country_data_for_processing = {}
 for country_slug, info in COUNTRY_INFO.items():
-    code = info["code"]
+    code = info["code"].upper()
     # HTML içinde ve konsolda gösterilecek, okunabilir ülke adı.
     display_name_human_readable = info.get("display-name", country_slug.replace("-", " ")).title()
     
