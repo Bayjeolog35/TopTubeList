@@ -16,7 +16,7 @@ urls.append(f"""
   </url>""")
 
 # Kıta sayfaları (örnek: /asia, /europe)
-for continent_slug in CONTINENT_INFO.keys():
+for continent_slug in CONTINENT_INFO:
     urls.append(f"""
   <url>
     <loc>{BASE_URL}/{continent_slug}</loc>
@@ -26,7 +26,7 @@ for continent_slug in CONTINENT_INFO.keys():
   </url>""")
 
 # Ülke sayfaları (örnek: /turkey, /united-states)
-for country_slug in COUNTRY_INFO.keys():
+for country_slug in COUNTRY_INFO:
     urls.append(f"""
   <url>
     <loc>{BASE_URL}/{country_slug}</loc>
@@ -35,12 +35,13 @@ for country_slug in COUNTRY_INFO.keys():
     <priority>0.8</priority>
   </url>""")
 
-# XML dosyasını oluştur
+# XML gövdesi
 sitemap_content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {''.join(urls)}
 </urlset>"""
 
+# sitemap.xml dosyasını yaz
 with open("sitemap.xml", "w", encoding="utf-8") as f:
     f.write(sitemap_content)
 
