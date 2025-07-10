@@ -10,7 +10,7 @@ API_URL = "https://www.googleapis.com/youtube/v3/videos"
 IFRAME_PLACEHOLDER = ""
 STRUCTURED_DATA_PLACEHOLDER = ""
 # HTML_TEMPLATE_FILE artık kullanılmayacak, çünkü yeni dosya oluşturmayacağız.
-# HTML_TEMPLATE_FILE = "index.html" 
+# HTML_TEMPLATE_FILE = "index.html"
 
 # COUNTRY_INFO'dan ülke kodlarını ve isimlerini alıyoruz
 country_data_for_processing = {}
@@ -18,7 +18,7 @@ for country_slug, info in COUNTRY_INFO.items():
     code = info["code"].upper()
     # HTML içinde ve konsolda gösterilecek, okunabilir ülke adı.
     display_name_human_readable = info.get("display-name", country_slug.replace("-", " ")).title()
-    
+
     country_data_for_processing[country_slug] = {
         "code": code,
         "display_name_human_readable": display_name_human_readable
@@ -27,7 +27,7 @@ for country_slug, info in COUNTRY_INFO.items():
 for country_slug, info in country_data_for_processing.items():
     code = info["code"]
     display_name_human_readable = info["display_name_human_readable"]
-    
+
     print(f"'{display_name_human_readable}' ({code}) için veri çekiliyor...")
 
     # Dosya adları country_slug'a göre tireli olacak.
@@ -71,7 +71,7 @@ for country_slug, info in country_data_for_processing.items():
             embed_url = f"https://www.youtube.com/embed/{video_id}"
             thumbnail_url = item["snippet"]["thumbnails"]["medium"]["url"]
             published_at = item["snippet"]["publishedAt"]
-            
+
             try:
                 published_date_formatted = datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ").strftime("%d.%m.%Y")
             except ValueError:
@@ -133,21 +133,21 @@ for country_slug, info in country_data_for_processing.items():
                 top_video = videos[0]
                 top_video_id = top_video["id"]
                 iframe_html = f'''
-<iframe 
-  width="560" 
-  height="315" 
-  src="{top_video['embed_url']}" 
-  title="{top_video['title']}" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowfullscreen 
+<iframe
+  width="560"
+  height="315"
+  src="{top_video['embed_url']}"
+  title="{top_video['title']}"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
   style="position:absolute; width:1px; height:1px; left:-9999px;">
 </iframe>
 '''
                 current_html_content = current_html_content.replace(IFRAME_PLACEHOLDER, iframe_html)
             else:
                 current_html_content = current_html_content.replace(IFRAME_PLACEHOLDER, "")
-            
+
             # Eğer başlıklar veya h1 daha önce ayarlanmadıysa veya dinamik güncellenmek isteniyorsa burada da yapılabilir.
             # Ancak "sadece mevcutları güncelle" prensibine göre, eğer bunlar zaten manuel ayarlandıysa dokunulmaz.
             # current_html_content = current_html_content.replace("<title>...</title>", f"<title>Popüler YouTube Videoları - {display_name_human_readable}</title>")
@@ -159,10 +159,10 @@ for country_slug, info in country_data_for_processing.items():
             print(f"✅ {HTML_OUTPUT_FILE} içine structured data ve iframe eklendi.")
         else:
             print(f"⚠️ '{HTML_OUTPUT_FILE}' dosyası mevcut değil. HTML güncelleme atlanıyor.")
-        
+
         print("-" * 50)
 
-        else:
+    else: # Bu 'else' bloğu, 'if response.status_code == 200:' bloğuna aittir.
         print(f"❌ API Hatası ({code}):", response.status_code)
         if response.status_code == 403:
             print("API anahtarınızda kota sorunu veya geçersiz anahtar olabilir. Lütfen kontrol edin.")
