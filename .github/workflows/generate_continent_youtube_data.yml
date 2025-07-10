@@ -1,4 +1,4 @@
-name: Generate and Update Continent YouTube Data
+name: Generate Continent YouTube Data
 
 on:
   schedule:
@@ -6,33 +6,31 @@ on:
   workflow_dispatch:       # Manuel tetikleme
 
 jobs:
-  update-continent-data:
+  generate-continent-data:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.9'
-          cache: 'pip'
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
 
-      - name: Install dependencies
-        run: |
-          pip install requests
+    - name: Install dependencies
+      run: |
+        pip install requests python-dotenv
 
-      - name: Run Continent Data Script
-        env:
-          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-        run: |
-          python generate_continent_youtube_data.py
+    - name: Run Continent YouTube Data Generator
+      run: python generate_continent_youtube_data.py
+      env:
+        YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
 
-      - name: Commit and push changes
-        run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
-          git add *.json *.html
-          git commit -m "🌍 Kıta bazlı YouTube verileri güncellendi" || echo "Değişiklik yok, commit atlanıyor."
-          git push
+    - name: Commit and Push Changes
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add .
+        git commit -m "🤖 Update continent YouTube data (auto)"
+        git push
