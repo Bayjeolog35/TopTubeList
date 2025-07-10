@@ -26,7 +26,7 @@ jobs:
 
       - name: Run Continent Data Script
         run: |
-          python generate_continent_data.py
+          python generate_continent_youtube_data.py
 
       - name: Commit and push changes
         run: |
