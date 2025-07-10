@@ -66,45 +66,24 @@ def update_html(continent, top_videos, structured_items):
 
 def generate_continent_data():
     for continent, countries in CONTINENT_COUNTRIES.items():
-        video_dict = {}
-        structured_dict = {}
+        all_videos = []
+        all_structured = []
 
         for country in countries:
             vids, structs = load_country_data(country)
+            all_videos.extend(vids)
+            all_structured.extend(structs)
 
-            for video in vids:
-                video_id = video.get("id")
-                if video_id and video_id not in video_dict:
-                    video_dict[video_id] = video
+        top_videos = sorted(all_videos, key=lambda x: x.get("views", 0), reverse=True)[:50]
+        top_structured = all_structured[:50]
 
-            for structured in structs:
-                # Her iki alanı kontrol et, hangisi varsa onu kullan
-                unique_key = structured.get("embedUrl") or structured.get("contentUrl")
-                if unique_key and unique_key not in structured_dict:
-                    structured_dict[unique_key] = structured
-
-        # En çok izlenen ilk 50 video
-        top_videos = sorted(video_dict.values(), key=lambda x: x.get("views", 0), reverse=True)[:50]
-
-        # Structured datayı sadece ilk 50 videoyla eşleşenlerden al
-        top_video_ids = {v["id"] for v in top_videos}
-        top_structured = []
-        for s in structured_dict.values():
-            url = s.get("contentUrl") or s.get("embedUrl", "")
-            if any(vid_id in url for vid_id in top_video_ids):
-                top_structured.append(s)
-            if len(top_structured) >= 50:
-                break
-
-        # Dosyalara yaz
         with open(f"{continent}.vid.data.json", "w", encoding="utf-8") as f:
             json.dump(top_videos, f, ensure_ascii=False, indent=2)
 
         with open(f"{continent}.str.data.json", "w", encoding="utf-8") as f:
             json.dump(top_structured, f, ensure_ascii=False, indent=2)
 
-        print(f"📦 {continent} için {len(top_videos)} video ve {len(top_structured)} structured data kaydedildi.")
+        print(f"📦 {continent} için {len(top_videos)} video kaydedildi.")
         update_html(continent, top_videos, top_structured)
 
 generate_continent_data()
-
