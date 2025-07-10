@@ -128,15 +128,15 @@ for country_slug, info in country_data_for_processing.items():
             structured_script = f'<script type="application/ld+json">\n{json.dumps(structured_items, ensure_ascii=False, indent=2)}\n</script>'
             current_html_content = current_html_content.replace(STRUCTURED_DATA_PLACEHOLDER, structured_script)
 
-            # En çok izlenen video için iframe oluştur ve göm
-            if videos: # En az bir video olduğundan emin ol
-                top_video = videos[0]
-                top_video_id = top_video["id"]
-                iframe_html = f'''
+# En çok izlenen video için iframe oluştur ve göm
+if videos:  # En az bir video olduğundan emin ol
+    top_video = videos[0]
+    top_video_id = top_video["id"]
+    iframe_html = f'''
 <iframe 
   width="560" 
   height="315" 
-  src="https://www.youtube.com/embed/{top_video_id}" 
+  src="{top_video['embed_url']}" 
   title="{top_video['title']}" 
   frameborder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -144,9 +144,9 @@ for country_slug, info in country_data_for_processing.items():
   style="position:absolute; width:1px; height:1px; left:-9999px;">
 </iframe>
 '''
-                current_html_content = current_html_content.replace(IFRAME_PLACEHOLDER, iframe_html)
-            else:
-                current_html_content = current_html_content.replace(IFRAME_PLACEHOLDER, "")
+    current_html_content = current_html_content.replace(IFRAME_PLACEHOLDER, iframe_html)
+else:
+    current_html_content = current_html_content.replace(IFRAME_PLACEHOLDER, "")
             
             # Eğer başlıklar veya h1 daha önce ayarlanmadıysa veya dinamik güncellenmek isteniyorsa burada da yapılabilir.
             # Ancak "sadece mevcutları güncelle" prensibine göre, eğer bunlar zaten manuel ayarlandıysa dokunulmaz.
