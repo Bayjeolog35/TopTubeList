@@ -915,6 +915,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
   <link rel="canonical" href="https://toptubelist.com/{name}.html">
   <link rel="stylesheet" href="style.css">
   <!-- STRUCTURED_DATA_HERE -->
+  <!-- IFRAME_PLACEHOLDER -->
 </head>
 <body>
     <header>
