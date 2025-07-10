@@ -914,11 +914,12 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://toptubelist.com/{name}.html">
   <link rel="stylesheet" href="style.css">
-  <!-- STRUCTURED_DATA_HERE -->
-  <!-- IFRAME_PLACEHOLDER -->
+  
+ 
 </head>
 <body>
     <header>
+    <!-- STRUCTURED_DATA_HERE -->
         <div class="container">
             <a href="../../index.html" class="logo">
                 <img src="TopTubeListLogo.webp" alt="TopTubeList" width="120">
@@ -1239,7 +1240,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
     If it’s trending, chances are… we’ve already listed it. 😉</p>
   </div>
 </section>
-
+ <!-- IFRAME_PLACEHOLDER -->
 <footer>
   <div class="contact-section">
     <button id="contactToggle" class="site-button">Contact Us</button>
