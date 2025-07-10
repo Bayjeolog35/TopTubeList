@@ -300,4 +300,3 @@ for slug, info in COUNTRY_INFO.items():
         json.dump(structured, f, ensure_ascii=False, indent=2)
 
     print(f"✅ {video_file} ve {struct_file} oluşturuldu.")
-    time.sleep(1)  # API'e yüklenmemek için
