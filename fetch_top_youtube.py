@@ -19,7 +19,6 @@ params = {
     "part": "snippet,statistics",
     "chart": "mostPopular",
     "maxResults": 50,
-    "regionCode": "US",
     "key": API_KEY
 }
 
