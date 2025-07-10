@@ -15,7 +15,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4839410
+      "userInteractionCount": 4839566
     }
   },
   {
@@ -53,7 +53,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3223098
+      "userInteractionCount": 3226047
     }
   },
   {
@@ -91,7 +91,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 261700
+      "userInteractionCount": 261810
     }
   },
   {
@@ -129,7 +129,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 7692276
+      "userInteractionCount": 7692289
     }
   },
   {
@@ -148,7 +148,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 24807301
+      "userInteractionCount": 24807481
     }
   },
   {
@@ -167,7 +167,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 5845721
+      "userInteractionCount": 5851354
     }
   },
   {
@@ -205,7 +205,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 68900724
+      "userInteractionCount": 68906776
     }
   },
   {
@@ -268,6 +268,25 @@
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
+    "name": "Marko Milanović: \" Tata mi je rekao - ako ideš u hrvanje, postani olimpijski prvak!\"",
+    "description": "",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/dSOV9X5-djE/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-07-09T14:59:55Z",
+    "contentUrl": "https://www.youtube.com/watch?v=dSOV9X5-djE",
+    "embedUrl": "https://www.youtube.com/embed/dSOV9X5-djE",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 96569
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
     "name": "JAVIO MI SE ISHOWSPEED - ZRĆE VLOG",
     "description": "Instagram: (@choda19a) https://www.instagram.com/choda19a/\n\nTikTok: https://www.tiktok.com/@choda19a\n\nLajv kanal: https://www.youtube.com/@chodalive\n\nGlavni kanal: https://www.youtube.com/@Choda19a\n\nClips kanal: https://www.youtube.com/@chodaclips5566\n\nMoj ​DISCORD SERVER: https://discord.gg/exS8um8\n\nEmail za saradnje: chodanbgd@gmail.com\n\n#subscribe \n#delfinarija",
     "thumbnailUrl": [
@@ -300,7 +319,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2568615
+      "userInteractionCount": 2568616
     }
   },
   {
@@ -319,26 +338,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 430645
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Marko Milanović: \" Tata mi je rekao - ako ideš u hrvanje, postani olimpijski prvak!\"",
-    "description": "",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/dSOV9X5-djE/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-07-09T14:59:55Z",
-    "contentUrl": "https://www.youtube.com/watch?v=dSOV9X5-djE",
-    "embedUrl": "https://www.youtube.com/embed/dSOV9X5-djE",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 96290
+      "userInteractionCount": 431289
     }
   },
   {
@@ -363,25 +363,6 @@
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "Who was faster? 😳😱 @isabellaafro",
-    "description": "",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/SOATZrBeGEk/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-06-29T11:30:33Z",
-    "contentUrl": "https://www.youtube.com/watch?v=SOATZrBeGEk",
-    "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 178051548
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
     "name": "How Life Starts #Shorts",
     "description": "",
     "thumbnailUrl": [
@@ -395,7 +376,26 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4081486
+      "userInteractionCount": 4081902
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Who was faster? 😳😱 @isabellaafro",
+    "description": "",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/SOATZrBeGEk/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-06-29T11:30:33Z",
+    "contentUrl": "https://www.youtube.com/watch?v=SOATZrBeGEk",
+    "embedUrl": "https://www.youtube.com/embed/SOATZrBeGEk",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 178054391
     }
   },
   {
@@ -414,7 +414,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 87450
+      "userInteractionCount": 87489
     }
   },
   {
@@ -452,7 +452,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3212281
+      "userInteractionCount": 3214315
     }
   },
   {
@@ -477,6 +477,25 @@
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
+    "name": "Please Help Me!!",
+    "description": "",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/v8-I7dlyCXM/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-07-06T11:57:45Z",
+    "contentUrl": "https://www.youtube.com/watch?v=v8-I7dlyCXM",
+    "embedUrl": "https://www.youtube.com/embed/v8-I7dlyCXM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 19746759
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
     "name": "[UŽIVO] Thompson u Zagrebu. Pratite atmosferu prije koncerta!",
     "description": "Marko Perković Thompson danas održava koncert na zagrebačkom Hipodromu. Organizator očekuje i do pola milijuna ljudi, a brojni Thompsonovi obožavatelji još su jučer stigli u Zagreb. \n\nCijelu atmosferu oko Hipodroma i Thompsonovog koncerta pratite uživo na Netu, Voyo i na RTL-u. Doznajte sve informacije oko koncerta, kako doći do Hipodroma, što smijete unijeti, savjete liječnika, o blokadi grada…. Također, RTL donosi izvanredne vijesti u 11.30 i 13.30, a RTL DANAS je u 16:30 i 19:00 sati.\n\nSve najnovije vijesti pratite na: https://bit.ly/4koqbN1\n\nPratite nas i na drugim društvenim mrežama:\nFacebook: https://bit.ly/RTLhr_FB\nInstagram: https://bit.ly/RTLhr_IG\nWeb: https://bit.ly/RTLhr_WEB",
     "thumbnailUrl": [
@@ -496,25 +515,6 @@
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "Please Help Me!!",
-    "description": "",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/v8-I7dlyCXM/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-07-06T11:57:45Z",
-    "contentUrl": "https://www.youtube.com/watch?v=v8-I7dlyCXM",
-    "embedUrl": "https://www.youtube.com/embed/v8-I7dlyCXM",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 19731067
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
     "name": "Jesam ti uspješno pročitao misli i pogodio kojeg si dinosaura odabrao?",
     "description": "",
     "thumbnailUrl": [
@@ -528,7 +528,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 289943
+      "userInteractionCount": 289956
     }
   },
   {
@@ -566,7 +566,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 5035373
+      "userInteractionCount": 5039912
     }
   },
   {
@@ -604,7 +604,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 14982335
+      "userInteractionCount": 14982686
     }
   },
   {
@@ -623,7 +623,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 9696031
+      "userInteractionCount": 9698524
     }
   },
   {
@@ -661,7 +661,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 40301113
+      "userInteractionCount": 40306447
     }
   },
   {
@@ -718,7 +718,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 256129
+      "userInteractionCount": 256222
     }
   },
   {
@@ -756,7 +756,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 85557356
+      "userInteractionCount": 85574262
     }
   },
   {
@@ -813,7 +813,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 15891203
+      "userInteractionCount": 15891810
     }
   },
   {
@@ -851,7 +851,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 57259288
+      "userInteractionCount": 57259929
     }
   },
   {
@@ -870,7 +870,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 217287
+      "userInteractionCount": 217318
     }
   },
   {
