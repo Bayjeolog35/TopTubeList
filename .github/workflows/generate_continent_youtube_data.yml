@@ -2,9 +2,8 @@ name: Generate and Update Continent YouTube Data
 
 on:
   schedule:
-    # Her 3 saatte bir (UTC)
-    - cron: '0 */3 * * *'
-  workflow_dispatch:  # Manuel çalıştırma butonu
+    - cron: '0 */3 * * *'  # Her 3 saatte bir (UTC)
+  workflow_dispatch:       # Manuel tetikleme
 
 jobs:
   update-continent-data:
@@ -25,6 +24,8 @@ jobs:
           pip install requests
 
       - name: Run Continent Data Script
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: |
           python generate_continent_youtube_data.py
 
