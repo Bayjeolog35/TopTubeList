@@ -227,33 +227,3 @@ CONTINENT_INFO = {
         "meta_description": "Trending YouTube videos globally - All countries combined"
     }
 }
-CONTINENT_INFO = {
-    "asia": {
-        "name": "Asia",
-        "meta_description": "Trending YouTube videos in Asia - Most viewed content across Asian countries"
-    },
-    "europe": {
-        "name": "Europe",
-        "meta_description": "Popular YouTube videos trending in European countries - Updated hourly"
-    },
-    "africa": {
-        "name": "Africa",
-        "meta_description": "Top viewed YouTube videos across African nations - Daily updated charts"
-    },
-    "north_america": {
-        "name": "North America",
-        "meta_description": "Viral YouTube content in USA, Canada and Mexico - Real-time trending videos"
-    },
-    "south_america": {
-        "name": "South America",
-        "meta_description": "Most watched YouTube videos in South American countries - Updated constantly"
-    },
-    "oceania": {
-        "name": "Oceania",
-        "meta_description": "Trending YouTube videos from Australia, New Zealand and Pacific Islands"
-    },
-    "worldwide": {
-        "display_name": "Worldwide",
-        "meta_description": "Trending YouTube videos globally - All countries combined"
-    }
-}
