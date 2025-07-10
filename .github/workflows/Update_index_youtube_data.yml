@@ -2,8 +2,11 @@ name: Update Index (YouTube Data)
 
 on:
   schedule:
-    - cron: '0 */3 * * *'
-  workflow_dispatch:
+    - cron: '0 */3 * * *'  # Her 3 saatte bir
+  workflow_dispatch:        # Manuel çalıştırma için
+
+permissions:
+  contents: write           # Git'e yazma izni gerekir
 
 jobs:
   fetch-and-update:
@@ -14,10 +17,10 @@ jobs:
 
     steps:
       - name: 📥 Repo'yu klonla
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 🐍 Python kurulumu
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
@@ -26,13 +29,13 @@ jobs:
           pip install requests python-dotenv
 
       - name: ▶️ fetch_top_youtube.py dosyasını çalıştır
-        run: |
-          python fetch_top_youtube.py
+        run: python fetch_top_youtube.py
 
-      - name: 💾 Değişiklikleri commit et ve pushla
+      - name: 🔁 Git ayarları ve push işlemi
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main || true
           git add .
           git commit -m "🔄 Otomatik güncelleme: videos.json, structured_data.json ve index.html" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
