@@ -2,9 +2,7 @@ import requests
 import json
 import os
 from datetime import datetime
-from country_info import (
-    COUNTRY_INFO,
-)  # country_info.py dosyasından COUNTRY_INFO'yu içe aktarıyoruz
+from country_info import COUNTRY_INFO # country_info.py dosyasından COUNTRY_INFO'yu içe aktarıyoruz
 
 # 🔐 API key artık gizli bir çevre değişkeninden alınacak
 API_KEY = os.getenv("YOUTUBE_API_KEY")
@@ -19,13 +17,11 @@ country_data_for_processing = {}
 for country_slug, info in COUNTRY_INFO.items():
     code = info["code"].upper()
     # HTML içinde ve konsolda gösterilecek, okunabilir ülke adı.
-    display_name_human_readable = info.get(
-        "display-name", country_slug.replace("-", " ")
-    ).title()
+    display_name_human_readable = info.get("display-name", country_slug.replace("-", " ")).title()
 
     country_data_for_processing[country_slug] = {
         "code": code,
-        "display_name_human_readable": display_name_human_readable,
+        "display_name_human_readable": display_name_human_readable
     }
 
 for country_slug, info in country_data_for_processing.items():
@@ -44,7 +40,7 @@ for country_slug, info in country_data_for_processing.items():
         "chart": "mostPopular",
         "maxResults": 50,
         "regionCode": code,
-        "key": API_KEY,
+        "key": API_KEY
     }
 
     response = requests.get(API_URL, params=params)
@@ -77,9 +73,7 @@ for country_slug, info in country_data_for_processing.items():
             published_at = item["snippet"]["publishedAt"]
 
             try:
-                published_date_formatted = datetime.strptime(
-                    published_at, "%Y-%m-%dT%H:%M:%SZ"
-                ).strftime("%d.%m.%Y")
+                published_date_formatted = datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ").strftime("%d.%m.%Y")
             except ValueError:
                 published_date_formatted = ""
 
@@ -93,7 +87,7 @@ for country_slug, info in country_data_for_processing.items():
                 "embed_url": embed_url,
                 "thumbnail": thumbnail_url,
                 "published_at": published_at,
-                "published_date_formatted": published_date_formatted,
+                "published_date_formatted": published_date_formatted
             }
             videos.append(video)
 
@@ -108,9 +102,9 @@ for country_slug, info in country_data_for_processing.items():
                 "embedUrl": embed_url,
                 "interactionStatistic": {
                     "@type": "InteractionCounter",
-                    "interactionType": {"@type": "WatchAction"},
-                    "userInteractionCount": views_int,
-                },
+                    "interactionType": { "@type": "WatchAction" },
+                    "userInteractionCount": views_int
+                }
             }
             structured_items.append(structured)
 
@@ -132,25 +126,44 @@ for country_slug, info in country_data_for_processing.items():
 
             # Yer tutucuları güncelle
             structured_script = f'<script type="application/ld+json">\n{json.dumps(structured_items, ensure_ascii=False, indent=2)}\n</script>'
-            current_html_content = current_html_content.replace(
-                STRUCTURED_DATA_PLACEHOLDER, structured_script
-            )
+            current_html_content = current_html_content.replace(STRUCTURED_DATA_PLACEHOLDER, structured_script)
 
             # En çok izlenen video için iframe oluştur ve göm
             if videos:  # En az bir video olduğundan emin ol
                 top_video = videos[0]
                 top_video_id = top_video["id"]
-                iframe_html = f"""
-                <iframe
-                  width="560"
-                  height="315"
-                  src="{top_video['embed_url']}"
-                  title="{top_video['title']}"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                  style="position:absolute; width:1px; height:1px; left:-9999px;">
-                </iframe>
-                """
+                iframe_html = f'''
+<iframe
+  width="560"
+  height="315"
+  src="{top_video['embed_url']}"
+  title="{top_video['title']}"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+  style="position:absolute; width:1px; height:1px; left:-9999px;">
+</iframe>
+'''
+                current_html_content = current_html_content.replace(IFRAME_PLACEHOLDER, iframe_html)
+            else:
+                current_html_content = current_html_content.replace(IFRAME_PLACEHOLDER, "")
 
+            # Eğer başlıklar veya h1 daha önce ayarlanmadıysa veya dinamik güncellenmek isteniyorsa burada da yapılabilir.
+            # Ancak "sadece mevcutları güncelle" prensibine göre, eğer bunlar zaten manuel ayarlandıysa dokunulmaz.
+            # current_html_content = current_html_content.replace("<title>...</title>", f"<title>Popüler YouTube Videoları - {display_name_human_readable}</title>")
+            # current_html_content = current_html_content.replace("<h1>...</h1>", f"<h1>{display_name_human_readable} İçin Popüler YouTube Videoları</h1>")
+
+            with open(HTML_OUTPUT_FILE, "w", encoding="utf-8") as f:
+                f.write(current_html_content)
+
+            print(f"✅ {HTML_OUTPUT_FILE} içine structured data ve iframe eklendi.")
+        else:
+            print(f"⚠️ '{HTML_OUTPUT_FILE}' dosyası mevcut değil. HTML güncelleme atlanıyor.")
+
+        print("-" * 50)
+
+    else: # Bu 'else' bloğu, 'if response.status_code == 200:' bloğuna aittir.
+        print(f"❌ API Hatası ({code}):", response.status_code)
+        if response.status_code == 403:
+            print("API anahtarınızda kota sorunu veya geçersiz anahtar olabilir. Lütfen kontrol edin.")
         print("-" * 50)
