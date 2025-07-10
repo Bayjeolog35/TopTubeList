@@ -2,17 +2,21 @@ import requests
 import json
 import os
 from datetime import datetime
-from country_info import COUNTRY_INFO  # country_info.py dosyasından COUNTRY_INFO'yu içe aktarıyoruz
+from country_info import COUNTRY_INFO # country_info.py dosyasından COUNTRY_INFO'yu içe aktarıyoruz
 
+# 🔐 API key artık gizli bir çevre değişkeninden alınacak
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
 IFRAME_PLACEHOLDER = ""
 STRUCTURED_DATA_PLACEHOLDER = ""
+# HTML_TEMPLATE_FILE artık kullanılmayacak, çünkü yeni dosya oluşturmayacağız.
+# HTML_TEMPLATE_FILE = "index.html" 
 
 # COUNTRY_INFO'dan ülke kodlarını ve isimlerini alıyoruz
 country_data_for_processing = {}
 for country_slug, info in COUNTRY_INFO.items():
     code = info["code"].upper()
+    # HTML içinde ve konsolda gösterilecek, okunabilir ülke adı.
     display_name_human_readable = info.get("display-name", country_slug.replace("-", " ")).title()
     
     country_data_for_processing[country_slug] = {
@@ -26,6 +30,7 @@ for country_slug, info in country_data_for_processing.items():
     
     print(f"'{display_name_human_readable}' ({code}) için veri çekiliyor...")
 
+    # Dosya adları country_slug'a göre tireli olacak.
     OUTPUT_VIDEO_FILE = f"{country_slug}.vid.data.json"
     STRUCTURED_DATA_FILE = f"{country_slug}.str.data.json"
     HTML_OUTPUT_FILE = f"{country_slug}.html"
@@ -52,20 +57,21 @@ for country_slug, info in country_data_for_processing.items():
                 views_int = 0
 
             if views_int >= 1_000_000_000:
-                views_str = f"{views_int / 1_000_000_000:.2f}B"
+                views_str = f"{views_int/1_000_000_000:.2f}B"
             elif views_int >= 1_000_000:
-                views_str = f"{views_int / 1_000_000:.2f}M"
+                views_str = f"{views_int/1_000_000:.2f}M"
             elif views_int >= 1_000:
-                views_str = f"{views_int / 1_000:.1f}K"
+                views_str = f"{views_int/1_000:.1f}K"
             else:
                 views_str = str(views_int)
 
             video_id = item["id"]
+            # Googleusercontent.com URL'lerini belirtildiği gibi güncelliyoruz
             video_url = f"https://www.youtube.com/watch?v={video_id}"
             embed_url = f"https://www.youtube.com/embed/{video_id}"
             thumbnail_url = item["snippet"]["thumbnails"]["medium"]["url"]
             published_at = item["snippet"]["publishedAt"]
-
+            
             try:
                 published_date_formatted = datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ").strftime("%d.%m.%Y")
             except ValueError:
@@ -96,7 +102,7 @@ for country_slug, info in country_data_for_processing.items():
                 "embedUrl": embed_url,
                 "interactionStatistic": {
                     "@type": "InteractionCounter",
-                    "interactionType": {"@type": "WatchAction"},
+                    "interactionType": { "@type": "WatchAction" },
                     "userInteractionCount": views_int
                 }
             }
@@ -112,16 +118,20 @@ for country_slug, info in country_data_for_processing.items():
 
         print(f"✅ {OUTPUT_VIDEO_FILE} ve {STRUCTURED_DATA_FILE} güncellendi.")
 
+        # HTML dosyasını güncelleme
         if os.path.exists(HTML_OUTPUT_FILE):
             print(f"'{HTML_OUTPUT_FILE}' dosyası mevcut. Güncelleniyor...")
             with open(HTML_OUTPUT_FILE, "r", encoding="utf-8") as f:
                 current_html_content = f.read()
 
+            # Yer tutucuları güncelle
             structured_script = f'<script type="application/ld+json">\n{json.dumps(structured_items, ensure_ascii=False, indent=2)}\n</script>'
             current_html_content = current_html_content.replace(STRUCTURED_DATA_PLACEHOLDER, structured_script)
 
-            if videos:
+            # En çok izlenen video için iframe oluştur ve göm
+            if videos:  # En az bir video olduğundan emin ol
                 top_video = videos[0]
+                top_video_id = top_video["id"]
                 iframe_html = f'''
 <iframe 
   width="560" 
@@ -137,6 +147,11 @@ for country_slug, info in country_data_for_processing.items():
                 current_html_content = current_html_content.replace(IFRAME_PLACEHOLDER, iframe_html)
             else:
                 current_html_content = current_html_content.replace(IFRAME_PLACEHOLDER, "")
+            
+            # Eğer başlıklar veya h1 daha önce ayarlanmadıysa veya dinamik güncellenmek isteniyorsa burada da yapılabilir.
+            # Ancak "sadece mevcutları güncelle" prensibine göre, eğer bunlar zaten manuel ayarlandıysa dokunulmaz.
+            # current_html_content = current_html_content.replace("<title>...</title>", f"<title>Popüler YouTube Videoları - {display_name_human_readable}</title>")
+            # current_html_content = current_html_content.replace("<h1>...</h1>", f"<h1>{display_name_human_readable} İçin Popüler YouTube Videoları</h1>")
 
             with open(HTML_OUTPUT_FILE, "w", encoding="utf-8") as f:
                 f.write(current_html_content)
@@ -144,7 +159,7 @@ for country_slug, info in country_data_for_processing.items():
             print(f"✅ {HTML_OUTPUT_FILE} içine structured data ve iframe eklendi.")
         else:
             print(f"⚠️ '{HTML_OUTPUT_FILE}' dosyası mevcut değil. HTML güncelleme atlanıyor.")
-
+        
         print("-" * 50)
 
     else:
