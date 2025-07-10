@@ -10,7 +10,7 @@ def fetch_trending_videos_tr():
     params = {
         "part": "snippet,statistics",
         "chart": "mostPopular",
-        "regionCode": REGION_CODE,
+        "regionCode": TR,
         "maxResults": 50,
         "key": API_KEY
     }
