@@ -154,16 +154,16 @@ else:
             # current_html_content = current_html_content.replace("<h1>...</h1>", f"<h1>{display_name_human_readable} İçin Popüler YouTube Videoları</h1>")
 
 
-            with open(HTML_OUTPUT_FILE, "w", encoding="utf-8") as f:
+ with open(HTML_OUTPUT_FILE, "w", encoding="utf-8") as f:
                 f.write(current_html_content)
 
             print(f"✅ {HTML_OUTPUT_FILE} içine structured data ve iframe eklendi.")
-        else:
+ else:
             print(f"⚠️ '{HTML_OUTPUT_FILE}' dosyası mevcut değil. HTML güncelleme atlanıyor.")
         
         print("-" * 50)
 
-    else:
+ else:
         print(f"❌ API Hatası ({code}):", response.status_code)
         if response.status_code == 403:
             print("API anahtarınızda kota sorunu veya geçersiz anahtar olabilir. Lütfen kontrol edin.")
