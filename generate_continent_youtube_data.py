@@ -22,7 +22,7 @@ def fetch_videos_for_country(code):
         "part": "snippet,statistics,contentDetails",
         "chart": "mostPopular",
         "regionCode": code,
-        "maxResults": 10,
+        "maxResults": 50,  # <-- burada 10'dan 50'ye yükselttik
         "key": YOUTUBE_API_KEY
     }
 
