@@ -3,7 +3,7 @@ import json
 import os
 
 API_KEY = os.getenv("YOUTUBE_API_KEY")  # Ortam değişkeninden API anahtarını al
-REGION_CODE = "TR"  # Türkiye
+
 
 def fetch_trending_videos_tr():
     url = "https://www.googleapis.com/youtube/v3/videos"
