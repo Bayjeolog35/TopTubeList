@@ -97,8 +97,8 @@ def generate_structured_data(videos):
             "@context": "https://schema.org",
             "@type": "VideoObject",
             "name": video["title"],
-            "description": video["description"],
-            "thumbnailUrl": [video["thumbnail_url"]],
+            "description": video.get("title", ""),  # 👈 açıklama yerine başlık kullan
+            "thumbnailUrl": [video["thumbnail"]],
             "uploadDate": video["published_at"],
             "embedUrl": video["embed_url"],
             "interactionStatistic": {
