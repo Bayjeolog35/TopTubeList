@@ -40,16 +40,18 @@ def fetch_videos_for_country(code):
         statistics = item.get("statistics", {})
 
         video = {
-            "id": video_id,
-            "title": snippet.get("title", ""),
-            "description": snippet.get("description", ""),
-            "thumbnail_url": snippet.get("thumbnails", {}).get("medium", {}).get("url", ""),
-            "published_at": snippet.get("publishedAt", ""),
-            "channel_title": snippet.get("channelTitle", "Unknown"),
-            "views": int(statistics.get("viewCount", 0)),
-            "embed_url": f"https://www.youtube.com/embed/{video_id}"
-        }
-        videos.append(video)
+                "id": video_id,
+                "title": item["snippet"]["title"],
+                "channel": item["snippet"]["channelTitle"],
+                "views": views_int,
+                "views_str": views_str,
+                "url": video_url,
+                "embed_url": embed_url,
+                "thumbnail": thumbnail_url,
+                "published_at": published_at,
+                "published_date_formatted": published_date_formatted
+            }
+            videos.append(video)
 
     return videos
 
