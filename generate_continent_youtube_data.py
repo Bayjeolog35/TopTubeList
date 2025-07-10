@@ -75,9 +75,9 @@ def fetch_videos_for_country(code):
     videos = []
 
     for item in data["items"]:
-    try:
+        try:
         views_int = int(item["statistics"]["viewCount"])
-    except:
+        except:
         views_int = 0
 
     # Views stringini kısalt
