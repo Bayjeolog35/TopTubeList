@@ -11,7 +11,7 @@ STRUCTURED_DATA_PLACEHOLDER = "<!-- STRUCTURED_DATA_HERE -->"
 
 country_data_for_processing = {}
 for country_slug, info in COUNTRY_INFO.items():
-    code = info["code"].upper()
+    code = info["code"]
     display_name_human_readable = info.get("display-name", country_slug.replace("-", " ")).title()
     country_data_for_processing[country_slug] = {
         "code": code,
