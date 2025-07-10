@@ -74,7 +74,7 @@ def fetch_videos_for_country(code):
     items = response.json().get("items", [])
     videos = []
 
-   for item in data["items"]:
+    for item in data["items"]:
     try:
         views_int = int(item["statistics"]["viewCount"])
     except:
