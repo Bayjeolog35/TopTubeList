@@ -74,51 +74,62 @@ def fetch_videos_for_country(code):
     items = response.json().get("items", [])
     videos = []
 
-    for item in items:
-        video_id = item.get("id")
-        snippet = item.get("snippet", {})
-        statistics = item.get("statistics", {})
-        title = snippet.get("title", "")
-        channel = snippet.get("channelTitle", "")
-        published_at = snippet.get("publishedAt", "")
-        thumbnail_url = snippet.get("thumbnails", {}).get("medium", {}).get("url", "")
-        views = int(statistics.get("viewCount", 0))
-  
-        video = {
-            "id": video_id,
-            "title": title,
-            "channel": channel,
-            "views": views,
-            "views_str": format_views(views),
-            "url": f"https://www.youtube.com/watch?v={video_id}",
-            "embed_url": f"https://www.youtube.com/embed/{video_id}",
-            "thumbnail": thumbnail_url,
-            "published_at": published_at,
-            "published_date_formatted": published_at[:10]  # YYYY-MM-DD
-        }
-        videos.append(video)
+    for item in data["items"]:
+    try:
+        views_int = int(item["statistics"]["viewCount"])
+    except:
+        views_int = 0
 
-    return videos
+    # ✅ KISALTMALI views_str formatı
+    if views_int >= 1_000_000_000:
+        views_str = f"{views_int / 1_000_000_000:.1f}B"
+    elif views_int >= 1_000_000:
+        views_str = f"{views_int / 1_000_000:.1f}M"
+    elif views_int >= 1_000:
+        views_str = f"{views_int / 1_000:.1f}K"
+    else:
+        views_str = str(views_int)
 
-def generate_structured_data(videos):
-    structured = []
-    for video in videos:
-        obj = {
-            "@context": "https://schema.org",
-            "@type": "VideoObject",
-            "name": video["title"],
-            "description": video.get("title", ""),  # 👈 açıklama yerine başlık kullan
-            "thumbnailUrl": [video["thumbnail"]],
-            "uploadDate": video["published_at"],
-            "embedUrl": video["embed_url"],
-            "interactionStatistic": {
-                "@type": "InteractionCounter",
-                "interactionType": {"@type": "WatchAction"},
-                "userInteractionCount": video["views"]
-            }
+    video_url = f"https://www.youtube.com/watch?v={item['id']}"
+    thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
+    published_at = item["snippet"].get("publishedAt", "")
+
+    try:
+        formatted_date = datetime.fromisoformat(published_at.replace("Z", "+00:00")).strftime("%d.%m.%Y")
+    except:
+        formatted_date = "Tarih Yok"
+
+    video = {
+        "id": item["id"],
+        "title": item["snippet"]["title"],
+        "channel": item["snippet"]["channelTitle"],
+        "views": views_int,
+        "views_str": f"{views_str} views",  # 👈 örnek: "1.2M views"
+        "url": video_url,
+        "embed_url": f"https://www.youtube.com/embed/{item['id']}",
+        "thumbnail": thumbnail,
+        "published_at": published_at,
+        "published_date_formatted": formatted_date
+    }
+    videos.append(video)
+
+    structured = {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": item["snippet"]["title"],
+        "description": item["snippet"].get("description", ""),
+        "thumbnailUrl": [thumbnail],
+        "uploadDate": published_at,
+        "contentUrl": video_url,
+        "embedUrl": f"https://www.youtube.com/embed/{item['id']}",
+        "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": {"@type": "WatchAction"},
+            "userInteractionCount": views_int
         }
-        structured.append(obj)
-    return structured
+    }
+    structured_items.append(structured)
+
 
 def deduplicate_by_title(videos):
     seen = {}
