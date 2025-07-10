@@ -7,13 +7,12 @@ API_KEY = os.getenv("YOUTUBE_API_KEY")  # Ortam değişkeninden API anahtarını
 
 def fetch_trending_videos_tr():
     url = "https://www.googleapis.com/youtube/v3/videos"
-    params = {
-        "part": "snippet,statistics",
-        "chart": "mostPopular",
-        "regionCode": TR,
-        "maxResults": 50,
-        "key": API_KEY
-    }
+   params = {
+    "part": "snippet,statistics",
+    "chart": "mostPopular",
+    "regionCode": "TR",  # <-- düzeltildi
+    "maxResults": 50,
+    "key": API_KEY
 
     response = requests.get(url, params=params)
     if response.status_code != 200:
