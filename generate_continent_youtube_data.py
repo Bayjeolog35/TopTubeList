@@ -110,7 +110,7 @@ def fetch_videos_for_country(code):
             "title": title,
             "channel": channel,
             "views": views_int,
-            "views_str": f"{views_str} views",
+            "views_str": f"{views_str}",
             "url": video_url,
             "embed_url": embed_url,
             "thumbnail": thumbnail,
