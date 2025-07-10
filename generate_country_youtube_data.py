@@ -235,48 +235,63 @@ for slug, info in COUNTRY_INFO.items():
     structured = []
 
     for item in items:
-        try:
-            views = int(item["statistics"].get("viewCount", 0))
-        except:
-            views = 0
+    try:
+        views_int = int(item["statistics"].get("viewCount", 0))
+    except:
+        views_int = 0
 
-        video_id = item["id"]
-        title = item["snippet"]["title"]
-        channel = item["snippet"]["channelTitle"]
-        published_at = item["snippet"]["publishedAt"]
-        thumb = item["snippet"]["thumbnails"]["medium"]["url"]
-        
-        # Düzeltilmiş URL'ler
-        embed_url = f"https://www.youtube.com/embed/{video_id}"
-        video_url = f"https://www.youtube.com/watch?v={video_id}"
+    if views_int >= 1_000_000_000:
+        views_str = f"{views_int / 1_000_000_000:.1f}B views"
+    elif views_int >= 1_000_000:
+        views_str = f"{views_int / 1_000_000:.1f}M views"
+    elif views_int >= 1_000:
+        views_str = f"{views_int / 1_000:.1f}K views"
+    else:
+        views_str = f"{views_int} views"
 
-        videos.append({
-            "id": video_id,
-            "title": title,
-            "channel": channel,
-            "views": views,
-            "url": video_url,
-            "embed_url": embed_url,
-            "thumbnail": thumb,
-            "published_at": published_at
-        })
+    video_id = item["id"]
+    title = item["snippet"]["title"]
+    channel = item["snippet"]["channelTitle"]
+    published_at = item["snippet"]["publishedAt"]
+    thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
+    video_url = f"https://www.youtube.com/watch?v={video_id}"
+    embed_url = f"https://www.youtube.com/embed/{video_id}"
 
-        structured.append({
-            "@context": "https://schema.org",
-            "@type": "VideoObject",
-            "name": title,
-            "description": item["snippet"].get("description", ""),
-            "thumbnailUrl": thumb,
-            "uploadDate": published_at,
-            "contentUrl": video_url,
-            "embedUrl": embed_url,
-            "interactionStatistic": {
-                "@type": "InteractionCounter",
-                "interactionType": { "@type": "WatchAction" },
-                "userInteractionCount": views
-            }
-        })
+    try:
+        formatted_date = datetime.fromisoformat(published_at.replace("Z", "+00:00")).strftime("%d.%m.%Y")
+    except:
+        formatted_date = "Tarih Yok"
 
+    video = {
+        "id": video_id,
+        "title": title,
+        "channel": channel,
+        "views": views_int,
+        "views_str": views_str,
+        "url": video_url,
+        "embed_url": embed_url,
+        "thumbnail": thumbnail,
+        "published_at": published_at,
+        "published_date_formatted": formatted_date
+    }
+    videos.append(video)
+
+    structured.append({
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": title,
+        "description": item["snippet"].get("description", ""),
+        "thumbnailUrl": [thumbnail],
+        "uploadDate": published_at,
+        "contentUrl": video_url,
+        "embedUrl": embed_url,
+        "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": { "@type": "WatchAction" },
+            "userInteractionCount": views_int
+        }
+    })
+    
     # JSON'lara yaz
     with open(video_file, "w", encoding="utf-8") as f:
         json.dump(videos, f, ensure_ascii=False, indent=2)
