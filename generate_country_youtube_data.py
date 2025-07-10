@@ -240,11 +240,13 @@ for slug, info in COUNTRY_INFO.items():
         except:
             views = 0
 
-        video_id = item["id"]
+         video_id = item["id"]
         title = item["snippet"]["title"]
         channel = item["snippet"]["channelTitle"]
         published_at = item["snippet"]["publishedAt"]
         thumb = item["snippet"]["thumbnails"]["medium"]["url"]
+        
+        # Düzeltilmiş URL'ler
         embed_url = f"https://www.youtube.com/embed/{video_id}"
         video_url = f"https://www.youtube.com/watch?v={video_id}"
 
