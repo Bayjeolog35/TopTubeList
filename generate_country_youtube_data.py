@@ -1,8 +1,8 @@
 import requests
 import json
 import os
+import time
 from datetime import datetime
-from country_info import COUNTRY_INFO
 
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
