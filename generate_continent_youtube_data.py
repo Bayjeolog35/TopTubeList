@@ -66,24 +66,34 @@ def update_html(continent, top_videos, structured_items):
 
 def generate_continent_data():
     for continent, countries in CONTINENT_COUNTRIES.items():
-        all_videos = []
-        all_structured = []
+        video_dict = {}
+        structured_dict = {}
 
         for country in countries:
             vids, structs = load_country_data(country)
-            all_videos.extend(vids)
-            all_structured.extend(structs)
 
-        top_videos = sorted(all_videos, key=lambda x: x.get("views", 0), reverse=True)[:50]
-        top_structured = all_structured[:50]
+            for video in vids:
+                video_id = video.get("id")
+                if video_id and video_id not in video_dict:
+                    video_dict[video_id] = video
+
+            for structured in structs:
+                embed_url = structured.get("embedUrl")
+                if embed_url and embed_url not in structured_dict:
+                    structured_dict[embed_url] = structured
+
+        # En yüksek izlenmeye göre sıralayıp ilk 50'yi al
+        all_videos = sorted(video_dict.values(), key=lambda x: x.get("views", 0), reverse=True)[:50]
+        all_structured = list(structured_dict.values())[:50]
 
         with open(f"{continent}.vid.data.json", "w", encoding="utf-8") as f:
-            json.dump(top_videos, f, ensure_ascii=False, indent=2)
+            json.dump(all_videos, f, ensure_ascii=False, indent=2)
 
         with open(f"{continent}.str.data.json", "w", encoding="utf-8") as f:
-            json.dump(top_structured, f, ensure_ascii=False, indent=2)
+            json.dump(all_structured, f, ensure_ascii=False, indent=2)
 
-        print(f"📦 {continent} için {len(top_videos)} video kaydedildi.")
-        update_html(continent, top_videos, top_structured)
+        print(f"📦 {continent} için {len(all_videos)} benzersiz video kaydedildi.")
+        update_html(continent, all_videos, all_structured)
 
 generate_continent_data()
+
