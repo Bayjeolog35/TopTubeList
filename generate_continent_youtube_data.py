@@ -46,6 +46,16 @@ CONTINENT_COUNTRIES = {
 STRUCTURED_DATA_PLACEHOLDER = "<!-- STRUCTURED_DATA_HERE -->"
 IFRAME_PLACEHOLDER = "<!-- IFRAME_PLACEHOLDER -->"
 
+def format_views(views):
+    if views >= 1_000_000_000:
+        return f"{views / 1_000_000_000:.1f}B views"
+    elif views >= 1_000_000:
+        return f"{views / 1_000_000:.1f}M views"
+    elif views >= 1_000:
+        return f"{views / 1_000:.1f}K views"
+    else:
+        return f"{views} views"
+
 def fetch_videos_for_country(code):
     url = "https://www.googleapis.com/youtube/v3/videos"
     params = {
@@ -73,13 +83,13 @@ def fetch_videos_for_country(code):
         published_at = snippet.get("publishedAt", "")
         thumbnail_url = snippet.get("thumbnails", {}).get("medium", {}).get("url", "")
         views = int(statistics.get("viewCount", 0))
-
+  
         video = {
             "id": video_id,
             "title": title,
             "channel": channel,
             "views": views,
-            "views_str": f"{views:,} views",
+            "views_str": format_views(views),
             "url": f"https://www.youtube.com/watch?v={video_id}",
             "embed_url": f"https://www.youtube.com/embed/{video_id}",
             "thumbnail": thumbnail_url,
