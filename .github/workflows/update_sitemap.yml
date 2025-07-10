@@ -1,0 +1,28 @@
+name: Update Sitemap
+
+on:
+  workflow_dispatch:  # Sadece manuel çalıştırılabilir
+
+jobs:
+  generate-and-commit-sitemap:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run update_sitemap.py
+        run: python update_sitemap.py
+
+      - name: Commit and push sitemap.xml
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git commit -m "🔄 Update sitemap.xml [auto]" || echo "No changes to commit"
+          git push
