@@ -162,7 +162,7 @@ for country_slug, info in country_data_for_processing.items():
         
         print("-" * 50)
 
-    else:
+        else:
         print(f"❌ API Hatası ({code}):", response.status_code)
         if response.status_code == 403:
             print("API anahtarınızda kota sorunu veya geçersiz anahtar olabilir. Lütfen kontrol edin.")
