@@ -2,7 +2,7 @@ import os
 import json
 import requests
 
-YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")  # .env ile veya manuel ayarla
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")  # .env dosyasından veya CI ortamından gelir
 
 CONTINENT_COUNTRIES = {
     "asia": [{"slug": "india", "code": "IN"}, {"slug": "indonesia", "code": "ID"}, {"slug": "japan", "code": "JP"}, {"slug": "pakistan", "code": "PK"}, {"slug": "bangladesh", "code": "BD"}],
@@ -35,19 +35,22 @@ def fetch_videos_for_country(code):
     videos = []
 
     for item in items:
-        video_id = item["id"]
+        video_id = item.get("id")
         snippet = item.get("snippet", {})
         statistics = item.get("statistics", {})
+
         video = {
             "id": video_id,
             "title": snippet.get("title", ""),
             "description": snippet.get("description", ""),
             "thumbnail_url": snippet.get("thumbnails", {}).get("medium", {}).get("url", ""),
             "published_at": snippet.get("publishedAt", ""),
+            "channel_title": snippet.get("channelTitle", "Unknown"),
             "views": int(statistics.get("viewCount", 0)),
             "embed_url": f"https://www.youtube.com/embed/{video_id}"
         }
         videos.append(video)
+
     return videos
 
 def generate_structured_data(videos):
@@ -79,11 +82,9 @@ def update_html(continent, top_videos, structured_data):
     with open(html_file, "r", encoding="utf-8") as f:
         html = f.read()
 
-    # Structured data yerleştir
     structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data, ensure_ascii=False, indent=2)}\n</script>'
     html = html.replace(STRUCTURED_DATA_PLACEHOLDER, structured_block)
 
-    # iframe yerleştir
     if top_videos:
         first = top_videos[0]
         iframe = f'''
@@ -103,6 +104,7 @@ def update_html(continent, top_videos, structured_data):
 
     with open(html_file, "w", encoding="utf-8") as f:
         f.write(html)
+
     print(f"✅ {html_file} güncellendi.")
 
 def deduplicate_videos(videos):
@@ -124,7 +126,6 @@ def process_all():
         deduped_videos = deduplicate_videos(all_videos)
         sorted_videos = sorted(deduped_videos, key=lambda x: x["views"], reverse=True)[:50]
 
-        # Kaydet
         with open(f"{continent}.vid.data.json", "w", encoding="utf-8") as f:
             json.dump(sorted_videos, f, ensure_ascii=False, indent=2)
         print(f"📦 {continent}.vid.data.json kaydedildi ({len(sorted_videos)} video).")
