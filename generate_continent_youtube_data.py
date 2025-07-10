@@ -55,6 +55,7 @@ def fetch_videos_for_country(code):
         "maxResults": 50,
         "key": YOUTUBE_API_KEY
     }
+
     response = requests.get(url, params=params)
     if response.status_code != 200:
         print(f"❌ API hatası [{code}]: {response.status_code}")
@@ -62,22 +63,31 @@ def fetch_videos_for_country(code):
 
     items = response.json().get("items", [])
     videos = []
+
     for item in items:
-        vid_id = item.get("id")
+        video_id = item.get("id")
         snippet = item.get("snippet", {})
         statistics = item.get("statistics", {})
+        title = snippet.get("title", "")
+        channel = snippet.get("channelTitle", "")
+        published_at = snippet.get("publishedAt", "")
+        thumbnail_url = snippet.get("thumbnails", {}).get("medium", {}).get("url", "")
+        views = int(statistics.get("viewCount", 0))
+
         video = {
-            "id": vid_id,
-            "title": snippet.get("title", ""),
-            "description": snippet.get("description", ""),
-            "channel": snippet.get("channelTitle", ""),
-            "views": int(statistics.get("viewCount", 0)),
-            "url": f"https://www.youtube.com/watch?v={vid_id}",
-            "embed_url": f"https://www.youtube.com/embed/{vid_id}",
-            "thumbnail_url": snippet.get("thumbnails", {}).get("medium", {}).get("url", ""),
-            "published_at": snippet.get("publishedAt", "")
+            "id": video_id,
+            "title": title,
+            "channel": channel,
+            "views": views,
+            "views_str": f"{views:,} views",
+            "url": f"https://www.youtube.com/watch?v={video_id}",
+            "embed_url": f"https://www.youtube.com/embed/{video_id}",
+            "thumbnail": thumbnail_url,
+            "published_at": published_at,
+            "published_date_formatted": published_at[:10]  # YYYY-MM-DD
         }
         videos.append(video)
+
     return videos
 
 def generate_structured_data(videos):
