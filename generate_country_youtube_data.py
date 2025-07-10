@@ -235,63 +235,63 @@ for slug, info in COUNTRY_INFO.items():
     structured = []
 
     for item in items:
-    try:
-        views_int = int(item["statistics"].get("viewCount", 0))
-    except:
-        views_int = 0
+        try:
+            views_int = int(item["statistics"].get("viewCount", 0))
+        except:
+            views_int = 0
 
-    if views_int >= 1_000_000_000:
-        views_str = f"{views_int / 1_000_000_000:.1f}B views"
-    elif views_int >= 1_000_000:
-        views_str = f"{views_int / 1_000_000:.1f}M views"
-    elif views_int >= 1_000:
-        views_str = f"{views_int / 1_000:.1f}K views"
-    else:
-        views_str = f"{views_int} views"
+        if views_int >= 1_000_000_000:
+            views_str = f"{views_int / 1_000_000_000:.1f}B views"
+        elif views_int >= 1_000_000:
+            views_str = f"{views_int / 1_000_000:.1f}M views"
+        elif views_int >= 1_000:
+            views_str = f"{views_int / 1_000:.1f}K views"
+        else:
+            views_str = f"{views_int} views"
 
-    video_id = item["id"]
-    title = item["snippet"]["title"]
-    channel = item["snippet"]["channelTitle"]
-    published_at = item["snippet"]["publishedAt"]
-    thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
-    video_url = f"https://www.youtube.com/watch?v={video_id}"
-    embed_url = f"https://www.youtube.com/embed/{video_id}"
+        video_id = item["id"]
+        title = item["snippet"]["title"]
+        channel = item["snippet"]["channelTitle"]
+        published_at = item["snippet"]["publishedAt"]
+        thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
+        video_url = f"https://www.youtube.com/watch?v={video_id}"
+        embed_url = f"https://www.youtube.com/embed/{video_id}"
 
-    try:
-        formatted_date = datetime.fromisoformat(published_at.replace("Z", "+00:00")).strftime("%d.%m.%Y")
-    except:
-        formatted_date = "Tarih Yok"
+        try:
+            formatted_date = datetime.fromisoformat(published_at.replace("Z", "+00:00")).strftime("%d.%m.%Y")
+        except:
+            formatted_date = "Tarih Yok"
 
-    video = {
-        "id": video_id,
-        "title": title,
-        "channel": channel,
-        "views": views_int,
-        "views_str": views_str,
-        "url": video_url,
-        "embed_url": embed_url,
-        "thumbnail": thumbnail,
-        "published_at": published_at,
-        "published_date_formatted": formatted_date
-    }
-    videos.append(video)
-
-    structured.append({
-        "@context": "https://schema.org",
-        "@type": "VideoObject",
-        "name": title,
-        "description": item["snippet"].get("description", ""),
-        "thumbnailUrl": [thumbnail],
-        "uploadDate": published_at,
-        "contentUrl": video_url,
-        "embedUrl": embed_url,
-        "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": { "@type": "WatchAction" },
-            "userInteractionCount": views_int
+        video = {
+            "id": video_id,
+            "title": title,
+            "channel": channel,
+            "views": views_int,
+            "views_str": views_str,
+            "url": video_url,
+            "embed_url": embed_url,
+            "thumbnail": thumbnail,
+            "published_at": published_at,
+            "published_date_formatted": formatted_date
         }
-    })
-    
+        videos.append(video)
+
+        structured.append({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": title,
+            "description": item["snippet"].get("description", ""),
+            "thumbnailUrl": [thumbnail],
+            "uploadDate": published_at,
+            "contentUrl": video_url,
+            "embedUrl": embed_url,
+            "interactionStatistic": {
+                "@type": "InteractionCounter",
+                "interactionType": { "@type": "WatchAction" },
+                "userInteractionCount": views_int
+            }
+        })
+
     # JSON'lara yaz
     with open(video_file, "w", encoding="utf-8") as f:
         json.dump(videos, f, ensure_ascii=False, indent=2)
@@ -300,3 +300,4 @@ for slug, info in COUNTRY_INFO.items():
         json.dump(structured, f, ensure_ascii=False, indent=2)
 
     print(f"✅ {video_file} ve {struct_file} oluşturuldu.")
+
