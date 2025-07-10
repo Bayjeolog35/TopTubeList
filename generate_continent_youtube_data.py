@@ -74,13 +74,13 @@ def fetch_videos_for_country(code):
     items = response.json().get("items", [])
     videos = []
 
-    for item in data["items"]:
+   for item in data["items"]:
     try:
         views_int = int(item["statistics"]["viewCount"])
     except:
         views_int = 0
 
-    # ✅ KISALTMALI views_str formatı
+    # Views stringini kısalt
     if views_int >= 1_000_000_000:
         views_str = f"{views_int / 1_000_000_000:.1f}B"
     elif views_int >= 1_000_000:
@@ -90,8 +90,12 @@ def fetch_videos_for_country(code):
     else:
         views_str = str(views_int)
 
-    video_url = f"https://www.youtube.com/watch?v={item['id']}"
+    video_id = item["id"]
+    title = item["snippet"]["title"]
+    channel = item["snippet"]["channelTitle"]
     thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
+    video_url = f"https://www.youtube.com/watch?v={video_id}"
+    embed_url = f"https://www.youtube.com/embed/{video_id}"
     published_at = item["snippet"].get("publishedAt", "")
 
     try:
@@ -100,13 +104,13 @@ def fetch_videos_for_country(code):
         formatted_date = "Tarih Yok"
 
     video = {
-        "id": item["id"],
-        "title": item["snippet"]["title"],
-        "channel": item["snippet"]["channelTitle"],
+        "id": video_id,
+        "title": title,
+        "channel": channel,
         "views": views_int,
-        "views_str": f"{views_str} views",  # 👈 örnek: "1.2M views"
+        "views_str": f"{views_str} views",
         "url": video_url,
-        "embed_url": f"https://www.youtube.com/embed/{item['id']}",
+        "embed_url": embed_url,
         "thumbnail": thumbnail,
         "published_at": published_at,
         "published_date_formatted": formatted_date
@@ -116,12 +120,12 @@ def fetch_videos_for_country(code):
     structured = {
         "@context": "https://schema.org",
         "@type": "VideoObject",
-        "name": item["snippet"]["title"],
+        "name": title,
         "description": item["snippet"].get("description", ""),
         "thumbnailUrl": [thumbnail],
         "uploadDate": published_at,
         "contentUrl": video_url,
-        "embedUrl": f"https://www.youtube.com/embed/{item['id']}",
+        "embedUrl": embed_url,
         "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": {"@type": "WatchAction"},
