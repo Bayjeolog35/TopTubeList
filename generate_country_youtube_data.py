@@ -152,19 +152,5 @@ for country_slug, info in country_data_for_processing.items():
                   style="position:absolute; width:1px; height:1px; left:-9999px;">
                 </iframe>
                 """
-                
-            print(f"✅ {HTML_OUTPUT_FILE} içine structured data ve iframe eklendi.")
-        else:
-            print(
-                f"⚠️ '{HTML_OUTPUT_FILE}' dosyası mevcut değil. HTML güncelleme atlanıyor."
-            )
 
-        print("-" * 50)
-
-    else:  # Bu 'else' bloğu, 'if response.status_code == 200:' bloğuna aittir.
-        print(f"❌ API Hatası ({code}):", response.status_code)
-        if response.status_code == 403:
-            print(
-                "API anahtarınızda kota sorunu veya geçersiz anahtar olabilir. Lütfen kontrol edin."
-            )
         print("-" * 50)
