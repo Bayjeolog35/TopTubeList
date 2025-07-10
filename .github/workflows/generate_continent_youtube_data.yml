@@ -1,0 +1,37 @@
+name: Generate and Update Continent YouTube Data
+
+on:
+  schedule:
+    # Her 3 saatte bir (UTC)
+    - cron: '0 */3 * * *'
+  workflow_dispatch:  # Manuel çalıştırma butonu
+
+jobs:
+  update-continent-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Run Continent Data Script
+        run: |
+          python generate_continent_data.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add *.json *.html
+          git commit -m "🌍 Kıta bazlı YouTube verileri güncellendi" || echo "Değişiklik yok, commit atlanıyor."
+          git push
