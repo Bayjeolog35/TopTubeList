@@ -154,7 +154,7 @@ for country_slug, info in country_data_for_processing.items():
 """
                 current_html_content = current_html_content.replace(
                     IFRAME_PLACEHOLDER, iframe_html
-                )
+                (
             else:
                 current_html_content = current_html_content.replace(
                     IFRAME_PLACEHOLDER, ""
