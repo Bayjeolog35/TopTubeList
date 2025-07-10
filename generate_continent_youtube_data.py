@@ -146,6 +146,27 @@ def deduplicate_by_title(videos):
             seen[title] = v
     return list(seen.values())
 
+def generate_structured_data(videos):
+    structured = []
+    for video in videos:
+        obj = {
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": video["title"],
+            "description": video.get("title", ""),  # Alternatif olarak: video.get("description", "")
+            "thumbnailUrl": [video["thumbnail"]],
+            "uploadDate": video["published_at"],
+            "contentUrl": video["url"],
+            "embedUrl": video["embed_url"],
+            "interactionStatistic": {
+                "@type": "InteractionCounter",
+                "interactionType": {"@type": "WatchAction"},
+                "userInteractionCount": video["views"]
+            }
+        }
+        structured.append(obj)
+    return structured
+
 def update_html(continent, top_videos, structured_data):
     html_file = f"{continent}.html"
     if not os.path.exists(html_file):
