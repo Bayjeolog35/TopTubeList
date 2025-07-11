@@ -922,6 +922,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
 <body>
     <header>
     <!-- STRUCTURED_DATA_HERE -->
+    {structured_block}
         <div class="container">
             <a href="../../index.html" class="logo">
                 <img src="TopTubeListLogo.webp" alt="TopTubeList" width="120">
@@ -1209,7 +1210,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
   <div id="videoList" class="video-list"></div>
   <button id="loadMoreBtn" class="site-button">Load More</button>
  </div>
-
+<!-- IFRAME_PLACEHOLDER -->
 {top_video_iframe}
 <section class="about-section">
   <button id="aboutToggle" class="site-button">About Us</button>
@@ -1242,7 +1243,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
     If it’s trending, chances are… we’ve already listed it. 😉</p>
   </div>
 </section>
- <!-- IFRAME_PLACEHOLDER -->
+ 
 <footer>
   <div class="contact-section">
     <button id="contactToggle" class="site-button">Contact Us</button>
