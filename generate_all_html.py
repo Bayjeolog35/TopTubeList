@@ -901,7 +901,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
     # 🎯 STRUCTURED: sadece ilk structured item’ı al
     structured_block = ""
     if structured_data and isinstance(structured_data, list) and structured_data:
-    structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data, indent=2)}\n</script>'
+        structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data, indent=2)}\n</script>'
 
     current_date = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
 
