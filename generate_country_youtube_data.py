@@ -3,6 +3,7 @@ import json
 import os
 import time
 from datetime import datetime
+from bs4 import BeautifulSoup
 
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
@@ -301,3 +302,46 @@ for slug, info in COUNTRY_INFO.items():
 
     print(f"✅ {video_file} ve {struct_file} oluşturuldu.")
 
+
+# 🔁 Tüm ülkeler için HTML güncelle
+for slug in COUNTRY_INFO:
+    update_html(slug)
+
+
+def update_html(slug):
+    html_file = f"{slug}.html"
+    struct_file = f"{slug}.str.data.json"
+    videos_file = f"{slug}.vid.data.json"
+
+    if not os.path.exists(html_file) or not os.path.exists(struct_file) or not os.path.exists(videos_file):
+        print(f"⛔ Dosya eksik: {slug}")
+        return
+
+    with open(html_file, 'r', encoding='utf-8') as f:
+        html_content = f.read()
+
+    with open(struct_file, 'r', encoding='utf-8') as f:
+        structured_data = json.load(f)
+
+    with open(videos_file, 'r', encoding='utf-8') as f:
+        videos = json.load(f)
+
+    # Structured Data JSON-LD Script
+    structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data[0], indent=2)}\n</script>'
+
+    # En çok izlenen videonun iframe embed
+    top_video = videos[0]
+    iframe_block = f'<iframe width="560" height="315" src="{top_video["embed_url"]}" frameborder="0" allowfullscreen hidden></iframe>'
+
+    html_content = html_content.replace("<!-- STRUCTURED_DATA_HERE -->", structured_block)
+    html_content = html_content.replace("<!-- IFRAME_PLACEHOLDER -->", iframe_block)
+
+    with open(html_file, 'w', encoding='utf-8') as f:
+        f.write(html_content)
+
+    print(f"✅ Güncellendi: {slug}.html")
+
+
+# 🔁 Tüm ülkeler için HTML güncelle (fonksiyon tanımından sonra)
+for slug in COUNTRY_INFO:
+    update_html(slug)
