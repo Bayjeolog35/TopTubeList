@@ -928,6 +928,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
                 <img src="TopTubeListLogo.webp" alt="TopTubeList" width="120">
             </a>
             <h1 id="pageTitle">Trending in {readable_name}</h1>
+            <button id="darkModeToggle" title="Toggle Dark Mode">🌓</button>
         </div>
         
 
