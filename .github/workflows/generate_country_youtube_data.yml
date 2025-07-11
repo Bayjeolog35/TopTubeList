@@ -36,6 +36,7 @@ jobs:
       run: |
         git config user.name "GitHub Actions Bot"
         git config user.email "actions@github.com"
+        git pull --rebase origin main  # 🔧 HATAYI ÖNLEMEK İÇİN EKLENDİ
         git add *.json *.html
         git commit -m "Otomatik YouTube verileri güncellemesi" || echo "Değişiklik yok, commit atlanıyor."
         git push
