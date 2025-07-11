@@ -890,19 +890,21 @@ def generate_top_video_iframe(videos_data):
     </div>
     """
 
-
 def generate_html_content(name, videos_data, structured_data, is_country=True):
     info_dict = COUNTRY_INFO if is_country else CONTINENT_INFO
     readable_name = info_dict.get(name, {}).get("name", name.replace("_", " ").title())
-    meta_description = info_dict.get(name, {}).get("meta_description", f"Trending YouTube videos in name - Updated every 3 hours")
+    meta_description = info_dict.get(name, {}).get("meta_description", f"Trending YouTube videos in {readable_name} - Updated every 3 hours")
 
+    # 🎯 IFRAME: en çok izlenen videoyu al
     top_video_iframe = generate_top_video_iframe(videos_data)
 
+    # 🎯 STRUCTURED: sadece ilk structured item’ı al
     structured_block = ""
-    if structured_data:
-        structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data, indent=2)}\n</script>'
+    if structured_data and isinstance(structured_data, list) and structured_data:
+        structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data[0], indent=2)}\n</script>'
 
     current_date = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
+
 
     return f"""<!DOCTYPE html>
 <html lang="en">
