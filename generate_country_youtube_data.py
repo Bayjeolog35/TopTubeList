@@ -307,40 +307,65 @@ for slug, info in COUNTRY_INFO.items():
 for slug in COUNTRY_INFO:
     update_html(slug)
 
-
 def update_html(slug):
     html_file = f"{slug}.html"
     struct_file = f"{slug}.str.data.json"
     videos_file = f"{slug}.vid.data.json"
 
-    if not os.path.exists(html_file) or not os.path.exists(struct_file) or not os.path.exists(videos_file):
-        print(f"⛔ Dosya eksik: {slug}")
+    # HTML dosyası yoksa veya JSON dosyaları yoksa işlemi durdur.
+    # Burada varsayımınız, HTML dosyasının zaten var olduğudur. Eğer dinamik oluşturuyorsanız farklı ele alınmalı.
+    if not os.path.exists(html_file):
+        print(f"⛔ HTML dosyası bulunamadı: {html_file}")
         return
 
-    with open(html_file, 'r', encoding='utf-8') as f:
-        html_content = f.read()
+    if not os.path.exists(struct_file):
+        print(f"⛔ Yapısal veri dosyası bulunamadı: {struct_file}. Bu ülkenin API verisi çekilememiş olabilir.")
+        return
 
-    with open(struct_file, 'r', encoding='utf-8') as f:
-        structured_data = json.load(f)
+    if not os.path.exists(videos_file):
+        print(f"⛔ Video veri dosyası bulunamadı: {videos_file}. Bu ülkenin API verisi çekilememiş olabilir.")
+        return
 
-    with open(videos_file, 'r', encoding='utf-8') as f:
-        videos = json.load(f)
+    try:
+        with open(html_file, 'r', encoding='utf-8') as f:
+            html_content = f.read()
 
-    # Structured Data JSON-LD Script
-    structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data[0], indent=2)}\n</script>'
+        with open(struct_file, 'r', encoding='utf-8') as f:
+            structured_data = json.load(f)
 
-    # En çok izlenen videonun iframe embed
-    top_video = videos[0]
-    iframe_block = f'<iframe width="560" height="315" src="{top_video["embed_url"]}" frameborder="0" allowfullscreen hidden></iframe>'
+        with open(videos_file, 'r', encoding='utf-8') as f:
+            videos = json.load(f)
 
-    html_content = html_content.replace("<!-- STRUCTURED_DATA_HERE -->", structured_block)
-    html_content = html_content.replace("<!-- IFRAME_PLACEHOLDER -->", iframe_block)
+        # structured_data veya videos listelerinin boş olup olmadığını kontrol edin
+        structured_block = ""
+        if structured_data: # Liste boş değilse ilk elemana eriş
+            structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data[0], indent=2)}\n</script>'
+        else:
+            print(f"⚠️ {slug} için yapısal veri bulunamadı. HTML'ye eklenmeyecek.")
 
-    with open(html_file, 'w', encoding='utf-8') as f:
-        f.write(html_content)
+        iframe_block = ""
+        if videos: # Liste boş değilse ilk elemana eriş
+            top_video = videos[0]
+            iframe_block = f'<iframe width="560" height="315" src="{top_video["embed_url"]}" frameborder="0" allowfullscreen hidden></iframe>'
+        else:
+            print(f"⚠️ {slug} için video verisi bulunamadı. iframe eklenmeyecek.")
 
-    print(f"✅ Güncellendi: {slug}.html")
 
+        # Placeholder'ları değiştirin
+        html_content = html_content.replace(STRUCTURED_DATA_PLACEHOLDER, structured_block)
+        html_content = html_content.replace(IFRAME_PLACEHOLDER, iframe_block)
+
+        with open(html_file, 'w', encoding='utf-8') as f:
+            f.write(html_content)
+
+        print(f"✅ Güncellendi: {slug}.html")
+
+    except json.JSONDecodeError:
+        print(f"❌ JSON okuma hatası: {struct_file} veya {videos_file} geçerli bir JSON değil.")
+    except IndexError:
+        print(f"❌ Dizin hatası: {struct_file} veya {videos_file} boş bir liste içeriyor.")
+    except Exception as e:
+        print(f"❌ HTML güncelleme sırasında beklenmeyen hata ({slug}): {e}")
 
 # 🔁 Tüm ülkeler için HTML güncelle (fonksiyon tanımından sonra)
 for slug in COUNTRY_INFO:
