@@ -208,6 +208,83 @@ COUNTRY_INFO = {
     "zambia": {"code": "ZM", "continent": "africa"},
     "zimbabwe": {"code": "ZW", "continent": "africa"}
 }
+def update_html(slug):
+    html_file = f"{slug}.html"
+    struct_file = f"{slug}.str.data.json"
+    videos_file = f"{slug}.vid.data.json"
+
+    # HTML dosyasının varlığını kontrol eder. Eğer yoksa, işlem yapmadan döner.
+    # Bu varsayım, HTML dosyasının zaten var olduğu veya başka bir yerde oluşturulduğu üzerinedir.
+    if not os.path.exists(html_file):
+        print(f"⛔ HTML dosyası bulunamadı: {html_file}")
+        return
+
+    # Yapısal veri (structured data) JSON dosyasının varlığını kontrol eder.
+    # Eğer yoksa, bu ülkenin API verisinin çekilememiş olabileceğini belirtir ve döner.
+    if not os.path.exists(struct_file):
+        print(f"⛔ Yapısal veri dosyası bulunamadı: {struct_file}. Bu ülkenin API verisi çekilememiş olabilir.")
+        return
+
+    # Video veri JSON dosyasının varlığını kontrol eder.
+    # Eğer yoksa, bu ülkenin API verisinin çekilememiş olabileceğini belirtir ve döner.
+    if not os.path.exists(videos_file):
+        print(f"⛔ Video veri dosyası bulunamadı: {videos_file}. Bu ülkenin API verisi çekilememiş olabilir.")
+        return
+
+    try:
+        # HTML içeriğini okur.
+        with open(html_file, 'r', encoding='utf-8') as f:
+            html_content = f.read()
+
+        # Yapısal veri JSON dosyasını yükler.
+        with open(struct_file, 'r', encoding='utf-8') as f:
+            structured_data = json.load(f)
+
+        # Video veri JSON dosyasını yükler.
+        with open(videos_file, 'r', encoding='utf-8') as f:
+            videos = json.load(f)
+
+        # Yapısal veri listesinin boş olup olmadığını kontrol eder.
+        # Eğer boş değilse, ilk elemanı kullanarak JSON-LD script bloğunu oluşturur.
+        # Boşsa, bir uyarı mesajı yazdırır ve boş bir blok kullanır.
+        structured_block = ""
+        if structured_data:
+            structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data[0], indent=2)}\n</script>'
+        else:
+            print(f"⚠️ {slug} için yapısal veri bulunamadı. HTML'ye eklenmeyecek.")
+
+        # Videolar listesinin boş olup olmadığını kontrol eder.
+        # Eğer boş değilse, ilk videoyu kullanarak iframe embed bloğunu oluşturur.
+        # Boşsa, bir uyarı mesajı yazdırır ve boş bir blok kullanır.
+        iframe_block = ""
+        if videos:
+            top_video = videos[0]
+            iframe_block = f'<iframe width="560" height="315" src="{top_video["embed_url"]}" frameborder="0" allowfullscreen hidden></iframe>'
+        else:
+            print(f"⚠️ {slug} için video verisi bulunamadı. iframe eklenmeyecek.")
+
+        # HTML içeriğindeki placeholder'ları oluşturulan bloklarla değiştirir.
+        html_content = html_content.replace(STRUCTURED_DATA_PLACEHOLDER, structured_block)
+        html_content = html_content.replace(IFRAME_PLACEHOLDER, iframe_block)
+
+        # Güncellenmiş HTML içeriğini dosyaya geri yazar.
+        with open(html_file, 'w', encoding='utf-8') as f:
+            f.write(html_content)
+
+        print(f"✅ Güncellendi: {slug}.html")
+
+    # JSON dosyası okuma hatası (geçersiz JSON formatı) yakalar.
+    except json.JSONDecodeError:
+        print(f"❌ JSON okuma hatası: {struct_file} veya {videos_file} geçerli bir JSON değil.")
+    # Liste dizin hatası (boş listeden eleman çekme) yakalar.
+    except IndexError:
+        print(f"❌ Dizin hatası: {struct_file} veya {videos_file} boş bir liste içeriyor.")
+    # Diğer tüm beklenmeyen hataları yakalar.
+    except Exception as e:
+        print(f"❌ HTML güncelleme sırasında beklenmeyen hata ({slug}): {e}")
+
+
+# Her ülke için veri çekme ve JSON dosyalarını oluşturma döngüsü
 for slug, info in COUNTRY_INFO.items():
     code = info["code"]
     display_name = slug.replace("-", " ").title()
@@ -216,7 +293,7 @@ for slug, info in COUNTRY_INFO.items():
 
     video_file = f"{slug}.vid.data.json"
     struct_file = f"{slug}.str.data.json"
-    html_file = f"{slug}.html"
+    html_file = f"{slug}.html" # Bu satırın burada olması gerekiyor
 
     params = {
         "part": "snippet,statistics",
@@ -229,7 +306,10 @@ for slug, info in COUNTRY_INFO.items():
     response = requests.get(API_URL, params=params)
     if response.status_code != 200:
         print(f"❌ API Hatası ({code}): {response.status_code}")
-        continue
+        # Hata detayını görmek için
+        if response.status_code == 400:
+            print(f"Hata detayı: {response.json().get('error', {}).get('message', 'Bilinmeyen Hata')}")
+        continue # Hata durumunda bu ülkeyi atla ve bir sonraki ülkeye geç
 
     items = response.json().get("items", [])
     videos = []
@@ -241,6 +321,7 @@ for slug, info in COUNTRY_INFO.items():
         except:
             views_int = 0
 
+        # Görüntülenme sayısını okunabilir formata dönüştürür.
         if views_int >= 1_000_000_000:
             views_str = f"{views_int / 1_000_000_000:.1f}B views"
         elif views_int >= 1_000_000:
@@ -293,7 +374,7 @@ for slug, info in COUNTRY_INFO.items():
             }
         })
 
-    # JSON'lara yaz
+    # Çekilen verileri JSON dosyalarına yazar.
     with open(video_file, "w", encoding="utf-8") as f:
         json.dump(videos, f, ensure_ascii=False, indent=2)
 
@@ -302,74 +383,9 @@ for slug, info in COUNTRY_INFO.items():
 
     print(f"✅ {video_file} ve {struct_file} oluşturuldu.")
 
-
-# 🔁 Tüm ülkeler için HTML güncelle
+# Tüm ülkeler için HTML güncelleme fonksiyonunu çağırır.
+# Bu döngü, tüm JSON dosyaları oluşturulduktan sonra çalışır.
 for slug in COUNTRY_INFO:
     update_html(slug)
 
-def update_html(slug):
-    html_file = f"{slug}.html"
-    struct_file = f"{slug}.str.data.json"
-    videos_file = f"{slug}.vid.data.json"
-
-    # HTML dosyası yoksa veya JSON dosyaları yoksa işlemi durdur.
-    # Burada varsayımınız, HTML dosyasının zaten var olduğudur. Eğer dinamik oluşturuyorsanız farklı ele alınmalı.
-    if not os.path.exists(html_file):
-        print(f"⛔ HTML dosyası bulunamadı: {html_file}")
-        return
-
-    if not os.path.exists(struct_file):
-        print(f"⛔ Yapısal veri dosyası bulunamadı: {struct_file}. Bu ülkenin API verisi çekilememiş olabilir.")
-        return
-
-    if not os.path.exists(videos_file):
-        print(f"⛔ Video veri dosyası bulunamadı: {videos_file}. Bu ülkenin API verisi çekilememiş olabilir.")
-        return
-
-    try:
-        with open(html_file, 'r', encoding='utf-8') as f:
-            html_content = f.read()
-
-        with open(struct_file, 'r', encoding='utf-8') as f:
-            structured_data = json.load(f)
-
-        with open(videos_file, 'r', encoding='utf-8') as f:
-            videos = json.load(f)
-
-        # structured_data veya videos listelerinin boş olup olmadığını kontrol edin
-        structured_block = ""
-        if structured_data: # Liste boş değilse ilk elemana eriş
-            structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data[0], indent=2)}\n</script>'
-        else:
-            print(f"⚠️ {slug} için yapısal veri bulunamadı. HTML'ye eklenmeyecek.")
-
-        iframe_block = ""
-        if videos: # Liste boş değilse ilk elemana eriş
-            top_video = videos[0]
-            iframe_block = f'<iframe width="560" height="315" src="{top_video["embed_url"]}" frameborder="0" allowfullscreen hidden></iframe>'
-        else:
-            print(f"⚠️ {slug} için video verisi bulunamadı. iframe eklenmeyecek.")
-
-
-        # Placeholder'ları değiştirin
-        html_content = html_content.replace(STRUCTURED_DATA_PLACEHOLDER, structured_block)
-        html_content = html_content.replace(IFRAME_PLACEHOLDER, iframe_block)
-
-        with open(html_file, 'w', encoding='utf-8') as f:
-            f.write(html_content)
-
-        print(f"✅ Güncellendi: {slug}.html")
-
-    except json.JSONDecodeError:
-        print(f"❌ JSON okuma hatası: {struct_file} veya {videos_file} geçerli bir JSON değil.")
-    except IndexError:
-        print(f"❌ Dizin hatası: {struct_file} veya {videos_file} boş bir liste içeriyor.")
-    except Exception as e:
-        print(f"❌ HTML güncelleme sırasında beklenmeyen hata ({slug}): {e}")
-
-# 🔁 Tüm ülkeler için HTML güncelle (fonksiyon tanımından sonra)
-for slug in COUNTRY_INFO:
-    update_html(slug)
-
-import sys
 sys.exit(0)
