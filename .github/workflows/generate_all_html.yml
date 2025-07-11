@@ -2,8 +2,7 @@ name: Generate All HTML Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
     paths:
       - 'generate_all_html.py'
       - '*.vid.data.json'
@@ -17,15 +16,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    #— Repo’yu tam geçmişiyle çek (push için şart) —
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0          # ← önemli
 
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.x'
 
-    - name: Install dependencies (if needed)
+    - name: Install dependencies (none needed)
       run: echo "No external dependencies needed"
 
     - name: Run HTML Generator Script
@@ -33,11 +35,14 @@ jobs:
 
     - name: Configure Git
       run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
 
-    - name: Commit and Push HTML files
+    #— ÖNEMLİ: önce remote’u çek, sonra force-push; böylece eski/boş
+    #  HTML’lerle çatışma yaşamazsın ve kendi çıktını korursun —
+    - name: Commit and force-push HTML files
       run: |
         git add *.html
-        git commit -m "🔄 Update generated HTML pages" || echo "No changes to commit"
-        git push origin main
+        git commit -m "🔄 Update generated HTML pages" || echo "No changes"
+        # remote’daki değişiklikleri önemsemiyoruz, çıktımız öncelik
+        git push origin main --force
