@@ -345,3 +345,7 @@ def update_html(slug):
 # 🔁 Tüm ülkeler için HTML güncelle (fonksiyon tanımından sonra)
 for slug in COUNTRY_INFO:
     update_html(slug)
+
+import sys
+sys.exit(0)
+D
