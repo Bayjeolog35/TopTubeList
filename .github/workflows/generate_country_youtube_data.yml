@@ -2,11 +2,8 @@ name: Generate and Update Country YouTube Data
 
 on:
   schedule:
-    # Her 3 saatte bir çalışır. UTC saat dilimine göre ayarlanır.
-    - cron: '0 */3 * * *'
-  
-  # Manuel olarak çalıştırma butonu ekler
-  workflow_dispatch:
+    - cron: '0 */3 * * *'  # Her 3 saatte bir (UTC)
+  workflow_dispatch:        # Manuel tetikleme
 
 jobs:
   update-youtube-data:
@@ -15,6 +12,8 @@ jobs:
     steps:
     - name: Check out repository
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Tüm commit geçmişini çek
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -32,11 +31,19 @@ jobs:
       run: |
         python generate_country_youtube_data.py
 
-    - name: Commit and push changes
+    - name: Configure Git
       run: |
-        git config user.name "GitHub Actions Bot"
-        git config user.email "actions@github.com"
-        git pull --rebase origin main  # 🔧 HATAYI ÖNLEMEK İÇİN EKLENDİ
+        git config --global user.name "GitHub Actions Bot"
+        git config --global user.email "actions@github.com"
+        git config --global pull.rebase true
+
+    - name: Pull changes (with rebase)
+      run: git pull origin main
+
+    - name: Commit changes
+      run: |
         git add *.json *.html
-        git commit -m "Otomatik YouTube verileri güncellemesi" || echo "Değişiklik yok, commit atlanıyor."
-        git push
+        git diff-index --quiet HEAD || git commit -m "Auto-update YouTube data [skip ci]"
+        
+    - name: Push changes
+      run: git push origin main
