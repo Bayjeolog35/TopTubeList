@@ -1211,7 +1211,6 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
   <button id="loadMoreBtn" class="site-button">Load More</button>
  </div>
 <!-- IFRAME_PLACEHOLDER -->
-{top_video_iframe}
 <section class="about-section">
   <button id="aboutToggle" class="site-button">About Us</button>
   <div id="aboutContent" style="display: none;">
