@@ -4,6 +4,7 @@ import os
 import time
 from datetime import datetime
 from bs4 import BeautifulSoup
+import sys
 
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
