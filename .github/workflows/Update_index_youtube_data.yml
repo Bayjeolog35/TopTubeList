@@ -3,10 +3,10 @@ name: Update Index (YouTube Data)
 on:
   schedule:
     - cron: '0 */3 * * *'  # Her 3 saatte bir
-  workflow_dispatch:        # Manuel çalıştırma için
+  workflow_dispatch:
 
 permissions:
-  contents: write           # Git'e yazma izni gerekir
+  contents: write
 
 jobs:
   fetch-and-update:
@@ -35,7 +35,8 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main || true
+          git fetch origin
+          git rebase origin/main || echo "⚠️ Rebase başarısız, devam ediliyor"
           git add .
-          git commit -m "🔄 Otomatik güncelleme: videos.json, structured_data.json ve index.html" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
+          git commit -m "🔄 Otomatik güncelleme: videos.json, structured_data.json ve index.html" || echo "⚠️ Commit yapılacak değişiklik yok"
+          git push origin HEAD:main --force-with-lease
