@@ -2,8 +2,8 @@ name: Generate and Update Country YouTube Data
 
 on:
   schedule:
-    - cron: '0 */3 * * *'  # Her 3 saatte bir (UTC)
-  workflow_dispatch:        # Manuel tetikleme
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
 
 jobs:
   update-youtube-data:
@@ -13,7 +13,7 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0  # Tüm commit geçmişini çek
+        fetch-depth: 0
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -35,15 +35,15 @@ jobs:
       run: |
         git config --global user.name "GitHub Actions Bot"
         git config --global user.email "actions@github.com"
-        git config --global pull.rebase true
+        git config --global pull.rebase false  # Rebase yerine merge kullan
 
-    - name: Pull changes (with rebase)
-      run: git pull origin main
-
-    - name: Commit changes
+    - name: Stage and commit local changes first
       run: |
         git add *.json *.html
-        git diff-index --quiet HEAD || git commit -m "Auto-update YouTube data [skip ci]"
-        
+        git diff --cached --quiet || git commit -m "Auto-commit before pull [skip ci]"
+
+    - name: Pull latest changes
+      run: git pull origin main
+
     - name: Push changes
       run: git push origin main
