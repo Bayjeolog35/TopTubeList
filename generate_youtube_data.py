@@ -87,21 +87,28 @@ def process_video_data(item):
     }
 
 def generate_structured_data(videos):
-    return [{
-        "@context": "https://schema.org",
-        "@type": "VideoObject",
-        "name": v["title"],
-        "description": v["title"],
-        "thumbnailUrl": v["thumbnail"],
-        "uploadDate": v["published_at"],
-        "embedUrl": v["embed_url"],
-        "url": v["url"],
-        "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": {"@type": "WatchAction"},
-            "userInteractionCount": v["views"]
-        }
-    } for v in videos]
+    structured = []
+    for v in videos:
+        try:
+            iso_date = datetime.fromisoformat(v["published_at"].replace("Z", "+00:00")).isoformat()
+        except Exception:
+            iso_date = "2025-01-01T00:00:00+00:00"  # fallback
+        structured.append({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": v["title"],
+            "description": v["title"] or "No description available",
+            "thumbnailUrl": v["thumbnail"],
+            "uploadDate": iso_date,
+            "embedUrl": v["embed_url"],
+            "url": v["url"],
+            "interactionStatistic": {
+                "@type": "InteractionCounter",
+                "interactionType": {"@type": "WatchAction"},
+                "userInteractionCount": v["views"]
+            }
+        })
+    return structured
 
 
 def save_json(name, videos):
