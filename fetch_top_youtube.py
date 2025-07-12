@@ -72,7 +72,7 @@ if response.status_code == 200:
             "description": item["snippet"].get("description", ""),
             "thumbnailUrl": thumbnail,
             "uploadDate": published_at,
-            "contentUrl": video_url,
+            "url": "https://www.youtube.com/watch?v=...”
             "embedUrl": f"https://www.youtube.com/embed/{item['id']}",
             "interactionStatistic": {
                 "@type": "InteractionCounter",
