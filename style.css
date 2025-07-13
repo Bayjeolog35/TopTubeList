@@ -482,17 +482,19 @@ background-color: #000;
 }
 
 #contactContent {
-  max-height: 0;
-  overflow: hidden;
+  margin-top: 20px;
+  display: none;
+  text-align: left;
+  visibility: hidden;   /* Gözükmez ama yer tutar */
   opacity: 0;
-  transition: max-height 0.4s ease, opacity 0.3s ease;
-  pointer-events: none;
+  transition: opacity 0.3s ease;
+  min-height: 300px;
 }
 
 #contactContent.show {
- max-height: 800px; /* içeriğe göre ayarlayabilirsin */
+  display: block;
+  visibility: visible;
   opacity: 1;
-  pointer-events: auto;
 }
 
 
