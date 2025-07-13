@@ -895,6 +895,21 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
     readable_name = info_dict.get(name, {}).get("name", name.replace("_", " ").title())
     meta_description = info_dict.get(name, {}).get("meta_description", f"Trending YouTube videos in {readable_name} - Updated every 3 hours")
 
+      # Tag Manager head kodu
+    gtm_head = """<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':
+new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+}})(window,document,'script','dataLayer','GTM-N865S9W3');</script>
+<!-- End Google Tag Manager -->"""
+
+    # GTM noscript body başlangıcı için
+    gtm_noscript = """<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N865S9W3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->"""
+    
     # 🎯 IFRAME: en çok izlenen videoyu al
     top_video_iframe = generate_top_video_iframe(videos_data)
 
@@ -909,13 +924,7 @@ def generate_html_content(name, videos_data, structured_data, is_country=True):
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N865S9W3');</script>
-<!-- End Google Tag Manager -->
+  {gtm_head}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trending YouTube Videos in name | TopTubeList</title>
@@ -927,10 +936,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N865S9W3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    {gtm_noscript}
     <header>
     <!-- STRUCTURED_DATA_HERE -->
     {structured_block}
