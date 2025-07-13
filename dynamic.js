@@ -174,31 +174,6 @@ if (mainElement) {
     }
 
 
-    /**
-     * Toggles the display of a content section with fade/slide effect.
-     * @param {HTMLElement} element - The content element to toggle.
-     */
-    function toggleContent(element) {
-        if (!element) return; // Element yoksa hata vermesini engelle
-
-        if (element.classList.contains("show")) {
-            element.classList.remove("show");
-            // Elementi tamamen gizlemeden önce transition'ın bitmesini bekle
-            setTimeout(() => {
-                element.style.display = "none";
-            }, 400); // CSS transition süresiyle eşleşmeli
-        } else {
-            element.style.display = "block";
-            // Display: block olduktan sonra tarayıcının yeniden render yapmasına izin ver
-            // ve sonra "show" sınıfını ekleyerek transition'ı tetikle
-            setTimeout(() => {
-                element.classList.add("show");
-                // Element görünür hale geldikten sonra scroll yap
-                element.scrollIntoView({ behavior: "smooth", block: "start" });
-            }, 10); // Çok küçük bir gecikme
-        }
-    }
-
 
     // --- Event Listeners and Initial Setup ---
 
@@ -290,11 +265,10 @@ if (mainElement) {
 
 
     // Contact Toggle
-    if (contactToggle && contactContent) {
-        contactToggle.addEventListener("click", () => {
-            toggleContent(contactContent);
-        });
-    }
+   contactToggle.addEventListener("click", () => {
+    contactContent.classList.toggle("show");
+    contactContent.scrollIntoView({ behavior: "smooth", block: "start" });
+});
 
     // About Toggle
     if (aboutToggle && aboutContent) {
