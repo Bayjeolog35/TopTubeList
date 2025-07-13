@@ -473,6 +473,7 @@ background-color: #000;
   color: white;
   margin-top: 10px;
   border-top: 1px solid #222;
+  min-height: 80px; /* Sabit bir yükseklik tanımla */
 }
 
 .contact-section {
@@ -482,17 +483,14 @@ background-color: #000;
 
 #contactContent {
   margin-top: 20px;
-  display: none;
   text-align: left;
-  visibility: hidden;   /* Gözükmez ama yer tutar */
+  overflow: hidden;
+  max-height: 0;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  min-height: 300px;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
 }
-
 #contactContent.show {
-  display: block;
-  visibility: visible;
+  max-height: 1000px; /* Formun maksimum yüksekliği kadar */
   opacity: 1;
 }
 
@@ -556,9 +554,10 @@ display: inline-block;
 
 
 footer p {
-  margin-bottom: 1px;
+ margin: 0;
   font-size: 0.9rem;
   color: #ccc;
+  line-height: 1.4; /* CLS için stabil satır yüksekliği */
 }
 
 body.dark-mode footer {
