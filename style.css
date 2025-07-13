@@ -482,16 +482,17 @@ background-color: #000;
 }
 
 #contactContent {
-  margin-top: 20px;
-  text-align: left;
-  overflow: hidden;
   max-height: 0;
+  overflow: hidden;
   opacity: 0;
   transition: max-height 0.4s ease, opacity 0.3s ease;
+  pointer-events: none;
 }
+
 #contactContent.show {
-  max-height: 1000px; /* Formun maksimum yüksekliği kadar */
+ max-height: 800px; /* içeriğe göre ayarlayabilirsin */
   opacity: 1;
+  pointer-events: auto;
 }
 
 
