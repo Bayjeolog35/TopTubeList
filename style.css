@@ -484,10 +484,16 @@ background-color: #000;
   margin-top: 20px;
   display: none;
   text-align: left;
+  visibility: hidden;   /* Gözükmez ama yer tutar */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  min-height: 300px;
 }
 
 #contactContent.show {
   display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 
