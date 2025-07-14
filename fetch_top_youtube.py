@@ -85,7 +85,7 @@ if not desc or desc.startswith("http"):
 }
         structured_items.append(structured)
 
-    videos = sorted(videos, key=lambda x: x["views"], reverse=True)
+        videos = sorted(videos, key=lambda x: x["views"], reverse=True)
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(videos, f, ensure_ascii=False, indent=2)
