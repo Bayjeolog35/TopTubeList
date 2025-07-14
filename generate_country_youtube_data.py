@@ -360,10 +360,12 @@ for slug, info in COUNTRY_INFO.items():
         videos.append(video)
 
         raw_description = item["snippet"].get("description", "").strip().replace("\n", " ")
-        if not raw_description or raw_description.startswith("http"):
+
+        # Boşsa, çok kısaysa veya sadece URL içeriyorsa fallback kullan
+        if not raw_description or raw_description.lower().startswith("http") or len(raw_description) < 10:
             cleaned_description = f"{title} by {channel}"
         else:
-            cleaned_description = raw_description[:200]  # İlk 200 karakter
+            cleaned_description = raw_description[:200]
 
         # Structured data bloğu
         structured.append({
