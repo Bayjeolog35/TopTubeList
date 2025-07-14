@@ -65,27 +65,23 @@ if response.status_code == 200:
         }
         videos.append(video)
 
-        desc = item["snippet"].get("description", "").strip().replace("\n", " ")
-if not desc or desc.startswith("http"):
-        desc = f"{item['snippet']['title']} by {item['snippet']['channelTitle']}"
-
         structured = {
             "@context": "https://schema.org",
             "@type": "VideoObject",
             "name": item["snippet"]["title"],
-            "description": desc[:200],
-            "thumbnailUrl": [thumbnail],
+            "description": item["snippet"].get("description", ""),
+            "thumbnailUrl": thumbnail,
             "uploadDate": published_at,
             "embedUrl": f"https://www.youtube.com/embed/{item['id']}",
             "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": {"@type": "WatchAction"},
-            "userInteractionCount": views_int
-    }
-}
+                "@type": "InteractionCounter",
+                "interactionType": {"@type": "WatchAction"},
+                "userInteractionCount": views_int
+            }
+        }
         structured_items.append(structured)
 
-        videos = sorted(videos, key=lambda x: x["views"], reverse=True)
+    videos = sorted(videos, key=lambda x: x["views"], reverse=True)
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(videos, f, ensure_ascii=False, indent=2)
