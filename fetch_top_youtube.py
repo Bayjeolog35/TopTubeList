@@ -24,62 +24,66 @@ params = {
 
 response = requests.get(API_URL, params=params)
 
-for item in data["items"]:
-    try:
-        views_int = int(item["statistics"]["viewCount"])
-    except:
-        views_int = 0
+if response.status_code == 200:
+    data = response.json()
+    videos = []
+    structured_items = []
 
-    if views_int >= 1_000_000_000:
-        views_str = f"{views_int/1_000_000_000:.2f}B"
-    elif views_int >= 1_000_000:
-        views_str = f"{views_int/1_000_000:.2f}M"
-    else:
-        views_str = str(views_int)
+    for item in data["items"]:
+        try:
+            views_int = int(item["statistics"]["viewCount"])
+        except:
+            views_int = 0
 
-    video_url = f"https://www.youtube.com/watch?v={item['id']}"
-    thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
-    published_at = item["snippet"].get("publishedAt", "")
+        if views_int >= 1_000_000_000:
+            views_str = f"{views_int/1_000_000_000:.2f}B"
+        elif views_int >= 1_000_000:
+            views_str = f"{views_int/1_000_000:.2f}M"
+        else:
+            views_str = str(views_int)
 
-    try:
-        formatted_date = datetime.fromisoformat(published_at.replace("Z", "+00:00")).strftime("%d.%m.%Y")
-    except:
-        formatted_date = "Tarih Yok"
+        video_url = f"https://www.youtube.com/watch?v={item['id']}"
+        thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
+        published_at = item["snippet"].get("publishedAt", "")
 
-    video = {
-        "id": item["id"],
-        "title": item["snippet"]["title"],
-        "channel": item["snippet"]["channelTitle"],
-        "views": views_int,
-        "views_str": views_str,
-        "url": video_url,
-        "embed_url": f"https://www.youtube.com/embed/{item['id']}",
-        "thumbnail": thumbnail,
-        "published_at": published_at,
-        "published_date_formatted": formatted_date
-    }
-    videos.append(video)
+        try:
+            formatted_date = datetime.fromisoformat(published_at.replace("Z", "+00:00")).strftime("%d.%m.%Y")
+        except:
+            formatted_date = "Tarih Yok"
 
-    # ✅ Structured data için açıklama temizleme
-    desc = item["snippet"].get("description", "").strip().replace("\n", " ")
-    if not desc or desc.startswith("http"):
+        video = {
+            "id": item["id"],
+            "title": item["snippet"]["title"],
+            "channel": item["snippet"]["channelTitle"],
+            "views": views_int,
+            "views_str": views_str,
+            "url": video_url,
+            "embed_url": f"https://www.youtube.com/embed/{item['id']}",
+            "thumbnail": thumbnail,
+            "published_at": published_at,
+            "published_date_formatted": formatted_date
+        }
+        videos.append(video)
+
+        desc = item["snippet"].get("description", "").strip().replace("\n", " ")
+if not desc or desc.startswith("http"):
         desc = f"{item['snippet']['title']} by {item['snippet']['channelTitle']}"
 
-    structured = {
-        "@context": "https://schema.org",
-        "@type": "VideoObject",
-        "name": item["snippet"]["title"],
-        "description": desc[:200],
-        "thumbnailUrl": [thumbnail],
-        "uploadDate": published_at,
-        "embedUrl": f"https://www.youtube.com/embed/{item['id']}",
-        "interactionStatistic": {
+        structured = {
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": item["snippet"]["title"],
+            "description": desc[:200],
+            "thumbnailUrl": [thumbnail],
+            "uploadDate": published_at,
+            "embedUrl": f"https://www.youtube.com/embed/{item['id']}",
+            "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": {"@type": "WatchAction"},
             "userInteractionCount": views_int
-        }
     }
-    structured_items.append(structured)
+}
+        structured_items.append(structured)
 
     videos = sorted(videos, key=lambda x: x["views"], reverse=True)
 
