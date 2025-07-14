@@ -64,16 +64,17 @@ if response.status_code == 200:
             "published_date_formatted": formatted_date
         }
         videos.append(video)
-
-        desc = item["snippet"].get("description", "").strip().replace("\n", " ")
-        if not desc or desc.startswith("http"):
-        desc = f"{item['snippet']['title']} by {item['snippet']['channelTitle']}"
-
+        raw_description = item["snippet"].get("description", "").strip().replace("\n", " ")
+if not raw_description or raw_description.startswith("http"):
+    cleaned_description = f"{title} by {channel}"
+else:
+    cleaned_description = raw_description[:200]
+    
         structured = {
             "@context": "https://schema.org",
             "@type": "VideoObject",
             "name": item["snippet"]["title"],
-            "description": desc[:200],
+            "description": cleaned_description,
             "thumbnailUrl": thumbnail,
             "uploadDate": published_at,
             "embedUrl": f"https://www.youtube.com/embed/{item['id']}",
