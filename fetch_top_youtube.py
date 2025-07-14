@@ -65,14 +65,8 @@ if response.status_code == 200:
         }
         videos.append(video)
 
-        # ✨ Description mantığı: API'den çek, yoksa başlığı kullan ✨
         api_description = item["snippet"].get("description", "").strip()
-
-        # Eğer API'den gelen açıklama boşsa, videonun başlığını kullan
-        if not api_description:
-            final_description = item["snippet"]["title"]
-        else:
-            final_description = api_description
+        final_description = api_description if api_description else item["snippet"]["title"]
 
         structured = {
             "@context": "https://schema.org",
