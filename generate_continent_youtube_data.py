@@ -153,7 +153,7 @@ def generate_structured_data(videos):
             "@context": "https://schema.org",
             "@type": "VideoObject",
             "name": video["title"],
-            "description": video.get("title", ""),  # Alternatif olarak: video.get("description", "")
+            "description": video.get("description", video.get("title", ""))[:200],
             "thumbnailUrl": [video["thumbnail"]],
             "uploadDate": video["published_at"],
             "contentUrl": video["url"],
