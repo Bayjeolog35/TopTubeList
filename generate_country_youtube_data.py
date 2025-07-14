@@ -359,11 +359,18 @@ for slug, info in COUNTRY_INFO.items():
         }
         videos.append(video)
 
+        raw_description = item["snippet"].get("description", "").strip().replace("\n", " ")
+        if not raw_description or raw_description.startswith("http"):
+            cleaned_description = f"{title} by {channel}"
+        else:
+            cleaned_description = raw_description[:200]  # İlk 200 karakter
+
+        # Structured data bloğu
         structured.append({
             "@context": "https://schema.org",
             "@type": "VideoObject",
             "name": title,
-            "description": item["snippet"].get("description", ""),
+            "description": cleaned_description,
             "thumbnailUrl": [thumbnail],
             "uploadDate": published_at,
             "contentUrl": video_url,
