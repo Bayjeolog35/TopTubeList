@@ -65,11 +65,15 @@ if response.status_code == 200:
         }
         videos.append(video)
 
+        desc = item["snippet"].get("description", "").strip().replace("\n", " ")
+        if not desc or desc.startswith("http"):
+        desc = f"{item['snippet']['title']} by {item['snippet']['channelTitle']}"
+
         structured = {
             "@context": "https://schema.org",
             "@type": "VideoObject",
             "name": item["snippet"]["title"],
-            "description": item["snippet"].get("description", ""),
+            "description": desc[:200],
             "thumbnailUrl": thumbnail,
             "uploadDate": published_at,
             "embedUrl": f"https://www.youtube.com/embed/{item['id']}",
