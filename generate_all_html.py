@@ -874,13 +874,13 @@ def generate_top_video_iframe(videos_data):
         <h2>🔥 Most Viewed Video</h2>
         <div class="video-container">
             <iframe 
-                width="560" 
-                height="315" 
+                loading="lazy"
                 src="https://www.youtube.com/embed/{video_id}" 
                 title="{title}" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
+                allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
             </iframe>
         </div>
         <div class="video-info">
