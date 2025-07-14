@@ -65,11 +65,20 @@ if response.status_code == 200:
         }
         videos.append(video)
 
+        # ✨ Description mantığı: API'den çek, yoksa başlığı kullan ✨
+        api_description = item["snippet"].get("description", "").strip()
+
+        # Eğer API'den gelen açıklama boşsa, videonun başlığını kullan
+        if not api_description:
+            final_description = item["snippet"]["title"]
+        else:
+            final_description = api_description
+
         structured = {
             "@context": "https://schema.org",
             "@type": "VideoObject",
             "name": item["snippet"]["title"],
-            "description": item["snippet"].get("description", ""),
+            "description": final_description,
             "thumbnailUrl": thumbnail,
             "uploadDate": published_at,
             "embedUrl": f"https://www.youtube.com/embed/{item['id']}",
