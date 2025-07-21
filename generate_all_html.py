@@ -932,7 +932,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://toptubelist.com/{name}.html">
   <link rel="stylesheet" href="style.css">
-  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103"
+     crossorigin="anonymous"></script>
  
 </head>
 <body>
