@@ -137,8 +137,8 @@ def get_html_filename(name):
 def update_html_with_embedded_data(name, videos_data):
     """
     Belirtilen HTML dosyasındaki gömülü video verilerini günceller.
-    `generate_all_html.py` tarafından oluşturulan HTML'deki
-    `window.embeddedVideoData = [...];` veya `{...};` yapısını bulur ve içeriğini değiştirir.
+    generate_all_html.py tarafından oluşturulan HTML'deki
+    window.embeddedVideoData = [...]; veya {...}; yapısını bulur ve içeriğini değiştirir.
     """
     html_filename = get_html_filename(name)
     html_file_path = os.path.join(OUTPUT_DIR, html_filename)
@@ -169,35 +169,6 @@ def update_html_with_embedded_data(name, videos_data):
             print(f"⚠️ '{html_file_path}' içinde 'window.embeddedVideoData = [veri];' bloğu bulunamadı. HTML yapısını kontrol edin.")
             # Eğer blok bulunamazsa, dosyanın üzerine yazmamak için buradan çıkarız.
             return 
-
-         # 📌 IFRAME_VIDEO_HERE placeholder'ını koruyarak iframe güncellemesi
-        if top_videos:
-    first = top_videos[0]
-    iframe_html = f'''
-<iframe 
-  width="560" 
-  height="315" 
-  src="{first['embed_url']}" 
-  title="{first['title']}" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowfullscreen 
-  style="position:absolute; width:1px; height:1px; left:-9999px;">
-</iframe>
-'''
-
-    # Önce varsa eski iframe'i sil, yoksa dokunmaz
-    html = re.sub(
-        r'<!-- IFRAME_VIDEO_HERE -->(\s*\n)?<iframe(.|\n)*?</iframe>',
-        '<!-- IFRAME_VIDEO_HERE -->',
-        html
-    )
-
-    # Ardından yeni iframe'i altına ekle
-    html = html.replace(
-        '<!-- IFRAME_VIDEO_HERE -->',
-        f'<!-- IFRAME_VIDEO_HERE -->\n{iframe_html}'
-    )
 
         with open(html_file_path, "w", encoding="utf-8") as f:
             f.write(html_content)
