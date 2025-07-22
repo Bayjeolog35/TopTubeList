@@ -9,7 +9,7 @@ import sys
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
 STRUCTURED_DATA_PLACEHOLDER = "<!-- STRUCTURED_DATA_HERE -->"
-IFRAME_PLACEHOLDER = "<!-- IFRAME_PLACEHOLDER -->"
+IFRAME_PLACEHOLDER = "<!-- IFRAME_VIDEO_HERE -->"
 
 COUNTRY_INFO = {
     "afghanistan": {"code": "AF", "continent": "asia"},
