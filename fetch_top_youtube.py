@@ -2,6 +2,7 @@ import requests
 import json
 import os
 from datetime import datetime
+import re
 
 # 🔐 API key kontrolü
 API_KEY = os.getenv("YOUTUBE_API_KEY")
@@ -120,7 +121,18 @@ if response.status_code == 200:
   style="position:absolute; width:1px; height:1px; left:-9999px;">
 </iframe>
 '''
-    html_content = html_content.replace(IFRAME_PLACEHOLDER, iframe_html)
+    # Önce eski iframe'i temizle
+html_content = re.sub(
+    r'<!-- IFRAME_VIDEO_HERE -->(.|\n)*?</iframe>',
+    IFRAME_PLACEHOLDER,
+    html_content
+)
+
+# Yeni iframe’i placeholder’ın ALTINA tekrar yerleştir
+html_content = html_content.replace(
+    IFRAME_PLACEHOLDER,
+    f"{IFRAME_PLACEHOLDER}\n{iframe_html}"
+)
 
     with open(HTML_FILE, "w", encoding="utf-8") as f:
         f.write(html_content)
