@@ -171,14 +171,14 @@ def update_html_with_embedded_data(name, videos_data):
             return 
 
          # 📌 IFRAME_VIDEO_HERE placeholder'ını koruyarak iframe güncellemesi
-        if videos_data:
-            top_video = videos_data[0]
-            iframe_html = f'''
+        if top_videos:
+    first = top_videos[0]
+    iframe_html = f'''
 <iframe 
   width="560" 
   height="315" 
-  src="https://www.youtube.com/embed/{top_video['id']}" 
-  title="{top_video['title']}" 
+  src="{first['embed_url']}" 
+  title="{first['title']}" 
   frameborder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
   allowfullscreen 
@@ -186,17 +186,18 @@ def update_html_with_embedded_data(name, videos_data):
 </iframe>
 '''
 
-            # Placeholder varsa eski iframe'i sil ve yenisini ekle
-            html_content = re.sub(
-                r'<!-- IFRAME_VIDEO_HERE -->(.|\n)*?</iframe>',
-                '<!-- IFRAME_VIDEO_HERE -->',
-                html_content
-            )
+    # Önce varsa eski iframe'i sil, yoksa dokunmaz
+    html = re.sub(
+        r'<!-- IFRAME_VIDEO_HERE -->(\s*\n)?<iframe(.|\n)*?</iframe>',
+        '<!-- IFRAME_VIDEO_HERE -->',
+        html
+    )
 
-            html_content = html_content.replace(
-                '<!-- IFRAME_VIDEO_HERE -->',
-                f'<!-- IFRAME_VIDEO_HERE -->\n{iframe_html}'
-            )
+    # Ardından yeni iframe'i altına ekle
+    html = html.replace(
+        '<!-- IFRAME_VIDEO_HERE -->',
+        f'<!-- IFRAME_VIDEO_HERE -->\n{iframe_html}'
+    )
 
         with open(html_file_path, "w", encoding="utf-8") as f:
             f.write(html_content)
