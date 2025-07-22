@@ -2,6 +2,7 @@ import os
 import json
 import requests
 from datetime import datetime
+import re
 
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")  # API key ortam değişkeninden alınır
 
@@ -181,11 +182,38 @@ def update_html(continent, top_videos, structured_data):
 
     if top_videos:
         first = top_videos[0]
-        iframe = f'''\n<iframe \n  width="560" \n  height="315" \n  src="{first['embed_url']}" \n  title="{first['title']}" \n  frameborder="0" \n  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" \n  allowfullscreen \n  style="position:absolute; width:1px; height:1px; left:-9999px;">\n</iframe>'''
-        html = html.replace(IFRAME_PLACEHOLDER, iframe)
-    else:
-        html = html.replace(IFRAME_PLACEHOLDER, "")
+        iframe_html = f'''
+<iframe 
+  width="560" 
+  height="315" 
+  src="{first['embed_url']}" 
+  title="{first['title']}" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen 
+  style="position:absolute; width:1px; height:1px; left:-9999px;">
+</iframe>
+'''
 
+        # Eğer önceki iframe varsa, onu sil
+        html = re.sub(
+            r'<!-- IFRAME_PLACEHOLDER -->(.|\n)*?</iframe>',
+            IFRAME_PLACEHOLDER,
+            html
+        )
+
+        # Placeholder'ı koruyarak yeni iframe'i altına ekle
+        html = html.replace(
+            IFRAME_PLACEHOLDER,
+            f'{IFRAME_PLACEHOLDER}\n{iframe_html}'
+        )
+    else:
+        # Sadece placeholder kalacak, iframe olmayacak
+        html = re.sub(
+            r'<!-- IFRAME_PLACEHOLDER -->(.|\n)*?</iframe>',
+            IFRAME_PLACEHOLDER,
+            html
+        )
     with open(html_file, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"✅ {html_file} güncellendi.")
