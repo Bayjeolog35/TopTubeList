@@ -121,18 +121,20 @@ if response.status_code == 200:
   style="position:absolute; width:1px; height:1px; left:-9999px;">
 </iframe>
 '''
-    # Önce eski iframe'i temizle
-html_content = re.sub(
-    r'<!-- IFRAME_VIDEO_HERE -->(.|\n)*?</iframe>',
-    IFRAME_PLACEHOLDER,
-    html_content
-)
 
-# Yeni iframe’i placeholder’ın ALTINA tekrar yerleştir
-html_content = html_content.replace(
-    IFRAME_PLACEHOLDER,
-    f"{IFRAME_PLACEHOLDER}\n{iframe_html}"
-)
+    # Önce varsa eski iframe'i temizle
+    import re
+    html_content = re.sub(
+        r'<!-- IFRAME_VIDEO_HERE -->(.|\n)*?</iframe>',
+        IFRAME_PLACEHOLDER,
+        html_content
+    )
+
+    # Sonra yeni iframe’i placeholder’ın altına yerleştir
+    html_content = html_content.replace(
+        IFRAME_PLACEHOLDER,
+        f"{IFRAME_PLACEHOLDER}\n{iframe_html}"
+    )
 
     with open(HTML_FILE, "w", encoding="utf-8") as f:
         f.write(html_content)
