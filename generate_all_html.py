@@ -930,6 +930,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <title>Trending YouTube Videos in name | TopTubeList</title>
   <meta name="description" content="{meta_description}">
   <meta name="robots" content="index, follow">
+  <meta name="google-adsense-account" content="ca-pub-6698104628153103">
   <link rel="canonical" href="https://toptubelist.com/{name}.html">
   <link rel="stylesheet" href="style.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103"
