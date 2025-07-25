@@ -431,7 +431,7 @@ def update_html_with_embedded_data(name, videos_data):
   allowfullscreen 
   style="position:absolute; width:1px; height:1px; left:-9999px;">
 </iframe>
-            <!-- IFRAME_VIDEO_HERE_END -->
+            <!-- IFRAME_VIDEO_HERE_END -->'''
 
             iframe_pattern = re.compile(r'<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE_END -->', re.DOTALL)
             if iframe_pattern.search(html):
@@ -452,5 +452,5 @@ def update_html_with_embedded_data(name, videos_data):
 # Bu döngü, tüm JSON dosyaları oluşturulduktan sonra çalışır.
 for slug in COUNTRY_INFO:
     update_html(slug)
-'''
+    
 sys.exit(0)
