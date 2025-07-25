@@ -419,7 +419,8 @@ def update_html_with_embedded_data(name, videos_data):
         # --- 3. iframe güncelle ---
         top_video = videos_data[0] if videos_data else None
         if top_video:
-            iframe_code = f'''<!-- IFRAME_VIDEO_HERE -->
+            iframe_code = f'''
+<!-- IFRAME_VIDEO_HERE -->
 <iframe 
   width="560" 
   height="315" 
