@@ -452,5 +452,5 @@ def update_html_with_embedded_data(name, videos_data):
 # Bu döngü, tüm JSON dosyaları oluşturulduktan sonra çalışır.
 for slug in COUNTRY_INFO:
     update_html(slug)
-
+'''
 sys.exit(0)
