@@ -392,6 +392,59 @@ for slug, info in COUNTRY_INFO.items():
         json.dump(structured, f, ensure_ascii=False, indent=2)
 
     print(f"✅ {video_file} ve {struct_file} oluşturuldu.")
+def update_html_with_embedded_data(name, videos_data):
+    html_filename = get_html_filename(name)
+    html_file_path = os.path.join(OUTPUT_DIR, html_filename)
+
+    if not os.path.exists(html_file_path):
+        print(f"Uyarı: '{html_file_path}' HTML dosyası bulunamadı.")
+        return
+
+    try:
+        with open(html_file_path, "r", encoding="utf-8") as f:
+            html = f.read()
+
+        # --- 1. embeddedVideoData JSON güncelle ---
+        new_json_string = json.dumps(videos_data, ensure_ascii=False, indent=2)
+        video_data_pattern = re.compile(r"(window\.embeddedVideoData\s*=\s*)([\{\[].*?[\}\]])(\s*;?\s*</script>)", re.DOTALL)
+        html = video_data_pattern.sub(r"\1" + new_json_string + r"\3", html)
+
+        # --- 2. structured data JSON-LD güncelle ---
+        structured_data = generate_structured_data(videos_data)
+        if structured_data:
+            structured_json = json.dumps(structured_data[0], ensure_ascii=False, indent=2)
+            structured_pattern = re.compile(r'(<script type="application/ld\+json">)(.*?)(</script>)', re.DOTALL)
+            html = structured_pattern.sub(r'\1\n' + structured_json + r'\n\3', html)
+
+        # --- 3. iframe güncelle ---
+        top_video = videos_data[0] if videos_data else None
+        if top_video:
+            iframe_code = f'''<!-- IFRAME_VIDEO_HERE -->
+<iframe 
+  width="560" 
+  height="315" 
+  src="{top_video['embed_url']}" 
+  title="{top_video['title'].replace('"', "'")}" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen 
+  style="position:absolute; width:1px; height:1px; left:-9999px;">
+</iframe>
+<!-- IFRAME_VIDEO_HERE_END -->'''
+            iframe_pattern = re.compile(r'<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE_END -->', re.DOTALL)
+            if iframe_pattern.search(html):
+                html = iframe_pattern.sub(iframe_code, html)
+            elif "<!-- IFRAME_VIDEO_HERE -->" in html:
+                html = html.replace("<!-- IFRAME_VIDEO_HERE -->", iframe_code)
+
+        # Kaydet
+        with open(html_file_path, "w", encoding="utf-8") as f:
+            f.write(html)
+
+        print(f"✅ HTML güncellendi: {html_file_path}")
+
+    except Exception as e:
+        print(f"❌ Hata: {html_file_path} dosyası güncellenemedi: {e}")
 
 # Tüm ülkeler için HTML güncelleme fonksiyonunu çağırır.
 # Bu döngü, tüm JSON dosyaları oluşturulduktan sonra çalışır.
