@@ -142,7 +142,7 @@ def update_html_with_embedded_data(name, videos_data):
     """
     html_filename = get_html_filename(name)
     html_file_path = os.path.join(OUTPUT_DIR, html_filename)
-    
+
     if not os.path.exists(html_file_path):
         print(f"Uyarı: '{html_file_path}' HTML dosyası bulunamadı. Lütfen önce generate_all_html.py'yi bir kez çalıştırın.")
         return
@@ -151,24 +151,16 @@ def update_html_with_embedded_data(name, videos_data):
         with open(html_file_path, "r", encoding="utf-8") as f:
             html_content = f.read()
 
-        # Yeni JSON verisini string'e dönüştür (okunabilirlik için indent kullanıldı)
         new_json_string = json.dumps(videos_data, ensure_ascii=False, indent=4)
-        
-        # Regex deseni:
-        # (window\.embeddedVideoData\s*=\s*) : "window.embeddedVideoData =" kısmını yakalar (Grup 1)
-        # ([\{\[].*?[\}\]]) : JSON objesini ({...}) veya dizisini ([...]) yakalar (Grup 2 - VERİ KISMI)
-        # (\s*;\s*</script>) : JSON'dan sonraki noktalı virgül ve </script> etiketini yakalar (Grup 3)
-        # re.DOTALL: '.' karakterinin yeni satırları da eşleştirmesini sağlar.
-        pattern = re.compile(r"(window\.embeddedVideoData\s*=\s*)([\{\[].*?[\}\]])(\s*;\s*</script>)", re.DOTALL)
+
+        pattern = re.compile(r"(window\\.embeddedVideoData\\s*=\\s*)([\{\[].*?[\}\]])(\\s*;\\s*</script>)", re.DOTALL)
 
         if pattern.search(html_content):
-            # Bulunan deseni, yakalanan grupları ve yeni JSON stringini kullanarak değiştir
             html_content = pattern.sub(r"\g<1>" + new_json_string + r"\g<3>", html_content)
             print(f"✅ HTML dosyası güncellendi: {html_file_path}")
         else:
             print(f"⚠️ '{html_file_path}' içinde 'window.embeddedVideoData = [veri];' bloğu bulunamadı. HTML yapısını kontrol edin.")
-            # Eğer blok bulunamazsa, dosyanın üzerine yazmamak için buradan çıkarız.
-            return 
+            return
 
         with open(html_file_path, "w", encoding="utf-8") as f:
             f.write(html_content)
@@ -176,6 +168,41 @@ def update_html_with_embedded_data(name, videos_data):
     except Exception as e:
         print(f"❌ Hata: HTML dosyası güncellenirken sorun oluştu '{html_file_path}': {e}")
 
+def update_iframe_placeholder(html_path, video):
+    """<!-- IFRAME_VIDEO_HERE --> bloğunu silmeden güncellenebilir hale getirir."""
+    try:
+        with open(html_path, "r", encoding="utf-8") as f:
+            html = f.read()
+
+        iframe_code = f'''<!-- IFRAME_VIDEO_HERE -->
+<iframe 
+  width="560" 
+  height="315" 
+  src="{video['embed_url']}" 
+  title="{video['title'].replace('"', "'")}" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen 
+  style="position:absolute; width:1px; height:1px; left:-9999px;">
+</iframe>
+<!-- IFRAME_VIDEO_HERE_END -->'''
+
+        pattern = re.compile(r'<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE_END -->', re.DOTALL)
+        if pattern.search(html):
+            html = pattern.sub(iframe_code, html)
+        elif "<!-- IFRAME_VIDEO_HERE -->" in html:
+            html = html.replace("<!-- IFRAME_VIDEO_HERE -->", iframe_code)
+        else:
+            print(f"⚠️ IFRAME etiketi bulunamadı: {html_path}")
+            return
+
+        with open(html_path, "w", encoding="utf-8") as f:
+            f.write(html)
+
+        print(f"✅ iframe güncellendi: {html_path}")
+
+    except Exception as e:
+        print(f"❌ iframe güncellenemedi: {e}")
 
 def main():
     print("#######################################")
