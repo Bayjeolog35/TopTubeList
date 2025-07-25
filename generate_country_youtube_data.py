@@ -420,18 +420,20 @@ def update_html_with_embedded_data(name, videos_data):
         top_video = videos_data[0] if videos_data else None
         if top_video:
             iframe_code = f'''
+
 <!-- IFRAME_VIDEO_HERE -->
 <iframe 
   width="560" 
   height="315" 
-  src="{top_video['embed_url']}" 
-  title="{top_video['title'].replace('"', "'")}" 
+  src="https://www.youtube.com/embed/..." 
+  title="..." 
   frameborder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
   allowfullscreen 
   style="position:absolute; width:1px; height:1px; left:-9999px;">
 </iframe>
-<!-- IFRAME_VIDEO_HERE_END -->'''
+<!-- IFRAME_VIDEO_HERE_END -->
+
             iframe_pattern = re.compile(r'<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE_END -->', re.DOTALL)
             if iframe_pattern.search(html):
                 html = iframe_pattern.sub(iframe_code, html)
