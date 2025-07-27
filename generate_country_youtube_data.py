@@ -226,13 +226,13 @@ def update_html(slug):
         return
 
     try:
-    with open(html_file, 'r', encoding='utf-8') as f:
+        with open(html_file, 'r', encoding='utf-8') as f:
         html = f.read()
 
-    with open(struct_file, 'r', encoding='utf-8') as f:
+        with open(struct_file, 'r', encoding='utf-8') as f:
         structured_data = json.load(f)
 
-    with open(videos_file, 'r', encoding='utf-8') as f:
+        with open(videos_file, 'r', encoding='utf-8') as f:
         videos = json.load(f)
 
     # --- Structured Data Güncelle ---
