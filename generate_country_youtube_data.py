@@ -226,25 +226,28 @@ def update_html(slug):
         return
 
     try:
-        with open(html_file, 'r', encoding='utf-8') as f:
-            html = f.read()
+    with open(html_file, 'r', encoding='utf-8') as f:
+        html = f.read()
 
-        with open(struct_file, 'r', encoding='utf-8') as f:
-            structured_data = json.load(f)
+    with open(struct_file, 'r', encoding='utf-8') as f:
+        structured_data = json.load(f)
 
-        with open(videos_file, 'r', encoding='utf-8') as f:
-            videos = json.load(f)
+    with open(videos_file, 'r', encoding='utf-8') as f:
+        videos = json.load(f)
 
-        # --- Structured Data Güncelle ---
-        if structured_data:
-            structured_block = f'<script type="application/ld+json">\n<!-- STRUCTURED_DATA_HERE -->\n{json.dumps(structured_data[0], indent=2)}\n</script>'
-            structured_pattern = re.compile(r'<script type="application/ld\+json">\s*<!-- STRUCTURED_DATA_HERE -->(.*?)</script>', re.DOTALL)
-            html = structured_pattern.sub(structured_block, html)
+    # --- Structured Data Güncelle ---
+    if structured_data:
+        structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data[0], ensure_ascii=False, indent=2)}\n</script>'
 
-        # --- Iframe Güncelle ---
-        if videos:
-            top_video = videos[0]
-            iframe_block = f"""<!-- IFRAME_VIDEO_HERE -->
+        if STRUCTURED_DATA_PLACEHOLDER in html:
+            html = html.replace(STRUCTURED_DATA_PLACEHOLDER, structured_block)
+        else:
+            print(f"⚠️ STRUCTURED_DATA_HERE etiketi bulunamadı: {slug}.html")
+
+    # --- Iframe Güncelle ---
+    if videos:
+        top_video = videos[0]
+        iframe_block = f"""<!-- IFRAME_VIDEO_HERE -->
 <iframe 
   width="560" 
   height="315" 
