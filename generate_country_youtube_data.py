@@ -237,16 +237,20 @@ def update_html(slug):
 
         # --- Structured Data Güncelle ---
         if structured_data:
-            structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data[0], ensure_ascii=False, indent=2)}\n</script>'
-            if STRUCTURED_DATA_PLACEHOLDER in html:
-                html = html.replace(STRUCTURED_DATA_PLACEHOLDER, structured_block)
-            else:
-                print(f"⚠️ STRUCTURED_DATA_HERE etiketi bulunamadı: {slug}.html")
+            structured_json = json.dumps(structured_data[0], ensure_ascii=False, indent=2)
+            structured_block = f'<script type="application/ld+json">\n{structured_json}\n</script>'
+            # Regex ile sadece placeholder arasındaki bloğu güncelle
+            struct_pattern = re.compile(
+                r'<script type="application/ld\+json">\s*<!-- STRUCTURED_DATA_HERE -->(.*?)</script>',
+                re.DOTALL)
+            html = struct_pattern.sub(structured_block, html)
+        else:
+            print(f"⚠️ {slug} için structured data boş.")
 
         # --- Iframe Güncelle ---
         if videos:
             top_video = videos[0]
-            iframe_block = f"""<!-- IFRAME_VIDEO_HERE -->
+            iframe_code = f"""<!-- IFRAME_VIDEO_HERE -->
 <iframe 
   width="560" 
   height="315" 
@@ -258,12 +262,20 @@ def update_html(slug):
   style="position:absolute; width:1px; height:1px; left:-9999px;">
 </iframe>
 <!-- IFRAME_VIDEO_HERE_END -->"""
-            iframe_pattern = re.compile(r'<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE_END -->', re.DOTALL)
-            if iframe_pattern.search(html):
-                html = iframe_pattern.sub(iframe_block, html)
-            elif IFRAME_PLACEHOLDER in html:
-                html = html.replace(IFRAME_PLACEHOLDER, iframe_block)
 
+            iframe_pattern = re.compile(
+                r'<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE_END -->',
+                re.DOTALL)
+            if iframe_pattern.search(html):
+                html = iframe_pattern.sub(iframe_code, html)
+            elif "<!-- IFRAME_VIDEO_HERE -->" in html:
+                html = html.replace("<!-- IFRAME_VIDEO_HERE -->", iframe_code)
+            else:
+                print(f"⚠️ IFRAME placeholder bulunamadı: {slug}.html")
+        else:
+            print(f"⚠️ {slug} için video listesi boş.")
+
+        # Güncellenmiş HTML'yi geri yaz
         with open(html_file, 'w', encoding='utf-8') as f:
             f.write(html)
 
@@ -271,6 +283,7 @@ def update_html(slug):
 
     except Exception as e:
         print(f"❌ Hata ({slug}): {e}")
+
 
 # Ana işlem: tüm ülkeler için veri çekimi ve HTML güncelleme
 for slug, info in COUNTRY_INFO.items():
