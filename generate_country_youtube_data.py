@@ -227,27 +227,26 @@ def update_html(slug):
 
     try:
         with open(html_file, 'r', encoding='utf-8') as f:
-        html = f.read()
+            html = f.read()
 
         with open(struct_file, 'r', encoding='utf-8') as f:
-        structured_data = json.load(f)
+            structured_data = json.load(f)
 
         with open(videos_file, 'r', encoding='utf-8') as f:
-        videos = json.load(f)
+            videos = json.load(f)
 
-    # --- Structured Data Güncelle ---
-    if structured_data:
-        structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data[0], ensure_ascii=False, indent=2)}\n</script>'
+        # --- Structured Data Güncelle ---
+        if structured_data:
+            structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data[0], ensure_ascii=False, indent=2)}\n</script>'
+            if STRUCTURED_DATA_PLACEHOLDER in html:
+                html = html.replace(STRUCTURED_DATA_PLACEHOLDER, structured_block)
+            else:
+                print(f"⚠️ STRUCTURED_DATA_HERE etiketi bulunamadı: {slug}.html")
 
-        if STRUCTURED_DATA_PLACEHOLDER in html:
-            html = html.replace(STRUCTURED_DATA_PLACEHOLDER, structured_block)
-        else:
-            print(f"⚠️ STRUCTURED_DATA_HERE etiketi bulunamadı: {slug}.html")
-
-    # --- Iframe Güncelle ---
-    if videos:
-        top_video = videos[0]
-        iframe_block = f"""<!-- IFRAME_VIDEO_HERE -->
+        # --- Iframe Güncelle ---
+        if videos:
+            top_video = videos[0]
+            iframe_block = f"""<!-- IFRAME_VIDEO_HERE -->
 <iframe 
   width="560" 
   height="315" 
@@ -374,7 +373,6 @@ for slug, info in COUNTRY_INFO.items():
         json.dump(structured, f, ensure_ascii=False, indent=2)
 
     print(f"✅ {video_file} ve {struct_file} oluşturuldu.")
-
     update_html(slug)
 
 sys.exit(0)
