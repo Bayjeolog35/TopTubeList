@@ -237,14 +237,18 @@ def update_html(slug):
 
         # --- Structured Data Güncelle ---
         if structured_data:
-            structured_json = json.dumps(structured_data[0], ensure_ascii=False, indent=2)
             structured_json = json.dumps(structured_data, ensure_ascii=False, indent=2)
-            html = html.replace(STRUCTURED_DATA_PLACEHOLDER, structured_json)
-           
+            structured_block = f'<script type="application/ld+json">\n{structured_json}\n</script>'
+
             struct_pattern = re.compile(
                 r'<script type="application/ld\+json">\s*<!-- STRUCTURED_DATA_HERE -->(.*?)</script>',
                 re.DOTALL)
-            html = struct_pattern.sub(structured_block, html)
+            if struct_pattern.search(html):
+                html = struct_pattern.sub(structured_block, html)
+            elif STRUCTURED_DATA_PLACEHOLDER in html:
+                html = html.replace(STRUCTURED_DATA_PLACEHOLDER, structured_block)
+            else:
+                print(f"⚠️ STRUCTURED placeholder bulunamadı: {slug}.html")
         else:
             print(f"⚠️ {slug} için structured data boş.")
 
@@ -269,8 +273,8 @@ def update_html(slug):
                 re.DOTALL)
             if iframe_pattern.search(html):
                 html = iframe_pattern.sub(iframe_code, html)
-            elif "<!-- IFRAME_VIDEO_HERE -->" in html:
-                html = html.replace("<!-- IFRAME_VIDEO_HERE -->", iframe_code)
+            elif IFRAME_PLACEHOLDER in html:
+                html = html.replace(IFRAME_PLACEHOLDER, iframe_code)
             else:
                 print(f"⚠️ IFRAME placeholder bulunamadı: {slug}.html")
         else:
