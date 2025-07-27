@@ -2,6 +2,7 @@ import os
 import json
 import requests
 from datetime import datetime
+import re
 
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")  # API key ortam değişkeninden alınır
 
@@ -176,13 +177,41 @@ def update_html(continent, top_videos, structured_data):
     with open(html_file, "r", encoding="utf-8") as f:
         html = f.read()
 
-    structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data, ensure_ascii=False, indent=2)}\n</script>'
-    html = html.replace(STRUCTURED_DATA_PLACEHOLDER, structured_block)
+    # Structured Data Güncelleme
+    structured_block = f'<script type="application/ld+json">\n<!-- STRUCTURED_DATA_HERE -->\n{json.dumps(structured_data, ensure_ascii=False, indent=2)}\n</script>'
 
+    structured_pattern = re.compile(
+        r'<script type="application/ld\+json">\s*<!-- STRUCTURED_DATA_HERE -->(.*?)</script>',
+        re.DOTALL
+    )
+
+    html = structured_pattern.sub(structured_block, html)
+
+    # Iframe Güncelleme
     if top_videos:
         first = top_videos[0]
-        iframe = f'''\n<iframe \n  width="560" \n  height="315" \n  src="{first['embed_url']}" \n  title="{first['title']}" \n  frameborder="0" \n  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" \n  allowfullscreen \n  style="position:absolute; width:1px; height:1px; left:-9999px;">\n</iframe>'''
-        html = html.replace(IFRAME_PLACEHOLDER, iframe)
+        iframe_block = f"""<!-- IFRAME_VIDEO_HERE -->
+<iframe 
+  width="560" 
+  height="315" 
+  src="{first['embed_url']}" 
+  title="{first['title']}" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen 
+  style="position:absolute; width:1px; height:1px; left:-9999px;">
+</iframe>
+<!-- IFRAME_VIDEO_HERE_END -->"""
+
+        iframe_pattern = re.compile(
+            r'<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE_END -->',
+            re.DOTALL
+        )
+
+        if iframe_pattern.search(html):
+            html = iframe_pattern.sub(iframe_block, html)
+        else:
+            html = html.replace("<!-- IFRAME_VIDEO_HERE -->", iframe_block)
     else:
         html = html.replace(IFRAME_PLACEHOLDER, "")
 
