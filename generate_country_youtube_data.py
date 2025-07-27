@@ -238,8 +238,9 @@ def update_html(slug):
         # --- Structured Data Güncelle ---
         if structured_data:
             structured_json = json.dumps(structured_data[0], ensure_ascii=False, indent=2)
-            structured_block = f'<script type="application/ld+json">\n{structured_json}\n</script>'
-            # Regex ile sadece placeholder arasındaki bloğu güncelle
+            structured_json = json.dumps(structured_data, ensure_ascii=False, indent=2)
+            html = html.replace(STRUCTURED_DATA_PLACEHOLDER, structured_json)
+           
             struct_pattern = re.compile(
                 r'<script type="application/ld\+json">\s*<!-- STRUCTURED_DATA_HERE -->(.*?)</script>',
                 re.DOTALL)
