@@ -935,13 +935,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <link rel="stylesheet" href="style.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103"
      crossorigin="anonymous"></script>
- 
+ <script type="application/ld+json">
+<!-- STRUCTURED_DATA_HERE -->
+</script>
 </head>
 <body>
     {gtm_noscript}
     <header>
-    <!-- STRUCTURED_DATA_HERE -->
-    {structured_block}
         <div class="container">
             <a href="../../index.html" class="logo">
                 <img src="TopTubeListLogo.webp" alt="TopTubeList" width="120">
@@ -1263,6 +1263,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- IFRAME_VIDEO_HERE -->
+<iframe ...></iframe>
 <!-- IFRAME_VIDEO_HERE_END -->
  
 <footer>
