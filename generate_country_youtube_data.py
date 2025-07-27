@@ -4,6 +4,7 @@ import os
 import time
 from datetime import datetime
 from bs4 import BeautifulSoup
+import re
 import sys
 
 API_KEY = os.getenv("YOUTUBE_API_KEY")
@@ -214,78 +215,62 @@ def update_html(slug):
     struct_file = f"{slug}.str.data.json"
     videos_file = f"{slug}.vid.data.json"
 
-    # HTML dosyasının varlığını kontrol eder. Eğer yoksa, işlem yapmadan döner.
-    # Bu varsayım, HTML dosyasının zaten var olduğu veya başka bir yerde oluşturulduğu üzerinedir.
     if not os.path.exists(html_file):
         print(f"⛔ HTML dosyası bulunamadı: {html_file}")
         return
-
-    # Yapısal veri (structured data) JSON dosyasının varlığını kontrol eder.
-    # Eğer yoksa, bu ülkenin API verisinin çekilememiş olabileceğini belirtir ve döner.
     if not os.path.exists(struct_file):
-        print(f"⛔ Yapısal veri dosyası bulunamadı: {struct_file}. Bu ülkenin API verisi çekilememiş olabilir.")
+        print(f"⛔ Yapısal veri dosyası bulunamadı: {struct_file}")
         return
-
-    # Video veri JSON dosyasının varlığını kontrol eder.
-    # Eğer yoksa, bu ülkenin API verisinin çekilememiş olabileceğini belirtir ve döner.
     if not os.path.exists(videos_file):
-        print(f"⛔ Video veri dosyası bulunamadı: {videos_file}. Bu ülkenin API verisi çekilememiş olabilir.")
+        print(f"⛔ Video veri dosyası bulunamadı: {videos_file}")
         return
 
     try:
-        # HTML içeriğini okur.
         with open(html_file, 'r', encoding='utf-8') as f:
-            html_content = f.read()
+            html = f.read()
 
-        # Yapısal veri JSON dosyasını yükler.
         with open(struct_file, 'r', encoding='utf-8') as f:
             structured_data = json.load(f)
 
-        # Video veri JSON dosyasını yükler.
         with open(videos_file, 'r', encoding='utf-8') as f:
             videos = json.load(f)
 
-        # Yapısal veri listesinin boş olup olmadığını kontrol eder.
-        # Eğer boş değilse, ilk elemanı kullanarak JSON-LD script bloğunu oluşturur.
-        # Boşsa, bir uyarı mesajı yazdırır ve boş bir blok kullanır.
-        structured_block = ""
+        # --- Structured Data Güncelle ---
         if structured_data:
-            structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data[0], indent=2)}\n</script>'
-        else:
-            print(f"⚠️ {slug} için yapısal veri bulunamadı. HTML'ye eklenmeyecek.")
+            structured_block = f'<script type="application/ld+json">\n<!-- STRUCTURED_DATA_HERE -->\n{json.dumps(structured_data[0], indent=2)}\n</script>'
+            structured_pattern = re.compile(r'<script type="application/ld\+json">\s*<!-- STRUCTURED_DATA_HERE -->(.*?)</script>', re.DOTALL)
+            html = structured_pattern.sub(structured_block, html)
 
-        # Videolar listesinin boş olup olmadığını kontrol eder.
-        # Eğer boş değilse, ilk videoyu kullanarak iframe embed bloğunu oluşturur.
-        # Boşsa, bir uyarı mesajı yazdırır ve boş bir blok kullanır.
-        iframe_block = ""
+        # --- Iframe Güncelle ---
         if videos:
             top_video = videos[0]
-            iframe_block = f'<iframe width="560" height="315" src="{top_video["embed_url"]}" frameborder="0" allowfullscreen hidden></iframe>'
-        else:
-            print(f"⚠️ {slug} için video verisi bulunamadı. iframe eklenmeyecek.")
+            iframe_block = f"""<!-- IFRAME_VIDEO_HERE -->
+<iframe 
+  width="560" 
+  height="315" 
+  src="{top_video['embed_url']}" 
+  title="{top_video['title']}" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen 
+  style="position:absolute; width:1px; height:1px; left:-9999px;">
+</iframe>
+<!-- IFRAME_VIDEO_HERE_END -->"""
+            iframe_pattern = re.compile(r'<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE_END -->', re.DOTALL)
+            if iframe_pattern.search(html):
+                html = iframe_pattern.sub(iframe_block, html)
+            elif IFRAME_PLACEHOLDER in html:
+                html = html.replace(IFRAME_PLACEHOLDER, iframe_block)
 
-        # HTML içeriğindeki placeholder'ları oluşturulan bloklarla değiştirir.
-        html_content = html_content.replace(STRUCTURED_DATA_PLACEHOLDER, structured_block)
-        html_content = html_content.replace(IFRAME_PLACEHOLDER, iframe_block)
-
-        # Güncellenmiş HTML içeriğini dosyaya geri yazar.
         with open(html_file, 'w', encoding='utf-8') as f:
-            f.write(html_content)
+            f.write(html)
 
         print(f"✅ Güncellendi: {slug}.html")
 
-    # JSON dosyası okuma hatası (geçersiz JSON formatı) yakalar.
-    except json.JSONDecodeError:
-        print(f"❌ JSON okuma hatası: {struct_file} veya {videos_file} geçerli bir JSON değil.")
-    # Liste dizin hatası (boş listeden eleman çekme) yakalar.
-    except IndexError:
-        print(f"❌ Dizin hatası: {struct_file} veya {videos_file} boş bir liste içeriyor.")
-    # Diğer tüm beklenmeyen hataları yakalar.
     except Exception as e:
-        print(f"❌ HTML güncelleme sırasında beklenmeyen hata ({slug}): {e}")
+        print(f"❌ Hata ({slug}): {e}")
 
-
-# Her ülke için veri çekme ve JSON dosyalarını oluşturma döngüsü
+# Ana işlem: tüm ülkeler için veri çekimi ve HTML güncelleme
 for slug, info in COUNTRY_INFO.items():
     code = info["code"]
     display_name = slug.replace("-", " ").title()
@@ -294,7 +279,7 @@ for slug, info in COUNTRY_INFO.items():
 
     video_file = f"{slug}.vid.data.json"
     struct_file = f"{slug}.str.data.json"
-    html_file = f"{slug}.html" # Bu satırın burada olması gerekiyor
+    html_file = f"{slug}.html"
 
     params = {
         "part": "snippet,statistics",
@@ -307,10 +292,9 @@ for slug, info in COUNTRY_INFO.items():
     response = requests.get(API_URL, params=params)
     if response.status_code != 200:
         print(f"❌ API Hatası ({code}): {response.status_code}")
-        # Hata detayını görmek için
         if response.status_code == 400:
             print(f"Hata detayı: {response.json().get('error', {}).get('message', 'Bilinmeyen Hata')}")
-        continue # Hata durumunda bu ülkeyi atla ve bir sonraki ülkeye geç
+        continue
 
     items = response.json().get("items", [])
     videos = []
@@ -322,7 +306,6 @@ for slug, info in COUNTRY_INFO.items():
         except:
             views_int = 0
 
-        # Görüntülenme sayısını okunabilir formata dönüştürür.
         if views_int >= 1_000_000_000:
             views_str = f"{views_int / 1_000_000_000:.1f}B views"
         elif views_int >= 1_000_000:
@@ -360,14 +343,11 @@ for slug, info in COUNTRY_INFO.items():
         videos.append(video)
 
         raw_description = item["snippet"].get("description", "").strip().replace("\n", " ")
-
-        # Boşsa, çok kısaysa veya sadece URL içeriyorsa fallback kullan
         if not raw_description or raw_description.lower().startswith("http") or len(raw_description) < 10:
             cleaned_description = f"{title} by {channel}"
         else:
             cleaned_description = raw_description[:200]
 
-        # Structured data bloğu
         structured.append({
             "@context": "https://schema.org",
             "@type": "VideoObject",
@@ -384,7 +364,6 @@ for slug, info in COUNTRY_INFO.items():
             }
         })
 
-    # Çekilen verileri JSON dosyalarına yazar.
     with open(video_file, "w", encoding="utf-8") as f:
         json.dump(videos, f, ensure_ascii=False, indent=2)
 
@@ -392,65 +371,7 @@ for slug, info in COUNTRY_INFO.items():
         json.dump(structured, f, ensure_ascii=False, indent=2)
 
     print(f"✅ {video_file} ve {struct_file} oluşturuldu.")
-def update_html_with_embedded_data(name, videos_data):
-    html_filename = get_html_filename(name)
-    html_file_path = os.path.join(OUTPUT_DIR, html_filename)
 
-    if not os.path.exists(html_file_path):
-        print(f"Uyarı: '{html_file_path}' HTML dosyası bulunamadı.")
-        return
-
-    try:
-        with open(html_file_path, "r", encoding="utf-8") as f:
-            html = f.read()
-
-        # --- 1. embeddedVideoData JSON güncelle ---
-        new_json_string = json.dumps(videos_data, ensure_ascii=False, indent=2)
-        video_data_pattern = re.compile(r"(window\.embeddedVideoData\s*=\s*)([\{\[].*?[\}\]])(\s*;?\s*</script>)", re.DOTALL)
-        html = video_data_pattern.sub(r"\1" + new_json_string + r"\3", html)
-
-        # --- 2. structured data JSON-LD güncelle ---
-        structured_data = generate_structured_data(videos_data)
-        if structured_data:
-            structured_json = json.dumps(structured_data[0], ensure_ascii=False, indent=2)
-            structured_pattern = re.compile(r'(<script type="application/ld\+json">)(.*?)(</script>)', re.DOTALL)
-            html = structured_pattern.sub(r'\1\n' + structured_json + r'\n\3', html)
-
-        # --- 3. iframe güncelle ---
-        top_video = videos_data[0] if videos_data else None
-        if top_video:
-            iframe_code = f'''
-            <!-- IFRAME_VIDEO_HERE -->
-<iframe 
-  width="560" 
-  height="315" 
-  src="https://www.youtube.com/embed/..." 
-  title="..." 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowfullscreen 
-  style="position:absolute; width:1px; height:1px; left:-9999px;">
-</iframe>
-            <!-- IFRAME_VIDEO_HERE_END -->'''
-
-            iframe_pattern = re.compile(r'<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE_END -->', re.DOTALL)
-            if iframe_pattern.search(html):
-                html = iframe_pattern.sub(iframe_code, html)
-            elif "<!-- IFRAME_VIDEO_HERE -->" in html:
-                html = html.replace("<!-- IFRAME_VIDEO_HERE -->", iframe_code)
-
-        # Kaydet
-        with open(html_file_path, "w", encoding="utf-8") as f:
-            f.write(html)
-
-        print(f"✅ HTML güncellendi: {html_file_path}")
-
-    except Exception as e:
-        print(f"❌ Hata: {html_file_path} dosyası güncellenemedi: {e}")
-
-# Tüm ülkeler için HTML güncelleme fonksiyonunu çağırır.
-# Bu döngü, tüm JSON dosyaları oluşturulduktan sonra çalışır.
-for slug in COUNTRY_INFO:
     update_html(slug)
-    
+
 sys.exit(0)
