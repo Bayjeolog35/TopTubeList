@@ -15,7 +15,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2388142
+      "userInteractionCount": 2520560
     }
   },
   {
@@ -34,7 +34,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 653595
+      "userInteractionCount": 694981
     }
   },
   {
@@ -53,64 +53,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 132438
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Ordinary",
-    "description": "Provided to YouTube by Atlantic Records  Ordinary · Alex Warren  You'll Be Alright, Kid  ℗ 2025 Atlantic Recording Corporation  Vocals: Alex Warren Producer: Adam Yaron Bass, Guitar, Piano: Adam Yaron",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/TR19QSL7WuQ/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-07-17T10:03:10Z",
-    "contentUrl": "https://www.youtube.com/watch?v=TR19QSL7WuQ",
-    "embedUrl": "https://www.youtube.com/embed/TR19QSL7WuQ",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 1208274
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Avatar: Fuoco e Cenere | Trailer Ufficiale | Dal 17 Dicembre al Cinema",
-    "description": "Dal regista James Cameron, guarda il trailer di Avatar: Fuoco e Cenere. Vivi il film solo al cinema dal 17 Dicembre.  Segui 20th Century Studios Italia sui social! Diventa Fan su Facebook: https://www",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/MzVvd9ekYOE/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-07-28T15:39:40Z",
-    "contentUrl": "https://www.youtube.com/watch?v=MzVvd9ekYOE",
-    "embedUrl": "https://www.youtube.com/embed/MzVvd9ekYOE",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 178553
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "HO COMPRATO 5 MOD STUPIDE DI MINECRAFT - ITA",
-    "description": "COMPRA IL NUOVO LIBRO: https://amzn.eu/d/bWoToDG #adv  Instagram: https://www.instagram.com/ale_kendal",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/g3RQdTEJvrk/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-08-01T10:01:11Z",
-    "contentUrl": "https://www.youtube.com/watch?v=g3RQdTEJvrk",
-    "embedUrl": "https://www.youtube.com/embed/g3RQdTEJvrk",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 96087
+      "userInteractionCount": 143046
     }
   },
   {
@@ -129,7 +72,64 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 11923971
+      "userInteractionCount": 12433288
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Avatar: Fuoco e Cenere | Trailer Ufficiale | Dal 17 Dicembre al Cinema",
+    "description": "Dal regista James Cameron, guarda il trailer di Avatar: Fuoco e Cenere. Vivi il film solo al cinema dal 17 Dicembre.  Segui 20th Century Studios Italia sui social! Diventa Fan su Facebook: https://www",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/MzVvd9ekYOE/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-07-28T15:39:40Z",
+    "contentUrl": "https://www.youtube.com/watch?v=MzVvd9ekYOE",
+    "embedUrl": "https://www.youtube.com/embed/MzVvd9ekYOE",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 180499
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "HO COMPRATO 5 MOD STUPIDE DI MINECRAFT - ITA",
+    "description": "COMPRA IL NUOVO LIBRO: https://amzn.eu/d/bWoToDG #adv  Instagram: https://www.instagram.com/ale_kendal",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/g3RQdTEJvrk/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-08-01T10:01:11Z",
+    "contentUrl": "https://www.youtube.com/watch?v=g3RQdTEJvrk",
+    "embedUrl": "https://www.youtube.com/embed/g3RQdTEJvrk",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 100232
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Ordinary",
+    "description": "Provided to YouTube by Atlantic Records  Ordinary · Alex Warren  You'll Be Alright, Kid  ℗ 2025 Atlantic Recording Corporation  Vocals: Alex Warren Producer: Adam Yaron Bass, Guitar, Piano: Adam Yaron",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/TR19QSL7WuQ/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-07-17T10:03:10Z",
+    "contentUrl": "https://www.youtube.com/watch?v=TR19QSL7WuQ",
+    "embedUrl": "https://www.youtube.com/embed/TR19QSL7WuQ",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1279928
     }
   },
   {
@@ -148,64 +148,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 35219
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "MINECRAFT MA ogni BLOCCO è CASUALE!!! RANDOMIZER ITA",
-    "description": "Acquista qui il mio libro: https://amzn.eu/d/irxWWCy :)  LolloReactions: https://www.youtube.com/@LolloReactions LolloVlogs: https://www.youtube.com/@LolloVlogs Twitch: https://twitch.tv/lollolacustre",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/7jW9TOP2wCc/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-07-31T10:00:10Z",
-    "contentUrl": "https://www.youtube.com/watch?v=7jW9TOP2wCc",
-    "embedUrl": "https://www.youtube.com/embed/7jW9TOP2wCc",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 119649
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "KIDA & NOIZY & ROMAN & SALIBOY - MAMA",
-    "description": "STREAM: https://stmg.app/c/kida-noizy-roman-saliboy-mama #kida #noizy #roman #saliboy #mama   Produced by : Deard Sylejmani & Saliboy Co produced : Roman Rashid Lyrics & Melody:  Roman Rashid, Saliboy",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/W9gG6-Gcays/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-07-31T17:00:07Z",
-    "contentUrl": "https://www.youtube.com/watch?v=W9gG6-Gcays",
-    "embedUrl": "https://www.youtube.com/embed/W9gG6-Gcays",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 838186
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "NUREMBERG | Official Teaser (2025)",
-    "description": "The world will bear witness to NUREMBERG.   The official teaser for NUREMBERG, only in theaters November 7.   The Allies, led by the unyielding chief prosecutor, Robert H. Jackson (Michael Shannon), h",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/_41URoQAZkE/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-07-30T16:00:03Z",
-    "contentUrl": "https://www.youtube.com/watch?v=_41URoQAZkE",
-    "embedUrl": "https://www.youtube.com/embed/_41URoQAZkE",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 106671
+      "userInteractionCount": 36472
     }
   },
   {
@@ -224,7 +167,64 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1328759
+      "userInteractionCount": 1401986
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "KIDA & NOIZY & ROMAN & SALIBOY - MAMA",
+    "description": "STREAM: https://stmg.app/c/kida-noizy-roman-saliboy-mama #kida #noizy #roman #saliboy #mama   Produced by : Deard Sylejmani & Saliboy Co produced : Roman Rashid Lyrics & Melody:  Roman Rashid, Saliboy",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/W9gG6-Gcays/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-07-31T17:00:07Z",
+    "contentUrl": "https://www.youtube.com/watch?v=W9gG6-Gcays",
+    "embedUrl": "https://www.youtube.com/embed/W9gG6-Gcays",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 879515
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "NUREMBERG | Official Teaser (2025)",
+    "description": "The world will bear witness to NUREMBERG.   The official teaser for NUREMBERG, only in theaters November 7.   The Allies, led by the unyielding chief prosecutor, Robert H. Jackson (Michael Shannon), h",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/_41URoQAZkE/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-07-30T16:00:03Z",
+    "contentUrl": "https://www.youtube.com/watch?v=_41URoQAZkE",
+    "embedUrl": "https://www.youtube.com/embed/_41URoQAZkE",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 109175
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "MINECRAFT MA ogni BLOCCO è CASUALE!!! RANDOMIZER ITA",
+    "description": "Acquista qui il mio libro: https://amzn.eu/d/irxWWCy :)  LolloReactions: https://www.youtube.com/@LolloReactions LolloVlogs: https://www.youtube.com/@LolloVlogs Twitch: https://twitch.tv/lollolacustre",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/7jW9TOP2wCc/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-07-31T10:00:10Z",
+    "contentUrl": "https://www.youtube.com/watch?v=7jW9TOP2wCc",
+    "embedUrl": "https://www.youtube.com/embed/7jW9TOP2wCc",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 123159
     }
   },
   {
@@ -243,7 +243,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 20866
+      "userInteractionCount": 23474
     }
   },
   {
@@ -262,7 +262,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 556141
+      "userInteractionCount": 629076
     }
   },
   {
@@ -281,7 +281,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 51721
+      "userInteractionCount": 54276
     }
   },
   {
@@ -300,7 +300,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 441714
+      "userInteractionCount": 467449
     }
   },
   {
@@ -319,7 +319,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 37635
+      "userInteractionCount": 40103
     }
   },
   {
@@ -338,7 +338,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 42607
+      "userInteractionCount": 45308
     }
   },
   {
@@ -357,7 +357,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 454218
+      "userInteractionCount": 493483
     }
   },
   {
@@ -376,7 +376,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 19939
+      "userInteractionCount": 20643
     }
   },
   {
@@ -395,7 +395,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1852156
+      "userInteractionCount": 1908703
     }
   },
   {
@@ -414,7 +414,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 26060
+      "userInteractionCount": 29638
     }
   },
   {
@@ -433,7 +433,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 7307
+      "userInteractionCount": 7807
     }
   },
   {
@@ -452,64 +452,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 38353
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "YLL LIMANI - LARG (Official Music Video)",
-    "description": "YLL LIMANI - LARG (Official Music Video)  Subscribe to my YouTube channel here: https://lnk.to/subscribeYllLimani Turn on the 🔔 to be notified for all the new songs.  Produced by: Panda Written by: To",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/6wmDlk-7aMk/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-07-31T16:00:07Z",
-    "contentUrl": "https://www.youtube.com/watch?v=6wmDlk-7aMk",
-    "embedUrl": "https://www.youtube.com/embed/6wmDlk-7aMk",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 920317
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Ogni Maledetto Fantacalcio | Trailer ufficiale | Netflix Italia",
-    "description": "Simone, Gianni e il loro gruppo di amici si trovano all’improvviso con un componente in meno per la loro Lega Fantacalcio. L’arrivo di Andrea, super appassionata di calcio, stravolge l’equilibrio del ",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/oqFDtHWLylk/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-07-30T10:00:00Z",
-    "contentUrl": "https://www.youtube.com/watch?v=oqFDtHWLylk",
-    "embedUrl": "https://www.youtube.com/embed/oqFDtHWLylk",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 478498
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "CICO IMPAZZISCE su RAFT per la sua prima volta con ANNA e ALEX!!",
-    "description": "Cico non sta nella pelle per scoprire cosa troveremo alle coordinate scoperte su Raft! Oggi inizia un nuovo viaggio su RAFT con Anna Alex e per la prima volta anche Cico! Riusciremo a finire il gioco ",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/JSMxLMa4G_Y/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-07-31T14:30:23Z",
-    "contentUrl": "https://www.youtube.com/watch?v=JSMxLMa4G_Y",
-    "embedUrl": "https://www.youtube.com/embed/JSMxLMa4G_Y",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 80849
+      "userInteractionCount": 41401
     }
   },
   {
@@ -528,83 +471,26 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 18536
+      "userInteractionCount": 20081
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "Monster Hunter Stories 3: Twisted Reflection - Announcement Trailer",
-    "description": "A new tale of Riders and monsters takes flight! Monster Hunter Stories 3: Twisted Reflection, the next evolution of the turn-based, story-rich RPG series, is coming to Nintendo Switch 2, PS5, Xbox Ser",
+    "name": "Ogni Maledetto Fantacalcio | Trailer ufficiale | Netflix Italia",
+    "description": "Simone, Gianni e il loro gruppo di amici si trovano all’improvviso con un componente in meno per la loro Lega Fantacalcio. L’arrivo di Andrea, super appassionata di calcio, stravolge l’equilibrio del ",
     "thumbnailUrl": [
-      "https://i.ytimg.com/vi/XszCdDNI-ls/mqdefault.jpg"
+      "https://i.ytimg.com/vi/oqFDtHWLylk/mqdefault.jpg"
     ],
-    "uploadDate": "2025-07-31T13:13:04Z",
-    "contentUrl": "https://www.youtube.com/watch?v=XszCdDNI-ls",
-    "embedUrl": "https://www.youtube.com/embed/XszCdDNI-ls",
+    "uploadDate": "2025-07-30T10:00:00Z",
+    "contentUrl": "https://www.youtube.com/watch?v=oqFDtHWLylk",
+    "embedUrl": "https://www.youtube.com/embed/oqFDtHWLylk",
     "interactionStatistic": {
       "@type": "InteractionCounter",
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 243354
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Se non prendi la mascherina… MUORI! Crisi dell’ossigeno fatale in Among Us Mod iNoob",
-    "description": "Live integrale: https://www.youtube.com/watch?v=PvfPcaaOA3U  Abbonati a questo canale per accedere ai vantaggi: https://www.youtube.com/channel/UCP59sD2Sb-C77QE8yCEnvvg/join  Ospiti: @YakinopIlSindaco",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/PEOfj3oz_Go/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-07-31T17:30:05Z",
-    "contentUrl": "https://www.youtube.com/watch?v=PEOfj3oz_Go",
-    "embedUrl": "https://www.youtube.com/embed/PEOfj3oz_Go",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 67678
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Demi Lovato - Fast (Official Music Video)",
-    "description": "Stream “Fast” Out Now: https://DemiLovato.lnk.to/Fast    Connect with Demi: Subscribe https://www.youtube.com/user/therealdemilovato Instagram http://instagram.com/ddlovato Twitter http://twitter.com/",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/tZ192uMAPRA/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-08-01T04:00:07Z",
-    "contentUrl": "https://www.youtube.com/watch?v=tZ192uMAPRA",
-    "embedUrl": "https://www.youtube.com/embed/tZ192uMAPRA",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 774587
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Lost Soul Aside - Weapons Trailer | PS5 & PC Games",
-    "description": "Lost Soul Aside - Weapons Trailer | PS5 & PC Games by PlayStation",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/KAq-nuQeLdc/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-08-02T05:00:19Z",
-    "contentUrl": "https://www.youtube.com/watch?v=KAq-nuQeLdc",
-    "embedUrl": "https://www.youtube.com/embed/KAq-nuQeLdc",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 119881
+      "userInteractionCount": 505100
     }
   },
   {
@@ -623,7 +509,64 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 50344
+      "userInteractionCount": 53977
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "YLL LIMANI - LARG (Official Music Video)",
+    "description": "YLL LIMANI - LARG (Official Music Video)  Subscribe to my YouTube channel here: https://lnk.to/subscribeYllLimani Turn on the 🔔 to be notified for all the new songs.  Produced by: Panda Written by: To",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/6wmDlk-7aMk/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-07-31T16:00:07Z",
+    "contentUrl": "https://www.youtube.com/watch?v=6wmDlk-7aMk",
+    "embedUrl": "https://www.youtube.com/embed/6wmDlk-7aMk",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1013882
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Lost Soul Aside - Weapons Trailer | PS5 & PC Games",
+    "description": "Lost Soul Aside - Weapons Trailer | PS5 & PC Games by PlayStation",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/KAq-nuQeLdc/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-08-02T05:00:19Z",
+    "contentUrl": "https://www.youtube.com/watch?v=KAq-nuQeLdc",
+    "embedUrl": "https://www.youtube.com/embed/KAq-nuQeLdc",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 173119
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "CICO IMPAZZISCE su RAFT per la sua prima volta con ANNA e ALEX!!",
+    "description": "Cico non sta nella pelle per scoprire cosa troveremo alle coordinate scoperte su Raft! Oggi inizia un nuovo viaggio su RAFT con Anna Alex e per la prima volta anche Cico! Riusciremo a finire il gioco ",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/JSMxLMa4G_Y/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-07-31T14:30:23Z",
+    "contentUrl": "https://www.youtube.com/watch?v=JSMxLMa4G_Y",
+    "embedUrl": "https://www.youtube.com/embed/JSMxLMa4G_Y",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 82838
     }
   },
   {
@@ -642,64 +585,83 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 62467
+      "userInteractionCount": 70483
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "Avatar- Fuoco e Cenere Trailer: Io mi inchino a tanta maestosità",
-    "description": "▆ ▇ █ NON FARE IL PIGRO E APRIMI █ ▇ ▆ Ogni volta che esce un trailer di Aavatar perdo le parole.  Sul sito di Pampling ci sono sconti fino al 50% su tutto il catalogo e il 3X30 sulle magliette! E se ",
+    "name": "Monster Hunter Stories 3: Twisted Reflection - Announcement Trailer",
+    "description": "A new tale of Riders and monsters takes flight! Monster Hunter Stories 3: Twisted Reflection, the next evolution of the turn-based, story-rich RPG series, is coming to Nintendo Switch 2, PS5, Xbox Ser",
     "thumbnailUrl": [
-      "https://i.ytimg.com/vi/QrKt_vgvUA4/mqdefault.jpg"
+      "https://i.ytimg.com/vi/XszCdDNI-ls/mqdefault.jpg"
     ],
-    "uploadDate": "2025-07-28T16:05:55Z",
-    "contentUrl": "https://www.youtube.com/watch?v=QrKt_vgvUA4",
-    "embedUrl": "https://www.youtube.com/embed/QrKt_vgvUA4",
+    "uploadDate": "2025-07-31T13:13:04Z",
+    "contentUrl": "https://www.youtube.com/watch?v=XszCdDNI-ls",
+    "embedUrl": "https://www.youtube.com/embed/XszCdDNI-ls",
     "interactionStatistic": {
       "@type": "InteractionCounter",
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 36413
+      "userInteractionCount": 246405
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "COME NON ANDARE a CACCIA CON MARZA !",
-    "description": "DOPO ANNI ritorna Hunting Simulator, questa volta però in compagnia del marzone e di sfumazzing boy, alle prese con Wapiti, Bigorni e Orsi neri. Il tutto condito da un problema superiore... il Marzone",
+    "name": "Se non prendi la mascherina… MUORI! Crisi dell’ossigeno fatale in Among Us Mod iNoob",
+    "description": "Live integrale: https://www.youtube.com/watch?v=PvfPcaaOA3U  Abbonati a questo canale per accedere ai vantaggi: https://www.youtube.com/channel/UCP59sD2Sb-C77QE8yCEnvvg/join  Ospiti: @YakinopIlSindaco",
     "thumbnailUrl": [
-      "https://i.ytimg.com/vi/t_XEAhyxgQI/mqdefault.jpg"
+      "https://i.ytimg.com/vi/PEOfj3oz_Go/mqdefault.jpg"
     ],
-    "uploadDate": "2025-07-31T12:39:51Z",
-    "contentUrl": "https://www.youtube.com/watch?v=t_XEAhyxgQI",
-    "embedUrl": "https://www.youtube.com/embed/t_XEAhyxgQI",
+    "uploadDate": "2025-07-31T17:30:05Z",
+    "contentUrl": "https://www.youtube.com/watch?v=PEOfj3oz_Go",
+    "embedUrl": "https://www.youtube.com/embed/PEOfj3oz_Go",
     "interactionStatistic": {
       "@type": "InteractionCounter",
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 78538
+      "userInteractionCount": 69739
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "Dea Hysenaj ft Mateus Frroku - Lulebore Vlore (Official Music Video 4K)",
-    "description": "Dea Hysenaj ft Mateus Frroku - Lulebore Vlore (Official Music Video 4K) ... Music and Production - Enis Mullaj Lyrics - Eriona Rushiti Concept by: Klaudia Brahimaj Video Production & Editing: Nilor Fi",
+    "name": "Demi Lovato - Fast (Official Music Video)",
+    "description": "Stream “Fast” Out Now: https://DemiLovato.lnk.to/Fast    Connect with Demi: Subscribe https://www.youtube.com/user/therealdemilovato Instagram http://instagram.com/ddlovato Twitter http://twitter.com/",
     "thumbnailUrl": [
-      "https://i.ytimg.com/vi/DDUSTIIrxks/mqdefault.jpg"
+      "https://i.ytimg.com/vi/tZ192uMAPRA/mqdefault.jpg"
     ],
-    "uploadDate": "2025-07-30T08:00:06Z",
-    "contentUrl": "https://www.youtube.com/watch?v=DDUSTIIrxks",
-    "embedUrl": "https://www.youtube.com/embed/DDUSTIIrxks",
+    "uploadDate": "2025-08-01T04:00:07Z",
+    "contentUrl": "https://www.youtube.com/watch?v=tZ192uMAPRA",
+    "embedUrl": "https://www.youtube.com/embed/tZ192uMAPRA",
     "interactionStatistic": {
       "@type": "InteractionCounter",
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 203325
+      "userInteractionCount": 816974
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Spider-Man: Alone | Official Teaser Trailer",
+    "description": "Be the first to know when we launch! Follow our Indiegogo Pre-Launch Page: [https://www.indiegogo.com/projects/spider-man-alone-episode-1/coming_soon/]  Happy National Spider-Man Day! From Golden Cent",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/Y36jY-MUp78/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-08-01T16:00:06Z",
+    "contentUrl": "https://www.youtube.com/watch?v=Y36jY-MUp78",
+    "embedUrl": "https://www.youtube.com/embed/Y36jY-MUp78",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1108959
     }
   },
   {
@@ -718,7 +680,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 43885
+      "userInteractionCount": 50686
     }
   },
   {
@@ -737,121 +699,45 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 11653
+      "userInteractionCount": 13399
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "MI SONO FINTO UN BRAINROT HORROR E HO TROLLATO GIGINO su ROBLOX STEAL A BRIANROT!",
-    "description": "MI SONO FINTO UN BRAINROT HORROR E HO TROLLATO GIGINO su ROBLOX STEAL A BRIANROT!  In questo video Max Random si fingerà un brainrot SPAVENTOSISSIMO con i suoi AVATAR INCREDIBILI e TROLLERA il suo AMI",
+    "name": "COME NON ANDARE a CACCIA CON MARZA !",
+    "description": "DOPO ANNI ritorna Hunting Simulator, questa volta però in compagnia del marzone e di sfumazzing boy, alle prese con Wapiti, Bigorni e Orsi neri. Il tutto condito da un problema superiore... il Marzone",
     "thumbnailUrl": [
-      "https://i.ytimg.com/vi/7Co3NzgG0ew/mqdefault.jpg"
+      "https://i.ytimg.com/vi/t_XEAhyxgQI/mqdefault.jpg"
     ],
-    "uploadDate": "2025-07-31T12:10:00Z",
-    "contentUrl": "https://www.youtube.com/watch?v=7Co3NzgG0ew",
-    "embedUrl": "https://www.youtube.com/embed/7Co3NzgG0ew",
+    "uploadDate": "2025-07-31T12:39:51Z",
+    "contentUrl": "https://www.youtube.com/watch?v=t_XEAhyxgQI",
+    "embedUrl": "https://www.youtube.com/embed/t_XEAhyxgQI",
     "interactionStatistic": {
       "@type": "InteractionCounter",
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 68480
+      "userInteractionCount": 81044
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "Depeche Mode - Enjoy The Silence (Lyrics)",
-    "description": "Subscribe and press (🔔) to join the Notification Squad and stay updated with new uploads  Follow Depeche Mode: https://instagram.com/depechemode https://facebook.com/depechemode https://twitter.com/de",
+    "name": "Dea Hysenaj ft Mateus Frroku - Lulebore Vlore (Official Music Video 4K)",
+    "description": "Dea Hysenaj ft Mateus Frroku - Lulebore Vlore (Official Music Video 4K) ... Music and Production - Enis Mullaj Lyrics - Eriona Rushiti Concept by: Klaudia Brahimaj Video Production & Editing: Nilor Fi",
     "thumbnailUrl": [
-      "https://i.ytimg.com/vi/j4aY0eyS4oE/mqdefault.jpg"
+      "https://i.ytimg.com/vi/DDUSTIIrxks/mqdefault.jpg"
     ],
-    "uploadDate": "2025-07-28T11:30:39Z",
-    "contentUrl": "https://www.youtube.com/watch?v=j4aY0eyS4oE",
-    "embedUrl": "https://www.youtube.com/embed/j4aY0eyS4oE",
+    "uploadDate": "2025-07-30T08:00:06Z",
+    "contentUrl": "https://www.youtube.com/watch?v=DDUSTIIrxks",
+    "embedUrl": "https://www.youtube.com/embed/DDUSTIIrxks",
     "interactionStatistic": {
       "@type": "InteractionCounter",
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 191677
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Nintendo Direct: Partner Showcase – 31/07/2025",
-    "description": "00:25:00 Inizio 00:25:34 MONSTER HUNTER STORIES 3: TWISTED REFLECTION 00:28:04 Once Upon A KATAMARI 00:29:17 Just Dance 2026 Edition 00:30:31 DRAGON BALL: Sparking! ZERO 00:32:00 Plants vs. Zombies Re",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/KzboolKoyzw/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-07-31T13:55:57Z",
-    "contentUrl": "https://www.youtube.com/watch?v=KzboolKoyzw",
-    "embedUrl": "https://www.youtube.com/embed/KzboolKoyzw",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 60542
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Samurai Jay, Vito Salamanca - Halo (Testo/Lyrics)",
-    "description": "🎵 Follow the official 7clouds playlist on Spotify : http://spoti.fi/2SJsUcZ ​🎧 Samurai Jay, Vito Salamanca - Halo (Testo/Lyrics) ⏬ Download / Stream: https://island.lnk.to/HALO 🔔 Turn on notifications",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/lCCT_c79Yi4/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-07-25T11:18:08Z",
-    "contentUrl": "https://www.youtube.com/watch?v=lCCT_c79Yi4",
-    "embedUrl": "https://www.youtube.com/embed/lCCT_c79Yi4",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 49171
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "INCREDIBILE MA FALLIMENTARE CACCIA AL BIG FOOT",
-    "description": "Twitch → https://www.twitch.tv/tumblurr Instagram → https://www.instagram.com/blurs7/ YT → https://www.youtube.com/channel/UCIvE0AhNMRKfk62GdsgZhoA Instagram  (CANALE REWIND) → https://www.instagram.c",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/XDeJ7nErohM/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-08-01T12:00:59Z",
-    "contentUrl": "https://www.youtube.com/watch?v=XDeJ7nErohM",
-    "embedUrl": "https://www.youtube.com/embed/XDeJ7nErohM",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 38290
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "ENZO BENZ - CAPO BRANCO (Official Visual Video) prod. Whellele",
-    "description": "Enzo Benz performing “CAPO BRANCO” (Prod. Whellele)  Ascolta “CAPO BRANCO”: push.fm/ps/capobranco  ► Segui Enzo Benz https://spoti.fi/3svVzPz​​ https://rb.gy/f6hc77 https://www.instagram.com/enzobenz1",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/PhfliUzrLXU/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-07-31T22:00:06Z",
-    "contentUrl": "https://www.youtube.com/watch?v=PhfliUzrLXU",
-    "embedUrl": "https://www.youtube.com/embed/PhfliUzrLXU",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 11220
+      "userInteractionCount": 212533
     }
   },
   {
@@ -870,26 +756,102 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 47032
+      "userInteractionCount": 51635
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "MamboLosco - OUTFIT CHECK feat. Diss Gacha (Official Video)",
-    "description": "MamboLosco - OUTFIT CHECK feat. @dissgachagabbana (Prod. Nardi, Sala) Ascolta OUTFIT CHECK: https://wmi.lnk.to/outfitcheck  Segui MamboLosco su: Instagram | https://www.instagram.com/mambolosco_sugo/ ",
+    "name": "Depeche Mode - Enjoy The Silence (Lyrics)",
+    "description": "Subscribe and press (🔔) to join the Notification Squad and stay updated with new uploads  Follow Depeche Mode: https://instagram.com/depechemode https://facebook.com/depechemode https://twitter.com/de",
     "thumbnailUrl": [
-      "https://i.ytimg.com/vi/81wfdBCE7fI/mqdefault.jpg"
+      "https://i.ytimg.com/vi/j4aY0eyS4oE/mqdefault.jpg"
     ],
-    "uploadDate": "2025-07-28T12:00:12Z",
-    "contentUrl": "https://www.youtube.com/watch?v=81wfdBCE7fI",
-    "embedUrl": "https://www.youtube.com/embed/81wfdBCE7fI",
+    "uploadDate": "2025-07-28T11:30:39Z",
+    "contentUrl": "https://www.youtube.com/watch?v=j4aY0eyS4oE",
+    "embedUrl": "https://www.youtube.com/embed/j4aY0eyS4oE",
     "interactionStatistic": {
       "@type": "InteractionCounter",
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 107580
+      "userInteractionCount": 201700
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "MI SONO FINTO UN BRAINROT HORROR E HO TROLLATO GIGINO su ROBLOX STEAL A BRIANROT!",
+    "description": "MI SONO FINTO UN BRAINROT HORROR E HO TROLLATO GIGINO su ROBLOX STEAL A BRIANROT!  In questo video Max Random si fingerà un brainrot SPAVENTOSISSIMO con i suoi AVATAR INCREDIBILI e TROLLERA il suo AMI",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/7Co3NzgG0ew/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-07-31T12:10:00Z",
+    "contentUrl": "https://www.youtube.com/watch?v=7Co3NzgG0ew",
+    "embedUrl": "https://www.youtube.com/embed/7Co3NzgG0ew",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 70395
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "ENZO BENZ - CAPO BRANCO (Official Visual Video) prod. Whellele",
+    "description": "Enzo Benz performing “CAPO BRANCO” (Prod. Whellele)  Ascolta “CAPO BRANCO”: push.fm/ps/capobranco  ► Segui Enzo Benz https://spoti.fi/3svVzPz​​ https://rb.gy/f6hc77 https://www.instagram.com/enzobenz1",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/PhfliUzrLXU/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-07-31T22:00:06Z",
+    "contentUrl": "https://www.youtube.com/watch?v=PhfliUzrLXU",
+    "embedUrl": "https://www.youtube.com/embed/PhfliUzrLXU",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 12094
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "INCREDIBILE MA FALLIMENTARE CACCIA AL BIG FOOT",
+    "description": "Twitch → https://www.twitch.tv/tumblurr Instagram → https://www.instagram.com/blurs7/ YT → https://www.youtube.com/channel/UCIvE0AhNMRKfk62GdsgZhoA Instagram  (CANALE REWIND) → https://www.instagram.c",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/XDeJ7nErohM/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-08-01T12:00:59Z",
+    "contentUrl": "https://www.youtube.com/watch?v=XDeJ7nErohM",
+    "embedUrl": "https://www.youtube.com/embed/XDeJ7nErohM",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 41884
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Samurai Jay, Vito Salamanca - Halo (Testo/Lyrics)",
+    "description": "🎵 Follow the official 7clouds playlist on Spotify : http://spoti.fi/2SJsUcZ ​🎧 Samurai Jay, Vito Salamanca - Halo (Testo/Lyrics) ⏬ Download / Stream: https://island.lnk.to/HALO 🔔 Turn on notifications",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/lCCT_c79Yi4/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-07-25T11:18:08Z",
+    "contentUrl": "https://www.youtube.com/watch?v=lCCT_c79Yi4",
+    "embedUrl": "https://www.youtube.com/embed/lCCT_c79Yi4",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 50447
     }
   },
   {
@@ -908,7 +870,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 30285
+      "userInteractionCount": 32756
     }
   },
   {
@@ -927,26 +889,64 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 6506
+      "userInteractionCount": 7148
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "ZEYXON DIVENTA POPOLARE in una VACANZA di SOLE RAGAZZE in Minecraft",
-    "description": "Oggi dopo esser stato cacciato da una vacanza di sole ragazze, sono diventato il loro eroe diventando super popolare tra di loro...  🟡-------------------------🟡SOCIAL🟡------------------------🟡  🟧Instg",
+    "name": "Nintendo Direct: Partner Showcase – 31/07/2025",
+    "description": "00:25:00 Inizio 00:25:34 MONSTER HUNTER STORIES 3: TWISTED REFLECTION 00:28:04 Once Upon A KATAMARI 00:29:17 Just Dance 2026 Edition 00:30:31 DRAGON BALL: Sparking! ZERO 00:32:00 Plants vs. Zombies Re",
     "thumbnailUrl": [
-      "https://i.ytimg.com/vi/e2M30DuK-YY/mqdefault.jpg"
+      "https://i.ytimg.com/vi/KzboolKoyzw/mqdefault.jpg"
     ],
-    "uploadDate": "2025-08-01T13:01:21Z",
-    "contentUrl": "https://www.youtube.com/watch?v=e2M30DuK-YY",
-    "embedUrl": "https://www.youtube.com/embed/e2M30DuK-YY",
+    "uploadDate": "2025-07-31T13:55:57Z",
+    "contentUrl": "https://www.youtube.com/watch?v=KzboolKoyzw",
+    "embedUrl": "https://www.youtube.com/embed/KzboolKoyzw",
     "interactionStatistic": {
       "@type": "InteractionCounter",
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 29533
+      "userInteractionCount": 60882
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "VMONSTER - ABITUAT (OFFICIAL VIDEO)",
+    "description": "ARTISTA/VMONSTER   https://www.instagram.com/vmonster_official/  PRODUTTORE MUSICALE/MANUELERRY   https://www.instagram.com/manuelerrym/  PRODUZIONE ARTISTICA/ORIGINALFRANCK X MONSTEREVENTI   https://",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/BjrNDSuy7Fw/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-08-01T12:33:04Z",
+    "contentUrl": "https://www.youtube.com/watch?v=BjrNDSuy7Fw",
+    "embedUrl": "https://www.youtube.com/embed/BjrNDSuy7Fw",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 10835
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "UTILIZZO L'AVATAR \"ILLEGALE\" PER ENTRARE NELLE BASI DEGLI ALTRI su ROBLOX STEAL A BRIANROT",
+    "description": "UTILIZZO L'AVATAR \"ILLEGALE\" PER ENTRARE NELLE BASI DEGLI ALTRI su ROBLOX STEAL A BRIANROT  In questo video Max Random o @MaxHorror_ o @MaxeGiginoROBLOX userà un AVATAR BANNATO di ROBLOX su STEAL A BR",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/-Px1t0Y0_ng/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-08-01T17:20:01Z",
+    "contentUrl": "https://www.youtube.com/watch?v=-Px1t0Y0_ng",
+    "embedUrl": "https://www.youtube.com/embed/-Px1t0Y0_ng",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 32606
     }
   }
 ]
