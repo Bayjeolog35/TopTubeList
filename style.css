@@ -627,16 +627,20 @@ main.centered-no-data {
 
 .video-rank {
   position: absolute;
-  top: 8px;
-  left: 8px;
-  background-color: #0f0f0f;
-  color: white;
-  padding: 2px 6px;
-  border-radius: 6px;
+  top: 6px;
+  left: 6px;
+  width: 28px;
+  height: 28px;
+  background-color: #000;
+  color: #fff;
   font-size: 0.85rem;
   font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 28px;
   z-index: 2;
 }
+
 
 .trend-info {
   position: absolute;
@@ -670,4 +674,5 @@ main.centered-no-data {
   color: #444;
   font-style: italic;
 }
+
 
