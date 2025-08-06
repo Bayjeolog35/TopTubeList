@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
     const trendClass = video.trend === "rising" ? "trend-up" : video.trend === "falling" ? "trend-down" : "trend-stable";
 
     card.innerHTML = `
-        <div class="video-rank">#${video.rank}</div>
+        <div class="video-rank">${video.rank}</div>
         <a href="${video.url}" target="_blank" class="video-thumbnail">
             <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
             ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
