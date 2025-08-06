@@ -127,6 +127,7 @@ body.dark-mode .logo {
 
 .video-card {
   display: flex;
+  position: relative; /* 🔹 yeni eklendi */
   width: 100%;
   max-width: 720px;
   background-color: white;
@@ -620,3 +621,53 @@ main.centered-no-data {
   min-height: 60vh;
   text-align: center;
 }
+
+
+  /* === Video Kartı - Ekstra Bilgiler === */
+
+.video-rank {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: #0f0f0f;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.trend-info {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+  z-index: 2;
+}
+
+.trend-up {
+  color: green;
+}
+
+.trend-down {
+  color: red;
+}
+
+.trend-stable {
+  color: #999;
+}
+
+.rank-change {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 0.75rem;
+  color: #444;
+  font-style: italic;
+}
+
