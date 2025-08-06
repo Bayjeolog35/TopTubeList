@@ -12,6 +12,7 @@ if not API_KEY:
 # 📁 Dosya yolları
 OUTPUT_FILE = "index.videos.json"
 STRUCTURED_DATA_FILE = "index.structured_data.json"
+HISTORY_FILE = "index.history.view.json"
 HTML_FILE = "index.html"
 
 # 📌 Placeholder’lar
@@ -39,7 +40,16 @@ if response.status_code == 200:
     videos = []
     structured_items = []
 
-    for item in data["items"]:
+    # 📚 Önceki history verisini yükle
+    if os.path.exists(HISTORY_FILE):
+        with open(HISTORY_FILE, "r", encoding="utf-8") as f:
+            previous_history = json.load(f)
+    else:
+        previous_history = {}
+
+    for index, item in enumerate(data["items"]):
+        video_id = item["id"]
+
         try:
             views_int = int(item["statistics"]["viewCount"])
         except:
@@ -51,26 +61,53 @@ if response.status_code == 200:
             str(views_int)
         )
 
+        # 🔢 Sıra bilgisi
+        current_rank = index + 1
+
+        # 📊 Önceki veriye göre fark hesapla
+        previous_data = previous_history.get(video_id, {})
+        previous_views = previous_data.get("views", views_int)
+        previous_rank = previous_data.get("rank", current_rank)
+
+        view_change = views_int - previous_views
+        rank_change = previous_rank - current_rank
+
+        trend = "rising" if view_change > 0 else "falling" if view_change < 0 else "stable"
+
+        # ➕/➖ string gösterimler
+        view_change_str = f"+{view_change:,}" if view_change > 0 else f"{view_change:,}"
+        rank_change_str = f"+{rank_change}" if rank_change > 0 else f"{rank_change}"
+
         video = {
-            "id": item["id"],
+            "id": video_id,
             "title": item["snippet"]["title"],
             "channel": item["snippet"]["channelTitle"],
             "views": views_int,
             "views_str": views_str,
-            "url": f"https://www.youtube.com/watch?v={item['id']}",
-            "embed_url": f"https://www.youtube.com/embed/{item['id']}",
+            "url": f"https://www.youtube.com/watch?v={video_id}",
+            "embed_url": f"https://www.youtube.com/embed/{video_id}",
             "thumbnail": item["snippet"]["thumbnails"]["medium"]["url"],
             "published_at": item["snippet"].get("publishedAt", ""),
-            "published_date_formatted": datetime.fromisoformat(item["snippet"].get("publishedAt", "").replace("Z", "+00:00")).strftime("%d.%m.%Y")
-                if item["snippet"].get("publishedAt", "") else "Tarih Yok"
+            "published_date_formatted": datetime.fromisoformat(
+                item["snippet"].get("publishedAt", "").replace("Z", "+00:00")
+            ).strftime("%d.%m.%Y") if item["snippet"].get("publishedAt", "") else "Tarih Yok",
+
+            # 🆕 Ekstra bilgiler
+            "rank": current_rank,
+            "viewChange": view_change,
+            "viewChange_str": view_change_str,
+            "rankChange": rank_change,
+            "rankChange_str": rank_change_str,
+            "trend": trend
         }
         videos.append(video)
 
+        # Structured data
         structured_items.append({
             "@context": "https://schema.org",
             "@type": "VideoObject",
-            "name": item["snippet"]["title"],
-            "description": item["snippet"].get("description", "").strip() or item["snippet"]["title"],
+            "name": video["title"],
+            "description": item["snippet"].get("description", "").strip() or video["title"],
             "thumbnailUrl": video["thumbnail"],
             "uploadDate": video["published_at"],
             "embedUrl": video["embed_url"],
@@ -81,20 +118,29 @@ if response.status_code == 200:
             }
         })
 
-    # ⬇ JSON dosyaları kaydet
+    # 💾 JSON dosyaları kaydet
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(videos, f, ensure_ascii=False, indent=2)
 
     with open(STRUCTURED_DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(structured_items, f, ensure_ascii=False, indent=2)
 
-    print("✅ JSON dosyaları kaydedildi.")
+    # 🔁 Yeni history dosyasını yaz
+    new_history = {
+        video["id"]: {
+            "views": video["views"],
+            "rank": video["rank"]
+        } for video in videos
+    }
+    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+        json.dump(new_history, f, ensure_ascii=False, indent=2)
+
+    print("✅ JSON dosyaları ve history dosyası kaydedildi.")
 
     # 🧠 HTML güncelle
     with open(HTML_FILE, "r", encoding="utf-8") as f:
         html = f.read()
 
-    # 📌 Structured Data Güncelle
     with open(STRUCTURED_DATA_FILE, "r", encoding="utf-8") as f:
         structured_json = f.read()
     structured_block = f'<script type="application/ld+json">\n<!-- STRUCTURED_DATA_HERE -->\n{structured_json}\n</script>'
@@ -118,7 +164,6 @@ if response.status_code == 200:
     if IFRAME_PATTERN.search(html):
         html = IFRAME_PATTERN.sub(iframe_block, html)
     else:
-        # Eğer ilk kez ekleniyorsa
         html = html.replace("</body>", f"{iframe_block}\n</body>")
 
     with open(HTML_FILE, "w", encoding="utf-8") as f:
