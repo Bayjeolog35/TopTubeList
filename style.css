@@ -653,7 +653,12 @@ main.centered-no-data {
   padding: 4px 8px;
   border-radius: 6px;
   z-index: 2;
+  background-color: transparent;
+  color: inherit;
+  pointer-events: none;
+  white-space: nowrap;
 }
+
 
 .trend-up {
   color: green;
@@ -679,4 +684,5 @@ main.centered-no-data {
 .video-thumbnail {
   position: relative; /* video-rank için referans olacak */
   display: inline-block;
+
 
