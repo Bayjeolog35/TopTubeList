@@ -66,12 +66,12 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
         </div>
 
         <div class="trend-info ${trendClass}">
-            ${trendIcon} ${video.viewChange_str || ""}
-        </div>
+  ${video.viewChange !== 0 ? `${trendIcon} ${video.viewChange_str}` : ""}
+</div>
 
-        <div class="rank-change">
-            ${video.rankChange_str ? `(${video.rankChange_str} sıra)` : ""}
-        </div>
+<div class="rank-change">
+  ${video.rankChange !== 0 ? `(${video.rankChange_str} sıra)` : ""}
+</div>
     `;
 
     return card;
