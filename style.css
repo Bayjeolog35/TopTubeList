@@ -635,12 +635,13 @@ main.centered-no-data {
   color: #fff;
   font-size: 0.75rem;
   font-weight: bold;
-  border-radius: 4px; /* 🔹 köşeli kare */
+  border-radius: 50%; /* 🔹 tam yuvarlak */
   text-align: center;
   line-height: 24px;
   z-index: 2;
   pointer-events: none;
 }
+
 
 .trend-info {
   position: absolute;
@@ -678,3 +679,4 @@ main.centered-no-data {
 .video-thumbnail {
   position: relative; /* video-rank için referans olacak */
   display: inline-block;
+
