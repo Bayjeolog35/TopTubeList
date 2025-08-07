@@ -654,77 +654,33 @@ main.centered-no-data {
   color: #999;
 }
 
-.rank-change {
-  position: absolute;
-  bottom: 8px;
-  right: 12px;
-  font-size: 0.75rem;
-  color: #444;
-  font-style: italic;
-}
-
-.video-thumbnail {
-  position: relative; /* video-rank için referans olacak */
-  display: inline-block;
-
 .trend-arrow-container {
   position: absolute;
-  top: 50%;
-  right: 16px; /* Sağdan boşluk */
-  transform: translateY(-50%); /* Dikeyde ortala */
+  top: 12px;
+  right: 12px;
   display: flex;
-  flex-direction: column; /* Ok ve metni alt alta yerleştir */
-  align-items: center; /* Ortala */
-  pointer-events: none; /* Etkileşim almasını engelle */
-  text-align: center;
-}
-
-.trend-arrow {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent; /* Okun genişliği */
-  border-right: 10px solid transparent; /* Okun genişliği */
-  margin-bottom: 4px; /* Ok ile değer arasına boşluk bırak */
-}
-
-/* Yukarı Yönlü Ok */
-.trend-arrow-container.trend-up .trend-arrow {
-  border-bottom: 20px solid green; /* Okun rengi ve yüksekliği */
-}
-
-/* Aşağı Yönlü Ok */
-.trend-arrow-container.trend-down .trend-arrow {
-  border-top: 20px solid red; /* Okun rengi ve yüksekliği */
-}
-
-/* Sayısal Değer */
-.trend-value {
-  font-size: 1rem;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
   font-weight: bold;
 }
 
-/* Renkleri ayarlayın */
-.trend-arrow-container.trend-up .trend-value {
-  color: green;
+.trend-arrow-container.trend-up .trend-arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid green;
 }
 
-.trend-arrow-container.trend-down .trend-value {
-  color: red;
+.trend-arrow-container.trend-down .trend-arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid red;
 }
 
-/* Dark mode'da ok renkleri */
-body.dark-mode .trend-arrow-container.trend-up .trend-arrow {
-  border-bottom-color: limegreen; /* Daha belirgin bir yeşil */
-}
-
-body.dark-mode .trend-arrow-container.trend-down .trend-arrow {
-  border-top-color: #ff6347; /* Daha belirgin bir kırmızı */
-}
-
-body.dark-mode .trend-arrow-container.trend-up .trend-value {
-  color: limegreen;
-}
-
-body.dark-mode .trend-arrow-container.trend-down .trend-value {
-  color: #ff6347;
+.trend-value {
+  color: #333;
 }
