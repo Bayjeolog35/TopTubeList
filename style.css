@@ -667,64 +667,64 @@ main.centered-no-data {
   position: relative; /* video-rank için referans olacak */
   display: inline-block;
 
-.trend-arrow-container {
+.view-change-block {
   position: absolute;
   top: 50%;
-  right: 16px; /* Sağdan boşluk */
+  right: 20px; /* Sağdan boşluk */
   transform: translateY(-50%); /* Dikeyde ortala */
   display: flex;
   flex-direction: column; /* Ok ve metni alt alta yerleştir */
   align-items: center; /* Ortala */
   pointer-events: none; /* Etkileşim almasını engelle */
+}
+
+.view-change-block .view-change-value {
+  font-size: 1rem;
+  font-weight: bold;
+  white-space: nowrap; /* Metnin tek satırda kalmasını sağlar */
   text-align: center;
 }
 
-  .trend-arrow {
+/* Yukarı Yönlü Ok (Yeşil) */
+.view-change-block.trend-up {
+  color: green; /* Değer metninin rengi */
+}
+.view-change-block.trend-up::before {
+  content: ''; /* Sözde-eleman için zorunlu */
   width: 0;
   height: 0;
-  border-left: 10px solid transparent; /* Okun genişliği */
-  border-right: 10px solid transparent; /* Okun genişliği */
-  margin-bottom: 4px; /* Ok ile değer arasına boşluk bırak */
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid green; /* Yön ve renk */
+  margin-bottom: 4px; /* Ok ile değer arasına boşluk */
 }
 
-/* Yukarı Yönlü Ok */
-.trend-arrow-container.trend-up .trend-arrow {
-  border-bottom: 20px solid green; /* Okun rengi ve yüksekliği */
+/* Aşağı Yönlü Ok (Kırmızı) */
+.view-change-block.trend-down {
+  color: red; /* Değer metninin rengi */
+}
+.view-change-block.trend-down::before {
+  content: ''; /* Sözde-eleman için zorunlu */
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid red; /* Yön ve renk */
+  margin-bottom: 4px;
 }
 
-/* Aşağı Yönlü Ok */
-.trend-arrow-container.trend-down .trend-arrow {
-  border-top: 20px solid red; /* Okun rengi ve yüksekliği */
-}
 
-/* Sayısal Değer */
-.trend-value {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-/* Renkleri ayarlayın */
-.trend-arrow-container.trend-up .trend-value {
-  color: green;
-}
-
-.trend-arrow-container.trend-down .trend-value {
-  color: red;
-}
-
-/* Dark mode'da ok renkleri */
-body.dark-mode .trend-arrow-container.trend-up .trend-arrow {
-  border-bottom-color: limegreen; /* Daha belirgin bir yeşil */
-}
-
-body.dark-mode .trend-arrow-container.trend-down .trend-arrow {
-  border-top-color: #ff6347; /* Daha belirgin bir kırmızı */
-}
-
-body.dark-mode .trend-arrow-container.trend-up .trend-value {
+/* Dark mode için renkleri güncelleyin */
+body.dark-mode .view-change-block.trend-up {
   color: limegreen;
 }
+body.dark-mode .view-change-block.trend-up::before {
+  border-bottom-color: limegreen;
+}
 
-body.dark-mode .trend-arrow-container.trend-down .trend-value {
+body.dark-mode .view-change-block.trend-down {
   color: #ff6347;
+}
+body.dark-mode .view-change-block.trend-down::before {
+  border-top-color: #ff6347;
 }
