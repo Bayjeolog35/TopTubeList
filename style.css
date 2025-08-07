@@ -642,21 +642,6 @@ main.centered-no-data {
   pointer-events: none;
 }
 
-
-.trend-info {
-  position: absolute;
-  top: 50%;
-  right: 8px;
-  transform: translateY(-50%);
-  font-size: 1.1rem;
-  font-weight: bold;
-  z-index: 2;
-  background-color: transparent;
-  color: inherit;
-  pointer-events: none;
-  white-space: nowrap;
-}
-
 .trend-up {
   color: green;
 }
@@ -682,12 +667,64 @@ main.centered-no-data {
   position: relative; /* video-rank için referans olacak */
   display: inline-block;
 
-.trend-arrow {
+.trend-arrow-container {
   position: absolute;
-  right: 12px;
   top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.5rem;
+  right: 16px; /* Sağdan boşluk */
+  transform: translateY(-50%); /* Dikeyde ortala */
+  display: flex;
+  flex-direction: column; /* Ok ve metni alt alta yerleştir */
+  align-items: center; /* Ortala */
+  pointer-events: none; /* Etkileşim almasını engelle */
+  text-align: center;
+}
+
+  .trend-arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent; /* Okun genişliği */
+  border-right: 10px solid transparent; /* Okun genişliği */
+  margin-bottom: 4px; /* Ok ile değer arasına boşluk bırak */
+}
+
+/* Yukarı Yönlü Ok */
+.trend-arrow-container.trend-up .trend-arrow {
+  border-bottom: 20px solid green; /* Okun rengi ve yüksekliği */
+}
+
+/* Aşağı Yönlü Ok */
+.trend-arrow-container.trend-down .trend-arrow {
+  border-top: 20px solid red; /* Okun rengi ve yüksekliği */
+}
+
+/* Sayısal Değer */
+.trend-value {
+  font-size: 1rem;
   font-weight: bold;
-  z-index: 2;
+}
+
+/* Renkleri ayarlayın */
+.trend-arrow-container.trend-up .trend-value {
+  color: green;
+}
+
+.trend-arrow-container.trend-down .trend-value {
+  color: red;
+}
+
+/* Dark mode'da ok renkleri */
+body.dark-mode .trend-arrow-container.trend-up .trend-arrow {
+  border-bottom-color: limegreen; /* Daha belirgin bir yeşil */
+}
+
+body.dark-mode .trend-arrow-container.trend-down .trend-arrow {
+  border-top-color: #ff6347; /* Daha belirgin bir kırmızı */
+}
+
+body.dark-mode .trend-arrow-container.trend-up .trend-value {
+  color: limegreen;
+}
+
+body.dark-mode .trend-arrow-container.trend-down .trend-value {
+  color: #ff6347;
 }
