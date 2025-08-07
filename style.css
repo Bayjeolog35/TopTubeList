@@ -656,31 +656,18 @@ main.centered-no-data {
 
 .trend-arrow-container {
   position: absolute;
-  top: 12px;
   right: 12px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 14px;
+  top: 12px;
+  font-size: 18px;
   font-weight: bold;
 }
 
-.trend-arrow-container.trend-up .trend-arrow {
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 10px solid green;
+.trend-up .trend-arrow {
+  color: green;
 }
-
-.trend-arrow-container.trend-down .trend-arrow {
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 10px solid red;
+.trend-down .trend-arrow {
+  color: red;
 }
-
-.trend-value {
-  color: #333;
+.trend-stable .trend-arrow {
+  color: gray;
 }
