@@ -646,19 +646,16 @@ main.centered-no-data {
 .trend-info {
   position: absolute;
   top: 50%;
-  right: 12px;
+  right: 8px;
   transform: translateY(-50%);
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: bold;
-  padding: 4px 8px;
-  border-radius: 6px;
   z-index: 2;
   background-color: transparent;
   color: inherit;
   pointer-events: none;
   white-space: nowrap;
 }
-
 
 .trend-up {
   color: green;
@@ -693,5 +690,6 @@ main.centered-no-data {
   font-size: 1.4rem;
   z-index: 2;
 }
+
 
 
