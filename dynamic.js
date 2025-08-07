@@ -63,20 +63,18 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
             <p><strong>Views:</strong> ${video.views_str || '0'} views</p>
             <p><strong>Date:</strong> ${new Date(video.published_at).toLocaleDateString('tr-TR')}</p>
             ${video.duration ? `<p><strong>Duration:</strong> ${video.duration}</p>` : ''}
+            ${video.viewChange !== 0 ? `
+                <p class="view-change-line">
+                    <strong>View change (last 3h):</strong> 
+                    <span class="view-change ${video.trend}">${video.viewChange_str}</span>
+                </p>
+                <div class="trend-icon-large ${video.trend}">${trendIcon}</div>
+            ` : ''}
         </div>
-
-        <div class="trend-info ${trendClass}">
-  ${video.viewChange !== 0 ? `${trendIcon} ${video.viewChange_str}` : ""}
-</div>
-
-<div class="rank-change">
-  ${video.rankChange !== 0 ? `(${video.rankChange_str} sıra)` : ""}
-</div>
     `;
 
     return card;
 }
-
 
     /**
      * Displays a message when no video data is available for a country.
