@@ -45,34 +45,32 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
      */
 // dynamic.js dosyanızdaki createVideoCard fonksiyonunu bu kodla değiştirin.
 function createVideoCard(video) {
-  const card = document.createElement("div");
-  card.className = "video-card";
+    const card = document.createElement("div");
+    card.className = "video-card";
 
-  // Okun rengini ve yönünü belirle
-  const trendClass = video.viewChange > 0 ? "trend-up" : video.viewChange < 0 ? "trend-down" : "";
-  const trendText = video.viewChange > 0 ? `+${video.viewChange_str}` : video.viewChange < 0 ? `${video.viewChange_str}` : "";
-  
-  card.innerHTML = `
-    <div class="video-rank">${video.rank}</div>
-    <a href="${video.url}" target="_blank" class="video-thumbnail">
-        <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
-        ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
-    </a>
-    <div class="video-info">
-        <h2>${video.title}</h2>
-        <p><strong>Channel:</strong> ${video.channel}</p>
-        <p><strong>Views:</strong> ${video.views_str || '0'} views</p>
-        <p><strong>Date:</strong> ${new Date(video.published_at).toLocaleDateString('tr-TR')}</p>
-    </div>
-    
-    ${video.viewChange !== 0 ? `
-    <div class="view-change-block ${trendClass}">
-      <span class="view-change-value">${trendText}</span>
-    </div>
-    ` : ''}
-  `;
+    const trendIcon = video.trend === "rising" ? "⬆" : video.trend === "falling" ? "⬇" : "";
+    const trendClass = video.trend === "rising" ? "trend-up" : video.trend === "falling" ? "trend-down" : "trend-stable";
 
-  return card;
+    card.innerHTML = `
+        <div class="video-rank">${video.rank}</div>
+        <a href="${video.url}" target="_blank" class="video-thumbnail">
+            <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
+            ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
+        </a>
+        <div class="video-info">
+            <h2>${video.title}</h2>
+            <p><strong>Channel:</strong> ${video.channel}</p>
+            <p><strong>Views:</strong> ${video.views_str || '0'} views</p>
+            <p><strong>Date:</strong> ${new Date(video.published_at).toLocaleDateString('tr-TR')}</p>
+            ${video.duration ? `<p><strong>Duration:</strong> ${video.duration}</p>` : ''}
+            ${video.viewChange !== 0 ? `<p class="trend-info ${trendClass}"><strong>View change (last 3h):</strong> ${video.viewChange_str}</p>` : ''}
+        </div>
+        <div class="trend-arrow">
+            ${trendIcon}
+        </div>
+    `;
+
+    return card;
 }
     /**
      * Displays a message when no video data is available for a country.
