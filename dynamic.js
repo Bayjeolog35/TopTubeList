@@ -48,8 +48,10 @@ function createVideoCard(video) {
     const card = document.createElement("div");
     card.className = "video-card";
 
-    const trendIcon = video.trend === "rising" ? "⬆" : video.trend === "falling" ? "⬇" : "";
-    const trendClass = video.trend === "rising" ? "trend-up" : video.trend === "falling" ? "trend-down" : "trend-stable";
+    const isNew = video.trend === "new";
+    const trendIcon = isNew ? "⬆" : video.trend === "rising" ? "⬆" : video.trend === "falling" ? "⬇" : "";
+    const trendClass = isNew ? "trend-up" : video.trend === "rising" ? "trend-up" : video.trend === "falling" ? "trend-down" : "trend-stable";
+    const trendText = isNew ? "🆕 New Listing" : video.viewChange_str;
 
     card.innerHTML = `
         <div class="video-rank">${video.rank}</div>
@@ -63,12 +65,13 @@ function createVideoCard(video) {
             <p><strong>Views:</strong> ${video.views_str || '0'} views</p>
             <p><strong>Date:</strong> ${new Date(video.published_at).toLocaleDateString('tr-TR')}</p>
             ${video.duration ? `<p><strong>Duration:</strong> ${video.duration}</p>` : ''}
-            ${video.viewChange !== 0 ? `<p class="trend-info ${trendClass}"><strong>View change (last 3h):</strong> ${video.viewChange_str}</p>` : ''}
+            ${video.viewChange !== 0 || isNew ? `<p class="trend-info ${trendClass}"><strong>View change (last 3h):</strong> ${trendText}</p>` : ''}
         </div>
-       ${video.viewChange !== 0 ? `
-  <div class="trend-arrow-container ${trendClass}">
-      <div class="trend-arrow">${trendIcon}</div>
-  </div>` : ''}
+        ${(video.viewChange !== 0 || isNew) ? `
+          <div class="trend-arrow-container ${trendClass}">
+              <div class="trend-arrow">${trendIcon}</div>
+          </div>` : ''
+        }
     `;
 
     return card;
