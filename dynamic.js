@@ -65,10 +65,9 @@ function createVideoCard(video) {
             ${video.duration ? `<p><strong>Duration:</strong> ${video.duration}</p>` : ''}
             ${video.viewChange !== 0 ? `<p class="trend-info ${trendClass}"><strong>View change (last 3h):</strong> ${video.viewChange_str}</p>` : ''}
         </div>
-        ${video.viewChange !== 0 ? `
+       ${video.viewChange !== 0 ? `
   <div class="trend-arrow-container ${trendClass}">
-      <div class="trend-arrow"></div>
-      <div class="trend-value">${video.viewChange_str}</div>
+      <div class="trend-arrow">${trendIcon}</div>
   </div>` : ''}
     `;
 
