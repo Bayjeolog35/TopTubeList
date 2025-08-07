@@ -685,4 +685,13 @@ main.centered-no-data {
   position: relative; /* video-rank için referans olacak */
   display: inline-block;
 
+.trend-arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  z-index: 2;
+}
+
 
