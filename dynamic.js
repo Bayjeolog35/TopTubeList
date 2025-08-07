@@ -43,53 +43,35 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
      * @param {Object} video - The video data object.
      * @returns {HTMLElement} The created video card div.
      */
-   function createVideoCard(video) {
+  function createVideoCard(video) {
   const card = document.createElement("div");
   card.className = "video-card";
 
-  // Trend bilgisi (yükseliyor/düşüyor)
-  const trendIcon = video.trend === "rising" ? "⬆" :
-                    video.trend === "falling" ? "⬇" : "";
-  const trendClass = video.trend === "rising" ? "trend-up" :
-                     video.trend === "falling" ? "trend-down" : "trend-stable";
+  const trendIcon = video.trend === "rising" ? "⬆" : video.trend === "falling" ? "⬇" : "";
+  const trendClass = video.trend === "rising" ? "trend-up" : video.trend === "falling" ? "trend-down" : "trend-stable";
 
-  // Trend okunu ayrı olarak sağa yerleştir (büyük)
-  const trendArrow = document.createElement("div");
-  trendArrow.className = "trend-arrow";
-  trendArrow.textContent = trendIcon;
-
-  // Renk ayarı
-  if (video.trend === "rising") {
-    trendArrow.style.color = "green";
-  } else if (video.trend === "falling") {
-    trendArrow.style.color = "red";
-  } else {
-    trendArrow.style.color = "#888";
-  }
-
-  // HTML içeriği
   card.innerHTML = `
     <div class="video-rank">${video.rank}</div>
     <a href="${video.url}" target="_blank" class="video-thumbnail">
-      <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
-      ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
+        <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
+        ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
     </a>
     <div class="video-info">
-      <h2>${video.title}</h2>
-      <p><strong>Channel:</strong> ${video.channel}</p>
-      <p><strong>Views:</strong> ${video.views_str || '0'} views</p>
-      <p><strong>Date:</strong> ${new Date(video.published_at).toLocaleDateString('tr-TR')}</p>
-      ${video.duration ? `<p><strong>Duration:</strong> ${video.duration}</p>` : ''}
-      ${video.viewChange !== 0 ? `<p class="trend-info ${trendClass}">View change (last 3h): ${video.viewChange_str}</p>` : ""}
-      ${video.rankChange !== 0 ? `<p class="rank-change">(${video.rankChange_str} sıra)</p>` : ""}
+        <h2>${video.title}</h2>
+        <p><strong>Channel:</strong> ${video.channel}</p>
+        <p><strong>Views:</strong> ${video.views_str || '0'} views</p>
+        <p><strong>Date:</strong> ${new Date(video.published_at).toLocaleDateString('tr-TR')}</p>
+        ${video.duration ? `<p><strong>Duration:</strong> ${video.duration}</p>` : ''}
+        ${video.viewChange !== 0 ? `<p class="trend-info ${trendClass}"><strong>View change (last 3h):</strong> ${video.viewChange_str}</p>` : ''}
+    </div>
+    <div class="trend-arrow">
+        ${trendIcon}
     </div>
   `;
 
-  // Trend oku kartın en sağına ekle
-  card.appendChild(trendArrow);
-
   return card;
 }
+
     /**
      * Displays a message when no video data is available for a country.
      */
