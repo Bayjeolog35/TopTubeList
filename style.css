@@ -630,22 +630,19 @@ main.centered-no-data {
   transform: translateY(-50%);
   display: flex;
   align-items: center;
-  gap: 8px;
-  pointer-events: none;
+  gap: 6px;
+  font-weight: bold;
 }
 
-/* Ok ve sayı görünümü */
 .trend-arrow {
-  font-size: 28px;   /* büyüttük */
+  font-size: 28px; /* büyük ok */
   line-height: 1;
-  font-weight: 700;
 }
+
 .trend-rank {
   font-size: 14px;
-  font-weight: 700;
 }
 
-/* Renkler */
-.trend-up   { color: green; }
+.trend-up { color: green; }
 .trend-down { color: red; }
 .trend-stable { color: gray; }
