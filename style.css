@@ -638,22 +638,15 @@ main.centered-no-data {
 }
 
 .trend-badge {
-  position: absolute;
-  right: 12px;
-  top: 50%;
   display: flex;
-  justify-content: center; /* YATAY ortalama */
-  align-items: center;     /* Dikey ortalama */
-  gap: 15px; /* Sıralama göstergesi ile ok arasına boşluk bırakır */
-  white-space: nowrap;
+  justify-content: center; /* Yatay ortala */
+  align-items: center;     /* Dikey ortala */
 }
 
 .trend-icon {
   width: 20px;
   height: 20px;
   object-fit: contain;
-  display: block;
-  margin: auto; /* Hem yatay hem dikey ortalamada block içinde işe yarar */
 }
 
 /* --- YENİ EKLENDİ: Sıralama Değişim Göstergesi --- */
@@ -685,5 +678,6 @@ body.dark-mode .rank-up {
 body.dark-mode .rank-down {
   background-color: #c62828;
 }
+
 
 
