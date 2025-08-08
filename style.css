@@ -623,23 +623,48 @@ main.centered-no-data {
     transform: translateY(-50%);
 }
 
-/* Sadece video önizleme (thumbnail) resimleri */
-.video-card .thumbnail {
-    width: 180px;
-    height: 120px;
-    object-fit: cover;
+/* Kart: ikon için sağ tarafta yer aç */
+.video-card {
+  position: relative;
+  padding-right: 44px;  /* ikon metne binmesin */
 }
 
+/* Küçük, net thumbnail (sabit VE aynı oran) */
+.video-thumbnail .thumbnail {
+  width: 180px;
+  height: 101px;         /* 16:9'a yakın sabit yükseklik */
+  object-fit: cover;
+  display: block;
+}
+
+/* Trend rozeti: kartın SAĞ-ORTA noktası */
 .trend-badge {
-    position: absolute;
-    top: 10px;      /* Üstten mesafe */
-    right: 10px;    /* Sağdan mesafe */
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;    /* tıklamayı engellemesin */
 }
 
+/* İkon boyutu – keskinlik için küçük ama net */
 .trend-icon {
-    width: 20px;    /* 32px ikon olsa bile küçük gösterir */
-    height: 20px;
-    object-fit: contain;
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
-
+/* Küçük ekran optimizasyonu */
+@media (max-width: 600px) {
+  .video-card {
+    padding-right: 32px;   /* daha dar sağ boşluk */
+  }
+  .trend-icon {
+    width: 16px;
+    height: 16px;
+  }
+  .video-thumbnail .thumbnail {
+    width: 140px;
+    height: 79px;          /* orana uygun */
+  }
+}
