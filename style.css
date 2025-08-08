@@ -625,13 +625,14 @@ main.centered-no-data {
 /* Kartın sağ-ortasında bağımsız badge alanı */
 .trend-badge {
   position: absolute;
-  right: 12px;
-  top: 50%;
+  right: 0;          /* en sağa yasla */
+  top: 50%;          /* dikey ortala */
   transform: translateY(-50%);
   display: flex;
   align-items: center;
   gap: 6px;
   font-weight: bold;
+  padding-right: 8px; /* sağdan biraz boşluk */
 }
 
 .trend-arrow {
@@ -646,3 +647,4 @@ main.centered-no-data {
 .trend-up { color: green; }
 .trend-down { color: red; }
 .trend-stable { color: gray; }
+
