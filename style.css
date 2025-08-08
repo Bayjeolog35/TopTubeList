@@ -622,29 +622,15 @@ main.centered-no-data {
   text-align: center;
 }
 
-/* Kartın sağ-ortasında bağımsız badge alanı */
 .trend-badge {
-  position: absolute;
-  right: 0;          /* en sağa yasla */
-  top: 50%;          /* dikey ortala */
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: bold;
-  padding-right: 8px; /* sağdan biraz boşluk */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.trend-arrow {
-  font-size: 28px; /* büyük ok */
-  line-height: 1;
+.trend-icon {
+    width: 32px;
+    height: 32px;
 }
-
-.trend-rank {
-  font-size: 14px;
-}
-
-.trend-up { color: green; }
-.trend-down { color: red; }
-.trend-stable { color: gray; }
 
