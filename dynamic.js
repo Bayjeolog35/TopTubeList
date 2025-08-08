@@ -45,15 +45,21 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
      */
 // dynamic.js dosyanızdaki createVideoCard fonksiyonunu bu kodla değiştirin.
 function createVideoCard(video) {
+  // --- İzlenme sayısını kısalt ---
+  function formatViews(num) {
+    const n = Number(num) || 0;
+    if (n >= 1_000_000_000) return (n / 1_000_000_000).toFixed(2).replace(/\.?0+$/, '') + "B";
+    if (n >= 1_000_000)     return (n / 1_000_000).toFixed(2).replace(/\.?0+$/, '') + "M";
+    if (n >= 1_000)         return Math.round(n / 1_000) + "K";
+    return String(n);
+  }
+
   // --- KART ---
   const card = document.createElement("div");
   card.className = "video-card";
-  card.style.position = "relative"; // rozete referans
+  card.style.position = "relative"; // rozet için referans
 
   // --- GÜVENLİ VERİLER ---
-  const viewsStr =
-    video.views_str ||
-    (typeof video.views === "number" ? video.views.toLocaleString("en-US") : "0");
   const published =
     video.published_date_formatted ||
     (video.published_at ? new Date(video.published_at).toLocaleDateString("tr-TR") : "");
@@ -94,7 +100,7 @@ function createVideoCard(video) {
     <div class="video-info">
       <h2>${video.title}</h2>
       <p><strong>Channel:</strong> ${video.channel}</p>
-      <p><strong>Views:</strong> ${viewsStr} views</p>
+      <p><strong>Views:</strong> ${formatViews(video.views)} views</p>
       ${published ? `<p><strong>Date:</strong> ${published}</p>` : ""}
       ${
         trendText
@@ -111,12 +117,12 @@ function createVideoCard(video) {
     </div>
   `;
 
- // --- İNLİNE POZİSYONLAMA (GLOBAL CSS'E DOKUNMADAN) ---
+  // --- İNLİNE POZİSYONLAMA (GLOBAL CSS'E DOKUNMADAN) ---
   const badge = card.querySelector(".trend-badge");
   const info  = card.querySelector(".video-info");
   const icon  = card.querySelector(".trend-icon");
 
-  // Desktop varsayılan
+  // Masaüstü varsayılan
   if (badge) Object.assign(badge.style, {
     position: "absolute",
     right: "12px",
@@ -157,6 +163,7 @@ function createVideoCard(video) {
 
   return card;
 }
+
 
 
     /**
