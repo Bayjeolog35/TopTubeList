@@ -49,17 +49,32 @@ function createVideoCard(video) {
   const card = document.createElement("div");
   card.className = "video-card";
 
-  // Trend & ikon yolu
-  const trend = video.trend || (video.viewChange > 0 ? "rising" : video.viewChange < 0 ? "falling" : "stable");
+  // ---- Güvenli değerler ----
+  const viewsStr = video.views_str || (typeof video.views === "number" ? video.views.toLocaleString("en-US") : "0");
+  const published =
+    video.published_date_formatted ||
+    (video.published_at ? new Date(video.published_at).toLocaleDateString("tr-TR") : "");
+
+  const viewChange = Number(video.viewChange || 0);
+  const trend = video.trend || (viewChange > 0 ? "rising" : viewChange < 0 ? "falling" : "stable");
+
+  // Trend class'ı (Gemini'nin bıraktığı eksik parça)
+  const trendClass =
+    trend === "rising" || trend === "new"
+      ? "trend-up"
+      : trend === "falling"
+      ? "trend-down"
+      : "trend-stable";
+
   const iconMap = { rising: "up.webp", new: "up.webp", falling: "down.webp", stable: "zero.webp" };
   const trendIconPath = iconMap[trend] || "zero.webp";
 
-  // Sıralama değişimini hesapla ve stilini belirle
-  const rankChange = video.rankChange || 0;
+  // Sıralama değişimi rozeti
+  const rankChange = Number(video.rankChange || 0);
   let rankChangeHtml = "";
   if (rankChange !== 0) {
     const isUp = rankChange > 0;
-    const changeText = isUp ? `+${rankChange}` : rankChange;
+    const changeText = isUp ? `+${rankChange}` : `${rankChange}`;
     const changeClass = isUp ? "rank-up" : "rank-down";
     const changeArrow = isUp ? "⬆" : "⬇";
     rankChangeHtml = `<span class="rank-change ${changeClass}">${changeText} ${changeArrow}</span>`;
@@ -74,26 +89,25 @@ function createVideoCard(video) {
     <div class="video-info">
       <h2>${video.title}</h2>
       <p><strong>Channel:</strong> ${video.channel}</p>
-      <p><strong>Views:</strong> ${video.views_str || "0"} views</p>
-      <p><strong>Date:</strong> ${new Date(video.published_at).toLocaleDateString("tr-TR")}</p>
+      <p><strong>Views:</strong> ${viewsStr} views</p>
+      ${published ? `<p><strong>Date:</strong> ${published}</p>` : ""}
       ${video.duration ? `<p><strong>Duration:</strong> ${video.duration}</p>` : ""}
       ${
-        video.viewChange !== 0 || trend === "new"
-          ? `<p class="trend-info ${trendClass}"><strong>View change (last 3h):</strong> ${video.viewChange_str || "0"}</p>`
+        viewChange !== 0 || trend === "new"
+          ? `<p class="trend-info ${trendClass}"><strong>View change (last 3h):</strong> ${video.viewChange_str || String(viewChange)}</p>`
           : ""
       }
     </div>
 
     <div class="trend-badge">
       ${rankChangeHtml}
-      <img src="${trendIconPath}" alt="${
-        trend === "rising" || trend === "new" ? "Rising" : trend === "falling" ? "Falling" : "Stable"
-      }" class="trend-icon" width="20" height="20" />
+      <img src="${trendIconPath}" alt="${trend}" class="trend-icon" width="20" height="20" />
     </div>
   `;
 
   return card;
 }
+
 
 
     /**
