@@ -669,20 +669,25 @@ body.dark-mode .rank-up {
 body.dark-mode .rank-down {
   background-color: #c62828;
 }
-/* Mobil uyum */
-@media (max-width: 480px) {
 
-  /* Kartı tek sütuna düşür: görsel üstte, bilgi altta */
+/* ===== Mobil uyum up-down (480px altı) ===== */
+@media (max-width: 480px) {
+  /* Kart düzeni: üstte görsel, altta metin + rozet yan yana */
   .video-card {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr auto; /* metin ve rozet yan yana */
+    grid-template-rows: auto auto;   /* üst satır görsel */
+    grid-template-areas:
+      "thumb thumb"
+      "info badge";
     gap: 8px;
     padding: 10px 12px;
     border-radius: 14px;
   }
 
-  /* Thumbnail tam genişlik + sabit oran */
+  /* Görsel tam satır */
   .video-thumbnail {
+    grid-area: thumb;
     display: block;
     width: 100%;
   }
@@ -694,8 +699,40 @@ body.dark-mode .rank-down {
     border-radius: 10px;
   }
 
-  /* Sağdaki rozet için metinlere nefes payı bırak */
-  .video-info { padding-right: 60px; }
+  /* Metin alanı */
+  .video-info {
+    grid-area: info;
+    padding-right: 0 !important; /* JS'in inline padding'ini iptal et */
+  }
+
+  /* Rozet alanı */
+  .trend-badge {
+    grid-area: badge;
+    position: static !important;   /* JS'in absolute konumunu iptal et */
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+
+    display: flex;
+    justify-self: end; /* sağa hizala */
+    align-self: center; /* dikey ortala */
+
+    width: 50px !important;
+    height: 26px !important;
+    gap: 4px;
+  }
+
+  /* İkon ve metin boyutları */
+  .trend-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .rank-change {
+    min-width: 22px;
+    height: 18px;
+    font-size: 12px;
+    padding: 0 4px;
+  }
 
   /* Başlık ve metin boyutlarını küçült */
   .video-info h2 {
@@ -715,29 +752,15 @@ body.dark-mode .rank-down {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-
-  /* Sağ-ortadaki rozet daha küçük */
-  .trend-badge {
-    right: 8px;
-    width: 50px;
-    height: 26px;
-    gap: 4px;
-  }
-  .trend-icon {
-    width: 18px;
-    height: 18px;
-  }
-  .rank-change {
-    min-width: 22px;
-    height: 18px;
-    font-size: 12px;
-    padding: 0 4px;
-  }
 }
 
-/* Ekstra dar ekranlar */
+/* ===== Ekstra dar ekranlar (360px altı) ===== */
 @media (max-width: 360px) {
-  .video-info { padding-right: 54px; }
-  .trend-badge { right: 6px; width: 46px; }
-  .rank-change { font-size: 11px; min-width: 20px; }
+  .trend-badge {
+    width: 46px !important;
+  }
+  .rank-change {
+    font-size: 11px;
+    min-width: 20px;
+  }
 }
