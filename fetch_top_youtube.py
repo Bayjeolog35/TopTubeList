@@ -64,23 +64,21 @@ if response.status_code == 200:
         # 🔢 Sıra bilgisi
         current_rank = index + 1
 
-        # 📊 Önceki veriye göre fark hesapla
+       # 📊 Önceki veriye göre fark hesapla
         previous_data = previous_history.get(video_id, {})
-        previous_views = previous_data.get("views", views_int)
+        previous_views = previous_data.get("views", 0)  # Yeni video ise 0 başlat
         previous_rank = previous_data.get("rank", current_rank)
 
         view_change = views_int - previous_views
         rank_change = previous_rank - current_rank
 
-        # 🔍 Yeni mi, değil mi kontrolü ÖNCELİKLİ YAPILMALI
-        if video_id not in previous_history:
-            trend = "new"
-            view_change_str = "New listing"
-        else:
-            trend = "rising" if view_change > 0 else "falling" if view_change < 0 else "stable"
-            view_change_str = f"+{view_change:,}" if view_change > 0 else f"{view_change:,}"
+        # Trend belirleme
+        trend = "rising" if view_change > 0 else "falling" if view_change < 0 else "stable"
 
+        # Görünüm stringleri
+        view_change_str = f"+{view_change:,}" if view_change > 0 else f"{view_change:,}"
         rank_change_str = f"+{rank_change}" if rank_change > 0 else f"{rank_change}"
+      
         
         video = {
             "id": video_id,
