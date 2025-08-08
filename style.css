@@ -622,28 +622,30 @@ main.centered-no-data {
   text-align: center;
 }
 
-
-  /* === Video Kartı - Ekstra Bilgiler === */
-.trend-arrow-container {
+/* Kartın sağ-ortasında bağımsız badge alanı */
+.trend-badge {
   position: absolute;
   right: 12px;
-  top: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
 }
 
+/* Ok ve sayı görünümü */
 .trend-arrow {
-  font-size: 32px !important; /* 🔹 OKLAR BÜYÜSÜN */
-  font-weight: bold;
+  font-size: 28px;   /* büyüttük */
   line-height: 1;
+  font-weight: 700;
+}
+.trend-rank {
+  font-size: 14px;
+  font-weight: 700;
 }
 
-.trend-arrow.trend-up {
-  color: green !important;
-}
-
-.trend-arrow.trend-down {
-  color: red !important;
-}
-
-.trend-arrow.trend-stable {
-  color: gray !important;
-}
+/* Renkler */
+.trend-up   { color: green; }
+.trend-down { color: red; }
+.trend-stable { color: gray; }
