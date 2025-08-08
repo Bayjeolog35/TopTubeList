@@ -624,26 +624,26 @@ main.centered-no-data {
 
 
   /* === Video Kartı - Ekstra Bilgiler === */
-
-.trend-up .trend-arrow {
-  color: green;
-  font-size: 26px; /* Büyüttük */
-}
-
-.trend-down .trend-arrow {
-  color: red;
-  font-size: 26px;
-}
-
-.trend-stable .trend-arrow {
-  color: gray;
-  font-size: 26px;
-}
-
 .trend-arrow-container {
   position: absolute;
   right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 12px;
+}
+
+.trend-arrow {
+  font-size: 32px !important; /* 🔹 OKLAR BÜYÜSÜN */
   font-weight: bold;
+  line-height: 1;
+}
+
+.trend-arrow.trend-up {
+  color: green !important;
+}
+
+.trend-arrow.trend-down {
+  color: red !important;
+}
+
+.trend-arrow.trend-stable {
+  color: gray !important;
 }
