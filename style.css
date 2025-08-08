@@ -652,6 +652,8 @@ main.centered-no-data {
   width: 20px;
   height: 20px;
   object-fit: contain;
+  display: block;
+  margin: auto; /* Hem yatay hem dikey ortalamada block içinde işe yarar */
 }
 
 /* --- YENİ EKLENDİ: Sıralama Değişim Göstergesi --- */
@@ -683,4 +685,5 @@ body.dark-mode .rank-up {
 body.dark-mode .rank-down {
   background-color: #c62828;
 }
+
 
