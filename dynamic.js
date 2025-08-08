@@ -59,7 +59,7 @@ function createVideoCard(video) {
 
     card.innerHTML = `
         <a href="${video.url}" target="_blank" class="video-thumbnail">
-            <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
+            <img class="thumbnail" src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
             ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
         </a>
         <div class="video-info">
