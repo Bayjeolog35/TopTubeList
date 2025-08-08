@@ -540,16 +540,11 @@ display: inline-block;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
 
 .site-button:hover {
   background-color: #004ab3;
 }
-
-
-.site-button:hover {
-  background-color: #004ab3;
-}
-
 
 footer p {
  margin: 0;
@@ -617,30 +612,26 @@ main.centered-no-data {
 }
 
 .trend-badge {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
+ position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center; /* yatay ortala */
+  align-items: center;     /* dikey ortala */
+  /* gap JS’te veriliyorsa şart değil; burada da bırakılabilir */
 }
 
-/* Kart: ikon için sağ tarafta yer aç */
-.video-card {
-  position: relative;
-  padding-right: 44px;  /* ikon metne binmesin */
+
+.video-thumbnail { 
+  display: block; 
 }
 
-/* Küçük, net thumbnail (sabit VE aynı oran) */
-.video-thumbnai  l .thumbnail {
+.video-thumbnail .thumbnail {
   width: 180px;
-  height: 101px;         /* 16:9'a yakın sabit yükseklik */
+  height: 101px; /* 16:9'a yakın sabit yükseklik */
   object-fit: cover;
   display: block;
-}
-
-.trend-badge {
-  display: flex;
-  justify-content: center; /* Yatay ortala */
-  align-items: center;     /* Dikey ortala */
 }
 
 .trend-icon {
@@ -678,6 +669,75 @@ body.dark-mode .rank-up {
 body.dark-mode .rank-down {
   background-color: #c62828;
 }
+/* Mobil uyum */
+@media (max-width: 480px) {
 
+  /* Kartı tek sütuna düşür: görsel üstte, bilgi altta */
+  .video-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 14px;
+  }
 
+  /* Thumbnail tam genişlik + sabit oran */
+  .video-thumbnail {
+    display: block;
+    width: 100%;
+  }
+  .video-thumbnail .thumbnail {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 
+  /* Sağdaki rozet için metinlere nefes payı bırak */
+  .video-info { padding-right: 60px; }
+
+  /* Başlık ve metin boyutlarını küçült */
+  .video-info h2 {
+    font-size: 15px;
+    line-height: 1.25;
+    margin: 0 0 4px;
+    word-break: break-word;
+  }
+  .video-info p { 
+    font-size: 12px; 
+    margin: 2px 0; 
+  }
+
+  /* Trend metnini tek satır tut ve taşanı kes */
+  .trend-info {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Sağ-ortadaki rozet daha küçük */
+  .trend-badge {
+    right: 8px;
+    width: 50px;
+    height: 26px;
+    gap: 4px;
+  }
+  .trend-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .rank-change {
+    min-width: 22px;
+    height: 18px;
+    font-size: 12px;
+    padding: 0 4px;
+  }
+}
+
+/* Ekstra dar ekranlar */
+@media (max-width: 360px) {
+  .video-info { padding-right: 54px; }
+  .trend-badge { right: 6px; width: 46px; }
+  .rank-change { font-size: 11px; min-width: 20px; }
+}
