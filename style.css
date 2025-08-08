@@ -625,33 +625,25 @@ main.centered-no-data {
 
   /* === Video Kartı - Ekstra Bilgiler === */
 
-.trend-up {
+.trend-up .trend-arrow {
   color: green;
+  font-size: 26px; /* Büyüttük */
 }
 
-.trend-down {
+.trend-down .trend-arrow {
   color: red;
+  font-size: 26px;
 }
 
-.trend-stable {
-  color: #999;
+.trend-stable .trend-arrow {
+  color: gray;
+  font-size: 26px;
 }
 
 .trend-arrow-container {
   position: absolute;
   right: 12px;
-  top: 12px;
-  font-size: 18px;
+  top: 50%;
+  transform: translateY(-50%);
   font-weight: bold;
 }
-
-.trend-up .trend-arrow {
-  color: green;
-}
-.trend-down .trend-arrow {
-  color: red;
-}
-.trend-stable .trend-arrow {
-  color: gray;
-}
-
