@@ -54,25 +54,25 @@ function createVideoCard(video) {
     const trendText = isNew ? "🆕 New Listing" : video.viewChange_str;
 
     card.innerHTML = `
-        <div class="video-rank">${video.rank}</div>
-        <a href="${video.url}" target="_blank" class="video-thumbnail">
-            <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
-            ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
-        </a>
-        <div class="video-info">
-            <h2>${video.title}</h2>
-            <p><strong>Channel:</strong> ${video.channel}</p>
-            <p><strong>Views:</strong> ${video.views_str || '0'} views</p>
-            <p><strong>Date:</strong> ${new Date(video.published_at).toLocaleDateString('tr-TR')}</p>
-            ${video.duration ? `<p><strong>Duration:</strong> ${video.duration}</p>` : ''}
-            ${video.viewChange !== 0 || isNew ? `<p class="trend-info ${trendClass}"><strong>View change (last 3h):</strong> ${trendText}</p>` : ''}
-        </div>
-        ${(video.viewChange !== 0 || isNew) ? `
-          <div class="trend-arrow-container ${trendClass}">
-              <div class="trend-arrow">${trendIcon}</div>
-          </div>` : ''
-        }
-    `;
+    <a href="${video.url}" target="_blank" class="video-thumbnail">
+        <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
+        ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
+    </a>
+    <div class="video-info">
+        <h2>${video.title}</h2>
+        <p><strong>Channel:</strong> ${video.channel}</p>
+        <p><strong>Views:</strong> ${video.views_str || '0'} views</p>
+        <p><strong>Date:</strong> ${new Date(video.published_at).toLocaleDateString('tr-TR')}</p>
+        ${video.duration ? `<p><strong>Duration:</strong> ${video.duration}</p>` : ''}
+        ${video.viewChange !== 0 || isNew ? `<p class="trend-info ${trendClass}"><strong>View change (last 3h):</strong> ${trendText}</p>` : ''}
+    </div>
+    ${(video.viewChange !== 0 || isNew) ? `
+      <div class="trend-arrow-container ${trendClass}">
+          <div class="trend-arrow">${trendIcon}</div>
+      </div>` : ''
+    }
+`;
+
 
     return card;
 }
