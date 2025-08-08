@@ -127,14 +127,14 @@ body.dark-mode .logo {
 
 .video-card {
   display: flex;
-  position: relative; /* 🔹 yeni eklendi */
+  position: relative; /* Trend rozetini konumlandırmak için */
   width: 100%;
   max-width: 720px;
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  
+
   /* Animasyon başlangıç hali */
   transform: translateY(20px);
   transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.2s ease;
@@ -637,34 +637,49 @@ main.centered-no-data {
   display: block;
 }
 
-/* Trend rozeti: kartın SAĞ-ORTA noktası */
 .trend-badge {
   position: absolute;
   right: 12px;
   top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  pointer-events: none;    /* tıklamayı engellemesin */
+  transform: translateY(-50%); /* Dikey hizalama */
+  display: flex;
+  align-items: center; /* İçindeki elemanları dikey ortala */
+  gap: 8px; /* Sıralama göstergesi ile ok arasına boşluk bırakır */
+  white-space: nowrap;
 }
 
-/* İkon boyutu – keskinlik için küçük ama net */
 .trend-icon {
   width: 20px;
   height: 20px;
-  display: block;
+  object-fit: contain;
 }
 
-/* Küçük ekran optimizasyonu */
-@media (max-width: 600px) {
-  .video-card {
-    padding-right: 32px;   /* daha dar sağ boşluk */
-  }
-  .trend-icon {
-    width: 16px;
-    height: 16px;
-  }
-  .video-thumbnail .thumbnail {
-    width: 140px;
-    height: 79px;          /* orana uygun */
-  }
+/* --- YENİ EKLENDİ: Sıralama Değişim Göstergesi --- */
+.rank-change {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  min-width: 30px; /* Rakamlar için sabit genişlik */
+  text-align: center;
+  color: white; /* Metin rengi varsayılan olarak beyaz olsun, aşağıda değişecek */
+}
+
+.rank-up {
+  background-color: #28a745; /* Yeşil arka plan */
+}
+
+.rank-down {
+  background-color: #dc3545; /* Kırmızı arka plan */
+}
+
+/* Trend ikonuyla aradaki boşluğu ayarlamak için .trend-badge içindeki gap kullanılır. */
+
+/* Karanlık mod için renkleri ayarla */
+body.dark-mode .rank-up {
+  background-color: #2e7d32;
+}
+
+body.dark-mode .rank-down {
+  background-color: #c62828;
 }
