@@ -48,11 +48,26 @@ function createVideoCard(video) {
     const card = document.createElement("div");
     card.className = "video-card";
 
-    const isNew = video.trend === "new";
-    const trendIcon = isNew ? "⬆" : video.trend === "rising" ? "⬆" : video.trend === "falling" ? "⬇" : "";
-    const trendClass = isNew ? "trend-up" : video.trend === "rising" ? "trend-up" : video.trend === "falling" ? "trend-down" : "trend-stable";
-    const trendText = isNew ? "🆕 New Listing" : video.viewChange_str;
+    // Trend ikonu ve class belirleme
+    let trendIcon = "";
+    let trendClass = "";
+    let trendText = video.viewChange_str;
 
+    if (video.trend === "new") {
+        trendIcon = "⬆"; // Yeni listede yukarı ok
+        trendClass = "trend-up";
+    } else if (video.trend === "rising") {
+        trendIcon = "⬆";
+        trendClass = "trend-up";
+    } else if (video.trend === "falling") {
+        trendIcon = "⬇";
+        trendClass = "trend-down";
+    } else {
+        trendIcon = "–"; // Gri afilli çizgi
+        trendClass = "trend-stable";
+    }
+
+    // Kart HTML
     card.innerHTML = `
     <a href="${video.url}" target="_blank" class="video-thumbnail">
         <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
@@ -64,18 +79,20 @@ function createVideoCard(video) {
         <p><strong>Views:</strong> ${video.views_str || '0'} views</p>
         <p><strong>Date:</strong> ${new Date(video.published_at).toLocaleDateString('tr-TR')}</p>
         ${video.duration ? `<p><strong>Duration:</strong> ${video.duration}</p>` : ''}
-        ${video.viewChange !== 0 || isNew ? `<p class="trend-info ${trendClass}"><strong>View change (last 3h):</strong> ${trendText}</p>` : ''}
+        ${video.viewChange !== 0 || video.trend === "new" ? 
+            `<p class="trend-info ${trendClass}"><strong>View change (last 3h):</strong> ${trendText}</p>` 
+            : ''
+        }
     </div>
-    ${(video.viewChange !== 0 || isNew) ? `
+    ${(video.viewChange !== 0 || video.trend === "new") ? `
       <div class="trend-arrow-container ${trendClass}">
           <div class="trend-arrow">${trendIcon}</div>
       </div>` : ''
     }
 `;
-
-
     return card;
 }
+
     /**
      * Displays a message when no video data is available for a country.
      */
