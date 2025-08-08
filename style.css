@@ -131,7 +131,7 @@ body.dark-mode .logo {
   width: 100%;
   max-width: 720px;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 30px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 
@@ -630,7 +630,7 @@ main.centered-no-data {
 }
 
 /* Küçük, net thumbnail (sabit VE aynı oran) */
-.video-thumbnail .thumbnail {
+.video-thumbnai  l .thumbnail {
   width: 180px;
   height: 101px;         /* 16:9'a yakın sabit yükseklik */
   object-fit: cover;
@@ -641,10 +641,10 @@ main.centered-no-data {
   position: absolute;
   right: 12px;
   top: 50%;
-  transform: translateY(-50%); /* Dikey hizalama */
   display: flex;
-  align-items: center; /* İçindeki elemanları dikey ortala */
-  gap: 8px; /* Sıralama göstergesi ile ok arasına boşluk bırakır */
+  justify-content: center; /* YATAY ortalama */
+  align-items: center;     /* Dikey ortalama */
+  gap: 15px; /* Sıralama göstergesi ile ok arasına boşluk bırakır */
   white-space: nowrap;
 }
 
@@ -683,3 +683,4 @@ body.dark-mode .rank-up {
 body.dark-mode .rank-down {
   background-color: #c62828;
 }
+
