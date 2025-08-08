@@ -45,37 +45,47 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
      */
 // dynamic.js dosyanızdaki createVideoCard fonksiyonunu bu kodla değiştirin.
 function createVideoCard(video) {
-    const card = document.createElement("div");
-    card.className = "video-card";
+  const card = document.createElement("div");
+  card.className = "video-card";
 
-    let trendIconPath = "";
-    if (video.trend === "rising" || video.trend === "new") {
-        trendIconPath = "up.webp";
-    } else if (video.trend === "falling") {
-        trendIconPath = "down.webp";
-    } else {
-        trendIconPath = "zero.webp";
-    }
+  // Trend & ikon yolu
+  const trend = video.trend || (video.viewChange > 0 ? "rising" : video.viewChange < 0 ? "falling" : "stable");
+  const iconMap = { rising: "up.webp", new: "up.webp", falling: "down.webp", stable: "zero.webp" };
+  const trendIconPath = iconMap[trend] || "zero.webp";
 
-    card.innerHTML = `
-        <a href="${video.url}" target="_blank" class="video-thumbnail">
-            <img class="thumbnail" src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
-            ${video.duration ? `<span class="duration">${video.duration}</span>` : ''}
-        </a>
-        <div class="video-info">
-            <h2>${video.title}</h2>
-            <p><strong>Channel:</strong> ${video.channel}</p>
-            <p><strong>Views:</strong> ${video.views_str || '0'} views</p>
-            <p><strong>Date:</strong> ${new Date(video.published_at).toLocaleDateString('tr-TR')}</p>
-            ${video.duration ? `<p><strong>Duration:</strong> ${video.duration}</p>` : ''}
-            ${video.viewChange !== 0 || video.trend === "new" ? `<p class="trend-info"><strong>View change (last 3h):</strong> ${video.viewChange_str}</p>` : ''}
-        </div>
-        <div class="trend-badge">
-            <img src="${trendIconPath}" alt="trend icon" class="trend-icon" />
-        </div>
-    `;
-    return card;
+  // Trend sınıfı (metin rengi için)
+  const trendClass =
+    trend === "rising" || trend === "new" ? "trend-up" : trend === "falling" ? "trend-down" : "trend-stable";
+
+  card.innerHTML = `
+    <a href="${video.url}" target="_blank" rel="noopener" class="video-thumbnail">
+      <img class="thumbnail" src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
+      ${video.duration ? `<span class="duration">${video.duration}</span>` : ""}
+    </a>
+
+    <div class="video-info">
+      <h2>${video.title}</h2>
+      <p><strong>Channel:</strong> ${video.channel}</p>
+      <p><strong>Views:</strong> ${video.views_str || "0"} views</p>
+      <p><strong>Date:</strong> ${new Date(video.published_at).toLocaleDateString("tr-TR")}</p>
+      ${video.duration ? `<p><strong>Duration:</strong> ${video.duration}</p>` : ""}
+      ${
+        video.viewChange !== 0 || trend === "new"
+          ? `<p class="trend-info ${trendClass}"><strong>View change (last 3h):</strong> ${video.viewChange_str || "0"}</p>`
+          : ""
+      }
+    </div>
+
+    <div class="trend-badge">
+      <img src="${trendIconPath}" alt="${
+        trend === "rising" || trend === "new" ? "Rising" : trend === "falling" ? "Falling" : "Stable"
+      }" class="trend-icon" width="20" height="20" />
+    </div>
+  `;
+
+  return card;
 }
+
 
     /**
      * Displays a message when no video data is available for a country.
@@ -111,51 +121,54 @@ if (mainElement) {
     /**
      * Fetches video data for the current country and renders it.
      */
-    async function loadVideos() { // Bu zaten async
-        const country = getCountryFromURL();
-       const dataFile = (country === "index" || country === "")
-        ? "index.videos.json" // This one is still .videos.json
-        : `${country}.vid.data.json`; // This one is now .vid.data.json
+   async function loadVideos() {
+  const country = getCountryFromURL();
+  const dataFile =
+    country === "index" || country === ""
+      ? "index.videos.json"
+      : `${country}.vid.data.json`;
 
-        console.log(`Veri yükleme denemesi: ${dataFile}`);
+  console.log(`Veri yükleme denemesi: ${dataFile}`);
 
-        try {
-            const response = await fetch(dataFile);
-
-            if (!response.ok) {
-                if (response.status === 404) {
-                    throw new Error(`'${dataFile}' dosyası bulunamadı. URL: ${response.url}`);
-                }
-                throw new Error(`Veri yüklenirken HTTP hatası oluştu: ${response.status} ${response.statusText}`);
-            }
-
-            const jsonData = await response.json();
-            console.log("Yüklenen JSON verisi (ilk 5 video):", jsonData.slice(0, 5));
-
-            if (!Array.isArray(jsonData)) {
-                throw new Error("Yüklenen veri bir dizi değil.");
-            }
-
-            allVideos = jsonData;
-
-            // Son 3 saatteki izlenme artışına göre büyükten küçüğe sırala
-            allVideos.sort((a, b) => (b.viewChange || 0) - (a.viewChange || 0));
-            
-            if (allVideos.length === 0) {
-                throw new Error("Video verisi boş.");
-            }
-
-            if (country !== "index" && country !== "") {
-                document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
-            }
-
-            renderVideos();
-
-        } catch (error) {
-            console.error("Veri yükleme hatası:", error);
-            showNoDataMessage();
-        }
+  try {
+    const response = await fetch(dataFile);
+    if (!response.ok) {
+      if (response.status === 404) {
+        throw new Error(`'${dataFile}' dosyası bulunamadı. URL: ${response.url}`);
+      }
+      throw new Error(`Veri yüklenirken HTTP hatası: ${response.status} ${response.statusText}`);
     }
+
+    const jsonData = await response.json();
+    console.log("Yüklenen JSON verisi (ilk 5 video):", Array.isArray(jsonData) ? jsonData.slice(0, 5) : jsonData);
+
+    if (!Array.isArray(jsonData)) {
+      throw new Error("Yüklenen veri bir dizi değil.");
+    }
+
+    // Normalize et: viewChange sayıya çevrilir; yoksa 0 yapılır
+    allVideos = jsonData.map(v => ({
+      ...v,
+      viewChange: Number(v?.viewChange) || 0
+    }));
+
+    // Son 3 saatteki izlenme artışına göre (büyükten küçüğe) sırala
+    allVideos.sort((a, b) => b.viewChange - a.viewChange);
+
+    if (allVideos.length === 0) {
+      throw new Error("Video verisi boş.");
+    }
+
+    if (country !== "index" && country !== "") {
+      document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
+    }
+
+    renderVideos();
+  } catch (error) {
+    console.error("Veri yükleme hatası:", error);
+    showNoDataMessage();
+  }
+}
 
     /**
      * Renders videos into the videoListContainer based on displayCount.
