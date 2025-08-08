@@ -137,6 +137,9 @@ if (mainElement) {
 
             allVideos = jsonData;
 
+            // Son 3 saatteki izlenme artışına göre büyükten küçüğe sırala
+            allVideos.sort((a, b) => (b.viewChange || 0) - (a.viewChange || 0));
+            
             if (allVideos.length === 0) {
                 throw new Error("Video verisi boş.");
             }
