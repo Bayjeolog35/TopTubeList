@@ -44,41 +44,33 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
      * @returns {HTMLElement} The created video card div.
      */
 // dynamic.js dosyanızdaki createVideoCard fonksiyonunu bu kodla değiştirin.
-// dynamic.js dosyanızdaki createVideoCard fonksiyonunu bu kodla değiştirin.
 function createVideoCard(video) {
   const card = document.createElement("div");
   card.className = "video-card";
 
-  // ---- Güvenli değerler ----
+  // Güvenli değerler
   const viewsStr = video.views_str || (typeof video.views === "number" ? video.views.toLocaleString("en-US") : "0");
   const published =
     video.published_date_formatted ||
     (video.published_at ? new Date(video.published_at).toLocaleDateString("tr-TR") : "");
 
   const viewChange = Number(video.viewChange || 0);
-  const trend = video.trend || (viewChange > 0 ? "rising" : viewChange < 0 ? "falling" : "stable");
+  const trendClass = viewChange > 0 ? "trend-up" : viewChange < 0 ? "trend-down" : "trend-stable";
 
-  // Trend class'ı (Gemini'nin bıraktığı eksik parça)
-  const trendClass =
-    trend === "rising" || trend === "new"
-      ? "trend-up"
-      : trend === "falling"
-      ? "trend-down"
-      : "trend-stable";
-
-  const iconMap = { rising: "up.webp", new: "up.webp", falling: "down.webp", stable: "zero.webp" };
-  const trendIconPath = iconMap[trend] || "zero.webp";
-
-  // Sıralama değişimi rozeti
+  // Rank change (rozet + ok)
   const rankChange = Number(video.rankChange || 0);
   let rankChangeHtml = "";
   if (rankChange !== 0) {
     const isUp = rankChange > 0;
     const changeText = isUp ? `+${rankChange}` : `${rankChange}`;
     const changeClass = isUp ? "rank-up" : "rank-down";
-    const changeArrow = isUp ? "⬆" : "⬇";
-    rankChangeHtml = `<span class="rank-change ${changeClass}">${changeText} ${changeArrow}</span>`;
+    rankChangeHtml = `<span class="rank-change ${changeClass}">${changeText}</span>`;
   }
+
+  // Ok ikonunu rankChange’e göre seç
+  const arrowType = rankChange > 0 ? "up" : rankChange < 0 ? "down" : "zero";
+  const iconMap = { up: "up.webp", down: "down.webp", zero: "zero.webp" };
+  const trendIconPath = iconMap[arrowType];
 
   card.innerHTML = `
     <a href="${video.url}" target="_blank" rel="noopener" class="video-thumbnail">
@@ -93,7 +85,7 @@ function createVideoCard(video) {
       ${published ? `<p><strong>Date:</strong> ${published}</p>` : ""}
       ${video.duration ? `<p><strong>Duration:</strong> ${video.duration}</p>` : ""}
       ${
-        viewChange !== 0 || trend === "new"
+        viewChange !== 0
           ? `<p class="trend-info ${trendClass}"><strong>View change (last 3h):</strong> ${video.viewChange_str || String(viewChange)}</p>`
           : ""
       }
@@ -101,14 +93,12 @@ function createVideoCard(video) {
 
     <div class="trend-badge">
       ${rankChangeHtml}
-      <img src="${trendIconPath}" alt="${trend}" class="trend-icon" width="20" height="20" />
+      <img src="${trendIconPath}" alt="${arrowType}" class="trend-icon" width="20" height="20" />
     </div>
   `;
 
   return card;
 }
-
-
 
     /**
      * Displays a message when no video data is available for a country.
