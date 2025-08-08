@@ -150,12 +150,6 @@ body.dark-mode .logo {
   transform: scale(1.01);
 }
 
-.video-card img {
-  width: 180px;
-  height: 120%;
-  object-fit: cover;
-}
-
 .video-info {
 padding: 12px 16px;
   display: flex;
@@ -629,9 +623,17 @@ main.centered-no-data {
     transform: translateY(-50%);
 }
 
+/* Sadece video önizleme (thumbnail) resimleri */
+.video-card .thumbnail {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+}
+
 .trend-icon {
     width: 20px;   /* Küçültülmüş genişlik */
     height: 20px;  /* Küçültülmüş yükseklik */
     object-fit: contain; /* Oran bozulmasın */
 }
+
 
