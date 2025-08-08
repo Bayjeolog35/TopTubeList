@@ -48,26 +48,21 @@ function createVideoCard(video) {
     const card = document.createElement("div");
     card.className = "video-card";
 
-    // Trend ikonu ve class belirleme
     let trendIcon = "";
     let trendClass = "";
     let trendText = video.viewChange_str;
 
-    if (video.trend === "new") {
-        trendIcon = "⬆"; // Yeni listede yukarı ok
-        trendClass = "trend-up";
-    } else if (video.trend === "rising") {
+    if (video.trend === "new" || video.trend === "rising") {
         trendIcon = "⬆";
         trendClass = "trend-up";
     } else if (video.trend === "falling") {
         trendIcon = "⬇";
         trendClass = "trend-down";
     } else {
-        trendIcon = "–"; // Gri afilli çizgi
+        trendIcon = "—"; // uzun tire
         trendClass = "trend-stable";
     }
 
-    // Kart HTML
     card.innerHTML = `
     <a href="${video.url}" target="_blank" class="video-thumbnail">
         <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
@@ -85,14 +80,13 @@ function createVideoCard(video) {
         }
     </div>
     ${(video.viewChange !== 0 || video.trend === "new") ? `
-      <div class="trend-arrow-container ${trendClass}">
-          <div class="trend-arrow">${trendIcon}</div>
+      <div class="trend-arrow-container">
+          <div class="trend-arrow ${trendClass}">${trendIcon}</div>
       </div>` : ''
     }
 `;
     return card;
 }
-
     /**
      * Displays a message when no video data is available for a country.
      */
