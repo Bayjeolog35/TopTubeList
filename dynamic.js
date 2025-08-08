@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
      * @returns {HTMLElement} The created video card div.
      */
 // dynamic.js dosyanızdaki createVideoCard fonksiyonunu bu kodla değiştirin.
+// dynamic.js dosyanızdaki createVideoCard fonksiyonunu bu kodla değiştirin.
 function createVideoCard(video) {
   const card = document.createElement("div");
   card.className = "video-card";
@@ -53,9 +54,16 @@ function createVideoCard(video) {
   const iconMap = { rising: "up.webp", new: "up.webp", falling: "down.webp", stable: "zero.webp" };
   const trendIconPath = iconMap[trend] || "zero.webp";
 
-  // Trend sınıfı (metin rengi için)
-  const trendClass =
-    trend === "rising" || trend === "new" ? "trend-up" : trend === "falling" ? "trend-down" : "trend-stable";
+  // Sıralama değişimini hesapla ve stilini belirle
+  const rankChange = video.rankChange || 0;
+  let rankChangeHtml = "";
+  if (rankChange !== 0) {
+    const isUp = rankChange > 0;
+    const changeText = isUp ? `+${rankChange}` : rankChange;
+    const changeClass = isUp ? "rank-up" : "rank-down";
+    const changeArrow = isUp ? "⬆" : "⬇";
+    rankChangeHtml = `<span class="rank-change ${changeClass}">${changeText} ${changeArrow}</span>`;
+  }
 
   card.innerHTML = `
     <a href="${video.url}" target="_blank" rel="noopener" class="video-thumbnail">
@@ -77,6 +85,7 @@ function createVideoCard(video) {
     </div>
 
     <div class="trend-badge">
+      ${rankChangeHtml}
       <img src="${trendIconPath}" alt="${
         trend === "rising" || trend === "new" ? "Rising" : trend === "falling" ? "Falling" : "Stable"
       }" class="trend-icon" width="20" height="20" />
