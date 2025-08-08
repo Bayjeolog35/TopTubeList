@@ -625,23 +625,6 @@ main.centered-no-data {
 
   /* === Video Kartı - Ekstra Bilgiler === */
 
-.video-rank {
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 24px;
-  height: 24px;
-  background-color: #000;
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: bold;
-  border-radius: 50%; /* 🔹 tam yuvarlak */
-  text-align: center;
-  line-height: 24px;
-  z-index: 2;
-  pointer-events: none;
-}
-
 .trend-up {
   color: green;
 }
@@ -671,3 +654,4 @@ main.centered-no-data {
 .trend-stable .trend-arrow {
   color: gray;
 }
+
