@@ -88,7 +88,7 @@ function createVideoCard(video) {
   // --- EKRANA GÖRE LABEL ---
   const is480 = window.matchMedia("(max-width: 480px)").matches;
   const is360 = window.matchMedia("(max-width: 360px)").matches;
-  const trendLabel = is480 ? "View Δ (3h):" : "View change (last 3h):";
+  const trendLabel = is480 ? "View Change ( Last 3h):" : "View change (last 3h):";
 
   // --- HTML ---
   card.innerHTML = `
