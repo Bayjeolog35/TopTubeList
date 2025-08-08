@@ -630,10 +630,16 @@ main.centered-no-data {
     object-fit: cover;
 }
 
+.trend-badge {
+    position: absolute;
+    top: 10px;      /* Üstten mesafe */
+    right: 10px;    /* Sağdan mesafe */
+}
+
 .trend-icon {
-    width: 20px;   /* Küçültülmüş genişlik */
-    height: 20px;  /* Küçültülmüş yükseklik */
-    object-fit: contain; /* Oran bozulmasın */
+    width: 20px;    /* 32px ikon olsa bile küçük gösterir */
+    height: 20px;
+    object-fit: contain;
 }
 
 
