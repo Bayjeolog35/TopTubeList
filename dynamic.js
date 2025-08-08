@@ -111,52 +111,66 @@ function createVideoCard(video) {
     </div>
   `;
 
-  // --- İNLİNE POZİSYONLAMA (GLOBAL CSS'E DOKUNMADAN) ---
-  const badge = card.querySelector(".trend-badge");
-  const info  = card.querySelector(".video-info");
-  const icon  = card.querySelector(".trend-icon");
+// --- İNLİNE POZİSYONLAMA (GLOBAL CSS'E DOKUNMADAN) ---
+const badge = card.querySelector(".trend-badge");
+const info  = card.querySelector(".video-info");
+const icon  = card.querySelector(".trend-icon");
 
-  // Desktop varsayılan
-  if (badge) Object.assign(badge.style, {
+// Ekran genişlik kontrolleri
+const is480 = window.matchMedia("(max-width: 480px)").matches;
+const is360 = window.matchMedia("(max-width: 360px)").matches;
+
+// Masaüstü varsayılan
+if (badge) Object.assign(badge.style, {
+  position: "absolute",
+  right: "12px",
+  top: "50%",
+  transform: "translateY(-50%)",
+  width: "60px",
+  height: "28px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "6px",
+  pointerEvents: "none",
+});
+if (info) info.style.paddingRight = "72px";
+if (icon) Object.assign(icon.style, {
+  width: "20px",
+  height: "20px",
+  objectFit: "contain",
+  display: "block",
+});
+
+// --- Mobil (480px altı) ---
+if (is480 && badge && info) {
+  // Rozeti .video-info içine taşı
+  info.style.position = "relative";
+  info.style.paddingRight = "60px";
+  info.appendChild(badge);
+
+  Object.assign(badge.style, {
     position: "absolute",
-    right: "12px",
+    right: "8px",
     top: "50%",
     transform: "translateY(-50%)",
-    width: "60px",
-    height: "28px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "6px",
-    pointerEvents: "none",
-  });
-  if (info) info.style.paddingRight = "72px";
-  if (icon) Object.assign(icon.style, {
-    width: "20px",
-    height: "20px",
-    objectFit: "contain",
-    display: "block",
+    width: "50px",
+    height: "26px",
+    gap: "4px"
   });
 
-  // 480px altı mobil
-  if (is480 && badge && info) {
-    badge.style.width = "50px";
-    badge.style.height = "26px";
-    badge.style.right = "8px";
-    info.style.paddingRight = "60px";
-    const rc = card.querySelector(".rank-change");
-    if (rc) rc.style.fontSize = "12px";
-  }
-
-  // 360px altı ekstra dar
-  if (is360 && badge && info) {
-    badge.style.width = "46px";
-    badge.style.right = "6px";
-    info.style.paddingRight = "54px";
-  }
-
-  return card;
+  const rc = card.querySelector(".rank-change");
+  if (rc) rc.style.fontSize = "12px";
 }
+
+// --- Ekstra dar mobil (360px altı) ---
+if (is360 && badge && info) {
+  badge.style.width = "46px";
+  badge.style.right = "6px";
+  info.style.paddingRight = "54px";
+}
+
+return card;
 
 
     /**
