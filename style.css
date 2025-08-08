@@ -764,3 +764,11 @@ body.dark-mode .rank-down {
     min-width: 20px;
   }
 }
+
+/* iOS Safari play overlay gizleme */
+@supports (-webkit-touch-callout: none) {
+  .video-thumbnail img {
+    -webkit-touch-callout: none;
+    pointer-events: none;
+  }
+}
