@@ -45,33 +45,49 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
      */
 // dynamic.js dosyanızdaki createVideoCard fonksiyonunu bu kodla değiştirin.
 function createVideoCard(video) {
+  // --- KART KONTEYNERİ ---
   const card = document.createElement("div");
-  card.className = "video-card";
+  card.className = "video-card"; // mevcut stilini kullan
+  // inline referans (başka yerleri bozmadan rozet konumlamak için)
+  card.style.position = "relative";
 
-  // Güvenli değerler
-  const viewsStr = video.views_str || (typeof video.views === "number" ? video.views.toLocaleString("en-US") : "0");
+  // --- GÜVENLİ/HAZIR VERİLER ---
+  const viewsStr =
+    video.views_str ||
+    (typeof video.views === "number" ? video.views.toLocaleString("en-US") : "0");
+
   const published =
     video.published_date_formatted ||
     (video.published_at ? new Date(video.published_at).toLocaleDateString("tr-TR") : "");
 
   const viewChange = Number(video.viewChange || 0);
-  const trendClass = viewChange > 0 ? "trend-up" : viewChange < 0 ? "trend-down" : "trend-stable";
+  const trendText =
+    viewChange !== 0
+      ? (video.viewChange_str || String(viewChange))
+      : null;
 
-  // Rank change (rozet + ok)
+  // View change metni için renk (inline; global css'i bozmayalım)
+  const trendColor =
+    viewChange > 0 ? "#28a745" : viewChange < 0 ? "#dc3545" : "inherit";
+
+  // --- RANK CHANGE (ok ve sayı bununla) ---
   const rankChange = Number(video.rankChange || 0);
-  let rankChangeHtml = "";
-  if (rankChange !== 0) {
-    const isUp = rankChange > 0;
-    const changeText = isUp ? `+${rankChange}` : `${rankChange}`;
-    const changeClass = isUp ? "rank-up" : "rank-down";
-    rankChangeHtml = `<span class="rank-change ${changeClass}">${changeText}</span>`;
-  }
-
-  // Ok ikonunu rankChange’e göre seç
   const arrowType = rankChange > 0 ? "up" : rankChange < 0 ? "down" : "zero";
   const iconMap = { up: "up.webp", down: "down.webp", zero: "zero.webp" };
   const trendIconPath = iconMap[arrowType];
 
+  // Rank etiketi (unicode ok YOK, sadece sayı; ok görseli ayrı img)
+  const rankChangeHtml =
+    rankChange !== 0
+      ? `<span class="rank-change" style="
+            display:inline-flex;align-items:center;justify-content:center;
+            min-width:26px;height:20px;padding:0 4px;border-radius:4px;
+            font-weight:700;font-size:13px;color:#fff;
+            background:${rankChange > 0 ? "#28a745" : "#dc3545"};
+         ">${rankChange > 0 ? "+" + rankChange : String(rankChange)}</span>`
+      : "";
+
+  // --- HTML ---
   card.innerHTML = `
     <a href="${video.url}" target="_blank" rel="noopener" class="video-thumbnail">
       <img class="thumbnail" src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
@@ -83,19 +99,61 @@ function createVideoCard(video) {
       <p><strong>Channel:</strong> ${video.channel}</p>
       <p><strong>Views:</strong> ${viewsStr} views</p>
       ${published ? `<p><strong>Date:</strong> ${published}</p>` : ""}
-      ${video.duration ? `<p><strong>Duration:</strong> ${video.duration}</p>` : ""}
       ${
-        viewChange !== 0
-          ? `<p class="trend-info ${trendClass}"><strong>View change (last 3h):</strong> ${video.viewChange_str || String(viewChange)}</p>`
+        trendText
+          ? `<p class="trend-info" style="color:${trendColor}">
+               <strong>View change (last 3h):</strong> ${trendText}
+             </p>`
           : ""
       }
     </div>
 
     <div class="trend-badge">
       ${rankChangeHtml}
-      <img src="${trendIconPath}" alt="${arrowType}" class="trend-icon" width="20" height="20" />
+      <img src="${trendIconPath}" alt="${arrowType}" class="trend-icon" />
     </div>
   `;
+
+  // --- İNLİNE POZİSYONLAMA (global CSS’e dokunmadan) ---
+  const badge = card.querySelector(".trend-badge");
+  if (badge) {
+    Object.assign(badge.style, {
+      position: "absolute",
+      right: "12px",
+      top: "50%",
+      transform: "translateY(-50%)",
+      width: "60px",          // sabit alan -> içerik tam ortalanır
+      height: "28px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      gap: "6px",
+      pointerEvents: "none",
+    });
+  }
+
+  const info = card.querySelector(".video-info");
+  if (info) {
+    // rozetin yazı üstüne binmemesi için sağ boşluk
+    info.style.paddingRight = "72px";
+  }
+
+  const icon = card.querySelector(".trend-icon");
+  if (icon) {
+    Object.assign(icon.style, {
+      width: "20px",
+      height: "20px",
+      objectFit: "contain",
+      display: "block",
+    });
+  }
+
+  // Küçük ekran optimizasyonu (isteğe bağlı)
+  if (window.innerWidth <= 480 && badge && info) {
+    badge.style.width = "52px";
+    badge.style.right = "8px";
+    info.style.paddingRight = "60px";
+  }
 
   return card;
 }
