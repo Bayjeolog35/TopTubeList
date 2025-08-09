@@ -38,12 +38,11 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
         if (!filename || filename === "" || filename === "index.html") return "index";
         return filename.replace('.html', '').toLowerCase();
     }
-    /**
-     * Creates an HTML video card element from a video object.
-     * @param {Object} video - The video data object.
-     * @returns {HTMLElement} The created video card div.
-     */
-// dynamic.js dosyanızdaki createVideoCard fonksiyonunu bu kodla değiştirin.
+  /**
+ * Creates an HTML video card element from a video object.
+ * @param {Object} video - The video data object.
+ * @returns {HTMLElement} The created video card div.
+ */
 function createVideoCard(video) {
   // --- İzlenme sayısını kısalt ---
   function formatViews(num) {
@@ -65,16 +64,21 @@ function createVideoCard(video) {
     (video.published_at ? new Date(video.published_at).toLocaleDateString("tr-TR") : "");
 
   const viewChange = Number(video.viewChange || 0);
-  const trendText =
-    viewChange !== 0 ? (video.viewChange_str || String(viewChange)) : null;
+  const trendText = viewChange !== 0 ? (video.viewChange_str || String(viewChange)) : null;
   const trendColor = viewChange > 0 ? "#28a745" : viewChange < 0 ? "#dc3545" : "inherit";
 
-  // --- RANK CHANGE (oklar WEBP) ---
-  const rankChange = Number(video.rankChange || 0);
+  // --- SIRALAMA FARKI HESAPLAMA ---
+  let rankChange = 0;
+  if (video.previousRank !== undefined && video.previousRank !== null) {
+    rankChange = video.previousRank - video.rank;
+  }
+
+  // --- Ok ikon türü ---
   const arrowType = rankChange > 0 ? "up" : rankChange < 0 ? "down" : "zero";
   const iconMap = { up: "up.webp", down: "down.webp", zero: "zero.webp" };
   const trendIconPath = iconMap[arrowType];
 
+  // --- Rank farkı HTML ---
   const rankChangeHtml =
     rankChange !== 0
       ? `<span class="rank-change" style="
@@ -83,7 +87,11 @@ function createVideoCard(video) {
             font-weight:700;font-size:13px;color:#fff;
             background:${rankChange > 0 ? "#28a745" : "#dc3545"};
          ">${rankChange > 0 ? "+" + rankChange : String(rankChange)}</span>`
-      : "";
+      : `<span class="rank-change" style="
+            display:inline-flex;align-items:center;justify-content:center;
+            min-width:26px;height:20px;padding:0 4px;border-radius:4px;
+            font-weight:700;font-size:13px;color:#fff;background:#6c757d;
+         ">0</span>`;
 
   // --- EKRANA GÖRE LABEL ---
   const is480 = window.matchMedia("(max-width: 480px)").matches;
@@ -163,8 +171,6 @@ function createVideoCard(video) {
 
   return card;
 }
-
-
 
     /**
      * Displays a message when no video data is available for a country.
