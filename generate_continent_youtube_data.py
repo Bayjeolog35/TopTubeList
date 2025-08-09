@@ -4,7 +4,7 @@ import requests
 from datetime import datetime
 import re
 
-YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")  # API key ortam değişkeninden alınır
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 
 CONTINENT_COUNTRIES = {
     "asia": [
@@ -47,16 +47,6 @@ CONTINENT_COUNTRIES = {
 STRUCTURED_DATA_PLACEHOLDER = "<!-- STRUCTURED_DATA_HERE -->"
 IFRAME_PLACEHOLDER = "<!-- IFRAME_VIDEO_HERE -->"
 
-def format_views(views):
-    if views >= 1_000_000_000:
-        return f"{views / 1_000_000_000:.1f}B views"
-    elif views >= 1_000_000:
-        return f"{views / 1_000_000:.1f}M views"
-    elif views >= 1_000:
-        return f"{views / 1_000:.1f}K views"
-    else:
-        return f"{views} views"
-
 def fetch_videos_for_country(code):
     url = "https://www.googleapis.com/youtube/v3/videos"
     params = {
@@ -74,8 +64,6 @@ def fetch_videos_for_country(code):
 
     items = response.json().get("items", [])
     videos = []
-    global structured_items
-    structured_items = []
 
     for item in items:
         try:
@@ -83,7 +71,6 @@ def fetch_videos_for_country(code):
         except:
             views_int = 0
 
-        # Views stringini kısalt
         if views_int >= 1_000_000_000:
             views_str = f"{views_int / 1_000_000_000:.1f}B"
         elif views_int >= 1_000_000:
@@ -111,7 +98,7 @@ def fetch_videos_for_country(code):
             "title": title,
             "channel": channel,
             "views": views_int,
-            "views_str": f"{views_str}",
+            "views_str": views_str,
             "url": video_url,
             "embed_url": embed_url,
             "thumbnail": thumbnail,
@@ -119,23 +106,6 @@ def fetch_videos_for_country(code):
             "published_date_formatted": formatted_date
         }
         videos.append(video)
-
-        structured = {
-            "@context": "https://schema.org",
-            "@type": "VideoObject",
-            "name": title,
-            "description": item["snippet"].get("description", ""),
-            "thumbnailUrl": [thumbnail],
-            "uploadDate": published_at,
-            "contentUrl": video_url,
-            "embedUrl": embed_url,
-            "interactionStatistic": {
-                "@type": "InteractionCounter",
-                "interactionType": {"@type": "WatchAction"},
-                "userInteractionCount": views_int
-            }
-        }
-        structured_items.append(structured)
 
     return videos
 
@@ -168,6 +138,52 @@ def generate_structured_data(videos):
         structured.append(obj)
     return structured
 
+def calculate_rank_and_view_changes(continent, videos):
+    history_file = f"{continent}.history.view.json"
+    prev_data = {}
+
+    if os.path.exists(history_file):
+        with open(history_file, "r", encoding="utf-8") as f:
+            prev_data = {v["id"]: v for v in json.load(f)}
+
+    for idx, video in enumerate(videos, start=1):
+        video_id = video["id"]
+        prev_entry = prev_data.get(video_id)
+
+        # Rank farkı
+        if prev_entry:
+            prev_rank = prev_entry.get("rank", idx)
+            rank_change = prev_rank - idx
+            video["rankChange"] = rank_change if rank_change != 0 else "-"
+        else:
+            video["rankChange"] = "-"
+
+        # View farkı
+        if prev_entry:
+            prev_views = prev_entry.get("views", video["views"])
+            view_diff = video["views"] - prev_views
+            video["viewChange"] = view_diff
+            video["viewChange_str"] = f"{'+' if view_diff > 0 else ''}{view_diff:,}" if view_diff != 0 else "-"
+        else:
+            video["viewChange"] = 0
+            video["viewChange_str"] = "-"
+
+        # Trend belirleme
+        if isinstance(video["viewChange"], int) and video["viewChange"] > 0:
+            video["trend"] = "rising"
+        elif isinstance(video["viewChange"], int) and video["viewChange"] < 0:
+            video["trend"] = "falling"
+        else:
+            video["trend"] = "stable"
+
+        video["rank"] = idx  # Güncel sıra
+
+    # Yeni history kaydet
+    with open(history_file, "w", encoding="utf-8") as f:
+        json.dump(videos, f, ensure_ascii=False, indent=2)
+
+    return videos
+
 def update_html(continent, top_videos, structured_data):
     html_file = f"{continent}.html"
     if not os.path.exists(html_file):
@@ -177,17 +193,13 @@ def update_html(continent, top_videos, structured_data):
     with open(html_file, "r", encoding="utf-8") as f:
         html = f.read()
 
-    # Structured Data Güncelleme
     structured_block = f'<script type="application/ld+json">\n<!-- STRUCTURED_DATA_HERE -->\n{json.dumps(structured_data, ensure_ascii=False, indent=2)}\n</script>'
-
     structured_pattern = re.compile(
         r'<script type="application/ld\+json">\s*<!-- STRUCTURED_DATA_HERE -->(.*?)</script>',
         re.DOTALL
     )
-
     html = structured_pattern.sub(structured_block, html)
 
-    # Iframe Güncelleme
     if top_videos:
         first = top_videos[0]
         iframe_block = f"""<!-- IFRAME_VIDEO_HERE -->
@@ -202,18 +214,14 @@ def update_html(continent, top_videos, structured_data):
   style="position:absolute; width:1px; height:1px; left:-9999px;">
 </iframe>
 <!-- IFRAME_VIDEO_HERE_END -->"""
-
         iframe_pattern = re.compile(
             r'<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE_END -->',
             re.DOTALL
         )
-
         if iframe_pattern.search(html):
             html = iframe_pattern.sub(iframe_block, html)
         else:
             html = html.replace("<!-- IFRAME_VIDEO_HERE -->", iframe_block)
-    else:
-        html = html.replace(IFRAME_PLACEHOLDER, "")
 
     with open(html_file, "w", encoding="utf-8") as f:
         f.write(html)
@@ -228,6 +236,7 @@ def process_all():
 
         deduped = deduplicate_by_title(all_videos)
         sorted_videos = sorted(deduped, key=lambda v: v["views"], reverse=True)[:50]
+        sorted_videos = calculate_rank_and_view_changes(continent, sorted_videos)
 
         with open(f"{continent}.vid.data.json", "w", encoding="utf-8") as f:
             json.dump(sorted_videos, f, ensure_ascii=False, indent=2)
@@ -241,4 +250,4 @@ def process_all():
         update_html(continent, sorted_videos, structured)
 
 if __name__ == "__main__":
-        process_all()
+    process_all()
