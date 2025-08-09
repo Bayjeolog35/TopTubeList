@@ -276,23 +276,20 @@ for slug, info in COUNTRY_INFO.items():
     history_file = f"{slug}.history.view.json"
 
     # Eski history verisini yükle
+    old_history = {}
+    old_ranks = {}
     if os.path.exists(history_file):
-        old_history = {}
-old_ranks = {}
-if os.path.exists(history_file):
-    try:
-        with open(history_file, "r", encoding="utf-8") as f:
-            data = f.read().strip()
-            if data:  # dosya boş değilse
-                parsed = json.loads(data)
-                old_history = {v["id"]: v.get("views", 0) for v in parsed}
-                old_ranks = {v["id"]: v.get("rank", 0) for v in parsed}
-    except json.JSONDecodeError:
-        print(f"⚠️ {slug} için history dosyası bozuk, sıfırdan oluşturulacak.")
-    else:
-        old_history = {}
-        old_ranks = {}
+        try:
+            with open(history_file, "r", encoding="utf-8") as f:
+                data = f.read().strip()
+                if data:  # dosya boş değilse
+                    parsed = json.loads(data)
+                    old_history = {v["id"]: v.get("views", 0) for v in parsed}
+                    old_ranks = {v["id"]: v.get("rank", 0) for v in parsed}
+        except json.JSONDecodeError:
+            print(f"⚠️ {slug} için history dosyası bozuk, sıfırdan oluşturulacak.")
 
+    # API isteği
     params = {
         "part": "snippet,statistics",
         "chart": "mostPopular",
@@ -307,6 +304,18 @@ if os.path.exists(history_file):
         continue
 
     items = response.json().get("items", [])
+    if not items:
+        print(f"⚠️ {slug} için API'den veri gelmedi.")
+        # Boş veri dosyaları oluştur
+        with open(video_file, "w", encoding="utf-8") as f:
+            json.dump([], f)
+        with open(struct_file, "w", encoding="utf-8") as f:
+            json.dump([], f)
+        with open(history_file, "w", encoding="utf-8") as f:
+            json.dump([], f)
+        update_html(slug)
+        continue
+
     videos = []
     structured = []
 
