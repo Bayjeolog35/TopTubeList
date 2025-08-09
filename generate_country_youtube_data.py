@@ -209,6 +209,55 @@ COUNTRY_INFO = {
     "zimbabwe": {"code": "ZW", "continent": "africa"}
 }
 
+def update_iframe(html_file_path, structured_data):
+    # En çok izlenen ilk video
+    if not structured_data:
+        print(f"⚠️ {html_file_path} için iframe eklenmedi (video yok).")
+        return
+    
+    top_video = structured_data[0]
+    title = top_video.get("name", "Untitled Video")
+    description = top_video.get("description", "")
+
+    # Description boşsa veya geçersizse title + channel ile doldur
+    if not description or description.lower().startswith("http") or len(description) < 10:
+        description = f"{title} by {top_video.get('channel', 'Unknown')}"
+
+    embed_url = top_video.get("embedUrl", "")
+
+    iframe_code = f"""
+<!-- IFRAME_VIDEO_HERE -->
+<iframe 
+  width="560" 
+  height="315" 
+  src="{embed_url}" 
+  title="{title}" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen 
+  style="position:absolute; width:1px; height:1px; left:-9999px;">
+</iframe>
+<!-- IFRAME_VIDEO_HERE -->
+""".strip()
+
+    # HTML oku
+    with open(html_file_path, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    # Placeholder varsa sadece içeriğini değiştir
+    if "<!-- IFRAME_VIDEO_HERE -->" in html:
+        pattern = re.compile(r"<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE -->", re.DOTALL)
+        html = pattern.sub(iframe_code, html)
+    else:
+        # Placeholder yoksa en alta ekle
+        html += "\n" + iframe_code
+
+    # Kaydet
+    with open(html_file_path, "w", encoding="utf-8") as f:
+        f.write(html)
+
+    print(f"✅ Iframe güncellendi: {html_file_path}")
+
 def update_html(slug):
     html_file = f"{slug}.html"
     struct_file = f"{slug}.str.data.json"
