@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
         if (!filename || filename === "" || filename === "index.html") return "index";
         return filename.replace('.html', '').toLowerCase();
     }
-  /**
+/**
  * Creates an HTML video card element from a video object.
  * @param {Object} video - The video data object.
  * @returns {HTMLElement} The created video card div.
@@ -64,34 +64,42 @@ function createVideoCard(video) {
     (video.published_at ? new Date(video.published_at).toLocaleDateString("tr-TR") : "");
 
   const viewChange = Number(video.viewChange || 0);
-  const trendText = viewChange !== 0 ? (video.viewChange_str || String(viewChange)) : null;
+  const trendText =
+    viewChange !== 0 ? (video.viewChange_str || String(viewChange)) : null;
   const trendColor = viewChange > 0 ? "#28a745" : viewChange < 0 ? "#dc3545" : "inherit";
 
-  // --- SIRALAMA FARKI HESAPLAMA ---
+  // --- SIRALAMA FARKI (önce backend'den geleni kullan, yoksa previousRank - rank) ---
   let rankChange = 0;
-  if (video.previousRank !== undefined && video.previousRank !== null) {
-    rankChange = video.previousRank - video.rank;
+  if (typeof video.rankChange === "number" && !Number.isNaN(video.rankChange)) {
+    rankChange = video.rankChange;
+  } else if (
+    video.previousRank != null &&
+    video.rank != null &&
+    !Number.isNaN(Number(video.previousRank)) &&
+    !Number.isNaN(Number(video.rank))
+  ) {
+    rankChange = Number(video.previousRank) - Number(video.rank);
   }
 
-  // --- Ok ikon türü ---
+  // Ok ikon türü (sıfırda 'zero.webp' gösterilecek)
   const arrowType = rankChange > 0 ? "up" : rankChange < 0 ? "down" : "zero";
   const iconMap = { up: "up.webp", down: "down.webp", zero: "zero.webp" };
   const trendIconPath = iconMap[arrowType];
 
-  // --- Rank farkı HTML ---
-  const rankChangeHtml =
-    rankChange !== 0
-      ? `<span class="rank-change" style="
-            display:inline-flex;align-items:center;justify-content:center;
-            min-width:26px;height:20px;padding:0 4px;border-radius:4px;
-            font-weight:700;font-size:13px;color:#fff;
-            background:${rankChange > 0 ? "#28a745" : "#dc3545"};
-         ">${rankChange > 0 ? "+" + rankChange : String(rankChange)}</span>`
-      : `<span class="rank-change" style="
-            display:inline-flex;align-items:center;justify-content:center;
-            min-width:26px;height:20px;padding:0 4px;border-radius:4px;
-            font-weight:700;font-size:13px;color:#fff;background:#6c757d;
-         ">0</span>`;
+  // Rank değişim rozeti (0 ise HİÇ yazı göstermiyoruz)
+  let rankChangeHtml = "";
+  if (rankChange > 0) {
+    rankChangeHtml = `<span class="rank-change" style="
+      display:inline-flex;align-items:center;justify-content:center;
+      min-width:26px;height:20px;padding:0 4px;border-radius:4px;
+      font-weight:700;font-size:13px;color:#fff;background:#28a745;">+${rankChange}</span>`;
+  } else if (rankChange < 0) {
+    rankChangeHtml = `<span class="rank-change" style="
+      display:inline-flex;align-items:center;justify-content:center;
+      min-width:26px;height:20px;padding:0 4px;border-radius:4px;
+      font-weight:700;font-size:13px;color:#fff;background:#dc3545;">${rankChange}</span>`;
+  }
+  // rankChange === 0 -> boş; sadece '-' ikon (zero.webp) görünecek
 
   // --- EKRANA GÖRE LABEL ---
   const is480 = window.matchMedia("(max-width: 480px)").matches;
@@ -100,16 +108,16 @@ function createVideoCard(video) {
 
   // --- HTML ---
   card.innerHTML = `
-    <a href="${video.url}" target="_blank" rel="noopener" class="video-thumbnail">
-      <img class="thumbnail" src="${video.thumbnail}" alt="${video.title}" loading="lazy" />
-      ${video.duration ? `<span class="duration">${video.duration}</span>` : ""}
+    <a href="\${video.url}" target="_blank" rel="noopener" class="video-thumbnail">
+      <img class="thumbnail" src="\${video.thumbnail}" alt="\${video.title}" loading="lazy" />
+      \${video.duration ? `<span class="duration">\${video.duration}</span>` : ""}
     </a>
 
     <div class="video-info">
-      <h2>${video.title}</h2>
-      <p><strong>Channel:</strong> ${video.channel}</p>
-      <p><strong>Views:</strong> ${formatViews(video.views)} views</p>
-      ${published ? `<p><strong>Date:</strong> ${published}</p>` : ""}
+      <h2>\${video.title}</h2>
+      <p><strong>Channel:</strong> \${video.channel}</p>
+      <p><strong>Views:</strong> \${formatViews(video.views)} views</p>
+      \${published ? `<p><strong>Date:</strong> \${published}</p>` : ""}
       ${
         trendText
           ? `<p class="trend-info" style="color:${trendColor}; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
