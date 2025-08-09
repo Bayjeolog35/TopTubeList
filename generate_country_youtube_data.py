@@ -1,10 +1,8 @@
 import requests
 import json
 import os
-import time
-from datetime import datetime
-from bs4 import BeautifulSoup
 import re
+from datetime import datetime
 import sys
 
 API_KEY = os.getenv("YOUTUBE_API_KEY")
@@ -210,49 +208,34 @@ COUNTRY_INFO = {
     "zambia": {"code": "ZM", "continent": "africa"},
     "zimbabwe": {"code": "ZW", "continent": "africa"}
 }
+
 def update_html(slug):
     html_file = f"{slug}.html"
     struct_file = f"{slug}.str.data.json"
     videos_file = f"{slug}.vid.data.json"
 
-    if not os.path.exists(html_file):
-        print(f"⛔ HTML dosyası bulunamadı: {html_file}")
-        return
-    if not os.path.exists(struct_file):
-        print(f"⛔ Yapısal veri dosyası bulunamadı: {struct_file}")
-        return
-    if not os.path.exists(videos_file):
-        print(f"⛔ Video veri dosyası bulunamadı: {videos_file}")
+    if not os.path.exists(html_file) or not os.path.exists(struct_file) or not os.path.exists(videos_file):
+        print(f"⛔ {slug} için gerekli dosyalar eksik")
         return
 
     try:
         with open(html_file, 'r', encoding='utf-8') as f:
             html = f.read()
-
         with open(struct_file, 'r', encoding='utf-8') as f:
             structured_data = json.load(f)
-
         with open(videos_file, 'r', encoding='utf-8') as f:
             videos = json.load(f)
 
-        # --- Structured Data Güncelle ---
-        if structured_data:
-            structured_json = json.dumps(structured_data, ensure_ascii=False, indent=2)
-            structured_block = f'<script type="application/ld+json">\n{structured_json}\n</script>'
-
-            struct_pattern = re.compile(
-                r'<script type="application/ld\+json">\s*<!-- STRUCTURED_DATA_HERE -->(.*?)</script>',
-                re.DOTALL)
-            if struct_pattern.search(html):
-                html = struct_pattern.sub(structured_block, html)
-            elif STRUCTURED_DATA_PLACEHOLDER in html:
-                html = html.replace(STRUCTURED_DATA_PLACEHOLDER, structured_block)
-            else:
-                print(f"⚠️ STRUCTURED placeholder bulunamadı: {slug}.html")
+        # --- Structured Data ---
+        structured_json = json.dumps(structured_data, ensure_ascii=False, indent=2)
+        structured_block = f'<script type="application/ld+json">\n{structured_json}\n</script>'
+        if STRUCTURED_DATA_PLACEHOLDER in html:
+            html = html.replace(STRUCTURED_DATA_PLACEHOLDER, structured_block)
         else:
-            print(f"⚠️ {slug} için structured data boş.")
+            struct_pattern = re.compile(r'<script type="application/ld\+json">.*?</script>', re.DOTALL)
+            html = struct_pattern.sub(structured_block, html)
 
-        # --- Iframe Güncelle ---
+        # --- Iframe ---
         if videos:
             top_video = videos[0]
             iframe_code = f"""<!-- IFRAME_VIDEO_HERE -->
@@ -267,30 +250,21 @@ def update_html(slug):
   style="position:absolute; width:1px; height:1px; left:-9999px;">
 </iframe>
 <!-- IFRAME_VIDEO_HERE_END -->"""
-
-            iframe_pattern = re.compile(
-                r'<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE_END -->',
-                re.DOTALL)
-            if iframe_pattern.search(html):
-                html = iframe_pattern.sub(iframe_code, html)
-            elif IFRAME_PLACEHOLDER in html:
+            if IFRAME_PLACEHOLDER in html:
                 html = html.replace(IFRAME_PLACEHOLDER, iframe_code)
             else:
-                print(f"⚠️ IFRAME placeholder bulunamadı: {slug}.html")
-        else:
-            print(f"⚠️ {slug} için video listesi boş.")
+                iframe_pattern = re.compile(r'<!-- IFRAME_VIDEO_HERE -->.*?<!-- IFRAME_VIDEO_HERE_END -->', re.DOTALL)
+                html = iframe_pattern.sub(iframe_code, html)
 
-        # Güncellenmiş HTML'yi geri yaz
         with open(html_file, 'w', encoding='utf-8') as f:
             f.write(html)
-
         print(f"✅ Güncellendi: {slug}.html")
 
     except Exception as e:
         print(f"❌ Hata ({slug}): {e}")
 
 
-# Ana işlem: tüm ülkeler için veri çekimi ve HTML güncelleme
+# --- Ana işlem ---
 for slug, info in COUNTRY_INFO.items():
     code = info["code"]
     display_name = slug.replace("-", " ").title()
@@ -299,7 +273,16 @@ for slug, info in COUNTRY_INFO.items():
 
     video_file = f"{slug}.vid.data.json"
     struct_file = f"{slug}.str.data.json"
-    html_file = f"{slug}.html"
+    history_file = f"{slug}.history.view.json"
+
+    # Eski history verisini yükle
+    if os.path.exists(history_file):
+        with open(history_file, "r", encoding="utf-8") as f:
+            old_history = {v["id"]: v.get("views", 0) for v in json.load(f)}
+            old_ranks = {v["id"]: v.get("rank", 0) for v in json.load(f)}
+    else:
+        old_history = {}
+        old_ranks = {}
 
     params = {
         "part": "snippet,statistics",
@@ -312,15 +295,13 @@ for slug, info in COUNTRY_INFO.items():
     response = requests.get(API_URL, params=params)
     if response.status_code != 200:
         print(f"❌ API Hatası ({code}): {response.status_code}")
-        if response.status_code == 400:
-            print(f"Hata detayı: {response.json().get('error', {}).get('message', 'Bilinmeyen Hata')}")
         continue
 
     items = response.json().get("items", [])
     videos = []
     structured = []
 
-    for item in items:
+    for idx, item in enumerate(items, start=1):
         try:
             views_int = int(item["statistics"].get("viewCount", 0))
         except:
@@ -342,11 +323,17 @@ for slug, info in COUNTRY_INFO.items():
         thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
         video_url = f"https://www.youtube.com/watch?v={video_id}"
         embed_url = f"https://www.youtube.com/embed/{video_id}"
+        formatted_date = datetime.fromisoformat(published_at.replace("Z", "+00:00")).strftime("%d.%m.%Y")
 
-        try:
-            formatted_date = datetime.fromisoformat(published_at.replace("Z", "+00:00")).strftime("%d.%m.%Y")
-        except:
-            formatted_date = "Tarih Yok"
+        # --- View Change ---
+        old_views = old_history.get(video_id, 0)
+        view_diff = views_int - old_views
+        trend = "up" if view_diff > 0 else "down" if view_diff < 0 else "stable"
+        view_change_str = f"{view_diff:+,}"
+
+        # --- Rank Change ---
+        old_rank = old_ranks.get(video_id, idx)
+        rank_change = old_rank - idx if old_rank else 0
 
         video = {
             "id": video_id,
@@ -358,10 +345,16 @@ for slug, info in COUNTRY_INFO.items():
             "embed_url": embed_url,
             "thumbnail": thumbnail,
             "published_at": published_at,
-            "published_date_formatted": formatted_date
+            "published_date_formatted": formatted_date,
+            "rank": idx,
+            "rankChange": rank_change,
+            "viewChange": view_diff,
+            "viewChange_str": view_change_str,
+            "trend": trend
         }
         videos.append(video)
 
+        # --- Structured Data ---
         raw_description = item["snippet"].get("description", "").strip().replace("\n", " ")
         if not raw_description or raw_description.lower().startswith("http") or len(raw_description) < 10:
             cleaned_description = f"{title} by {channel}"
@@ -379,18 +372,20 @@ for slug, info in COUNTRY_INFO.items():
             "embedUrl": embed_url,
             "interactionStatistic": {
                 "@type": "InteractionCounter",
-                "interactionType": { "@type": "WatchAction" },
+                "interactionType": {"@type": "WatchAction"},
                 "userInteractionCount": views_int
             }
         })
 
+    # Dosyaları kaydet
     with open(video_file, "w", encoding="utf-8") as f:
         json.dump(videos, f, ensure_ascii=False, indent=2)
-
     with open(struct_file, "w", encoding="utf-8") as f:
         json.dump(structured, f, ensure_ascii=False, indent=2)
+    with open(history_file, "w", encoding="utf-8") as f:
+        json.dump(videos, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ {video_file} ve {struct_file} oluşturuldu.")
+    print(f"✅ {video_file}, {struct_file}, {history_file} oluşturuldu.")
     update_html(slug)
 
 sys.exit(0)
