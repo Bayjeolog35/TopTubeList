@@ -1263,8 +1263,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- IFRAME_VIDEO_HERE -->
-<iframe ...></iframe>
-<!-- IFRAME_VIDEO_HERE_END -->
+<!-- IFRAME_VIDEO_HERE -->
  
 <footer>
   <div class="contact-section">
