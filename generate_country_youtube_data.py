@@ -337,7 +337,6 @@ for slug, info in COUNTRY_INFO.items():
                     old_ranks = {v["id"]: v.get("rank", 0) for v in parsed}
         except json.JSONDecodeError:
             print(f"⚠️ {slug} için history dosyası bozuk, sıfırdan oluşturulacak.")
-
     # API isteği
     params = {
         "part": "snippet,statistics",
@@ -365,8 +364,8 @@ for slug, info in COUNTRY_INFO.items():
         update_html(slug)
         continue
 
-    videos = []
-    structured = []
+    # --- Video verilerini topla ---
+    video_list = []
 
     for idx, item in enumerate(items, start=1):
         try:
@@ -390,7 +389,9 @@ for slug, info in COUNTRY_INFO.items():
         thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
         video_url = f"https://www.youtube.com/watch?v={video_id}"
         embed_url = f"https://www.youtube.com/embed/{video_id}"
-        formatted_date = datetime.fromisoformat(published_at.replace("Z", "+00:00")).strftime("%d.%m.%Y")
+        formatted_date = datetime.fromisoformat(
+            published_at.replace("Z", "+00:00")
+        ).strftime("%d.%m.%Y")
 
         # --- View Change ---
         old_views = old_history.get(video_id, 0)
@@ -402,7 +403,7 @@ for slug, info in COUNTRY_INFO.items():
         old_rank = old_ranks.get(video_id, idx)
         rank_change = old_rank - idx if old_rank else 0
 
-        video = {
+        video_data = {
             "id": video_id,
             "title": title,
             "channel": channel,
@@ -419,16 +420,14 @@ for slug, info in COUNTRY_INFO.items():
             "viewChange_str": view_change_str,
             "trend": trend
         }
-        videos.append(video)
 
-        # --- Structured Data ---
         raw_description = item["snippet"].get("description", "").strip().replace("\n", " ")
         if not raw_description or raw_description.lower().startswith("http") or len(raw_description) < 10:
             cleaned_description = f"{title} by {channel}"
         else:
             cleaned_description = raw_description[:200]
 
-        structured.append({
+        struct_data = {
             "@context": "https://schema.org",
             "@type": "VideoObject",
             "name": title,
@@ -442,9 +441,19 @@ for slug, info in COUNTRY_INFO.items():
                 "interactionType": {"@type": "WatchAction"},
                 "userInteractionCount": views_int
             }
-        })
+        }
 
-    # Dosyaları kaydet
+        # Tek listede topla
+        video_list.append((video_data, struct_data))
+
+    # --- Son 3 saatteki izlenme artışına göre sırala ---
+    video_list.sort(key=lambda x: x[0]["viewChange"], reverse=True)
+
+    # Listeleri ayır
+    videos = [v[0] for v in video_list]
+    structured = [v[1] for v in video_list]
+
+    # --- Kaydet ---
     with open(video_file, "w", encoding="utf-8") as f:
         json.dump(videos, f, ensure_ascii=False, indent=2)
     with open(struct_file, "w", encoding="utf-8") as f:
@@ -454,5 +463,3 @@ for slug, info in COUNTRY_INFO.items():
 
     print(f"✅ {video_file}, {struct_file}, {history_file} oluşturuldu.")
     update_html(slug)
-
-sys.exit(0)
