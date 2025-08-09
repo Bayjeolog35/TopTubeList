@@ -277,9 +277,18 @@ for slug, info in COUNTRY_INFO.items():
 
     # Eski history verisini yükle
     if os.path.exists(history_file):
+        old_history = {}
+old_ranks = {}
+if os.path.exists(history_file):
+    try:
         with open(history_file, "r", encoding="utf-8") as f:
-            old_history = {v["id"]: v.get("views", 0) for v in json.load(f)}
-            old_ranks = {v["id"]: v.get("rank", 0) for v in json.load(f)}
+            data = f.read().strip()
+            if data:  # dosya boş değilse
+                parsed = json.loads(data)
+                old_history = {v["id"]: v.get("views", 0) for v in parsed}
+                old_ranks = {v["id"]: v.get("rank", 0) for v in parsed}
+    except json.JSONDecodeError:
+        print(f"⚠️ {slug} için history dosyası bozuk, sıfırdan oluşturulacak.")
     else:
         old_history = {}
         old_ranks = {}
