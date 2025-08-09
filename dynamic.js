@@ -38,11 +38,6 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
         if (!filename || filename === "" || filename === "index.html") return "index";
         return filename.replace('.html', '').toLowerCase();
     }
-/**
- * Creates an HTML video card element from a video object.
- * @param {Object} video - The video data object.
- * @returns {HTMLElement} The created video card div.
- */
 function createVideoCard(video) {
   // --- İzlenme sayısını kısalt ---
   function formatViews(num) {
@@ -56,102 +51,109 @@ function createVideoCard(video) {
   // --- KART ---
   const card = document.createElement("div");
   card.className = "video-card";
-  card.style.position = "relative"; // rozet için referans
+  card.style.position = "relative";
 
-  // --- GÜVENLİ VERİLER ---
+  // --- Güvenli veriler ---
   const published =
     video.published_date_formatted ||
     (video.published_at ? new Date(video.published_at).toLocaleDateString("tr-TR") : "");
 
   const viewChange = Number(video.viewChange || 0);
-  const trendText =
-    viewChange !== 0 ? (video.viewChange_str || String(viewChange)) : null;
+  const trendText = viewChange !== 0 ? (video.viewChange_str || String(viewChange)) : null;
   const trendColor = viewChange > 0 ? "#28a745" : viewChange < 0 ? "#dc3545" : "inherit";
 
-  // --- SIRALAMA FARKI (önce backend'den geleni kullan, yoksa previousRank - rank) ---
+  // --- Rank change: önce backend'den geleni kullan, yoksa previousRank - rank ---
   let rankChange = 0;
   if (typeof video.rankChange === "number" && !Number.isNaN(video.rankChange)) {
     rankChange = video.rankChange;
   } else if (
-    video.previousRank != null &&
-    video.rank != null &&
-    !Number.isNaN(Number(video.previousRank)) &&
-    !Number.isNaN(Number(video.rank))
+    video.previousRank != null && video.rank != null &&
+    !Number.isNaN(Number(video.previousRank)) && !Number.isNaN(Number(video.rank))
   ) {
     rankChange = Number(video.previousRank) - Number(video.rank);
   }
 
-  // Ok ikon türü (sıfırda 'zero.webp' gösterilecek)
+  // Ok ikon türü
   const arrowType = rankChange > 0 ? "up" : rankChange < 0 ? "down" : "zero";
   const iconMap = { up: "up.webp", down: "down.webp", zero: "zero.webp" };
   const trendIconPath = iconMap[arrowType];
 
-  // Rank değişim rozeti (0 ise HİÇ yazı göstermiyoruz)
+  // Rank rozeti (0 ise boş)
   let rankChangeHtml = "";
   if (rankChange > 0) {
-    rankChangeHtml = `<span class="rank-change" style="
-      display:inline-flex;align-items:center;justify-content:center;
-      min-width:26px;height:20px;padding:0 4px;border-radius:4px;
-      font-weight:700;font-size:13px;color:#fff;background:#28a745;">+${rankChange}</span>`;
+    rankChangeHtml =
+      '<span class="rank-change" style="display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:20px;padding:0 4px;border-radius:4px;font-weight:700;font-size:13px;color:#fff;background:#28a745;">+' +
+      rankChange +
+      "</span>";
   } else if (rankChange < 0) {
-    rankChangeHtml = `<span class="rank-change" style="
-      display:inline-flex;align-items:center;justify-content:center;
-      min-width:26px;height:20px;padding:0 4px;border-radius:4px;
-      font-weight:700;font-size:13px;color:#fff;background:#dc3545;">${rankChange}</span>`;
+    rankChangeHtml =
+      '<span class="rank-change" style="display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:20px;padding:0 4px;border-radius:4px;font-weight:700;font-size:13px;color:#fff;background:#dc3545;">' +
+      rankChange +
+      "</span>";
   }
-  // rankChange === 0 -> boş; sadece '-' ikon (zero.webp) görünecek
 
-  // --- EKRANA GÖRE LABEL ---
+  // Ekrana göre label
   const is480 = window.matchMedia("(max-width: 480px)").matches;
   const is360 = window.matchMedia("(max-width: 360px)").matches;
   const trendLabel = is480 ? "View change (3h):" : "View Change (Last 3h):";
 
-  // --- HTML ---
-  card.innerHTML = `
-    <a href="\${video.url}" target="_blank" rel="noopener" class="video-thumbnail">
-      <img class="thumbnail" src="\${video.thumbnail}" alt="\${video.title}" loading="lazy" />
-      \${video.duration ? `<span class="duration">\${video.duration}</span>` : ""}
-    </a>
+  // Parça HTML'ler (iç içe backtick yok)
+  const durationHtml = video.duration
+    ? '<span class="duration">' + video.duration + "</span>"
+    : "";
 
-    <div class="video-info">
-      <h2>\${video.title}</h2>
-      <p><strong>Channel:</strong> \${video.channel}</p>
-      <p><strong>Views:</strong> \${formatViews(video.views)} views</p>
-      \${published ? `<p><strong>Date:</strong> \${published}</p>` : ""}
-      ${
-        trendText
-          ? `<p class="trend-info" style="color:${trendColor}; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
-               <strong>${trendLabel}</strong> ${trendText}
-             </p>`
-          : ""
-      }
-    </div>
+  const publishedHtml = published
+    ? '<p><strong>Date:</strong> ' + published + "</p>"
+    : "";
 
-    <div class="trend-badge">
-      ${rankChangeHtml}
-      <img src="${trendIconPath}" alt="${arrowType}" class="trend-icon" />
-    </div>
-  `;
+  const trendInfoHtml = trendText
+    ? '<p class="trend-info" style="color:' +
+      trendColor +
+      '; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"><strong>' +
+      trendLabel +
+      "</strong> " +
+      trendText +
+      "</p>"
+    : "";
 
-  // --- İNLİNE POZİSYONLAMA (GLOBAL CSS'E DOKUNMADAN) ---
+  // --- KART HTML ---
+  card.innerHTML =
+    '<a href="' + video.url + '" target="_blank" rel="noopener" class="video-thumbnail">' +
+      '<img class="thumbnail" src="' + video.thumbnail + '" alt="' + video.title.replace(/"/g, "&quot;") + '" loading="lazy" />' +
+      durationHtml +
+    "</a>" +
+    '<div class="video-info">' +
+      "<h2>" + video.title + "</h2>" +
+      "<p><strong>Channel:</strong> " + video.channel + "</p>" +
+      "<p><strong>Views:</strong> " + formatViews(video.views) + " views</p>" +
+      publishedHtml +
+      trendInfoHtml +
+    "</div>" +
+    '<div class="trend-badge">' +
+      rankChangeHtml +
+      '<img src="' + trendIconPath + '" alt="' + arrowType + '" class="trend-icon" />' +
+    "</div>";
+
+  // --- Inline pozisyon (mevcut düzen) ---
   const badge = card.querySelector(".trend-badge");
   const info  = card.querySelector(".video-info");
   const icon  = card.querySelector(".trend-icon");
 
-  // Masaüstü varsayılan
-  if (badge) Object.assign(badge.style, {
-    position: "absolute",
-    right: "12px",
-    top: "50%",
-    transform: "translateY(-50%)",
-    width: "60px",
-    height: "28px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "6px",
-    pointerEvents: "none",
-  });
+  if (badge) {
+    Object.assign(badge.style, {
+      position: "absolute",
+      right: "12px",
+      top: "50%",
+      transform: "translateY(-50%)",
+      width: "60px",
+      height: "28px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      gap: "6px",
+      pointerEvents: "none",
+    });
+  }
   if (info) info.style.paddingRight = "72px";
   if (icon) Object.assign(icon.style, {
     width: "20px",
@@ -160,7 +162,7 @@ function createVideoCard(video) {
     display: "block",
   });
 
-  // 480px altı mobil
+  // Mobil ayarları
   if (is480 && badge && info) {
     badge.style.width = "50px";
     badge.style.height = "26px";
@@ -169,8 +171,6 @@ function createVideoCard(video) {
     const rc = card.querySelector(".rank-change");
     if (rc) rc.style.fontSize = "12px";
   }
-
-  // 360px altı ekstra dar
   if (is360 && badge && info) {
     badge.style.width = "46px";
     badge.style.right = "6px";
@@ -179,6 +179,7 @@ function createVideoCard(video) {
 
   return card;
 }
+
 
     /**
      * Displays a message when no video data is available for a country.
