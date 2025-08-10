@@ -236,11 +236,12 @@ def safe_load_history(path):
     return {}
 
 def update_iframe(html_file_path, top_video):
+    """Sayfaya TEK bir (gizli) iframe yaz: sadece top_video."""
     if not top_video:
         print(f"⚠️ {html_file_path} için iframe eklenmedi (video yok).")
         return
 
-    iframe_code = f"""<!-- IFRAME_VIDEO_HERE -->
+    iframe_block = f"""<!-- IFRAME_VIDEO_HERE -->
 <iframe 
   width="560" 
   height="315" 
@@ -253,20 +254,19 @@ def update_iframe(html_file_path, top_video):
 </iframe>
 <!-- IFRAME_VIDEO_HERE_END -->"""
 
-    try:
-        with open(html_file_path, "r", encoding="utf-8") as f:
-            html = f.read()
-    except FileNotFoundError:
-        print(f"⛔ HTML dosyası bulunamadı: {html_file_path}")
-        return
+    with open(html_file_path, "r", encoding="utf-8") as f:
+        html = f.read()
 
-    pattern = re.compile(r"<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE_END -->", re.DOTALL)
+    # Varsa eski blokları tek bir blokla değiştir
+    pattern = re.compile(r'<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE_END -->', re.DOTALL)
     if pattern.search(html):
-        html = pattern.sub(iframe_code, html)
-    elif IFRAME_PLACEHOLDER in html:
-        html = html.replace(IFRAME_PLACEHOLDER, iframe_code)
+        html = pattern.sub(iframe_block, html)
+    elif "<!-- IFRAME_VIDEO_HERE -->" in html:
+        # Placeholder varsa onun yerine koy
+        html = html.replace("<!-- IFRAME_VIDEO_HERE -->", iframe_block)
     else:
-        html = html.replace("</body>", f"{iframe_code}\n</body>")
+        # Hiç yoksa </body>'den önce ekle
+        html = html.replace("</body>", f"{iframe_block}\n</body>")
 
     with open(html_file_path, "w", encoding="utf-8") as f:
         f.write(html)
@@ -290,14 +290,14 @@ def update_html(slug):
         with open(videos_file, 'r', encoding='utf-8') as f:
             videos = json.load(f)
 
-        # Structured data bloğu (placeholder korunur)
+        # Structured data bloğunu (placeholder'ı koruyarak) güncelle
         structured_json = json.dumps(structured_data, ensure_ascii=False, indent=2)
         structured_block = f'<script type="application/ld+json">\n<!-- STRUCTURED_DATA_HERE -->\n{structured_json}\n</script>'
         structured_pattern = re.compile(r'<script type="application/ld\+json">\s*<!-- STRUCTURED_DATA_HERE -->(.*?)</script>', re.DOTALL)
         if structured_pattern.search(html):
             html = structured_pattern.sub(structured_block, html)
-        elif STRUCTURED_DATA_PLACEHOLDER in html:
-            html = html.replace(STRUCTURED_DATA_PLACEHOLDER, structured_block)
+        elif "<!-- STRUCTURED_DATA_HERE -->" in html:
+            html = html.replace("<!-- STRUCTURED_DATA_HERE -->", structured_block)
         else:
             first_ld = re.compile(r'<script type="application/ld\+json">.*?</script>', re.DOTALL)
             if first_ld.search(html):
@@ -308,7 +308,7 @@ def update_html(slug):
         with open(html_file, "w", encoding="utf-8") as f:
             f.write(html)
 
-        # 🔴 iFrame’i SON 3 SAATTE en çok artış alan video ile yaz
+        # İFRAME: son 3 saatte en çok artış alan (sıralanmış listenin 1.si) video
         top_video = videos[0] if videos else None
         update_iframe(html_file, top_video)
 
