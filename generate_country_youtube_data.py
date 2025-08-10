@@ -236,7 +236,6 @@ def safe_load_history(path):
     return {}
 
 def update_iframe(html_file_path, top_video):
-    """Sayfaya TEK bir (gizli) iframe yaz: sadece top_video."""
     if not top_video:
         print(f"⚠️ {html_file_path} için iframe eklenmedi (video yok).")
         return
@@ -257,15 +256,12 @@ def update_iframe(html_file_path, top_video):
     with open(html_file_path, "r", encoding="utf-8") as f:
         html = f.read()
 
-    # Varsa eski blokları tek bir blokla değiştir
+    # Başlangıç ve END etiketi arasını komple değiştir
     pattern = re.compile(r'<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE_END -->', re.DOTALL)
     if pattern.search(html):
         html = pattern.sub(iframe_block, html)
-    elif "<!-- IFRAME_VIDEO_HERE -->" in html:
-        # Placeholder varsa onun yerine koy
-        html = html.replace("<!-- IFRAME_VIDEO_HERE -->", iframe_block)
     else:
-        # Hiç yoksa </body>'den önce ekle
+        # Hiç placeholder yoksa, body kapanışından önce ekle
         html = html.replace("</body>", f"{iframe_block}\n</body>")
 
     with open(html_file_path, "w", encoding="utf-8") as f:
@@ -290,7 +286,7 @@ def update_html(slug):
         with open(videos_file, 'r', encoding='utf-8') as f:
             videos = json.load(f)
 
-        # Structured data bloğunu (placeholder'ı koruyarak) güncelle
+        # Structured block (placeholder korunarak)
         structured_json = json.dumps(structured_data, ensure_ascii=False, indent=2)
         structured_block = f'<script type="application/ld+json">\n<!-- STRUCTURED_DATA_HERE -->\n{structured_json}\n</script>'
         structured_pattern = re.compile(r'<script type="application/ld\+json">\s*<!-- STRUCTURED_DATA_HERE -->(.*?)</script>', re.DOTALL)
@@ -308,10 +304,9 @@ def update_html(slug):
         with open(html_file, "w", encoding="utf-8") as f:
             f.write(html)
 
-        # İFRAME: son 3 saatte en çok artış alan (sıralanmış listenin 1.si) video
+        # 🔴 Sıralanmış listenin İLK videosu (viewChange'e göre)
         top_video = videos[0] if videos else None
         update_iframe(html_file, top_video)
-
         print(f"✅ Güncellendi: {slug}.html")
 
     except Exception as e:
@@ -471,7 +466,7 @@ for slug, info in COUNTRY_INFO.items():
     videos = []
     structured = []
     for new_idx, (v, s, prev_rank) in enumerate(video_list, start=1):
-        rank_change = prev_rank - new_idx   # 5 -> 2 = +3 (yükselme pozitif)
+        rank_change = prev_rank - new_idx
         v["rank"] = new_idx
         v["rankChange"] = rank_change
         v["rankChange_str"] = f"{rank_change:+d}"
@@ -487,8 +482,8 @@ for slug, info in COUNTRY_INFO.items():
 
     # --- Yeni history kaydı (dict formatı) ---
     new_history = {v["id"]: {"views": v["views"], "rank": v["rank"]} for v in videos}
-    with open(history_file, "w", encoding="utf-8") as f:
-        json.dump(new_history, f, ensure_ascii=False, indent=2)
+with open(history_file, "w", encoding="utf-8") as f:
+    json.dump(new_history, f, ensure_ascii=False, indent=2)
 
     # --- HTML Güncelle ---
     update_html(slug)
