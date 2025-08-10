@@ -6,6 +6,7 @@ import re
 
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 
+# 🌍 Kıta ve ülke listesi
 CONTINENT_COUNTRIES = {
     "asia": [
         {"slug": "india", "code": "IN"},
@@ -44,77 +45,27 @@ CONTINENT_COUNTRIES = {
     ]
 }
 
+# 📌 Placeholder tanımları
 STRUCTURED_DATA_PLACEHOLDER = "<!-- STRUCTURED_DATA_HERE -->"
 IFRAME_PLACEHOLDER = "<!-- IFRAME_VIDEO_HERE -->"
 
-def update_iframe(html_file_path, structured_data):
-    # En çok izlenen ilk video
-    if not structured_data:
-        print(f"⚠️ {html_file_path} için iframe eklenmedi (video yok).")
-        return
-    
-    top_video = structured_data[0]
-    title = top_video.get("name", "Untitled Video")
-    description = top_video.get("description", "")
-
-    # Description boşsa veya geçersizse title + channel ile doldur
-    if not description or description.lower().startswith("http") or len(description) < 10:
-        description = f"{title} by {top_video.get('channel', 'Unknown')}"
-
-    embed_url = top_video.get("embedUrl", "")
-
-    iframe_code = f"""
-<!-- IFRAME_VIDEO_HERE -->
-<iframe 
-  width="560" 
-  height="315" 
-  src="{embed_url}" 
-  title="{title}" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowfullscreen 
-  style="position:absolute; width:1px; height:1px; left:-9999px;">
-</iframe>
-<!-- IFRAME_VIDEO_HERE -->
-""".strip()
-
-    # HTML oku
-    with open(html_file_path, "r", encoding="utf-8") as f:
-        html = f.read()
-
-    # Placeholder varsa sadece içeriğini değiştir
-    if "<!-- IFRAME_VIDEO_HERE -->" in html:
-        pattern = re.compile(r"<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE -->", re.DOTALL)
-        html = pattern.sub(iframe_code, html)
-    else:
-        # Placeholder yoksa en alta ekle
-        html += "\n" + iframe_code
-
-    # Kaydet
-    with open(html_file_path, "w", encoding="utf-8") as f:
-        f.write(html)
-
-    print(f"✅ Iframe güncellendi: {html_file_path}")
-
+# 🔹 API'den video çek
 def fetch_videos_for_country(code):
     url = "https://www.googleapis.com/youtube/v3/videos"
     params = {
-        "part": "snippet,statistics,contentDetails",
+        "part": "snippet,statistics",
         "chart": "mostPopular",
         "regionCode": code,
         "maxResults": 50,
         "key": YOUTUBE_API_KEY
     }
-
     response = requests.get(url, params=params)
     if response.status_code != 200:
         print(f"❌ API hatası [{code}]: {response.status_code}")
         return []
 
-    items = response.json().get("items", [])
     videos = []
-
-    for item in items:
+    for item in response.json().get("items", []):
         try:
             views_int = int(item["statistics"]["viewCount"])
         except:
@@ -133,31 +84,28 @@ def fetch_videos_for_country(code):
         title = item["snippet"]["title"]
         channel = item["snippet"]["channelTitle"]
         thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
-        video_url = f"https://www.youtube.com/watch?v={video_id}"
-        embed_url = f"https://www.youtube.com/embed/{video_id}"
         published_at = item["snippet"].get("publishedAt", "")
-
         try:
             formatted_date = datetime.fromisoformat(published_at.replace("Z", "+00:00")).strftime("%d.%m.%Y")
         except:
             formatted_date = "Tarih Yok"
 
-        video = {
+        videos.append({
             "id": video_id,
             "title": title,
             "channel": channel,
             "views": views_int,
             "views_str": views_str,
-            "url": video_url,
-            "embed_url": embed_url,
+            "url": f"https://www.youtube.com/watch?v={video_id}",
+            "embed_url": f"https://www.youtube.com/embed/{video_id}",
             "thumbnail": thumbnail,
             "published_at": published_at,
             "published_date_formatted": formatted_date
-        }
-        videos.append(video)
+        })
 
     return videos
 
+# 🔹 Aynı başlığa sahip tekrar eden videoları kaldır
 def deduplicate_by_title(videos):
     seen = {}
     for v in videos:
@@ -166,14 +114,15 @@ def deduplicate_by_title(videos):
             seen[title] = v
     return list(seen.values())
 
+# 🔹 Structured data oluştur
 def generate_structured_data(videos):
     structured = []
     for video in videos:
-        obj = {
+        structured.append({
             "@context": "https://schema.org",
             "@type": "VideoObject",
             "name": video["title"],
-            "description": video.get("description", video.get("title", ""))[:200],
+            "description": video.get("title", "")[:200],
             "thumbnailUrl": [video["thumbnail"]],
             "uploadDate": video["published_at"],
             "contentUrl": video["url"],
@@ -183,56 +132,45 @@ def generate_structured_data(videos):
                 "interactionType": {"@type": "WatchAction"},
                 "userInteractionCount": video["views"]
             }
-        }
-        structured.append(obj)
+        })
     return structured
 
+# 🔹 Sıra ve izlenme farkı hesapla
 def calculate_rank_and_view_changes(continent, videos):
     history_file = f"{continent}.history.view.json"
     prev_data = {}
-
     if os.path.exists(history_file):
         with open(history_file, "r", encoding="utf-8") as f:
             prev_data = {v["id"]: v for v in json.load(f)}
 
     for idx, video in enumerate(videos, start=1):
-        video_id = video["id"]
-        prev_entry = prev_data.get(video_id)
+        prev_entry = prev_data.get(video["id"])
 
-        # Rank farkı
         if prev_entry:
-            prev_rank = prev_entry.get("rank", idx)
-            rank_change = prev_rank - idx
-            video["rankChange"] = rank_change if rank_change != 0 else "-"
+            video["rankChange"] = prev_entry.get("rank", idx) - idx
+            view_diff = video["views"] - prev_entry.get("views", video["views"])
+            video["viewChange"] = view_diff
+            video["viewChange_str"] = f"{'+' if view_diff > 0 else ''}{view_diff:,}" if view_diff else "-"
         else:
             video["rankChange"] = "-"
-
-        # View farkı
-        if prev_entry:
-            prev_views = prev_entry.get("views", video["views"])
-            view_diff = video["views"] - prev_views
-            video["viewChange"] = view_diff
-            video["viewChange_str"] = f"{'+' if view_diff > 0 else ''}{view_diff:,}" if view_diff != 0 else "-"
-        else:
             video["viewChange"] = 0
             video["viewChange_str"] = "-"
 
-        # Trend belirleme
-        if isinstance(video["viewChange"], int) and video["viewChange"] > 0:
+        if video["viewChange"] > 0:
             video["trend"] = "rising"
-        elif isinstance(video["viewChange"], int) and video["viewChange"] < 0:
+        elif video["viewChange"] < 0:
             video["trend"] = "falling"
         else:
             video["trend"] = "stable"
 
-        video["rank"] = idx  # Güncel sıra
+        video["rank"] = idx
 
-    # Yeni history kaydet
     with open(history_file, "w", encoding="utf-8") as f:
         json.dump(videos, f, ensure_ascii=False, indent=2)
 
     return videos
 
+# 🔹 HTML güncelle
 def update_html(continent, top_videos, structured_data):
     html_file = f"{continent}.html"
     if not os.path.exists(html_file):
@@ -242,7 +180,7 @@ def update_html(continent, top_videos, structured_data):
     with open(html_file, "r", encoding="utf-8") as f:
         html = f.read()
 
-    structured_block = f'<script type="application/ld+json">\n<!-- STRUCTURED_DATA_HERE -->\n{json.dumps(structured_data, ensure_ascii=False, indent=2)}\n</script>'
+    structured_block = f'<script type="application/ld+json">\n{STRUCTURED_DATA_PLACEHOLDER}\n{json.dumps(structured_data, ensure_ascii=False, indent=2)}\n</script>'
     structured_pattern = re.compile(
         r'<script type="application/ld\+json">\s*<!-- STRUCTURED_DATA_HERE -->(.*?)</script>',
         re.DOTALL
@@ -252,16 +190,7 @@ def update_html(continent, top_videos, structured_data):
     if top_videos:
         first = top_videos[0]
         iframe_block = f"""<!-- IFRAME_VIDEO_HERE -->
-<iframe 
-  width="560" 
-  height="315" 
-  src="{first['embed_url']}" 
-  title="{first['title']}" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowfullscreen 
-  style="position:absolute; width:1px; height:1px; left:-9999px;">
-</iframe>
+<iframe width="560" height="315" src="{first['embed_url']}" title="{first['title']}" frameborder="0" allowfullscreen style="position:absolute; width:1px; height:1px; left:-9999px;"></iframe>
 <!-- IFRAME_VIDEO_HERE_END -->"""
         iframe_pattern = re.compile(
             r'<!-- IFRAME_VIDEO_HERE -->(.*?)<!-- IFRAME_VIDEO_HERE_END -->',
@@ -269,13 +198,12 @@ def update_html(continent, top_videos, structured_data):
         )
         if iframe_pattern.search(html):
             html = iframe_pattern.sub(iframe_block, html)
-        else:
-            html = html.replace("<!-- IFRAME_VIDEO_HERE -->", iframe_block)
 
     with open(html_file, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"✅ {html_file} güncellendi.")
 
+# 🔹 Tüm kıtaları işle
 def process_all():
     for continent, countries in CONTINENT_COUNTRIES.items():
         print(f"\n🌍 {continent.upper()} işleniyor...")
@@ -289,12 +217,10 @@ def process_all():
 
         with open(f"{continent}.vid.data.json", "w", encoding="utf-8") as f:
             json.dump(sorted_videos, f, ensure_ascii=False, indent=2)
-        print(f"📦 {continent}.vid.data.json kaydedildi ({len(sorted_videos)} video).")
 
         structured = generate_structured_data(sorted_videos)
         with open(f"{continent}.str.data.json", "w", encoding="utf-8") as f:
             json.dump(structured, f, ensure_ascii=False, indent=2)
-        print(f"📦 {continent}.str.data.json kaydedildi.")
 
         update_html(continent, sorted_videos, structured)
 
