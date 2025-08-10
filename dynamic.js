@@ -33,10 +33,10 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
      * Example: /path/to/country.html -> country
      */
     function getCountryFromURL() {
-        const path = window.location.pathname;
-        const filename = path.split('/').pop(); // örnek: "turkey.html", "index.html", veya ""
-        if (!filename || filename === "" || filename === "index.html") return "index";
-        return filename.replace('.html', '').toLowerCase();
+        const path = window.location.pathname.replace(/\/+$/, "");
+        let slug = path.split("/").pop() || "index";
+        if (slug.endsWith(".html")) slug = slug.slice(0, -5); // ".html" kırp
+        return slug.toLowerCase();
     }
 function createVideoCard(video) {
   // --- İzlenme sayısını kısalt ---
@@ -185,32 +185,41 @@ function createVideoCard(video) {
      * Displays a message when no video data is available for a country.
      */
     function showNoDataMessage() {
-        if (!videoListContainer) {
-            console.warn("videoListContainer bulunamadı. 'No Data' mesajı gösterilemiyor.");
-            return;
-        }
+  if (!videoListContainer) {
+    console.warn("videoListContainer bulunamadı. 'No Data' mesajı gösterilemiyor.");
+    return;
+  }
 
-        videoListContainer.innerHTML = `
-            <div class="no-data-message">
-                <img src="nodata.webp" alt="No data" width="100">
-                <h2>Oops... No trending videos here 😔</h2>
-                <p><strong>YouTube doesn’t currently share data for this country.</strong></p>
-                <p>But don’t worry. The rest of the world is buzzing with viral content!</p>
-                <p>Why not explore what’s trending elsewhere? 🌍</p>
-            </div>
-        `;
+  // Mesaj içeriği
+  videoListContainer.innerHTML = `
+    <div class="no-data-message">
+      <img src="nodata.webp" alt="No data" width="100">
+      <h2>Oops... No trending videos here 😔</h2>
+      <p><strong>YouTube doesn’t currently share data for this country.</strong></p>
+      <p>But don’t worry. The rest of the world is buzzing with viral content!</p>
+      <p>Why not explore what’s trending elsewhere? 🌍</p>
+    </div>
+  `;
 
-        // sadece veri yoksa main'e class ekle
-const mainElement = document.querySelector("main");
-if (mainElement) {
-  mainElement.classList.add("centered-no-data");
+  // SADECE içerik konteynerini ortala — sol paneli etkileme
+  Object.assign(videoListContainer.style, {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    minHeight: "50vh",
+    gap: "8px",
+    textAlign: "center",
+  });
+
+  // (ÖNCEKİ KODU SİL) >>> main'e class ekleme YOK
+  // const mainElement = document.querySelector("main");
+  // if (mainElement) mainElement.classList.add("centered-no-data");
+
+  if (loadMoreButton) {
+    loadMoreButton.style.display = "none";
+  }
 }
-        
-        // Load More butonunu gizle, eğer mevcutsa
-        if (loadMoreButton) {
-            loadMoreButton.style.display = "none";
-        }
-    }
     
     /**
      * Fetches video data for the current country and renders it.
@@ -274,6 +283,9 @@ if (mainElement) {
         }
 
         videoListContainer.innerHTML = ""; // Mevcut videoları temizle
+        ["display","flexDirection","alignItems","justifyContent","minHeight","gap","textAlign"]
+            .forEach(p => videoListContainer.style.removeProperty(p));
+        
         const videosToDisplay = allVideos.slice(0, displayCount);
 
         if (videosToDisplay.length === 0) {
