@@ -893,15 +893,18 @@ def generate_top_video_iframe(videos_data):
 def generate_html_content(name, videos_data, structured_data, is_country=True):
     info_dict = COUNTRY_INFO if is_country else CONTINENT_INFO
     readable_name = info_dict.get(name, {}).get("name", name.replace("_", " ").title())
-    meta_description = info_dict.get(name, {}).get("meta_description", f"Trending YouTube videos in {readable_name} - Updated every 3 hours")
+    meta_description = info_dict.get(name, {}).get(
+        "meta_description",
+        f"Trending YouTube videos in {readable_name} - Updated every 3 hours"
+    )
 
-      # Tag Manager head kodu
+    # Tag Manager head kodu
     gtm_head = """<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':
-new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-}})(window,document,'script','dataLayer','GTM-N865S9W3');</script>
+})(window,document,'script','dataLayer','GTM-N865S9W3');</script>
 <!-- End Google Tag Manager -->"""
 
     # GTM noscript body başlangıcı için
@@ -909,21 +912,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N865S9W3"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->"""
-    
-    # 🎯 IFRAME: en çok izlenen videoyu al
+
+    # IFRAME: en çok izlenen videoyu al
     top_video_iframe = generate_top_video_iframe(videos_data)
 
-    # 🎯 STRUCTURED: sadece ilk structured item’ı al
+    # STRUCTURED DATA bloğu
     structured_block = ""
-if structured_data and isinstance(structured_data, list):
-    structured_block = (
-        '<script type="application/ld+json">\n'
-        + json.dumps(structured_data, ensure_ascii=False, indent=2)
-        + '\n</script>'
-    )
+    if structured_data and isinstance(structured_data, list):
+        structured_block = (
+            '<script type="application/ld+json">\n'
+            + json.dumps(structured_data, ensure_ascii=False, indent=2)
+            + '\n</script>'
+        )
 
     current_date = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
-
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -931,7 +933,7 @@ if structured_data and isinstance(structured_data, list):
   {gtm_head}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trending YouTube Videos in name | TopTubeList</title>
+  <title>Trending in {readable_name} | TopTubeList</title>
   <meta name="description" content="{meta_description}">
   <meta name="robots" content="index, follow">
   <meta name="google-adsense-account" content="ca-pub-6698104628153103">
@@ -939,7 +941,6 @@ if structured_data and isinstance(structured_data, list):
   <link rel="stylesheet" href="style.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103" crossorigin="anonymous"></script>
   {structured_block}
-</script>
 </head>
 <body>
     {gtm_noscript}
