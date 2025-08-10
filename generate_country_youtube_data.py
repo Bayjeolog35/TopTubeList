@@ -339,127 +339,147 @@ for slug, info in COUNTRY_INFO.items():
             print(f"⚠️ {slug} için history dosyası bozuk, sıfırdan oluşturulacak.")
     # API isteği
     params = {
-        "part": "snippet,statistics",
-        "chart": "mostPopular",
-        "regionCode": code,
-        "maxResults": 50,
-        "key": API_KEY
+    "part": "snippet,statistics",
+    "chart": "mostPopular",
+    "regionCode": code,
+    "maxResults": 50,
+    "key": API_KEY
+}
+
+response = requests.get(API_URL, params=params)
+if response.status_code != 200:
+    print(f"❌ API Hatası ({code}): {response.status_code}")
+    continue
+
+items = response.json().get("items", [])
+if not items:
+    print(f"⚠️ {slug} için API'den veri gelmedi.")
+    with open(video_file, "w", encoding="utf-8") as f:
+        json.dump([], f)
+    with open(struct_file, "w", encoding="utf-8") as f:
+        json.dump([], f)
+    with open(history_file, "w", encoding="utf-8") as f:
+        json.dump({}, f)
+    update_html(slug)
+    continue
+
+video_list = []
+
+# --- Önceki history verisini yükle ---
+if os.path.exists(history_file):
+    with open(history_file, "r", encoding="utf-8") as f:
+        old_history = json.load(f)
+else:
+    old_history = {}
+
+old_ranks = {vid: data.get("rank", idx+1) for idx, (vid, data) in enumerate(old_history.items())}
+
+# --- Videoları işleme ---
+for idx, item in enumerate(items, start=1):
+    video_id = item["id"]
+
+    try:
+        views_int = int(item["statistics"].get("viewCount", 0))
+    except:
+        views_int = 0
+
+    if views_int >= 1_000_000_000:
+        views_str = f"{views_int / 1_000_000_000:.1f}B views"
+    elif views_int >= 1_000_000:
+        views_str = f"{views_int / 1_000_000:.1f}M views"
+    elif views_int >= 1_000:
+        views_str = f"{views_int / 1_000:.1f}K views"
+    else:
+        views_str = f"{views_int} views"
+
+    title = item["snippet"]["title"]
+    channel = item["snippet"]["channelTitle"]
+    published_at = item["snippet"]["publishedAt"]
+    thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
+    video_url = f"https://www.youtube.com/watch?v={video_id}"
+    embed_url = f"https://www.youtube.com/embed/{video_id}"
+    formatted_date = datetime.fromisoformat(
+        published_at.replace("Z", "+00:00")
+    ).strftime("%d.%m.%Y")
+
+    # --- View Change ---
+    old_views = old_history.get(video_id, {}).get("views", 0)
+    view_diff = views_int - old_views
+    trend = "up" if view_diff > 0 else "down" if view_diff < 0 else "stable"
+    view_change_str = f"{view_diff:+,}"
+
+    # --- Structured Data description temizleme ---
+    raw_description = item["snippet"].get("description", "").strip().replace("\n", " ")
+    if not raw_description or raw_description.lower().startswith("http") or len(raw_description) < 10:
+        cleaned_description = f"{title} by {channel}"
+    else:
+        cleaned_description = raw_description[:200]
+
+    video_obj = {
+        "id": video_id,
+        "title": title,
+        "channel": channel,
+        "views": views_int,
+        "views_str": views_str,
+        "url": video_url,
+        "embed_url": embed_url,
+        "thumbnail": thumbnail,
+        "published_at": published_at,
+        "published_date_formatted": formatted_date,
+        "viewChange": view_diff,
+        "viewChange_str": view_change_str,
+        "trend": trend
     }
 
-    response = requests.get(API_URL, params=params)
-    if response.status_code != 200:
-        print(f"❌ API Hatası ({code}): {response.status_code}")
-        continue
-
-    items = response.json().get("items", [])
-    if not items:
-        print(f"⚠️ {slug} için API'den veri gelmedi.")
-        # Boş veri dosyaları oluştur
-        with open(video_file, "w", encoding="utf-8") as f:
-            json.dump([], f)
-        with open(struct_file, "w", encoding="utf-8") as f:
-            json.dump([], f)
-        with open(history_file, "w", encoding="utf-8") as f:
-            json.dump([], f)
-        update_html(slug)
-        continue
-
-    # --- Video verilerini topla ---
-    video_list = []
-
-    for idx, item in enumerate(items, start=1):
-        try:
-            views_int = int(item["statistics"].get("viewCount", 0))
-        except:
-            views_int = 0
-
-        if views_int >= 1_000_000_000:
-            views_str = f"{views_int / 1_000_000_000:.1f}B views"
-        elif views_int >= 1_000_000:
-            views_str = f"{views_int / 1_000_000:.1f}M views"
-        elif views_int >= 1_000:
-            views_str = f"{views_int / 1_000:.1f}K views"
-        else:
-            views_str = f"{views_int} views"
-
-        video_id = item["id"]
-        title = item["snippet"]["title"]
-        channel = item["snippet"]["channelTitle"]
-        published_at = item["snippet"]["publishedAt"]
-        thumbnail = item["snippet"]["thumbnails"]["medium"]["url"]
-        video_url = f"https://www.youtube.com/watch?v={video_id}"
-        embed_url = f"https://www.youtube.com/embed/{video_id}"
-        formatted_date = datetime.fromisoformat(
-            published_at.replace("Z", "+00:00")
-        ).strftime("%d.%m.%Y")
-
-        # --- View Change ---
-        old_views = old_history.get(video_id, 0)
-        view_diff = views_int - old_views
-        trend = "up" if view_diff > 0 else "down" if view_diff < 0 else "stable"
-        view_change_str = f"{view_diff:+,}"
-
-        # --- Rank Change ---
-        old_rank = old_ranks.get(video_id, idx)
-        rank_change = old_rank - idx if old_rank else 0
-
-        video_data = {
-            "id": video_id,
-            "title": title,
-            "channel": channel,
-            "views": views_int,
-            "views_str": views_str,
-            "url": video_url,
-            "embed_url": embed_url,
-            "thumbnail": thumbnail,
-            "published_at": published_at,
-            "published_date_formatted": formatted_date,
-            "rank": idx,
-            "rankChange": rank_change,
-            "viewChange": view_diff,
-            "viewChange_str": view_change_str,
-            "trend": trend
+    struct_obj = {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": title,
+        "description": cleaned_description,
+        "thumbnailUrl": [thumbnail],
+        "uploadDate": published_at,
+        "contentUrl": video_url,
+        "embedUrl": embed_url,
+        "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": {"@type": "WatchAction"},
+            "userInteractionCount": views_int
         }
+    }
 
-        raw_description = item["snippet"].get("description", "").strip().replace("\n", " ")
-        if not raw_description or raw_description.lower().startswith("http") or len(raw_description) < 10:
-            cleaned_description = f"{title} by {channel}"
-        else:
-            cleaned_description = raw_description[:200]
+    video_list.append((video_obj, struct_obj))
 
-        struct_data = {
-            "@context": "https://schema.org",
-            "@type": "VideoObject",
-            "name": title,
-            "description": cleaned_description,
-            "thumbnailUrl": [thumbnail],
-            "uploadDate": published_at,
-            "contentUrl": video_url,
-            "embedUrl": embed_url,
-            "interactionStatistic": {
-                "@type": "InteractionCounter",
-                "interactionType": {"@type": "WatchAction"},
-                "userInteractionCount": views_int
-            }
-        }
+# --- Son 3 saatteki izlenme artışına göre sırala ---
+video_list.sort(key=lambda x: x[0]["viewChange"], reverse=True)
 
-        # Tek listede topla
-        video_list.append((video_data, struct_data))
+# --- Sıralama SONRASI rank ve rankChange'i güncelle ---
+videos = []
+structured = []
+for new_idx, (v, s) in enumerate(video_list, start=1):
+    old_rank = old_ranks.get(v["id"], new_idx)
+    rank_change = old_rank - new_idx   # 5 -> 2 = +3 (yükselme pozitif)
+    v["rank"] = new_idx
+    v["rankChange"] = rank_change
+    v["rankChange_str"] = f"{rank_change:+d}"
+    videos.append(v)
+    structured.append(s)
 
-    # --- Son 3 saatteki izlenme artışına göre sırala ---
-    video_list.sort(key=lambda x: x[0]["viewChange"], reverse=True)
+# --- Dosyaları kaydet ---
+with open(video_file, "w", encoding="utf-8") as f:
+    json.dump(videos, f, ensure_ascii=False, indent=2)
 
-    # Listeleri ayır
-    videos = [v[0] for v in video_list]
-    structured = [v[1] for v in video_list]
+with open(struct_file, "w", encoding="utf-8") as f:
+    json.dump(structured, f, ensure_ascii=False, indent=2)
 
-    # --- Kaydet ---
-    with open(video_file, "w", encoding="utf-8") as f:
-        json.dump(videos, f, ensure_ascii=False, indent=2)
-    with open(struct_file, "w", encoding="utf-8") as f:
-        json.dump(structured, f, ensure_ascii=False, indent=2)
-    with open(history_file, "w", encoding="utf-8") as f:
-        json.dump(videos, f, ensure_ascii=False, indent=2)
+# --- Yeni history kaydı ---
+new_history = {
+    v["id"]: {
+        "views": v["views"],
+        "rank": v["rank"]
+    } for v in videos
+}
+with open(history_file, "w", encoding="utf-8") as f:
+    json.dump(new_history, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ {video_file}, {struct_file}, {history_file} oluşturuldu.")
-    update_html(slug)
+# --- HTML Güncelle ---
+update_html(slug)
