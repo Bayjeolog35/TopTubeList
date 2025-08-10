@@ -915,8 +915,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     # 🎯 STRUCTURED: sadece ilk structured item’ı al
     structured_block = ""
-    if structured_data and isinstance(structured_data, list) and structured_data:
-        structured_block = f'<script type="application/ld+json">\n{json.dumps(structured_data, indent=2)}\n</script>'
+if structured_data and isinstance(structured_data, list):
+    structured_block = (
+        '<script type="application/ld+json">\n'
+        + json.dumps(structured_data, ensure_ascii=False, indent=2)
+        + '\n</script>'
+    )
 
     current_date = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
 
@@ -933,10 +937,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <meta name="google-adsense-account" content="ca-pub-6698104628153103">
   <link rel="canonical" href="https://toptubelist.com/{name}.html">
   <link rel="stylesheet" href="style.css">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103"
-     crossorigin="anonymous"></script>
- <script type="application/ld+json">
-<!-- STRUCTURED_DATA_HERE -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103" crossorigin="anonymous"></script>
+  {structured_block}
 </script>
 </head>
 <body>
@@ -1263,7 +1265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- IFRAME_VIDEO_HERE -->
-<!-- IFRAME_VIDEO_HERE -->
+<!-- IFRAME_VIDEO_HERE_END -->
  
 <footer>
   <div class="contact-section">
