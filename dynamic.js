@@ -27,17 +27,23 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
 
 
     // --- Helper Functions ---
-
+    function setNoDataMode(on) {
+  const main = document.querySelector("main");
+  if (main) main.classList.toggle("centered-no-data", !!on);
+  // İstersen: panel için de özel sınıf
+  if (countryPanel) countryPanel.classList.toggle("pinned", !!on);
+  if (loadMoreButton) loadMoreButton.style.display = on ? "none" : "block";
+}
     /**
      * Gets the country name from the current URL pathname.
      * Example: /path/to/country.html -> country
      */
     function getCountryFromURL() {
-        const path = window.location.pathname;
-        const filename = path.split('/').pop(); // örnek: "turkey.html", "index.html", veya ""
-        if (!filename || filename === "" || filename === "index.html") return "index";
-        return filename.replace('.html', '').toLowerCase();
-    }
+  const path = window.location.pathname.replace(/\/+$/, ""); // sondaki "/" sil
+  let slug = path.split("/").pop() || "index";
+  if (slug.endsWith(".html")) slug = slug.slice(0, -5); // ".html" kırp
+  return slug.toLowerCase();
+}
 function createVideoCard(video) {
   // --- İzlenme sayısını kısalt ---
   function formatViews(num) {
@@ -199,7 +205,8 @@ function createVideoCard(video) {
                 <p>Why not explore what’s trending elsewhere? 🌍</p>
             </div>
         ;
-
+        setNoDataMode(true);   // <-- SADECE BURASI
+}
         // sadece veri yoksa main'e class ekle
 const mainElement = document.querySelector("main");
 if (mainElement) {
@@ -268,35 +275,29 @@ if (mainElement) {
      * Renders videos into the videoListContainer based on displayCount.
      */
     function renderVideos() {
-        if (!videoListContainer) {
-            console.warn("videoListContainer bulunamadı, videolar render edilemiyor.");
-            return;
-        }
+  if (!videoListContainer) return;
 
-        videoListContainer.innerHTML = ""; // Mevcut videoları temizle
-        const videosToDisplay = allVideos.slice(0, displayCount);
+  videoListContainer.innerHTML = "";
+  const videosToDisplay = allVideos.slice(0, displayCount);
 
-        if (videosToDisplay.length === 0) {
-            showNoDataMessage();
-            return;
-        }
+  if (videosToDisplay.length === 0) {
+    showNoDataMessage();
+    return;
+  }
 
-        videosToDisplay.forEach(video => {
-            const card = createVideoCard(video);
-            videoListContainer.appendChild(card);
-        });
+  // Veri varsa no-data modundan çık
+  setNoDataMode(false);   // <-- BURAYI EKLE
 
-        // Load More butonunun görünürlüğünü yönet
-        if (loadMoreButton) {
-            if (displayCount >= allVideos.length) {
-                loadMoreButton.style.display = "none"; // Tüm videolar gösterildiyse gizle
-            } else {
-                loadMoreButton.style.display = "block"; // Daha fazla video varsa göster
-            }
-        }
-    }
+  videosToDisplay.forEach(v => {
+    const card = createVideoCard(v);
+    videoListContainer.appendChild(card);
+  });
 
-
+  if (loadMoreButton) {
+    loadMoreButton.style.display =
+      displayCount >= allVideos.length ? "none" : "block";
+  }
+}
 
     // --- Event Listeners and Initial Setup ---
 
