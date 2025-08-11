@@ -782,6 +782,9 @@ body.dark-mode .rank-down {
     pointer-events: none;
   }
 }
-
-
-
+@media (hover:none) {
+  .video-card:hover { transform: none; }
+}
+@media (max-width:480px) {
+  .video-card { box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+}
