@@ -489,7 +489,10 @@ function createVideoCard(video) {
 
     // Sayfa yüklendiğinde videoları yükle
 loadVideos();
-    
-    function toTitleCase(str) {
-    return str.replace(/\w\S*/g, word => word.charAt(0).toUpperCase() + word.substring(1).toLowerCase());
+
+}); //  👈 DOMContentLoaded dinleyicisini KAPAT
+
+// İstersen bu fonksiyon global kalsın (dinleyici dışında)
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, word => word.charAt(0).toUpperCase() + word.substring(1).toLowerCase());
 }
