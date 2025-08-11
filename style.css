@@ -644,13 +644,6 @@ main.centered-no-data {
   display: block; 
 }
 
-.video-thumbnail .thumbnail {
-  width: 180px;
-  height: 101px; /* 16:9'a yakın sabit yükseklik */
-  object-fit: cover;
-  display: block;
-}
-
 .trend-icon {
   width: 20px;
   height: 20px;
@@ -789,5 +782,6 @@ body.dark-mode .rank-down {
     pointer-events: none;
   }
 }
+
 
 
