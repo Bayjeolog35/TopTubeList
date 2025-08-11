@@ -27,23 +27,17 @@ document.addEventListener("DOMContentLoaded", async () => { // <--- BURAYI 'asyn
 
 
     // --- Helper Functions ---
-    function setNoDataMode(on) {
-  const main = document.querySelector("main");
-  if (main) main.classList.toggle("centered-no-data", !!on);
-  // İstersen: panel için de özel sınıf
-  if (countryPanel) countryPanel.classList.toggle("pinned", !!on);
-  if (loadMoreButton) loadMoreButton.style.display = on ? "none" : "block";
-}
+
     /**
      * Gets the country name from the current URL pathname.
      * Example: /path/to/country.html -> country
      */
     function getCountryFromURL() {
-  const path = window.location.pathname.replace(/\/+$/, ""); // sondaki "/" sil
-  let slug = path.split("/").pop() || "index";
-  if (slug.endsWith(".html")) slug = slug.slice(0, -5); // ".html" kırp
-  return slug.toLowerCase();
-}
+        const path = window.location.pathname.replace(/\/+$/, "");
+        let slug = path.split("/").pop() || "index";
+        if (slug.endsWith(".html")) slug = slug.slice(0, -5); // ".html" kırp
+        return slug.toLowerCase();
+    }
 function createVideoCard(video) {
   // --- İzlenme sayısını kısalt ---
   function formatViews(num) {
@@ -205,8 +199,7 @@ function createVideoCard(video) {
                 <p>Why not explore what’s trending elsewhere? 🌍</p>
             </div>
         ;
-        setNoDataMode(true);   // <-- SADECE BURASI
-}
+
         // sadece veri yoksa main'e class ekle
 const mainElement = document.querySelector("main");
 if (mainElement) {
@@ -275,29 +268,35 @@ if (mainElement) {
      * Renders videos into the videoListContainer based on displayCount.
      */
     function renderVideos() {
-  if (!videoListContainer) return;
+        if (!videoListContainer) {
+            console.warn("videoListContainer bulunamadı, videolar render edilemiyor.");
+            return;
+        }
 
-  videoListContainer.innerHTML = "";
-  const videosToDisplay = allVideos.slice(0, displayCount);
+        videoListContainer.innerHTML = ""; // Mevcut videoları temizle
+        const videosToDisplay = allVideos.slice(0, displayCount);
 
-  if (videosToDisplay.length === 0) {
-    showNoDataMessage();
-    return;
-  }
+        if (videosToDisplay.length === 0) {
+            showNoDataMessage();
+            return;
+        }
 
-  // Veri varsa no-data modundan çık
-  setNoDataMode(false);   // <-- BURAYI EKLE
+        videosToDisplay.forEach(video => {
+            const card = createVideoCard(video);
+            videoListContainer.appendChild(card);
+        });
 
-  videosToDisplay.forEach(v => {
-    const card = createVideoCard(v);
-    videoListContainer.appendChild(card);
-  });
+        // Load More butonunun görünürlüğünü yönet
+        if (loadMoreButton) {
+            if (displayCount >= allVideos.length) {
+                loadMoreButton.style.display = "none"; // Tüm videolar gösterildiyse gizle
+            } else {
+                loadMoreButton.style.display = "block"; // Daha fazla video varsa göster
+            }
+        }
+    }
 
-  if (loadMoreButton) {
-    loadMoreButton.style.display =
-      displayCount >= allVideos.length ? "none" : "block";
-  }
-}
+
 
     // --- Event Listeners and Initial Setup ---
 
