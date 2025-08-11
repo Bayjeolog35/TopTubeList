@@ -235,8 +235,6 @@ function createVideoCard(video) {
       ? "index.videos.json"
       : `${country}.vid.data.json`;
 
-  console.log(`Veri yükleme denemesi: ${dataFile}`);
-
   try {
     const response = await fetch(dataFile);
     if (!response.ok) {
@@ -247,73 +245,65 @@ function createVideoCard(video) {
     }
 
     const jsonData = await response.json();
-    console.log(
-      "Yüklenen JSON verisi (ilk 5 video):",
-      Array.isArray(jsonData) ? jsonData.slice(0, 5) : jsonData
-    );
+    if (!Array.isArray(jsonData)) throw new Error("Yüklenen veri bir dizi değil.");
 
-    if (!Array.isArray(jsonData)) {
-      throw new Error("Yüklenen veri bir dizi değil.");
-    }
-
-    // Normalize + sort
-    allVideos = jsonData.map(v => ({
-      ...v,
-      viewChange: Number(v?.viewChange) || 0
-    }));
+    allVideos = jsonData.map(v => ({ ...v, viewChange: Number(v?.viewChange) || 0 }));
     allVideos.sort((a, b) => b.viewChange - a.viewChange);
-
-    if (allVideos.length === 0) {
-      throw new Error("Video verisi boş.");
-    }
 
     if (country !== "index" && country !== "") {
       document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
     }
 
-    renderVideos();
+    displayCount = 10;
+    renderInitial(); // ⬅️ yeni fonksiyon (aşağıda)
+
   } catch (error) {
     console.error("Veri yükleme hatası:", error);
     showNoDataMessage();
   }
 }
 
-    /**
-     * Renders videos into the videoListContainer based on displayCount.
-     */
-    function renderVideos() {
-        if (!videoListContainer) {
-            console.warn("videoListContainer bulunamadı, videolar render edilemiyor.");
-            return;
-        }
 
-        videoListContainer.innerHTML = ""; // Mevcut videoları temizle
-        ["display","flexDirection","alignItems","justifyContent","minHeight","gap","textAlign"]
-            .forEach(p => videoListContainer.style.removeProperty(p));
-        
-        const videosToDisplay = allVideos.slice(0, displayCount);
+    function toggleLoadMore() {
+  if (!loadMoreButton) return;
+  loadMoreButton.style.display = displayCount >= allVideos.length ? "none" : "block";
+}
 
-        if (videosToDisplay.length === 0) {
-            showNoDataMessage();
-            return;
-        }
+function appendRange(start, end) {
+  const frag = document.createDocumentFragment();
+  for (let i = start; i < end; i++) {
+    const card = createVideoCard(allVideos[i]);
+    frag.appendChild(card);
+  }
+  videoListContainer.appendChild(frag);
+}
 
-        videosToDisplay.forEach(video => {
-            const card = createVideoCard(video);
-            videoListContainer.appendChild(card);
-        });
+function renderInitial() {
+  if (!videoListContainer) return;
+  // no-data inline stillerini temizle
+  ["display","flexDirection","alignItems","justifyContent","minHeight","gap","textAlign"]
+    .forEach(p => videoListContainer.style.removeProperty(p));
 
-        // Load More butonunun görünürlüğünü yönet
-        if (loadMoreButton) {
-            if (displayCount >= allVideos.length) {
-                loadMoreButton.style.display = "none"; // Tüm videolar gösterildiyse gizle
-            } else {
-                loadMoreButton.style.display = "block"; // Daha fazla video varsa göster
-            }
-        }
+  videoListContainer.innerHTML = "";
+  const end = Math.min(displayCount, allVideos.length);
+
+  if (end === 0) { showNoDataMessage(); return; }
+
+  // İlk yükte 10 kartı ekle (idle ile parça parça)
+  const chunk = 5;
+  let i = 0;
+  function pump() {
+    const to = Math.min(i + chunk, end);
+    appendRange(i, to);
+    i = to;
+    if (i < end) {
+      (window.requestIdleCallback ? requestIdleCallback : setTimeout)(pump, 0);
     }
+  }
+  pump();
 
-
+  toggleLoadMore();
+}
 
     // --- Event Listeners and Initial Setup ---
 
@@ -353,7 +343,6 @@ function createVideoCard(video) {
             // }
         });
     }
-
 
     // Dark Mode Toggle
     if (savedMode === "true") { // savedMode artık global scope'ta tanımlı, sorun yok
@@ -478,15 +467,16 @@ function createVideoCard(video) {
         });
     }
 
-    // Load More Button
-    if (loadMoreButton) {
-        loadMoreButton.addEventListener("click", () => {
-            displayCount += 10;
-            renderVideos();
-            window.scrollBy({ top: 300, behavior: 'smooth' });
-        });
-    }
-
+   if (loadMoreButton) {
+  loadMoreButton.addEventListener("click", () => {
+    const prev = displayCount;
+    displayCount = Math.min(displayCount + 10, allVideos.length);
+    const run = () => appendRange(prev, displayCount);
+    (window.requestIdleCallback ? requestIdleCallback : setTimeout)(run, 0);
+    toggleLoadMore();
+    window.scrollBy({ top: 300, behavior: 'smooth' });
+  });
+}
     // Sayfa yüklendiğinde videoları yükle
 loadVideos();
 
