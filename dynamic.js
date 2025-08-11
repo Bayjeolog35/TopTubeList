@@ -118,12 +118,10 @@ function createVideoCard(video) {
 
   // --- KART HTML ---
   card.innerHTML =
-    '<div class="thumb-wrap">' +
-  '<a href="' + video.url + '" target="_blank" rel="noopener" class="video-thumbnail">' +
-    '<img class="thumbnail" src="' + video.thumbnail + '" alt="' + video.title.replace(/"/g, "&quot;") + '" loading="lazy" width="320" height="180" />' +
-    durationHtml +
-  '</a>' +
-'</div>'
+    '<a href="' + video.url + '" target="_blank" rel="noopener" class="video-thumbnail">' +
+      '<img class="thumbnail" src="' + video.thumbnail + '" alt="' + video.title.replace(/"/g, "&quot;") + '" loading="lazy" />' +
+      durationHtml +
+    "</a>" +
     '<div class="video-info">' +
       "<h2>" + video.title + "</h2>" +
       "<p><strong>Channel:</strong> " + video.channel + "</p>" +
@@ -187,41 +185,32 @@ function createVideoCard(video) {
      * Displays a message when no video data is available for a country.
      */
     function showNoDataMessage() {
-  if (!videoListContainer) {
-    console.warn("videoListContainer bulunamadı. 'No Data' mesajı gösterilemiyor.");
-    return;
-  }
+        if (!videoListContainer) {
+            console.warn("videoListContainer bulunamadı. 'No Data' mesajı gösterilemiyor.");
+            return;
+        }
 
-  // Mesaj içeriği
-  videoListContainer.innerHTML = `
-    <div class="no-data-message">
-      <img src="nodata.webp" alt="No data" width="100">
-      <h2>Oops... No trending videos here 😔</h2>
-      <p><strong>YouTube doesn’t currently share data for this country.</strong></p>
-      <p>But don’t worry. The rest of the world is buzzing with viral content!</p>
-      <p>Why not explore what’s trending elsewhere? 🌍</p>
-    </div>
-  `;
+        videoListContainer.innerHTML = 
+            <div class="no-data-message">
+                <img src="nodata.webp" alt="No data" width="100">
+                <h2>Oops... No trending videos here 😔</h2>
+                <p><strong>YouTube doesn’t currently share data for this country.</strong></p>
+                <p>But don’t worry. The rest of the world is buzzing with viral content!</p>
+                <p>Why not explore what’s trending elsewhere? 🌍</p>
+            </div>
+        ;
 
-  // SADECE içerik konteynerini ortala — sol paneli etkileme
-  Object.assign(videoListContainer.style, {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    minHeight: "50vh",
-    gap: "8px",
-    textAlign: "center",
-  });
-
-  // (ÖNCEKİ KODU SİL) >>> main'e class ekleme YOK
-  // const mainElement = document.querySelector("main");
-  // if (mainElement) mainElement.classList.add("centered-no-data");
-
-  if (loadMoreButton) {
-    loadMoreButton.style.display = "none";
-  }
+        // sadece veri yoksa main'e class ekle
+const mainElement = document.querySelector("main");
+if (mainElement) {
+  mainElement.classList.add("centered-no-data");
 }
+        
+        // Load More butonunu gizle, eğer mevcutsa
+        if (loadMoreButton) {
+            loadMoreButton.style.display = "none";
+        }
+    }
     
     /**
      * Fetches video data for the current country and renders it.
@@ -285,10 +274,6 @@ function createVideoCard(video) {
         }
 
         videoListContainer.innerHTML = ""; // Mevcut videoları temizle
-
-        // no-data inline stillerini temizle
-        ["display","flexDirection","alignItems","justifyContent","minHeight","gap","textAlign"]
-          .forEach(p => videoListContainer.style.removeProperty(p));
         const videosToDisplay = allVideos.slice(0, displayCount);
 
         if (videosToDisplay.length === 0) {
@@ -485,14 +470,10 @@ function createVideoCard(video) {
         });
     }
 
-    // Sayfa yüklendiğinde videoları yüklemeyi başlat (boyayı bloklama)
-if ('requestIdleCallback' in window) {
-  requestIdleCallback(() => loadVideos());
-} else {
-  setTimeout(() => loadVideos(), 0);
-}
+    // Sayfa yüklendiğinde videoları yüklemeyi başlat
+    await loadVideos(); // <--- BURAYI 'await' OLARAK İŞARETLEDİK!
+}); // <-- BURASI KODUN SONU OLMALI, ALTINDA HİÇBİR ŞEY OLMAMALI
 
     function toTitleCase(str) {
     return str.replace(/\w\S*/g, word => word.charAt(0).toUpperCase() + word.substring(1).toLowerCase());
 }
-
