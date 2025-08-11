@@ -233,33 +233,34 @@ function createVideoCard(video) {
   const dataFile =
     country === "index" || country === ""
       ? "index.videos.json"
-      : ${country}.vid.data.json;
+      : `${country}.vid.data.json`;
 
-  console.log(Veri yükleme denemesi: ${dataFile});
+  console.log(`Veri yükleme denemesi: ${dataFile}`);
 
   try {
     const response = await fetch(dataFile);
     if (!response.ok) {
       if (response.status === 404) {
-        throw new Error('${dataFile}' dosyası bulunamadı. URL: ${response.url});
+        throw new Error(`'${dataFile}' dosyası bulunamadı. URL: ${response.url}`);
       }
-      throw new Error(Veri yüklenirken HTTP hatası: ${response.status} ${response.statusText});
+      throw new Error(`Veri yüklenirken HTTP hatası: ${response.status} ${response.statusText}`);
     }
 
     const jsonData = await response.json();
-    console.log("Yüklenen JSON verisi (ilk 5 video):", Array.isArray(jsonData) ? jsonData.slice(0, 5) : jsonData);
+    console.log(
+      "Yüklenen JSON verisi (ilk 5 video):",
+      Array.isArray(jsonData) ? jsonData.slice(0, 5) : jsonData
+    );
 
     if (!Array.isArray(jsonData)) {
       throw new Error("Yüklenen veri bir dizi değil.");
     }
 
-    // Normalize et: viewChange sayıya çevrilir; yoksa 0 yapılır
+    // Normalize + sort
     allVideos = jsonData.map(v => ({
       ...v,
       viewChange: Number(v?.viewChange) || 0
     }));
-
-    // Son 3 saatteki izlenme artışına göre (büyükten küçüğe) sırala
     allVideos.sort((a, b) => b.viewChange - a.viewChange);
 
     if (allVideos.length === 0) {
@@ -267,7 +268,7 @@ function createVideoCard(video) {
     }
 
     if (country !== "index" && country !== "") {
-      document.title = Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList;
+      document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
     }
 
     renderVideos();
@@ -276,6 +277,7 @@ function createVideoCard(video) {
     showNoDataMessage();
   }
 }
+
     /**
      * Renders videos into the videoListContainer based on displayCount.
      */
