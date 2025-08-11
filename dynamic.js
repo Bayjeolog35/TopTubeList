@@ -485,11 +485,14 @@ function createVideoCard(video) {
         });
     }
 
-   - // Sayfa yüklendiğinde videoları yüklemeyi başlat
-- await loadVideos(); // <--- BURAYI 'await' OLARAK İŞARETLEDİK!
-+ // Sayfa yüklendiğinde videoları yüklemeyi başlat (boyayı engelleme)
-+ if ('requestIdleCallback' in window) {
-+   requestIdleCallback(() => loadVideos());
-+ } else {
-+   setTimeout(() => loadVideos(), 0);
-+ }
+    // Sayfa yüklendiğinde videoları yüklemeyi başlat (boyayı bloklama)
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(() => loadVideos());
+} else {
+  setTimeout(() => loadVideos(), 0);
+}
+
+    function toTitleCase(str) {
+    return str.replace(/\w\S*/g, word => word.charAt(0).toUpperCase() + word.substring(1).toLowerCase());
+}
+
