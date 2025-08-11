@@ -247,19 +247,15 @@ function createVideoCard(video) {
     }
 
     const jsonData = await response.json();
-    console.log("Yüklenen JSON verisi (ilk 5 video):", Array.isArray(jsonData) ? jsonData.slice(0, 5) : jsonData);
 
+    // 1) Normalize + sort (mevcut mantığın)
     if (!Array.isArray(jsonData)) {
       throw new Error("Yüklenen veri bir dizi değil.");
     }
-
-    // Normalize et: viewChange sayıya çevrilir; yoksa 0 yapılır
     allVideos = jsonData.map(v => ({
       ...v,
       viewChange: Number(v?.viewChange) || 0
     }));
-
-    // Son 3 saatteki izlenme artışına göre (büyükten küçüğe) sırala
     allVideos.sort((a, b) => b.viewChange - a.viewChange);
 
     if (allVideos.length === 0) {
@@ -270,13 +266,22 @@ function createVideoCard(video) {
       document.title = `Trending in ${country.charAt(0).toUpperCase() + country.slice(1)} | TopTubeList`;
     }
 
+    // 🔽🔽🔽 2) LCP için: ilk kart hemen, kalanı bir sonraki frame'de 🔽🔽🔽
+    const oldDisplay = displayCount;    // mevcut değeri sakla
+    displayCount = 1;                   // sadece ilk videoyu çiz
     renderVideos();
+
+    requestAnimationFrame(() => {
+      displayCount = Math.max(oldDisplay, 10); // 10+ tam listeye dön
+      renderVideos();
+    });
+    // 🔼🔼🔼 EKLEME BİTTİ 🔼🔼🔼
+
   } catch (error) {
     console.error("Veri yükleme hatası:", error);
     showNoDataMessage();
   }
 }
-
     /**
      * Renders videos into the videoListContainer based on displayCount.
      */
@@ -486,9 +491,12 @@ function createVideoCard(video) {
         });
     }
 
-    // Sayfa yüklendiğinde videoları yüklemeyi başlat
-    await loadVideos(); // <--- BURAYI 'await' OLARAK İŞARETLEDİK!
-}); // <-- BURASI KODUN SONU OLMALI, ALTINDA HİÇBİR ŞEY OLMAMALI
+    // Sayfa yüklendiğinde videoları yüklemeyi başlat (boyayı bloklama)
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(() => loadVideos());
+} else {
+  setTimeout(() => loadVideos(), 0);
+}
 
     function toTitleCase(str) {
     return str.replace(/\w\S*/g, word => word.charAt(0).toUpperCase() + word.substring(1).toLowerCase());
