@@ -118,10 +118,14 @@ function createVideoCard(video) {
 
   // --- KART HTML ---
   card.innerHTML =
+  '<div class="thumb-wrap">' +
     '<a href="' + video.url + '" target="_blank" rel="noopener" class="video-thumbnail">' +
-      '<img class="thumbnail" src="' + video.thumbnail + '" alt="' + video.title.replace(/"/g, "&quot;") + '" loading="lazy" />' +
+      '<img class="thumbnail" src="' + video.thumbnail + '" alt="' + video.title.replace(/"/g, "&quot;") + '" ' +
+      'loading="lazy" width="320" height="180" />' + // width/height ekledik
       durationHtml +
-    "</a>" +
+    '</a>' +
+  '</div>' +
+      
     '<div class="video-info">' +
       "<h2>" + video.title + "</h2>" +
       "<p><strong>Channel:</strong> " + video.channel + "</p>" +
