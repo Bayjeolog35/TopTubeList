@@ -316,36 +316,15 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   // Dark Mode Toggle
-// İlk yük: kaydedilmiş yoksa sistem temasını baz al
-const saved = localStorage.getItem("darkMode");
-const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-if (saved === null) {
-  localStorage.setItem("darkMode", String(systemPrefersDark));
-}
-
-if (localStorage.getItem("darkMode") === "true") {
-  document.body.classList.add("dark-mode");
-}
-
-if (darkModeToggle) {
-  // Görsel/erişilebilirlik
-  darkModeToggle.setAttribute("aria-pressed", document.body.classList.contains("dark-mode") ? "true" : "false");
-
-  // DEBUG (geçici): bağlanıyor mu görelim
-  console.debug("[dark] toggle hazır");
-
-  darkModeToggle.addEventListener("click", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const isDarkNow = document.body.classList.toggle("dark-mode");
-    localStorage.setItem("darkMode", String(isDarkNow));
-    darkModeToggle.setAttribute("aria-pressed", isDarkNow ? "true" : "false");
-    console.debug("[dark] tıklandı →", isDarkNow);
-  }, { passive: true });
-} else {
-  console.warn("#darkModeToggle bulunamadı (ID farklı mı, HTML’de yok mu?)");
-}
+  if (savedMode === "true") {
+    document.body.classList.add("dark-mode");
+  }
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", () => {
+      const isDarkNow = document.body.classList.toggle("dark-mode");
+      localStorage.setItem("darkMode", isDarkNow);
+    });
+  }
 
   // Harf Filtreleme
   document.querySelectorAll(".alphabet-letter").forEach(letter => {
