@@ -249,7 +249,7 @@ body.dark-mode .video-info a {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  max-height: 70vh;
+  max-height: 73vh;
   min-width: 160px;
   overflow-y: scroll;
   flex-direction: column;
@@ -777,6 +777,7 @@ body.dark-mode .rank-down {
     pointer-events: none;
   }
 }
+
 
 
 
