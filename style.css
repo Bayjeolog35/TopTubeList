@@ -62,13 +62,16 @@ header .container {
 #darkModeToggle:hover {
   background-color: #555;
 }
-
 @media (max-width: 768px) {
   #darkModeToggle {
-    display: none;
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    transform: none;
+    z-index: 10001; /* her şeyin üstünde */
+    display: block;
   }
 }
-
 /* === Karanlık Mod === */
 body.dark-mode {
   background-color: #181818;
@@ -772,3 +775,4 @@ body.dark-mode .rank-down {
     pointer-events: none;
   }
 }
+
