@@ -2,27 +2,33 @@
 <html lang="en">
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N865S9W3');</script>
-<!-- End Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N865S9W3');</script>
+  <!-- End Google Tag Manager -->
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103"
-     crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6698104628153103" crossorigin="anonymous"></script>
   <meta name="google-adsense-account" content="ca-pub-6698104628153103">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trending YouTube Videos in name | TopTubeList</title>
-  <meta name="description" content="Trending YouTube videos in name - Updated every 3 hours">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://toptubelist.com/index.html">
-   <!-- kritik: tarayıcıyı önceden ısıt -->
-  <link rel="stylesheet" href="style.css">
-  <script src="/dynamic.js"></script>
- <script type="application/ld+json">
-<!-- STRUCTURED_DATA_HERE -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Trending YouTube Videos in Worldwide | TopTubeList</title>
+  <meta name="description" content="Trending YouTube videos in Worldwide — updated every 3 hours." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.toptubelist.com/" />
+
+  <!-- Kritik: CSS önce -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Tek kopya JS, defer ile -->
+  <script src="/dynamic.js" defer></script>
+
+  <!-- JSON-LD: placeholder korundu, geçersiz içerik kaldırıldı -->
+  <script type="application/ld+json">
+  <!-- STRUCTURED_DATA_HERE -->
 [
   {
     "@context": "https://schema.org",
@@ -980,17 +986,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N865S9W3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="TopTubeListLogo.webp" alt="TopTubeList" width="120" height="64.8" loading="lazy">
-            </a>
-            <h1>Trending in Worldwide</h1>
-          <button id="darkModeToggle" title="Toggle Dark Mode">🌓</button>
-        </div>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N865S9W3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="TopTubeListLogo.webp" alt="TopTubeList" width="120" height="64.8" loading="lazy" />
+      </a>
+      <h1>Trending in Worldwide</h1>
+      <button id="darkModeToggle" title="Toggle Dark Mode">🌓</button>
+    </div>
         
 
    <nav id="continentNav">
@@ -1005,10 +1011,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <main class="main-content">
+    <button id="hamburgerBtn" class="hamburger">&#9776;</button>
 
-  <button id="hamburgerBtn" class="hamburger">&#9776;</button>
-  <div class="layout-wrapper">
-<div class="country-panel">
+    <div class="layout-wrapper">
+      <div class="country-panel">
   <div class="alphabet-column"> <a href="#" class="alphabet-letter" data-letter="all">All</a>
     <a href="#" class="alphabet-letter" data-letter="A">A</a>
     <a href="#" class="alphabet-letter" data-letter="B">B</a>
@@ -1261,45 +1267,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="/zambia" class="country-link">Zambia</a>
   <a href="/zimbabwe" class="country-link">Zimbabwe</a>
 </div>
-</main>
+</div>
 
-  <div id="videoList" class="video-list"></div>
-   <!-- videos embed here -->
-  <button id="loadMoreBtn" class="site-button">Load More</button>
- </div>
+   <!-- Video listesi ve Load More, MAIN içinde olmalı -->
+      <div id="videoList" class="video-list"></div>
+      <button id="loadMoreBtn" class="site-button">Load More</button>
+    </div>
 
-<!-- videoId missing for top video -->
-<section class="about-section">
-  <button id="aboutToggle" class="site-button">About Us</button>
-  <div id="aboutContent" style="display: none;">
-<p><strong>What is TopTubeList?</strong><br>
-    TopTubeList helps you quickly see what people are watching on YouTube. You can explore videos by continent or country. No clutter, no fancy talk. Just a clean snapshot of the most viewed videos — updated every 3 hours.</p>
+    <section class="about-section">
+      <button id="aboutToggle" class="site-button">About Us</button>
+      <div id="aboutContent" style="display: none;">
+        <p><strong>What is TopTubeList?</strong><br>
+        TopTubeList helps you quickly see what people are watching on YouTube. You can explore videos by continent or country. No clutter, no fancy talk. Just a clean snapshot of the most viewed videos — updated every 3 hours.</p>
 
-    <p><strong>Why did we build this site?</strong><br>
-    My wife was in the kitchen cooking. My mission was clear: to answer that sacred question… <em>“What should we watch while eating?”</em><br>
-    Then suddenly, I found myself thinking: <em>“What do other couples watch during dinner?”</em> So, like anyone else, I turned to Google.</p>
+        <p><strong>Why did we build this site?</strong><br>
+        My wife was in the kitchen cooking. My mission was clear: to answer that sacred question… <em>“What should we watch while eating?”</em><br>
+        Then suddenly, I found myself thinking: <em>“What do other couples watch during dinner?”</em> So, like anyone else, I turned to Google.</p>
 
-    <p><strong>And what did I find?</strong><br>
-    “Most watched videos in June”…<br>
-    “Top videos of 2025”…<br>
-    Basically, just a highlight reel of the past.<br>
-    But I wasn’t looking for nostalgia — I wanted to know what’s trending <strong>right now</strong>.</p>
+        <p><strong>And what did I find?</strong><br>
+        “Most watched videos in June”… “Top videos of 2025”… Basically, just a highlight reel of the past. But I wasn’t looking for nostalgia — I wanted to know what’s trending <strong>right now</strong>.</p>
 
-    <p>That day, we may not have found the perfect video to watch...<br>
-    But I realized we weren’t alone.<br>
-    There must be thousands of people wondering the exact same thing.<br>
-    And that’s when the idea of TopTubeList was born.</p>
+        <p>That day, we may not have found the perfect video to watch... But I realized we weren’t alone. There must be thousands of people wondering the exact same thing. And that’s when the idea of TopTubeList was born.</p>
 
-    <p><strong>And the cherry on top?</strong><br>
-    For creators who make “compilation videos” using trending clips, this site is basically a goldmine.</p>
+        <p><strong>And the cherry on top?</strong><br>
+        For creators who make “compilation videos” using trending clips, this site is basically a goldmine.</p>
 
-    <p><strong>How does it work?</strong><br>
-    Every 3 hours, we pull the most popular videos using YouTube’s official Data API. Then we sort them by country and continent, so you can easily see what’s trending anywhere in the world.</p>
+        <p><strong>How does it work?</strong><br>
+        Every 3 hours, we pull the most popular videos using YouTube’s official Data API. Then we sort them by country and continent, so you can easily see what’s trending anywhere in the world.</p>
 
-    <p><strong>This is TopTubeList.</strong><br>
-    If it’s trending, chances are… we’ve already listed it. 😉</p>
-  </div>
-</section>
+        <p><strong>This is TopTubeList.</strong> If it’s trending, chances are… we’ve already listed it. 😉</p>
+      </div>
+    </section>
+
 
 <!-- IFRAME_VIDEO_HERE -->
 <iframe 
@@ -1313,7 +1312,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   style="position:absolute; width:1px; height:1px; left:-9999px;">
 </iframe>
 <!-- IFRAME_VIDEO_HERE_END -->
-    
+ </main>    
 <footer>
   <div class="contact-section">
     <button id="contactToggle" class="site-button">Contact Us</button>
