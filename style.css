@@ -7,9 +7,10 @@ html, body, .country-panel .country-link{
 /* Metin boyutu şişirmeyi kapat */
 html{ -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
-/* === Genel Ayarlar === */
+/* Inter zincirini koru */
 body {
-  font-family: Arial, sans-serif;
+  /* font-family satırını kaldır veya: */
+  font-family: inherit;
   background-color: #f9f9f9;
   margin: 0;
   padding: 0;
@@ -265,7 +266,7 @@ body.dark-mode .video-info a {
   flex-shrink: 0;
 }
 
-
+/*
 .country-column {
   display: flex;
   flex-direction: column;
@@ -275,7 +276,6 @@ body.dark-mode .video-info a {
   overflow-y: scroll;
   flex-direction: column;
 }
-
 
 .country-panel .country-link {
   padding: 6px 10px;
@@ -294,7 +294,7 @@ body.dark-mode .video-info a {
   text-decoration: none; /* altı çizgiyi kaldırır */
   cursor: pointer;
 }
-
+*/
 
 .country-panel button:hover {
 }
@@ -798,6 +798,7 @@ body.dark-mode .rank-down {
     pointer-events: none;
   }
 }
+
 
 
 
