@@ -241,7 +241,7 @@ body.dark-mode .video-info a {
 }
 
 
-.country-column {
+
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -375,6 +375,7 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
     overflow-y: auto;
     height: 100%;
     min-width: 180px;
+    max-height: 60vh;
   }
 
   /* Normalde mobilde paneli tamamen gizle */
@@ -772,3 +773,4 @@ body.dark-mode .rank-down {
     pointer-events: none;
   }
 }
+
