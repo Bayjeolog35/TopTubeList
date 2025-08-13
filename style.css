@@ -1,7 +1,6 @@
-/* Inter zincirini koru */
+/* === Genel Ayarlar === */
 body {
-  /* font-family satırını kaldır veya: */
-  font-family: inherit;
+  font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   margin: 0;
   padding: 0;
@@ -64,13 +63,11 @@ header .container {
   background-color: #555;
 }
 
-/* BUNU KALDIR */
 @media (max-width: 768px) {
   #darkModeToggle {
     display: none;
   }
 }
-
 
 /* === Karanlık Mod === */
 body.dark-mode {
@@ -229,12 +226,19 @@ body.dark-mode .video-info a {
 }
 
 /* Ülke butonları */
-/* — Cross-browser kesin sabitleme — */
-.country-panel { --country-link-width: 180px; }  /* masaüstü */
-@media (max-width: 768px){
-  .country-panel { --country-link-width: 160px; } /* mobil */
-}
 
+/* Sol panel tüm ülke barı */
+.country-panel {
+  display: flex;
+  background-color: var(--bg);
+  padding: 48px;
+  gap: 8px;
+  position: fixed;
+  top: 78.5px;
+  z-index: 10;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
 
 
 .country-column {
@@ -246,6 +250,7 @@ body.dark-mode .video-info a {
   overflow-y: scroll;
   flex-direction: column;
 }
+
 
 .country-panel .country-link {
   padding: 6px 10px;
@@ -264,7 +269,6 @@ body.dark-mode .video-info a {
   text-decoration: none; /* altı çizgiyi kaldırır */
   cursor: pointer;
 }
-
 
 .country-panel button:hover {
 }
@@ -336,12 +340,12 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
     max-height: 100%;
     background: rgb(255 255 255 / 79%);
     z-index: 9998;
-    padding: 12px;
+    padding: 16px;
     border-radius: 12px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.25);
     display: flex;
     flex-direction: row;
-    gap: 6px;
+    gap: 16px;
     flex-wrap: nowrap;
     opacity: 0;
     visibility: hidden;
@@ -357,8 +361,8 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
   .alphabet-column {
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    width: 36px;
+    gap: 4px;
+    width: 50px;
     max-height: 60vh;
     overflow-y: auto;
     flex-shrink: 0;
@@ -768,13 +772,3 @@ body.dark-mode .rank-down {
     pointer-events: none;
   }
 }
-
-
-
-
-
-
-
-
-
-
