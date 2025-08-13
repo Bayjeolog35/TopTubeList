@@ -1,5 +1,12 @@
 /* global reset önerisi */
 * { box-sizing: border-box; }
+/* Tüm sitede sabit font ailesi */
+html, body, .country-panel .country-link{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+}
+/* Metin boyutu şişirmeyi kapat */
+html{ -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
 /* === Genel Ayarlar === */
 body {
   font-family: Arial, sans-serif;
@@ -791,6 +798,7 @@ body.dark-mode .rank-down {
     pointer-events: none;
   }
 }
+
 
 
 
