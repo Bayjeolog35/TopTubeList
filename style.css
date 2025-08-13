@@ -241,7 +241,7 @@ body.dark-mode .video-info a {
 }
 
 
-
+.country-column {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -772,5 +772,3 @@ body.dark-mode .rank-down {
     pointer-events: none;
   }
 }
-
-
