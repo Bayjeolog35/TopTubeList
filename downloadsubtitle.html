@@ -349,7 +349,7 @@
   </div>
   <p>© 2025 TopTubeList.com</p>
 </footer>
-  <script>
+ <script>
 (() => {
   if (!document.body.classList.contains('page-download')) return;
 
@@ -363,6 +363,20 @@
   form.appendChild(statusEl);
 
   const FN = '/.netlify/functions/download-subtitles';
+
+  // YouTube ID yakalamak için yardımcı
+  function getYouTubeId(u) {
+    try {
+      const url = new URL(u);
+      if (url.hostname.includes('youtu.be')) return url.pathname.slice(1);
+      const v = url.searchParams.get('v');
+      if (v) return v;
+      const m = url.pathname.match(/\/(embed|shorts)\/([^/?]+)/);
+      return m ? m[2] : null;
+    } catch {
+      return null;
+    }
+  }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -387,11 +401,20 @@
         return;
       }
 
+      // 1) Varsayılan isim
       let filename = `subtitles.${format}`;
+
+      // 2) Header’dan almaya çalış
       const cd = res.headers.get('Content-Disposition');
       if (cd) {
         const m = cd.match(/filename="([^"]+)"/);
         if (m) filename = m[1];
+      }
+
+      // 3) Header yoksa URL’den video id çek
+      if (!filename || filename === `subtitles.${format}`) {
+        const vid = getYouTubeId(videoUrl) || 'unknown';
+        filename = `subtitles_${vid}.${format}`;
       }
 
       const mime = format === 'vtt' ? 'text/vtt;charset=utf-8' : 'text/plain;charset=utf-8';
@@ -426,5 +449,6 @@
   }
 })();
 </script>
+
 </body>
 </html>
