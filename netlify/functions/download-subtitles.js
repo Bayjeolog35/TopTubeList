@@ -38,11 +38,31 @@ function toSrt(transcript) {
   }).join('\n').trim() + '\n';
 }
 
+// WebVTT dönüştürücü
+function toVtt(transcript) {
+  const toTime = ms => {
+    const s = Math.floor(ms / 1000), msR = ms % 1000;
+    const hh = String(Math.floor(s / 3600)).padStart(2,'0');
+    const mm = String(Math.floor((s % 3600) / 60)).padStart(2,'0');
+    const ss = String(s % 60).padStart(2,'0');
+    const mmm = String(msR).padStart(3,'0');
+    return `${hh}:${mm}:${ss}.${mmm}`;
+  };
+  const body = transcript.map((t, i, arr) => {
+    const start = Math.round(t.offset);
+    const nextStart = arr[i+1]?.offset;
+    const duration = t.duration || (nextStart ? nextStart - t.offset : 2000);
+    const end = Math.round(t.offset + duration);
+    return `${toTime(start)} --> ${toTime(end)}\n${t.text}\n`;
+  }).join('\n');
+  return `WEBVTT\n\n${body}`.trim() + '\n';
+}
+
 exports.handler = async (event) => {
   try {
     const qs = event.queryStringParameters || {};
     const url = qs.video_url || qs.url || '';
-    const format = (qs.format || 'txt').trim().toLowerCase(); // txt | srt
+    const format = (qs.format || 'txt').trim().toLowerCase(); // txt | srt | vtt
     const vid = getYouTubeId(url);
 
     if (!vid) {
@@ -75,19 +95,25 @@ exports.handler = async (event) => {
     }
 
     // Format seçimi
-    let payload, ext;
+    let payload, mime, ext;
     if (format === 'srt') {
       payload = toSrt(transcript);
+      mime = 'text/plain; charset=utf-8';
       ext = 'srt';
+    } else if (format === 'vtt') {
+      payload = toVtt(transcript);
+      mime = 'text/vtt; charset=utf-8';
+      ext = 'vtt';
     } else {
       payload = toTxt(transcript);
+      mime = 'text/plain; charset=utf-8';
       ext = 'txt';
     }
 
     return {
       statusCode: 200,
       headers: {
-        'Content-Type': 'text/plain; charset=utf-8',
+        'Content-Type': mime,
         'Content-Disposition': `attachment; filename="subtitles_${vid}.${ext}"`,
         'Cache-Control': 'no-store',
         'Access-Control-Allow-Origin': '*',
