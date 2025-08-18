@@ -65,16 +65,14 @@ exports.handler = async (event) => {
     else { payload = toTxt(transcript); mime='text/plain; charset=utf-8'; ext='txt'; }
 
     return {
-      statusCode: 200,
-      headers: {
-        'Content-Type': mime,
-        'Content-Disposition': `attachment; filename="subtitles_${vid}.${ext}"`,
-        'Cache-Control': 'no-store',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Expose-Headers': 'Content-Disposition'
-      },
-      body: payload
-    };
+  statusCode: 200,
+  headers: {
+    "Content-Type": "text/plain; charset=utf-8",
+    "Content-Disposition": "attachment; filename=\"subtitles.srt\""
+  },
+  body: srtData
+};
+
   } catch (err) {
     return { statusCode: 500, headers:{'Content-Type':'text/plain; charset=utf-8','Access-Control-Allow-Origin':'*'}, body: `Subtitle service error: ${err?.message || 'Internal error'}` };
   }
