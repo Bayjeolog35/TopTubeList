@@ -388,7 +388,7 @@
     }
 
     // Artık fetch/Blob yok. Doğrudan yeni sekmede açıyoruz.
-    const endpoint = `${FN}?video_url=${encodeURIComponent(videoUrl)}&format=${format}`;
+    const endpoint = `${FN}?url=${encodeURIComponent(videoUrl)}&format=${format}`;
     setStatus('Opening in a new tab…');
 
     const win = window.open(endpoint, '_blank');
