@@ -349,7 +349,7 @@
   </div>
   <p>© 2025 TopTubeList.com</p>
 </footer>
- <script>
+<script>
 (() => {
   if (!document.body.classList.contains('page-download')) return;
 
@@ -394,9 +394,10 @@
       setStatus('Preparing subtitles…');
 
       const res = await fetch(`${FN}?video_url=${encodeURIComponent(videoUrl)}&format=${format}`);
+      const ct = (res.headers.get('Content-Type') || '').toLowerCase();
       const text = await res.text();
 
-      if (!res.ok) {
+      if (!res.ok || ct.includes('text/html')) {
         setStatus(text || `Error (${res.status})`, true);
         return;
       }
@@ -410,6 +411,7 @@
         const m = cd.match(/filename="([^"]+)"/);
         if (m) filename = m[1];
       }
+      console.log('CD header:', cd, 'resolved filename:', filename);
 
       // 3) Header yoksa URL’den video id çek
       if (!filename || filename === `subtitles.${format}`) {
@@ -449,6 +451,7 @@
   }
 })();
 </script>
+
 
 </body>
 </html>
