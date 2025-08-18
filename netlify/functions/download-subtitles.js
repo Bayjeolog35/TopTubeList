@@ -15,26 +15,34 @@ function toTxt(transcript) {
   return transcript.map(t => t.text).join('\n').trim() + '\n';
 }
 
-exports.handler = async (event) => {
+exports.handler = async (event, context) => {
+  const url = event.queryStringParameters.url;
+  const format = event.queryStringParameters.format || 'txt';
+  const videoId = getYouTubeId(url);
+
+  if (!videoId) {
+    return { statusCode: 400, body: 'Invalid YouTube URL' };
+  }
+
   try {
-    const { url, format } = event.queryStringParameters;
-    const videoId = getYouTubeId(url);
-    if (!videoId) {
-      return { statusCode: 400, body: 'Invalid YouTube URL' };
-    }
-
     const transcript = await YoutubeTranscript.fetchTranscript(videoId);
+    const text = toTxt(transcript);
 
-    let body = toTxt(transcript);
-    let contentType = "text/plain";
-
-    // content-disposition kaldırıldı, download zorunlu değil
     return {
       statusCode: 200,
-      headers: { "Content-Type": contentType },
-      body,
+      headers: {
+        'Content-Type': 'text/html; charset=utf-8',
+        'Content-Disposition': 'inline'   // <<< burası kritik
+      },
+      body: `
+        <!DOCTYPE html>
+        <html>
+          <head><meta charset="UTF-8"><title>Transcript</title></head>
+          <body><pre>${text}</pre></body>
+        </html>
+      `
     };
-  } catch (err) {
-    return { statusCode: 500, body: err.toString() };
+  } catch (e) {
+    return { statusCode: 500, body: e.message };
   }
 };
