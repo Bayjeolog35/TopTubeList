@@ -1,7 +1,6 @@
 // netlify/functions/download-subtitles.js
 const { YoutubeTranscript } = require('youtube-transcript');
 
-// URL'den video id'sini çek
 function getYouTubeId(url) {
   try {
     const u = new URL(url);
@@ -9,106 +8,61 @@ function getYouTubeId(url) {
     if (u.searchParams.get('v')) return u.searchParams.get('v');
     const m = u.pathname.match(/\/(embed|shorts)\/([^/?]+)/);
     return m ? m[2] : null;
-  } catch {
-    return null;
-  }
+  } catch { return null; }
 }
 
-// TXT dönüştürücü
-function toTxt(transcript) {
-  return transcript.map(t => t.text).join('\n').trim() + '\n';
+function toTxt(ts){ return ts.map(t=>t.text).join('\n').trim()+'\n'; }
+function toSrt(ts){
+  const toTime=ms=>{const s=Math.floor(ms/1000),msR=ms%1000;
+    const hh=String(Math.floor(s/3600)).padStart(2,'0');
+    const mm=String(Math.floor((s%3600)/60)).padStart(2,'0');
+    const ss=String(s%60).padStart(2,'0');
+    const mmm=String(msR).padStart(3,'0');
+    return `${hh}:${mm}:${ss},${mmm}`;};
+  return ts.map((t,i,a)=>{const start=Math.round(t.offset);
+    const next=a[i+1]?.offset; const dur=t.duration||(next?next-t.offset:2000);
+    const end=Math.round(t.offset+dur);
+    return `${i+1}\n${toTime(start)} --> ${toTime(end)}\n${t.text}\n`;})
+    .join('\n').trim()+'\n';
 }
-
-// SRT dönüştürücü
-function toSrt(transcript) {
-  const toTime = ms => {
-    const s = Math.floor(ms / 1000), msR = ms % 1000;
-    const hh = String(Math.floor(s / 3600)).padStart(2,'0');
-    const mm = String(Math.floor((s % 3600) / 60)).padStart(2,'0');
-    const ss = String(s % 60).padStart(2,'0');
-    const mmm = String(msR).padStart(3,'0');
-    return `${hh}:${mm}:${ss},${mmm}`;
-  };
-  return transcript.map((t, i, arr) => {
-    const start = Math.round(t.offset);
-    const nextStart = arr[i+1]?.offset;
-    const duration = t.duration || (nextStart ? nextStart - t.offset : 2000);
-    const end = Math.round(t.offset + duration);
-    return `${i+1}\n${toTime(start)} --> ${toTime(end)}\n${t.text}\n`;
-  }).join('\n').trim() + '\n';
-}
-
-// WebVTT dönüştürücü
-function toVtt(transcript) {
-  const toTime = ms => {
-    const s = Math.floor(ms / 1000), msR = ms % 1000;
-    const hh = String(Math.floor(s / 3600)).padStart(2,'0');
-    const mm = String(Math.floor((s % 3600) / 60)).padStart(2,'0');
-    const ss = String(s % 60).padStart(2,'0');
-    const mmm = String(msR).padStart(3,'0');
-    return `${hh}:${mm}:${ss}.${mmm}`;
-  };
-  const body = transcript.map((t, i, arr) => {
-    const start = Math.round(t.offset);
-    const nextStart = arr[i+1]?.offset;
-    const duration = t.duration || (nextStart ? nextStart - t.offset : 2000);
-    const end = Math.round(t.offset + duration);
-    return `${toTime(start)} --> ${toTime(end)}\n${t.text}\n`;
-  }).join('\n');
-  return `WEBVTT\n\n${body}`.trim() + '\n';
+function toVtt(ts){
+  const toTime=ms=>{const s=Math.floor(ms/1000),msR=ms%1000;
+    const hh=String(Math.floor(s/3600)).padStart(2,'0');
+    const mm=String(Math.floor((s%3600)/60)).padStart(2,'0');
+    const ss=String(s%60).padStart(2,'0');
+    const mmm=String(msR).padStart(3,'0');
+    return `${hh}:${mm}:${ss}.${mmm}`;};
+  const body=ts.map((t,i,a)=>{const start=Math.round(t.offset);
+    const next=a[i+1]?.offset; const dur=t.duration||(next?next-t.offset:2000);
+    const end=Math.round(t.offset+dur);
+    return `${toTime(start)} --> ${toTime(end)}\n${t.text}\n`;}).join('\n');
+  return `WEBVTT\n\n${body}`.trim()+'\n';
 }
 
 exports.handler = async (event) => {
   try {
     const qs = event.queryStringParameters || {};
     const url = qs.video_url || qs.url || '';
-    const format = (qs.format || 'txt').trim().toLowerCase(); // txt | srt | vtt
+    const format = (qs.format || 'txt').toLowerCase();
     const vid = getYouTubeId(url);
 
     if (!vid) {
-      return { statusCode: 400, body: 'Invalid or missing YouTube URL.' };
+      return { statusCode: 400, headers:{'Content-Type':'text/plain; charset=utf-8','Access-Control-Allow-Origin':'*'}, body: 'Invalid or missing YouTube URL.' };
     }
 
     let transcript = null;
+    try { transcript = await YoutubeTranscript.fetchTranscript(vid, { lang: 'en' }); } catch {}
+    if (!transcript?.length) { try { transcript = await YoutubeTranscript.fetchTranscript(vid, { lang: 'en-US' }); } catch {} }
+    if (!transcript?.length) { try { transcript = await YoutubeTranscript.fetchTranscript(vid); } catch {} }
 
-    // Önce İngilizce dene
-    try {
-      transcript = await YoutubeTranscript.fetchTranscript(vid, { lang: 'en' });
-    } catch {}
-
-    // Olmazsa en-US dene
-    if (!transcript || !transcript.length) {
-      try {
-        transcript = await YoutubeTranscript.fetchTranscript(vid, { lang: 'en-US' });
-      } catch {}
+    if (!transcript?.length) {
+      return { statusCode: 404, headers:{'Content-Type':'text/plain; charset=utf-8','Access-Control-Allow-Origin':'*'}, body: 'No subtitles found for this video.' };
     }
 
-    // Hâlâ yoksa default (otomatik)
-    if (!transcript || !transcript.length) {
-      try {
-        transcript = await YoutubeTranscript.fetchTranscript(vid);
-      } catch {}
-    }
-
-    if (!transcript || !transcript.length) {
-      return { statusCode: 404, body: 'No subtitles found for this video.' };
-    }
-
-    // Format seçimi
     let payload, mime, ext;
-    if (format === 'srt') {
-      payload = toSrt(transcript);
-      mime = 'text/plain; charset=utf-8';
-      ext = 'srt';
-    } else if (format === 'vtt') {
-      payload = toVtt(transcript);
-      mime = 'text/vtt; charset=utf-8';
-      ext = 'vtt';
-    } else {
-      payload = toTxt(transcript);
-      mime = 'text/plain; charset=utf-8';
-      ext = 'txt';
-    }
+    if (format === 'srt') { payload = toSrt(transcript); mime='text/plain; charset=utf-8'; ext='srt'; }
+    else if (format === 'vtt') { payload = toVtt(transcript); mime='text/vtt; charset=utf-8'; ext='vtt'; }
+    else { payload = toTxt(transcript); mime='text/plain; charset=utf-8'; ext='txt'; }
 
     return {
       statusCode: 200,
@@ -122,7 +76,6 @@ exports.handler = async (event) => {
       body: payload
     };
   } catch (err) {
-    console.error('subtitle error', err);
-    return { statusCode: 500, body: `Subtitle service error: ${err.message}` };
+    return { statusCode: 500, headers:{'Content-Type':'text/plain; charset=utf-8','Access-Control-Allow-Origin':'*'}, body: `Subtitle service error: ${err?.message || 'Internal error'}` };
   }
 };
