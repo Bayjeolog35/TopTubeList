@@ -1,6 +1,11 @@
 [functions]
 directory = "netlify/functions"
 
+# Functions rotaları SPA redirect'e takılmasın
+[[redirects]]
+from = "/.netlify/functions/*"
+to = "/.netlify/functions/:splat"
+status = 200
 
 [[redirects]]
 from = "/ads.txt"
