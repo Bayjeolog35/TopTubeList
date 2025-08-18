@@ -3,11 +3,6 @@ directory = "netlify/functions"
 
 # Functions rotaları SPA redirect'e takılmasın
 [[redirects]]
-from = "/.netlify/functions/*"
-to = "/.netlify/functions/:splat"
-status = 200
-
-[[redirects]]
 from = "/ads.txt"
 to = "/ads.txt"
 status = 200
@@ -24,6 +19,13 @@ to = "https://www.toptubelist.com/:splat"
 status = 301
 force = true
 
+# Fonksiyon isteklerini önce işle
+[[redirects]]
+from = "/.netlify/functions/*"
+to = "/.netlify/functions/:splat"
+status = 200
+
+# Diğer tüm istekleri index.html'e yönlendir (en sonda olmalı)
 [[redirects]]
 from = "/*"
 to = "/index.html"
