@@ -255,7 +255,56 @@ document.addEventListener("DOMContentLoaded", async () => {
       showNoDataMessage();
     }
   }
+function getYouTubeId(url) {
+  try {
+    const u = new URL(url);
+    if (u.hostname.includes('youtu.be')) {
+      return u.pathname.slice(1); // youtu.be/VIDEOID
+    }
+    if (u.searchParams.get('v')) {
+      return u.searchParams.get('v');
+    }
+    // /embed/VIDEOID gibi durumlar:
+    const m = u.pathname.match(/\/(embed|shorts)\/([^/?]+)/);
+    return m ? m[2] : null;
+  } catch { return null; }
+}
+  
+// --- Subtitles Download Feature ---
+async function handleSubtitleDownload(e) {
+  e.preventDefault();
 
+  const videoUrl = document.getElementById("videoUrl").value.trim();
+  if (!videoUrl) return alert("Please paste a YouTube link!");
+
+  try {
+    // Backend API'den altyazıyı çek
+    const response = await fetch(`/download-subtitles?video_url=${encodeURIComponent(videoUrl)}`);
+    if (!response.ok) throw new Error("Failed to fetch subtitles");
+
+    const text = await response.text();
+
+    // Kullanıcıya indirtmek için Blob oluştur
+    const blob = new Blob([text], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "subtitles.txt";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    URL.revokeObjectURL(url);
+  } catch (err) {
+    console.error("Subtitle download error:", err);
+    alert("❌ Subtitles could not be downloaded.");
+  }
+}
+  const subtitleForm = document.getElementById("subtitleForm");
+if (subtitleForm) {
+  subtitleForm.addEventListener("submit", handleSubtitleDownload);
+}
   /**
    * Renders videos into the videoListContainer based on displayCount.
    */
