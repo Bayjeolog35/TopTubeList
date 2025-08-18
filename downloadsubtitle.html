@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trending Subtitles - TopTubeList</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Download Subtitles – TopTubeList</title>
+  <link rel="stylesheet" href="style.css"/>
   <script src="dynamic.js" defer></script>
 </head>
-<body>
+<body class="page-download">
   <header>
     <div class="container">
       <a href="index.html" class="logo">
-        <img src="TopTubeListLogo.webp" alt="TopTubeList" width="120" height="64.8" loading="lazy" />
+        <img src="TopTubeListLogo.webp" alt="TopTubeList" width="120" height="64.8" loading="lazy"/>
       </a>
       <h1>Trending in Worldwide</h1>
       <button id="darkModeToggle" title="Toggle Dark Mode">🌓</button>
     </div>
-        
-
    <nav id="continentNav">
     <a href="index.html" class="active">Worldwide</a>
     <a href="asia.html" class="">Asia</a>
@@ -30,8 +28,7 @@
 </header>
 
 <main class="main-content">
-
-  <button id="hamburgerBtn" class="hamburger">&#9776;</button>
+    <button id="hamburgerBtn" class="hamburger">&#9776;</button>
   <div class="layout-wrapper">
 <div class="country-panel">
    <div class="alphabet-column"> <a href="#" class="alphabet-letter" data-letter="all">All</a>
@@ -61,8 +58,6 @@
     <a href="#" class="alphabet-letter" data-letter="X">X</a>
     <a href="#" class="alphabet-letter" data-letter="Y">Y</a>
     <a href="#" class="alphabet-letter" data-letter="Z">Z</a>
-
-
 </div>
      <div class="country-column">
   <a href="/afghanistan" class="country-link">Afghanistan</a>
@@ -286,19 +281,30 @@
   <a href="/zambia" class="country-link">Zambia</a>
   <a href="/zimbabwe" class="country-link">Zimbabwe</a>
 </div>
+</div>
+   <!-- İNDİRME BLOĞU -->
+      <section class="download-hero">
+        <h2>Download YouTube Subtitles</h2>
 
-  <h2>Download YouTube Subtitles</h2>
-  <form id="subtitleForm">
-    <input type="url" id="videoUrl" placeholder="Paste YouTube video URL" required />
-    <button type="submit">Download Subtitles</button>
-  </form>
-  <p class="note">⚠ Subtitles are provided for personal use only.</p>
-  
-</main>
-<div class="subtitles-list" id="subtitlesList">
- <!-- JS buraya altyazıları yükleyecek -->
-  <button id="loadMoreBtn" class="site-button">Load More</button>
- </div>
+        <form id="subtitleForm" class="subtitle-form">
+          <input type="url" id="videoUrl" placeholder="Paste YouTube video URL" required />
+          <select id="format" aria-label="Subtitle format">
+            <option value="txt" selected>TXT</option>
+            <option value="srt">SRT</option>
+            <option value="vtt">WebVTT</option>
+          </select>
+          <button type="submit" class="site-button">Download Subtitles</button>
+        </form>
+
+        <p class="disclaimer">
+          ⚠ Subtitles are provided for personal use only. Some videos may not have captions or may restrict access.
+        </p>
+
+        <!-- İsteğe bağlı reklam katmanı -->
+        <div id="adGate" class="ad-gate hidden"></div>
+      </section>
+    </div>
+
 
     <section class="about-section">
       <button id="aboutToggle" class="site-button">About Us</button>
