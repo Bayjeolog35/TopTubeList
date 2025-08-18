@@ -200,6 +200,11 @@ body.dark-mode .video-info a {
   display: flex;
 }
 
+/* Sadece downloadsubtitle.html için özel stil */
+body.page-download main {
+  min-height: 75vh;
+}
+
 /* Düşey alfabe */
 .alphabet-column {
   display: flex;
@@ -917,3 +922,4 @@ body.dark-mode .ad-gate {
     width: 100%;
   }
 }
+
