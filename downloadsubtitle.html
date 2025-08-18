@@ -349,5 +349,82 @@
   </div>
   <p>© 2025 TopTubeList.com</p>
 </footer>
+  <script>
+(() => {
+  if (!document.body.classList.contains('page-download')) return;
+
+  const form = document.getElementById('subtitleForm');
+  const urlInput = document.getElementById('videoUrl');
+  const formatSel = document.getElementById('format');
+  const statusEl = document.createElement('small');
+  statusEl.style.display = 'block';
+  statusEl.style.marginTop = '8px';
+  statusEl.style.color = '#666';
+  form.appendChild(statusEl);
+
+  const FN = '/.netlify/functions/download-subtitles';
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const videoUrl = (urlInput.value || '').trim();
+    const format = (formatSel.value || 'txt').toLowerCase();
+
+    if (!videoUrl) {
+      setStatus('Please paste a YouTube URL.', true);
+      return;
+    }
+
+    try {
+      lock(true);
+      setStatus('Preparing subtitles…');
+
+      const res = await fetch(`${FN}?video_url=${encodeURIComponent(videoUrl)}&format=${format}`);
+      const text = await res.text();
+
+      if (!res.ok) {
+        setStatus(text || `Error (${res.status})`, true);
+        return;
+      }
+
+      let filename = `subtitles.${format}`;
+      const cd = res.headers.get('Content-Disposition');
+      if (cd) {
+        const m = cd.match(/filename="([^"]+)"/);
+        if (m) filename = m[1];
+      }
+
+      const mime = format === 'vtt' ? 'text/vtt;charset=utf-8' : 'text/plain;charset=utf-8';
+      const blob = new Blob([text], { type: mime });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(a.href);
+
+      setStatus('Downloaded ✅');
+    } catch (err) {
+      setStatus('Download failed: ' + (err?.message || err), true);
+    } finally {
+      lock(false);
+    }
+  });
+
+  function setStatus(msg, isError=false) {
+    statusEl.textContent = msg;
+    statusEl.style.color = isError ? '#c33' : '#666';
+  }
+
+  function lock(disabled) {
+    const btn = form.querySelector('button[type="submit"]');
+    if (btn) {
+      btn.disabled = disabled;
+      btn.textContent = disabled ? 'Working…' : 'Download Subtitles';
+    }
+  }
+})();
+</script>
 </body>
 </html>
