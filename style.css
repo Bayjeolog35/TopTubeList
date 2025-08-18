@@ -774,4 +774,35 @@ body.dark-mode .rank-down {
   }
 }
 
+.subtitle-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: var(--card-bg);
+}
+
+.subtitle-rank {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.subtitle-text {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.subtitle-video a {
+  text-decoration: none;
+  color: #0077ff;
+  font-weight: bold;
+}
+.subtitle-card:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
 
