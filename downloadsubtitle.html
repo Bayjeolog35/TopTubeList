@@ -364,7 +364,7 @@
 
   const FN = '/.netlify/functions/download-subtitles';
 
-  // YouTube ID yakalamak için yardımcı
+  // (Gerekirse başka yerlerde lazım olabilir diye bıraktım)
   function getYouTubeId(u) {
     try {
       const url = new URL(u);
@@ -373,12 +373,10 @@
       if (v) return v;
       const m = url.pathname.match(/\/(embed|shorts)\/([^/?]+)/);
       return m ? m[2] : null;
-    } catch {
-      return null;
-    }
+    } catch { return null; }
   }
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const videoUrl = (urlInput.value || '').trim();
@@ -389,51 +387,15 @@
       return;
     }
 
-    try {
-      lock(true);
-      setStatus('Preparing subtitles…');
+    // Artık fetch/Blob yok. Doğrudan yeni sekmede açıyoruz.
+    const endpoint = `${FN}?video_url=${encodeURIComponent(videoUrl)}&format=${format}`;
+    setStatus('Opening in a new tab…');
 
-      const res = await fetch(`${FN}?video_url=${encodeURIComponent(videoUrl)}&format=${format}`);
-      const ct = (res.headers.get('Content-Type') || '').toLowerCase();
-      const text = await res.text();
+    const win = window.open(endpoint, '_blank');
 
-      if (!res.ok || ct.includes('text/html')) {
-        setStatus(text || `Error (${res.status})`, true);
-        return;
-      }
-
-      // 1) Varsayılan isim
-      let filename = `subtitles.${format}`;
-
-      // 2) Header’dan almaya çalış
-      const cd = res.headers.get('Content-Disposition');
-      if (cd) {
-        const m = cd.match(/filename="([^"]+)"/);
-        if (m) filename = m[1];
-      }
-      console.log('CD header:', cd, 'resolved filename:', filename);
-
-      // 3) Header yoksa URL’den video id çek
-      if (!filename || filename === `subtitles.${format}`) {
-        const vid = getYouTubeId(videoUrl) || 'unknown';
-        filename = `subtitles_${vid}.${format}`;
-      }
-
-      const mime = format === 'vtt' ? 'text/vtt;charset=utf-8' : 'text/plain;charset=utf-8';
-      const blob = new Blob([text], { type: mime });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = filename;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(a.href);
-
-      setStatus('Downloaded ✅');
-    } catch (err) {
-      setStatus('Download failed: ' + (err?.message || err), true);
-    } finally {
-      lock(false);
+    // Tarayıcı pop-up engellediyse kullanıcıya tıklayıp açabileceği link verelim.
+    if (!win) {
+      setStatus('Pop-up blocked. Click to open: ' + endpoint, true);
     }
   });
 
@@ -442,16 +404,7 @@
     statusEl.style.color = isError ? '#c33' : '#666';
   }
 
-  function lock(disabled) {
-    const btn = form.querySelector('button[type="submit"]');
-    if (btn) {
-      btn.disabled = disabled;
-      btn.textContent = disabled ? 'Working…' : 'Download Subtitles';
-    }
-  }
 })();
 </script>
-
-
 </body>
 </html>
