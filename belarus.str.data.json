@@ -15,7 +15,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 55393392
+      "userInteractionCount": 55445626
     }
   },
   {
@@ -34,7 +34,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 9882877
+      "userInteractionCount": 9898859
     }
   },
   {
@@ -53,7 +53,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 6250398
+      "userInteractionCount": 6255389
     }
   },
   {
@@ -72,7 +72,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4431161
+      "userInteractionCount": 4461064
     }
   },
   {
@@ -91,7 +91,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3108345
+      "userInteractionCount": 3113173
     }
   },
   {
@@ -110,7 +110,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1704528
+      "userInteractionCount": 1706520
     }
   },
   {
@@ -129,7 +129,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1468726
+      "userInteractionCount": 1470975
     }
   },
   {
@@ -148,7 +148,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1366948
+      "userInteractionCount": 1389615
     }
   },
   {
@@ -167,7 +167,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1216390
+      "userInteractionCount": 1220952
     }
   },
   {
@@ -186,7 +186,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1097253
+      "userInteractionCount": 1099380
     }
   },
   {
@@ -205,7 +205,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 870995
+      "userInteractionCount": 873394
     }
   },
   {
@@ -224,7 +224,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 859917
+      "userInteractionCount": 860918
     }
   },
   {
@@ -243,7 +243,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 831636
+      "userInteractionCount": 832153
     }
   },
   {
@@ -262,7 +262,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 823368
+      "userInteractionCount": 824953
     }
   },
   {
@@ -281,7 +281,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 777794
+      "userInteractionCount": 778863
     }
   },
   {
@@ -300,26 +300,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 693602
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "SERYABKINA - Не надо больней мне (official mood video)",
-    "description": "Кинематографичная картинка, цепляющая динамика и лиричный текст в сочетании с женственным образом SERYABKINA — смотрите премьеру mood video на песню «Не надо больней мне».  Я прошу тебя не надо делать",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/LOipTHtXqUY/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-08-29T08:59:48Z",
-    "contentUrl": "https://www.youtube.com/watch?v=LOipTHtXqUY",
-    "embedUrl": "https://www.youtube.com/embed/LOipTHtXqUY",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 672686
+      "userInteractionCount": 695574
     }
   },
   {
@@ -338,7 +319,26 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 672603
+      "userInteractionCount": 673699
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "SERYABKINA - Не надо больней мне (official mood video)",
+    "description": "Кинематографичная картинка, цепляющая динамика и лиричный текст в сочетании с женственным образом SERYABKINA — смотрите премьеру mood video на песню «Не надо больней мне».  Я прошу тебя не надо делать",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/LOipTHtXqUY/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-08-29T08:59:48Z",
+    "contentUrl": "https://www.youtube.com/watch?v=LOipTHtXqUY",
+    "embedUrl": "https://www.youtube.com/embed/LOipTHtXqUY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 672942
     }
   },
   {
@@ -357,7 +357,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 655604
+      "userInteractionCount": 658457
     }
   },
   {
@@ -376,7 +376,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 622697
+      "userInteractionCount": 625082
     }
   },
   {
@@ -395,45 +395,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 593809
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "NЮ — «Дави на газ» (ПРЕМЬЕРА трека)",
-    "description": "NЮ — «Дави на газ»   Слушать и скачивать здесь -  https://zvonko.link/Davinagaz  Юрий Николаенко - звезда сериала «Улица» на ТНТ (лауреат российской национальной телевизионной премии ТЭФИ) композитор,",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/K01Dvzk4o4M/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-08-14T21:23:28Z",
-    "contentUrl": "https://www.youtube.com/watch?v=K01Dvzk4o4M",
-    "embedUrl": "https://www.youtube.com/embed/K01Dvzk4o4M",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 584842
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "САМЫЕ НЕЧЕСТНЫЕ СПОСОБЫ СВОРОВАТЬ БРЕЙНРОТА В STEAL A BRAINROT В МАЙНКРАФТ!",
-    "description": "Самые нечестные способы своровать Брейнрота в Steal a Brainrot в Майнкрафт!  ► Мой Телеграм: https://t.me/edisonfamilia ★ Мой магазин ОДЕЖДЫ: https://edisonfamily.vsemaykishop.ru/ ► Мой Твич: https://",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/wVPCeQBX35Y/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-09-10T14:44:51Z",
-    "contentUrl": "https://www.youtube.com/watch?v=wVPCeQBX35Y",
-    "embedUrl": "https://www.youtube.com/embed/wVPCeQBX35Y",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 568263
+      "userInteractionCount": 597803
     }
   },
   {
@@ -452,7 +414,45 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 563992
+      "userInteractionCount": 596255
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "NЮ — «Дави на газ» (ПРЕМЬЕРА трека)",
+    "description": "NЮ — «Дави на газ»   Слушать и скачивать здесь -  https://zvonko.link/Davinagaz  Юрий Николаенко - звезда сериала «Улица» на ТНТ (лауреат российской национальной телевизионной премии ТЭФИ) композитор,",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/K01Dvzk4o4M/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-08-14T21:23:28Z",
+    "contentUrl": "https://www.youtube.com/watch?v=K01Dvzk4o4M",
+    "embedUrl": "https://www.youtube.com/embed/K01Dvzk4o4M",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 585507
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "САМЫЕ НЕЧЕСТНЫЕ СПОСОБЫ СВОРОВАТЬ БРЕЙНРОТА В STEAL A BRAINROT В МАЙНКРАФТ!",
+    "description": "Самые нечестные способы своровать Брейнрота в Steal a Brainrot в Майнкрафт!  ► Мой Телеграм: https://t.me/edisonfamilia ★ Мой магазин ОДЕЖДЫ: https://edisonfamily.vsemaykishop.ru/ ► Мой Твич: https://",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/wVPCeQBX35Y/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-09-10T14:44:51Z",
+    "contentUrl": "https://www.youtube.com/watch?v=wVPCeQBX35Y",
+    "embedUrl": "https://www.youtube.com/embed/wVPCeQBX35Y",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 572933
     }
   },
   {
@@ -471,7 +471,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 545942
+      "userInteractionCount": 549624
     }
   },
   {
@@ -490,7 +490,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 517011
+      "userInteractionCount": 543932
     }
   },
   {
@@ -509,7 +509,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 509129
+      "userInteractionCount": 510153
     }
   },
   {
@@ -528,7 +528,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 497139
+      "userInteractionCount": 499232
     }
   },
   {
@@ -547,7 +547,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 490101
+      "userInteractionCount": 491988
     }
   },
   {
@@ -566,7 +566,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 481918
+      "userInteractionCount": 489072
     }
   },
   {
@@ -585,7 +585,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 461556
+      "userInteractionCount": 462513
     }
   },
   {
@@ -604,26 +604,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 395842
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Гоп Гей Гоп 💝📻🎸 Самая балдёжная песня на танцплощадках👄🔊🎙️",
-    "description": "#bandodessa  ЗАПРЕЩЕНО ПОВТОРНОЕ ИСПОЛЬЗОВАНИЕ !   #bestversion #band #odessa #шансон #бандодесса #bandodessa #bestversion #band #odessa #шансон #бандодесса #хорошиепесни #русскиепесни #песниолюбви #к",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/2UZOZ_BAbJI/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-08-30T17:44:55Z",
-    "contentUrl": "https://www.youtube.com/watch?v=2UZOZ_BAbJI",
-    "embedUrl": "https://www.youtube.com/embed/2UZOZ_BAbJI",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 383151
+      "userInteractionCount": 410897
     }
   },
   {
@@ -642,7 +623,26 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 382153
+      "userInteractionCount": 384844
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Гоп Гей Гоп 💝📻🎸 Самая балдёжная песня на танцплощадках👄🔊🎙️",
+    "description": "#bandodessa  ЗАПРЕЩЕНО ПОВТОРНОЕ ИСПОЛЬЗОВАНИЕ !   #bestversion #band #odessa #шансон #бандодесса #bandodessa #bestversion #band #odessa #шансон #бандодесса #хорошиепесни #русскиепесни #песниолюбви #к",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/2UZOZ_BAbJI/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-08-30T17:44:55Z",
+    "contentUrl": "https://www.youtube.com/watch?v=2UZOZ_BAbJI",
+    "embedUrl": "https://www.youtube.com/embed/2UZOZ_BAbJI",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 383866
     }
   },
   {
@@ -661,7 +661,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 377564
+      "userInteractionCount": 379483
     }
   },
   {
@@ -680,7 +680,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 344996
+      "userInteractionCount": 345882
     }
   },
   {
@@ -699,7 +699,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 321777
+      "userInteractionCount": 324988
     }
   },
   {
@@ -718,7 +718,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 301656
+      "userInteractionCount": 306234
     }
   },
   {
@@ -737,7 +737,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 241185
+      "userInteractionCount": 242526
     }
   },
   {
@@ -756,7 +756,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 212869
+      "userInteractionCount": 215366
     }
   },
   {
@@ -775,7 +775,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 196214
+      "userInteractionCount": 196781
     }
   },
   {
@@ -794,7 +794,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 194402
+      "userInteractionCount": 195797
     }
   },
   {
@@ -813,7 +813,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 185948
+      "userInteractionCount": 187074
     }
   },
   {
@@ -832,7 +832,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 176379
+      "userInteractionCount": 179035
     }
   },
   {
@@ -851,7 +851,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 176184
+      "userInteractionCount": 178159
     }
   },
   {
@@ -870,7 +870,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 139070
+      "userInteractionCount": 139519
     }
   },
   {
@@ -889,7 +889,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 128153
+      "userInteractionCount": 129047
     }
   },
   {
@@ -908,7 +908,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 105062
+      "userInteractionCount": 105516
     }
   },
   {
@@ -927,7 +927,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 93614
+      "userInteractionCount": 93656
     }
   },
   {
@@ -946,7 +946,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 52034
+      "userInteractionCount": 52078
     }
   }
 ]
