@@ -15,7 +15,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 36130646
+      "userInteractionCount": 36181159
     }
   },
   {
@@ -34,7 +34,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 27078363
+      "userInteractionCount": 27187839
     }
   },
   {
@@ -53,7 +53,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 18968222
+      "userInteractionCount": 18969594
     }
   },
   {
@@ -72,7 +72,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 17007767
+      "userInteractionCount": 17031143
     }
   },
   {
@@ -91,7 +91,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 13608831
+      "userInteractionCount": 13611413
     }
   },
   {
@@ -110,7 +110,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 8054466
+      "userInteractionCount": 8057097
     }
   },
   {
@@ -129,7 +129,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 5800226
+      "userInteractionCount": 5804817
     }
   },
   {
@@ -148,7 +148,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 5704790
+      "userInteractionCount": 5708088
     }
   },
   {
@@ -167,7 +167,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4997473
+      "userInteractionCount": 5003126
     }
   },
   {
@@ -186,7 +186,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4719968
+      "userInteractionCount": 4727750
     }
   },
   {
@@ -205,7 +205,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3179807
+      "userInteractionCount": 3181331
     }
   },
   {
@@ -224,7 +224,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2977717
+      "userInteractionCount": 2977988
     }
   },
   {
@@ -243,7 +243,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2432430
+      "userInteractionCount": 2484940
     }
   },
   {
@@ -262,7 +262,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1528295
+      "userInteractionCount": 1528589
     }
   },
   {
@@ -281,7 +281,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1524787
+      "userInteractionCount": 1525075
     }
   },
   {
@@ -300,26 +300,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1489112
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "EA SPORTS FC 26 | First Gameplay Livestream",
-    "description": "Watch the first exclusive gameplay stream of EA SPORTS FC 26.  #FC26 launches September 26, 2025. Pre-order FC 26 Ultimate Edition to start playing from September 19: https://x.ea.com/86149  Subscribe",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/3fZumiKp5hE/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-09-16T16:20:28Z",
-    "contentUrl": "https://www.youtube.com/watch?v=3fZumiKp5hE",
-    "embedUrl": "https://www.youtube.com/embed/3fZumiKp5hE",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 1126834
+      "userInteractionCount": 1489418
     }
   },
   {
@@ -338,7 +319,26 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 783972
+      "userInteractionCount": 1366473
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "EA SPORTS FC 26 | First Gameplay Livestream",
+    "description": "Watch the first exclusive gameplay stream of EA SPORTS FC 26.  #FC26 launches September 26, 2025. Pre-order FC 26 Ultimate Edition to start playing from September 19: https://x.ea.com/86149  Subscribe",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/3fZumiKp5hE/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-09-16T16:20:28Z",
+    "contentUrl": "https://www.youtube.com/watch?v=3fZumiKp5hE",
+    "embedUrl": "https://www.youtube.com/embed/3fZumiKp5hE",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1145978
     }
   },
   {
@@ -357,7 +357,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 348799
+      "userInteractionCount": 376813
     }
   }
 ]
