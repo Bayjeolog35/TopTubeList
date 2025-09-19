@@ -15,7 +15,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 27986187
+      "userInteractionCount": 28050646
     }
   },
   {
@@ -34,7 +34,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 10757958
+      "userInteractionCount": 10771187
     }
   },
   {
@@ -53,7 +53,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 8084834
+      "userInteractionCount": 8087746
     }
   },
   {
@@ -72,7 +72,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 7433035
+      "userInteractionCount": 7451865
     }
   },
   {
@@ -91,7 +91,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 7338780
+      "userInteractionCount": 7340153
     }
   },
   {
@@ -110,7 +110,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 5033571
+      "userInteractionCount": 5035080
     }
   },
   {
@@ -129,7 +129,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3699805
+      "userInteractionCount": 3701255
     }
   },
   {
@@ -148,7 +148,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3335017
+      "userInteractionCount": 3415895
     }
   },
   {
@@ -167,7 +167,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1227852
+      "userInteractionCount": 1231727
     }
   },
   {
@@ -186,7 +186,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 986015
+      "userInteractionCount": 986128
     }
   },
   {
@@ -205,26 +205,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 380223
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Nintendo Direct – 12.09.2025",
-    "description": "00:00 Willkommen 00:29:05 Beginn der Präsentation 00:29:38 Super Mario Bros. 40th 00:32:15 Der Super Mario Galaxy Film 00:35:54 Super Mario Galaxy + Super Mario Galaxy 2 00:40:07 Mario Tennis Fever 00",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/3gpJMuDP1CQ/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-09-12T14:18:38Z",
-    "contentUrl": "https://www.youtube.com/watch?v=3gpJMuDP1CQ",
-    "embedUrl": "https://www.youtube.com/embed/3gpJMuDP1CQ",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 275048
+      "userInteractionCount": 380429
     }
   },
   {
@@ -243,7 +224,26 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 272456
+      "userInteractionCount": 277430
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Nintendo Direct – 12.09.2025",
+    "description": "00:00 Willkommen 00:29:05 Beginn der Präsentation 00:29:38 Super Mario Bros. 40th 00:32:15 Der Super Mario Galaxy Film 00:35:54 Super Mario Galaxy + Super Mario Galaxy 2 00:40:07 Mario Tennis Fever 00",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/3gpJMuDP1CQ/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-09-12T14:18:38Z",
+    "contentUrl": "https://www.youtube.com/watch?v=3gpJMuDP1CQ",
+    "embedUrl": "https://www.youtube.com/embed/3gpJMuDP1CQ",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 275232
     }
   },
   {
@@ -262,7 +262,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 218438
+      "userInteractionCount": 218607
     }
   }
 ]
