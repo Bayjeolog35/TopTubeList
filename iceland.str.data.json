@@ -15,7 +15,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 24540242
+      "userInteractionCount": 24756224
     }
   },
   {
@@ -34,7 +34,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 11350958
+      "userInteractionCount": 11359132
     }
   },
   {
@@ -53,7 +53,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 8583696
+      "userInteractionCount": 8612128
     }
   },
   {
@@ -72,7 +72,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 6239799
+      "userInteractionCount": 6239931
     }
   },
   {
@@ -91,7 +91,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 5824283
+      "userInteractionCount": 5831155
     }
   },
   {
@@ -110,7 +110,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 5565740
+      "userInteractionCount": 5566898
     }
   },
   {
@@ -129,7 +129,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4803021
+      "userInteractionCount": 4813518
     }
   },
   {
@@ -148,7 +148,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3786927
+      "userInteractionCount": 3788843
     }
   },
   {
@@ -167,7 +167,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3750885
+      "userInteractionCount": 3752069
     }
   },
   {
@@ -186,7 +186,26 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2731194
+      "userInteractionCount": 2758665
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "State of Play | September 24, 2025 [English]",
+    "description": "Tune in live this Wednesday for more than 35 minutes of reveals and news from developers around the world. We’ll share new looks at anticipated third-party and indie titles, plus updates from some of ",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/0QcEoGC51ZY/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-09-24T21:47:52Z",
+    "contentUrl": "https://www.youtube.com/watch?v=0QcEoGC51ZY",
+    "embedUrl": "https://www.youtube.com/embed/0QcEoGC51ZY",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1904066
     }
   },
   {
@@ -205,7 +224,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1773398
+      "userInteractionCount": 1773932
     }
   },
   {
@@ -224,26 +243,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1513359
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Marvel’s Wolverine - Gameplay Trailer | PS5 Games",
-    "description": "Become a living weapon. As he searches for answers about his past, Wolverine will do whatever it takes – unleashing brutal claw combat, violent rage, and relentless determination – to cut through the ",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/s3pDMUWlA6I/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-09-24T21:36:18Z",
-    "contentUrl": "https://www.youtube.com/watch?v=s3pDMUWlA6I",
-    "embedUrl": "https://www.youtube.com/embed/s3pDMUWlA6I",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 1291088
+      "userInteractionCount": 1513425
     }
   },
   {
@@ -262,7 +262,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 112160
+      "userInteractionCount": 112173
     }
   }
 ]
