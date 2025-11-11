@@ -15,7 +15,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 101443349
+      "userInteractionCount": 101600348
     }
   },
   {
@@ -34,7 +34,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 22216850
+      "userInteractionCount": 22255943
     }
   },
   {
@@ -53,7 +53,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 18269404
+      "userInteractionCount": 18286639
     }
   },
   {
@@ -72,7 +72,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 12256514
+      "userInteractionCount": 12280026
     }
   },
   {
@@ -91,7 +91,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 8743798
+      "userInteractionCount": 8757519
     }
   },
   {
@@ -110,7 +110,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 8661505
+      "userInteractionCount": 8668867
     }
   },
   {
@@ -129,7 +129,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4725534
+      "userInteractionCount": 4768191
     }
   },
   {
@@ -148,7 +148,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4663491
+      "userInteractionCount": 4673265
     }
   },
   {
@@ -167,7 +167,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3411201
+      "userInteractionCount": 3416061
     }
   },
   {
@@ -186,7 +186,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3326642
+      "userInteractionCount": 3337391
     }
   },
   {
@@ -205,7 +205,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2930168
+      "userInteractionCount": 2966417
     }
   },
   {
@@ -224,7 +224,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2364192
+      "userInteractionCount": 2375531
     }
   },
   {
@@ -243,7 +243,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1921298
+      "userInteractionCount": 2042793
     }
   },
   {
@@ -262,7 +262,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1804662
+      "userInteractionCount": 1848147
     }
   },
   {
@@ -281,7 +281,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1457310
+      "userInteractionCount": 1458426
     }
   },
   {
@@ -300,7 +300,26 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 874172
+      "userInteractionCount": 874884
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Holy f***ing sh*t..",
+    "description": "Asmongold Clips / Asmongold Reacts To: Twitch and Dan Clancy get double community noted after addressing Emiru's incident and now they are setting up another community meet up..   On this Asmongold Cl",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/U2SxUDTm2l8/mqdefault.jpg"
+    ],
+    "uploadDate": "2025-11-10T22:58:46Z",
+    "contentUrl": "https://www.youtube.com/watch?v=U2SxUDTm2l8",
+    "embedUrl": "https://www.youtube.com/embed/U2SxUDTm2l8",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 504060
     }
   },
   {
@@ -319,26 +338,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 488915
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "It could not get any worse than this..",
-    "description": "Asmongold Clips / Asmongold Reacts To: Twitch and Dan Clancy get double community noted after addressing Emiru's incident and now they are setting up another community meet up..   On this Asmongold Cl",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/U2SxUDTm2l8/mqdefault.jpg"
-    ],
-    "uploadDate": "2025-11-10T22:58:46Z",
-    "contentUrl": "https://www.youtube.com/watch?v=U2SxUDTm2l8",
-    "embedUrl": "https://www.youtube.com/embed/U2SxUDTm2l8",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 444414
+      "userInteractionCount": 488932
     }
   }
 ]
