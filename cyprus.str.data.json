@@ -15,7 +15,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 29176464
+      "userInteractionCount": 29293610
     }
   },
   {
@@ -34,7 +34,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 26526306
+      "userInteractionCount": 26558903
     }
   },
   {
@@ -53,7 +53,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 22652934
+      "userInteractionCount": 22818238
     }
   },
   {
@@ -72,7 +72,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 21522425
+      "userInteractionCount": 21562950
     }
   },
   {
@@ -91,7 +91,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 20677291
+      "userInteractionCount": 20689382
     }
   },
   {
@@ -110,7 +110,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 16959794
+      "userInteractionCount": 16967813
     }
   },
   {
@@ -129,7 +129,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 16852568
+      "userInteractionCount": 16855857
     }
   },
   {
@@ -148,7 +148,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 16544638
+      "userInteractionCount": 16561343
     }
   },
   {
@@ -167,7 +167,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 15434828
+      "userInteractionCount": 15482922
     }
   },
   {
@@ -186,7 +186,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 14922396
+      "userInteractionCount": 14998236
     }
   },
   {
@@ -205,7 +205,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 13162609
+      "userInteractionCount": 13186462
     }
   },
   {
@@ -224,7 +224,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 12143230
+      "userInteractionCount": 12561404
     }
   },
   {
@@ -243,7 +243,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 10987805
+      "userInteractionCount": 10997463
     }
   },
   {
@@ -262,7 +262,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 10247139
+      "userInteractionCount": 10295159
     }
   },
   {
@@ -281,7 +281,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 7826984
+      "userInteractionCount": 7831315
     }
   },
   {
@@ -300,7 +300,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 5525660
+      "userInteractionCount": 5528677
     }
   },
   {
@@ -319,7 +319,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 5087468
+      "userInteractionCount": 5230986
     }
   },
   {
@@ -338,7 +338,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 3647731
+      "userInteractionCount": 3680055
     }
   },
   {
@@ -357,26 +357,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2160919
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "OXXXYMIRON — EXIT (клип 2026)",
-    "description": "Тур уже через неделю! Билеты: https://oxxxymiron.com  Трек в стриминге: https://band.link/exit2026  клип https://www.instagram.com/danielzlotin музыка @gore_ocean сведение и мастеринг @andrewchernyshe",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/7LOwus7Bmec/mqdefault.jpg"
-    ],
-    "uploadDate": "2026-04-10T11:01:11Z",
-    "contentUrl": "https://www.youtube.com/watch?v=7LOwus7Bmec",
-    "embedUrl": "https://www.youtube.com/embed/7LOwus7Bmec",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 2101858
+      "userInteractionCount": 2162180
     }
   },
   {
@@ -395,7 +376,26 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2076394
+      "userInteractionCount": 2131381
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "OXXXYMIRON — EXIT (клип 2026)",
+    "description": "Тур уже через неделю! Билеты: https://oxxxymiron.com  Трек в стриминге: https://band.link/exit2026  клип https://www.instagram.com/danielzlotin музыка @gore_ocean сведение и мастеринг @andrewchernyshe",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/7LOwus7Bmec/mqdefault.jpg"
+    ],
+    "uploadDate": "2026-04-10T11:01:11Z",
+    "contentUrl": "https://www.youtube.com/watch?v=7LOwus7Bmec",
+    "embedUrl": "https://www.youtube.com/embed/7LOwus7Bmec",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 2106576
     }
   },
   {
@@ -414,7 +414,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1992975
+      "userInteractionCount": 2002308
     }
   },
   {
@@ -433,7 +433,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1334855
+      "userInteractionCount": 1338494
     }
   },
   {
@@ -452,7 +452,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1293788
+      "userInteractionCount": 1301161
     }
   },
   {
@@ -471,7 +471,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 960853
+      "userInteractionCount": 963255
     }
   },
   {
@@ -490,26 +490,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 551005
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "TÜM PLAYSTATION KONSOLLARINI ALDIK! 1 GÜN BOYUNCA OYNADIK! (100 BİN TL’LİK KOLEKSİYON!)",
-    "description": "Playstation konsollarıyla ilgili dolu dolu geçen bir video ile karşınızdayım!  İndirim haberi! Migros Yemek'te ilk 3 siparişe toplamda 700 TL indirim var! Yararlanmak için:  ►https://migros.go.link/1b",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/CRkwSV8Pm5M/mqdefault.jpg"
-    ],
-    "uploadDate": "2026-04-28T14:55:28Z",
-    "contentUrl": "https://www.youtube.com/watch?v=CRkwSV8Pm5M",
-    "embedUrl": "https://www.youtube.com/embed/CRkwSV8Pm5M",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 449518
+      "userInteractionCount": 551045
     }
   },
   {
@@ -528,7 +509,26 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 436573
+      "userInteractionCount": 482174
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "TÜM PLAYSTATION KONSOLLARINI ALDIK! 1 GÜN BOYUNCA OYNADIK! (100 BİN TL’LİK KOLEKSİYON!)",
+    "description": "Playstation konsollarıyla ilgili dolu dolu geçen bir video ile karşınızdayım!  İndirim haberi! Migros Yemek'te ilk 3 siparişe toplamda 700 TL indirim var! Yararlanmak için:  ►https://migros.go.link/1b",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/CRkwSV8Pm5M/mqdefault.jpg"
+    ],
+    "uploadDate": "2026-04-28T14:55:28Z",
+    "contentUrl": "https://www.youtube.com/watch?v=CRkwSV8Pm5M",
+    "embedUrl": "https://www.youtube.com/embed/CRkwSV8Pm5M",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 465672
     }
   },
   {
@@ -547,7 +547,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 345519
+      "userInteractionCount": 346288
     }
   },
   {
@@ -566,7 +566,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 180205
+      "userInteractionCount": 181296
     }
   },
   {
@@ -585,7 +585,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 177494
+      "userInteractionCount": 178049
     }
   },
   {
@@ -604,7 +604,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 149638
+      "userInteractionCount": 157023
     }
   },
   {
@@ -623,7 +623,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 125329
+      "userInteractionCount": 125656
     }
   },
   {
@@ -642,7 +642,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 95514
+      "userInteractionCount": 95950
     }
   },
   {
@@ -661,7 +661,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 86447
+      "userInteractionCount": 87023
     }
   },
   {
@@ -680,7 +680,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 72830
+      "userInteractionCount": 77287
     }
   },
   {
@@ -699,7 +699,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 68697
+      "userInteractionCount": 69337
     }
   },
   {
@@ -718,7 +718,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 48086
+      "userInteractionCount": 48310
     }
   },
   {
@@ -737,7 +737,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 45737
+      "userInteractionCount": 47282
     }
   },
   {
@@ -756,7 +756,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 45416
+      "userInteractionCount": 45586
     }
   },
   {
@@ -775,7 +775,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 11448
+      "userInteractionCount": 15629
     }
   }
 ]
