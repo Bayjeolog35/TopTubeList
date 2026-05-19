@@ -1,0 +1,579 @@
+/* === Genel Ayarlar === */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #0f0f0f;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+/* === Header === */
+header {
+  background-color: #0f0f0f;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  margin-right: 50px;
+}
+
+
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+
+/* === Dark Mode Toggle === */
+
+#darkModeToggle {
+  position: absolute;
+  right: 200px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px 12px;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  #darkModeToggle {
+    display: none;
+  }
+}
+
+/* === Karanlık Mod === */
+body.dark-mode {
+  background-color: #181818;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background-color: #000;
+}
+
+body.dark-mode .logo {
+  filter: drop-shadow(0 0 1px #000);
+}
+
+/* === Navigation === */
+#continentNav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 4px 10px;
+  flex-wrap: wrap;
+  margin-top: -6px;
+}
+
+#continentNav a {
+  color: #ffffffcc;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 3px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#continentNav a:hover {
+  background-color: #065fd4;
+  color: #fff;
+}
+
+#continentNav a.active {
+  background-color: #0d6efd;
+  color: white !important;
+}
+
+/* === Video Listesi === */
+#videoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 🔹 Bu eklenecek */
+  gap: 16px;
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+
+.video-card {
+  display: flex;
+  width: 100%;
+  max-width: 720px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  
+  /* Animasyon başlangıç hali */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.2s ease;
+}
+
+.video-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.video-card:hover {
+  transform: scale(1.01);
+}
+
+.video-card img {
+  width: 180px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-info {
+padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.video-info h2 {
+  font-size: 1rem;
+  margin: 0 0 8px;
+  color: #030303;
+}
+
+.video-info p {
+  font-size: 0.9rem;
+  margin: 0 0 8px;
+  color: #606060;
+}
+
+.video-info a {
+  color: #065fd4;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.video-info a:hover {
+  text-decoration: underline;
+}
+
+body.dark-mode .video-card {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .video-info h2 {
+  color: #fff;
+}
+
+body.dark-mode .video-info p {
+  color: #ccc;
+}
+
+body.dark-mode .video-info a {
+  color: #66b2ff;
+}
+
+/* === Alfabetik Bar ve Ülke Listesi === */
+.layout-wrapper {
+  display: flex;
+}
+
+/* Düşey alfabe */
+.alphabet-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.alphabet-letter {
+  padding: 4px 6px;
+  font-size: 8.9px;
+  width: 20px;
+  text-align: center;
+  background-color: #1f1f1f;
+  color: white;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+
+.alphabet-letter:hover,
+.alphabet-letter.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* Ülke butonları */
+
+/* Sol panel tüm ülke barı */
+.country-panel {
+  display: flex;
+  background-color: var(--bg);
+  padding: 48px;
+  gap: 8px;
+  position: fixed;
+  top: 78.5px;
+  z-index: 10;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
+
+
+.country-column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 71vh;
+  min-width: 160px;
+  overflow-y: scroll;
+}
+
+
+.country-column button {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  background-color: #1f1f1f;
+  color: white;
+  border-radius: 4px;
+  text-align: left;
+  white-space: nowrap;
+  max-width: 15ch;
+  min-width: 15ch;
+  text-overflow: ellipsis;
+  display: inline-block;
+  overflow-x: clip;
+}
+
+.country-column button:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* === Scrollbar - Light Mode (varsayılan) === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+
+/* === Scrollbar Dark Mode Stili === */
+body.dark-mode ::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: #333;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 10px;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background-color: #333;
+}
+
+
+/* === Hamburger Menüsü (Sadece mobilde) === */
+.hamburger {
+ position: fixed;
+  top: 220px;
+  font-size: 20px;
+  background: #fff;
+  color: black;
+  z-index: 10000;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border-color: rgb(19,19,19);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: none; /* sadece mobilde gösterilecek */
+}
+
+/* === Mobil ekranlarda hamburger gösterilir === */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .country-panel {
+    position: fixed;
+    top: 262px;
+    left: 25%;
+    transform: translateX(-50%) translateY(-10px); /* animasyon için hafif yukarıdan başlat */
+    width: 45%;
+    max-height: 100%;
+    background: rgb(255 255 255 / 79%);
+    z-index: 9998;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    flex-wrap: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .country-panel.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0); /* açılırken yukarıdan aşağıya */
+  }
+
+  .alphabet-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 50px;
+    max-height: 60vh;
+    overflow-y: auto;
+    flex-shrink: 0;
+  }
+
+  .country-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  /* Normalde mobilde paneli tamamen gizle */
+  .layout-wrapper.hide-when-panel-active:not(.site-button) {
+    display: none;
+  }
+}
+
+
+/*hamburger menü son*/
+
+/* Ana içerik */
+.main-content {
+  flex: 1;
+  padding: 0px;
+  background-color: var(--bg);
+}
+
+/*LOAD MORE BUTTON*/
+#loadMoreBtn {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  background-color: #065fd4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+/* === About Section === */
+.about-section {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+#aboutContent {
+  display: none;
+  opacity: 0;
+  transform: translateY(-12px);
+  background-color: #f9f9f9;
+  padding: 30px 24px;
+  border-radius: 12px;
+  color: #222;
+  max-width: 800px;
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #0d6efd;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  scroll-margin-top: 80px; /* header yüksekliğin ne kadarsa buna göre ayarla */
+}
+
+#aboutContent.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+#aboutContent p {
+  margin-bottom: 20px;
+}
+#aboutContent a {
+  color: #222; /* Maviden siyaha çevrildi. */
+  /* text-decoration: underline; // Altı çizili kalmasını isterseniz bırakın, istemezseniz kaldırın */
+}
+
+
+body.dark-mode #aboutContent {
+  background-color: #1e1e1e;
+  color: #ddd;
+  border-left-color: #66b2ff;
+}
+
+body.dark-mode #aboutContent strong {
+  color: #66b2ff;
+}
+
+footer {
+background-color: #000;
+  padding: 10px 5px 5px;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+  border-top: 1px solid #222;
+}
+
+.contact-section {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+#contactContent {
+  margin-top: 20px;
+  display: none;
+  text-align: left;
+}
+
+#contactContent form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+#contactContent input,
+#contactContent textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#contactContent button[type="submit"] {
+  background-color: #065fd4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#contactContent button[type="submit"]:hover {
+  background-color: #004ab3;
+}
+
+/*BUTTON STYLES*/
+
+.site-button {
+display: inline-block;
+  min-width: 160px;
+  text-align: center;
+  margin: 10px auto; /* Ortalar ve eşit boşluk bırakır */
+  
+  background-color: #065fd4;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+.site-button:hover {
+  background-color: #004ab3;
+}
+
+
+.site-button:hover {
+  background-color: #004ab3;
+}
+
+
+footer p {
+  margin-bottom: 1px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+body.dark-mode footer {
+  background-color: #121212;
+  color: #ccc;
+  border-top: 1px solid #333;
+}
+
+body.dark-mode #contactToggle,
+body.dark-mode #contactContent button[type="submit"] {
+  background-color: #1976d2;
+}
+
+body.dark-mode #contactToggle:hover,
+body.dark-mode #contactContent button[type="submit"]:hover {
+  background-color: #1565c0;
+}
+
+body.dark-mode #contactContent input,
+body.dark-mode #contactContent textarea {
+  background-color: #2a2a2a;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+body.dark-mode #contactContent input::placeholder,
+body.dark-mode #contactContent textarea::placeholder {
+  color: #aaa;
+}
