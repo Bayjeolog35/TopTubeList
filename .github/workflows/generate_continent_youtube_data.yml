@@ -1,0 +1,38 @@
+name: Generate Continent YouTube Data
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'  # Her 3 saatte bir (UTC)
+  workflow_dispatch:       # Manuel tetikleme
+
+jobs:
+  generate-continent-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install requests python-dotenv
+
+    - name: Run Continent YouTube Data Generator
+      run: python generate_continent_youtube_data.py
+      env:
+        YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+
+    - name: Commit and Push Changes
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add .
+        git commit -m "🤖 Update continent YouTube data (auto)" || echo "No changes to commit"
+        git config pull.rebase true
+        git pull origin main
+        git push

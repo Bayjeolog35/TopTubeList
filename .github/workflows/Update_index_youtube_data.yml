@@ -1,0 +1,42 @@
+name: Update Index (YouTube Data)
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'  # Her 3 saatte bir
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-and-update:
+    runs-on: ubuntu-latest
+
+    env:
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+
+    steps:
+      - name: 📥 Repo'yu klonla
+        uses: actions/checkout@v4
+
+      - name: 🐍 Python kurulumu
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Bağımlılıkları yükle
+        run: |
+          pip install requests python-dotenv
+
+      - name: ▶️ fetch_top_youtube.py dosyasını çalıştır
+        run: python fetch_top_youtube.py
+
+      - name: 🔁 Git ayarları ve push işlemi
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin
+          git rebase origin/main || echo "⚠️ Rebase başarısız, devam ediliyor"
+          git add .
+          git commit -m "🔄 Otomatik güncelleme: videos.json, structured_data.json ve index.html" || echo "⚠️ Commit yapılacak değişiklik yok"
+          git push origin HEAD:main --force-with-lease

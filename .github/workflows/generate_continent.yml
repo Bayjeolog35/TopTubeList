@@ -1,0 +1,63 @@
+name: Generate Continent Pages
+
+on:
+  push:
+    branches:
+      - main # Or your default branch, e.g., master
+    paths:
+      - 'generate_continent_html.py' # Run if this specific Python file changes
+      - 'videos_*.json' # Run if any continent video data changes
+      - 'structured_data_*.json' # Run if any structured data changes
+  workflow_dispatch: # Allows you to manually trigger the workflow from GitHub UI
+
+jobs:
+  build-pages:
+    runs-on: ubuntu-latest # Or 'macos-latest', 'windows-latest' if preferred
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x' # Use the latest Python 3 version
+
+    - name: Install dependencies (if any)
+      run: |
+        # If your script had external dependencies (e.g., 'requests'), you'd list them in requirements.txt
+        # python -m pip install --upgrade pip
+        # pip install -r requirements.txt
+        echo "No specific Python dependencies to install."
+
+    - name: Create necessary output directories
+      run: |
+        mkdir -p continents/asia
+        mkdir -p continents/europe
+        mkdir -p continents/africa
+        mkdir -p continents/north-america
+        mkdir -p continents/south-america
+        mkdir -p continents/oceania
+        # Assuming your JSON data files (videos_*.json, structured_data_*.json) are at the root
+        # If they are in a 'data/' subfolder, you might need 'mkdir -p data' and adjust paths in the Python script.
+
+    - name: Run Python script to generate HTML
+      # This is the line corrected to use your specified script name
+      run: python generate_continent_html.py
+
+    - name: Upload generated pages as an artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: continent-pages
+        path: continents/
+        retention-days: 5 # How long to keep the artifact
+
+    - name: Deploy to GitHub Pages (optional, if you're hosting this way)
+      uses: peaceiris/actions-gh-pages@v3
+      if: ${{ github.ref == 'refs/heads/main' }} # Deploy only from the main branch
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./ # This will publish everything in the root of the repo.
+                        # Make sure your assets (CSS, JS, images) are correctly
+                        # linked relative to the 'continents' folder, or also
+                        # present in the root for this 'publish_dir' setting.
