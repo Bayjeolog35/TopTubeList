@@ -15,7 +15,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 23392026
+      "userInteractionCount": 23409602
     }
   },
   {
@@ -34,7 +34,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 6232283
+      "userInteractionCount": 8481229
     }
   },
   {
@@ -53,7 +53,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 5805355
+      "userInteractionCount": 5818120
     }
   },
   {
@@ -72,7 +72,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 5466028
+      "userInteractionCount": 5483760
     }
   },
   {
@@ -91,7 +91,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 5157896
+      "userInteractionCount": 5179737
     }
   },
   {
@@ -110,7 +110,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 4593573
+      "userInteractionCount": 4659286
     }
   },
   {
@@ -129,7 +129,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 2897779
+      "userInteractionCount": 2898802
     }
   },
   {
@@ -148,7 +148,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1987893
+      "userInteractionCount": 1996889
     }
   },
   {
@@ -167,7 +167,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1851511
+      "userInteractionCount": 1857210
     }
   },
   {
@@ -186,7 +186,26 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1584329
+      "userInteractionCount": 1584679
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "IEM Atlanta 2026 - Day 6",
+    "description": "Join the discussion: http://www.twitter.com/eslcs http://www.facebook.com/eslcs http://www.instagram.com/eslcs  http://www.twitter.com/iem http://www.facebook.com/iem  Watch live on Twitch: https://ww",
+    "thumbnailUrl": [
+      "https://i.ytimg.com/vi/W32Awnh1q4Q/mqdefault.jpg"
+    ],
+    "uploadDate": "2026-05-17T22:35:25Z",
+    "contentUrl": "https://www.youtube.com/watch?v=W32Awnh1q4Q",
+    "embedUrl": "https://www.youtube.com/embed/W32Awnh1q4Q",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": {
+        "@type": "WatchAction"
+      },
+      "userInteractionCount": 1486056
     }
   },
   {
@@ -205,26 +224,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 1462986
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "IEM Atlanta 2026 - Day 5",
-    "description": "Join the discussion: http://www.twitter.com/eslcs http://www.facebook.com/eslcs http://www.instagram.com/eslcs  http://www.twitter.com/iem http://www.facebook.com/iem  Watch live on Twitch: https://ww",
-    "thumbnailUrl": [
-      "https://i.ytimg.com/vi/vEvAQeBoDGQ/mqdefault.jpg"
-    ],
-    "uploadDate": "2026-05-16T23:34:24Z",
-    "contentUrl": "https://www.youtube.com/watch?v=vEvAQeBoDGQ",
-    "embedUrl": "https://www.youtube.com/embed/vEvAQeBoDGQ",
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": {
-        "@type": "WatchAction"
-      },
-      "userInteractionCount": 1050853
+      "userInteractionCount": 1466349
     }
   },
   {
@@ -243,7 +243,7 @@
       "interactionType": {
         "@type": "WatchAction"
       },
-      "userInteractionCount": 25437
+      "userInteractionCount": 25536
     }
   }
 ]
